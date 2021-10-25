@@ -1,0 +1,105 @@
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.padding-small {
+  padding: 0.5rem;
+}
+
+.padding-regular {
+  padding: 2rem;
+}
+
+.padding-regular-topBottom {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.color-main {
+  color: red;
+}
+
+.color-secondary {
+  color: yellow;
+}
+
+@media only screen and (min-width: 990px) {
+  .full-width-lg {
+    width: 100%;
+  }
+
+  li.nav-item {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 559px) {
+  .row form .col-sm-12 {
+    width: 100%;
+  }
+}
+
+nav a.nav-link,
+nav a.dropdown-item,
+footer .nav .nav-item .nav-link {
+  font-family: Muli, sans-serif;
+  position: relative;
+  display: inline-block;
+  margin-top: 8px;
+  margin-left: 0px;
+  padding: 13px 38px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-transition: background-color 500ms ease, border 500ms ease,
+    text-shadow 500ms ease, color 500ms ease;
+  transition: background-color 500ms ease, border 500ms ease,
+    text-shadow 500ms ease, color 500ms ease;
+  direction: ltr;
+  color: #d3d3d3;
+  font-size: 11px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 3px;
+  text-indent: 0px;
+  text-transform: uppercase;
+}
+
+nav a.dropdown-item {
+  color: #000;
+}
+
+nav {
+  border-bottom: 1px solid #353535;
+}
+
+.bg-gray {
+  background-color: #353535;
+}
+
+form div {
+  float: left;
+}
+
+form div.form-floating {
+  width: 100%;
+}
+
+select {
+  min-height: 58px;
+}
