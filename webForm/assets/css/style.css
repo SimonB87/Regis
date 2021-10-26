@@ -106,12 +106,16 @@ select {
   min-height: 58px;
 }
 
-.form-select label {
-  padding: 0.5rem 0.75rem;
+.div-select {
+  position: relative;
 }
 
-.form-floating > .select {
-  border: none;
+.div-select > .form-select-customLabel {
+  color: #888;
+  font-size: 0.9rem;
+  position: absolute;
+  top: 0;
+  left: 0.75rem;
 }
 
 /* form elements - end */
