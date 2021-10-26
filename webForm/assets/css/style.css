@@ -92,8 +92,10 @@ nav {
   background-color: #353535;
 }
 
-form div {
-  float: left;
+/* form elements - start */
+
+form > div {
+  float: right;
 }
 
 form div.form-floating {
@@ -103,3 +105,13 @@ form div.form-floating {
 select {
   min-height: 58px;
 }
+
+.form-select label {
+  padding: 0.5rem 0.75rem;
+}
+
+.form-floating > .select {
+  border: none;
+}
+
+/* form elements - end */
