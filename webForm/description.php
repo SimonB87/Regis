@@ -78,11 +78,7 @@
           - 2 parties <br>
           <br>
           ✅ Registration and/or more informations: <br>
-          Via email mauritius.elvira@gmail.com or through message on our Facebook page Mauritius & Elvira Bachata Prague or WhatsApp, Telegram (+420 777 216 875) <br>
-          ✅ To register, please: <br>
-          1. Write us your name as it appears on ID <br>
-          2. Write us your email where we will send you the fullpass <br>
-          3. Send the payment to the bank account or through PayPal (write us to receive the informations) <br>
+          Via web form bellow. In case of emergency, contact us on Facebook page Mauritius & Elvira Bachata Prague or WhatsApp, Telegram (+420 777 216 875) <br>
           <br>
           ❗️ If the workshop would have to be postponed due to official regulations related to COVID-19, then Fullpass will be transferred without any additional charge to the new date or you will get the full refund in case the new date will not be good for you. In other cases, Fullpasses are not refundable - but it's possible to change the name with the processing fee of 250 CZK / 10 euro. In case you will find the substitute by yourself, then no processing fee will be charged❗️ 
         </div>
