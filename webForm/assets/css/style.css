@@ -110,6 +110,10 @@ select {
   position: relative;
 }
 
+.div-select select {
+  line-height: 2.5rem;
+}
+
 .div-select > .form-select-customLabel {
   color: #888;
   font-size: 0.9rem;
@@ -140,8 +144,8 @@ footer .copyright {
     flex-direction: column;
   }
 
-  footer .nav li, 
-  footer .nav li a{
+  footer .nav li,
+  footer .nav li a {
     text-align: center;
   }
 }
