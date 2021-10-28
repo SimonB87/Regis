@@ -2,7 +2,7 @@
     <div class="container">
       <div class="row text-center">
         <h1 class="padding-small color-main" id="formSection">
-          Janis & Zoe Xmas Prague Bachata Weekend
+          Tester & Testie Easter Prague Bachata Weekend
         </h1>
         <h2 class="padding-small">
           Event registration form
