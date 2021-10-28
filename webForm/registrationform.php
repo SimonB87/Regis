@@ -168,7 +168,7 @@
 
             <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
               <div class="form-floating">
-                <input type="text" class="form-control" id="floatingName" value="Josh Smith" required>
+                <input type="text" class="form-control" id="floatingName" required>
                 <label for="floatingName">Name</label>
                 <div class="valid-feedback">
                   Looks good!
