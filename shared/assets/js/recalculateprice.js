@@ -27,7 +27,7 @@ function recalculatePrice() {
     }
   
     function getPriceCoefficient() {
-      const registrationTypeValue = parseFloat(registrationType.options[registrationType.selectedIndex].classList[0], 10);
+      const registrationTypeValue = parseFloat(registrationType.ariaPlaceholder, 10);
       const dancerKindValue = parseFloat(dancerKind.options[dancerKind.selectedIndex].classList[0], 10);
       const lengthTypeValue = parseFloat(lengthType.options[lengthType.selectedIndex].classList[0], 10);
 

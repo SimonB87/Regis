@@ -22,24 +22,22 @@
         <form id="form" class="needs-validation"  method="post" action="processform.php" novalidate>
 
         <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 padding-small">
-              <div class="mb-3 full-width full-height div-select">
-                <select id="registrationType" class="form-select" aria-label="Pass type" required readonly="true" disabled="true" name="registrationType">
-                  <option value="1" selected class="1.0">Early bird - till 1st April</option>
-                  <option value="2" class="1.2">Regular ticket - since 2nd April</option>
-                </select>
-                <div class="form-select-customLabel">
-                  Registration type (Can be hidden in browser)
-                </div>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div class="invalid-feedback">
-                  Please select some valid option.
-                </div>
-              </div>
 
-          </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 padding-small">
+<!--              <option value="1" selected class="1.0">Early bird - till 1st April</option>
+                  <option value="2" class="1.2">Regular ticket - since 2nd April</option>  -->
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="registrationType" value="Early bird - till 1st April" aria-label="readonly Registration type" readonly name="registrationType" aria-placeholder="1.0">
+                <label for="registrationType">Registration type (hidden in browser)</label>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 padding-small">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="registrationdate" value="" aria-label="readonly Registration date" readonly name="registrationdate">
+                <label for="registrationdate">Registration date (hidden in browser)</label>
+              </div>
+            </div>
 
             <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
               <div class="mb-3 full-width full-height div-select">
@@ -163,11 +161,23 @@
               <h3>Customer contact details</h3>
             </div>
 
+            <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="clientName" required name="clientName">
+                <label for="clientName">Name</label>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in name.
+                </div>
+              </div>
+            </div>
 
             <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
                 <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" required name="floatingEmail">
-                  <label for="floatingEmail">Email address</label>
+                  <input type="email" class="form-control" id="clientEmail" placeholder="name@example.com" required name="clientEmail">
+                  <label for="clientEmail">Email address</label>
                   <div class="valid-feedback">
                     Looks good!
                   </div>
@@ -179,21 +189,8 @@
 
             <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
               <div class="form-floating">
-                <input type="text" class="form-control" id="floatingName" required name="floatingName">
-                <label for="floatingName">Name</label>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div class="invalid-feedback">
-                  Please fill in name.
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
-              <div class="form-floating">
-                <input type="phone" class="form-control" id="floatingPhone" required name="floatingPhone">
-                <label for="floatingPhone">Phone</label>
+                <input type="phone" class="form-control" id="clientPhone" required name="clientPhone">
+                <label for="clientPhone">Phone</label>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
@@ -203,10 +200,10 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
+            <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
               <div class="form-floating">
-                <input type="text" class="form-control" id="floatingOriginCountry" required name="floatingPhone">
-                <label for="floatingOriginCountry">Your country</label>
+                <input type="text" class="form-control" id="clientCountry" required name="clientCountry">
+                <label for="clientCountry">Your country</label>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
@@ -216,10 +213,24 @@
               </div>
             </div>
 
+            <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="confirmPrivateInformation" required name="confirmPrivateInformation">
+              <label class="form-check-label" for="confirmPrivateInformation">I agree with storing the information I am providing you and I agree with your company GDP policy/therms</label><a href="#">GDP policy/therms</a>
+              <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in the text field.
+                </div>
+            </div>
+            </div>
+
+
             <div class="col-lg-12 col-md-12 col-sm-12 padding-small">
               <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 100px" name="floatingTextarea"></textarea>
-                <label for="floatingTextarea">Comments</label>
+                <textarea class="form-control" placeholder="Leave a comment here" id="clientComments" style="height: 100px" name="clientComments"></textarea>
+                <label for="clientComments">Comments</label>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
