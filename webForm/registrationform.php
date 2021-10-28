@@ -125,8 +125,8 @@
 
             <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingLocation" value="Prague" aria-label="readonly input example" readonly name="floatingLocation">
-                <label for="floatingLocation">Location</label>
+                <input type="text" class="form-control" id="location" value="Prague" aria-label="readonly input example" readonly name="location">
+                <label for="location">Location</label>
               </div>
             </div>
 
@@ -154,8 +154,8 @@
 
             <div class="col-lg-12 col-md-12 col-sm-12  padding-small">
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingPrice" value="... ,- Kč" aria-label="readonly input example" readonly name="floatingPrice">
-                <label for="floatingPrice">Your full price is </label>
+                <input type="text" class="form-control" id="formPrice" value="... ,- Kč" aria-label="readonly input example" readonly name="formPrice">
+                <label for="formPrice">Your full price is </label>
               </div>
             </div>
 
