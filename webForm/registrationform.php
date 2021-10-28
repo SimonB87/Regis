@@ -1,4 +1,5 @@
 <div class="bg-white padding-regular-topBottom">
+
     <div class="container">
       <div class="row text-center">
         <h1 class="padding-small color-main" id="formSection">
@@ -8,9 +9,19 @@
           Event registration form
         </h2>
       </div>
+
+    </div>
+</div>
+
+<div class="bg-white padding-regular-topBottom">
+
+    <div class="container">
       <div class="row">
+      <div class="col-12">
+
         <form id="form" class="needs-validation"  method="post" action="processform.php" novalidate>
 
+        <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12 padding-small">
               <div class="mb-3 full-width full-height div-select">
                 <select id="registrationType" class="form-select" aria-label="Pass type" required readonly="true" disabled="true" name="registrationType">
@@ -192,7 +203,20 @@
               </div>
             </div>
 
-            <div class="col-lg-12 col-md-12 col-sm-12  padding-small">
+            <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="floatingOriginCountry" required name="floatingPhone">
+                <label for="floatingOriginCountry">Your country</label>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in the text field.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 padding-small">
               <div class="form-floating">
                 <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 100px" name="floatingTextarea"></textarea>
                 <label for="floatingTextarea">Comments</label>
@@ -205,15 +229,15 @@
               </div>
             </div>
 
-            <br>
+            <div class="col-lg-12 col-md-12 col-sm-12 padding-small">
+                <button type="submit" class="btn btn-primary ">Submit registration</button>
+            </div>
 
-            <span class="padding-small">
-              <button type="submit" class="btn btn-primary ">Submit registration</button>
-            </span>
-
+          </div>
         </form>
+        </div>
       </div>
-    
+
     </div>
-    
-  </div>
+
+</div>
