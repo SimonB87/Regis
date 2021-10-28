@@ -15,8 +15,10 @@ function recalculatePrice() {
     const priceCoefficient = getPriceCoefficient();
     const additionalService = getAdditionalService();
     const finalPrice = parseFloat( ((mainPrice * priceCoefficient) + additionalService), 10);
+    const finalPriceEur = parseFloat( ((mainPrice * priceCoefficient) + additionalService), 10)/ 25.6;
+    const finalPriceEurWhole = parseInt(finalPriceEur, 10);
 
-    document.getElementById("floatingPrice").value = finalPrice+",- Kč";
+    document.getElementById("formPrice").value = finalPrice+",- Kč or " + finalPriceEurWhole + ",- EUR";
 
     function getMainPrice() {
       const passTypePrice = passType.options[passType.selectedIndex].classList[0];
