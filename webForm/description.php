@@ -3,7 +3,7 @@
       <div class="row text-center padding-small text-white">
 
         <h1 class="padding-small color-main">
-          Janis & Zoe Xmas Prague Bachata Weekend
+          Tester & Testie Easter Prague Bachata Weekend
         </h1>
 
         <div class="padding-regular text-center">
@@ -19,11 +19,11 @@
         </h2>
 
         <div id="event-description-part-one" class="padding-small text-left">
-          🔥 Famous Janis & Zoe for the 1st time in Prague! Experience beautiful Christmas Prague and feel that the Bachata love is all around you 🔥<br>
-          ✅ Exclusive 2-day workshop of romantic Bachata with Janis & Zoe, special workshop Bachata connection principles with Mauritius & Elvira, pre-party workshops <br>
-          ✅ Parties with DJ MomoLatino, Janis & Zoe and other artists <br>
-          ✅ Jack & Jill (max. 6 leaders, 6 followers), 1st price: private lesson with Janis & Zoe! <br>
-          ✅ Possibility to arrange private lessons (both Janis & Zoe will be present for the couple) <br>
+          🔥 Famous Tester & Testie for the 1st time in Prague! Experience beautiful Easter Prague and feel that the Bachata love is all around you 🔥<br>
+          ✅ Exclusive 2-day workshop of romantic Bachata with Tester & Testie, special workshop Bachata connection principles with Mauritius & Elvira, pre-party workshops <br>
+          ✅ Parties with DJ MomoLatino, Tester & Testie and other artists <br>
+          ✅ Jack & Jill (max. 6 leaders, 6 followers), 1st price: private lesson with Tester & Testie! <br>
+          ✅ Possibility to arrange private lessons (both Tester & Testie will be present for the couple) <br>
           <br>
           <strong class="color-main">🔥 Venue: </strong><br>
           Tresor Club Prague, Vinohradská 25, Prague <br>
@@ -38,20 +38,20 @@
           <br>
           <strong class="color-main"> ✅ Program: <br> </strong>
 
-          <span class="color-secondary"> Friday 3.12. (Dancer's Club Prague, Koněvova 929)</span> <br>
+          <span class="color-secondary"> Friday 3rd May (Dancer's Club Prague, Koněvova 929)</span> <br>
           19:00 - 20:00: Pre-party workshop <br>
           20:00 - 2:00: Party with DJ MomoLatino and artists <br>
           <br>
-          <span class="color-secondary"> Saturday 4.12. (Tresor Club Prague, Vinohradská 25) </span> <br>
+          <span class="color-secondary"> Saturday 4th May (Tresor Club Prague, Vinohradská 25) </span> <br>
           11:00 - 12:30: Connection principles workshop with Mauritius & Elvira <br>
-          14:30 - 17:15: Workshop with Janis & Zoe <br>
+          14:30 - 17:15: Workshop with Tester & Testie <br>
           20:00 - 21:00: Pre-party workshop <br>
           21:00 - 23:00: Party with DJ MomoLatino and artists <br>
           23:00 - 23:30: Jack & Jill competition <br>
           23:30 - 4:00: Party!!! (95 % Bachata) <br>
           <br>
-          <span class="color-secondary"> Sunday 5.12. (Tresor Club Prague, Vinohradská 25) </span> <br>
-          14:30 - 17:15: Workshop with Janis & Zoe <br>
+          <span class="color-secondary"> Sunday 5th May (Tresor Club Prague, Vinohradská 25) </span> <br>
+          14:30 - 17:15: Workshop with Tester & Testie <br>
           After: Tour de Christmas Prague <br>
           <br>
         </div>

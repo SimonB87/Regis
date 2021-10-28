@@ -9,11 +9,11 @@
         </h2>
       </div>
       <div class="row">
-        <form id="form" class="needs-validation" novalidate>
+        <form id="form" class="needs-validation"  method="post" action="processform.php" novalidate>
 
           <div class="col-lg-12 col-md-12 col-sm-12 padding-small">
               <div class="mb-3 full-width full-height div-select">
-                <select id="registrationType" class="form-select" aria-label="Pass type" required readonly="true" disabled="true" >
+                <select id="registrationType" class="form-select" aria-label="Pass type" required readonly="true" disabled="true" name="registrationType">
                   <option value="1" selected class="1.0">Early bird - till 1st April</option>
                   <option value="2" class="1.2">Regular ticket - since 2nd April</option>
                 </select>
@@ -32,7 +32,7 @@
 
             <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
               <div class="mb-3 full-width full-height div-select">
-                <select id="passType" class="form-select" aria-label="Pass type" required onchange="recalculatePrice();">
+                <select id="passType" class="form-select" aria-label="Pass type" required onchange="recalculatePrice();" name="passType">
                   <option value="" selected>Select pass type ... </option>
                   <option value="1" class="1500">Fullpass</option>
                   <option value="2" class="1000">Partypass</option>
@@ -52,7 +52,7 @@
 
             <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
               <div class="mb-3 full-width full-height div-select">
-                <select id="dancerKind" class="form-select" aria-label="Pass type" required onchange="recalculatePrice();">
+                <select id="dancerKind" class="form-select" aria-label="Pass type" required onchange="recalculatePrice();" name="dancerKind">
                   <option value="" selected>Select dancer kind ...</option>
                   <option value="1" class="1.0">Leader</option>
                   <option value="2" class="1.0">Follower</option>
@@ -72,7 +72,7 @@
 
             <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
               <div class="mb-3 full-width full-height div-select">
-                <select id="lengthType" class="form-select" aria-label="Pass type" required onchange="recalculatePrice();">
+                <select id="lengthType" class="form-select" aria-label="Pass type" required onchange="recalculatePrice();" name="lengthType">
                   <option value="" selected>Select length ...</option>
                   <option value="1" class="1.0" >Friday till Sunday</option>
                   <option value="2" class="0.6">Friday</option>
@@ -95,7 +95,7 @@
 
             <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
               <div class="mb-3 full-width full-height div-select">
-                <select id="competitionParticipation" class="form-select" aria-label="Pass type" required onchange="recalculatePrice();">
+                <select id="competitionParticipation" class="form-select" aria-label="Pass type" required onchange="recalculatePrice();" name="competitionParticipation">
                   <option value="" selected>Select competition option ...</option>
                   <option value="1" class="500">Participate in Jack and Jill</option>
                   <option value="2" class="0">No participation in competition</option>
@@ -114,14 +114,14 @@
 
             <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingLocation" value="Prague" aria-label="readonly input example" readonly>
+                <input type="text" class="form-control" id="floatingLocation" value="Prague" aria-label="readonly input example" readonly name="floatingLocation">
                 <label for="floatingLocation">Location</label>
               </div>
             </div>
 
             <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
               <div class="mb-3 full-width full-height div-select">
-                <select id="merchandise" class="form-select" aria-label="Pass type" required onchange="recalculatePrice();">
+                <select id="merchandise" class="form-select" aria-label="Pass type" required onchange="recalculatePrice();" name="merchandise">
                   <option value="" selected>Select merchandise option ...</option>
                   <option value="0" class="0">No merchandise</option>
                   <option value="1" class="500">Shirt 500,- Kč</option>
@@ -143,7 +143,7 @@
 
             <div class="col-lg-12 col-md-12 col-sm-12  padding-small">
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingPrice" value="... ,- Kč" aria-label="readonly input example" readonly>
+                <input type="text" class="form-control" id="floatingPrice" value="... ,- Kč" aria-label="readonly input example" readonly name="floatingPrice">
                 <label for="floatingPrice">Your full price is </label>
               </div>
             </div>
@@ -155,8 +155,8 @@
 
             <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
                 <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                  <label for="floatingInput">Email address</label>
+                  <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" required name="floatingEmail">
+                  <label for="floatingEmail">Email address</label>
                   <div class="valid-feedback">
                     Looks good!
                   </div>
@@ -168,7 +168,7 @@
 
             <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
               <div class="form-floating">
-                <input type="text" class="form-control" id="floatingName" required>
+                <input type="text" class="form-control" id="floatingName" required name="floatingName">
                 <label for="floatingName">Name</label>
                 <div class="valid-feedback">
                   Looks good!
@@ -181,7 +181,7 @@
 
             <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
               <div class="form-floating">
-                <input type="phone" class="form-control" id="floatingPhone" required>
+                <input type="phone" class="form-control" id="floatingPhone" required name="floatingPhone">
                 <label for="floatingPhone">Phone</label>
                 <div class="valid-feedback">
                   Looks good!
@@ -194,8 +194,8 @@
 
             <div class="col-lg-12 col-md-12 col-sm-12  padding-small">
               <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                <label for="floatingTextarea2">Comments</label>
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 100px" name="floatingTextarea"></textarea>
+                <label for="floatingTextarea">Comments</label>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
