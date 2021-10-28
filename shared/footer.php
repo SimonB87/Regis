@@ -21,8 +21,8 @@
 
   </div>
 
-  <div class="text-center text-white padding-small copyright">
-    COPYRIGHT © MAURITIUS & ELVIRA. ALL RIGHTS RESERVED.
+  <div class="text-center padding-small copyright">
+    COPYRIGHT © <a href="http://www.simonburyan.cz/" class="weblink text-white">SimonBuryan.cz</a> & MAURITIUS & ELVIRA. ALL RIGHTS RESERVED.
   </div>
 
 </footer>

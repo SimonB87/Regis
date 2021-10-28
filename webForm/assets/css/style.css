@@ -31,6 +31,15 @@
   color: yellow;
 }
 
+.weblink {
+  text-decoration: none;
+}
+
+.weblink:focus,
+.weblink:hover {
+  color: coral;
+}
+
 @media only screen and (min-width: 990px) {
   .full-width-lg {
     width: 100%;
@@ -115,7 +124,7 @@ select {
 }
 
 select.form-select {
-    padding: 0.75rem 2.25rem 0.75rem 0.75rem;
+  padding: 0.75rem 2.25rem 0.75rem 0.75rem;
 }
 
 .div-select > .form-select-customLabel {
@@ -125,6 +134,10 @@ select.form-select {
   top: 0;
   left: 0.75rem;
   z-index: 10;
+}
+
+input#floatingLocation {
+  height: 4rem;
 }
 
 /* form elements - end */
@@ -140,6 +153,7 @@ footer .copyright {
   margin-top: 8px;
   padding: 0.75rem 2.5rem;
   text-align: center;
+  letter-spacing: 1px;
   width: 100%;
 }
 
