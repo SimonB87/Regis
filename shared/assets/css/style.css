@@ -101,6 +101,10 @@ nav {
   background-color: #353535;
 }
 
+.content {
+  min-height: calc(100vh - 370px);
+}
+
 /* form elements - start */
 
 form > div {

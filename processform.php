@@ -21,13 +21,14 @@ require 'config/config.php';
   include("shared/navigation.php");
   ?>
 
-  <div class='container'>
+  <div class='content'>
     <div class='container'>
-      <div class='col-12'>
-        <h1 class="text-center padding-small">Registration result :</h1>
+      <div class='container'>
+        <div class='col-12'>
+          <h1 class="text-center padding-small">Registration result :</h1>
+        </div>
       </div>
     </div>
-  </div>
 
   <?php
 
@@ -53,9 +54,13 @@ require 'config/config.php';
     exit();
   }
 
+  /*
   if (!mysqli_query($connector, "SET a=1")) {
     printf("Error message: %s\n", mysqli_error($link));
   }
+  */
+
+
 /*
   if (!mysqli_set_charset($connector, "utf8")) {
     printf("Error loading character set utf8: %s\n", mysqli_error($con));
@@ -108,6 +113,7 @@ require 'config/config.php';
 
       </div>
     </div>
+  </div>
 
   <?php
   mysqli_close($connector);
