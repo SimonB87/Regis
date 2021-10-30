@@ -19,6 +19,7 @@ $confirmCovid = mysqli_real_escape_string($connector, $_POST['confirmCovid']);
 $confirmCovidResult = ($confirmCovid == "on") ? "Yes, agreed with COVID-19 therms" : "denied" ;
 $confirmPrivateInformationResult = ($confirmPrivateInformation == "on") ? "Yes, agreed with GDPR" : "denied" ;
 
+
 if (mysqli_connect_errno()) {
   printf("Connect failed: %s\n", mysqli_connect_error());
   exit();
@@ -27,8 +28,8 @@ if (mysqli_connect_errno()) {
 /* debug
 if (!mysqli_query($connector, "SET a=1")) {
   printf("Error message: %s\n", mysqli_error($link));
-}
-*/
+}*/
+
 
 if (!mysqli_set_charset($connector, "utf8")) {
   printf("Error loading character set utf8: %s\n", mysqli_error($con));
@@ -45,14 +46,13 @@ if (!$sql) {
     echo "Failed! <br> Error: ".mysql_error();
 }
 
-/* debug
+
 if (mysqli_query($connector, $sql)) {
-  echo json_encode(array("statusCode"=>200));
+  //debug echo json_encode(array("statusCode"=>200));
 } 
 else {
   echo json_encode(array("statusCode"=>418));
-}*/
-
+}
 
 mysqli_close($connector);
 
