@@ -189,8 +189,8 @@
 
             <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
               <div class="form-floating">
-                <input type="phone" class="form-control" id="clientPhone" required name="clientPhone">
-                <label for="clientPhone">Phone</label>
+                <input type="phone" class="form-control" id="clientPhone" required name="clientPhone" minlength="6" value="+420">
+                <label for="clientPhone">Phone (with your national predial)</label>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
