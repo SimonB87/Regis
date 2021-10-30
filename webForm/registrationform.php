@@ -33,6 +33,22 @@
             </div>
 
             <div class="col-lg-6 col-md-6 col-sm-12 padding-small">
+<!--              <option value="1" selected class="1.0">Early bird - till 1st April</option>
+                  <option value="2" class="1.2">Regular ticket - since 2nd April</option>  -->
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="eventName" value="2021 - Tester & Testie testing weekend" aria-label="readonly Registration type" readonly name="eventName" aria-placeholder="1.0">
+                <label for="eventName">Event name (hidden in browser)</label>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="location" value="Prague" aria-label="readonly input example" readonly name="location">
+                <label for="location">Location</label>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 padding-small">
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="registrationdate" value="" aria-label="readonly Registration date" readonly name="registrationdate">
                 <label for="registrationdate">Registration date (hidden in browser)</label>
@@ -122,17 +138,10 @@
             </div>
 
             <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="location" value="Prague" aria-label="readonly input example" readonly name="location">
-                <label for="location">Location</label>
-              </div>
-            </div>
-
-            <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
               <div class="mb-3 full-width full-height div-select">
                 <select id="merchandise" class="form-select" aria-label="Pass type" required onchange="recalculatePrice();" name="merchandise">
                   <option value="" selected>Select merchandise option ...</option>
-                  <option value="0 - No merchandise class="0">No merchandise</option>
+                  <option value="0 - No merchandise" class="0">No merchandise</option>
                   <option value="1 - Shirt 500,- Kč" class="500">Shirt 500,- Kč</option>
                   <option value="2 - Towel 400,- Kč" class="400">Towel 400,- Kč</option>
                   <option value="3 - Dancing shoes bag 300,- Kč" class="300">Dancing shoes bag 300,- Kč</option>
