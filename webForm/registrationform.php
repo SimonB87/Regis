@@ -59,9 +59,9 @@
               <div class="mb-3 full-width full-height div-select">
                 <select id="passType" class="form-select" aria-label="Pass type" required onchange="recalculatePrice();" name="passType">
                   <option value="" selected>Select pass type ... </option>
-                  <option value="1 - Fullpass" class="1500">Fullpass</option>
-                  <option value="2 - Partypass" class="1000">Partypass</option>
-                  <option value="3 - Workshoppass" class="900">Workshoppass</option>
+                  <option value="1 - Fullpass" aria-valuenow="1500">Fullpass ariaValueNow</option>
+                  <option value="2 - Partypass" aria-valuenow="1000">Partypass</option>
+                  <option value="3 - Workshoppass" aria-valuenow="900">Workshoppass</option>
                 </select>
                 <div class="form-select-customLabel">
                   Pass type
@@ -79,9 +79,9 @@
               <div class="mb-3 full-width full-height div-select">
                 <select id="dancerKind" class="form-select" aria-label="Pass type" required onchange="recalculatePrice();" name="dancerKind">
                   <option value="" selected>Select dancer kind ...</option>
-                  <option value="1 - Leader" class="1.0">Leader</option>
-                  <option value="2 - Follower" class="1.0">Follower</option>
-                  <option value="3 - Couple" class="1.75">Couple</option>
+                  <option value="1 - Leader" aria-valuenow="1.0">Leader</option>
+                  <option value="2 - Follower" aria-valuenow="1.0">Follower</option>
+                  <option value="3 - Couple" aria-valuenow="1.75">Couple</option>
                 </select>
                 <div class="form-select-customLabel">
                   Dancer kind
@@ -99,12 +99,12 @@
               <div class="mb-3 full-width full-height div-select">
                 <select id="lengthType" class="form-select" aria-label="Pass type" required onchange="recalculatePrice();" name="lengthType">
                   <option value="" selected>Select length ...</option>
-                  <option value="1 - Friday till Sunday" class="1.0" >Friday till Sunday</option>
-                  <option value="2 - Friday" class="0.6">Friday</option>
-                  <option value="3 - Saturday" class="0.6">Saturday</option>
-                  <option value="4 - Sunday" class="0.6">Sunday</option>
-                  <option value="5 - Friday, Saturday" class="0.75">Friday, Saturday</option>
-                  <option value="6 - Saturday, Sunday" class="0.70">Saturday, Sunday</option>
+                  <option value="1 - Friday till Sunday" aria-valuenow="1.0">Friday till Sunday</option>
+                  <option value="2 - Friday" aria-valuenow="0.6">Friday</option>
+                  <option value="3 - Saturday" aria-valuenow="0.6">Saturday</option>
+                  <option value="4 - Sunday" aria-valuenow="0.6">Sunday</option>
+                  <option value="5 - Friday, Saturday" aria-valuenow="0.75">Friday, Saturday</option>
+                  <option value="6 - Saturday, Sunday" aria-valuenow="0.7">Saturday, Sunday</option>
                 </select>
                 <div class="form-select-customLabel">
                   Event length
@@ -122,8 +122,8 @@
               <div class="mb-3 full-width full-height div-select">
                 <select id="competitionParticipation" class="form-select" aria-label="Pass type" required onchange="recalculatePrice();" name="competitionParticipation">
                   <option value="" selected>Select competition option ...</option>
-                  <option value="1 - Participate in Jack and Jill" class="500">Participate in Jack and Jill</option>
-                  <option value="0 - No participation in competition" class="0">No participation in competition</option>
+                  <option value="1 - Participate in Jack and Jill" aria-valuenow="500">Participate in Jack and Jill</option>
+                  <option value="0 - No participation in competition" aria-valuenow="0">No participation in competition</option>
                 </select>
                 <div class="form-select-customLabel">
                   Competition option
@@ -141,10 +141,10 @@
               <div class="mb-3 full-width full-height div-select">
                 <select id="merchandise" class="form-select" aria-label="Pass type" required onchange="recalculatePrice();" name="merchandise">
                   <option value="" selected>Select merchandise option ...</option>
-                  <option value="0 - No merchandise" class="0">No merchandise</option>
-                  <option value="1 - Shirt 500,- Kč" class="500">Shirt 500,- Kč</option>
-                  <option value="2 - Towel 400,- Kč" class="400">Towel 400,- Kč</option>
-                  <option value="3 - Dancing shoes bag 300,- Kč" class="300">Dancing shoes bag 300,- Kč</option>
+                  <option value="0 - No merchandise" aria-valuenow="0">No merchandise</option>
+                  <option value="1 - Shirt 500,- Kč" aria-valuenow="500">Shirt 500,- Kč</option>
+                  <option value="2 - Towel 400,- Kč" aria-valuenow="400">Towel 400,- Kč</option>
+                  <option value="3 - Dancing shoes bag 300,- Kč" aria-valuenow="300">Dancing shoes bag 300,- Kč</option>
                 </select>
               </select>
               <div class="form-select-customLabel">

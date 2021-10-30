@@ -21,15 +21,15 @@ function recalculatePrice() {
     document.getElementById("formPrice").value = finalPrice+",- Kč or " + finalPriceEurWhole + ",- EUR";
 
     function getMainPrice() {
-      const passTypePrice = passType.options[passType.selectedIndex].classList[0];
+      const passTypePrice = passType.options[passType.selectedIndex].ariaValueNow;
       const mainPriceOutput = parseFloat(passTypePrice, 10);
       return mainPriceOutput;
     }
   
     function getPriceCoefficient() {
       const registrationTypeValue = parseFloat(registrationType.ariaPlaceholder, 10);
-      const dancerKindValue = parseFloat(dancerKind.options[dancerKind.selectedIndex].classList[0], 10);
-      const lengthTypeValue = parseFloat(lengthType.options[lengthType.selectedIndex].classList[0], 10);
+      const dancerKindValue = parseFloat(dancerKind.options[dancerKind.selectedIndex].ariaValueNow, 10);
+      const lengthTypeValue = parseFloat(lengthType.options[lengthType.selectedIndex].ariaValueNow, 10);
 
       const priceCoefficientOutput = registrationTypeValue * dancerKindValue * lengthTypeValue;
   
@@ -38,10 +38,10 @@ function recalculatePrice() {
   
     function getAdditionalService() {
       const competitionParticipationValue = competitionParticipation.value;
-      const competitionParticipationOutput = parseFloat(competitionParticipation.options[competitionParticipation.selectedIndex].classList[0], 10);
+      const competitionParticipationOutput = parseFloat(competitionParticipation.options[competitionParticipation.selectedIndex].ariaValueNow, 10);
   
       const merchandiseValue = merchandise.value;
-      const merchandiseOutput = parseFloat( merchandise.options[merchandise.selectedIndex].classList[0] , 10);
+      const merchandiseOutput = parseFloat( merchandise.options[merchandise.selectedIndex].ariaValueNow, 10);
   
       const sumAmount = competitionParticipationOutput + merchandiseOutput;
       
