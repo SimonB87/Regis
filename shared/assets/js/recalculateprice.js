@@ -7,7 +7,9 @@ function recalculatePrice() {
   const merchandise = document.getElementById("merchandise");
 
 
-  const allCustomerOptionsWereSelected = registrationType.checkValidity() && passType.checkValidity() && dancerKind.checkValidity() && lengthType.checkValidity() && competitionParticipation.checkValidity() && merchandise.checkValidity();
+  //const allCustomerOptionsWereSelected = registrationType.checkValidity() && passType.checkValidity() && dancerKind.checkValidity() && lengthType.checkValidity() && competitionParticipation.checkValidity() && merchandise.checkValidity();
+  const allCustomerOptionsWereSelected = registrationType.checkValidity() && passType.checkValidity() && competitionParticipation.checkValidity() && merchandise.checkValidity();
+
 
   if (allCustomerOptionsWereSelected) {
 
@@ -28,10 +30,11 @@ function recalculatePrice() {
   
     function getPriceCoefficient() {
       const registrationTypeValue = parseFloat(registrationType.ariaPlaceholder, 10);
-      const dancerKindValue = parseFloat(dancerKind.options[dancerKind.selectedIndex].ariaValueNow, 10);
-      const lengthTypeValue = parseFloat(lengthType.options[lengthType.selectedIndex].ariaValueNow, 10);
+      //const dancerKindValue = parseFloat(dancerKind.options[dancerKind.selectedIndex].ariaValueNow, 10);
+      //const lengthTypeValue = parseFloat(lengthType.options[lengthType.selectedIndex].ariaValueNow, 10);
 
-      const priceCoefficientOutput = registrationTypeValue * dancerKindValue * lengthTypeValue;
+      //const priceCoefficientOutput = registrationTypeValue * dancerKindValue * lengthTypeValue;
+      const priceCoefficientOutput = registrationTypeValue;
   
       return priceCoefficientOutput;
     }

@@ -59,9 +59,12 @@
               <div class="mb-3 full-width full-height div-select">
                 <select id="passType" class="form-select" aria-label="Pass type" required onchange="recalculatePrice();" name="passType">
                   <option value="" selected>Select pass type ... </option>
-                  <option value="1 - Fullpass" aria-valuenow="1500">Fullpass ariaValueNow</option>
-                  <option value="2 - Partypass" aria-valuenow="1000">Partypass</option>
-                  <option value="3 - Workshoppass" aria-valuenow="900">Workshoppass</option>
+                  <option value="1 - Fullpass leader/follower - 1500,-Kč" aria-valuenow="1500">Fullpass leader/follower - 1500,-Kč</option>
+                  <option value="2 - Fullpass couple - 2600,-Kč" aria-valuenow="2600">Fullpass couple - 2600,-Kč</option>
+                  <option value="3 - Partypass leader/follower - 1000,-Kč" aria-valuenow="1000">Partypass leader/follower - 1000,-Kč</option>
+                  <option value="4 - Partypass couple - 1600,-Kč" aria-valuenow="1600">Partypass couple - 1600,-Kč</option>
+                  <option value="5 - Workshoppass leader/follower - 1100,-Kč" aria-valuenow="1100">Workshoppass leader/follower - 1100,-Kč</option>
+                  <option value="6 - Workshoppass couple - 1800,-Kč" aria-valuenow="1800">Workshoppass couple - 1800,-Kč</option>
                 </select>
                 <div class="form-select-customLabel">
                   Pass type
@@ -75,10 +78,10 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
+            <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
               <div class="mb-3 full-width full-height div-select">
-                <select id="dancerKind" class="form-select" aria-label="Pass type" required onchange="recalculatePrice();" name="dancerKind">
-                  <option value="" selected>Select dancer kind ...</option>
+                <select id="dancerKind" class="form-select" aria-label="Pass type" onchange="recalculatePrice();" required name="dancerKind" >
+                  <option value="" selected aria-valuenow="1.0">Select dancer kind ...</option>
                   <option value="1 - Leader" aria-valuenow="1.0">Leader</option>
                   <option value="2 - Follower" aria-valuenow="1.0">Follower</option>
                   <option value="3 - Couple" aria-valuenow="1.75">Couple</option>
@@ -95,10 +98,10 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
+            <div class="col-lg-6 col-md-12 col-sm-12 padding-small hidden">
               <div class="mb-3 full-width full-height div-select">
                 <select id="lengthType" class="form-select" aria-label="Pass type" required onchange="recalculatePrice();" name="lengthType">
-                  <option value="" selected>Select length ...</option>
+                  <option value="" aria-valuenow="1.0" selected>Select length ...</option>
                   <option value="1 - Friday till Sunday" aria-valuenow="1.0">Friday till Sunday</option>
                   <option value="2 - Friday" aria-valuenow="0.6">Friday</option>
                   <option value="3 - Saturday" aria-valuenow="0.6">Saturday</option>
@@ -122,8 +125,8 @@
               <div class="mb-3 full-width full-height div-select">
                 <select id="competitionParticipation" class="form-select" aria-label="Pass type" required onchange="recalculatePrice();" name="competitionParticipation">
                   <option value="" selected>Select competition option ...</option>
-                  <option value="1 - Participate in Jack and Jill" aria-valuenow="500">Participate in Jack and Jill</option>
-                  <option value="0 - No participation in competition" aria-valuenow="0">No participation in competition</option>
+                  <option value="1 - Participate in Jack and Jill - 500,- Kč" aria-valuenow="500">Participate in Jack and Jill - 500,- Kč</option>
+                  <option value="0 - No participation in competition - 0,- Kč" aria-valuenow="0">No participation in competition - 0,- Kč</option>
                 </select>
                 <div class="form-select-customLabel">
                   Competition option
