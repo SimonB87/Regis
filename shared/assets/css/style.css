@@ -124,7 +124,7 @@ select {
 }
 
 .div-select select {
-  line-height: 2.5rem;
+  line-height: 2rem;
 }
 
 select.form-select {
