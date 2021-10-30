@@ -32,7 +32,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 col-sm-12 padding-small">
+            <div class="col-lg-6 col-md-6 col-sm-12 padding-small hidden">
 <!--              <option value="1" selected class="1.0">Early bird - till 1st April</option>
                   <option value="2" class="1.2">Regular ticket - since 2nd April</option>  -->
               <div class="form-floating mb-3">
@@ -41,14 +41,14 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
+            <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="location" value="Prague" aria-label="readonly input example" readonly name="location">
                 <label for="location">Location</label>
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 col-sm-12 padding-small">
+            <div class="col-lg-6 col-md-6 col-sm-12 padding-small hidden">
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="registrationdate" value="" aria-label="readonly Registration date" readonly name="registrationdate">
                 <label for="registrationdate">Registration date (hidden in browser)</label>
@@ -100,7 +100,7 @@
 
             <div class="col-lg-6 col-md-12 col-sm-12 padding-small hidden">
               <div class="mb-3 full-width full-height div-select">
-                <select id="lengthType" class="form-select" aria-label="Pass type" required onchange="recalculatePrice();" name="lengthType">
+                <select id="lengthType" class="form-select" aria-label="Pass type" onchange="recalculatePrice();" name="lengthType">
                   <option value="" aria-valuenow="1.0" selected>Select length ...</option>
                   <option value="1 - Friday till Sunday" aria-valuenow="1.0">Friday till Sunday</option>
                   <option value="2 - Friday" aria-valuenow="0.6">Friday</option>
