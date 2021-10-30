@@ -22,23 +22,11 @@ require 'config/config.php';
   include("shared/navigation.php");
   ?>
 
-  <div class='content'>
-    <div class='container'>
-      <div class='container'>
-        <div class='col-12'>
-          <h1 class="text-center padding-small">Registration result :</h1>
-        </div>
-      </div>
-    </div>
-
   <?php
 
   include("manage/processformdata.php");
 
   ?>
-
-  <div class='container'>
-    <div class='row'>
 
   <?php
 
@@ -64,22 +52,26 @@ require 'config/config.php';
   $htmlConfirmPrivateInformation = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong> Client confirms GDPR policy : </strong>" . $confirmPrivateInformationResult . "</div>";
   $htmlConfirmCovidResulte = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client confirms COVID-19 policy : </strong>" .  $confirmCovidResult . "</div>";
 
-  $paymentInstructions = "<div class='col-lg-12 col-md-12 col-sm-12 padding-small'> <h3 class='text-center padding-small'>Payment instructions : </h3> " . 
+  $paymentInstructions = "<div class='container'><div class='row'><div class='col-lg-12 col-md-12 col-sm-12 padding-small'> <h2 class='text-center' style='color: green;'>You have registered for the event!</h2> <h3 class='text-center padding-small'>Payment instructions : </h3> " . 
                         "<h4 class='padding-small'>For Czech participants: </h4>" . 
-                        "<p> Please send the price: <strong>" . $formPrice . "</strong> <br> with Variable symbol (VS/Variabilní symbol)<strong> " . $orderId . "</strong>" . 
+                        "<p> Please send the price: <strong>" . $formPrice . "</strong> <br> with Variable symbol (VS/Variabilní symbol)<strong style='color:green;'> " . $orderId . "</strong>" . 
                         " <br>to account <strong>111222333/2010</strong> (Fio banka) </p>" . 
                         "<p> <h4 class='padding-small'>For international bank transaction : </h4> <div>IBAN: <strong> 00420111222333002010 </strong> </div> " . 
                         "<div>BIC: <strong> CZDOMINANTALFA </strong> </div>" . 
                         "<div>Bank address: <strong> Fio banka, a.s. Millennium Plaza, V Celnici 10 117 21 Prague 1. Czech Republic </strong> </div>".
                         " <div>Account holder name: <strong> Mauritius The Greatest </strong>" . 
-                        " </div> <div>Notice for receiver: <strong> order ID: " . $orderId. ", Client name: ". $clientName ." , Client email: " . $clientEmail . 
-                        " </strong> </div> </p>" . "</div>"; //TODO - valid price set up by server check, payment´s details set by admin to DB
+                        " </div> " . 
+                        " <div>Price<strong> : " . $formPrice . "</strong></div>"
+                        . "<div>Notice for receiver: <strong> order ID: " . $orderId. ", Client name: ". $clientName ." , Client email: " . $clientEmail . 
+                        " </strong> </div> </p>" . "</div></div></div>"; //TODO - valid price set up by server check, payment´s details set by admin to DB
 
-  $registrationError = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'><h3 style='color:coral;'>Registration error</h3><p style='color:coral;'>Please fill in a new registration or contact the event organizer.</p><div>";
+  $registrationError = "<div class='container'><div class='row'><div class='col-lg-6 col-md-6 col-sm-12 padding-small'><h3 style='color:coral;'>Registration error</h3><p style='color:coral;'>Please fill in a new registration or contact the event organizer.</p></div></div></div>";
 
   $userNotification = ($correctlyFilledForm) ? $paymentInstructions : $registrationError;
 
-  echo $htmlValidation . $htmlEventName . $htmlRegistrationType . $htmlPassType . $htmlDancerKind . $htmlLengthType . $htmlCompetitionParticipation . $htmlLocation . $htmlMerchandise . $htmlFormPrice .  $htmlClientName . $htmlClientEmail . $htmlClientPhone . $htmlClientCountry . $htmlClientComments . $htmlRegistrationdate . $htmlConfirmPrivateInformation . $htmlConfirmCovidResulte . $userNotification;
+  $registrationSummary = "<div class='container'> <div class='row'> <div class='col-12'> <h1 class='text-center padding-small'>Registration summary :</h1> </div>";
+
+  echo $userNotification . $registrationSummary . $htmlValidation . $htmlEventName . $htmlRegistrationType . $htmlPassType . $htmlDancerKind . $htmlLengthType . $htmlCompetitionParticipation . $htmlLocation . $htmlMerchandise . $htmlFormPrice .  $htmlClientName . $htmlClientEmail . $htmlClientPhone . $htmlClientCountry . $htmlClientComments . $htmlRegistrationdate . $htmlConfirmPrivateInformation . $htmlConfirmCovidResulte;
 
   include("manage/emailing/sendmailtoadmin.php");
 
