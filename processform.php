@@ -70,7 +70,7 @@ require 'config/config.php';
                         " <br>to account <strong>111222333/2010</strong> (Fio banka) </p>" . 
                         "<p> <h4 class='padding-small'>For international bank transaction : </h4> <div>IBAN: <strong> 00420111222333002010 </strong> </div> " . 
                         "<div>BIC: <strong> CZDOMINANTALFA </strong> </div>" . 
-                        "<div>Bank address: <strong> Fio banka, a.s.. Millennium Plaza, V Celnici 10 117 21 Prague 1. Czech Republic </strong> </div>".
+                        "<div>Bank address: <strong> Fio banka, a.s. Millennium Plaza, V Celnici 10 117 21 Prague 1. Czech Republic </strong> </div>".
                         " <div>Account holder name: <strong> Mauritius The Greatest </strong>" . 
                         " </div> <div>Notice for receiver: <strong> order ID: " . $orderId. ", Client name: ". $clientName ." , Client email: " . $clientEmail . 
                         " </strong> </div> </p>" . "</div>"; //TODO - valid price set up by server check, payment´s details set by admin to DB
@@ -83,16 +83,19 @@ require 'config/config.php';
 
   include("manage/emailing/sendmailtoadmin.php");
 
+  include("manage/emailing/sendmaintoclient.php");
+
   ?>
 
       </div>
     </div>
   </div>
   </div>
-
-
+  </div>
+  </div>
 
   <?php
+  include("shared/contactsection.php");
   include("shared/footer.php");
   ?> 
 
