@@ -9,6 +9,7 @@ require 'config/config.php';
   <head>
 
     <?php
+    //header('Content-Type: text/html; charset=utf-8');
     include("shared/head.php");
     ?>
 
@@ -60,9 +61,10 @@ require 'config/config.php';
 
   echo $htmlRegistrationType . $htmlPassType . $htmlDancerKind . $htmlLengthType . $htmlCompetitionParticipation . $htmlLocation . $htmlMerchandise . $htmlFormPrice .  $htmlClientName . $htmlClientEmail . $htmlClientPhone . $htmlClientCountry . $htmlClientComments . $htmlRegistrationdate . $htmlConfirmPrivateInformation . $htmlConfirmCovidResulte;
 
+  include("manage/emailing/sendmailtoadmin.php");
+
   ?>
 
-      </div>
     </div>
   </div>
 
