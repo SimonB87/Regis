@@ -39,7 +39,7 @@ if ($correctlyFilledForm) {
 
   echo "<div class='container'> <div class='row'> <div class='col-lg-12 col-md-12 col-sm-12 padding-small'>";
   if (mail($to, $subject, $message, $headers)) {
-    echo "<h4 style='color:green;'> The confirmation email with payment instructions was sent.</h4> <p style='color:green;'>Please check your email inbox, confirmation email could be in your spam box.</p>";
+    echo "<h4 style='color:green;'> For buyer - The confirmation email with payment instructions was sent.</h4> <p style='color:green;'>Please check your email inbox, confirmation email could be in your spam box.</p>";
   } else {
     echo "<h4 style='color:coral;'>For buyer - An error occured during sending confirming email.</h4> <p style='color:coral;'>Please check the event organizer for further infromation.</p>";
   }
