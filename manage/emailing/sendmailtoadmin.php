@@ -1,7 +1,7 @@
 <?php
 
 $to				= 	"buryans@gmail.com";
-$subject	=		"Testovací prostředí - Máme novou registraci - Platforma REGIS";
+$subject	=		"Testovací prostředí - Máme novou registraci na akci " . $eventName . " | Platforma REGIS";
 
 $message_head	=	"<div style='max-width: 550px; margin: 0 auto; line-height: 1.5rem; font-size: 0.9rem;'>" .
                 "<p>Krásný den, </p><p>na testovací prostředí přístála další <b>nová registrace do platformy REGIS</b></p></div><br>";
@@ -29,9 +29,9 @@ $headers = "Content-Type: text/html; charset=UTF-8";
 
 echo "<div class='container'> <div class='row'> <div class='col-lg-12 col-md-12 col-sm-12 padding-small'>";
 if (mail($to, $subject, $message, $headers)) {
-  echo "<h4>Žádost byla odeslána.</h4> <p>Děkujeme za využití našich služeb.</p>";
+  echo "<h4 style='color:green;'>For admin - The confirmation email was sent.</h4> <p style='color:green;'>Please check your email inbox, confirmation email could be in your spam box.</p>";
 } else {
-  echo "<h4>Objevila se chyba.</h4> <p>Informujte případně správce.</p>";
+  echo "<h4 style='color:coral;'>For admin - An error occured during sending confirming email.</h4> <p style='color:coral;'>Please check the event organizer for further infromation.</p>";
 }
 echo "</div>";
 ?>
