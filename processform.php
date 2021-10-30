@@ -58,7 +58,7 @@ require 'config/config.php';
                         " <br>to account <strong>111222333/2010</strong> (Fio banka) </p>" . 
                         "<p> <h4 class='padding-small'>For international bank transaction : </h4> <div>IBAN: <strong> 00420111222333002010 </strong> </div> " . 
                         "<div>BIC: <strong> CZDOMINANTALFA </strong> </div>" . 
-                        "<div>Bank address: <strong> Fio banka, a.s. Millennium Plaza, V Celnici 10 117 21 Prague 1. Czech Republic </strong> </div>".
+                        "<div>Bank address: <strong> Fio banka, a.s. Millennium Plaza, V Celnici 10, Prague 1, ZIP Code : 117 21. Czech Republic </strong> </div>".
                         " <div>Account holder name: <strong> Mauritius The Greatest </strong>" . 
                         " </div> " . 
                         " <div>Price<strong> : " . $formPrice . "</strong></div>"
@@ -71,19 +71,20 @@ require 'config/config.php';
 
   $registrationSummary = "<div class='container'> <div class='row'> <div class='col-12'> <h1 class='text-center padding-small'>Registration summary :</h1> </div>";
 
-  echo $userNotification . $registrationSummary . $htmlValidation . $htmlEventName . $htmlRegistrationType . $htmlPassType . $htmlDancerKind . $htmlLengthType . $htmlCompetitionParticipation . $htmlLocation . $htmlMerchandise . $htmlFormPrice .  $htmlClientName . $htmlClientEmail . $htmlClientPhone . $htmlClientCountry . $htmlClientComments . $htmlRegistrationdate . $htmlConfirmPrivateInformation . $htmlConfirmCovidResulte;
+  echo $userNotification;
 
   include("manage/emailing/sendmailtoadmin.php");
-
   include("manage/emailing/sendmaintoclient.php");
+
+  echo $registrationSummary . $htmlValidation . $htmlEventName . $htmlRegistrationType . $htmlPassType . $htmlDancerKind . $htmlLengthType . $htmlCompetitionParticipation . $htmlLocation . $htmlMerchandise . $htmlFormPrice .  $htmlClientName . $htmlClientEmail . $htmlClientPhone . $htmlClientCountry . $htmlClientComments . $htmlRegistrationdate . $htmlConfirmPrivateInformation . $htmlConfirmCovidResulte;
 
   ?>
 
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  </div>
-  </div>
   </div>
 
   <?php
