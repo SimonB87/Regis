@@ -1,5 +1,6 @@
 <?php 
 
+$eventName = mysqli_real_escape_string($connector, $_POST['eventName']);
 $passType = mysqli_real_escape_string($connector, $_POST['passType']);
 $registrationType = mysqli_real_escape_string($connector, $_POST['registrationType']);
 $dancerKind = mysqli_real_escape_string($connector, $_POST['dancerKind']);
@@ -19,6 +20,12 @@ $confirmCovid = mysqli_real_escape_string($connector, $_POST['confirmCovid']);
 $confirmCovidResult = ($confirmCovid == "on") ? "Yes, agreed with COVID-19 therms" : "denied" ;
 $confirmPrivateInformationResult = ($confirmPrivateInformation == "on") ? "Yes, agreed with GDPR" : "denied" ;
 
+// form validation
+$validDancerKind = ($dancerKind == "") ? false : true;
+$validPassType = ($passType == "") ? false : true;
+$validClientName = ($clientName == "") ? false : true;
+$validClientEmail = ($clientEmail == "") ? false : true;
+$correctlyFilledForm = ($validDancerKind && $validPassType && $validClientName && $validClientEmail);
 
 if (mysqli_connect_errno()) {
   printf("Connect failed: %s\n", mysqli_connect_error());
@@ -38,12 +45,13 @@ if (!mysqli_set_charset($connector, "utf8")) {
           //printf("Current character set: %s\n", mysqli_character_set_name($con));//used only for testing
   }
 
-$sql = "INSERT INTO `registrations`( `passType`,`registrationType`,`dancerKind`,`lengthType`,`competitionParticipation`,`location`,`merchandise`,`formPrice`,`clientName`,`clientPhone`,`clientCountry`,`clientComments`,`registrationdate`,`confirmPrivateInformation`,`confirmCovid`) 
-VALUES ('$passType ', '$registrationType', '$dancerKind', '$lengthType', '$competitionParticipation', '$location', '$merchandise', '$formPrice', '$clientName', '$clientPhone', '$clientCountry', '$clientComments', '$registrationdate', '$confirmPrivateInformationResult', '$confirmCovidResult')";
+$sql = "INSERT INTO `registrations`( `eventName`,`passType`,`registrationType`,`dancerKind`,`lengthType`,`competitionParticipation`,`location`,`merchandise`,`formPrice`,`clientName`,`clientPhone`,`clientCountry`, `clientEmail` ,`clientComments`,`registrationdate`,`confirmPrivateInformation`,`confirmCovid`) 
+VALUES ('$eventName', '$passType ', '$registrationType', '$dancerKind', '$lengthType', '$competitionParticipation', '$location', '$merchandise', '$formPrice', '$clientName', '$clientPhone', '$clientCountry', '$clientEmail', '$clientComments', '$registrationdate', '$confirmPrivateInformationResult', '$confirmCovidResult')";
+
 
 //Error case
-if (!$sql) {
-    echo "Failed! <br> Error: ".mysql_error();
+if (!$sql ) {
+  echo "Failed! <br> Error sql: " . mysql_error();
 }
 
 
@@ -51,9 +59,36 @@ if (mysqli_query($connector, $sql)) {
   //debug echo json_encode(array("statusCode"=>200));
 } 
 else {
-  echo json_encode(array("statusCode"=>418));
+  echo json_encode(array("sql - statusCode"=>418));
 }
 
-mysqli_close($connector);
+$orderId = "string";
 
+
+$orderIdSql = "SELECT id, clientName, registrationdate FROM registrations WHERE registrationdate='". $registrationdate ."'";
+
+$results = $connector-> query($orderIdSql);
+
+if ($results-> num_rows > 0 ) {
+  while ($row = $results-> fetch_assoc()) {
+
+    $orderId = date("Y") . "00" . $row["id"];
+    //debug
+    //echo "<div> --- </div>";
+    //echo "<div> result : ID " . $row["id"]. "</div>";
+    //debug
+  }
+  
+}
+else {
+  echo "<h3 style='text-align: center; color: coral'>Registrace s vybraným číslem není v databázi. Vyberte existující !</h3>";
+}
+
+//Error case
+if (!$orderIdSql ) {
+  echo "Failed! <br> Error orderId: " . mysql_error();
+}
+
+
+mysqli_close($connector);
 ?>
