@@ -8,7 +8,7 @@
 - Server validation
 
 ## TODO
-[x] update attribute in DB orderId ;
+- update attribute in DB orderId ;
 - set up footable with printing out all the orders from DB ;
 - create better emails for buyer and admin ;
 - set only prefered inputs by the event organizer - hide others;
