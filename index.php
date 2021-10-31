@@ -28,6 +28,7 @@
     ?> 
 
     <?php
+    include("shared/contactsection.php");
     include("shared/footer.php");
     ?>
 
