@@ -7,10 +7,9 @@
       </div>
       <div class="col-12">
 
-      <table id="orders" class="table tableDesign2019 search_project_table">
+      <table id="orders" class="table tableDesign2019 search_project_table" data-sorting="true" data-paging="true">
         <thead class="bg-info">
           <tr>
-            <th class="footable-sortable" data-breakpoints="xs sm md lg"> ID (in database) </th>
             <th class="footable-sortable"> Order ID </th>
             <th class="footable-sortable" data-breakpoints="xs sm"> Event name </th>
             <th class="footable-sortable"> Registration date </th>
@@ -29,6 +28,7 @@
             <th class="footable-sortable" data-breakpoints="xs sm md lg"> Competition participation </th>
             <th class="footable-sortable" data-breakpoints="xs sm md"> Merchandise </th>
             <th class="footable-sortable" data-breakpoints="xs sm"> Payment status </th>
+            <th class="footable-sortable" data-breakpoints="xs sm md lg"> ID (in database) </th>
           </tr>
         </thead>
 
@@ -81,9 +81,9 @@
             if ($results-> num_rows > 0 ) {
               while ($row = $results-> fetch_assoc()) {
 
-                  echo "<tr><td>" . $row["id"] . "</td><td>" . $row["orderID"] . "</td><td>" . $row["eventName"] . "</td><td>" . $row["registrationdate"]  . "</td><td>" . $row["clientName"] ."</td><td>" . $row["passType"] . "</td> <td>" . $row["formPrice"] . "</td> <td>" . $row["clientEmail"]  . "</td> <td>" . $row["dancerKind"] . "</td><td>" . 
+                  echo "<tr><td>" . $row["orderID"] . "</td><td>" . $row["eventName"] . "</td><td>" . $row["registrationdate"]  . "</td><td>" . $row["clientName"] ."</td><td>" . $row["passType"] . "</td> <td>" . $row["formPrice"] . "</td> <td>" . $row["clientEmail"]  . "</td> <td>" . $row["dancerKind"] . "</td><td>" . 
                         $row["registrationType"] . "</td><td>" . $row["clientPhone"] . "</td><td>" . $row["lengthType"] . "</td><td>" . $row["clientCountry"] . "</td><td>" . $row["clientComments"] . "</td><td>" . $row["confirmPrivateInformation"] . "</td><td>" .
-                        $row["confirmCovid"] . "</td><td>" . $row["competitionParticipation"] . "</td><td>" . $row["merchandise"] . "</td><td>" . $paymentStatus . "</td>" . "</tr>";
+                        $row["confirmCovid"] . "</td><td>" . $row["competitionParticipation"] . "</td><td>" . $row["merchandise"] . "</td><td>" . $paymentStatus . "</td><td>" . $row["id"] . "</td>" . "</tr>";
               }
               echo "";
           }
