@@ -27,7 +27,7 @@
 <!--              <option value="1" selected class="1.0">Early bird - till 1st April</option>
                   <option value="2" class="1.2">Regular ticket - since 2nd April</option>  -->
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="registrationType" value="Early bird - till 1st April" aria-label="readonly Registration type" readonly name="registrationType" aria-placeholder="1.0">
+                <input type="text" class="form-control" id="registrationType" value="Early bird - till 1st April" aria-label="readonly Registration type" readonly name="registrationType" aria-placeholder="1.0" maxlength="250">
                 <label for="registrationType">Registration type (hidden in browser)</label>
               </div>
             </div>
@@ -36,21 +36,21 @@
 <!--              <option value="1" selected class="1.0">Early bird - till 1st April</option>
                   <option value="2" class="1.2">Regular ticket - since 2nd April</option>  -->
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="eventName" value="2021 - Tester & Testie testing weekend" aria-label="readonly Registration type" readonly name="eventName" aria-placeholder="1.0">
+                <input type="text" class="form-control" id="eventName" value="2021 - Tester & Testie testing weekend" aria-label="readonly Registration type" readonly name="eventName" aria-placeholder="1.0" maxlength="250">
                 <label for="eventName">Event name (hidden in browser)</label>
               </div>
             </div>
 
             <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="location" value="Prague" aria-label="readonly input example" readonly name="location">
+                <input type="text" class="form-control" id="location" value="Prague" aria-label="readonly input example" readonly name="location" maxlength="250">
                 <label for="location">Location</label>
               </div>
             </div>
 
             <div class="col-lg-6 col-md-6 col-sm-12 padding-small hidden">
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="registrationdate" value="" aria-label="readonly Registration date" readonly name="registrationdate">
+                <input type="text" class="form-control" id="registrationdate" value="" aria-label="readonly Registration date" readonly name="registrationdate" maxlength="250">
                 <label for="registrationdate">Registration date (hidden in browser)</label>
               </div>
             </div>
@@ -175,7 +175,7 @@
 
             <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
               <div class="form-floating">
-                <input type="text" class="form-control" id="clientName" required name="clientName">
+                <input type="text" class="form-control" id="clientName" required name="clientName" maxlength="250">
                 <label for="clientName">Name</label>
                 <div class="valid-feedback">
                   Looks good!
@@ -188,7 +188,7 @@
 
             <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
                 <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="clientEmail" placeholder="name@example.com" required name="clientEmail">
+                  <input type="email" class="form-control" id="clientEmail" placeholder="name@example.com" required name="clientEmail" maxlength="250">
                   <label for="clientEmail">Email address</label>
                   <div class="valid-feedback">
                     Looks good!
@@ -201,7 +201,7 @@
 
             <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
               <div class="form-floating">
-                <input type="phone" class="form-control" id="clientPhone" required name="clientPhone" minlength="6" value="+420">
+                <input type="phone" class="form-control" id="clientPhone" required name="clientPhone" minlength="6" value="+420" maxlength="250">
                 <label for="clientPhone">Phone (with your national predial)</label>
                 <div class="valid-feedback">
                   Looks good!
@@ -214,7 +214,7 @@
 
             <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
               <div class="form-floating">
-                <input type="text" class="form-control" id="clientCountry" required name="clientCountry">
+                <input type="text" class="form-control" id="clientCountry" required name="clientCountry" maxlength="250">
                 <label for="clientCountry">Your country</label>
                 <div class="valid-feedback">
                   Looks good!
@@ -254,7 +254,7 @@
 
             <div class="col-lg-12 col-md-12 col-sm-12 padding-small">
               <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="clientComments" style="height: 100px" name="clientComments"></textarea>
+                <textarea class="form-control" placeholder="Leave a comment here" id="clientComments" style="height: 100px" name="clientComments" maxlength="250"></textarea>
                 <label for="clientComments">Comments</label>
                 <div class="valid-feedback">
                   Looks good!
