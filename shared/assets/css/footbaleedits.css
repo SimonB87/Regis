@@ -24,3 +24,7 @@ ul.pagination li {
 .pagination {
   justify-content: center;
 }
+
+.footable td {
+  word-break: break-word;
+}
