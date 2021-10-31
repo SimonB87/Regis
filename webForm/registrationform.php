@@ -8,6 +8,9 @@
         <h2 class="padding-small">
           Event registration form
         </h2>
+        <h4 class='padding-small text-warning'>
+          THIS IS WEB TEST ENVIRONMENT ! Registrations only for test purpose !
+        </h4>
       </div>
 
     </div>

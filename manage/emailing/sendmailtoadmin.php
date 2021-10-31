@@ -4,6 +4,7 @@
   $subject	=		"Testovací prostředí - Máme novou registraci order-ID: \"" . $orderId . "\" na akci \"" . $eventName . "\" | Platforma REGIS";
   
   $message_head	=	"<div style='max-width: 550px; margin: 0 auto; line-height: 1.5rem; font-size: 0.9rem;'>" .
+                  "<h4 class='padding-small text-warning'> THIS IS WEB TEST ENVIRONMENT ! Registrations only for test purpose ! </h4>" .
                   "<p>Krásný den, </p><p>na testovací prostředí přístála další <b>nová registrace do platformy REGIS</b></p></div><br>";
   
   

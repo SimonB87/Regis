@@ -27,7 +27,7 @@ require 'config/config.php';
     <?php
     include("webform/herosection.php");
     ?> 
-
+      <h4 class='padding-small text-warning'> THIS IS WEB TEST ENVIRONMENT ! Registrations only for test purpose ! </h4>
     <?php
     include("manage/registrationstable.php");
     ?> 

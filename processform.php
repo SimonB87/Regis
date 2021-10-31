@@ -52,7 +52,8 @@ require 'config/config.php';
   $htmlConfirmPrivateInformation = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong> Client confirms GDPR policy : </strong>" . $confirmPrivateInformationResult . "</div>";
   $htmlConfirmCovidResulte = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client confirms COVID-19 policy : </strong>" .  $confirmCovidResult . "</div>";
 
-  $paymentInstructions = "<div class='container'><div class='row'><div class='col-lg-12 col-md-12 col-sm-12 padding-small'> <h2 class='text-center' style='color: green;'>You have registered for the event!</h2> <h3 class='text-center padding-small'>Payment instructions : </h3> " . 
+  $paymentInstructions = "<h4 class='padding-small text-warning'> THIS IS WEB TEST ENVIRONMENT ! Registrations only for test purpose ! </h4>" . 
+                        "<div class='container'><div class='row'><div class='col-lg-12 col-md-12 col-sm-12 padding-small'> <h2 class='text-center' style='color: green;'>You have registered for the event!</h2> <h3 class='text-center padding-small'>Payment instructions : </h3> " . 
                         "<h4 class='padding-small'>For Czech participants: </h4>" . 
                         "<p> Please send the price: <strong>" . $formPrice . "</strong> <br> with Variable symbol (VS/Variabilní symbol)<strong style='color:green;'> " . $orderId . "</strong>" . 
                         " <br>to account <strong>111222333/2010</strong> (Fio banka) </p>" . 

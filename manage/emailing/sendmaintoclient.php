@@ -6,6 +6,7 @@ if ($correctlyFilledForm) {
   $subject	=		"Event \"" . $eventName . "\" registration order-ID: \"" . $orderId . "\" and payment instructions";
 
   $message_head	=	"<div style='max-width: 550px; margin: 0 auto; line-height: 1.5rem; font-size: 0.9rem;'>" .
+                  "<h4 class='padding-small text-warning'> THIS IS WEB TEST ENVIRONMENT ! Registrations only for test purpose ! </h4>" .
                   "<p>Thank you for registering for then event " . $eventName  . ", </p><p>please send the required amount by a bank transfer <b>according to instructions bellow</b></p></div><br>";
 
 
