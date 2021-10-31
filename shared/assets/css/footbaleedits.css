@@ -1,0 +1,18 @@
+.footable-detail-row{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.fooicon-minus:before {
+  color: blue;
+  padding: 0.25rem 0.5rem;
+  border: 1px dotted #000;
+  border-radius: 50%;
+}
+.fooicon-plus:before {
+    color: blue;
+    padding: 0.25rem 0.5rem;
+    border: 1px dotted #000;
+    border-radius: 50%;
+}
+.footable tbody tr {
+  cursor: pointer;
+}
