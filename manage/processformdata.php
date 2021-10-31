@@ -90,5 +90,20 @@ if (!$orderIdSql ) {
 }
 
 
+$orderSetSql = "UPDATE registrations SET orderId='" . $orderId ."' WHERE registrationdate='". $registrationdate ."'";
+
+//Error case
+if (!$orderSetSql ) {
+  echo "Failed! <br> Error sql: " . mysql_error();
+}
+
+
+if (mysqli_query($connector, $orderSetSql)) {
+  //debug echo json_encode(array("statusCode"=>200));
+} 
+else {
+  echo json_encode(array("orderSetSql - statusCode"=>418));
+}
+
 mysqli_close($connector);
 ?>
