@@ -8,11 +8,8 @@
 - Server validation
 
 ## TODO
-- update attribute in DB orderId ;
-- set up footable with printing out all the orders from DB ;
-- create better emails for buyer and admin ;
-- DONE - set only prefered inputs by the event organizer - hide others;
-  - DONE - set event passes as main way how to set price ; 
-- poslat ukázku Mariánovi
-- domluvit nasazení na jejich server a zprovozněnní MySQL databáze
-- $$$ :-)
+- create better emails visuals for buyer and admin ;
+- create better email text for buyer and admin ;
+- poslat ukázku Mariánovi ;
+- domluvit nasazení na jejich server a zprovozněnní MySQL databáze ;
+- First phase $$$ :-)
