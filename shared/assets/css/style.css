@@ -56,6 +56,10 @@
   position: relative;
 }
 
+.toCopy:hover {
+  color: aqua;
+}
+
 .toCopy .toCopyIcon:focus::before,
 .toCopy .toCopyIcon:hover::before {
   position: absolute;
