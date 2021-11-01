@@ -60,6 +60,10 @@
   color: aqua;
 }
 
+.toCopy:hover .toCopyIcon {
+  color: blue;
+}
+
 .toCopy .toCopyIcon:focus::before,
 .toCopy .toCopyIcon:hover::before {
   position: absolute;
