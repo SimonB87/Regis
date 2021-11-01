@@ -5,8 +5,7 @@ if ($correctlyFilledForm) {
   $to				= 	$clientEmail;
 
 
-  $subject	=		"Testovací prostředí - Máme novou registraci order-ID: \"" . $storedOrderID . "\" na akci \"" . $storedEventName . "\" | Platforma REGIS";
-
+  $subject	=		"Test environment - Your order-ID: \"" . $storedOrderID . "\" na akci \"" . $storedEventName . "\" | Platforma REGIS";
 
 
   $message_header	=	"<!-- BODY -->
