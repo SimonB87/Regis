@@ -54,7 +54,7 @@
                     //printf("Current character set: %s\n", mysqli_character_set_name($con));//used only for testing
             }
 
-            $sql = "SELECT * FROM registrations ORDER BY registrationdate DESC";
+            $sql = "SELECT * FROM registrations ORDER BY orderId DESC";
 
             $results = $connector-> query($sql);
             //Error case
