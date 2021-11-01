@@ -96,6 +96,7 @@ require 'config/config.php';
 
   echo $userNotification;
 
+  include("manage/emailing/getorderdata.php");
   include("manage/emailing/sendmailtoadmin.php");
   include("manage/emailing/sendmaintoclient.php");
 
