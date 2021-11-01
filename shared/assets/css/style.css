@@ -31,7 +31,7 @@
   color: yellow;
 }
 
-.hidden{
+.hidden {
   display: none;
   visibility: hidden;
 }
@@ -43,6 +43,31 @@
 .weblink:focus,
 .weblink:hover {
   color: coral !important;
+}
+
+.toCopy {
+  background-color: #f5f5f5;
+  padding: 2px 2px;
+}
+
+.toCopy .toCopyIcon {
+  background-color: #fff;
+  padding: 0 0;
+  position: relative;
+}
+
+.toCopy .toCopyIcon:focus::before,
+.toCopy .toCopyIcon:hover::before {
+  position: absolute;
+  top: -2rem;
+  content: "Click to copy text";
+  color: aqua;
+  background-color: darkslategray;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  width: 8rem;
+  text-align: center;
 }
 
 @media only screen and (min-width: 990px) {
