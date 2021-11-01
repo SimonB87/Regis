@@ -62,9 +62,9 @@ require 'config/config.php';
                         "<div>Bank address: <strong> Fio banka, a.s. Millennium Plaza, V Celnici 10, Prague 1, ZIP Code : 117 21. Czech Republic </strong> </div>".
                         " <div>Account holder name: <strong> Mauritius The Greatest </strong>" . 
                         " </div> " . 
-                        " <div>Price<strong> : " . $formPrice . "</strong></div>"
-                        . "<div>Notice for receiver: <strong> order ID: " . $orderId. ", Client name: ". $clientName ." , Client email: " . $clientEmail . 
-                        " </strong> </div> </p>" . "</div></div></div>"; //TODO - valid price set up by server check, payment´s details set by admin to DB
+                        " <div>Price<strong> : " . $formPrice . "</strong></div>" .
+                        "<div>Notice for receiver: \"<strong>order ID: " . $orderId. ", Client name: ". $clientName ." , Client email: " . $clientEmail . "</strong>\" </div>" .
+                        " </p>" . "</div></div></div>"; //TODO - valid price set up by server check, payment´s details set by admin to DB
 
   $registrationError = "<div class='container'><div class='row'><div class='col-lg-6 col-md-6 col-sm-12 padding-small'><h3 style='color:coral;'>Registration error</h3><p style='color:coral;'>Please fill in a new registration or contact the event organizer.</p></div></div></div>";
 
