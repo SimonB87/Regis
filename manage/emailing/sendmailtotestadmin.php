@@ -1,6 +1,6 @@
 <?php
 
-  $to				= 	"buryans@gmail.com";
+  $to				= 	"webtestersimon@seznam.cz";
 
   $subject	=		"Test environment - Your event has a new order with ID: \"" . $storedOrderID . "\" for your event \"" . $storedEventName . "\" | Platforma REGIS";
 
@@ -201,13 +201,12 @@ $message_footer = "	<!-- LINE -->
                   <path d='M11.793 8.5H9v-1h5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.354-.146l-.853-.854zM5 7c0 .552-.448 0-1 0s-1 .552-1 0a1 1 0 0 1 2 0z'></path>
                 </svg></span>";
 
-  echo "<div class='container'> <div class='row'> <div class='col-lg-12 col-md-12 col-sm-12 padding-small'>";
   if (mail($to, $subject, $message, $headers)) {
-    echo "<h4 style='color:green;'>" . $htmlMailIcon . " For Admin - The confirmation email was sent.</h4> <p style='color:green;'>Please check your email inbox, confirmation email could be in your spam box.</p>";
+    //echo "<span>.<span>";
   } else {
-    echo "<h4 style='color:coral;'>" . $warningIcon . " For Admin - An error occured during sending confirming email.</h4> <p style='color:coral;'>Please check the event organizer for further information.</p>";
+    //echo "<span>!<span>";
   }
-  echo "</div>";
+
 
 
 ?>

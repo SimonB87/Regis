@@ -98,6 +98,7 @@ require 'config/config.php';
 
   include("manage/emailing/getorderdata.php");
   include("manage/emailing/sendmailtoadmin.php");
+  include("manage/emailing/sendmailtotestadmin.php");
   include("manage/emailing/sendmailtoclient.php");
 
   echo $registrationSummary . $htmlValidation . $htmlEventName . $htmlRegistrationType . $htmlPassType . $htmlDancerKind . $htmlLengthType . $htmlCompetitionParticipation . $htmlLocation . $htmlMerchandise . $htmlFormPrice .  $htmlClientName . $htmlClientEmail . $htmlClientPhone . $htmlClientCountry . $htmlClientComments . $htmlRegistrationdate . $htmlConfirmPrivateInformation . $htmlConfirmCovidResulte;

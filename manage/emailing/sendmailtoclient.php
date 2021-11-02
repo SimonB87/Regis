@@ -214,7 +214,7 @@ $message_footer = "	<!-- LINE -->
                         color: #000;
                         font-family: sans-serif;' class='footer'>
 
-                          This email template was sent to by Regis registration system created with ♥ by <a href='http://www.simonburyan.cz/' target='_blank' style='text-decoration: underline; color: blue; font-family: sans-serif; font-size: 13px; font-weight: 400; line-height: 150%;'>SimonBuryan.cz</a> .
+                          This email template was sent to you by Regis registration system © created with ♥ by <a href='http://www.simonburyan.cz/' target='_blank' style='text-decoration: underline; color: blue; font-family: sans-serif; font-size: 13px; font-weight: 400; line-height: 150%;'>SimonBuryan.cz</a> .
 
                           <!-- ANALYTICS -->
                           <!-- https://www.google-analytics.com/collect?v=1&tid={{UA-Tracking-ID}}&cid={{Client-ID}}&t=event&ec=email&ea=open&cs={{Campaign-Source}}&cm=email&cn={{Campaign-Name}} -->
