@@ -31,10 +31,6 @@ require 'config/config.php';
 
   <?php
 
-  $htmpCopyIcon = "<span class='toCopyIcon'> <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-file-earmark-plus' viewBox='0 0 16 16'>
-                  <path d='M8 6.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 .5-.5z'></path>
-                  <path d='M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z'></path>
-                </svg></span>";
 
   $htmlCashIcon = "<span class='toCopyIcon'><svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-cash-coin' viewBox='0 0 16 16'>
                 <path fill-rule='evenodd' d='M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z'></path>
@@ -75,17 +71,18 @@ require 'config/config.php';
   $htmlConfirmCovidResulte = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client confirms COVID-19 policy : </strong>" .  $confirmCovidResult . "</div>";
 
   $paymentInstructions = "<h4 class='padding-small text-warning'> THIS IS WEB TEST ENVIRONMENT ! Registrations only for test purpose ! </h4>" . 
-                        "<div class='container'><div class='row'><div class='col-lg-12 col-md-12 col-sm-12 padding-small'> <h2 class='text-center' style='color: green;'>You have registered for the event!</h2> <h3 class='text-center padding-small'>". $htmlCashIcon ." Payment instructions : </h3> " . 
+                        "<div class='container'><div class='row'><div class='col-lg-12 col-md-12 col-sm-12 padding-small'> <h2 class='text-center' style='color: green;'>You have registered for the event!</h2> <h3 class='text-center padding-small'>" ." Payment instructions : </h3> " . 
                         "<h4 class='padding-small'>". $htmlLocalIcon ." For Czech participants: </h4>" . 
-                        "<p> Please send the price: <strong class='toCopy'>" . $htmpCopyIcon . " " . $formPrice . "</strong> <br> with Variable symbol (VS/Variabilní symbol)<strong class='toCopy' style='color:green;'> " . $htmpCopyIcon . " " .  $orderId . "</strong>" . 
-                        " <br>to account <strong class='toCopy'>" . $htmpCopyIcon . " " . " 111222333/2010</strong> (Fio banka) </p>" . 
-                        "<p> <h4 class='padding-small'>" . $htmlGlobeIcon . " For international bank transaction : </h4> <div>IBAN: <strong class='toCopy'>" . $htmpCopyIcon . " " . " 00420111222333002010 </strong> </div> " . 
-                        "<div>BIC: <strong class='toCopy'> " . $htmpCopyIcon . "CZDOMINANTALFA </strong> </div>" . 
-                        "<div>Bank address: <strong class='toCopy'>" . $htmpCopyIcon . " Fio banka, a.s. Millennium Plaza, V Celnici 10, Prague 1, ZIP Code : 117 21. Czech Republic </strong> </div>".
-                        " <div>Account holder name: <strong class='toCopy'>" . $htmpCopyIcon . " Mauritius The Greatest </strong>" . 
+                        "<p> Please send the price: <strong class='toCopy'>" . " " . $formPrice . "</strong> <br> with Variable symbol (VS/Variabilní symbol)<strong class='toCopy' style='color:green;'> " 
+                        . " " .  $orderId . "</strong>" . 
+                        " <br>to account <strong class='toCopy'>" . " " . " 111222333/2010</strong> (Fio banka) </p>" . 
+                        "<p> <h4 class='padding-small'>" . $htmlGlobeIcon. " For international bank transaction : </h4> <div>IBAN: <strong class='toCopy'>" . " " . " 00420111222333002010 </strong> </div> " . 
+                        "<div>BIC: <strong class='toCopy'> " . "CZDOMINANTALFA </strong> </div>" . 
+                        "<div>Bank address: <strong class='toCopy'>" . " Fio banka, a.s. Millennium Plaza, V Celnici 10, Prague 1, ZIP Code : 117 21. Czech Republic </strong> </div>".
+                        " <div>Account holder name: <strong class='toCopy'>" . " Mauritius The Greatest </strong>" . 
                         " </div> " . 
-                        " <div>Price : <strong class='toCopy'> " . $htmpCopyIcon . " " . $formPrice . "</strong></div>" .
-                        "<div>Notice for receiver: \"<strong class='toCopy'>" . $htmpCopyIcon . " Order ID:" . $orderId. ", Client name: ". $clientName ." , Client email: " . $clientEmail . "</strong>\" </div>" .
+                        " <div>Price : <strong class='toCopy'> "  . " " . $formPrice . "</strong></div>" .
+                        "<div>Notice for receiver: \"<strong class='toCopy'>" . " Order ID:" . $orderId. ", Client name: ". $clientName ." , Client email: " . $clientEmail . "</strong>\" </div>" .
                         " </p>" . "</div></div></div>"; //TODO - valid price set up by server check, payment´s details set by admin to DB
 
   $registrationError = "<div class='container'><div class='row'><div class='col-lg-6 col-md-6 col-sm-12 padding-small'><h3 style='color:coral;'>Registration error</h3><p style='color:coral;'>Please fill in a new registration or contact the event organizer.</p></div></div></div>";
@@ -121,7 +118,6 @@ require 'config/config.php';
 
   <!--
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
-  <script src="shared/assets/js/copyresults.js"></script>
 
   </body>
 </html>
