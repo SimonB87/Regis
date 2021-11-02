@@ -10,10 +10,9 @@
 ## TODO
 
 - rework results - if all data have value and they were saved in DB, then confirm all as positive to user
+- remove functionality for showing copy icons, remove copy functionality
 - add google analytics
-- store user browser
-- create better emails visuals for buyer and admin ;
-- create better email text for buyer and admin ;
+
 - poslat ukázku Mariánovi ;
 - domluvit nasazení na jejich server a zprovozněnní MySQL databáze ;
 - First phase $$$ :-)
