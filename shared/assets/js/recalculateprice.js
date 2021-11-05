@@ -24,7 +24,17 @@ function recalculatePrice() {
 
     function getMainPrice() {
       const passTypePrice = passType.options[passType.selectedIndex].ariaValueNow;
-      const mainPriceOutput = parseFloat(passTypePrice, 10);
+      let mainPriceOutput = parseFloat(passTypePrice, 10);
+
+      const valueNotKnown = String(mainPriceOutput) == "NaN"; 
+
+      if (valueNotKnown) { //mostly for firefox browser
+        const selectedPriceIndex = passType.selectedIndex;
+        const backUpOption = document.querySelector(".priceBackup-option-" + String(selectedPriceIndex));
+        const backUpOptionPrice = backUpOption.innerText;
+        mainPriceOutput = backUpOptionPrice;
+      }
+
       return mainPriceOutput;
     }
   
@@ -34,19 +44,43 @@ function recalculatePrice() {
       //const lengthTypeValue = parseFloat(lengthType.options[lengthType.selectedIndex].ariaValueNow, 10);
 
       //const priceCoefficientOutput = registrationTypeValue * dancerKindValue * lengthTypeValue;
-      const priceCoefficientOutput = registrationTypeValue;
-  
+      let priceCoefficientOutput = registrationTypeValue;
+
+      const valueNotKnown = String(priceCoefficientOutput) == "NaN"; 
+
+      if (valueNotKnown){
+        const registrationTypePriceBackupValue = document.querySelector(".registrationTypePriceBackup").innerText;
+        priceCoefficientOutput = registrationTypePriceBackupValue;
+      }
+
       return priceCoefficientOutput;
     }
   
     function getAdditionalService() {
       const competitionParticipationValue = competitionParticipation.value;
-      const competitionParticipationOutput = parseFloat(competitionParticipation.options[competitionParticipation.selectedIndex].ariaValueNow, 10);
-  
+      let competitionParticipationOutput = parseFloat(competitionParticipation.options[competitionParticipation.selectedIndex].ariaValueNow, 10);
+
+      const valueNotKnownA = String(competitionParticipationOutput) == "NaN"; 
+
+      if (valueNotKnownA) {
+        const selectorA = ".competitionPriceBackup-option-" + String(competitionParticipation.selectedIndex);
+        const competitionBackUpValue = document.querySelector(selectorA).innerText;
+        competitionParticipationOutput = competitionBackUpValue;
+      }
+
       const merchandiseValue = merchandise.value;
-      const merchandiseOutput = parseFloat( merchandise.options[merchandise.selectedIndex].ariaValueNow, 10);
+      let merchandiseOutput = parseFloat( merchandise.options[merchandise.selectedIndex].ariaValueNow, 10);
+
+      const valueNotKnownB = String(merchandiseOutput) == "NaN"; 
+
+      if (valueNotKnownB) {
+        const selectorB = ".merchandisePriceBackup-option-" + String(merchandise.selectedIndex);
+        const merchandiseBackUpValue = document.querySelector(selectorB).innerText;
+        merchandiseOutput = merchandiseBackUpValue;
+      }
+
   
-      const sumAmount = competitionParticipationOutput + merchandiseOutput;
+      const sumAmount = parseFloat(competitionParticipationOutput, 10) + parseFloat(merchandiseOutput, 10);
       
       return sumAmount;
     }

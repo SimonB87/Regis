@@ -32,6 +32,7 @@
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="registrationType" value="Early bird - till 1st April" aria-label="readonly Registration type" readonly name="registrationType" aria-placeholder="1.0" maxlength="250">
                 <label for="registrationType">Registration type (hidden in browser)</label>
+                <span class="hidden registrationTypePriceBackup">1.0</span>
               </div>
             </div>
 
@@ -59,10 +60,10 @@
             </div>
 
             <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-              <div class="mb-3 full-width full-height div-select">
+              <div id="passType--parent" class="mb-3 full-width full-height div-select">
                 <select id="passType" class="form-select" aria-label="Pass type" required onchange="recalculatePrice();" name="passType">
                   <option value="" selected>Select pass type ... </option>
-                  <option value="1 - Fullpass leader/follower - 1500,-Kč" aria-valuenow="1500">Fullpass leader/follower - 1500,-Kč</option>
+                  <option value="1 - Fullpass leader/follower - 1500,-Kč" aria-valuenow="1500" >Fullpass leader/follower - 1500,-Kč</option>
                   <option value="2 - Fullpass couple - 2600,-Kč" aria-valuenow="2600">Fullpass couple - 2600,-Kč</option>
                   <option value="3 - Partypass leader/follower - 1000,-Kč" aria-valuenow="1000">Partypass leader/follower - 1000,-Kč</option>
                   <option value="4 - Partypass couple - 1600,-Kč" aria-valuenow="1600">Partypass couple - 1600,-Kč</option>
@@ -77,6 +78,14 @@
                 </div>
                 <div class="invalid-feedback">
                   Please select some valid option.
+                </div>
+                <div class="hidden passTypePriceBackup">
+                  <span class="priceBackup-option-1">1500</span>
+                  <span class="priceBackup-option-2">2600</span>
+                  <span class="priceBackup-option-3">1000</span>
+                  <span class="priceBackup-option-4">1600</span>
+                  <span class="priceBackup-option-5">1100</span>
+                  <span class="priceBackup-option-6">1800</span>
                 </div>
               </div>
             </div>
@@ -140,6 +149,10 @@
                 <div class="invalid-feedback">
                   Please select some valid option.
                 </div>
+                <div class="hidden merchandisePriceBackup">
+                  <span class="competitionPriceBackup-option-1">500</span>
+                  <span class="competitionPriceBackup-option-2">0</span>
+                </div>
               </div>
             </div>
 
@@ -152,15 +165,21 @@
                   <option value="2 - Towel 400,- Kč" aria-valuenow="400">Towel 400,- Kč</option>
                   <option value="3 - Dancing shoes bag 300,- Kč" aria-valuenow="300">Dancing shoes bag 300,- Kč</option>
                 </select>
-              </select>
-              <div class="form-select-customLabel">
-                Merchandise
-              </div>
+  
+                <div class="form-select-customLabel">
+                  Merchandise
+                </div>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
                 <div class="invalid-feedback">
                   Please select some valid option.
+                </div>
+                <div class="hidden merchandisePriceBackup">
+                  <span class="merchandisePriceBackup-option-1">0</span>
+                  <span class="merchandisePriceBackup-option-2">500</span>
+                  <span class="merchandisePriceBackup-option-3">400</span>
+                  <span class="merchandisePriceBackup-option-4">300</span>
                 </div>
               </div>
             </div>
