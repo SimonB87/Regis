@@ -72,10 +72,16 @@ $results = $connector-> query($orderIdSql);
 if ($results-> num_rows > 0 ) {
   while ($row = $results-> fetch_assoc()) {
 
-    $orderId = date("Y") . "00" . $row["id"];
+    $intYear = (int)date("Y");
+    $intStart = $intYear * 10000;
+    $introwId = (int)$row["id"];
+    $orderId = $intStart + $introwId;
+
+    //$orderId = date("Y") . "00" . $row["id"];
     //debug
     //echo "<div> --- </div>";
     //echo "<div> result : ID " . $row["id"]. "</div>";
+    //echo "<div> result : order ID " . $orderId . "</div>";
     //debug
   }
   
