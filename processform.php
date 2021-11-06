@@ -76,7 +76,7 @@ require 'config/config.php';
 
   $paymentInstructions = "<div class='container'><div class='row'>".
                         "<div class='padding-small'> <div class='alert alert-secondary col-lg-12 col-md-12 col-sm-12 padding-small' role='alert'><h4 class=''> THIS IS WEB TEST ENVIRONMENT ! </h4> <p> Registrations only for test purpose ! </p><span class='alert-hide'>".$exitIcon."</span></div></div>" . 
-                        "<div class='col-lg-12 col-md-12 col-sm-12 padding-small'> <h2 class='text-center' style='color: green;'>You have registered for the event!</h2> <h3 class='text-center padding-small'>" ." Payment instructions : </h3> " . 
+                        "<div class='col-lg-12 col-md-12 col-sm-12 padding-regular-topBottom'> <h2 class='text-center' style='color: green;'>You have registered for the event!</h2> <h3 class='text-center padding-small'>" ." Payment instructions : </h3> " . 
                         "<h4 class='padding-small'>". $htmlLocalIcon ." For Czech participants: </h4>" . 
                         "<p> Please send the price: <strong class='toCopy'>" . " " . $formPrice . "</strong> <br> with Variable symbol (VS/Variabilní symbol)<strong class='text-green toCopy' style=''> " 
                         . " " .  $orderId . "</strong>" . 
@@ -94,7 +94,7 @@ require 'config/config.php';
 
   $userNotification = ($correctlyFilledForm) ? $paymentInstructions : $registrationError;
 
-  $registrationSummary = "<div class='container padding-regular-topBottom'> <div class='row'> <div class='col-12'> <h1 class='text-center padding-small'>Registration summary :</h1> </div> <div class='col-12 test-link'> <a href='registrations.php#orders'> <button class='btn btn-warning'> TEST : Table of saved registrations </button></a> </div>";
+  $registrationSummary = "<div class='container padding-regular-topBottom'> <div class='row'> <div class='col-12'> <h1 class='text-center padding-regular-topBottom'>Registration summary :</h1> </div> <div class='col-12 test-link'> <a href='registrations.php#orders'> <button class='btn btn-warning'> TEST : Table of saved registrations </button></a> </div>";
 
   echo $userNotification;
 
