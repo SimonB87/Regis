@@ -45,6 +45,10 @@
   color: coral !important;
 }
 
+.text-green{
+  color: green;
+}
+
 .toCopy {
   background-color: #f5f5f5;
   padding: 2px 2px;
@@ -212,3 +216,19 @@ footer .copyright {
 }
 
 /* footer - end */
+
+/* alerts - start*/
+
+.alert {
+  position: relative;
+}
+
+.alert-hide {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* alert - end */
