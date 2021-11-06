@@ -27,7 +27,7 @@ require 'config/config.php';
     <?php
     include("webform/herosection.php");
     ?> 
-      <h4 class='padding-small text-warning'> THIS IS WEB TEST ENVIRONMENT ! Registrations only for test purpose ! </h4>
+    
     <?php
     include("manage/registrationstable.php");
     ?> 
@@ -38,6 +38,7 @@ require 'config/config.php';
 
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="shared/libs/bootstrap/js/bootstrap.js"></script>
+    <script src="shared/assets/js/hidenotification.js"></script>
 
 
   <!--
