@@ -1,4 +1,4 @@
-<div class="bg-info text-white">
+<div class="bg-info text-white padding-regular-topBottom">
     <div class="container text-center padding-small">
       <div class="row">
         <div class="col-12 padding-small">
