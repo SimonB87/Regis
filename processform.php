@@ -70,10 +70,15 @@ require 'config/config.php';
   $htmlConfirmPrivateInformation = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong> Client confirms GDPR policy : </strong>" . $confirmPrivateInformationResult . "</div>";
   $htmlConfirmCovidResulte = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client confirms COVID-19 policy : </strong>" .  $confirmCovidResult . "</div>";
 
-  $paymentInstructions = "<h4 class='padding-small text-warning'> THIS IS WEB TEST ENVIRONMENT ! Registrations only for test purpose ! </h4>" . 
-                        "<div class='container'><div class='row'><div class='col-lg-12 col-md-12 col-sm-12 padding-small'> <h2 class='text-center' style='color: green;'>You have registered for the event!</h2> <h3 class='text-center padding-small'>" ." Payment instructions : </h3> " . 
+  $exitIcon = "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-check' viewBox='0 0 16 16'>
+                <path d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z'></path>
+              </svg>";
+
+  $paymentInstructions = "<div class='container'><div class='row'>".
+                        "<div class='padding-small'> <div class='alert alert-secondary col-lg-12 col-md-12 col-sm-12 padding-small' role='alert'><h4 class=''> THIS IS WEB TEST ENVIRONMENT ! </h4> <p> Registrations only for test purpose ! </p><span class='alert-hide'>".$exitIcon."</span></div></div>" . 
+                        "<div class='col-lg-12 col-md-12 col-sm-12 padding-small'> <h2 class='text-center' style='color: green;'>You have registered for the event!</h2> <h3 class='text-center padding-small'>" ." Payment instructions : </h3> " . 
                         "<h4 class='padding-small'>". $htmlLocalIcon ." For Czech participants: </h4>" . 
-                        "<p> Please send the price: <strong class='toCopy'>" . " " . $formPrice . "</strong> <br> with Variable symbol (VS/Variabilní symbol)<strong class='toCopy' style='color:green;'> " 
+                        "<p> Please send the price: <strong class='toCopy'>" . " " . $formPrice . "</strong> <br> with Variable symbol (VS/Variabilní symbol)<strong class='text-green toCopy' style=''> " 
                         . " " .  $orderId . "</strong>" . 
                         " <br>to account <strong class='toCopy'>" . " " . " 111222333/2010</strong> (Fio banka) </p>" . 
                         "<p> <h4 class='padding-small'>" . $htmlGlobeIcon. " For international bank transaction : </h4> <div>IBAN: <strong class='toCopy'>" . " " . " 00420111222333002010 </strong> </div> " . 
@@ -89,7 +94,7 @@ require 'config/config.php';
 
   $userNotification = ($correctlyFilledForm) ? $paymentInstructions : $registrationError;
 
-  $registrationSummary = "<div class='container'> <div class='row'> <div class='col-12'> <h1 class='text-center padding-small'>Registration summary :</h1> </div> <div class='col-12 test-link'> <a href='registrations.php#orders'> <button class='btn btn-warning'> TEST : Table of saved registrations </button></a> </div>";
+  $registrationSummary = "<div class='container padding-regular-topBottom'> <div class='row'> <div class='col-12'> <h1 class='text-center padding-small'>Registration summary :</h1> </div> <div class='col-12 test-link'> <a href='registrations.php#orders'> <button class='btn btn-warning'> TEST : Table of saved registrations </button></a> </div>";
 
   echo $userNotification;
 
@@ -115,6 +120,7 @@ require 'config/config.php';
   ?> 
 
   <script src="shared/libs/bootstrap/js/bootstrap.js"></script>
+  <script src="shared/assets/js/hidenotification.js"></script>
 
   <!--
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->

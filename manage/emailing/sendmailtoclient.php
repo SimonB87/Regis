@@ -255,11 +255,16 @@ $message_footer = "	<!-- LINE -->
                     <path d='M11.793 8.5H9v-1h5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.354-.146l-.853-.854zM5 7c0 .552-.448 0-1 0s-1 .552-1 0a1 1 0 0 1 2 0z'></path>
                   </svg></span>";
 
+  $exitIcon = "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-check' viewBox='0 0 16 16'>
+                 <path d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z'></path>
+              </svg>";
+
+
   echo "<div class='container'> <div class='row'> <div class='col-lg-12 col-md-12 col-sm-12 padding-small'>";
   if (mail($to, $subject, $message, $headers)) {
-    echo "<h4 style='color:green;'>". $htmlMailIcon ." For buyer - The confirmation email with payment instructions was sent.</h4> <p style='color:green;'>Please check your email inbox, confirmation email could be in your spam box.</p>";
+    echo "<div class='alert alert-success' role='alert'><h4 style='color:green;'>". $htmlMailIcon ." For buyer - The confirmation email with payment instructions was sent.</h4> <p style=''>Please check your email inbox, confirmation email could be in your spam box.</p><span class='alert-hide'>".$exitIcon."</span></div>";
   } else {
-    echo "<h4 style='color:coral;'>" . $warningIcon . " For buyer - An error occured during sending confirming email.</h4> <p style='color:coral;'>Please check the event organizer for further infromation.</p>";
+    echo "<div class='alert alert-warning' role='alert'><h4 style='color:coral;'>" . $warningIcon . " For buyer - An error occurred during sending confirming email.</h4> <p style=''>Please check the event organizer for further information.</p><span class='alert-hide'>".$exitIcon."</span></div>";
   }
   echo "</div>";
 
