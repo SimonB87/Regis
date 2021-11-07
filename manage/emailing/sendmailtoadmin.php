@@ -207,12 +207,12 @@ $message_footer = "	<!-- LINE -->
 </svg>";
 
   echo "<div class='container'> <div class='row'> <div class='col-lg-12 col-md-12 col-sm-12 padding-small'>";
-  if (mail($to, $subject, $message, $headers)) {
+  if ( (mail($to, $subject, $message, $headers)) && $correctlyFilledForm ) {
     echo "<div class='alert alert-success' role='alert'><h4 style='color:green;'>" . $htmlMailIcon . " For Admin - The confirmation email was sent.</h4> <p style=>Please check your email inbox, confirmation email could be in your spam box.</p><span class='alert-hide'>".$exitIcon."</span></div>";
   } else {
     echo "<div class='alert alert-warning' role='alert'><h4 style='color:coral;'>" . $warningIcon . " For Admin - An error occured during sending confirming email.</h4> <p style=>Please check the event organizer for further information.</p><span class='alert-hide'>".$exitIcon."</span></div>";
   }
-  echo "</div>";
+  echo "</div></div></div>";
 
 
 ?>

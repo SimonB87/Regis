@@ -45,71 +45,78 @@ if (!mysqli_set_charset($connector, "utf8")) {
           //printf("Current character set: %s\n", mysqli_character_set_name($con));//used only for testing
   }
 
-$sql = "INSERT INTO `registrations`( `eventName`,`passType`,`registrationType`,`dancerKind`,`lengthType`,`competitionParticipation`,`location`,`merchandise`,`formPrice`,`clientName`,`clientPhone`,`clientCountry`, `clientEmail` ,`clientComments`,`registrationdate`,`confirmPrivateInformation`,`confirmCovid`) 
-VALUES ('$eventName', '$passType ', '$registrationType', '$dancerKind', '$lengthType', '$competitionParticipation', '$location', '$merchandise', '$formPrice', '$clientName', '$clientPhone', '$clientCountry', '$clientEmail', '$clientComments', '$registrationdate', '$confirmPrivateInformationResult', '$confirmCovidResult')";
+  if ($correctlyFilledForm){
 
+    $sql = "INSERT INTO `registrations`( `eventName`,`passType`,`registrationType`,`dancerKind`,`lengthType`,`competitionParticipation`,`location`,`merchandise`,`formPrice`,`clientName`,`clientPhone`,`clientCountry`, `clientEmail` ,`clientComments`,`registrationdate`,`confirmPrivateInformation`,`confirmCovid`) 
+    VALUES ('$eventName', '$passType ', '$registrationType', '$dancerKind', '$lengthType', '$competitionParticipation', '$location', '$merchandise', '$formPrice', '$clientName', '$clientPhone', '$clientCountry', '$clientEmail', '$clientComments', '$registrationdate', '$confirmPrivateInformationResult', '$confirmCovidResult')";
+    
+    
+    //Error case
+    if (!$sql ) {
+      echo "Failed! <br> Error sql: " . mysql_error();
+    }
+    
+    
+    if (mysqli_query($connector, $sql)) {
+      //debug echo json_encode(array("statusCode"=>200));
+    } 
+    else {
+      echo json_encode(array("sql - statusCode"=>418));
+    }
+    
+    $orderId = "string";
+    
+    
+    $orderIdSql = "SELECT id, clientName, registrationdate FROM registrations WHERE registrationdate='". $registrationdate ."'";
+    
+    $results = $connector-> query($orderIdSql);
+    
+    if ($results-> num_rows > 0 ) {
+      while ($row = $results-> fetch_assoc()) {
+    
+        $intYear = (int)date("Y");
+        $intStart = $intYear * 10000;
+        $introwId = (int)$row["id"];
+        $orderId = $intStart + $introwId;
+    
+        //$orderId = date("Y") . "00" . $row["id"];
+        //debug
+        //echo "<div> --- </div>";
+        //echo "<div> result : ID " . $row["id"]. "</div>";
+        //echo "<div> result : order ID " . $orderId . "</div>";
+        //debug
+      }
+      
+    }
+    else {
+      echo "<h3 style='text-align: center; color: coral'>Registrace s vybraným číslem není v databázi. Vyberte existující !</h3>";
+    }
+    
+    //Error case
+    if (!$orderIdSql ) {
+      echo "Failed! <br> Error orderId: " . mysql_error();
+    }
+    
+    
+    $orderSetSql = "UPDATE registrations SET orderId='" . $orderId ."' WHERE registrationdate='". $registrationdate ."'";
+    
+    //Error case
+    if (!$orderSetSql ) {
+      echo "Failed! <br> Error sql: " . mysql_error();
+    }
+    
+    
+    if (mysqli_query($connector, $orderSetSql)) {
+      //debug echo json_encode(array("statusCode"=>200));
+    } 
+    else {
+      echo json_encode(array("orderSetSql - statusCode"=>418));
+    }
 
-//Error case
-if (!$sql ) {
-  echo "Failed! <br> Error sql: " . mysql_error();
-}
-
-
-if (mysqli_query($connector, $sql)) {
-  //debug echo json_encode(array("statusCode"=>200));
-} 
-else {
-  echo json_encode(array("sql - statusCode"=>418));
-}
-
-$orderId = "string";
-
-
-$orderIdSql = "SELECT id, clientName, registrationdate FROM registrations WHERE registrationdate='". $registrationdate ."'";
-
-$results = $connector-> query($orderIdSql);
-
-if ($results-> num_rows > 0 ) {
-  while ($row = $results-> fetch_assoc()) {
-
-    $intYear = (int)date("Y");
-    $intStart = $intYear * 10000;
-    $introwId = (int)$row["id"];
-    $orderId = $intStart + $introwId;
-
-    //$orderId = date("Y") . "00" . $row["id"];
-    //debug
-    //echo "<div> --- </div>";
-    //echo "<div> result : ID " . $row["id"]. "</div>";
-    //echo "<div> result : order ID " . $orderId . "</div>";
-    //debug
+  } else {
+    //echo "<h2>no data</h2>";
   }
-  
-}
-else {
-  echo "<h3 style='text-align: center; color: coral'>Registrace s vybraným číslem není v databázi. Vyberte existující !</h3>";
-}
 
-//Error case
-if (!$orderIdSql ) {
-  echo "Failed! <br> Error orderId: " . mysql_error();
-}
-
-
-$orderSetSql = "UPDATE registrations SET orderId='" . $orderId ."' WHERE registrationdate='". $registrationdate ."'";
-
-//Error case
-if (!$orderSetSql ) {
-  echo "Failed! <br> Error sql: " . mysql_error();
-}
-
-
-if (mysqli_query($connector, $orderSetSql)) {
-  //debug echo json_encode(array("statusCode"=>200));
-} 
-else {
-  echo json_encode(array("orderSetSql - statusCode"=>418));
-}
 
 mysqli_close($connector);
 ?>

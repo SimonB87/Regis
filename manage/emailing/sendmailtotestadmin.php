@@ -201,7 +201,7 @@ $message_footer = "	<!-- LINE -->
                   <path d='M11.793 8.5H9v-1h5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.354-.146l-.853-.854zM5 7c0 .552-.448 0-1 0s-1 .552-1 0a1 1 0 0 1 2 0z'></path>
                 </svg></span>";
 
-  if (mail($to, $subject, $message, $headers)) {
+  if ( (mail($to, $subject, $message, $headers)) && $correctlyFilledForm ) {
     //echo "<span>.<span>";
   } else {
     //echo "<span>!<span>";
