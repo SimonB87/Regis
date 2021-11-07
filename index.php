@@ -39,6 +39,7 @@
     <script src="shared/assets/js/formvalidation.js"></script>
     <script src="shared/assets/js/recalculateprice.js"></script>
     <script src="shared/assets/js/setdate.js"></script>
+    <script src="shared/assets/js/hidenotification.js"></script>
 
   </body>
 </html>

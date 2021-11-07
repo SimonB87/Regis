@@ -8,9 +8,15 @@
         <h2 class="padding-small">
           Event registration form
         </h2>
-        <h4 class='padding-small text-warning'>
-          THIS IS WEB TEST ENVIRONMENT ! Registrations only for test purpose !
-        </h4>
+        <div class="alert alert-secondary col-lg-12 col-md-12 col-sm-12 padding-small" role="alert">
+          <h4 class=""> THIS IS WEB TEST ENVIRONMENT ! </h4> 
+          <p> Registrations only for test purpose ! </p>
+          <span class="alert-hide">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
+              </svg>
+            </span>
+          </div>
       </div>
 
     </div>
