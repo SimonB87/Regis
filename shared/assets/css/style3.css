@@ -61,7 +61,7 @@
 }
 
 .toCopy:hover {
-  color: aqua;
+  color: #ffc107;
 }
 
 .toCopy:hover .toCopyIcon {
@@ -137,6 +137,13 @@ nav a.dropdown-item {
 
 nav {
   border-bottom: 1px solid #353535;
+}
+
+@media only screen and (max-width: 450px) {
+  nav .navbar .navbar-brand {
+    width: calc(100% - 60px);
+  }
+
 }
 
 .bg-gray {
@@ -232,3 +239,10 @@ footer .copyright {
 }
 
 /* alert - end */
+
+/* bootstrap edit*/
+
+.row{
+  margin-left: unset;
+  margin-right: unset;
+}
