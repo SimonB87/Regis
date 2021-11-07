@@ -51,10 +51,10 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+            <div class="col-lg-6 col-md-6 col-sm-12 padding-small">
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="location" value="Prague" aria-label="readonly input example" readonly name="location" maxlength="250">
-                <label for="location">Location</label>
+                <label for="location">Location (hidden in browser)</label>
               </div>
             </div>
 
