@@ -162,8 +162,10 @@
                   <option value="" selected>Select merchandise option ...</option>
                   <option value="0 - No merchandise" aria-valuenow="0">No merchandise</option>
                   <option value="1 - Shirt 500,- Kč" aria-valuenow="500">Shirt 500,- Kč</option>
+                  <!--
                   <option value="2 - Towel 400,- Kč" aria-valuenow="400">Towel 400,- Kč</option>
                   <option value="3 - Dancing shoes bag 300,- Kč" aria-valuenow="300">Dancing shoes bag 300,- Kč</option>
+                  -->
                 </select>
   
                 <div class="form-select-customLabel">
