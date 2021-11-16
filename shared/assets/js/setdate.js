@@ -1,38 +1,30 @@
-const elDate = document.getElementById("registrationdate");
-
-const currentDate = new Date(); 
-
-let stringDate = currentDate.getDate();
-stringDate = editStringDateValue(stringDate);
-
-let stringMonth = (currentDate.getMonth()+1);
-stringMonth = editStringDateValue(stringMonth);
-
-const stringYear = currentDate.getFullYear();
-
-let stringHour = currentDate.getHours();
-stringHour = editStringDateValue(stringHour);
-
-let stringMinutes = currentDate.getMinutes();
-stringMinutes = editStringDateValue(stringMinutes);
-
-let stringSeconds = currentDate.getSeconds();
-stringSeconds = editStringDateValue(stringSeconds);
-
-const dateTime = "Datum: " + stringDate + ". "
-                + stringMonth + ". " 
-                + stringYear + " - "  
-                + stringHour + ":"  
-                + stringMinutes + ":" 
-                + stringSeconds;
-
+"use strict";
+var elDate = document.getElementById("registrationdate");
+var currentDate = new Date();
+var intDate = currentDate.getDate();
+var stringDate = editStringDateValue(intDate);
+var intMonth = (currentDate.getMonth() + 1);
+var stringMonth = editStringDateValue(intMonth);
+var stringYear = currentDate.getFullYear().toString();
+var intHour = currentDate.getHours();
+var stringHour = editStringDateValue(intHour);
+var intMinutes = currentDate.getMinutes();
+var stringMinutes = editStringDateValue(intMinutes);
+var intSeconds = currentDate.getSeconds();
+var stringSeconds = editStringDateValue(intSeconds);
+var dateTime = "Datum: " + stringDate + ". "
+    + stringMonth + ". "
+    + stringYear + " - "
+    + stringHour + ":"
+    + stringMinutes + ":"
+    + stringSeconds;
 elDate.value = dateTime;
-
 function editStringDateValue(inputValue) {
-  if ((inputValue > 0) && (inputValue < 10)) {
-    const editedValue = "0" + inputValue;
-    return editedValue;
-  } else {
-    return inputValue;
-  }
+    if ((inputValue > 0) && (inputValue < 10)) {
+        var editedValue = "0" + inputValue.toString();
+        return editedValue;
+    }
+    else {
+        return inputValue;
+    }
 }
