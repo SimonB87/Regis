@@ -4,11 +4,11 @@
 | -------------------------------------------------------------------------------------------------------- | :-----------: | -------: |
 | Web app is fully responsive                                                                              |      P1       | Finished |
 | Form can be filled and send                                                                              |      P1       | Finished |
-| Form is fully validated on the client side                                                               |      P1       |    To do |
+| Form is fully validated on the client side                                                               |      P1       | Finished |
 | Admin and customer gets notifying email with payment request                                             |      P1       | Finished |
 | Form data are stored into database                                                                       |      P1       | Finished |
-| Event organizer can run registration for one event at a time                                             |      P1       |   Finish |
-| Place interim app on event organizer test environmewnt                                                   |      P1       |    To do |
+| Event organizer can run registration for one event at a time                                             |      P1       | Finished |
+| Place interim app on event organizer test environmewnt                                                   |      P1       |  Waiting |
 |                                                                                                          |               |          |
 | X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X              | X xxx X xxx X |  X xxx X |
 |                                                                                                          |               |          |
@@ -23,10 +23,10 @@
 |                                                                                                          |               |          |
 | X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X              | X xxx X xxx X |  X xxx X |
 |                                                                                                          |               |          |
-| Admin can send an automatic reminder to send the money by selection an option inside the table of orders |      P2       | Finished |
-| Admin can send edit the event description, event name and event poster                                   |      P3       |   Finish |
-| Admin can edit event pass price                                                                          |      P3       |   Finish |
-| Server fully validates price according to the stored options in database                                 |      P3       |   Finish |
-| Admin can set, which inputs are visible and which are not                                                |      P3       |   Finish |
-| Admin can set, possible pass options and their prices                                                    |      P3       |   Finish |
-| Only allowed form elements apprar in browser                                                             |      P3       |   Finish |
+| Admin can send an automatic reminder to send the money by selection an option inside the table of orders |      P2       |    To do |
+| Admin can send edit the event description, event name and event poster                                   |      P3       |    To do |
+| Admin can edit event pass price                                                                          |      P3       |    To do |
+| Server fully validates price according to the stored options in database                                 |      P3       |    To do |
+| Admin can set, which inputs are visible and which are not                                                |      P3       |    To do |
+| Admin can set, possible pass options and their prices                                                    |      P3       |    To do |
+| Only allowed form elements apprar in browser                                                             |      P3       |    To do |
