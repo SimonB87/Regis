@@ -1,38 +1,42 @@
-const elDate = (<HTMLInputElement>document.getElementById("registrationdate"));
+(function () {
 
-const currentDate = new Date(); 
+  const elDate = (<HTMLInputElement>document.getElementById("registrationdate"));
 
-const intDate = currentDate.getDate();
-const stringDate = editStringDateValue(intDate);
+  const currentDate = new Date(); 
 
-const intMonth = (currentDate.getMonth()+1);
-const stringMonth = editStringDateValue(intMonth);
+  const intDate = currentDate.getDate();
+  const stringDate = editStringDateValue(intDate);
 
-const stringYear = currentDate.getFullYear().toString();
+  const intMonth = (currentDate.getMonth()+1);
+  const stringMonth = editStringDateValue(intMonth);
 
-let intHour = currentDate.getHours();
-let stringHour = editStringDateValue(intHour);
+  const stringYear = currentDate.getFullYear().toString();
 
-let intMinutes = currentDate.getMinutes();
-let stringMinutes = editStringDateValue(intMinutes);
+  let intHour = currentDate.getHours();
+  let stringHour = editStringDateValue(intHour);
 
-let intSeconds = currentDate.getSeconds();
-let stringSeconds = editStringDateValue(intSeconds);
+  let intMinutes = currentDate.getMinutes();
+  let stringMinutes = editStringDateValue(intMinutes);
 
-const dateTime = "Datum: " + stringDate + ". "
-                + stringMonth + ". " 
-                + stringYear + " - "  
-                + stringHour + ":"  
-                + stringMinutes + ":" 
-                + stringSeconds;
+  let intSeconds = currentDate.getSeconds();
+  let stringSeconds = editStringDateValue(intSeconds);
 
-elDate.value = dateTime;
+  const dateTime = "Datum: " + stringDate + ". "
+                  + stringMonth + ". " 
+                  + stringYear + " - "  
+                  + stringHour + ":"  
+                  + stringMinutes + ":" 
+                  + stringSeconds;
 
-function editStringDateValue(inputValue : number ) {
-  if ((inputValue > 0) && (inputValue < 10)) {
-    const editedValue = "0" + inputValue.toString();
-    return editedValue;
-  } else {
-    return inputValue;
+  elDate.value = dateTime;
+
+  function editStringDateValue(inputValue : number ) {
+    if ((inputValue > 0) && (inputValue < 10)) {
+      const editedValue = "0" + inputValue.toString();
+      return editedValue;
+    } else {
+      return inputValue;
+    }
   }
-}
+
+})()
