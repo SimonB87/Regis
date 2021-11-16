@@ -23,7 +23,7 @@
 |                                                                                                          |               |                          |
 | X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X              | X xxx X xxx X |                  X xxx X |
 |                                                                                                          |               |                          |
-| Admin can send an automatic reminder to send the money by selection an option inside the table of orders |      P2       |                      :o: |
+| Admin can send an automatic reminder to send the money by selection an option inside the table of orders |      P3       |                      :o: |
 | Admin can send edit the event description, event name and event poster                                   |      P3       |                      :o: |
 | Admin can edit event pass price                                                                          |      P3       |                      :o: |
 | Server fully validates price according to the stored options in database                                 |      P3       |                      :o: |
