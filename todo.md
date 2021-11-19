@@ -30,3 +30,9 @@
 | Admin can set, which inputs are visible and which are not                                                |   P:three:    |                      :o: |
 | Admin can set, possible pass options and their prices                                                    |   P:three:    |                      :o: |
 | Only allowed form elements apprar in browser                                                             |   P:three:    |                      :o: |
+| Google analytics                                                                                         |   P:three:    |                      :o: |
+|                                                                                                          |               |                          |
+| X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X              | X xxx X xxx X |                  X xxx X |
+|                                                                                                          |               |                          |
+| Promocode option and evaluation                                                                          |   P:muscle:   |                      :o: |
+| Payment system                                                                                           |   P:muscle:   |                      :o: |
