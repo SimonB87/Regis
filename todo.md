@@ -8,7 +8,7 @@
 | Admin and customer gets notifying email with payment request                                             |    P:one:     |       :heavy_check_mark: |
 | Form data are stored into database                                                                       |    P:one:     |       :heavy_check_mark: |
 | Event organizer can run registration for one event at a time                                             |    P:one:     |       :heavy_check_mark: |
-| Place interim app on event organizer test environmewnt                                                   |    P:one:     | :hourglass_flowing_sand: |
+| Place interim app on event organizer test environment                                                    |    P:one:     | :hourglass_flowing_sand: |
 |                                                                                                          |               |                          |
 | X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X              | X xxx X xxx X |                  X xxx X |
 |                                                                                                          |               |                          |
@@ -16,9 +16,10 @@
 | Only logged in users see all registration in a table                                                     |    P:two:     |                      :o: |
 | There is a employee log in of users functionality                                                        |    P:two:     |                      :o: |
 | Admin gets after registration a confirmation email                                                       |    P:two:     |                      :o: |
+| Forgotten password renewal by email                                                                      |    P:two:     |                      :o: |
 | Admin can log in and see admin section, others can not                                                   |    P:two:     |                      :o: |
 | There are 2 accounts for admin and 2 accounts for readers                                                |    P:two:     |                      :o: |
-| There is restoration of forgoten password                                                                |    P:two:     |                      :o: |
+| There is restoration of forgotten password                                                               |    P:two:     |                      :o: |
 | Admin can edit details of a registration                                                                 |    P:two:     |                      :o: |
 |                                                                                                          |               |                          |
 | X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X              | X xxx X xxx X |                  X xxx X |
@@ -29,10 +30,12 @@
 | Server fully validates price according to the stored options in database                                 |   P:three:    |                      :o: |
 | Admin can set, which inputs are visible and which are not                                                |   P:three:    |                      :o: |
 | Admin can set, possible pass options and their prices                                                    |   P:three:    |                      :o: |
-| Only allowed form elements apprar in browser                                                             |   P:three:    |                      :o: |
+| Only allowed form elements appear in browser                                                             |   P:three:    |                      :o: |
 | Google analytics                                                                                         |   P:three:    |                      :o: |
 |                                                                                                          |               |                          |
 | X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X              | X xxx X xxx X |                  X xxx X |
 |                                                                                                          |               |                          |
-| Promocode option and evaluation                                                                          |   P:muscle:   |                      :o: |
-| Payment system                                                                                           |   P:muscle:   |                      :o: |
+| Promo-code option and evaluation                                                                         |   P:muscle:   |                      :o: |
+| Statistics and evaluations of tickets sales                                                              |   P:muscle:   |                      :o: |
+| Payment system - payments with cards                                                                     |   P:muscle:   |                      :o: |
+| Control of multiple log-in attempts - after 10 attempts user can not log in for 30 minutes               |   P:muscle:   |                      :o: |
