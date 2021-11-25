@@ -25,6 +25,7 @@
 | X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X              | X xxx X xxx X |                  X xxx X |
 |                                                                                                          |               |                          |
 | Admin can send an automatic reminder to send the money by selection an option inside the table of orders |   P:three:    |                      :o: |
+| Zaslání dotazu na moji domácí doménu s dotazem, jestli je licence dané instance validní a zaplacená      |   P:three:    |                      :o: |
 | Admin can send edit the event description, event name and event poster                                   |   P:three:    |                      :o: |
 | Admin can edit event pass price                                                                          |   P:three:    |                      :o: |
 | Server fully validates price according to the stored options in database                                 |   P:three:    |                      :o: |
