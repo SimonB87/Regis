@@ -60,6 +60,20 @@
   position: relative;
 }
 
+.visibility {
+  transition: visibility 0s linear 0.33s, opacity 0.33s linear, height 0s linear 0.33s, width 0s linear 0.33s, margin 0s linear 0.33s;
+}
+.visibility-hidden {
+  visibility: hidden;
+  opacity: 0;
+  width: 0;
+}
+.visibility-visible {
+  visibility: visible;
+  opacity: 1;
+  margin: 0 auto;
+}
+
 .toCopy:hover {
   color: #ffc107;
 }
