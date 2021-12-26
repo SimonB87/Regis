@@ -1,5 +1,4 @@
-<?php  
-
+<?php
 if(isset($_POST['login_button'])) {
 
 	$email = filter_var($_POST['log_email'], FILTER_SANITIZE_EMAIL); //sanitize email
@@ -20,11 +19,15 @@ if(isset($_POST['login_button'])) {
 		}
 
 		$_SESSION['username'] = $username;
+
 		header("Location: index.php");
 		exit();
+
 	}
 	else {
+
 		array_push($error_array, "Email nebo heslo nejsou správné<br>");
+
 	}
 
 
