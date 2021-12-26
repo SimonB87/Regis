@@ -53,5 +53,5 @@
   <br>
 
   <?php if(in_array("<span style='color: #14C800;'>Jste připraven/a! Nyní se můžete přihlásit!</span><br>", $error_array)) echo "<span style='color: #14C800;'>Vše je připraveno! Můžete se přihlásit!</span></p>"; ?>
-  <a href="#" id="signin" class="btn btn-lg" onclick="toggleVisibility('#formTwo','#formOne');" >Již máte účet? Vstupte zde!</a>
+  <a href="#" id="signin" class="w-100 btn btn-lg btn-secondary" onclick="toggleVisibility('#formTwo','#formOne');" >Již máte účet? Vstupte zde!</a>
 </form>
