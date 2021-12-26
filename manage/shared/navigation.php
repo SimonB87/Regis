@@ -32,13 +32,22 @@
             <a class="nav-link" href="https://www.mauritiuselvira.com/contact">Contact</a>
           </li>
 
-<?php 
+<?php
+        if (isset($_SESSION['username'])) {
+          if ($_SESSION['user_level'] === "9") {
+            echo "<li class='nav-item'><a href='accounts.php' class='nav-link'>
+              Accounts
+            </a></li>";
+          }
+        } else {
+        }
+
         if (isset($_SESSION['username'])) {
           echo "<li class='nav-item'><a href='handlers\logout.php' class='nav-link'>
                   Logout
                 </a></li>";
         } else {
-          echo "<li class='nav-item'>Not loggedin</li>";
+          
         }
 ?>
 

@@ -12,6 +12,7 @@ if(isset($_POST['login_button'])) {
 	if($check_login_query == 1) {
 		$row = mysqli_fetch_array($check_database_query);
 		$username = $row['username'];
+		$usernamelevel = $row['user_level'];
 
 		$user_closed_query = mysqli_query($connector, "SELECT * FROM users WHERE email='$email' AND user_closed='yes'");
 		if(mysqli_num_rows($user_closed_query) == 1) {
@@ -19,6 +20,7 @@ if(isset($_POST['login_button'])) {
 		}
 
 		$_SESSION['username'] = $username;
+		$_SESSION['user_level'] = $usernamelevel;
 
 		header("Location: index.php");
 		exit();
