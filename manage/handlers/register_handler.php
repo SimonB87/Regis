@@ -9,6 +9,14 @@ $password2 = ""; //password 2
 $date = ""; //Sign up date 
 $error_array = array(); //Holds error messages
 
+// change character set to utf8
+if (!mysqli_set_charset($connector, "utf8")) {
+	printf("Error loading character set utf8: %s\n", mysqli_error($connector));
+	exit();
+} else {
+	//printf("Current character set: %s\n", mysqli_character_set_name($connector));//used only for testing
+}
+
 if(isset($_POST['register_button'])){
 
 	//Registration form values
