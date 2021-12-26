@@ -1,6 +1,16 @@
 <?php
+session_start();
+
 require("../config/config.php");
 include("handlers/login_handler.php");
+
+// change character set to utf8
+if (!mysqli_set_charset($connector, "utf8")) {
+	printf("Error loading character set utf8: %s\n", mysqli_error($connector));
+	exit();
+} else {
+	//printf("Current character set: %s\n", mysqli_character_set_name($connector));//used only for testing
+}
 
 $filename = 'components/registerform.php';
 
@@ -27,19 +37,19 @@ if (file_exists($filename)) {
   <body>
 
     <?php
-    include("../shared/navigation.php");
+    include("shared/navigation.php");
     ?> 
 
     <div class="container">
       <div class="row">
-        <div id="formOne" class="visibility visibility-visible col-sm-12 col-md-6 col-xl-4">
+        <div id="formOne" class="visibility visibility-visible">
 
           <?php
           include("components/loginform.php");
           ?>
 
         </div>
-        <div id="formTwo" class="visibility visibility-hidden col-sm-12 col-md-6 col-xl-4">
+        <div id="formTwo" class="visibility visibility-hidden">
 
           <?php
           if (file_exists($filename)) {
