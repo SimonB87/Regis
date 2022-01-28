@@ -13,7 +13,7 @@
 | X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X                            | X xxx X xxx X |                  X xxx X |
 |                                                                                                                        |               |                          |
 | Admin sees all registration in a table                                                                                 |    P:two:     |       :heavy_check_mark: |
-| Only logged in users see all registration in a table                                                                   |    P:two:     |                      :o: |
+| Only logged in users see all registration in a table                                                                   |    P:two:     |       :heavy_check_mark: |
 | There is a employee log in of users functionality                                                                      |    P:two:     |                      :o: |
 | Admin gets after registration a confirmation email                                                                     |    P:two:     |                      :o: |
 | Forgotten password renewal by email                                                                                    |    P:two:     |                      :o: |

@@ -100,7 +100,7 @@ require 'config/config.php';
 
   $userNotification = ($correctlyFilledForm) ? $paymentInstructions : $registrationError;
 
-  $registrationSummary = "<div class='container padding-regular-topBottom'> <div class='row'> <div class='col-12'> <h1 class='text-center padding-regular-topBottom'>Registration summary :</h1> </div> <div class='col-12 test-link'> <a href='registrations.php#orders'> <button class='btn btn-warning'> TEST : Table of saved registrations </button></a> </div>";
+  $registrationSummary = "<div class='container padding-regular-topBottom'> <div class='row'> <div class='col-12'> <h1 class='text-center padding-regular-topBottom'>Registration summary :</h1> </div> <div class='col-12 test-link'> <a href='manage/registrations.php#orders'> <button class='btn btn-warning'> TEST : Table of saved registrations </button></a> </div>";
 
   echo $userNotification;
 

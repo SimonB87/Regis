@@ -1,8 +1,17 @@
 <?php
 session_start();
+require '../config/config.php';
 
-require("../config/config.php");
-include("handlers/login_handler.php");
+/*if the user is loggen in, make the username variable equal to username. If user is not logged in, send him back to register page.*/
+if (isset($_SESSION['username'])) {
+  $userLoggedIn = $_SESSION['username'];
+  $user_details_query = mysqli_query($connector, "SELECT * FROM users WHERE username='$userLoggedIn'");
+  $user = mysqli_fetch_array($user_details_query);
+}
+else {
+  header("Location: login.php");
+  exit();
+}
 
 // change character set to utf8
 if (!mysqli_set_charset($connector, "utf8")) {
@@ -12,16 +21,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
 	//printf("Current character set: %s\n", mysqli_character_set_name($connector));//used only for testing
 }
 
-$filename = 'components/registerform.php';
-
-if (file_exists($filename)) {
-    include("handlers/register_handler.php");
-} else {
-    echo "The file does not exist";
-}
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,34 +40,17 @@ if (file_exists($filename)) {
     include("shared/navigation.php");
     ?> 
 
-    <div class="container">
-      <div class="row">
-        <div id="formOne" class="visibility visibility-visible">
-
-          <?php
-          include("components/loginform.php");
-          ?>
-
-        </div>
-        <div id="formTwo" class="visibility visibility-hidden">
-
-          <?php
-          if (file_exists($filename)) {
-              include("components/registerform.php");
-          } else {
-              echo "The file does not exist";
-          }
-          ?> 
-
-        </div>
-      </div>
+    <main>
+    <div class="px-4 py-5 my-5 text-center">
+      <h1 class="display-5 fw-bold">Hello,</h1>
+      <h2 class="display-7 fw-bold">you are logged in now</h2>
     </div>
+    </main>
 
-
-    <?php
+<?php
     include("../shared/contactsection.php");
     include("../shared/footer.php");
-    ?>
+?>
 
     <script src="../shared/libs/bootstrap/js/bootstrap.js"></script>
     <script src="../shared/assets/js/formvalidation.js"></script>
