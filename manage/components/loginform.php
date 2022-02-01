@@ -22,6 +22,11 @@
     </label>
   </div>
   
+  <?php 
+    echo "1 array errors : <br>";
+    print_r(array_count_values( $error_array )) ;
+  ?>
+
   <?php if(in_array("Email nebo heslo nejsou správné<br>", $error_array)) echo "<p class='registration_error'>Email nebo heslo nejsou správné</p>"; ?>
   <input id="signInButton" class="w-100 btn btn-lg btn-primary" type="submit" name="login_button" value="Login" >
   <br>
