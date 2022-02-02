@@ -45,7 +45,7 @@
   color: coral !important;
 }
 
-.text-green{
+.text-green {
   color: green;
 }
 
@@ -61,7 +61,8 @@
 }
 
 .visibility {
-  transition: visibility 0s linear 0.33s, opacity 0.33s linear, height 0s linear 0.33s, width 0s linear 0.33s, margin 0s linear 0.33s;
+  transition: visibility 0s linear 0.33s, opacity 0.33s linear,
+    height 0s linear 0.33s, width 0s linear 0.33s, margin 0s linear 0.33s;
 }
 .visibility-hidden {
   visibility: hidden;
@@ -160,7 +161,6 @@ nav {
   nav .navbar .navbar-brand {
     width: calc(100% - 60px);
   }
-
 }
 
 .bg-gray {
@@ -179,6 +179,15 @@ form > div {
 
 form div.form-floating {
   width: 100%;
+}
+
+.form-floating label {
+  transition: all 1s linear 0.25s;
+}
+
+.form-floating:hover label {
+  font-size: 0.6rem;
+  top: -0.25rem;
 }
 
 select {
@@ -259,7 +268,7 @@ footer .copyright {
 
 /* bootstrap edit*/
 
-.row{
+.row {
   margin-left: unset;
   margin-right: unset;
 }
