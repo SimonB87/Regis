@@ -16,16 +16,12 @@
     <input id="password"  class="form-control" type="password" name="log_password" placeholder="Heslo">
   </div>
 
-  <div class="checkbox mb-3">
-    <label>
-      <input type="checkbox" value="remember-me"  class="form-control"> Remember me
+  <div class="form-check mb-3">
+    <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+    <label class="form-check-label" for="flexCheckDefault">
+      Remember me
     </label>
   </div>
-  
-  <?php 
-    echo "1 array errors : <br>";
-    print_r(array_count_values( $error_array )) ;
-  ?>
 
   <?php if(in_array("Email nebo heslo nejsou správné<br>", $error_array)) echo "<p class='registration_error'>Email nebo heslo nejsou správné</p>"; ?>
   <input id="signInButton" class="w-100 btn btn-lg btn-primary" type="submit" name="login_button" value="Login" >
