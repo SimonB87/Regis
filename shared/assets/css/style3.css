@@ -1,3 +1,7 @@
+:root {
+  --bs-blue: #0d6efd;
+}
+
 .full-width {
   width: 100%;
 }
@@ -183,11 +187,13 @@ form div.form-floating {
 
 .form-floating label {
   transition: all 1s linear 0.25s;
+  color: var(--bs-blue);
+  font-weight: 600;
 }
 
 .form-floating:hover label {
-  font-size: 0.6rem;
-  top: -0.25rem;
+  transform: scale(0.6);
+  top: -0.1rem;
 }
 
 select {
