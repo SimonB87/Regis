@@ -42,14 +42,14 @@ if (file_exists($filename)) {
 
     <div class="container">
       <div class="row">
-        <div id="formOne" class="visibility visibility-visible">
+        <div id="formOne" class="visibility visibility-visible padding-regular">
 
           <?php
           include("components/loginform.php");
           ?>
 
         </div>
-        <div id="formTwo" class="visibility visibility-hidden">
+        <div id="formTwo" class="visibility visibility-hidden padding-regular">
 
           <?php
           if (file_exists($filename)) {
