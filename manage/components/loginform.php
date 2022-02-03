@@ -23,7 +23,9 @@
     </label>
   </div>
 
-  <?php if(in_array("Email nebo heslo nejsou správné<br>", $error_array)) echo "<p class='registration_error'>Email nebo heslo nejsou správné</p>"; ?>
+  <?php if(in_array("Email nebo heslo nejsou správné", $error_array)) 
+    echo "<div class='registration_error btn btn-warning'>Email nebo heslo nejsou správné.<span class='registration_error_close'>&nbsp;<i class='fas fa-times'></i>&nbsp;</span></div>"; 
+  ?>
   <input id="signInButton" class="w-100 btn btn-lg btn-primary" type="submit" name="login_button" value="Login" >
   <br>
 

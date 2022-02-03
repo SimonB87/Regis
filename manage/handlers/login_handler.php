@@ -12,7 +12,7 @@ if(isset($_POST['login_button'])) {
 
 	if($check_login_query == 0) {
 
-		array_push($error_array, "Email nebo heslo nejsou správné<br>");
+		array_push($error_array, "Email nebo heslo nejsou správné");
 
 	} elseif ($check_login_query == 1) {
 
@@ -34,9 +34,9 @@ if(isset($_POST['login_button'])) {
 
 }
 
-foreach( $error_array as $item ) {
-	echo $item ;
-}
+//foreach( $error_array as $key=>$item ) {
+//	echo `<div id='notification_$key' class='notification'>` . $item . `<span onclick="hideNotification('notification_$key')" > X </span></div>`;
+//}
 
 
 ?>

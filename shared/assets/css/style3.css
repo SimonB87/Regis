@@ -2,6 +2,29 @@
   --bs-blue: #0d6efd;
 }
 
+@keyframes scale-bigger-smaller {
+  0% {
+    transform: scale(1);
+    top: 1rem;
+  }
+  20% {
+    transform: scale(1);
+    top: 1rem;
+  }
+  50% {
+    transform: scale(1.5);
+    top: 2rem;
+  }
+  80% {
+    transform: scale(1);
+    top: 1rem;
+  }
+  100% {
+    transform: scale(1);
+    top: 1rem;
+  }
+}
+
 .full-width {
   width: 100%;
 }
@@ -62,6 +85,11 @@
   background-color: #fff;
   padding: 0 0;
   position: relative;
+}
+
+.hidden {
+  visibility: hidden;
+  display: none;
 }
 
 .visibility {
@@ -185,8 +213,12 @@ form div.form-floating {
   width: 100%;
 }
 
+.form-floating > label {
+  top: -0.5rem;
+}
+
 .form-floating label {
-  transition: all 1s linear 0.25s;
+  transition: transform 1s linear 0.25s, top 1s linear 0.25s;
   color: var(--bs-blue);
   font-weight: 600;
 }
@@ -268,6 +300,14 @@ footer .copyright {
   right: 1rem;
   font-size: 1rem;
   cursor: pointer;
+}
+
+.registration_error {
+  position: absolute;
+  top: 1rem;
+  right: 33%;
+  cursor: pointer;
+  animation: scale-bigger-smaller 5s infinite;
 }
 
 /* alert - end */
