@@ -16,10 +16,10 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Event options
+              Event set-up
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Event main set up</a></li>
+              <li><a class="dropdown-item" href="eventsetupmain.php">Event main set up</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Event description</a></li>
               <li><a class="dropdown-item" href="#">Event register form </a></li>
