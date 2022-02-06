@@ -14,7 +14,7 @@
       </div>
       <div class="col-12">
 
-      <table id="orders" class="table tableDesign2019 search_project_table" data-sorting="true" data-paging="true">
+      <table id="orders" class="table search_project_table" data-sorting="true" data-paging="true">
         <thead class="bg-info">
           <tr>
             <th class="footable-sortable"> Order ID </th>
