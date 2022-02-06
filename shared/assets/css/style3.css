@@ -56,7 +56,7 @@
   height: 100%;
 }
 .padding-small {
-  padding: var(----padding-small);
+  padding: var(--padding-small);
 }
 .padding-regular {
   padding: var(--padding-regular);
