@@ -9,10 +9,10 @@
       <div class="collapse navbar-collapse full-width-lg" id="navbarColor01">
         <ul class="navbar-nav justify-content-center full-width">
           <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.php">Admin home</a>
+              <a class="nav-link active" aria-current="page" href="index.php">Admin page</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../index.php">Event home</a>
+            <a class="nav-link" aria-current="page" href="../index.php">Show event</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
