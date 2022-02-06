@@ -1,0 +1,52 @@
+nav a.nav-link,
+nav a.dropdown-item,
+footer .nav .nav-item .nav-link {
+  font-family: Muli, sans-serif;
+  position: relative;
+  display: inline-block;
+  margin-top: 8px;
+  margin-left: 0px;
+  padding: 13px 38px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-transition: background-color 500ms ease, border 500ms ease,
+    text-shadow 500ms ease, color 500ms ease;
+  transition: background-color 500ms ease, border 500ms ease,
+    text-shadow 500ms ease, color 500ms ease;
+  direction: ltr;
+  color: var(--lightGray);
+  font-size: 11px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 3px;
+  text-indent: 0px;
+  text-transform: uppercase;
+}
+
+nav a.dropdown-item {
+  color: #000;
+}
+
+nav {
+  border-bottom: 1px solid #353535;
+}
+
+@media only screen and (max-width: 450px) {
+  nav .navbar .navbar-brand {
+    width: calc(100% - 60px);
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  li.nav-item {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}

@@ -7,3 +7,21 @@ function toggleVisibility(hideEl, showEl) {
     willBeShown.classList.remove("visibility-hidden");
     willBeShown.classList.add("visibility-visible");
 }
+
+(function () {
+  'use strict'
+  document.addEventListener("DOMContentLoaded", function(event) { 
+
+    const elementsArray = document.querySelectorAll(".registration_error_close");
+
+    elementsArray.forEach(function(elem) {
+        elem.addEventListener("click", function() {
+           const _element = this;
+           _element.parentElement.classList.add("hidden");
+        });
+    });
+    
+  });
+
+
+})()

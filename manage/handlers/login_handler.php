@@ -1,4 +1,5 @@
 <?php
+$error_array = [];
 if(isset($_POST['login_button'])) {
 
 	$email = filter_var($_POST['log_email'], FILTER_SANITIZE_EMAIL); //sanitize email
@@ -9,7 +10,12 @@ if(isset($_POST['login_button'])) {
 	$check_database_query = mysqli_query($connector, "SELECT * FROM users WHERE email='$email' AND password='$password'");
 	$check_login_query = mysqli_num_rows($check_database_query);
 
-	if($check_login_query == 1) {
+	if($check_login_query == 0) {
+
+		array_push($error_array, "Email nebo heslo nejsou správné");
+
+	} elseif ($check_login_query == 1) {
+
 		$row = mysqli_fetch_array($check_database_query);
 		$username = $row['username'];
 		$usernamelevel = $row['user_level'];
@@ -24,15 +30,13 @@ if(isset($_POST['login_button'])) {
 
 		header("Location: index.php");
 		exit();
-
 	}
-	else {
-
-		array_push($error_array, "Email nebo heslo nejsou správné<br>");
-
-	}
-
 
 }
+
+//foreach( $error_array as $key=>$item ) {
+//	echo `<div id='notification_$key' class='notification'>` . $item . `<span onclick="hideNotification('notification_$key')" > X </span></div>`;
+//}
+
 
 ?>

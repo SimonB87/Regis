@@ -16,18 +16,34 @@
     <input id="password"  class="form-control" type="password" name="log_password" placeholder="Heslo">
   </div>
 
-  <div class="checkbox mb-3">
-    <label>
-      <input type="checkbox" value="remember-me"  class="form-control"> Remember me
+  <div class="form-check mb-3">
+    <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+    <label class="form-check-label" for="flexCheckDefault">
+      Remember me
     </label>
   </div>
-  
-  <?php if(in_array("Email nebo heslo nejsou správné<br>", $error_array)) echo "<p class='registration_error'>Email nebo heslo nejsou správné</p>"; ?>
-  <input id="signInButton" class="w-100 btn btn-lg btn-primary" type="submit" name="login_button" value="Login" >
-  <br>
 
-  <a href="#" class="w-100 btn btn-lg btn-secondary" onclick="toggleVisibility('#formOne','#formTwo');">Nemáte účet? Registrovat lze zde!</a>
-  <br>
+  <?php if(in_array("Email nebo heslo nejsou správné", $error_array)) 
+    echo "<div class='registration_error btn btn-warning'>Email nebo heslo nejsou správné.<span class='registration_error_close'>&nbsp;<i class='fas fa-times'></i>&nbsp;</span></div>"; 
+  ?>
+  <span class="padding-regular">
+    <input id="signInButton" class="w-100 btn btn-lg btn-primary" type="submit" name="login_button" value="Login" >
+  </span>
 
-  <a href="newPassword.php" id="forgotPassword" class="signup">Obnovení zapomenutého hesla</a>
+  <?php
+          if (file_exists("registerform.php")) {
+              echo `<span class="padding-regular">
+                    <a href="#" class="w-100 btn btn-lg btn-secondary" onclick="toggleVisibility('#formOne','#formTwo');">Nemáte účet? Registrovat lze zde!</a>
+                  </span><br>`;
+          }
+  ?> 
+
+  <span class="padding-regular">
+    <a href="#" class="w-100 btn btn-lg btn-secondary" onclick="toggleVisibility('#formOne','#formTwo');">Nemáte účet? Registrovat lze zde!</a>
+  </span>
+
+  <!-- Lost password - TODO! -->
+  <span class="padding-regular">
+    <a href="newPassword.php" id="forgotPassword" class="signup w-100 btn btn-lg btn-info text-white">Obnovení zapomenutého hesla</a>
+  </span>
 </form>

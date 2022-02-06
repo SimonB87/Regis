@@ -42,7 +42,7 @@
 | Control of multiple log-in attempts - after 10 attempts user can not log in for 30 minutes                             |   P:muscle:   |                      :o: |
 | Case - event cancellation : generate cancellation email                                                                |   P:muscle:   |                      :o: |
 | Case - event cancellation : in cancelation email user options - button for refund option, button for reschedule option |   P:muscle:   |                      :o: |
-
+| Case - registration transfer : děla uživatel sám z emailu do 48hodin před začátkem akce, dostane potvrzení mailem admin a uživatel                                                                    |   P:muscle:   |                      :o: |
 
 ## Moje poznámky
 - Ukládát plně české znaky pro jména
