@@ -1,0 +1,40 @@
+@keyframes scale-bigger-smaller {
+  0% {
+    transform: scale(1);
+    top: 1rem;
+  }
+  20% {
+    transform: scale(1);
+    top: 1rem;
+  }
+  50% {
+    transform: scale(1.5);
+    top: 2rem;
+  }
+  80% {
+    transform: scale(1);
+    top: 1rem;
+  }
+  100% {
+    transform: scale(1);
+    top: 1rem;
+  }
+}
+
+.visibility {
+  transition: visibility 0s linear 0.33s, opacity 0.33s linear,
+    height 0s linear 0.33s, width 0s linear 0.33s, margin 0s linear 0.33s;
+}
+.visibility-hidden {
+  visibility: hidden;
+  opacity: 0;
+  width: 0;
+  float: left;
+}
+.visibility-visible {
+  visibility: visible;
+  opacity: 1;
+  margin: 0 auto;
+  float: left;
+  width: 50%;
+}
