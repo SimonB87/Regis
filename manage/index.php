@@ -50,11 +50,16 @@ if (!mysqli_set_charset($connector, "utf8")) {
     <!-- TODO - statistics about current event registrations-->
     <div class="container px-4 py-5 my-5">
       <div class="row">
-        <h2 class="text-center display-7 fw-bold">Current event summary</h2>
-        <p>Number of registrations: <span class="fw-bold">20</span><p>
-        <p>Paid registrations: <span class="fw-bold">15</span></p>
-        <p>Registrations waiting for payment: <span class="fw-bold">3</span></p>
-        <p>Delayed registration payments: <span class="fw-bold">3</span></p>
+        <div class="col-12">
+          <h2 class="text-center display-7 fw-bold">Current event summary</h2>
+        </div>
+        <div class="col-6 center-margin">
+          <p>Event name: <span class="fw-bold">Tester & Testie Easter Prague Bachata Weekend</span></p>
+          <p>Number of registrations: <span class="fw-bold">20</span><p>
+          <p>Paid registrations: <span class="fw-bold">15</span></p>
+          <p>Registrations waiting for payment: <span class="fw-bold">3</span></p>
+          <p>Delayed registration payments: <span class="fw-bold">3</span></p>
+        </div>
       </div>
     </div>
     </main>
