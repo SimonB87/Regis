@@ -16,7 +16,7 @@
 
       <table id="orders" class="table search_project_table" data-sorting="true" data-paging="true">
         <thead class="bg-info">
-          <tr>
+          <tr class="text-white">
             <th class="footable-sortable"> Order ID </th>
             <th class="footable-sortable" data-breakpoints="xs sm"> Event name </th>
             <th class="footable-sortable"> Registration date </th>
