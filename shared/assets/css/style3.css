@@ -65,6 +65,9 @@
   padding-top: var(--padding-regular);
   padding-bottom: var(--padding-regular);
 }
+.padding-regular-bottom {
+  padding-bottom: var(--padding-regular);
+}
 .text-left {
   text-align: left;
 }
