@@ -92,7 +92,20 @@
       </div>
     </div>
 
-    <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
+    <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+      <div class="form-floating">
+        <input type="number" class="form-control" id="ticketsAmountEarlyBirdsRegistrations" required name="ticketsAmountEarlyBirdsRegistrations" maxlength="250">
+        <label for="ticketsAmountEarlyBirdsRegistrations"> Tickets Amount - Early Birds Registrations </label>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+        <div class="invalid-feedback">
+          Please fill in valid value.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
       <div class="form-floating">
         <input type="date" class="form-control" id="earlyBirdsRegistrationsStartDate" required name="earlyBirdsRegistrationsStartDate" maxlength="250">
         <label for="earlyBirdsRegistrationsStartDate">Tickets - Early Birds Registrations Start Date</label>
@@ -105,7 +118,7 @@
       </div>
     </div>
 
-    <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
+    <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
       <div class="form-floating">
         <input type="date" class="form-control" id="earlyBirdsRegistrationsEndDate" required name="earlyBirdsRegistrationsEndDate" maxlength="250">
         <label for="earlyBirdsRegistrationsEndDate">Tickets - Early Birds Registrations End Date</label>
@@ -118,18 +131,7 @@
       </div>
     </div>
 
-    <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
-      <div class="form-floating">
-        <input type="number" class="form-control" id="ticketsAmountEarlyBirdsRegistrations" required name="ticketsAmountEarlyBirdsRegistrations" maxlength="250">
-        <label for="ticketsAmountEarlyBirdsRegistrations"> Tickets Amount - Early Birds Registrations </label>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-        <div class="invalid-feedback">
-          Please fill in valid value.
-        </div>
-      </div>
-    </div>
+
 
     <div class="col-12 padding-regular-top"> <strong>Regulart Registration Data</strong> </div>
 
