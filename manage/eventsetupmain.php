@@ -46,31 +46,43 @@ if (!mysqli_set_charset($connector, "utf8")) {
     <main>
       <div class="container my-5 text-center">
         <div class="row">
-          <h1 class="display-5 fw-bold">Event main set up</h1>
-          <p class="display-7 fw-bold">Set here event main characteristics</p>
+          <div class="col-12 text-center padding-regular rounded-3 bg-light border">
+            <span> Event set-up links : </span>
+            <a href="eventsetupmain.php" class="weblink padding-small fw-bold"> Event main set up </a>
+            <a href="#" class="weblink padding-small"> Event description </a>
+            <a href="#" class="weblink padding-small"> Event register form </a>
+          </div>
+          <div class="col-12 padding-regular">
+            <h1 class="display-5 fw-bold">Event main set up</h1>
+            <p class="display-7 fw-bold">Set here event main characteristics</p>
+          </div>
         </div>
       </div>
 
       <div class="container padding-regular-bottom ">
         <div class="row">
-          <div class="col-lg-6 col-md-12 col-sm-12 center-margin">
+          <div class="col-lg-6 col-md-12 col-sm-12">
             <!-- TODO : form with all these inputs -->
             * Event ID (required) - type unique integer, unique from all other past events<br>
             * Event status (required) - select: registrations open; event passed; event cancelled;<br>
             * Event name (required) - ... long text<br>
             * Event start date (required) - type date <br>
+
             * Event end date (required) - type date<br>
             * Early birds registrations start date (optional)- type date<br>
             * Early birds registrations - amount of tickets - required if "Early birds registrations start date" is set <br>
             * Regular tickets registrations start date (optional)- type date<br>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12">
+            <!-- TODO : form with all these inputs -->
             * Regular tickets registrations - amount of tickets - required if "Regular tickets registrations start date" is set <br>
             * Special type 1 registrations start date (optional) - for party tickets? - type date<br>
             * Special type 1 registrations name - Type name - required if "Special type 1 registrations start date" is set - type text<br>
             * Special type 1 registrations - amount of tickets - required if "Special type 1 registrations start date" is set <br>
+
             * Special type 2 registrations start date (optional) - for other purposes - type date<br>
             * Special type 2 registrations name - Type name - required if "Special type 2 registrations start date" is set - type text<br>
             * Special type 2 registrations - amount of tickets - required if "Special type 2 registrations start date" is set <br>
-
           </div>
         </div>
       </div>
