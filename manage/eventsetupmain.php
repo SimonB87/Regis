@@ -45,18 +45,25 @@ if (!mysqli_set_charset($connector, "utf8")) {
 
     <main>
       <div class="container my-5 text-center">
-        <div class="row">
-          <div class="col-12 text-center padding-regular rounded-3 bg-light border">
+
+        <div class="row padding-regular rounded-3 bg-light border">
+          <div class="col-12 text-center">
             <span> Event set-up links : </span>
+          </div>
+          <div class="col-12 text-center">
             <a href="eventsetupmain.php" class="weblink padding-small fw-bold"> Event main set up </a>
             <a href="#" class="weblink padding-small"> Event description </a>
             <a href="#" class="weblink padding-small"> Event register form </a>
           </div>
+        </div>
+
+        <div class="row padding-regular">
           <div class="col-12 padding-regular">
             <h1 class="display-5 fw-bold">Event main set up</h1>
             <p class="display-7 fw-bold">Set here event main characteristics</p>
           </div>
         </div>
+
       </div>
 
       <div class="container padding-regular-bottom ">
