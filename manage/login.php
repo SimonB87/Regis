@@ -36,33 +36,34 @@ if (file_exists($filename)) {
     <title> Event registration | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
 
   <head>
-  <body>
+  <body style="background: #000;">
 
     <?php
     $error_array = [];
     include("handlers/login_handler.php");
     include("shared/navigation.php");
     ?> 
+    <div style="background: #fff;">
+      <div class="container">
+        <div class="row" >
+          <div id="formOne" class="visibility visibility-visible padding-regular">
 
-    <div class="container">
-      <div class="row">
-        <div id="formOne" class="visibility visibility-visible padding-regular">
+            <?php
+            include("components/loginform.php");
+            ?>
 
-          <?php
-          include("components/loginform.php");
-          ?>
+          </div>
+          <div id="formTwo" class="visibility visibility-hidden padding-regular">
 
-        </div>
-        <div id="formTwo" class="visibility visibility-hidden padding-regular">
+            <?php
+            if (file_exists($filename)) {
+                include("components/registerform.php");
+            } else {
+                echo "The file does not exist";
+            }
+            ?> 
 
-          <?php
-          if (file_exists($filename)) {
-              include("components/registerform.php");
-          } else {
-              echo "The file does not exist";
-          }
-          ?> 
-
+          </div>
         </div>
       </div>
     </div>
