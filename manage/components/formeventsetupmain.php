@@ -77,10 +77,14 @@
       </div>
     </div>
 
-  <!-- TODO couple tickets -->
+  <!-- TODO enable couple tickets -> opens couple prices -->
     <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-      <div>
-        Checkbox - enable couple tickets -> opens couple prices
+      
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+        <label class="form-check-label" for="flexCheckDefault">
+          Enable couple ticket
+        </label>
       </div>
     </div>
 
@@ -140,15 +144,29 @@
 
     <!-- TODO ticket prices -->
     <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-      <div>
-        Ticket price - single client
-      </div>
+      <div class="form-floating">
+          <input type="text" class="form-control" id="earlyBirdsTicketPriceSingle" required name="earlyBirdsTicketPriceSingle" maxlength="250" value="">
+          <label for="earlyBirdsTicketPriceSingle">Early Birds Registration Ticket Price - Single</label>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Please fill in valid value.
+          </div>
+        </div>
     </div>
 
     <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-      <div>
-        Ticket price - couple
-      </div>
+    <div class="form-floating">
+          <input type="text" class="form-control" id="earlyBirdsTicketPriceCouple" required name="earlyBirdsTicketPriceCouple" maxlength="250" value="">
+          <label for="earlyBirdsTicketPriceCouple">Early Birds Registration Ticket Price - Couple</label>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Please fill in valid value.
+          </div>
+        </div>
     </div>
 
 
@@ -156,7 +174,7 @@
 
     <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
       <div class="form-floating">
-        <input type="text" class="form-control" id="regularRegistrationName" required name="regularRegistrationName" maxlength="250" value="Early Birds Registrations" value="Full pass registrations">
+        <input type="text" class="form-control" id="regularRegistrationName" required name="regularRegistrationName" maxlength="250" value="Full pass registrations">
         <label for="regularRegistrationName"> Regulart Registration Name</label>
         <div class="valid-feedback">
           Looks good!
@@ -208,15 +226,29 @@
 
     <!-- TODO ticket prices -->
     <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-      <div>
-        Ticket price - single client
-      </div>
+      <div class="form-floating">
+          <input type="text" class="form-control" id="regularTicketPriceSingle" required name="regularTicketPriceSingle" maxlength="250" value="">
+          <label for="regularTicketPriceSingle">Regular Registration Ticket Price - Single</label>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Please fill in valid value.
+          </div>
+        </div>
     </div>
 
     <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-      <div>
-        Ticket price - couple
-      </div>
+    <div class="form-floating">
+          <input type="text" class="form-control" id="regularTicketPriceCouple" required name="regularTicketPriceCouple" maxlength="250" value="">
+          <label for="regularTicketPriceCouple">Regular Registration Ticket Price - Couple</label>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Please fill in valid value.
+          </div>
+        </div>
     </div>
 
     <div class="col-12 padding-regular-top"> <strong> Special type 1 Registrations </strong> </div>
@@ -276,15 +308,29 @@
 
     <!-- TODO ticket prices -->
     <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-      <div>
-        Ticket price - single client
-      </div>
+      <div class="form-floating">
+          <input type="text" class="form-control" id="specialType1TicketPriceSingle" required name="specialType1TicketPriceSingle" maxlength="250" value="">
+          <label for="specialType1TicketPriceSingle">Special type 1 Registration Ticket Price - Single</label>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Please fill in valid value.
+          </div>
+        </div>
     </div>
 
     <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-      <div>
-        Ticket price - couple
-      </div>
+    <div class="form-floating">
+          <input type="text" class="form-control" id="specialType1TicketPriceCouple" required name="specialType1TicketPriceCouple" maxlength="250" value="">
+          <label for="specialType1TicketPriceCouple">Special type 1 Registration Ticket Price - Couple</label>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Please fill in valid value.
+          </div>
+        </div>
     </div>
 
     <div class="col-12 padding-regular-top"> <strong> Special type 2 Registrations </strong> </div>
