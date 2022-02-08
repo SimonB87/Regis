@@ -64,7 +64,7 @@
       </div>
     </div>
 
-    <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
+    <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
       <div class="form-floating">
         <input type="date" class="form-control" id="eventEndDate" required name="eventEndDate" maxlength="250">
         <label for="eventEndDate">Event End Date</label>
@@ -74,6 +74,12 @@
         <div class="invalid-feedback">
           Please fill in valid value.
         </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+      <div>
+        Checkbox - enable couple tickets -> opens couple prices
       </div>
     </div>
 
@@ -131,6 +137,17 @@
       </div>
     </div>
 
+    <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+      <div>
+        Ticket price - single client
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+      <div>
+        Ticket price - couple
+      </div>
+    </div>
 
 
     <div class="col-12 padding-regular-top"> <strong>Regulart Registration Data</strong> </div>
@@ -184,6 +201,18 @@
         <div class="invalid-feedback">
           Please fill in valid value.
         </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+      <div>
+        Ticket price - single client
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+      <div>
+        Ticket price - couple
       </div>
     </div>
 
@@ -294,6 +323,18 @@
         <div class="invalid-feedback">
           Please fill in valid value.
         </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+      <div>
+        Ticket price - single client
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+      <div>
+        Ticket price - couple
       </div>
     </div>
 
