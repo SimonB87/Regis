@@ -61,7 +61,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
 
       </div>
 
-      <div class="container padding-regular-bottom ">
+      <div class="container padding-regular-topBottom ">
         <div class="row">
 
         <?php
