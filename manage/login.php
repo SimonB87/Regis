@@ -1,24 +1,8 @@
 <?php
 session_start();
-
 require("../config/config.php");
-
-// change character set to utf8
-if (!mysqli_set_charset($connector, "utf8")) {
-	printf("Error loading character set utf8: %s\n", mysqli_error($connector));
-	exit();
-} else {
-	//printf("Current character set: %s\n", mysqli_character_set_name($connector));//used only for testing
-}
-
-$filename = 'components/registerform.php';
-
-if (file_exists($filename)) {
-    include("handlers/register_handler.php");
-} else {
-    echo "The file does not exist";
-}
-
+$error_array = [];
+include("handlers/login_handler.php");
 ?>
 
 
@@ -39,8 +23,23 @@ if (file_exists($filename)) {
   <body style="background: #000;">
 
     <?php
-    $error_array = [];
-    include("handlers/login_handler.php");
+
+    // change character set to utf8
+    if (!mysqli_set_charset($connector, "utf8")) {
+      printf("Error loading character set utf8: %s\n", mysqli_error($connector));
+      exit();
+    } else {
+      //printf("Current character set: %s\n", mysqli_character_set_name($connector));//used only for testing
+    }
+
+    $filename = 'components/registerform.php';
+
+    if (file_exists($filename)) {
+        include("handlers/register_handler.php");
+    } else {
+        echo "The file does not exist";
+    }
+
     include("shared/navigation.php");
     ?> 
     <div style="background: #fff;">
