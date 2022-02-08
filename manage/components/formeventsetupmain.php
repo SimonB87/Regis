@@ -77,6 +77,7 @@
       </div>
     </div>
 
+  <!-- TODO couple tickets -->
     <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
       <div>
         Checkbox - enable couple tickets -> opens couple prices
@@ -137,6 +138,7 @@
       </div>
     </div>
 
+    <!-- TODO ticket prices -->
     <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
       <div>
         Ticket price - single client
@@ -204,6 +206,7 @@
       </div>
     </div>
 
+    <!-- TODO ticket prices -->
     <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
       <div>
         Ticket price - single client
@@ -271,6 +274,19 @@
       </div>
     </div>
 
+    <!-- TODO ticket prices -->
+    <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+      <div>
+        Ticket price - single client
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+      <div>
+        Ticket price - couple
+      </div>
+    </div>
+
     <div class="col-12 padding-regular-top"> <strong> Special type 2 Registrations </strong> </div>
 
     <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
@@ -326,6 +342,7 @@
       </div>
     </div>
 
+    <!-- TODO ticket prices -->
     <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
       <div>
         Ticket price - single client
