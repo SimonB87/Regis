@@ -147,7 +147,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
 
     <script type="text/javascript">
         $(function () {
-            $('input[type=date]').datepicker({
+            $('form.bts-form input[type=date]').datepicker({
                 format: "dd/mm/yyyy"
             });
         });

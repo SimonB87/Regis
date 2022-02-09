@@ -1,4 +1,4 @@
-<form id="form" class="needs-validation"  method="post" action="eventsetupmain.php" novalidate>
+<form id="form" class="needs-validation bts-form"  method="post" action="eventsetupmain.php" novalidate>
 
   <div class="row full-width">
 
