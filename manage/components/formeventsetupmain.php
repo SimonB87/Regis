@@ -390,18 +390,40 @@
 
     <!-- TODO ticket prices -->
     <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-      <div>
-        Ticket price - single client
-      </div>
+      <div class="form-floating">
+          <input type="text" class="form-control" id="specialType2TicketPriceSingle" required name="specialType2TicketPriceSingle" maxlength="250" value="">
+          <label for="specialType2TicketPriceSingle">Special type 2 Registration Ticket Price - Single</label>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Please fill in valid value.
+          </div>
+        </div>
     </div>
 
     <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-      <div>
-        Ticket price - couple
-      </div>
+    <div class="form-floating">
+          <input type="text" class="form-control" id="specialType2TicketPriceCouple" required name="specialType2TicketPriceCouple" maxlength="250" value="">
+          <label for="specialType2TicketPriceCouple">Special type 2 Registration Ticket Price - Couple</label>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Please fill in valid value.
+          </div>
+        </div>
     </div>
 
 
   </div>
 
 </form>
+
+<script type="text/javascript">
+        $(function () {
+            $('input[type=date]').datepicker({
+                format: "dd/mm/yyyy"
+            });
+        });
+    </script>
