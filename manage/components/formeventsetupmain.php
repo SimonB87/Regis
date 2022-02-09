@@ -2,7 +2,7 @@
 
   <div class="row full-width">
 
-    <div class="col-12"> <strong>Event Main Characteristics</strong> </div>
+    <div class="col-12"> <strong>Event Main Characteristics</strong> <i class="fa fa-plus-square"></i> &nbsp; <i class="fa fa-minus-square"></i> </div>
 
     <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
       <div class="form-floating">
