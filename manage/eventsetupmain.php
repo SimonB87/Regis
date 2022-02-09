@@ -145,5 +145,13 @@ if (!mysqli_set_charset($connector, "utf8")) {
     <script src="../shared/assets/js/togglevisibility.js"></script>
     <script src="../shared/assets/js/hidenotification.js"></script>
 
+    <script type="text/javascript">
+        $(function () {
+            $('input[type=date]').datepicker({
+                format: "dd/mm/yyyy"
+            });
+        });
+    </script>
+
   </body>
 </html>
