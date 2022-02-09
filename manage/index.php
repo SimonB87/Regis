@@ -58,11 +58,11 @@ if (!mysqli_set_charset($connector, "utf8")) {
             </div>
             <div class="col-6 center-margin">
             <!-- TODO - statistics about current event registrations - show data from DB-->
-              <p>Event name: <span class="fw-bold">Tester & Testie Easter Prague Bachata Weekend</span></p>
-              <p>Number of registrations: <span class="fw-bold bg-secondary text-white padding-small rounded">20</span><p>
-              <p>Paid registrations: <span class="fw-bold bg-success text-white padding-small rounded">15</span></p>
-              <p>Registrations waiting for payment: <span class="fw-bold bg-info text-white padding-small rounded">3</span></p>
-              <p>Delayed registration payments: <span class="fw-bold bg-danger text-white padding-small rounded">3</span></p>
+              <p><strong> Event name : </strong> Tester & Testie Easter Prague Bachata Weekend</p>
+              <p><span class="fw-bold bg-secondary text-white padding-small rounded">20</span> Number of registrations <p>
+              <p><span class="fw-bold bg-success text-white padding-small rounded">15</span> Paid registrations </p>
+              <p><span class="fw-bold bg-info text-white padding-small rounded">3</span> Registrations waiting for payment </p>
+              <p><span class="fw-bold bg-danger text-white padding-small rounded">2</span> Delayed registration payments </p>
             </div>
           </div>
 
