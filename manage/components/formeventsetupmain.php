@@ -419,11 +419,3 @@
   </div>
 
 </form>
-
-<script type="text/javascript">
-        $(function () {
-            $('input[type=date]').datepicker({
-                format: "dd/mm/yyyy"
-            });
-        });
-    </script>
