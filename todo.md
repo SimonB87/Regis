@@ -33,6 +33,8 @@
 | Admin can set, possible pass options and their prices                                                                  |   P:three:    |                      :o: |
 | Only allowed form elements appear in browser                                                                           |   P:three:    |                      :o: |
 | Google analytics                                                                                                       |   P:three:    |                      :o: |
+| Payment confirmation - by status switch on every reservation - ? user receives just email? jpeg tickets? pdf ticket?   |   P:three:    |                      :o: |
+| Case - registration transfer : děla uživatel sám z emailu do 48hodin před začátkem akce pře email, kde má potvrzení o platbě. Klient dostane potvrzení mailem admin a uživatel                |   P:three:   |                      :o: |
 |                                                                                                                        |               |                          |
 | X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X                            | X xxx X xxx X |                  X xxx X |
 |                                                                                                                        |               |                          |
@@ -42,7 +44,7 @@
 | Control of multiple log-in attempts - after 10 attempts user can not log in for 30 minutes                             |   P:muscle:   |                      :o: |
 | Case - event cancellation : generate cancellation email                                                                |   P:muscle:   |                      :o: |
 | Case - event cancellation : in cancelation email user options - button for refund option, button for reschedule option |   P:muscle:   |                      :o: |
-| Case - registration transfer : děla uživatel sám z emailu do 48hodin před začátkem akce, dostane potvrzení mailem admin a uživatel                                                                    |   P:muscle:   |                      :o: |
+
 
 ## Moje poznámky
 - Ukládát plně české znaky pro jména
