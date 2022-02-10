@@ -49,6 +49,11 @@
   margin: 0 auto;
   float: left;
 }
+.show-segment--icon img {
+  height: 2rem;
+  min-width: 2rem;
+  cursor: pointer;
+}
 @media only screen and (min-width: 720px) {
   .visibility-visible {
     width: 50%;
@@ -88,10 +93,6 @@
 }
 .weblink {
   text-decoration: none;
-}
-.hidden {
-  visibility: hidden;
-  display: none;
 }
 @media only screen and (min-width: 990px) {
   .full-width-lg {
