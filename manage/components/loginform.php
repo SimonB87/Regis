@@ -1,5 +1,5 @@
 <form action="login.php" method="POST" class="">
-  <div class="p-4 p-md-5 border rounded-3 bg-light">
+  <div class="p-4 p-md-5-lg border rounded-3 bg-light">
     <div>
       <h2>Přihlášení</h2>
     </div>

@@ -37,6 +37,7 @@
   transition: visibility 0s linear 0.33s, opacity 0.33s linear, height 0s linear 0.33s, width 0s linear 0.33s, margin 0s linear 0.33s;
 }
 .visibility-hidden {
+  display: none;
   visibility: hidden;
   opacity: 0;
   width: 0;
@@ -47,7 +48,11 @@
   opacity: 1;
   margin: 0 auto;
   float: left;
-  width: 50%;
+}
+@media only screen and (min-width: 720px) {
+  .visibility-visible {
+    width: 50%;
+  }
 }
 .full-width {
   width: 100%;
@@ -64,6 +69,9 @@
 .padding-regular-topBottom {
   padding-top: var(--padding-regular);
   padding-bottom: var(--padding-regular);
+}
+.padding-regular-top {
+  padding-top: var(--padding-regular);
 }
 .padding-regular-bottom {
   padding-bottom: var(--padding-regular);
@@ -159,15 +167,18 @@ form > div {
 form div.form-floating {
   width: 100%;
 }
-.form-floating > label {
+.form-floating > label,
+.div-select > .form-select-customLabel {
   top: -0.5rem;
 }
-.form-floating label {
+.form-floating label,
+.div-select > .form-select-customLabel {
   transition: transform 1s linear 0.25s, top 1s linear 0.25s;
   color: var(--bs-blue);
   font-weight: 600;
 }
-.form-floating:hover label {
+.form-floating:hover label,
+.div-select:hover > .form-select-customLabel {
   transform: scale(0.6);
   top: -0.1rem;
 }

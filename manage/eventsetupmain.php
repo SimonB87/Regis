@@ -34,6 +34,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
     <title> Event registration | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
 
     <link rel="stylesheet" type="text/css" href="../shared/libs/footablebootstrap/css/footable.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../shared/libs/fontawesome/fontawesome_5.0.0.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/fontawesome.min.css" integrity="sha512-Rcr1oG0XvqZI1yv1HIg9LgZVDEhf2AHjv+9AuD1JXWGLzlkoKDVvE925qySLcEywpMAYA/rkg296MkvqBF07Yw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <head>
@@ -45,33 +46,29 @@ if (!mysqli_set_charset($connector, "utf8")) {
 
     <main>
       <div class="container my-5 text-center">
-        <div class="row">
-          <h1 class="display-5 fw-bold">Event main set up</h1>
-          <p class="display-7 fw-bold">Set here event main characteristics</p>
+
+        <?php
+        include("shared/setupnavigation.php");
+        ?>
+
+        <div class="row padding-regular">
+          <div class="col-12 padding-regular">
+            <h1 class="display-5 fw-bold">Event main set up</h1>
+            <p class="display-7 fw-bold">Set here event main characteristics</p>
+          </div>
         </div>
+
+
+
       </div>
 
-      <div class="container padding-regular-bottom ">
+      <div class="container padding-regular-topBottom ">
         <div class="row">
-          <div class="col-lg-6 col-md-12 col-sm-12 center-margin">
-            <!-- TODO : form with all these inputs -->
-            * Event ID (required) - type unique integer, unique from all other past events<br>
-            * Event status (required) - select: registrations open; event passed; event cancelled;<br>
-            * Event name (required) - ... long text<br>
-            * Event start date (required) - type date <br>
-            * Event end date (required) - type date<br>
-            * Early birds registrations start date (optional)- type date<br>
-            * Early birds registrations - amount of tickets - required if "Early birds registrations start date" is set <br>
-            * Regular tickets registrations start date (optional)- type date<br>
-            * Regular tickets registrations - amount of tickets - required if "Regular tickets registrations start date" is set <br>
-            * Special type 1 registrations start date (optional) - for party tickets? - type date<br>
-            * Special type 1 registrations name - Type name - required if "Special type 1 registrations start date" is set - type text<br>
-            * Special type 1 registrations - amount of tickets - required if "Special type 1 registrations start date" is set <br>
-            * Special type 2 registrations start date (optional) - for other purposes - type date<br>
-            * Special type 2 registrations name - Type name - required if "Special type 2 registrations start date" is set - type text<br>
-            * Special type 2 registrations - amount of tickets - required if "Special type 2 registrations start date" is set <br>
 
-          </div>
+        <?php
+        include("components/formeventsetupmain.php");
+        ?>
+
         </div>
       </div>
     </main>
@@ -148,6 +145,14 @@ if (!mysqli_set_charset($connector, "utf8")) {
     <script src="../shared/assets/js/formvalidation.js"></script>
     <script src="../shared/assets/js/togglevisibility.js"></script>
     <script src="../shared/assets/js/hidenotification.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('form.bts-form input[type=date]').datepicker({
+                format: "dd/mm/yyyy"
+            });
+        });
+    </script>
 
   </body>
 </html>

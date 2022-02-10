@@ -26,6 +26,7 @@
     height 0s linear 0.33s, width 0s linear 0.33s, margin 0s linear 0.33s;
 }
 .visibility-hidden {
+  display: none;
   visibility: hidden;
   opacity: 0;
   width: 0;
@@ -36,5 +37,10 @@
   opacity: 1;
   margin: 0 auto;
   float: left;
-  width: 50%;
+}
+
+@media only screen and (min-width: @screen-md) {
+  .visibility-visible {
+    width: 50%;
+  }
 }
