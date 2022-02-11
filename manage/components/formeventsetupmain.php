@@ -5,11 +5,6 @@
     <div class="col-12"> 
       <strong>Event Main Characteristics</strong> 
 
-<!--       <span class="show-segment">
-        <span class="show-segment--icon section-icon-1" onclick="toggleVisibility('section-icon-1','section-form-1');"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
-        <span class="show-segment--icon section-icon-1" onclick="toggleVisibility('section-icon-1','section-form-1');"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
-      </span> -->
-
       <span class="show-segment">
         <span class="show-segment--icon section-icon-1"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
         <span class="show-segment--icon section-icon-1"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
@@ -109,11 +104,20 @@
     </div>
 
 
-    <div class="col-12 padding-regular-top"> <strong>Early Birds Registration dates</strong> 
+    <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top"> <strong>Early Birds Registration</strong> 
       <span class="show-segment">
-          <span class="show-segment--icon section-icon-2" onclick="toggleVisibility('section-icon-2','section-form-2');"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
-          <span class="show-segment--icon section-icon-2" onclick="toggleVisibility('section-icon-2','section-form-2');"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
+          <span class="show-segment--icon section-icon-2"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
+          <span class="show-segment--icon section-icon-2"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
         </span>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
+      <div class="form-check mb-3">
+         <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+          <label class="form-check-label" for="flexCheckDefault">
+             Enable Early Birds Registration
+          </label>
+        </div>
     </div>
 
     <div class="col-12 section-form-2"> 
@@ -201,11 +205,20 @@
       </div>
     </div>
 
-    <div class="col-12 padding-regular-top"> <strong>Regulart Registration Data</strong> 
+    <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top"> <strong>Regular Registration Data</strong> 
       <span class="show-segment">
-        <span class="show-segment--icon section-icon-3" onclick="toggleVisibility('section-icon-3','section-form-3');"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
-        <span class="show-segment--icon section-icon-3" onclick="toggleVisibility('section-icon-3','section-form-3');"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
+        <span class="show-segment--icon section-icon-3"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
+        <span class="show-segment--icon section-icon-3"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
       </span>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
+      <div class="form-check mb-3">
+         <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+          <label class="form-check-label" for="flexCheckDefault">
+             Enable Regular Registration
+          </label>
+        </div>
     </div>
 
     <div class="col-12 section-form-3"> 
@@ -214,7 +227,7 @@
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
             <input type="text" class="form-control" id="regularRegistrationName" required name="regularRegistrationName" maxlength="250" value="Full pass registrations">
-            <label for="regularRegistrationName"> Regulart Registration Name</label>
+            <label for="regularRegistrationName"> Regular Registration Name</label>
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -266,8 +279,8 @@
         <!-- TODO ticket prices -->
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-              <input type="text" class="form-control" id="regularTicketPriceSingle" required name="regularTicketPriceSingle" maxlength="250" value="">
-              <label for="regularTicketPriceSingle">Regular Registration Ticket Price - Single</label>
+              <input type="text" class="form-control" id="RegularicketPriceSingle" required name="RegularicketPriceSingle" maxlength="250" value="">
+              <label for="RegularicketPriceSingle">Regular Registration Ticket Price - Single</label>
               <div class="valid-feedback">
                 Looks good!
               </div>
@@ -279,8 +292,8 @@
 
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
         <div class="form-floating">
-              <input type="text" class="form-control" id="regularTicketPriceCouple" required name="regularTicketPriceCouple" maxlength="250" value="">
-              <label for="regularTicketPriceCouple">Regular Registration Ticket Price - Couple</label>
+              <input type="text" class="form-control" id="RegularicketPriceCouple" required name="RegularicketPriceCouple" maxlength="250" value="">
+              <label for="RegularicketPriceCouple">Regular Registration Ticket Price - Couple</label>
               <div class="valid-feedback">
                 Looks good!
               </div>
@@ -293,11 +306,20 @@
       </div>
     </div>
 
-    <div class="col-12 padding-regular-top"> <strong> Special type 1 Registrations </strong> 
+    <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top"> <strong> Special type 1 Registrations </strong> 
       <span class="show-segment">
-        <span class="show-segment--icon section-icon-4" onclick="toggleVisibility('section-icon-4','section-form-4');"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
-        <span class="show-segment--icon section-icon-4" onclick="toggleVisibility('section-icon-4','section-form-4');"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
+        <span class="show-segment--icon section-icon-4"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
+        <span class="show-segment--icon section-icon-4"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
       </span>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
+      <div class="form-check mb-3">
+         <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+          <label class="form-check-label" for="flexCheckDefault">
+             Enable Special type 1 Registrations
+          </label>
+        </div>
     </div>
 
     <div class="col-12 section-form-4"> 
@@ -386,11 +408,20 @@
       </div>
     </div>
 
-    <div class="col-12 padding-regular-top"> <strong> Special type 2 Registrations </strong> 
+    <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top"> <strong> Special type 2 Registrations </strong> 
       <span class="show-segment">
-        <span class="show-segment--icon section-icon-5" onclick="toggleVisibility('section-icon-5','section-form-5');"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
-        <span class="show-segment--icon section-icon-5" onclick="toggleVisibility('section-icon-5','section-form-5');"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
+        <span class="show-segment--icon section-icon-5"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
+        <span class="show-segment--icon section-icon-5"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
       </span>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
+      <div class="form-check mb-3">
+         <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+          <label class="form-check-label" for="flexCheckDefault">
+             Enable Special type 2 Registrations
+          </label>
+        </div>
     </div>
 
     <div class="col-12 section-form-5"> 
