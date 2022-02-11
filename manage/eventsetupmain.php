@@ -132,8 +132,14 @@ if (!mysqli_set_charset($connector, "utf8")) {
     include("../shared/contactsection.php");
     include("../shared/footer.php");
 ?>
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+
     <script src="../shared/libs/footablebootstrap/js/footable.js" defer></script>
+
     <script defer>
     jQuery(function($){
         $('.table').footable();
@@ -141,19 +147,19 @@ if (!mysqli_set_charset($connector, "utf8")) {
     /* Sollution guide 15.10.2020: http://fooplugins.github.io/FooTable/docs/examples/basic/single-header.html */
     </script>
 
-    <script src="../shared/libs/bootstrap/js/bootstrap.js"></script>
-    <script src="../shared/assets/js/formvalidation.js"></script>
-    <script src="../shared/assets/js/togglevisibility.js"></script>
-    <script src="../shared/assets/js/hidenotification.js"></script>
-    <script src="../shared/assets/js/formsetionsedit.js"></script>
-
-    <script type="text/javascript">
+    <script type="text/javascript" defer>
         $(function () {
             $('form.bts-form input[type=date]').datepicker({
                 format: "dd/mm/yyyy"
             });
         });
     </script>
+
+    <script src="../shared/libs/bootstrap/js/bootstrap.js" defer></script>
+    <script src="../shared/assets/js/formvalidation.js" defer></script>
+    <script src="../shared/assets/js/togglevisibility.js" defer></script>
+    <script src="../shared/assets/js/hidenotification.js" defer></script>
+    <script src="../shared/assets/js/formsetionsedit.js" defer></script>
 
   </body>
 </html>

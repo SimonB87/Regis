@@ -5,9 +5,14 @@
     <div class="col-12"> 
       <strong>Event Main Characteristics</strong> 
 
-      <span class="show-segment">
-        <span class="show-segment--icon section-icon-1 hidden" onclick="toggleVisibility('section-icon-1','section-form-1');"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
+<!--       <span class="show-segment">
+        <span class="show-segment--icon section-icon-1" onclick="toggleVisibility('section-icon-1','section-form-1');"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
         <span class="show-segment--icon section-icon-1" onclick="toggleVisibility('section-icon-1','section-form-1');"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
+      </span> -->
+
+      <span class="show-segment">
+        <span class="show-segment--icon section-icon-1"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
+        <span class="show-segment--icon section-icon-1"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
       </span>
 
     </div>
@@ -107,11 +112,11 @@
     <div class="col-12 padding-regular-top"> <strong>Early Birds Registration dates</strong> 
       <span class="show-segment">
           <span class="show-segment--icon section-icon-2" onclick="toggleVisibility('section-icon-2','section-form-2');"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
-          <span class="show-segment--icon section-icon-2 hidden" onclick="toggleVisibility('section-icon-2','section-form-2');"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
+          <span class="show-segment--icon section-icon-2" onclick="toggleVisibility('section-icon-2','section-form-2');"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
         </span>
     </div>
 
-    <div class="col-12 section-form-2 hidden"> 
+    <div class="col-12 section-form-2"> 
       <div class="row">
 
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
@@ -199,11 +204,11 @@
     <div class="col-12 padding-regular-top"> <strong>Regulart Registration Data</strong> 
       <span class="show-segment">
         <span class="show-segment--icon section-icon-3" onclick="toggleVisibility('section-icon-3','section-form-3');"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
-        <span class="show-segment--icon section-icon-3 hidden" onclick="toggleVisibility('section-icon-3','section-form-3');"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
+        <span class="show-segment--icon section-icon-3" onclick="toggleVisibility('section-icon-3','section-form-3');"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
       </span>
     </div>
 
-    <div class="col-12 section-form-3 hidden"> 
+    <div class="col-12 section-form-3"> 
       <div class="row">
 
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
@@ -291,11 +296,11 @@
     <div class="col-12 padding-regular-top"> <strong> Special type 1 Registrations </strong> 
       <span class="show-segment">
         <span class="show-segment--icon section-icon-4" onclick="toggleVisibility('section-icon-4','section-form-4');"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
-        <span class="show-segment--icon section-icon-4 hidden" onclick="toggleVisibility('section-icon-4','section-form-4');"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
+        <span class="show-segment--icon section-icon-4" onclick="toggleVisibility('section-icon-4','section-form-4');"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
       </span>
     </div>
 
-    <div class="col-12 section-form-4 hidden"> 
+    <div class="col-12 section-form-4"> 
       <div class="row">
 
         <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
@@ -384,11 +389,11 @@
     <div class="col-12 padding-regular-top"> <strong> Special type 2 Registrations </strong> 
       <span class="show-segment">
         <span class="show-segment--icon section-icon-5" onclick="toggleVisibility('section-icon-5','section-form-5');"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
-        <span class="show-segment--icon section-icon-5 hidden" onclick="toggleVisibility('section-icon-5','section-form-5');"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
+        <span class="show-segment--icon section-icon-5" onclick="toggleVisibility('section-icon-5','section-form-5');"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
       </span>
     </div>
 
-    <div class="col-12 section-form-5 hidden"> 
+    <div class="col-12 section-form-5"> 
       <div class="row">
 
         <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
