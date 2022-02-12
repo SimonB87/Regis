@@ -34,9 +34,10 @@
 | Only allowed form elements appear in browser                                                                           |   P:three:    |                      :o: |
 | Google analytics                                                                                                       |   P:three:    |                      :o: |
 | Payment confirmation - by status switch on every reservation - ? user receives just email? jpeg tickets? pdf ticket?   |   P:three:    |                      :o: |
-| Case - registration transfer : děla uživatel sám z emailu do 48hodin před začátkem akce pře email, kde má potvrzení o platbě. Klient dostane potvrzení mailem admin a uživatel                |   P:three:   |                      :o: |
+| Admin can edit in setiings the contact email, link to main website, contact phone number                               |   P:three:    |                      :o: |
+| Case - registration transfer : děla uživatel sám z emailu do 48hodin před začátkem akce pře email, kde má potvrzení o platbě. Klient dostane potvrzení mailem admin. K registraci se přidá system-note o transferu |   P:three:   |                      :o: |
 | Admin can get list of email adresses by type (current event registration - all/paid/waiting for payment/delayed)       |   P:three:    |                      :o: |
-| Admin can put a note to a registration - like transfered registration from last cancelled original event               |   P:three:    |                      :o: |
+| Admin can put a admin-note to a registration - like transfered registration from last cancelled original event               |   P:three:    |                      :o: |
 |                                                                                                                        |               |                          |
 | X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X                            | X xxx X xxx X |                  X xxx X |
 |                                                                                                                        |               |                          |
