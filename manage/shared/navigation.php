@@ -19,10 +19,11 @@
               Event set-up
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="eventsetupmain.php">Event main set up</a></li>
+              <li><a class="dropdown-item" href="createneweventsetupmain.php">Create a new event</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Event description</a></li>
-              <li><a class="dropdown-item" href="#">Event register form </a></li>
+              <li><a class="dropdown-item" href="eventsetupmain.php">Existing event main set up</a></li>
+              <li><a class="dropdown-item" href="#">Existing event description</a></li>
+              <li><a class="dropdown-item" href="#">Existing event register form </a></li>
             </ul>
           </li>
           <li class="nav-item">
