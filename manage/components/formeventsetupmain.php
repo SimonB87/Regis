@@ -192,10 +192,9 @@
           </div>
         </div>
 
-        <!-- TODO ticket prices -->
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-              <input type="text" class="form-control" id="earlyBirdsTicketPriceSingle" name="earlyBirdsTicketPriceSingle" maxlength="250" value="">
+              <input type="number" class="form-control" id="earlyBirdsTicketPriceSingle" name="earlyBirdsTicketPriceSingle" maxlength="250" value="">
               <label for="earlyBirdsTicketPriceSingle">Early Birds Registration Ticket Price - Single</label>
               <div class="valid-feedback">
                 Looks good!
@@ -207,9 +206,35 @@
         </div>
 
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-        <div class="form-floating">
-              <input type="text" class="form-control" id="earlyBirdsTicketPriceCouple" name="earlyBirdsTicketPriceCouple" maxlength="250" value="">
+          <div class="form-floating">
+              <input type="number" class="form-control" id="earlyBirdsTicketAmountSingle" name="earlyBirdsTicketAmountSingle" maxlength="1000" value="">
+              <label for="earlyBirdsTicketAmountSingle">Early Birds Registration Ticket Amount - Single</label>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please fill in valid value.
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+          <div class="form-floating">
+              <input type="number" class="form-control" id="earlyBirdsTicketPriceCouple" name="earlyBirdsTicketPriceCouple" maxlength="250" value="">
               <label for="earlyBirdsTicketPriceCouple">Early Birds Registration Ticket Price - Couple</label>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please fill in valid value.
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+          <div class="form-floating">
+              <input type="number" class="form-control" id="earlyBirdsTicketAmountSingle" name="earlyBirdsTicketAmountSingle" maxlength="1000" value="">
+              <label for="earlyBirdsTicketAmountSingle">Early Birds Registration Ticket Amount - Couple</label>
               <div class="valid-feedback">
                 Looks good!
               </div>
@@ -296,7 +321,7 @@
         <!-- TODO ticket prices -->
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-              <input type="text" class="form-control" id="RegularicketPriceSingle" name="RegularicketPriceSingle" maxlength="250" value="">
+              <input type="number" class="form-control" id="RegularicketPriceSingle" name="RegularicketPriceSingle" maxlength="250" value="">
               <label for="RegularicketPriceSingle">Regular Registration Ticket Price - Single</label>
               <div class="valid-feedback">
                 Looks good!
@@ -308,9 +333,35 @@
         </div>
 
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-        <div class="form-floating">
-              <input type="text" class="form-control" id="RegularicketPriceCouple" name="RegularicketPriceCouple" maxlength="250" value="">
+          <div class="form-floating">
+              <input type="number" class="form-control" id="regularicketAmountSingle" name="regularicketAmountSingle" maxlength="1000" value="">
+              <label for="regularicketAmountSingle">Regular Registration Ticket Amount - Single</label>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please fill in valid value.
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+          <div class="form-floating">
+              <input type="number" class="form-control" id="regularicketPriceCouple" name="RegularicketPriceCouple" maxlength="250" value="">
               <label for="RegularicketPriceCouple">Regular Registration Ticket Price - Couple</label>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please fill in valid value.
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+          <div class="form-floating">
+              <input type="number" class="form-control" id="regularicketAmountCouple" name="regularicketAmountCouple" maxlength="1000" value="">
+              <label for="regularicketAmountCouple">Regular Registration Ticket Amount - Couple</label>
               <div class="valid-feedback">
                 Looks good!
               </div>
@@ -398,7 +449,7 @@
         <!-- TODO ticket prices -->
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-              <input type="text" class="form-control" id="specialType1TicketPriceSingle" name="specialType1TicketPriceSingle" maxlength="250" value="">
+              <input type="number" class="form-control" id="specialType1TicketPriceSingle" name="specialType1TicketPriceSingle" maxlength="250" value="">
               <label for="specialType1TicketPriceSingle">Special type 1 Registration Ticket Price - Single</label>
               <div class="valid-feedback">
                 Looks good!
@@ -410,9 +461,35 @@
         </div>
 
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-        <div class="form-floating">
-              <input type="text" class="form-control" id="specialType1TicketPriceCouple" name="specialType1TicketPriceCouple" maxlength="250" value="">
+          <div class="form-floating">
+              <input type="number" class="form-control" id="specialType1TicketAmountSingle" name="specialType1TicketAmountSingle" maxlength="1000" value="">
+              <label for="specialType1TicketAmountSingle">Special type 1 Registration Ticket Amount - Single</label>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please fill in valid value.
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+          <div class="form-floating">
+              <input type="number" class="form-control" id="specialType1TicketPriceCouple" name="specialType1TicketPriceCouple" maxlength="250" value="">
               <label for="specialType1TicketPriceCouple">Special type 1 Registration Ticket Price - Couple</label>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please fill in valid value.
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+          <div class="form-floating">
+              <input type="number" class="form-control" id="specialType1TicketAmountCouple" name="specialType1TicketAmountCouple" maxlength="1000" value="">
+              <label for="specialType1TicketAmountCouple">Special type 1 Registration Ticket Amount - Couple</label>
               <div class="valid-feedback">
                 Looks good!
               </div>
@@ -500,7 +577,7 @@
         <!-- TODO ticket prices -->
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-              <input type="text" class="form-control" id="specialType2TicketPriceSingle" name="specialType2TicketPriceSingle" maxlength="250" value="">
+              <input type="number" class="form-control" id="specialType2TicketPriceSingle" name="specialType2TicketPriceSingle" maxlength="250" value="">
               <label for="specialType2TicketPriceSingle">Special type 2 Registration Ticket Price - Single</label>
               <div class="valid-feedback">
                 Looks good!
@@ -513,8 +590,34 @@
 
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-              <input type="text" class="form-control" id="specialType2TicketPriceCouple" name="specialType2TicketPriceCouple" maxlength="250" value="">
+              <input type="number" class="form-control" id="specialType2TicketAmountSingle" name="specialType2TicketAmountSingle" maxlength="1000" value="">
+              <label for="specialType2TicketAmountSingle">Special type 2 Registration Ticket Amount - Single</label>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please fill in valid value.
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+          <div class="form-floating">
+              <input type="number" class="form-control" id="specialType2TicketPriceCouple" name="specialType2TicketPriceCouple" maxlength="250" value="">
               <label for="specialType2TicketPriceCouple">Special type 2 Registration Ticket Price - Couple</label>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please fill in valid value.
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+          <div class="form-floating">
+              <input type="number" class="form-control" id="specialType2TicketAmountCouple" name="specialType2TicketAmountCouple" maxlength="1000" value="">
+              <label for="specialType2TicketAmountCouple">Special type 2 Registration Ticket Amount - Couple</label>
               <div class="valid-feedback">
                 Looks good!
               </div>
