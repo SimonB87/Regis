@@ -15,15 +15,20 @@ if(isset($_POST["safe_form_data"])){
   if($usernamelevel == "9") {
 
     $eventID = mysqli_real_escape_string($connector, $_POST["eventID"]);
-    $newEventBoolean = mysqli_real_escape_string($connector, $_POST["newEventBoolean"]);
     $eventStatus = mysqli_real_escape_string($connector, $_POST["eventStatus"]);
     $eventName = mysqli_real_escape_string($connector, $_POST["eventName"]);
     $eventStartDate = mysqli_real_escape_string($connector, $_POST["eventStartDate"]);
     $eventEndDate = mysqli_real_escape_string($connector, $_POST["eventEndDate"]);
     $enableCoupleTicket = mysqli_real_escape_string($connector, $_POST["enableCoupleTicket"]);
 
-    $query = mysqli_query($connector, "INSERT INTO events (eventStatus, eventName, eventStartDate, eventEndDate, enableCoupleTicket) VALUES ('$eventStatus', '$eventName', '$eventStartDate', '$eventEndDate', '$enableCoupleTicket')");
-
+    if(isset($_POST["newEventBoolean"])) {
+      $newEventBoolean = mysqli_real_escape_string($connector, $_POST["newEventBoolean"]);
+      if($newEventBoolean == "on") {
+        $query = mysqli_query($connector, "INSERT INTO events (eventStatus, eventName, eventStartDate, eventEndDate, enableCoupleTicket) VALUES ('$eventStatus', '$eventName', '$eventStartDate', '$eventEndDate', '$enableCoupleTicket')");
+      }
+    } else {
+      //TODO - update current event
+    }
 
   } else {
     echo "user has no save rights";
