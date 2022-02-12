@@ -41,8 +41,8 @@ if (!mysqli_set_charset($connector, "utf8")) {
   <body>
 
     <?php
-    include("handlers/handler_formeventsetupmain.php");
     include("shared/navigation.php");
+    include("handlers/handler_formeventsetupmain.php");
     ?> 
 
     <main>

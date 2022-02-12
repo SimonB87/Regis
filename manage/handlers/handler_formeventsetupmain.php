@@ -25,10 +25,15 @@ if(isset($_POST["safe_form_data"])){
       $newEventBoolean = mysqli_real_escape_string($connector, $_POST["newEventBoolean"]);
       if($newEventBoolean == "on") {
         $query = mysqli_query($connector, "INSERT INTO events (eventStatus, eventName, eventStartDate, eventEndDate, enableCoupleTicket) VALUES ('$eventStatus', '$eventName', '$eventStartDate', '$eventEndDate', '$enableCoupleTicket')");
+        $item = "New event \"" . $eventName . "\" was saved.";
+        echo "<div id='notification_new1' class='notification'>" . $item . " <span class=\"notification--close\" onclick=\"hideNotification('notification_new1');\" > X </span>" . "</div>";
       }
     } else {
       //TODO - update current event
     }
+
+    // Clear array of POST
+    $_POST = array();
 
   } else {
     echo "user has no save rights";
