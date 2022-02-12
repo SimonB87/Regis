@@ -58,10 +58,10 @@
               $findpage = "createneweventsetupmain.php";
               $position = strpos($url, $findpage);
           ?>
-            <input class="form-check-input " type="checkbox" id="newEventBoolean" name="newEventBoolean" 
+            <input class="form-check-input push-down" type="checkbox" id="newEventBoolean" name="newEventBoolean" 
               <?php if ($position === false) { } else {echo "checked";} ?> 
               onclick="return false;" onkeydown="return false;">
-            <label class="form-check-label " for="newEventBoolean">
+            <label class="form-check-label push-down" for="newEventBoolean">
               Creating a new event
             </label>
           </div>
