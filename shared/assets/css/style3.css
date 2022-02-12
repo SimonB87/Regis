@@ -161,6 +161,9 @@ footer .copyright {
   cursor: pointer;
   animation: scale-bigger-smaller 5s infinite;
 }
+.notification--close {
+  cursor: pointer;
+}
 /* form elements - start */
 form > div {
   float: right;
