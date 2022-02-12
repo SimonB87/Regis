@@ -31,7 +31,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
     include("shared/head.php");
     ?>
 
-    <title> Event registration | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
+    <title> Edit event registration | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
 
     <link rel="stylesheet" type="text/css" href="../shared/libs/footablebootstrap/css/footable.bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../shared/libs/fontawesome/fontawesome_5.0.0.min.css">
@@ -41,8 +41,8 @@ if (!mysqli_set_charset($connector, "utf8")) {
   <body>
 
     <?php
-    include("handlers/handler_formeventsetupmain.php");
     include("shared/navigation.php");
+    include("handlers/handler_formeventsetupmain.php");
     ?> 
 
     <main>
@@ -54,7 +54,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
 
         <div class="row padding-regular">
           <div class="col-12 padding-regular">
-            <h1 class="display-5 fw-bold">Event main set up</h1>
+            <h1 class="display-5 fw-bold">Edit event main set up</h1>
             <p class="display-7 fw-bold">Set here event main characteristics</p>
           </div>
         </div>

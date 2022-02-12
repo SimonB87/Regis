@@ -31,7 +31,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
     include("shared/head.php");
     ?>
 
-    <title> Event registration | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
+    <title> Create new event | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
 
     <link rel="stylesheet" type="text/css" href="../shared/libs/footablebootstrap/css/footable.bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../shared/libs/fontawesome/fontawesome_5.0.0.min.css">
