@@ -50,18 +50,18 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 col-sm-12 padding-small bg-secondary border-dark rounded disabled">
-          <div class="form-check mb-3 text-white">
+        <div class="col-lg-4 col-md-6 col-sm-12 padding-small border-dark  disabled">
+          <div class="form-check mb-3 rounded bg-disabled height-60px">
           <?php
               //find URL of the current page
               $url = $_SERVER["REQUEST_URI"];
               $findpage = "createneweventsetupmain.php";
               $position = strpos($url, $findpage);
           ?>
-            <input class="form-check-input" type="checkbox" id="newEventBoolean" name="newEventBoolean" 
+            <input class="form-check-input " type="checkbox" id="newEventBoolean" name="newEventBoolean" 
               <?php if ($position === false) { } else {echo "checked";} ?> 
               onclick="return false;" onkeydown="return false;">
-            <label class="form-check-label" for="newEventBoolean">
+            <label class="form-check-label " for="newEventBoolean">
               Creating a new event
             </label>
           </div>
