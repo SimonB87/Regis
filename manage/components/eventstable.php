@@ -8,7 +8,8 @@
       <th class="footable-sortable" data-breakpoints="xs sm"> Event name </th>
       <th class="footable-sortable" data-breakpoints="xs sm"> Event start date </th>
       <th class="footable-sortable" data-breakpoints="xs sm"> Event end date </th>
-      <th class="footable-sortable" data-breakpoints="xs sm md"> Early birds registrations start date </th>
+      <th class="footable-sortable" data-breakpoints="xs sm"> Enable couple ticket </th>
+      <th class="footable-sortable" data-breakpoints="xs sm md lg"> Early birds registrations start date </th>
       <th class="footable-sortable" data-breakpoints="xs sm md lg"> Early birds amount of tickets </th>
       <th class="footable-sortable" data-breakpoints="xs sm md"> Regular tickets registrations start date </th> 
       <th class="footable-sortable" data-breakpoints="xs sm md lg"> Regular tickets amount</th> 
@@ -62,7 +63,7 @@
       while ($row = $results-> fetch_assoc()) {
 
           echo "<tr><td>" . $row["id"] . "</td><td>" . $row["eventStatus"] . "</td><td>" . $row["eventName"]  . "</td><td>" . $row["eventStartDate"] ."</td><td>" . $row["eventEndDate"] . "</td> <td>" . $row["enableCoupleTicket"] . "</td>" . 
-              "<td> # </td> <td> # </td> <td> # </td> <td> # </td> <td> # </td> <td> # </td> <td> # </td> <td> # </td> <td> # </td>" .
+              "<td> # </td> <td> # </td> <td> # </td> <td> # </td> <td> # </td> <td> # </td> <td> # </td> <td> # </td> <td> # </td> <td> # </td>" .
               "</tr>";
       }
       echo "";

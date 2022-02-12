@@ -1,3 +1,7 @@
+<?php
+  include("handlers/handler_geteventdata.php");
+?>
+
 <form id="form" class="needs-validation bts-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" novalidate>
 
   <div class="row full-width">
@@ -16,10 +20,10 @@
     <div class="col-12 section-form-1"> 
       <div class="row"> 
 
-        <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+        <div class="col-lg-3 col-md-6 col-sm-12 padding-small">
           <div class="form-floating">
-            <input type="number" class="form-control" id="eventID" required name="eventID" maxlength="250">
-            <label for="eventID">Event ID</label>
+            <input type="number" class="form-control" id="eventID" disabled name="eventID" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataId . "'"; } ?> >
+            <label for="eventID">Event ID (Filled automatically)</label>
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -31,12 +35,12 @@
 
         <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
           <div class="mb-3 full-width full-height div-select">
-            <select id="eventStatus" class="form-select" aria-label="Pass type" required name="eventStatus">
+            <select id="eventStatus" class="form-select" aria-label="Pass type" required name="eventStatus" >
               <option value="" selected>Select event status option ...</option>
-              <option value="0 - Registrations closed" aria-valuenow="0">Registrations closed</option>
-              <option value="1 - Registrations open" aria-valuenow="0">Registrations open</option>
-              <option value="2 - Event passed" aria-valuenow="500">Event passed</option>
-              <option value="3 - Event cancelled" aria-valuenow="500">Event cancelled</option>
+              <option value="0 - Registrations closed" aria-valuenow="0" <?php if($isEventEdited) { if( $eventDataEventStatus == "0 - Registrations closed") { echo "selected"; } } ?> >Registrations closed</option>
+              <option value="1 - Registrations open" aria-valuenow="0" <?php if($isEventEdited) { if( $eventDataEventStatus == "1 - Registrations open") { echo "selected"; } } ?> >Registrations open</option>
+              <option value="2 - Event passed" aria-valuenow="0" <?php if($isEventEdited) { if( $eventDataEventStatus == "2 - Event passed" ) { echo "selected"; } } ?> >Event passed</option>
+              <option value="3 - Event cancelled" aria-valuenow="0" <?php if($isEventEdited) { if( $eventDataEventStatus == "3 - Event cancelled") { echo "selected"; } } ?> >Event cancelled</option>
             </select>
             <div class="form-select-customLabel">
               Event Status
@@ -50,7 +54,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 col-sm-12 padding-small border-dark  disabled">
+        <div class="col-lg-5 col-md-12 col-sm-12 padding-small border-dark  disabled">
           <div class="form-check mb-3 rounded bg-disabled height-60px">
           <?php
               //find URL of the current page
@@ -62,14 +66,14 @@
               <?php if ($position === false) { } else {echo "checked";} ?> 
               onclick="return false;" onkeydown="return false;">
             <label class="form-check-label push-down" for="newEventBoolean">
-              Creating a new event
+              Creating new event (controlled automatically)
             </label>
           </div>
         </div>
 
         <div class="col-lg-12 col-md-12 col-sm-12  padding-small">
           <div class="form-floating">
-            <input type="text" class="form-control" id="eventName" required name="eventName" maxlength="250">
+            <input type="text" class="form-control" id="eventName" required name="eventName" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataEventName . "'"; } ?> >
             <label for="eventName">Event Name</label>
             <div class="valid-feedback">
               Looks good!
@@ -82,7 +86,7 @@
 
         <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
           <div class="form-floating">
-            <input type="date" class="form-control" id="eventStartDate" required name="eventStartDate" maxlength="250">
+            <input type="date" class="form-control" id="eventStartDate" required name="eventStartDate" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataEventStartDate . "'"; } ?> >
             <label for="eventStartDate">Event Start Date</label>
             <div class="valid-feedback">
               Looks good!
@@ -95,7 +99,7 @@
 
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-            <input type="date" class="form-control" id="eventEndDate" required name="eventEndDate" maxlength="250">
+            <input type="date" class="form-control" id="eventEndDate" required name="eventEndDate" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataEventEndDate . "'"; } ?>>
             <label for="eventEndDate">Event End Date</label>
             <div class="valid-feedback">
               Looks good!
@@ -110,7 +114,7 @@
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           
           <div class="form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="enableCoupleTicket" name="enableCoupleTicket" required>
+            <input class="form-check-input" type="checkbox" id="enableCoupleTicket" name="enableCoupleTicket" required <?php if($isEventEdited) { if($eventDataEnableCoupleTicket == "on") { echo "checked"; } } ?>>
             <label class="form-check-label" for="flexCheckDefault">
               Enable couple ticket
             </label>
