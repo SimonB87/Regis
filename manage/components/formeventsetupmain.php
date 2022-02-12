@@ -29,7 +29,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-12 col-sm-12 padding-small">
+        <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
           <div class="mb-3 full-width full-height div-select">
             <select id="eventStatus" class="form-select" aria-label="Pass type" required name="eventStatus">
               <option value="" selected>Select event status option ...</option>
