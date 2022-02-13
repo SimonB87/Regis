@@ -87,7 +87,7 @@ require 'config/config.php';
                         " <div>Account holder name: <strong class='toCopy'>" . " Mauritius The Greatest </strong>" . 
                         " </div> " . 
                         " <div>Price : <strong class='toCopy'> "  . " " . $formPrice . "</strong></div>" .
-                        "<div>Notice for receiver: \"<strong class='toCopy'>" . " Order ID:" . $orderId. ", Client name: ". $clientName ." , Client email: " . $clientEmail . "</strong>\" </div>" .
+                        "<div>Notice for receiver: \"<strong class='toCopy'>" . " Order ID: " . $orderId. ", Client name: ". $clientName ." , Client email: " . $clientEmail . "</strong>\" </div>" .
                         " </p>" . "</div></div></div>"; //TODO - valid price set up by server check, payment´s details set by admin to DB
 
   $exitIcon = "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-check' viewBox='0 0 16 16'>
