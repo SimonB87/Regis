@@ -21,10 +21,40 @@ if(isset($_POST["safe_form_data"])){
     $eventEndDate = mysqli_real_escape_string($connector, $_POST["eventEndDate"]);
     $enableCoupleTicket = mysqli_real_escape_string($connector, $_POST["enableCoupleTicket"]);
 
+    $id = 0;
+
+    $sql = "SELECT max(id) FROM events";
+    $results = $connector-> query($sql);
+      //Error case
+      if (!$sql ) {
+        echo "Failed! <br> Error sql: " . mysql_error();
+      }
+      
+      if (mysqli_query($connector, $sql)) {
+        //debug echo json_encode(array("statusCode"=>200));
+      } 
+      else {
+        echo json_encode(array("sql - statusCode"=>418));
+      }
+  
+      //function to fatch the data
+      if ($results-> num_rows > 0 ) {
+        while ($row = $results-> fetch_assoc()) {
+
+          $eventDataId = $row["id"] ;
+          $id = intval($eventDataId) + 1;
+
+        }
+        //echo "";
+    }
+    else {
+        //echo "There are 0 results in DB table";
+    }
+
     if(isset($_POST["newEventBoolean"])) {
       $newEventBoolean = mysqli_real_escape_string($connector, $_POST["newEventBoolean"]);
       if($newEventBoolean == "on") {
-        $query = mysqli_query($connector, "INSERT INTO events (eventStatus, eventName, eventStartDate, eventEndDate, enableCoupleTicket) VALUES ('$eventStatus', '$eventName', '$eventStartDate', '$eventEndDate', '$enableCoupleTicket')");
+        $query = mysqli_query($connector, "INSERT INTO events (id, eventStatus, eventName, eventStartDate, eventEndDate, enableCoupleTicket) VALUES ('$id','$eventStatus', '$eventName', '$eventStartDate', '$eventEndDate', '$enableCoupleTicket')");
         $item = "New event \"" . $eventName . "\" was saved.";
         echo "<div id='notification_new1' class='notification'>" . $item . " <span class=\"notification--close\" onclick=\"hideNotification('notification_new1');\" > X </span>" . "</div>";
       }
