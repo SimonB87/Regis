@@ -14,13 +14,18 @@ if(isset($_POST["safe_form_data"])){
 
   if($usernamelevel == "9") {
 
-    $eventID = mysqli_real_escape_string($connector, $_POST["eventID"]);
+    $eventID = null;
+    if (isset($_POST["eventID"])) {
+      $eventID = mysqli_real_escape_string($connector, $_POST["eventID"]);
+    }
     $eventStatus = mysqli_real_escape_string($connector, $_POST["eventStatus"]);
     $eventName = mysqli_real_escape_string($connector, $_POST["eventName"]);
     $eventStartDate = mysqli_real_escape_string($connector, $_POST["eventStartDate"]);
     $eventEndDate = mysqli_real_escape_string($connector, $_POST["eventEndDate"]);
     $enableCoupleTicket = mysqli_real_escape_string($connector, $_POST["enableCoupleTicket"]);
-
+    
+/*  // fix ID for Wedos DB
+    
     $id = 0;
 
     $sql = "SELECT max(id) FROM events";
@@ -49,12 +54,16 @@ if(isset($_POST["safe_form_data"])){
     }
     else {
         //echo "There are 0 results in DB table";
-    }
+    }*/
 
     if(isset($_POST["newEventBoolean"])) {
       $newEventBoolean = mysqli_real_escape_string($connector, $_POST["newEventBoolean"]);
       if($newEventBoolean == "on") {
-        $query = mysqli_query($connector, "INSERT INTO events (id, eventStatus, eventName, eventStartDate, eventEndDate, enableCoupleTicket) VALUES ('$id','$eventStatus', '$eventName', '$eventStartDate', '$eventEndDate', '$enableCoupleTicket')");
+        $query = mysqli_query($connector, "INSERT INTO events (eventStatus, eventName, eventStartDate, eventEndDate, enableCoupleTicket) VALUES ('$eventStatus', '$eventName', '$eventStartDate', '$eventEndDate', '$enableCoupleTicket')");
+
+        // fix ID for Wedos DB
+        //$query = mysqli_query($connector, "INSERT INTO events (id, eventStatus, eventName, eventStartDate, eventEndDate, enableCoupleTicket) VALUES ('$id','$eventStatus', '$eventName', '$eventStartDate', '$eventEndDate', '$enableCoupleTicket')");
+
         $item = "New event \"" . $eventName . "\" was saved.";
         echo "<div id='notification_new1' class='notification'>" . $item . " <span class=\"notification--close\" onclick=\"hideNotification('notification_new1');\" > X </span>" . "</div>";
       }
