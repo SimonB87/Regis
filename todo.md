@@ -27,17 +27,19 @@
 | Admin can send an automatic reminder to send the money by selection an option inside the table of orders               |   P:three:    |                      :o: |
 | Zaslání dotazu na moji domácí doménu s dotazem, jestli je licence dané instance validní a zaplacená                    |   P:three:    |                      :o: |
 | Admin can send edit the event description, event name and event poster                                                 |   P:three:    |                      :o: |
-| Admin can edit event pass price                                                                                        |   P:three:    |                      :o: |
+| Admin can edit event pass prices                                                                                       |   P:three:    |                      :o: |
 | Server fully validates price according to the stored options in database                                               |   P:three:    |                      :o: |
 | Admin can set, which inputs are visible and which are not                                                              |   P:three:    |                      :o: |
 | Admin can set, possible pass options and their prices                                                                  |   P:three:    |                      :o: |
+| Registration auto close : If event end passed by (triggered by only user visit); If all tickets are sold (triggered by last registration)  |   P:three:    |                      :o: |
+| Admin can choose from events table, which event is the current one. In this way all other events will become closed    |   P:three:    |                      :o: |
 | Only allowed form elements appear in browser                                                                           |   P:three:    |                      :o: |
 | Google analytics                                                                                                       |   P:three:    |                      :o: |
 | Payment confirmation - by status switch on every reservation - ? user receives just email? jpeg tickets? pdf ticket?   |   P:three:    |                      :o: |
 | Admin can edit in setiings the contact email, link to main website, contact phone number                               |   P:three:    |                      :o: |
 | Case - registration transfer : děla uživatel sám z emailu do 48hodin před začátkem akce pře email, kde má potvrzení o platbě. Klient dostane potvrzení mailem admin. K registraci se přidá system-note o transferu |   P:three:   |                      :o: |
 | Admin can get list of email adresses by type (current event registration - all/paid/waiting for payment/delayed)       |   P:three:    |                      :o: |
-| Admin can put a admin-note to a registration - like transfered registration from last cancelled original event               |   P:three:    |                      :o: |
+| Admin can put a admin-note to a registration - like transfered registration from last cancelled original event         |   P:three:    |                      :o: |
 |                                                                                                                        |               |                          |
 | X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X                            | X xxx X xxx X |                  X xxx X |
 |                                                                                                                        |               |                          |
