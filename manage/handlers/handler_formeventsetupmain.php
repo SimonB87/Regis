@@ -23,7 +23,17 @@ if(isset($_POST["safe_form_data"])){
     $eventStartDate = mysqli_real_escape_string($connector, $_POST["eventStartDate"]);
     $eventEndDate = mysqli_real_escape_string($connector, $_POST["eventEndDate"]);
     $enableCoupleTicket = mysqli_real_escape_string($connector, $_POST["enableCoupleTicket"]);
-    
+
+    $earlyBirdsRegistrationEnabled = mysqli_real_escape_string($connector, $_POST["earlyBirdsRegistrationEnabled"]);
+    $earlyBirdsRegistrationName = mysqli_real_escape_string($connector, $_POST["earlyBirdsRegistrationName"]);
+    $earlyBirdsRegistrationsStartDate = mysqli_real_escape_string($connector, $_POST["earlyBirdsRegistrationsStartDate"]);
+    $earlyBirdsRegistrationsEndDate = mysqli_real_escape_string($connector, $_POST["earlyBirdsRegistrationsEndDate"]);
+
+    $ticketsAmountEarlyBirdsRegistrationsSingle  = mysqli_real_escape_string($connector, $_POST["ticketsAmountEarlyBirdsRegistrationsSingle"]);
+    $earlyBirdsTicketPriceSingle = mysqli_real_escape_string($connector, $_POST["earlyBirdsTicketPriceSingle"]);
+    $earlyBirdsTicketPriceCouple = mysqli_real_escape_string($connector, $_POST["earlyBirdsTicketPriceCouple"]);
+    $earlyBirdsTicketAmountCouple = mysqli_real_escape_string($connector, $_POST["earlyBirdsTicketAmountCouple"]);
+
 /*  // fix ID for Wedos DB
     
     $id = 0;
@@ -59,7 +69,7 @@ if(isset($_POST["safe_form_data"])){
     if(isset($_POST["newEventBoolean"])) {
       $newEventBoolean = mysqli_real_escape_string($connector, $_POST["newEventBoolean"]);
       if($newEventBoolean == "on") {
-        $query = mysqli_query($connector, "INSERT INTO events (eventStatus, eventName, eventStartDate, eventEndDate, enableCoupleTicket) VALUES ('$eventStatus', '$eventName', '$eventStartDate', '$eventEndDate', '$enableCoupleTicket')");
+        $query = mysqli_query($connector, "INSERT INTO events (eventStatus, eventName, eventStartDate, eventEndDate, enableCoupleTicket, earlyBirdsRegistrationEnabled, earlyBirdsRegistrationName, earlyBirdsRegistrationsStartDate, earlyBirdsRegistrationsEndDate,  	ticketsAmountEarlyBirdsRegistrationsSingle , earlyBirdsTicketPriceSingle, earlyBirdsTicketPriceCouple, earlyBirdsTicketAmountCouple) VALUES ('$eventStatus', '$eventName', '$eventStartDate', '$eventEndDate', '$enableCoupleTicket', '$earlyBirdsRegistrationEnabled', '$earlyBirdsRegistrationName', '$earlyBirdsRegistrationsStartDate', '$earlyBirdsRegistrationsEndDate', '$earlyBirdsTicketPriceSingle', '$earlyBirdsTicketPriceSingle', '$earlyBirdsTicketPriceCouple', '$earlyBirdsTicketAmountCouple')");
 
         // fix ID for Wedos DB
         //$query = mysqli_query($connector, "INSERT INTO events (id, eventStatus, eventName, eventStartDate, eventEndDate, enableCoupleTicket) VALUES ('$id','$eventStatus', '$eventName', '$eventStartDate', '$eventEndDate', '$enableCoupleTicket')");
