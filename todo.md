@@ -56,7 +56,7 @@
 ## Moje poznámky
 
 - vymyslet název :-) : www.registo.cz , www.regis.events ,
-
+- ! při každém budu při uložené do DB polsat vývojáří email o chybě
 - user sekce po přihlášení - možnost změnit heslo
 - na login formu zprovoznit notifikace na špatný login - login handler nadále musí být na vrchu aplikace
 - Ukládát plně české znaky pro jména
