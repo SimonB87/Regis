@@ -110,13 +110,24 @@
           </div>
         </div>
 
-      <!-- TODO enable couple tickets -> opens couple prices -->
+      <!-- TODO enable couple tickets -> dynamical with JS opens couple prices -->
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           
           <div class="form-check mb-3">
             <input class="form-check-input" type="checkbox" id="enableCoupleTicket" name="enableCoupleTicket" required <?php if($isEventEdited) { if($eventDataEnableCoupleTicket == "on") { echo "checked"; } } ?>>
-            <label class="form-check-label" for="flexCheckDefault">
+            <label class="form-check-label" for="enableCoupleTicket">
               Enable couple ticket
+            </label>
+          </div>
+        </div>
+
+        <!-- TODO Enable promocodes for discounts -> dynamical with JS opens promo codes for discounts -->
+          <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+          
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="enableCoupleTicket" name="enableCoupleTicket" required >
+            <label class="form-check-label" for="enableCoupleTicket">
+              Enable promo codes for discounts
             </label>
           </div>
         </div>
@@ -144,7 +155,7 @@
     <div class="col-12 section-form-2"> 
       <div class="row">
 
-        <div class="col-lg-12 col-md-12 col-sm-12 padding-small">
+        <div class="col-lg-12 col-md-12 col-sm-12 rounded padding-medium-1x3 shadow-light">
           <div class="form-floating">
             <input type="text" class="form-control" id="earlyBirdsRegistrationName" name="earlyBirdsRegistrationName" maxlength="250" value="Early Birds Registrations">
             <label for="earlyBirdsRegistrationName">Early Birds Registration Name</label>
@@ -157,36 +168,13 @@
           </div>
         </div>
 
-        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-          <div class="form-floating">
-            <input type="date" class="form-control" id="earlyBirdsRegistrationsStartDate" name="earlyBirdsRegistrationsStartDate" maxlength="250">
-            <label for="earlyBirdsRegistrationsStartDate">Tickets - Early Birds Registrations Start Date</label>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-            <div class="invalid-feedback">
-              Please fill in valid value.
-            </div>
-          </div>
-        </div>
+        <div class="col-12 padding-medium-1x3"> 
+          <div class="row rounded padding-small shadow-light">
 
-        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-          <div class="form-floating">
-            <input type="date" class="form-control" id="earlyBirdsRegistrationsEndDate" name="earlyBirdsRegistrationsEndDate" maxlength="250">
-            <label for="earlyBirdsRegistrationsEndDate">Tickets - Early Birds Registrations End Date</label>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-            <div class="invalid-feedback">
-              Please fill in valid value.
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-          <div class="form-floating">
-              <input type="number" class="form-control" id="earlyBirdsTicketPriceSingle" name="earlyBirdsTicketPriceSingle" maxlength="250" value="">
-              <label for="earlyBirdsTicketPriceSingle">Early Birds Registration Ticket Price - Single</label>
+            <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+            <div class="form-floating">
+              <input type="date" class="form-control" id="earlyBirdsRegistrationsStartDate" name="earlyBirdsRegistrationsStartDate" maxlength="250">
+              <label for="earlyBirdsRegistrationsStartDate">Tickets - Early Birds Registrations Start Date</label>
               <div class="valid-feedback">
                 Looks good!
               </div>
@@ -194,12 +182,12 @@
                 Please fill in valid value.
               </div>
             </div>
-        </div>
+          </div>
 
-        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-          <div class="form-floating">
-              <input type="number" class="form-control" id="ticketsAmountEarlyBirdsRegistrationsSingle" name="ticketsAmountEarlyBirdsRegistrationsSingle" maxlength="1000" value="">
-              <label for="ticketsAmountEarlyBirdsRegistrationsSingle">Early Birds Registration Ticket Amount - Single</label>
+          <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+            <div class="form-floating">
+              <input type="date" class="form-control" id="earlyBirdsRegistrationsEndDate" name="earlyBirdsRegistrationsEndDate" maxlength="250">
+              <label for="earlyBirdsRegistrationsEndDate">Tickets - Early Birds Registrations End Date</label>
               <div class="valid-feedback">
                 Looks good!
               </div>
@@ -207,10 +195,48 @@
                 Please fill in valid value.
               </div>
             </div>
+          </div>
+
+          </div>
         </div>
 
-        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-          <div class="form-floating">
+        <div class="col-12 padding-medium-1x3"> 
+          <div class="row rounded padding-small shadow-light">
+
+            <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+              <div class="form-floating">
+                <input type="number" class="form-control" id="earlyBirdsTicketPriceSingle" name="earlyBirdsTicketPriceSingle" maxlength="250" value="">
+                <label for="earlyBirdsTicketPriceSingle">Early Birds Registration Ticket Price - Single</label>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in valid value.
+                </div>
+              </div>
+          </div>
+
+            <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+             <div class="form-floating">
+                <input type="number" class="form-control" id="ticketsAmountEarlyBirdsRegistrationsSingle" name="ticketsAmountEarlyBirdsRegistrationsSingle" maxlength="1000" value="">
+                <label for="ticketsAmountEarlyBirdsRegistrationsSingle">Early Birds Registration Ticket Amount - Single</label>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in valid value.
+                </div>
+              </div>
+          </div>
+
+          </div>
+        </div>
+
+        <div class="col-12 padding-medium-1x3"> 
+          <div class="row rounded padding-small shadow-light">
+
+          <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+            <div class="form-floating">
               <input type="number" class="form-control" id="earlyBirdsTicketPriceCouple" name="earlyBirdsTicketPriceCouple" maxlength="250" value="">
               <label for="earlyBirdsTicketPriceCouple">Early Birds Registration Ticket Price - Couple</label>
               <div class="valid-feedback">
@@ -222,10 +248,38 @@
             </div>
         </div>
 
-        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-          <div class="form-floating">
-              <input type="number" class="form-control" id="earlyBirdsTicketAmountCouple" name="earlyBirdsTicketAmountCouple" maxlength="250" value="">
-              <label for="earlyBirdsTicketAmountCouple">Early Birds Registration Amount Price - Couple</label>
+          <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+            <div class="form-floating">
+                <input type="number" class="form-control" id="earlyBirdsTicketAmountCouple" name="earlyBirdsTicketAmountCouple" maxlength="250" value="">
+                <label for="earlyBirdsTicketAmountCouple">Early Birds Registration Amount Price - Couple</label>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in valid value.
+                </div>
+              </div>
+          </div>
+
+          </div>
+        </div>
+
+        <div class="col-12 padding-medium-1x3"> 
+          <div class="row rounded padding-small shadow-light">
+            <div class="col-lg-3 col-md-6 col-sm-12 padding-small">
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="earlyBirdsRegistrationPromoCodeEnabled" name="earlyBirdsRegistrationPromoCodeEnabled" required >
+                <label class="form-check-label" for="earlyBirdsRegistrationPromoCodeEnabled">
+                  Enable Early Birds Promo Codes
+                </label>
+              </div>
+          </div>
+
+
+          <div class="col-lg-3 col-md-6 col-sm-12 padding-small">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="earlyBirdsRegistrationPromoCode" name="earlyBirdsRegistrationPromoCode" maxlength="250">
+              <label for="earlyBirdsRegistrationPromoCode">Promo Code - Word</label>
               <div class="valid-feedback">
                 Looks good!
               </div>
@@ -233,7 +287,38 @@
                 Please fill in valid value.
               </div>
             </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-sm-12 padding-small">
+            <div class="form-floating">
+              <input type="number" class="form-control" id="earlyBirdsRegistrationPromoCount" name="earlyBirdsRegistrationPromoCount" maxlength="1000">
+                <label for="earlyBirdsRegistrationPromoCount">Promo code - Amount</label>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in valid value.
+                </div>
+              </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-sm-12 padding-small">
+            <div class="form-floating">
+                <input type="number" class="form-control" id="earlyBirdsRegistrationPromoCount" name="earlyBirdsRegistrationPromoCount" maxlength="1000">
+                <label for="earlyBirdsRegistrationPromoCount"> Discount in number of %</label>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in valid value.
+                </div>
+              </div>
+          </div>
+
+          </div>
         </div>
+
+
 
       </div>
     </div>
