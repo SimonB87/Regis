@@ -361,8 +361,8 @@
 
     <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
       <div class="form-check mb-3">
-         <input class="form-check-input" type="checkbox" id="specialType1RegistrationsEnabled" name="specialType1RegistrationsEnabled">
-          <label class="form-check-label" for="specialType1RegistrationsEnabled">
+         <input class="form-check-input" type="checkbox" id="specialType1RegistrationEnabled" name="specialType1RegistrationEnabled">
+          <label class="form-check-label" for="specialType1RegistrationEnabled">
              Enable Special type 1 Registrations
           </label>
         </div>
@@ -373,8 +373,8 @@
 
         <div class="col-lg-12 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-            <input type="text" class="form-control" id="specialType1RegistrationsName" name="specialType1RegistrationsName" maxlength="250">
-            <label for="specialType1RegistrationsName">Special type 1 Registrations Name</label>
+            <input type="text" class="form-control" id="specialType1RegistrationName" name="specialType1RegistrationName" maxlength="250">
+            <label for="specialType1RegistrationName">Special type 1 Registrations Name</label>
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -475,8 +475,8 @@
 
     <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
       <div class="form-check mb-3">
-         <input class="form-check-input" type="checkbox" id="rememberMe">
-          <label class="form-check-label" for="flexCheckDefault">
+         <input class="form-check-input" type="checkbox" id="specialType2RegistrationEnabled" name="specialType2RegistrationEnabled">
+          <label class="form-check-label" for="specialType2RegistrationEnabled">
              Enable Special type 2 Registrations
           </label>
         </div>
@@ -487,8 +487,8 @@
 
         <div class="col-lg-12 col-md-12 col-sm-12  padding-small">
           <div class="form-floating">
-            <input type="text" class="form-control" id="specialType2RegistrationsName" name="specialType2RegistrationsName" maxlength="250">
-            <label for="specialType2RegistrationsName">Special type 2 Registrations Name</label>
+            <input type="text" class="form-control" id="specialType2RegistrationName" name="specialType2RegistrationName" maxlength="250">
+            <label for="specialType2RegistrationName">Special type 2 Registrations Name</label>
             <div class="valid-feedback">
               Looks good!
             </div>
