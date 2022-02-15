@@ -1,0 +1,31 @@
+//edit events table, create regular event columns
+
+ALTER TABLE `events` 
+ADD regularRegistrationEnabled varchar(10), 
+ADD regularRegistrationName varchar(250), 
+ADD regularRegistrationsStartDate varchar(250),
+ADD regularRegistrationsEndDate varchar(250),
+ADD regularTicketPriceSingle int(250),
+ADD regularTicketAmountSingle int(250),
+ADD regularTicketPriceCouple int(250),
+ADD regularTicketAmountCouple int(250);
+
+ALTER TABLE `events` 
+ADD specialType1RegistrationEnabled varchar(10), 
+ADD specialType1RegistrationName varchar(250), 
+ADD specialType1RegistrationsStartDate varchar(250),
+ADD specialType1RegistrationsEndDate varchar(250),
+ADD specialType1TicketPriceSingle int(250),
+ADD specialType1TicketAmountSingle int(250),
+ADD specialType1TicketPriceCouple int(250),
+ADD specialType1TicketAmountCouple int(250);
+
+ALTER TABLE `events` 
+ADD specialType2RegistrationEnabled varchar(10), 
+ADD specialType2RegistrationName varchar(250), 
+ADD specialType2RegistrationsStartDate varchar(250),
+ADD specialType2RegistrationsEndDate varchar(250),
+ADD specialType2TicketPriceSingle int(250),
+ADD specialType2TicketAmountSingle int(250),
+ADD specialType2TicketPriceCouple int(250),
+ADD specialType2TicketAmountCouple int(250);
