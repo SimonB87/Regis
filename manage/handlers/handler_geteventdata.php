@@ -13,6 +13,15 @@
   $eventDataEventEndDate = null;
   $eventDataEnableCoupleTicket = null;
 
+  $eventDataEarlyBirdsRegistrationEnabled = null;
+  $eventDataEarlyBirdsRegistrationName = null;
+  $eventDataEarlyBirdsRegistrationsStartDate = null;
+  $eventDataEarlyBirdsRegistrationsEndDate = null;
+  $eventDataTicketsAmountEarlyBirdsRegistrationsSingle = null;
+  $eventDataEarlyBirdsTicketPriceSingle = null;
+  $eventDataEarlyBirdsTicketPriceCouple = null;
+  $eventDataEarlyBirdsTicketAmountCouple = null;
+
   if ($isEventEdited) {
 
     if (mysqli_connect_errno()) {
@@ -57,6 +66,15 @@
           $eventDataEventStartDate = $row["eventStartDate"] ;
           $eventDataEventEndDate = $row["eventEndDate"] ;
           $eventDataEnableCoupleTicket = $row["enableCoupleTicket"] ;
+
+          $eventDataEarlyBirdsRegistrationEnabled = $row["earlyBirdsRegistrationEnabled"] ;
+          $eventDataEarlyBirdsRegistrationName = $row["earlyBirdsRegistrationName"] ;
+          $eventDataEarlyBirdsRegistrationsStartDate = $row["earlyBirdsRegistrationsStartDate"] ;
+          $eventDataEarlyBirdsRegistrationsEndDate = $row["earlyBirdsRegistrationsEndDate"] ;
+          $eventDataTicketsAmountEarlyBirdsRegistrationsSingle = $row["ticketsAmountEarlyBirdsRegistrationsSingle"] ;
+          $eventDataEarlyBirdsTicketPriceSingle = $row["earlyBirdsTicketPriceSingle"] ;
+          $eventDataEarlyBirdsTicketPriceCouple = $row["earlyBirdsTicketPriceCouple"] ;
+          $eventDataEarlyBirdsTicketAmountCouple = $row["earlyBirdsTicketAmountCouple"] ;
 
         }
         echo "";

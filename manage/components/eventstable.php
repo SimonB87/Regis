@@ -9,16 +9,20 @@
       <th class="footable-sortable" data-breakpoints="xs sm"> Event start date </th>
       <th class="footable-sortable" data-breakpoints="xs sm"> Event end date </th>
       <th class="footable-sortable" data-breakpoints="xs sm"> Enable couple ticket </th>
-      <th class="footable-sortable" data-breakpoints="xs sm md lg"> Early birds registrations start date </th>
-      <th class="footable-sortable" data-breakpoints="xs sm md lg"> Early birds amount of tickets </th>
-      <th class="footable-sortable" data-breakpoints="xs sm md"> Regular tickets registrations start date </th> 
-      <th class="footable-sortable" data-breakpoints="xs sm md lg"> Regular tickets amount</th> 
-      <th class="footable-sortable" data-breakpoints="xs sm md lg"> Special type 1 registrations start date </th> 
-      <th class="footable-sortable" data-breakpoints="xs sm md lg"> Special type 1 registrations name </th> 
-      <th class="footable-sortable" data-breakpoints="xs sm md lg"> Special type 1 registrations amount of tickets </th> 
-      <th class="footable-sortable" data-breakpoints="xs sm md lg"> Special type 2 registrations start date </th> 
-      <th class="footable-sortable" data-breakpoints="xs sm md lg"> Special type 2 registrations name </th> 
-      <th class="footable-sortable" data-breakpoints="xs sm md lg"> Special type 2 registrations amount of tickets </th> 
+
+      <th class="footable-sortable" data-breakpoints="xs sm md"> Early birds enabled </th>
+      <th class="footable-sortable" data-breakpoints="xs sm md"> Early birds registrations name </th>
+      <th class="footable-sortable" data-breakpoints="xs sm md lg"> Early birds registrations start date </th> 
+      <th class="footable-sortable" data-breakpoints="xs sm md lg"> Early birds registrations end date </th>
+
+      <th class="footable-sortable" data-breakpoints="all"> Early birds registrations price - single </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Early birds registrations amount - single </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Early birds registrations price - couple </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Early birds registrations amount - couple </th> 
+
+      <th class="footable-sortable" data-breakpoints="all"> Special type 1 registrations enabled </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Special type 2 registrations enabled </th> 
+
     </tr>
   </thead>
 
@@ -63,7 +67,8 @@
       while ($row = $results-> fetch_assoc()) {
 
           echo "<tr><td>" . $row["id"] . "</td><td>" . $row["eventStatus"] . "</td><td>" . $row["eventName"]  . "</td><td>" . $row["eventStartDate"] ."</td><td>" . $row["eventEndDate"] . "</td> <td>" . $row["enableCoupleTicket"] . "</td>" . 
-              "<td> # </td> <td> # </td> <td> # </td> <td> # </td> <td> # </td> <td> # </td> <td> # </td> <td> # </td> <td> # </td> <td> # </td>" .
+              "<td>" . $row["earlyBirdsRegistrationEnabled"] . "</td> <td>" . $row["earlyBirdsRegistrationName"] . "</td> <td>" . $row["earlyBirdsRegistrationsStartDate"] . "</td> <td>" . $row["earlyBirdsRegistrationsEndDate"] . 
+              "</td> <td>" . $row["earlyBirdsTicketPriceSingle"] . "</td> <td>" . $row["ticketsAmountEarlyBirdsRegistrationsSingle"] . "</td> <td>" . $row["earlyBirdsTicketPriceCouple"] . "</td> <td>" . $row["earlyBirdsTicketAmountCouple"] . "</td> <td> # </td> <td> # </td>" .
               "</tr>";
       }
       echo "";
