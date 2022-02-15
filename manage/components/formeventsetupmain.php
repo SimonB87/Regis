@@ -257,23 +257,10 @@
     <div class="col-12 section-form-3"> 
       <div class="row">
 
-        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+        <div class="col-lg-12 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
             <input type="text" class="form-control" id="regularRegistrationName" name="regularRegistrationName" maxlength="250" value="Full pass registrations">
             <label for="regularRegistrationName"> Regular Registration Name</label>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-            <div class="invalid-feedback">
-              Please fill in valid value.
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
-          <div class="form-floating">
-            <input type="number" class="form-control" id="ticketsAmountEarlyBirdsRegistrations" name="ticketsAmountEarlyBirdsRegistrations" maxlength="250">
-            <label for="ticketsAmountEarlyBirdsRegistrations"> Tickets Amount - Regular Registrations </label>
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -384,7 +371,7 @@
     <div class="col-12 section-form-4"> 
       <div class="row">
 
-        <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
+        <div class="col-lg-12 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
             <input type="text" class="form-control" id="specialType1RegistrationsName" name="specialType1RegistrationsName" maxlength="250">
             <label for="specialType1RegistrationsName">Special type 1 Registrations Name</label>
@@ -396,20 +383,6 @@
             </div>
           </div>
         </div>
-
-        <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
-          <div class="form-floating">
-            <input type="number" class="form-control" id="ticketsAmountSpecialType1Registrations" name="ticketsAmountSpecialType1Registrations" maxlength="250">
-            <label for="ticketsAmountSpecialType1Registrations"> Tickets Amount - Special type 1 Registrations </label>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-            <div class="invalid-feedback">
-              Please fill in valid value.
-            </div>
-          </div>
-        </div>
-
 
         <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
           <div class="form-floating">
@@ -512,7 +485,7 @@
     <div class="col-12 section-form-5"> 
       <div class="row">
 
-        <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
+        <div class="col-lg-12 col-md-12 col-sm-12  padding-small">
           <div class="form-floating">
             <input type="text" class="form-control" id="specialType2RegistrationsName" name="specialType2RegistrationsName" maxlength="250">
             <label for="specialType2RegistrationsName">Special type 2 Registrations Name</label>
@@ -524,20 +497,6 @@
             </div>
           </div>
         </div>
-
-        <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
-          <div class="form-floating">
-            <input type="number" class="form-control" id="ticketsAmountSpecialType2Registrations" name="ticketsAmountSpecialType2Registrations" maxlength="250">
-            <label for="ticketsAmountSpecialType2Registrations"> Tickets Amount - Special type 2 Registrations </label>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-            <div class="invalid-feedback">
-              Please fill in valid value.
-            </div>
-          </div>
-        </div>
-
 
         <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
           <div class="form-floating">
