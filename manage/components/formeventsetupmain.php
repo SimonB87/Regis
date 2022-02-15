@@ -247,8 +247,8 @@
 
     <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
       <div class="form-check mb-3">
-         <input class="form-check-input" type="checkbox" id="rememberMe">
-          <label class="form-check-label" for="flexCheckDefault">
+         <input class="form-check-input" type="checkbox" id="regularRegistrationEnabled" name="regularRegistrationEnabled">
+          <label class="form-check-label" for="regularRegistrationEnabled">
              Enable Regular Registration
           </label>
         </div>
@@ -299,8 +299,8 @@
         <!-- TODO ticket prices -->
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-              <input type="number" class="form-control" id="RegularicketPriceSingle" name="RegularicketPriceSingle" maxlength="250" value="">
-              <label for="RegularicketPriceSingle">Regular Registration Ticket Price - Single</label>
+              <input type="number" class="form-control" id="regularTicketPriceSingle" name="regularTicketPriceSingle" maxlength="250" value="">
+              <label for="regularTicketPriceSingle">Regular Registration Ticket Price - Single</label>
               <div class="valid-feedback">
                 Looks good!
               </div>
@@ -312,8 +312,8 @@
 
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-              <input type="number" class="form-control" id="regularicketAmountSingle" name="regularicketAmountSingle" maxlength="1000" value="">
-              <label for="regularicketAmountSingle">Regular Registration Ticket Amount - Single</label>
+              <input type="number" class="form-control" id="regularTicketAmountSingle" name="regularTicketAmountSingle" maxlength="1000" value="">
+              <label for="regularTicketAmountSingle">Regular Registration Ticket Amount - Single</label>
               <div class="valid-feedback">
                 Looks good!
               </div>
@@ -325,8 +325,8 @@
 
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-              <input type="number" class="form-control" id="regularicketPriceCouple" name="RegularicketPriceCouple" maxlength="250" value="">
-              <label for="RegularicketPriceCouple">Regular Registration Ticket Price - Couple</label>
+              <input type="number" class="form-control" id="regularTicketPriceCouple" name="regularTicketPriceCouple" maxlength="250" value="">
+              <label for="regularTicketPriceCouple">Regular Registration Ticket Price - Couple</label>
               <div class="valid-feedback">
                 Looks good!
               </div>
@@ -338,8 +338,8 @@
 
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-              <input type="number" class="form-control" id="regularicketAmountCouple" name="regularicketAmountCouple" maxlength="1000" value="">
-              <label for="regularicketAmountCouple">Regular Registration Ticket Amount - Couple</label>
+              <input type="number" class="form-control" id="regularTicketAmountCouple" name="regularTicketAmountCouple" maxlength="1000" value="">
+              <label for="regularTicketAmountCouple">Regular Registration Ticket Amount - Couple</label>
               <div class="valid-feedback">
                 Looks good!
               </div>
@@ -361,8 +361,8 @@
 
     <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
       <div class="form-check mb-3">
-         <input class="form-check-input" type="checkbox" id="rememberMe">
-          <label class="form-check-label" for="flexCheckDefault">
+         <input class="form-check-input" type="checkbox" id="specialType1RegistrationsEnabled" name="specialType1RegistrationsEnabled">
+          <label class="form-check-label" for="specialType1RegistrationsEnabled">
              Enable Special type 1 Registrations
           </label>
         </div>
