@@ -10,18 +10,41 @@
       <th class="footable-sortable" data-breakpoints="xs sm"> Event end date </th>
       <th class="footable-sortable" data-breakpoints="xs sm"> Enable couple ticket </th>
 
-      <th class="footable-sortable" data-breakpoints="xs sm md"> Early birds enabled </th>
-      <th class="footable-sortable" data-breakpoints="xs sm md"> Early birds registrations name </th>
-      <th class="footable-sortable" data-breakpoints="xs sm md lg"> Early birds registrations start date </th> 
-      <th class="footable-sortable" data-breakpoints="xs sm md lg"> Early birds registrations end date </th>
-
+      <th class="footable-sortable" data-breakpoints="xs sm"> Early birds enabled </th>
+      <th class="footable-sortable" data-breakpoints="all"> Early birds registrations name </th>
+      <th class="footable-sortable" data-breakpoints="all"> Early birds registrations start date </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Early birds registrations end date </th>
       <th class="footable-sortable" data-breakpoints="all"> Early birds registrations price - single </th> 
       <th class="footable-sortable" data-breakpoints="all"> Early birds registrations amount - single </th> 
       <th class="footable-sortable" data-breakpoints="all"> Early birds registrations price - couple </th> 
       <th class="footable-sortable" data-breakpoints="all"> Early birds registrations amount - couple </th> 
 
-      <th class="footable-sortable" data-breakpoints="all"> Special type 1 registrations enabled </th> 
-      <th class="footable-sortable" data-breakpoints="all"> Special type 2 registrations enabled </th> 
+      <th class="footable-sortable" data-breakpoints="xs sm"> Regular registrations enabled </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Regular Registrations Name </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Regular Registrations Start Date </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Regular Registrations End Date </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Regular Registration Ticket Price - Single </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Regular Registration Ticket Amount - Single </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Regular Registration Ticket Price - Couple </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Regular Registration Ticket Amount - Couple </th> 
+
+      <th class="footable-sortable" data-breakpoints="xs sm"> Special type 1 registrations enabled </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Special type 1 Registrations Name </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Special type 1 Registrations Start Date </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Special type 1 Registrations End Date </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Special type 1 Registration Ticket Price - Single </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Special type 1 Registration Ticket Amount - Single </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Special type 1 Registration Ticket Price - Couple </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Special type 1 Registration Ticket Amount - Couple </th> 
+
+      <th class="footable-sortable" data-breakpoints="xs sm"> Special type 2 registrations enabled </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Special type 2 Registrations Name </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Special type 2 Registrations Start Date </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Special type 2 Registrations End Date </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Special type 2 Registration Ticket Price - Single </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Special type 2 Registration Ticket Amount - Single </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Special type 2 Registration Ticket Price - Couple </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Special type 2 Registration Ticket Amount - Couple </th> 
 
     </tr>
   </thead>
@@ -66,10 +89,13 @@
     if ($results-> num_rows > 0 ) {
       while ($row = $results-> fetch_assoc()) {
 
-          echo "<tr><td>" . $row["id"] . "</td><td>" . $row["eventStatus"] . "</td><td>" . $row["eventName"]  . "</td><td>" . $row["eventStartDate"] ."</td><td>" . $row["eventEndDate"] . "</td> <td>" . $row["enableCoupleTicket"] . "</td>" . 
+          echo "<tr>" . "<td>" . $row["id"] . "</td><td>" . $row["eventStatus"] . "</td><td>" . $row["eventName"]  . "</td><td>" . $row["eventStartDate"] ."</td><td>" . $row["eventEndDate"] . "</td> <td>" . $row["enableCoupleTicket"] . "</td>" . 
               "<td>" . $row["earlyBirdsRegistrationEnabled"] . "</td> <td>" . $row["earlyBirdsRegistrationName"] . "</td> <td>" . $row["earlyBirdsRegistrationsStartDate"] . "</td> <td>" . $row["earlyBirdsRegistrationsEndDate"] . 
-              "</td> <td>" . $row["earlyBirdsTicketPriceSingle"] . "</td> <td>" . $row["ticketsAmountEarlyBirdsRegistrationsSingle"] . "</td> <td>" . $row["earlyBirdsTicketPriceCouple"] . "</td> <td>" . $row["earlyBirdsTicketAmountCouple"] . "</td> <td> # </td> <td> # </td>" .
-              "</tr>";
+              "</td> <td>" . $row["earlyBirdsTicketPriceSingle"] . "</td> <td>" . $row["ticketsAmountEarlyBirdsRegistrationsSingle"] . "</td> <td>" . $row["earlyBirdsTicketPriceCouple"] . "</td> <td>" . $row["earlyBirdsTicketAmountCouple"] . 
+              "</td> <td>" . $row["regularRegistrationEnabled"] . "</td> <td>" . $row["regularRegistrationName"] . "</td> <td>" . $row["regularRegistrationsStartDate"] . "</td> <td>" . $row["regularRegistrationsEndDate"] . "</td> <td>" . $row["regularTicketPriceSingle"] . "</td> <td>" . $row["regularTicketAmountSingle"] . "</td> <td>" . $row["regularTicketPriceCouple"] . "</td> <td>" . $row["regularTicketAmountCouple"] .
+              "</td> <td>" . $row["specialType1RegistrationEnabled"] . "</td> <td>" . $row["specialType1RegistrationName"] . "</td> <td>" . $row["specialType1RegistrationsStartDate"] . "</td> <td>" . $row["specialType1RegistrationsEndDate"] . "</td> <td>" . $row["specialType1TicketPriceSingle"] . "</td> <td>" . $row["specialType1TicketAmountSingle"] . "</td> <td>" . $row["specialType1TicketPriceCouple"] . "</td> <td>" . $row["specialType1TicketAmountCouple"] .
+              "</td> <td>" . $row["specialType2RegistrationEnabled"] . "</td> <td>" . $row["specialType2RegistrationName"] . "</td> <td>" . $row["specialType2RegistrationsStartDate"] . "</td> <td>" . $row["specialType2RegistrationsEndDate"] . "</td> <td>" . $row["specialType2TicketPriceSingle"] . "</td> <td>" . $row["specialType2TicketAmountSingle"] . "</td> <td>" . $row["specialType2TicketPriceCouple"] . "</td> <td>" . $row["specialType2TicketAmountCouple"] .
+              "</td>" . "</tr>";
       }
       echo "";
   }

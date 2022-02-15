@@ -114,7 +114,7 @@
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           
           <div class="form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="enableCoupleTicket" name="enableCoupleTicket" required <?php if($isEventEdited) { if($eventDataEnableCoupleTicket == "on") { echo "checked"; } } ?>>
+            <input class="form-check-input" type="checkbox" id="enableCoupleTicket" name="enableCoupleTicket" required <?php if($isEventEdited) { if($eventDataEnableCoupleTicket == "Yes") { echo "checked"; } } ?>>
             <label class="form-check-label" for="enableCoupleTicket">
               Enable couple ticket
             </label>
@@ -145,7 +145,7 @@
 
     <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
       <div class="form-check mb-3">
-         <input class="form-check-input" type="checkbox" id="earlyBirdsRegistrationEnabled" name="earlyBirdsRegistrationEnabled">
+         <input class="form-check-input" type="checkbox" id="earlyBirdsRegistrationEnabled" name="earlyBirdsRegistrationEnabled" <?php if($isEventEdited) { if( $eventDataEarlyBirdsRegistrationEnabled == "Yes") { echo "checked"; } } ?> >
           <label class="form-check-label" for="earlyBirdsRegistrationEnabled">
              Enable Early Birds Registration
           </label>
@@ -157,7 +157,7 @@
 
         <div class="col-lg-12 col-md-12 col-sm-12 rounded padding-medium-1x3 shadow-light">
           <div class="form-floating">
-            <input type="text" class="form-control" id="earlyBirdsRegistrationName" name="earlyBirdsRegistrationName" maxlength="250" value="Early Birds Registrations">
+            <input type="text" class="form-control" id="earlyBirdsRegistrationName" name="earlyBirdsRegistrationName" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataEarlyBirdsRegistrationName . "'"; } ?> >
             <label for="earlyBirdsRegistrationName">Early Birds Registration Name</label>
             <div class="valid-feedback">
               Looks good!
@@ -173,7 +173,7 @@
 
             <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
             <div class="form-floating">
-              <input type="date" class="form-control" id="earlyBirdsRegistrationsStartDate" name="earlyBirdsRegistrationsStartDate" maxlength="250">
+              <input type="date" class="form-control" id="earlyBirdsRegistrationsStartDate" name="earlyBirdsRegistrationsStartDate" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataEarlyBirdsRegistrationsStartDate . "'"; } ?> >
               <label for="earlyBirdsRegistrationsStartDate">Tickets - Early Birds Registrations Start Date</label>
               <div class="valid-feedback">
                 Looks good!
@@ -186,7 +186,7 @@
 
           <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
             <div class="form-floating">
-              <input type="date" class="form-control" id="earlyBirdsRegistrationsEndDate" name="earlyBirdsRegistrationsEndDate" maxlength="250">
+              <input type="date" class="form-control" id="earlyBirdsRegistrationsEndDate" name="earlyBirdsRegistrationsEndDate" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataEarlyBirdsRegistrationsEndDate . "'"; } ?> >
               <label for="earlyBirdsRegistrationsEndDate">Tickets - Early Birds Registrations End Date</label>
               <div class="valid-feedback">
                 Looks good!
@@ -205,7 +205,7 @@
 
             <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
               <div class="form-floating">
-                <input type="number" class="form-control" id="earlyBirdsTicketPriceSingle" name="earlyBirdsTicketPriceSingle" maxlength="250" value="">
+                <input type="number" class="form-control" id="earlyBirdsTicketPriceSingle" name="earlyBirdsTicketPriceSingle" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataEarlyBirdsTicketPriceSingle . "'"; } ?> >
                 <label for="earlyBirdsTicketPriceSingle">Early Birds Registration Ticket Price - Single</label>
                 <div class="valid-feedback">
                   Looks good!
@@ -218,7 +218,7 @@
 
             <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
              <div class="form-floating">
-                <input type="number" class="form-control" id="ticketsAmountEarlyBirdsRegistrationsSingle" name="ticketsAmountEarlyBirdsRegistrationsSingle" maxlength="1000" value="">
+                <input type="number" class="form-control" id="ticketsAmountEarlyBirdsRegistrationsSingle" name="ticketsAmountEarlyBirdsRegistrationsSingle" maxlength="1000" <?php if($isEventEdited) {echo "value='" . $eventDataTicketsAmountEarlyBirdsRegistrationsSingle . "'"; } ?>>
                 <label for="ticketsAmountEarlyBirdsRegistrationsSingle">Early Birds Registration Ticket Amount - Single</label>
                 <div class="valid-feedback">
                   Looks good!
@@ -237,7 +237,7 @@
 
           <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
             <div class="form-floating">
-              <input type="number" class="form-control" id="earlyBirdsTicketPriceCouple" name="earlyBirdsTicketPriceCouple" maxlength="250" value="">
+              <input type="number" class="form-control" id="earlyBirdsTicketPriceCouple" name="earlyBirdsTicketPriceCouple" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataEarlyBirdsTicketPriceCouple . "'"; } ?> >
               <label for="earlyBirdsTicketPriceCouple">Early Birds Registration Ticket Price - Couple</label>
               <div class="valid-feedback">
                 Looks good!
@@ -250,7 +250,7 @@
 
           <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
             <div class="form-floating">
-                <input type="number" class="form-control" id="earlyBirdsTicketAmountCouple" name="earlyBirdsTicketAmountCouple" maxlength="250" value="">
+                <input type="number" class="form-control" id="earlyBirdsTicketAmountCouple" name="earlyBirdsTicketAmountCouple" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataEarlyBirdsTicketAmountCouple . "'"; } ?> >
                 <label for="earlyBirdsTicketAmountCouple">Early Birds Registration Amount Price - Couple</label>
                 <div class="valid-feedback">
                   Looks good!
@@ -318,8 +318,6 @@
           </div>
         </div>
 
-
-
       </div>
     </div>
 
@@ -332,7 +330,7 @@
 
     <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
       <div class="form-check mb-3">
-         <input class="form-check-input" type="checkbox" id="regularRegistrationEnabled" name="regularRegistrationEnabled">
+         <input class="form-check-input" type="checkbox" id="regularRegistrationEnabled" name="regularRegistrationEnabled" <?php if($isEventEdited) { if( $eventDataRegularRegistrationEnabled == "Yes") { echo "checked"; } } ?> >
           <label class="form-check-label" for="regularRegistrationEnabled">
              Enable Regular Registration
           </label>
@@ -344,7 +342,7 @@
 
         <div class="col-lg-12 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-            <input type="text" class="form-control" id="regularRegistrationName" name="regularRegistrationName" maxlength="250" value="Full pass registrations">
+            <input type="text" class="form-control" id="regularRegistrationName" name="regularRegistrationName" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataRegularRegistrationName . "'"; } ?> >
             <label for="regularRegistrationName"> Regular Registration Name</label>
             <div class="valid-feedback">
               Looks good!
@@ -357,8 +355,8 @@
 
         <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
           <div class="form-floating">
-            <input type="date" class="form-control" id="regularRegistrationsStartDate" name="regularRegistrationsStartDate" maxlength="250">
-            <label for="regularRegistrationsStartDate">Tickets - Regular Registrations Start Date</label>
+            <input type="date" class="form-control" id="regularRegistrationsStartDate" name="regularRegistrationsStartDate" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataRegularRegistrationsStartDate . "'"; } ?> >
+            <label for="regularRegistrationsStartDate">Regular Registrations Start Date</label>
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -370,8 +368,8 @@
 
         <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
           <div class="form-floating">
-            <input type="date" class="form-control" id="regularRegistrationsEndDate" name="regularRegistrationsEndDate" maxlength="250">
-            <label for="regularRegistrationsEndDate">Tickets - Regular Registrations End Date</label>
+            <input type="date" class="form-control" id="regularRegistrationsEndDate" name="regularRegistrationsEndDate" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataRegularRegistrationsEndDate . "'"; } ?> >
+            <label for="regularRegistrationsEndDate">Regular Registrations End Date</label>
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -384,7 +382,7 @@
         <!-- TODO ticket prices -->
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-              <input type="number" class="form-control" id="regularTicketPriceSingle" name="regularTicketPriceSingle" maxlength="250" value="">
+              <input type="number" class="form-control" id="regularTicketPriceSingle" name="regularTicketPriceSingle" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataRegularTicketPriceSingle . "'"; } ?> >
               <label for="regularTicketPriceSingle">Regular Registration Ticket Price - Single</label>
               <div class="valid-feedback">
                 Looks good!
@@ -397,7 +395,7 @@
 
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-              <input type="number" class="form-control" id="regularTicketAmountSingle" name="regularTicketAmountSingle" maxlength="1000" value="">
+              <input type="number" class="form-control" id="regularTicketAmountSingle" name="regularTicketAmountSingle" maxlength="1000" <?php if($isEventEdited) {echo "value='" . $eventDataRegularTicketAmountSingle . "'"; } ?> >
               <label for="regularTicketAmountSingle">Regular Registration Ticket Amount - Single</label>
               <div class="valid-feedback">
                 Looks good!
@@ -410,7 +408,7 @@
 
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-              <input type="number" class="form-control" id="regularTicketPriceCouple" name="regularTicketPriceCouple" maxlength="250" value="">
+              <input type="number" class="form-control" id="regularTicketPriceCouple" name="regularTicketPriceCouple" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataRegularTicketPriceCouple . "'"; } ?> >
               <label for="regularTicketPriceCouple">Regular Registration Ticket Price - Couple</label>
               <div class="valid-feedback">
                 Looks good!
@@ -423,7 +421,7 @@
 
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-              <input type="number" class="form-control" id="regularTicketAmountCouple" name="regularTicketAmountCouple" maxlength="1000" value="">
+              <input type="number" class="form-control" id="regularTicketAmountCouple" name="regularTicketAmountCouple" maxlength="1000" <?php if($isEventEdited) {echo "value='" . $eventDataRegularTicketAmountCouple . "'"; } ?> >
               <label for="regularTicketAmountCouple">Regular Registration Ticket Amount - Couple</label>
               <div class="valid-feedback">
                 Looks good!
@@ -446,7 +444,7 @@
 
     <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
       <div class="form-check mb-3">
-         <input class="form-check-input" type="checkbox" id="specialType1RegistrationEnabled" name="specialType1RegistrationEnabled">
+         <input class="form-check-input" type="checkbox" id="specialType1RegistrationEnabled" name="specialType1RegistrationEnabled" <?php if($isEventEdited) { if( $eventDataSpecialType1RegistrationEnabled == "Yes") { echo "checked"; } } ?> >
           <label class="form-check-label" for="specialType1RegistrationEnabled">
              Enable Special type 1 Registrations
           </label>
@@ -458,7 +456,7 @@
 
         <div class="col-lg-12 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-            <input type="text" class="form-control" id="specialType1RegistrationName" name="specialType1RegistrationName" maxlength="250">
+            <input type="text" class="form-control" id="specialType1RegistrationName" name="specialType1RegistrationName" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataSpecialType1RegistrationName . "'"; } ?> >
             <label for="specialType1RegistrationName">Special type 1 Registrations Name</label>
             <div class="valid-feedback">
               Looks good!
@@ -471,8 +469,8 @@
 
         <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
           <div class="form-floating">
-            <input type="date" class="form-control" id="specialType1RegistrationsStartDate" name="specialType1RegistrationsStartDate" maxlength="250">
-            <label for="specialType1RegistrationsStartDate">Tickets - Special type 1 Registrations Start Date</label>
+            <input type="date" class="form-control" id="specialType1RegistrationsStartDate" name="specialType1RegistrationsStartDate" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataSpecialType1RegistrationsStartDate . "'"; } ?> >
+            <label for="specialType1RegistrationsStartDate"> Special type 1 Registrations Start Date</label>
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -484,8 +482,8 @@
 
         <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
           <div class="form-floating">
-            <input type="date" class="form-control" id="specialType1RegistrationsEndDate" name="specialType1RegistrationsEndDate" maxlength="250">
-            <label for="specialType1RegistrationsEndDate">Tickets - Special type 1 Registrations End Date</label>
+            <input type="date" class="form-control" id="specialType1RegistrationsEndDate" name="specialType1RegistrationsEndDate" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataSpecialType1RegistrationsEndDate . "'"; } ?> >
+            <label for="specialType1RegistrationsEndDate"> Special type 1 Registrations End Date</label>
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -498,7 +496,7 @@
         <!-- TODO ticket prices -->
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-              <input type="number" class="form-control" id="specialType1TicketPriceSingle" name="specialType1TicketPriceSingle" maxlength="250" value="">
+              <input type="number" class="form-control" id="specialType1TicketPriceSingle" name="specialType1TicketPriceSingle" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataSpecialType1TicketPriceSingle . "'"; } ?> >
               <label for="specialType1TicketPriceSingle">Special type 1 Registration Ticket Price - Single</label>
               <div class="valid-feedback">
                 Looks good!
@@ -511,7 +509,7 @@
 
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-              <input type="number" class="form-control" id="specialType1TicketAmountSingle" name="specialType1TicketAmountSingle" maxlength="1000" value="">
+              <input type="number" class="form-control" id="specialType1TicketAmountSingle" name="specialType1TicketAmountSingle" maxlength="1000" <?php if($isEventEdited) {echo "value='" . $eventDataSpecialType1TicketAmountSingle . "'"; } ?> >
               <label for="specialType1TicketAmountSingle">Special type 1 Registration Ticket Amount - Single</label>
               <div class="valid-feedback">
                 Looks good!
@@ -524,7 +522,7 @@
 
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-              <input type="number" class="form-control" id="specialType1TicketPriceCouple" name="specialType1TicketPriceCouple" maxlength="250" value="">
+              <input type="number" class="form-control" id="specialType1TicketPriceCouple" name="specialType1TicketPriceCouple" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataSpecialType1TicketPriceCouple . "'"; } ?> >
               <label for="specialType1TicketPriceCouple">Special type 1 Registration Ticket Price - Couple</label>
               <div class="valid-feedback">
                 Looks good!
@@ -537,7 +535,7 @@
 
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-              <input type="number" class="form-control" id="specialType1TicketAmountCouple" name="specialType1TicketAmountCouple" maxlength="1000" value="">
+              <input type="number" class="form-control" id="specialType1TicketAmountCouple" name="specialType1TicketAmountCouple" maxlength="1000" <?php if($isEventEdited) {echo "value='" . $eventDataSpecialType1TicketAmountCouple . "'"; } ?> >
               <label for="specialType1TicketAmountCouple">Special type 1 Registration Ticket Amount - Couple</label>
               <div class="valid-feedback">
                 Looks good!
@@ -560,7 +558,7 @@
 
     <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
       <div class="form-check mb-3">
-         <input class="form-check-input" type="checkbox" id="specialType2RegistrationEnabled" name="specialType2RegistrationEnabled">
+         <input class="form-check-input" type="checkbox" id="specialType2RegistrationEnabled" name="specialType2RegistrationEnabled" <?php if($isEventEdited) { if( $eventDataSpecialType2RegistrationEnabled == "Yes") { echo "checked"; } } ?> >
           <label class="form-check-label" for="specialType2RegistrationEnabled">
              Enable Special type 2 Registrations
           </label>
@@ -572,7 +570,7 @@
 
         <div class="col-lg-12 col-md-12 col-sm-12  padding-small">
           <div class="form-floating">
-            <input type="text" class="form-control" id="specialType2RegistrationName" name="specialType2RegistrationName" maxlength="250">
+            <input type="text" class="form-control" id="specialType2RegistrationName" name="specialType2RegistrationName" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataSpecialType2RegistrationName . "'"; } ?> >
             <label for="specialType2RegistrationName">Special type 2 Registrations Name</label>
             <div class="valid-feedback">
               Looks good!
@@ -585,7 +583,7 @@
 
         <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
           <div class="form-floating">
-            <input type="date" class="form-control" id="specialType2RegistrationsStartDate" name="specialType2RegistrationsStartDate" maxlength="250">
+            <input type="date" class="form-control" id="specialType2RegistrationsStartDate" name="specialType2RegistrationsStartDate" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataSpecialType2RegistrationsStartDate . "'"; } ?> >
             <label for="specialType2RegistrationsStartDate">Tickets - Special type 2 Registrations Start Date</label>
             <div class="valid-feedback">
               Looks good!
@@ -598,7 +596,7 @@
 
         <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
           <div class="form-floating">
-            <input type="date" class="form-control" id="specialType2RegistrationsEndDate" name="specialType2RegistrationsEndDate" maxlength="250">
+            <input type="date" class="form-control" id="specialType2RegistrationsEndDate" name="specialType2RegistrationsEndDate" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataSpecialType2RegistrationsEndDate . "'"; } ?> >
             <label for="specialType2RegistrationsEndDate">Tickets - Special type 2 Registrations End Date</label>
             <div class="valid-feedback">
               Looks good!
@@ -612,7 +610,7 @@
         <!-- TODO ticket prices -->
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-              <input type="number" class="form-control" id="specialType2TicketPriceSingle" name="specialType2TicketPriceSingle" maxlength="250" value="">
+              <input type="number" class="form-control" id="specialType2TicketPriceSingle" name="specialType2TicketPriceSingle" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataSpecialType2TicketPriceSingle . "'"; } ?> >
               <label for="specialType2TicketPriceSingle">Special type 2 Registration Ticket Price - Single</label>
               <div class="valid-feedback">
                 Looks good!
@@ -625,7 +623,7 @@
 
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-              <input type="number" class="form-control" id="specialType2TicketAmountSingle" name="specialType2TicketAmountSingle" maxlength="1000" value="">
+              <input type="number" class="form-control" id="specialType2TicketAmountSingle" name="specialType2TicketAmountSingle" maxlength="1000" <?php if($isEventEdited) {echo "value='" . $eventDataSpecialType2TicketAmountSingle . "'"; } ?> >
               <label for="specialType2TicketAmountSingle">Special type 2 Registration Ticket Amount - Single</label>
               <div class="valid-feedback">
                 Looks good!
@@ -638,7 +636,7 @@
 
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-              <input type="number" class="form-control" id="specialType2TicketPriceCouple" name="specialType2TicketPriceCouple" maxlength="250" value="">
+              <input type="number" class="form-control" id="specialType2TicketPriceCouple" name="specialType2TicketPriceCouple" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataSpecialType2TicketPriceCouple . "'"; } ?> >
               <label for="specialType2TicketPriceCouple">Special type 2 Registration Ticket Price - Couple</label>
               <div class="valid-feedback">
                 Looks good!
@@ -651,7 +649,7 @@
 
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-floating">
-              <input type="number" class="form-control" id="specialType2TicketAmountCouple" name="specialType2TicketAmountCouple" maxlength="1000" value="">
+              <input type="number" class="form-control" id="specialType2TicketAmountCouple" name="specialType2TicketAmountCouple" maxlength="1000" <?php if($isEventEdited) {echo "value='" . $eventDataSpecialType2TicketAmountCouple . "'"; } ?> >
               <label for="specialType2TicketAmountCouple">Special type 2 Registration Ticket Amount - Couple</label>
               <div class="valid-feedback">
                 Looks good!

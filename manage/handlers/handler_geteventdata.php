@@ -22,6 +22,33 @@
   $eventDataEarlyBirdsTicketPriceCouple = null;
   $eventDataEarlyBirdsTicketAmountCouple = null;
 
+  $eventDataRegularRegistrationEnabled = null; 
+  $eventDataRegularRegistrationName = null;
+  $eventDataRegularRegistrationsStartDate = null; 
+  $eventDataRegularRegistrationsEndDate = null; 
+  $eventDataRegularTicketPriceSingle = null;
+  $eventDataRegularTicketAmountSingle = null;
+  $eventDataRegularTicketPriceCouple = null;
+  $eventDataRegularTicketAmountCouple = null;
+
+  $eventDataSpecialType1RegistrationEnabled = null;
+  $eventDataSpecialType1RegistrationName = null;
+  $eventDataSpecialType1RegistrationsStartDate = null;
+  $eventDataSpecialType1RegistrationsEndDate = null;
+  $eventDataSpecialType1TicketPriceSingle = null; 
+  $eventDataSpecialType1TicketAmountSingle = null;
+  $eventDataSpecialType1TicketPriceCouple = null; 
+  $eventDataSpecialType1TicketAmountCouple = null;
+
+  $eventDataSpecialType2RegistrationEnabled = null;
+  $eventDataSpecialType2RegistrationName = null;
+  $eventDataSpecialType2RegistrationsStartDate = null;
+  $eventDataSpecialType2RegistrationsEndDate = null;
+  $eventDataSpecialType2TicketPriceSingle = null; 
+  $eventDataSpecialType2TicketAmountSingle = null;
+  $eventDataSpecialType2TicketPriceCouple = null; 
+  $eventDataSpecialType2TicketAmountCouple = null;
+
   if ($isEventEdited) {
 
     if (mysqli_connect_errno()) {
@@ -75,6 +102,33 @@
           $eventDataEarlyBirdsTicketPriceSingle = $row["earlyBirdsTicketPriceSingle"] ;
           $eventDataEarlyBirdsTicketPriceCouple = $row["earlyBirdsTicketPriceCouple"] ;
           $eventDataEarlyBirdsTicketAmountCouple = $row["earlyBirdsTicketAmountCouple"] ;
+
+          $eventDataRegularRegistrationEnabled = $row["regularRegistrationEnabled"] ;
+          $eventDataRegularRegistrationName = $row["regularRegistrationName"] ;
+          $eventDataRegularRegistrationsStartDate = $row["regularRegistrationsStartDate"] ;
+          $eventDataRegularRegistrationsEndDate = $row["regularRegistrationsEndDate"] ;
+          $eventDataRegularTicketPriceSingle = $row["regularTicketPriceSingle"] ;
+          $eventDataRegularTicketAmountSingle = $row["regularTicketAmountSingle"] ;
+          $eventDataRegularTicketPriceCouple = $row["regularTicketPriceCouple"] ;
+          $eventDataRegularTicketAmountCouple = $row["regularTicketAmountCouple"] ;
+        
+          $eventDataSpecialType1RegistrationEnabled = $row["specialType1RegistrationEnabled"] ;
+          $eventDataSpecialType1RegistrationName = $row["specialType1RegistrationName"] ;
+          $eventDataSpecialType1RegistrationsStartDate = $row["specialType1RegistrationsStartDate"] ;
+          $eventDataSpecialType1RegistrationsEndDate = $row["specialType1RegistrationsEndDate"] ;
+          $eventDataSpecialType1TicketPriceSingle = $row["specialType1TicketPriceSingle"] ;
+          $eventDataSpecialType1TicketAmountSingle = $row["specialType1TicketAmountSingle"] ;
+          $eventDataSpecialType1TicketPriceCouple = $row["specialType1TicketPriceCouple"] ;
+          $eventDataSpecialType1TicketAmountCouple = $row["specialType1TicketAmountCouple"] ;
+        
+          $eventDataSpecialType2RegistrationEnabled = $row["specialType2RegistrationEnabled"] ;
+          $eventDataSpecialType2RegistrationName = $row["specialType2RegistrationName"] ;
+          $eventDataSpecialType2RegistrationsStartDate = $row["specialType2RegistrationsStartDate"] ;
+          $eventDataSpecialType2RegistrationsEndDate = $row["specialType2RegistrationsEndDate"] ;
+          $eventDataSpecialType2TicketPriceSingle = $row["specialType2TicketPriceSingle"] ; 
+          $eventDataSpecialType2TicketAmountSingle = $row["specialType2TicketAmountSingle"] ;
+          $eventDataSpecialType2TicketPriceCouple = $row["specialType2TicketPriceCouple"] ;
+          $eventDataSpecialType2TicketAmountCouple = $row["specialType2TicketAmountCouple"] ;
 
         }
         echo "";

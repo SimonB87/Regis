@@ -23,16 +23,47 @@ if(isset($_POST["safe_form_data"])){
     $eventStartDate = mysqli_real_escape_string($connector, $_POST["eventStartDate"]);
     $eventEndDate = mysqli_real_escape_string($connector, $_POST["eventEndDate"]);
     $enableCoupleTicket = mysqli_real_escape_string($connector, $_POST["enableCoupleTicket"]);
+    $enableCoupleTicket = "Yes";
 
     $earlyBirdsRegistrationEnabled = mysqli_real_escape_string($connector, $_POST["earlyBirdsRegistrationEnabled"]);
+    $earlyBirdsRegistrationEnabled = "Yes";
     $earlyBirdsRegistrationName = mysqli_real_escape_string($connector, $_POST["earlyBirdsRegistrationName"]);
     $earlyBirdsRegistrationsStartDate = mysqli_real_escape_string($connector, $_POST["earlyBirdsRegistrationsStartDate"]);
     $earlyBirdsRegistrationsEndDate = mysqli_real_escape_string($connector, $_POST["earlyBirdsRegistrationsEndDate"]);
-
-    $ticketsAmountEarlyBirdsRegistrationsSingle  = mysqli_real_escape_string($connector, $_POST["ticketsAmountEarlyBirdsRegistrationsSingle"]);
+    $ticketsAmountEarlyBirdsRegistrationsSingle = mysqli_real_escape_string($connector, $_POST["ticketsAmountEarlyBirdsRegistrationsSingle"]);
     $earlyBirdsTicketPriceSingle = mysqli_real_escape_string($connector, $_POST["earlyBirdsTicketPriceSingle"]);
     $earlyBirdsTicketPriceCouple = mysqli_real_escape_string($connector, $_POST["earlyBirdsTicketPriceCouple"]);
     $earlyBirdsTicketAmountCouple = mysqli_real_escape_string($connector, $_POST["earlyBirdsTicketAmountCouple"]);
+
+    $regularRegistrationEnabled = mysqli_real_escape_string($connector, $_POST["regularRegistrationEnabled"]);
+    $regularRegistrationEnabled = "Yes";
+    $regularRegistrationName = mysqli_real_escape_string($connector, $_POST["regularRegistrationName"]);
+    $regularRegistrationsStartDate = mysqli_real_escape_string($connector, $_POST["regularRegistrationsStartDate"]);
+    $regularRegistrationsEndDate = mysqli_real_escape_string($connector, $_POST["regularRegistrationsEndDate"]);
+    $regularTicketPriceSingle = mysqli_real_escape_string($connector, $_POST["regularTicketPriceSingle"]);
+    $regularTicketAmountSingle = mysqli_real_escape_string($connector, $_POST["regularTicketAmountSingle"]);
+    $regularTicketPriceCouple = mysqli_real_escape_string($connector, $_POST["regularTicketPriceCouple"]);
+    $regularTicketAmountCouple = mysqli_real_escape_string($connector, $_POST["regularTicketAmountCouple"]);
+
+    $specialType1RegistrationEnabled = mysqli_real_escape_string($connector, $_POST["specialType1RegistrationEnabled"]);
+    $specialType1RegistrationEnabled = "Yes";
+    $specialType1RegistrationName = mysqli_real_escape_string($connector, $_POST["specialType1RegistrationName"]);
+    $specialType1RegistrationsStartDate = mysqli_real_escape_string($connector, $_POST["specialType1RegistrationsStartDate"]);
+    $specialType1RegistrationsEndDate = mysqli_real_escape_string($connector, $_POST["specialType1RegistrationsEndDate"]);
+    $specialType1TicketPriceSingle = mysqli_real_escape_string($connector, $_POST["specialType1TicketPriceSingle"]);
+    $specialType1TicketAmountSingle = mysqli_real_escape_string($connector, $_POST["specialType1TicketAmountSingle"]);
+    $specialType1TicketPriceCouple = mysqli_real_escape_string($connector, $_POST["specialType1TicketPriceCouple"]);
+    $specialType1TicketAmountCouple  = mysqli_real_escape_string($connector, $_POST["specialType1TicketAmountCouple"]);
+
+    $specialType2RegistrationEnabled = mysqli_real_escape_string($connector, $_POST["specialType2RegistrationEnabled"]);
+    $specialType2RegistrationEnabled = "Yes";
+    $specialType2RegistrationName = mysqli_real_escape_string($connector, $_POST["specialType2RegistrationName"]);
+    $specialType2RegistrationsStartDate = mysqli_real_escape_string($connector, $_POST["specialType2RegistrationsStartDate"]);
+    $specialType2RegistrationsEndDate = mysqli_real_escape_string($connector, $_POST["specialType2RegistrationsEndDate"]);
+    $specialType2TicketPriceSingle = mysqli_real_escape_string($connector, $_POST["specialType2TicketPriceSingle"]);
+    $specialType2TicketAmountSingle = mysqli_real_escape_string($connector, $_POST["specialType2TicketAmountSingle"]);
+    $specialType2TicketPriceCouple = mysqli_real_escape_string($connector, $_POST["specialType2TicketPriceCouple"]);
+    $specialType2TicketAmountCouple = mysqli_real_escape_string($connector, $_POST["specialType2TicketAmountCouple"]);
 
 /*  // fix ID for Wedos DB
     
@@ -69,7 +100,9 @@ if(isset($_POST["safe_form_data"])){
     if(isset($_POST["newEventBoolean"])) {
       $newEventBoolean = mysqli_real_escape_string($connector, $_POST["newEventBoolean"]);
       if($newEventBoolean == "on") {
-        $query = mysqli_query($connector, "INSERT INTO events (eventStatus, eventName, eventStartDate, eventEndDate, enableCoupleTicket, earlyBirdsRegistrationEnabled, earlyBirdsRegistrationName, earlyBirdsRegistrationsStartDate, earlyBirdsRegistrationsEndDate, ticketsAmountEarlyBirdsRegistrationsSingle , earlyBirdsTicketPriceSingle, earlyBirdsTicketPriceCouple, earlyBirdsTicketAmountCouple) VALUES ('$eventStatus', '$eventName', '$eventStartDate', '$eventEndDate', '$enableCoupleTicket', '$earlyBirdsRegistrationEnabled', '$earlyBirdsRegistrationName', '$earlyBirdsRegistrationsStartDate', '$earlyBirdsRegistrationsEndDate', '$earlyBirdsTicketPriceSingle', '$earlyBirdsTicketPriceSingle', '$earlyBirdsTicketPriceCouple', '$earlyBirdsTicketAmountCouple')");
+        $query = mysqli_query($connector, 
+        "INSERT INTO events (eventStatus, eventName, eventStartDate, eventEndDate, enableCoupleTicket, earlyBirdsRegistrationEnabled, earlyBirdsRegistrationName, earlyBirdsRegistrationsStartDate, earlyBirdsRegistrationsEndDate, ticketsAmountEarlyBirdsRegistrationsSingle , earlyBirdsTicketPriceSingle, earlyBirdsTicketPriceCouple, earlyBirdsTicketAmountCouple, regularRegistrationEnabled, regularRegistrationName, regularRegistrationsStartDate, regularRegistrationsEndDate, regularTicketPriceSingle, regularTicketAmountSingle, regularTicketPriceCouple, regularTicketAmountCouple, specialType1RegistrationEnabled, specialType1RegistrationName, specialType1RegistrationsStartDate, specialType1RegistrationsEndDate, specialType1TicketPriceSingle, specialType1TicketAmountSingle, specialType1TicketPriceCouple, specialType1TicketAmountCouple, specialType2RegistrationEnabled, specialType2RegistrationName, specialType2RegistrationsStartDate, specialType2RegistrationsEndDate, specialType2TicketPriceSingle, specialType2TicketAmountSingle, specialType2TicketPriceCouple, specialType2TicketAmountCouple) 
+        VALUES ('$eventStatus', '$eventName', '$eventStartDate', '$eventEndDate', '$enableCoupleTicket', '$earlyBirdsRegistrationEnabled', '$earlyBirdsRegistrationName', '$earlyBirdsRegistrationsStartDate', '$earlyBirdsRegistrationsEndDate', '$earlyBirdsTicketPriceSingle', '$earlyBirdsTicketPriceSingle', '$earlyBirdsTicketPriceCouple', '$earlyBirdsTicketAmountCouple', '$regularRegistrationEnabled', '$regularRegistrationName', '$regularRegistrationsStartDate', '$regularRegistrationsEndDate', '$regularTicketPriceSingle', '$regularTicketAmountSingle', '$regularTicketPriceCouple', '$regularTicketAmountCouple', '$specialType1RegistrationEnabled', '$specialType1RegistrationName', '$specialType1RegistrationsStartDate', '$specialType1RegistrationsEndDate', '$specialType1TicketPriceSingle', '$specialType1TicketAmountSingle', '$specialType1TicketPriceCouple', '$specialType1TicketAmountCouple', '$specialType2RegistrationEnabled', '$specialType2RegistrationName', '$specialType2RegistrationsStartDate', '$specialType2RegistrationsEndDate', '$specialType2TicketPriceSingle', '$specialType2TicketAmountSingle', '$specialType2TicketPriceCouple', '$specialType2TicketAmountCouple')");
 
         // fix ID for Wedos DB
         //$query = mysqli_query($connector, "INSERT INTO events (id, eventStatus, eventName, eventStartDate, eventEndDate, enableCoupleTicket) VALUES ('$id','$eventStatus', '$eventName', '$eventStartDate', '$eventEndDate', '$enableCoupleTicket')");
