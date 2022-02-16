@@ -1,14 +1,3 @@
-/*
-function toggleVisibility(icon, section) {
-
-  const elements = document.querySelectorAll(`.${icon}, .${section}`);
-
-  elements.forEach(function(item) {
-    item.classList.toggle("hiddenSection");
-  });
-}*/
-
-/** TODO - show / hide refactor -  **/
 $(document).ready(function(){
 
   var segments = $(".show-segment--icon");
@@ -26,35 +15,18 @@ $(document).ready(function(){
 
   }
 
-  // hode/show
-  $(".section-icon-1").click(function(){
-    $(".section-form-1").slideToggle();
-    $(".section-icon-1").toggle();
-  });
+    // hide/show segments
+    $(".show-segment--icon").click(function(){
+      var _this = this;
+      var classes = _this.classList;
+      classes.remove("show-segment--icon");
+      var classItem = classes[0];
+      var targetIndex = classItem[ classItem.length - 1 ];
 
-  $(".section-icon-2").click(function(){
-    $(".section-form-2").slideToggle();
-    $(".section-icon-2").toggle();
-  });
+      $(".section-form-" + targetIndex).slideToggle();
+      $(".section-icon-" + targetIndex).toggle();
 
-  $(".section-icon-3").click(function(){
-    $(".section-form-3").slideToggle();
-    $(".section-icon-3").toggle();
-  });
-
-  $(".section-icon-4").click(function(){
-    $(".section-form-4").slideToggle();
-    $(".section-icon-4").toggle();
-  });
-
-  $(".section-icon-5").click(function(){
-    $(".section-form-5").slideToggle();
-    $(".section-icon-5").toggle();
-  });
-
-  $(".section-icon-6").click(function(){
-    $(".section-form-6").slideToggle();
-    $(".section-icon-6").toggle();
-  });
+      _this.classList.add("show-segment--icon");
+    });
 
 });
