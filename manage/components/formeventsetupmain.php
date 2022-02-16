@@ -435,10 +435,49 @@
       </div>
     </div>
 
-    <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top"> <strong> Special type 1 Registrations </strong> 
+    <!-- TODO Party Passes -->
+    <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top"> <strong> Party Pass Registrations </strong> 
       <span class="show-segment">
         <span class="show-segment--icon section-icon-4"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
         <span class="show-segment--icon section-icon-4"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
+      </span>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
+      <div class="form-check mb-3">
+         <input class="form-check-input" type="checkbox" id="specialType1RegistrationEnabled" name="specialType1RegistrationEnabled" <?php if($isEventEdited) { /*if( $eventDataPartyRegistrationEnabled == "Yes") { echo "checked"; }*/ } ?> >
+          <label class="form-check-label" for="specialType1RegistrationEnabled">
+             Party Pass Registrations
+          </label>
+        </div>
+    </div>
+
+    <div class="col-12 section-form-4"> 
+      <div class="row">
+
+        <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
+        Party Pass Data
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
+        Party Pass Data
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
+        Party Pass Data
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
+        Party Pass Data
+        </div>
+
+       </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top"> <strong> Special type 1 Registrations </strong> 
+      <span class="show-segment">
+        <span class="show-segment--icon section-icon-5"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
+        <span class="show-segment--icon section-icon-5"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
       </span>
     </div>
 
@@ -451,7 +490,7 @@
         </div>
     </div>
 
-    <div class="col-12 section-form-4"> 
+    <div class="col-12 section-form-5"> 
       <div class="row">
 
         <div class="col-lg-12 col-md-12 col-sm-12 padding-small">
@@ -551,8 +590,8 @@
 
     <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top"> <strong> Special type 2 Registrations </strong> 
       <span class="show-segment">
-        <span class="show-segment--icon section-icon-5"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
-        <span class="show-segment--icon section-icon-5"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
+        <span class="show-segment--icon section-icon-6"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
+        <span class="show-segment--icon section-icon-6"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
       </span>
     </div>
 
@@ -565,7 +604,7 @@
         </div>
     </div>
 
-    <div class="col-12 section-form-5"> 
+    <div class="col-12 section-form-6"> 
       <div class="row">
 
         <div class="col-lg-12 col-md-12 col-sm-12  padding-small">
