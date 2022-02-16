@@ -1,6 +1,17 @@
 //Edit events table. Create regular event columns
 
 ALTER TABLE `events` 
+ADD earlyBirdsRegistrationEnabled varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
+ADD earlyBirdsRegistrationName varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
+ADD earlyBirdsRegistrationsStartDate varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
+ADD earlyBirdsRegistrationsEndDate varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
+ADD ticketsAmountEarlyBirdsRegistrationsSingle int(250) , 
+ADD earlyBirdsTicketPriceSingle int(250) , 
+ADD earlyBirdsTicketPriceCouple int(250) , 
+ADD earlyBirdsTicketAmountCouple int(250) ;
+
+
+ALTER TABLE `events` 
 ADD regularRegistrationEnabled varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
 ADD regularRegistrationName varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
 ADD regularRegistrationsStartDate varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
