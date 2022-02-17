@@ -122,15 +122,16 @@
         </div>
 
         <!-- TODO Enable promocodes for discounts -> dynamical with JS opens promo codes for discounts -->
-          <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-          
+<!--
+        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="form-check mb-3">
             <input class="form-check-input" type="checkbox" id="enableCoupleTicket" name="enableCoupleTicket" required >
             <label class="form-check-label" for="enableCoupleTicket">
               Enable promo codes for discounts
             </label>
           </div>
-        </div>
+        </div> 
+-->
 
       </div>
     </div>
@@ -154,33 +155,36 @@
 
     <div class="col-12 section-form-2"> 
       <div class="row">
-
-        <div class="col-lg-12 col-md-12 col-sm-12 rounded padding-medium-1x3 shadow-light">
-          <div class="form-floating">
-            <input type="text" class="form-control" id="earlyBirdsRegistrationName" name="earlyBirdsRegistrationName" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataEarlyBirdsRegistrationName . "'"; } ?> >
-            <label for="earlyBirdsRegistrationName">Early Birds Registration Name</label>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-            <div class="invalid-feedback">
-              Please fill in valid value.
+        <div class="col-12 padding-topBottom-medium-0x5"> 
+          <div class="row rounded padding-small shadow-light">
+            <div class="col-12 rounded padding-small-topBottom">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="earlyBirdsRegistrationName" name="earlyBirdsRegistrationName" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataEarlyBirdsRegistrationName . "'"; } ?> >
+                <label for="earlyBirdsRegistrationName">Early Birds Registration Name</label>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in valid value.
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-12 padding-medium-1x3"> 
+        <div class="col-12 padding-topBottom-medium-0x5"> 
           <div class="row rounded padding-small shadow-light">
 
             <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-            <div class="form-floating">
-              <input type="date" class="form-control" id="earlyBirdsRegistrationsStartDate" name="earlyBirdsRegistrationsStartDate" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataEarlyBirdsRegistrationsStartDate . "'"; } ?> >
-              <label for="earlyBirdsRegistrationsStartDate">Tickets - Early Birds Registrations Start Date</label>
-              <div class="valid-feedback">
-                Looks good!
-              </div>
-              <div class="invalid-feedback">
-                Please fill in valid value.
-              </div>
+              <div class="form-floating">
+                <input type="date" class="form-control" id="earlyBirdsRegistrationsStartDate" name="earlyBirdsRegistrationsStartDate" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataEarlyBirdsRegistrationsStartDate . "'"; } ?> >
+                <label for="earlyBirdsRegistrationsStartDate">Tickets - Early Birds Registrations Start Date</label>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in valid value.
+                </div>
             </div>
           </div>
 
@@ -200,7 +204,7 @@
           </div>
         </div>
 
-        <div class="col-12 padding-medium-1x3"> 
+        <div class="col-12 padding-topBottom-medium-0x5"> 
           <div class="row rounded padding-small shadow-light">
 
             <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
@@ -232,7 +236,7 @@
           </div>
         </div>
 
-        <div class="col-12 padding-medium-1x3"> 
+        <div class="col-12 padding-topBottom-medium-0x5"> 
           <div class="row rounded padding-small shadow-light">
 
           <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
@@ -264,6 +268,7 @@
           </div>
         </div>
 
+<!--
         <div class="col-12 padding-medium-1x3"> 
           <div class="row rounded padding-small shadow-light">
             <div class="col-lg-3 col-md-6 col-sm-12 padding-small">
@@ -317,6 +322,7 @@
 
           </div>
         </div>
+-->
 
       </div>
     </div>
