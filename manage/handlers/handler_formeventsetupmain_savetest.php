@@ -69,23 +69,42 @@ if(isset($_POST["safe_form_data"])){
 
     if(isset($_POST["newEventBoolean"])) {
       $newEventBoolean = mysqli_real_escape_string($connector, $_POST["newEventBoolean"]);
-      if($newEventBoolean == "on") {
+      if(strtolower($newEventBoolean) == "on") { //save a new event
         $query = mysqli_query($connector, 
         "INSERT INTO events (eventStatus, eventName, eventStartDate, eventEndDate, enableCoupleTicket, earlyBirdsRegistrationEnabled, earlyBirdsRegistrationName, earlyBirdsRegistrationsStartDate, earlyBirdsRegistrationsEndDate, ticketsAmountEarlyBirdsRegistrationsSingle , earlyBirdsTicketPriceSingle, earlyBirdsTicketPriceCouple, earlyBirdsTicketAmountCouple, regularRegistrationEnabled, regularRegistrationName, regularRegistrationsStartDate, regularRegistrationsEndDate, regularTicketPriceSingle, regularTicketAmountSingle, regularTicketPriceCouple, regularTicketAmountCouple, specialType1RegistrationEnabled, specialType1RegistrationName, specialType1RegistrationsStartDate, specialType1RegistrationsEndDate, specialType1TicketPriceSingle, specialType1TicketAmountSingle, specialType1TicketPriceCouple, specialType1TicketAmountCouple, specialType2RegistrationEnabled, specialType2RegistrationName, specialType2RegistrationsStartDate, specialType2RegistrationsEndDate, specialType2TicketPriceSingle, specialType2TicketAmountSingle, specialType2TicketPriceCouple, specialType2TicketAmountCouple) 
-        VALUES ('$eventStatus', '$eventName', '$eventStartDate', '$eventEndDate', '$enableCoupleTicket', '$earlyBirdsRegistrationEnabled', '$earlyBirdsRegistrationName', '$earlyBirdsRegistrationsStartDate', '$earlyBirdsRegistrationsEndDate', '$earlyBirdsTicketPriceSingle', '$earlyBirdsTicketPriceSingle', '$earlyBirdsTicketPriceCouple', '$earlyBirdsTicketAmountCouple', '$regularRegistrationEnabled', '$regularRegistrationName', '$regularRegistrationsStartDate', '$regularRegistrationsEndDate', '$regularTicketPriceSingle', '$regularTicketAmountSingle', '$regularTicketPriceCouple', '$regularTicketAmountCouple', '$specialType1RegistrationEnabled', '$specialType1RegistrationName', '$specialType1RegistrationsStartDate', '$specialType1RegistrationsEndDate', '$specialType1TicketPriceSingle', '$specialType1TicketAmountSingle', '$specialType1TicketPriceCouple', '$specialType1TicketAmountCouple', '$specialType2RegistrationEnabled', '$specialType2RegistrationName', '$specialType2RegistrationsStartDate', '$specialType2RegistrationsEndDate', '$specialType2TicketPriceSingle', '$specialType2TicketAmountSingle', '$specialType2TicketPriceCouple', '$specialType2TicketAmountCouple')");
+        VALUES ('$eventStatus', '$eventName', '$eventStartDate', '$eventEndDate', '$enableCoupleTicket', '$earlyBirdsRegistrationEnabled', '$earlyBirdsRegistrationName', '$earlyBirdsRegistrationsStartDate', '$earlyBirdsRegistrationsEndDate', '$ticketsAmountEarlyBirdsRegistrationsSingle', '$earlyBirdsTicketPriceSingle', '$earlyBirdsTicketPriceCouple', '$earlyBirdsTicketAmountCouple', '$regularRegistrationEnabled', '$regularRegistrationName', '$regularRegistrationsStartDate', '$regularRegistrationsEndDate', '$regularTicketPriceSingle', '$regularTicketAmountSingle', '$regularTicketPriceCouple', '$regularTicketAmountCouple', '$specialType1RegistrationEnabled', '$specialType1RegistrationName', '$specialType1RegistrationsStartDate', '$specialType1RegistrationsEndDate', '$specialType1TicketPriceSingle', '$specialType1TicketAmountSingle', '$specialType1TicketPriceCouple', '$specialType1TicketAmountCouple', '$specialType2RegistrationEnabled', '$specialType2RegistrationName', '$specialType2RegistrationsStartDate', '$specialType2RegistrationsEndDate', '$specialType2TicketPriceSingle', '$specialType2TicketAmountSingle', '$specialType2TicketPriceCouple', '$specialType2TicketAmountCouple')");
 
-        $item = "New event \"" . $eventName . "\" was saved.";
+        $item = null;
+        if ($query) {
+          $item = "New event \"" . $eventName . "\" was saved.";
+        } else {
+          $item = "New event \"" . $eventName . "\" failed to be save.";
+        }
         echo "<div id='notification_new1' class='notification'>" . $item . " <span class=\"notification--close\" onclick=\"hideNotification('notification_new1');\" > X </span>" . "</div>";
+
       }
     } else {
-      //TODO - update current event
+      //update current event
+      $query = mysqli_query($connector,
+      "UPDATE events SET 
+        eventStatus = '$eventStatus', eventName = '$eventName', eventStartDate = '$eventStartDate', eventEndDate = '$eventEndDate', enableCoupleTicket = '$enableCoupleTicket', earlyBirdsRegistrationEnabled = '$earlyBirdsRegistrationEnabled', earlyBirdsRegistrationName = '$earlyBirdsRegistrationName', earlyBirdsRegistrationsStartDate = '$earlyBirdsRegistrationsStartDate', earlyBirdsRegistrationsEndDate = '$earlyBirdsRegistrationsEndDate', ticketsAmountEarlyBirdsRegistrationsSingle = '$ticketsAmountEarlyBirdsRegistrationsSingle', earlyBirdsTicketPriceSingle = '$earlyBirdsTicketPriceSingle', earlyBirdsTicketPriceCouple = '$earlyBirdsTicketPriceCouple', earlyBirdsTicketAmountCouple = '$earlyBirdsTicketAmountCouple', regularRegistrationEnabled = '$regularRegistrationEnabled', regularRegistrationName = '$regularRegistrationName', regularRegistrationsStartDate = '$regularRegistrationsStartDate', regularRegistrationsEndDate = '$regularRegistrationsEndDate', regularTicketPriceSingle = '$regularTicketPriceSingle', regularTicketAmountSingle = '$regularTicketAmountSingle', regularTicketPriceCouple = '$regularTicketPriceCouple', regularTicketAmountCouple = '$regularTicketAmountCouple', specialType1RegistrationEnabled = '$specialType1RegistrationEnabled', specialType1RegistrationName = '$specialType1RegistrationName', specialType1RegistrationsStartDate = '$specialType1RegistrationsStartDate', specialType1RegistrationsEndDate = '$specialType1RegistrationsEndDate', specialType1TicketPriceSingle = '$specialType1TicketPriceSingle', specialType1TicketAmountSingle = '$specialType1TicketAmountSingle', specialType1TicketPriceCouple = '$specialType1TicketPriceCouple', specialType1TicketAmountCouple = '$specialType1TicketAmountCouple', specialType2RegistrationEnabled = '$specialType2RegistrationEnabled', specialType2RegistrationName = '$specialType2RegistrationName', specialType2RegistrationsStartDate = '$specialType2RegistrationsStartDate', specialType2RegistrationsEndDate = '$specialType2RegistrationsEndDate', specialType2TicketPriceSingle = '$specialType2TicketPriceSingle', specialType2TicketAmountSingle = '$specialType2TicketAmountSingle', specialType2TicketPriceCouple = '$specialType2TicketPriceCouple', specialType2TicketAmountCouple = '$specialType2TicketAmountCouple'
+      WHERE id = $eventID");
+
+      $item = null;
+      if ($query) {
+        $item = "Current event \"" . $eventName . "\" was updated.";
+      } else {
+        $item = "Current event \"" . $eventName . "\" FAILED to update.";
+        echo(mysqli_error($connector));
+      }
+      echo "<div id='notification_new1' class='notification'>" . $item . " <span class=\"notification--close\" onclick=\"hideNotification('notification_new1');\" > X </span>" . "</div>";
     }
 
     // Clear array of POST
     $_POST = array();
 
   } else {
-    echo "user has no save rights";
+    echo "User has no save rights";
   }
 
 
