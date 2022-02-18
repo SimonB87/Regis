@@ -21,8 +21,8 @@
       <div class="row"> 
 
         <div class="col-lg-3 col-md-6 col-sm-12 padding-small">
-          <div class="form-floating">
-            <input type="number" class="form-control" id="eventID" disabled name="eventID" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataId . "'"; } ?> >
+          <div class="form-floating disabled">
+            <input type="number" class="form-control bg-disabled" id="eventID" name="eventID" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataId . "'"; } ?> >
             <label for="eventID">Event ID (Filled automatically)</label>
             <div class="valid-feedback">
               Looks good!
@@ -54,7 +54,7 @@
           </div>
         </div>
 
-        <div class="col-lg-5 col-md-12 col-sm-12 padding-small border-dark  disabled">
+        <div class="col-lg-5 col-md-12 col-sm-12 padding-small border-dark disabled">
           <div class="form-check mb-3 rounded bg-disabled height-60px">
           <?php
               //find URL of the current page
@@ -709,7 +709,7 @@
     </div>
 
     <div class="col-12">
-      <input class="btn btn-primary" type="submit" name="safe_form_data" value="Save">
+      <input class="btn btn-primary" type="submit" name="safe_form_data" value=<?php if ($position === false) { echo "Update"; } else {echo "Submit";} ?> >
     </div>
 
   </div>
