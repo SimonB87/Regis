@@ -31,6 +31,15 @@
   $eventDataRegularTicketPriceCouple = null;
   $eventDataRegularTicketAmountCouple = null;
 
+  $partyRegistrationEnabled = null;
+  $partyRegistrationName = null;
+  $partyRegistrationsStartDate = null;
+  $partyRegistrationsEndDate = null;
+  $partyTicketPriceSingle = null;
+  $partyTicketAmountSingle = null;
+  $partyTicketPriceCouple = null;
+  $partyTicketAmountCouple = null;
+
   $eventDataSpecialType1RegistrationEnabled = null;
   $eventDataSpecialType1RegistrationName = null;
   $eventDataSpecialType1RegistrationsStartDate = null;
@@ -111,7 +120,16 @@
           $eventDataRegularTicketAmountSingle = $row["regularTicketAmountSingle"] ;
           $eventDataRegularTicketPriceCouple = $row["regularTicketPriceCouple"] ;
           $eventDataRegularTicketAmountCouple = $row["regularTicketAmountCouple"] ;
-        
+
+          $partyRegistrationEnabled = $row["partyRegistrationEnabled"] ;
+          $partyRegistrationName = $row["partyRegistrationName"] ;
+          $partyRegistrationsStartDate = $row["partyRegistrationsStartDate"] ;
+          $partyRegistrationsEndDate = $row["partyRegistrationsEndDate"] ;
+          $partyTicketPriceSingle = $row["partyTicketPriceSingle"] ;
+          $partyTicketAmountSingle = $row["partyTicketAmountSingle"] ;
+          $partyTicketPriceCouple = $row["partyTicketPriceCouple"] ;
+          $partyTicketAmountCouple = $row["partyTicketAmountCouple"] ;
+
           $eventDataSpecialType1RegistrationEnabled = $row["specialType1RegistrationEnabled"] ;
           $eventDataSpecialType1RegistrationName = $row["specialType1RegistrationName"] ;
           $eventDataSpecialType1RegistrationsStartDate = $row["specialType1RegistrationsStartDate"] ;

@@ -481,9 +481,9 @@
 
     <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
       <div class="form-check mb-3">
-         <input class="form-check-input" type="checkbox" id="specialType1RegistrationEnabled" name="specialType1RegistrationEnabled" <?php if($isEventEdited) { /*if( $eventDataPartyRegistrationEnabled == "Yes") { echo "checked"; }*/ } ?> >
-          <label class="form-check-label" for="specialType1RegistrationEnabled">
-             Party Pass Registrations
+         <input class="form-check-input" type="checkbox" id="partyRegistrationEnabled" name="partyRegistrationEnabled" <?php if($isEventEdited) { /*if( $eventDataPartyRegistrationEnabled == "Yes") { echo "checked"; }*/ } ?> >
+          <label class="form-check-label" for="partyRegistrationEnabled">
+            Enable Pass Registrations
           </label>
         </div>
     </div>
@@ -491,20 +491,96 @@
     <div class="col-12 section-form-4"> 
       <div class="row">
 
-        <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
-        Party Pass Data
+      <div class="col-lg-12 col-md-12 col-sm-12 padding-small">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="partyRegistrationName" name="partyRegistrationName" maxlength="250" <?php if($isEventEdited) {echo "value='" . $partyRegistrationName . "'"; } ?> >
+            <label for="partyRegistrationName"> Regular Registration Name</label>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please fill in valid value.
+            </div>
+          </div>
         </div>
 
         <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
-        Party Pass Data
+          <div class="form-floating">
+            <input type="date" class="form-control" id="partyRegistrationsStartDate" name="partyRegistrationsStartDate" maxlength="250" <?php if($isEventEdited) {echo "value='" . $partyRegistrationsStartDate . "'"; } ?> >
+            <label for="partyRegistrationsStartDate">Regular Registrations Start Date</label>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please fill in valid value.
+            </div>
+          </div>
         </div>
 
         <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
-        Party Pass Data
+          <div class="form-floating">
+            <input type="date" class="form-control" id="partyRegistrationsEndDate" name="partyRegistrationsEndDate" maxlength="250" <?php if($isEventEdited) {echo "value='" . $partyRegistrationsEndDate . "'"; } ?> >
+            <label for="partyRegistrationsEndDate">Regular Registrations End Date</label>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please fill in valid value.
+            </div>
+          </div>
         </div>
 
-        <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
-        Party Pass Data
+        <!-- TODO ticket prices -->
+        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+          <div class="form-floating">
+              <input type="number" class="form-control" id="partyTicketPriceSingle" name="partyTicketPriceSingle" maxlength="250" <?php if($isEventEdited) {echo "value='" . $partyTicketPriceSingle . "'"; } ?> >
+              <label for="partyTicketPriceSingle">Regular Registration Ticket Price - Single</label>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please fill in valid value.
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+          <div class="form-floating">
+              <input type="number" class="form-control" id="partyTicketAmountSingle" name="partyTicketAmountSingle" maxlength="1000" <?php if($isEventEdited) {echo "value='" . $partyTicketAmountSingle . "'"; } ?> >
+              <label for="partyTicketAmountSingle">Regular Registration Ticket Amount - Single</label>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please fill in valid value.
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+          <div class="form-floating">
+              <input type="number" class="form-control" id="partyTicketPriceCouple" name="partyTicketPriceCouple" maxlength="250" <?php if($isEventEdited) {echo "value='" . $partyTicketPriceCouple . "'"; } ?> >
+              <label for="partyTicketPriceCouple">Regular Registration Ticket Price - Couple</label>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please fill in valid value.
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+          <div class="form-floating">
+              <input type="number" class="form-control" id="partyTicketAmountCouple" name="partyTicketAmountCouple" maxlength="1000" <?php if($isEventEdited) {echo "value='" . $partyTicketAmountCouple . "'"; } ?> >
+              <label for="partyTicketAmountCouple">Regular Registration Ticket Amount - Couple</label>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please fill in valid value.
+              </div>
+            </div>
         </div>
 
        </div>

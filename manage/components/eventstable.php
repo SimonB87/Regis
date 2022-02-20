@@ -28,6 +28,15 @@
       <th class="footable-sortable" data-breakpoints="all"> Regular Registration Ticket Price - Couple </th> 
       <th class="footable-sortable" data-breakpoints="all"> Regular Registration Ticket Amount - Couple </th> 
 
+      <th class="footable-sortable" data-breakpoints="xs sm"> Party registrations enabled </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Party Registrations Name </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Party Registrations Start Date </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Party Registrations End Date </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Party Registration Ticket Price - Single </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Party Registration Ticket Amount - Single </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Party Registration Ticket Price - Couple </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Party Registration Ticket Amount - Couple </th> 
+
       <th class="footable-sortable" data-breakpoints="xs sm"> Special type 1 registrations enabled </th> 
       <th class="footable-sortable" data-breakpoints="all"> Special type 1 Registrations Name </th> 
       <th class="footable-sortable" data-breakpoints="all"> Special type 1 Registrations Start Date </th> 
@@ -89,13 +98,20 @@
     if ($results-> num_rows > 0 ) {
       while ($row = $results-> fetch_assoc()) {
 
-          echo "<tr>" . "<td>" . $row["id"] . "</td><td>" . $row["eventStatus"] . "</td><td>" . $row["eventName"]  . "</td><td>" . $row["eventStartDate"] ."</td><td>" . $row["eventEndDate"] . "</td> <td>" . $row["enableCoupleTicket"] . "</td>" . 
+          echo "<tr>" . 
+              "<td>" . $row["id"] . "</td><td>" . $row["eventStatus"] . "</td><td>" . $row["eventName"]  . "</td><td>" . $row["eventStartDate"] ."</td><td>" . $row["eventEndDate"] . "</td> <td>" . $row["enableCoupleTicket"] . "</td>" . 
               "<td>" . $row["earlyBirdsRegistrationEnabled"] . "</td> <td>" . $row["earlyBirdsRegistrationName"] . "</td> <td>" . $row["earlyBirdsRegistrationsStartDate"] . "</td> <td>" . $row["earlyBirdsRegistrationsEndDate"] . 
+
               "</td> <td>" . $row["earlyBirdsTicketPriceSingle"] . "</td> <td>" . $row["ticketsAmountEarlyBirdsRegistrationsSingle"] . "</td> <td>" . $row["earlyBirdsTicketPriceCouple"] . "</td> <td>" . $row["earlyBirdsTicketAmountCouple"] . 
               "</td> <td>" . $row["regularRegistrationEnabled"] . "</td> <td>" . $row["regularRegistrationName"] . "</td> <td>" . $row["regularRegistrationsStartDate"] . "</td> <td>" . $row["regularRegistrationsEndDate"] . "</td> <td>" . $row["regularTicketPriceSingle"] . "</td> <td>" . $row["regularTicketAmountSingle"] . "</td> <td>" . $row["regularTicketPriceCouple"] . "</td> <td>" . $row["regularTicketAmountCouple"] .
+              
+              "</td> <td>" . $row["partyRegistrationEnabled"] . "</td> <td>" . $row["partyRegistrationName"] . "</td> <td>" . $row["partyRegistrationsStartDate"] . "</td> <td>" . $row["partyRegistrationsEndDate"] . "</td> <td>" . $row["partyTicketPriceSingle"] . "</td> <td>" . $row["partyTicketAmountSingle"] . "</td> <td>" . $row["partyTicketPriceCouple"] . "</td> <td>" . $row["partyTicketAmountCouple"] .
+
               "</td> <td>" . $row["specialType1RegistrationEnabled"] . "</td> <td>" . $row["specialType1RegistrationName"] . "</td> <td>" . $row["specialType1RegistrationsStartDate"] . "</td> <td>" . $row["specialType1RegistrationsEndDate"] . "</td> <td>" . $row["specialType1TicketPriceSingle"] . "</td> <td>" . $row["specialType1TicketAmountSingle"] . "</td> <td>" . $row["specialType1TicketPriceCouple"] . "</td> <td>" . $row["specialType1TicketAmountCouple"] .
+
               "</td> <td>" . $row["specialType2RegistrationEnabled"] . "</td> <td>" . $row["specialType2RegistrationName"] . "</td> <td>" . $row["specialType2RegistrationsStartDate"] . "</td> <td>" . $row["specialType2RegistrationsEndDate"] . "</td> <td>" . $row["specialType2TicketPriceSingle"] . "</td> <td>" . $row["specialType2TicketAmountSingle"] . "</td> <td>" . $row["specialType2TicketPriceCouple"] . "</td> <td>" . $row["specialType2TicketAmountCouple"] .
-              "</td>" . "</tr>";
+              "</td>" . 
+              "</tr>";
       }
       echo "";
   }
