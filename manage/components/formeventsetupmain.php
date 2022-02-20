@@ -6,7 +6,7 @@
     echo "<div class='row full-width'><div class='col-12'><button type='button' class='btn btn-warning t-test' style='float:right;' onclick='prefillForm();'>Prefill form with test data</button></div></div>";
   }
 ?>
-
+<!-- section : Event Main Characteristics -->
 
 <form id="form" class="needs-validation bts-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" novalidate>
 
@@ -163,6 +163,7 @@
       </div>
     </div>
 
+<!-- section : Early Birds Registration -->
 
     <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top"> <strong>Early Birds Registration</strong> 
       <span class="show-segment">
@@ -354,6 +355,8 @@
       </div>
     </div>
 
+    <!-- section : Regular Registration Data -->
+
     <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top"> <strong>Regular Registration Data</strong> 
       <span class="show-segment">
         <span class="show-segment--icon section-icon-3"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
@@ -468,7 +471,7 @@
       </div>
     </div>
 
-    <!-- TODO Party Passes -->
+    <!-- TODO Section : Party Pass Registrations -->
     <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top"> <strong> Party Pass Registrations </strong> 
       <span class="show-segment">
         <span class="show-segment--icon section-icon-4"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
@@ -506,6 +509,8 @@
 
        </div>
     </div>
+
+     <!-- Section : Special type 1 Registrations -->
 
     <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top"> <strong> Special type 1 Registrations </strong> 
       <span class="show-segment">
@@ -620,6 +625,8 @@
 
       </div>
     </div>
+
+    <!-- Section : Special type 2 Registrations -->
 
     <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top"> <strong> Special type 2 Registrations </strong> 
       <span class="show-segment">
