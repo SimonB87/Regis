@@ -10,7 +10,7 @@ function toggleVisibility(hideEl, showEl) {
 
 function togglePassWord() {
   const passWords = document.querySelectorAll(".input-password");
-  passWords. forEach(function(element) { 
+  passWords.forEach(function(element) { 
     if (element.type == "password") {
       element.type = "text";
     } else {
