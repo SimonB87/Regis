@@ -37,7 +37,7 @@
       <th class="footable-sortable" data-breakpoints="all"> Party Registration Ticket Price - Couple </th> 
       <th class="footable-sortable" data-breakpoints="all"> Party Registration Ticket Amount - Couple </th> 
 
-      <th class="footable-sortable" data-breakpoints="xs sm"> Special type 1 registrations enabled </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Special type 1 registrations enabled </th> 
       <th class="footable-sortable" data-breakpoints="all"> Special type 1 Registrations Name </th> 
       <th class="footable-sortable" data-breakpoints="all"> Special type 1 Registrations Start Date </th> 
       <th class="footable-sortable" data-breakpoints="all"> Special type 1 Registrations End Date </th> 
@@ -46,7 +46,7 @@
       <th class="footable-sortable" data-breakpoints="all"> Special type 1 Registration Ticket Price - Couple </th> 
       <th class="footable-sortable" data-breakpoints="all"> Special type 1 Registration Ticket Amount - Couple </th> 
 
-      <th class="footable-sortable" data-breakpoints="xs sm"> Special type 2 registrations enabled </th> 
+      <th class="footable-sortable" data-breakpoints="all"> Special type 2 registrations enabled </th> 
       <th class="footable-sortable" data-breakpoints="all"> Special type 2 Registrations Name </th> 
       <th class="footable-sortable" data-breakpoints="all"> Special type 2 Registrations Start Date </th> 
       <th class="footable-sortable" data-breakpoints="all"> Special type 2 Registrations End Date </th> 

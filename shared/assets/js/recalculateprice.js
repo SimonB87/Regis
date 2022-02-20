@@ -1,3 +1,4 @@
+'use strict'
 function recalculatePrice() {
   const registrationType = document.getElementById("registrationType");
   const passType = document.getElementById("passType");

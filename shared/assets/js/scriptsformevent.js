@@ -1,3 +1,5 @@
+'use strict'
+
 function prefillForm() {
   const inputText = document.querySelectorAll("input[type=text]");
   const inputNumber = document.querySelectorAll("input[type=number]");
@@ -45,3 +47,9 @@ function prefillForm() {
     }
   });
 }
+
+$(function () {
+  $('form.bts-form input[type=date]').datepicker({
+      format: "dd/mm/yyyy"
+  });
+});

@@ -42,7 +42,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
 
     <?php
     include("shared/navigation.php");
-    include("handlers/handler_formeventsetupmain.php");
+    include("handlers/handler_formeventsetupmain_saveproduction.php");
     ?> 
 
     <main>
@@ -98,28 +98,13 @@ if (!mysqli_set_charset($connector, "utf8")) {
 			  crossorigin="anonymous"></script>
 
     <script src="../shared/libs/footablebootstrap/js/footable.js" defer></script>
-
-    <script defer>
-    jQuery(function($){
-        $('.table').footable();
-      });
-    /* Sollution guide 15.10.2020: http://fooplugins.github.io/FooTable/docs/examples/basic/single-header.html */
-    </script>
-
-    <script type="text/javascript" defer>
-        $(function () {
-            $('form.bts-form input[type=date]').datepicker({
-                format: "dd/mm/yyyy"
-            });
-        });
-    </script>
-
     <script src="../shared/libs/bootstrap/js/bootstrap.js" defer></script>
     <script src="../shared/assets/js/formvalidation.js" defer></script>
     <script src="../shared/assets/js/togglevisibility.js" defer></script>
     <script src="../shared/assets/js/hidenotification.js" defer></script>
     <script src="../shared/assets/js/formsetionsedit.js" defer></script>
-    <script src="../shared/assets/js/scripts.js" defer></script>
+    <script src="../shared/assets/js/scriptsformevent.js" defer></script>
+    <script src="../shared/assets/js/footablerun.js" defer></script>
 
   </body>
 </html>
