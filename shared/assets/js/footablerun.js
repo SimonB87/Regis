@@ -3,3 +3,10 @@
 jQuery(function($){
   $('.table').footable();
 });
+
+// with buttons change page length
+$('[data-page-size]').on('click', function(e){
+	e.preventDefault();
+	var newSize = $(this).data('pageSize');
+	FooTable.get('#events').pageSize(newSize);
+});
