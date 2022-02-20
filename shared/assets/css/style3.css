@@ -10,6 +10,7 @@
   /* elements */
   --padding-small: 0.5rem;
   --padding-regular: 2rem;
+  --padding-very-small: 0.2rem;
 }
 @keyframes scale-bigger-smaller {
   0% {
@@ -134,6 +135,9 @@
 }
 .margin-small-bottom {
   margin-bottom: var(--padding-small);
+}
+.margin-verysmall {
+  margin: var(--padding-very-small);
 }
 .margin-regular {
   margin: var(--padding-regular);
@@ -357,5 +361,5 @@ nav {
   }
 }
 .pagination li {
-  padding: 0.25rem;
+  padding: 0.1rem;
 }

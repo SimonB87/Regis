@@ -2,11 +2,11 @@
   <strong> Set Page Length </strong>
 </div>
 <div class="col-sm-6 col-md-8 col-lg-9" style="float: right;"> 
-  <button type="button" data-page-size="50" type="button" class="btn btn-primary margin-small" style="float: right;">50</button>
-  <button type="button" data-page-size="20" type="button" class="btn btn-primary margin-small" style="float: right;">20</button>
-  <button type="button" data-page-size="15" type="button" class="btn btn-primary margin-small" style="float: right;">15</button>
-  <button type="button" data-page-size="10" type="button" class="btn btn-primary margin-small" style="float: right;">10</button>
-  <button type="button" data-page-size="5" type="button" class="btn btn-primary margin-small" style="float: right;">5</button>
+  <button type="button" data-page-size="50" type="button" class="btn btn-primary margin-verysmall" style="float: right;">50</button>
+  <button type="button" data-page-size="20" type="button" class="btn btn-primary margin-verysmall" style="float: right;">20</button>
+  <button type="button" data-page-size="15" type="button" class="btn btn-primary margin-verysmall" style="float: right;">15</button>
+  <button type="button" data-page-size="10" type="button" class="btn btn-primary margin-verysmall" style="float: right;">10</button>
+  <button type="button" data-page-size="5" type="button" class="btn btn-primary margin-verysmall" style="float: right;">5</button>
 </div>
 
 <div class="col-12 my-2">
