@@ -1,6 +1,12 @@
 <?php
   include("handlers/handler_geteventdata.php");
+
+  $hostName = $_SERVER['SERVER_NAME'];
+  if ( ($hostName == "localhost") || ($hostName == "127.0.0.1")) {
+    echo "<div class='row full-width'><div class='col-12'><button type='button' class='btn btn-warning t-test' style='float:right;' onclick='prefillForm();'>Prefill form with test data</button></div></div>";
+  }
 ?>
+
 
 <form id="form" class="needs-validation bts-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" novalidate>
 
@@ -25,7 +31,7 @@
 
           <div class="col-lg-3 col-md-6 col-sm-12 padding-small">
             <div class="form-floating disabled">
-              <input type="number" class="form-control bg-disabled" id="eventID" name="eventID" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataId . "'"; } ?> >
+              <input type="number" class="form-control bg-disabled prefill-auto" id="eventID" name="eventID" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataId . "'"; } ?> >
               <label for="eventID">Event ID (Filled automatically)</label>
               <div class="valid-feedback">
                 Looks good!
@@ -65,7 +71,7 @@
                 $findpage = "createneweventsetupmain.php";
                 $position = strpos($url, $findpage);
             ?>
-              <input class="form-check-input push-down" type="checkbox" id="newEventBoolean" name="newEventBoolean" 
+              <input class="form-check-input push-down prefill-auto" type="checkbox" id="newEventBoolean" name="newEventBoolean" 
                 <?php if ($position === false) { } else {echo "checked";} ?> 
                 onclick="return false;" onkeydown="return false;">
               <label class="form-check-label push-down" for="newEventBoolean">
