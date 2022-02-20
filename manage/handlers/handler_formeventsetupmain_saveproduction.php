@@ -27,62 +27,62 @@ if(isset($_POST["safe_form_data"])){
     if (isset($_POST["eventID"])) {
       $eventID = mysqli_real_escape_string($connector, $_POST["eventID"]);
     }
-    $eventStatus = mysqli_real_escape_string($connector, $_POST["eventStatus"]);
-    $eventName = mysqli_real_escape_string($connector, $_POST["eventName"]);
-    $eventStartDate = mysqli_real_escape_string($connector, $_POST["eventStartDate"]);
-    $eventEndDate = mysqli_real_escape_string($connector, $_POST["eventEndDate"]);
-    $enableCoupleTicket = mysqli_real_escape_string($connector, $_POST["enableCoupleTicket"]);
-    $enableCoupleTicket = "Yes";
+    $eventStatus = (isset($_POST["eventStatus"])) ? mysqli_real_escape_string($connector, $_POST["eventStatus"]) : null;
+    $eventName = (isset($_POST["eventName"])) ? mysqli_real_escape_string($connector, $_POST["eventName"]) : null;
+    $eventStartDate = (isset($_POST["eventStartDate"])) ? mysqli_real_escape_string($connector, $_POST["eventStartDate"]) : null;
+    $eventEndDate = (isset($_POST["eventEndDate"])) ? mysqli_real_escape_string($connector, $_POST["eventEndDate"]) : null;
+    $enableCoupleTicket = (isset($_POST["enableCoupleTicket"])) ? mysqli_real_escape_string($connector, $_POST["enableCoupleTicket"]) : null;
+    $enableCoupleTicket = (strtolower( $enableCoupleTicket ) == "on") ? "Yes" : "No";
 
-    $earlyBirdsRegistrationEnabled = mysqli_real_escape_string($connector, $_POST["earlyBirdsRegistrationEnabled"]);
+    $earlyBirdsRegistrationEnabled = (isset($_POST["earlyBirdsRegistrationEnabled"])) ? mysqli_real_escape_string($connector, $_POST["earlyBirdsRegistrationEnabled"]) : null;
     $earlyBirdsRegistrationEnabled = (strtolower( $earlyBirdsRegistrationEnabled ) == "on") ? "Yes" : "No";
-    $earlyBirdsRegistrationName = mysqli_real_escape_string($connector, $_POST["earlyBirdsRegistrationName"]);
-    $earlyBirdsRegistrationsStartDate = mysqli_real_escape_string($connector, $_POST["earlyBirdsRegistrationsStartDate"]);
-    $earlyBirdsRegistrationsEndDate = mysqli_real_escape_string($connector, $_POST["earlyBirdsRegistrationsEndDate"]);
-    $ticketsAmountEarlyBirdsRegistrationsSingle = mysqli_real_escape_string($connector, $_POST["ticketsAmountEarlyBirdsRegistrationsSingle"]);
-    $earlyBirdsTicketPriceSingle = mysqli_real_escape_string($connector, $_POST["earlyBirdsTicketPriceSingle"]);
-    $earlyBirdsTicketPriceCouple = mysqli_real_escape_string($connector, $_POST["earlyBirdsTicketPriceCouple"]);
-    $earlyBirdsTicketAmountCouple = mysqli_real_escape_string($connector, $_POST["earlyBirdsTicketAmountCouple"]);
+    $earlyBirdsRegistrationName = (isset($_POST["earlyBirdsRegistrationName"])) ? mysqli_real_escape_string($connector, $_POST["earlyBirdsRegistrationName"]) : null;
+    $earlyBirdsRegistrationsStartDate = (isset($_POST["earlyBirdsRegistrationsStartDate"])) ? mysqli_real_escape_string($connector, $_POST["earlyBirdsRegistrationsStartDate"]) : null;
+    $earlyBirdsRegistrationsEndDate = (isset($_POST["earlyBirdsRegistrationsEndDate"])) ? mysqli_real_escape_string($connector, $_POST["earlyBirdsRegistrationsEndDate"]) : null;
+    $ticketsAmountEarlyBirdsRegistrationsSingle = (isset($_POST["ticketsAmountEarlyBirdsRegistrationsSingle"])) ? mysqli_real_escape_string($connector, $_POST["ticketsAmountEarlyBirdsRegistrationsSingle"]) : null;
+    $earlyBirdsTicketPriceSingle = (isset($_POST["earlyBirdsTicketPriceSingle"])) ? mysqli_real_escape_string($connector, $_POST["earlyBirdsTicketPriceSingle"]) : null;
+    $earlyBirdsTicketPriceCouple = (isset($_POST["earlyBirdsTicketPriceCouple"])) ? mysqli_real_escape_string($connector, $_POST["earlyBirdsTicketPriceCouple"]) : null;
+    $earlyBirdsTicketAmountCouple = (isset($_POST["earlyBirdsTicketAmountCouple"])) ? mysqli_real_escape_string($connector, $_POST["earlyBirdsTicketAmountCouple"]) : null;
 
-    $regularRegistrationEnabled = mysqli_real_escape_string($connector, $_POST["regularRegistrationEnabled"]);
+    $regularRegistrationEnabled = (isset($_POST["regularRegistrationEnabled"])) ? mysqli_real_escape_string($connector, $_POST["regularRegistrationEnabled"]) : null;
     $regularRegistrationEnabled = (strtolower( $regularRegistrationEnabled ) == "on") ? "Yes" : "No";
-    $regularRegistrationName = mysqli_real_escape_string($connector, $_POST["regularRegistrationName"]);
-    $regularRegistrationsStartDate = mysqli_real_escape_string($connector, $_POST["regularRegistrationsStartDate"]);
-    $regularRegistrationsEndDate = mysqli_real_escape_string($connector, $_POST["regularRegistrationsEndDate"]);
-    $regularTicketPriceSingle = mysqli_real_escape_string($connector, $_POST["regularTicketPriceSingle"]);
-    $regularTicketAmountSingle = mysqli_real_escape_string($connector, $_POST["regularTicketAmountSingle"]);
-    $regularTicketPriceCouple = mysqli_real_escape_string($connector, $_POST["regularTicketPriceCouple"]);
-    $regularTicketAmountCouple = mysqli_real_escape_string($connector, $_POST["regularTicketAmountCouple"]);
+    $regularRegistrationName = (isset($_POST["regularRegistrationName"])) ? mysqli_real_escape_string($connector, $_POST["regularRegistrationName"]) : null;
+    $regularRegistrationsStartDate = (isset($_POST["regularRegistrationsStartDate"])) ? mysqli_real_escape_string($connector, $_POST["regularRegistrationsStartDate"]) : null;
+    $regularRegistrationsEndDate = (isset($_POST["regularRegistrationsEndDate"])) ? mysqli_real_escape_string($connector, $_POST["regularRegistrationsEndDate"]) : null;
+    $regularTicketPriceSingle = (isset($_POST["regularTicketPriceSingle"])) ? mysqli_real_escape_string($connector, $_POST["regularTicketPriceSingle"]) : null;
+    $regularTicketAmountSingle = (isset($_POST["regularTicketAmountSingle"])) ? mysqli_real_escape_string($connector, $_POST["regularTicketAmountSingle"]) : null;
+    $regularTicketPriceCouple = (isset($_POST["regularTicketPriceCouple"])) ? mysqli_real_escape_string($connector, $_POST["regularTicketPriceCouple"]) : null;
+    $regularTicketAmountCouple = (isset($_POST["regularTicketAmountCouple"])) ? mysqli_real_escape_string($connector, $_POST["regularTicketAmountCouple"]) : null;
 
-    $partyRegistrationEnabled = mysqli_real_escape_string($connector, $_POST["partyRegistrationEnabled"]);
+    $partyRegistrationEnabled = (isset($_POST["partyRegistrationEnabled"])) ? mysqli_real_escape_string($connector, $_POST["partyRegistrationEnabled"]) : null;
     $partyRegistrationEnabled = (strtolower( $partyRegistrationEnabled ) == "on") ? "Yes" : "No";
-    $partyRegistrationName = mysqli_real_escape_string($connector, $_POST["partyRegistrationName"]);
-    $partyRegistrationsStartDate = mysqli_real_escape_string($connector, $_POST["partyRegistrationsStartDate"]);
-    $partyRegistrationsEndDate = mysqli_real_escape_string($connector, $_POST["partyRegistrationsEndDate"]);
-    $partyTicketPriceSingle = mysqli_real_escape_string($connector, $_POST["partyTicketPriceSingle"]);
-    $partyTicketAmountSingle = mysqli_real_escape_string($connector, $_POST["partyTicketAmountSingle"]);
-    $partyTicketPriceCouple = mysqli_real_escape_string($connector, $_POST["partyTicketPriceCouple"]);
-    $partyTicketAmountCouple = mysqli_real_escape_string($connector, $_POST["partyTicketAmountCouple"]);
+    $partyRegistrationName = (isset($_POST["partyRegistrationName"])) ? mysqli_real_escape_string($connector, $_POST["partyRegistrationName"]) : null;
+    $partyRegistrationsStartDate = (isset($_POST["partyRegistrationsStartDate"])) ? mysqli_real_escape_string($connector, $_POST["partyRegistrationsStartDate"]) : null;
+    $partyRegistrationsEndDate = (isset($_POST["partyRegistrationsEndDate"])) ? mysqli_real_escape_string($connector, $_POST["partyRegistrationsEndDate"]) : null;
+    $partyTicketPriceSingle = (isset($_POST["partyTicketPriceSingle"])) ? mysqli_real_escape_string($connector, $_POST["partyTicketPriceSingle"]) : null;
+    $partyTicketAmountSingle = (isset($_POST["partyTicketAmountSingle"])) ? mysqli_real_escape_string($connector, $_POST["partyTicketAmountSingle"]) : null;
+    $partyTicketPriceCouple = (isset($_POST["partyTicketPriceCouple"])) ? mysqli_real_escape_string($connector, $_POST["partyTicketPriceCouple"]) : null;
+    $partyTicketAmountCouple = (isset($_POST["partyTicketAmountCouple"])) ? mysqli_real_escape_string($connector, $_POST["partyTicketAmountCouple"]) : null;
 
-    $specialType1RegistrationEnabled = mysqli_real_escape_string($connector, $_POST["specialType1RegistrationEnabled"]);
+    $specialType1RegistrationEnabled = (isset($_POST["specialType1RegistrationEnabled"])) ? mysqli_real_escape_string($connector, $_POST["specialType1RegistrationEnabled"]) : null;
     $specialType1RegistrationEnabled = (strtolower( $specialType1RegistrationEnabled ) == "on") ? "Yes" : "No";
-    $specialType1RegistrationName = mysqli_real_escape_string($connector, $_POST["specialType1RegistrationName"]);
-    $specialType1RegistrationsStartDate = mysqli_real_escape_string($connector, $_POST["specialType1RegistrationsStartDate"]);
-    $specialType1RegistrationsEndDate = mysqli_real_escape_string($connector, $_POST["specialType1RegistrationsEndDate"]);
-    $specialType1TicketPriceSingle = mysqli_real_escape_string($connector, $_POST["specialType1TicketPriceSingle"]);
-    $specialType1TicketAmountSingle = mysqli_real_escape_string($connector, $_POST["specialType1TicketAmountSingle"]);
-    $specialType1TicketPriceCouple = mysqli_real_escape_string($connector, $_POST["specialType1TicketPriceCouple"]);
-    $specialType1TicketAmountCouple  = mysqli_real_escape_string($connector, $_POST["specialType1TicketAmountCouple"]);
+    $specialType1RegistrationName = (isset($_POST["specialType1RegistrationName"])) ? mysqli_real_escape_string($connector, $_POST["specialType1RegistrationName"]) : null;
+    $specialType1RegistrationsStartDate = (isset($_POST["specialType1RegistrationsStartDate"])) ? mysqli_real_escape_string($connector, $_POST["specialType1RegistrationsStartDate"]) : null;
+    $specialType1RegistrationsEndDate = (isset($_POST["specialType1RegistrationsEndDate"])) ? mysqli_real_escape_string($connector, $_POST["specialType1RegistrationsEndDate"]) : null;
+    $specialType1TicketPriceSingle = (isset($_POST["specialType1TicketPriceSingle"])) ? mysqli_real_escape_string($connector, $_POST["specialType1TicketPriceSingle"]) : null;
+    $specialType1TicketAmountSingle = (isset($_POST["specialType1TicketAmountSingle"])) ? mysqli_real_escape_string($connector, $_POST["specialType1TicketAmountSingle"]) : null;
+    $specialType1TicketPriceCouple = (isset($_POST["specialType1TicketPriceCouple"])) ? mysqli_real_escape_string($connector, $_POST["specialType1TicketPriceCouple"]) : null;
+    $specialType1TicketAmountCouple  = (isset($_POST["specialType1TicketAmountCouple"])) ? mysqli_real_escape_string($connector, $_POST["specialType1TicketAmountCouple"]) : null;
 
-    $specialType2RegistrationEnabled = mysqli_real_escape_string($connector, $_POST["specialType2RegistrationEnabled"]);
+    $specialType2RegistrationEnabled = (isset($_POST["specialType2RegistrationEnabled"])) ? mysqli_real_escape_string($connector, $_POST["specialType2RegistrationEnabled"]) : null;
     $specialType2RegistrationEnabled = (strtolower( $specialType2RegistrationEnabled ) == "on") ? "Yes" : "No";
-    $specialType2RegistrationName = mysqli_real_escape_string($connector, $_POST["specialType2RegistrationName"]);
-    $specialType2RegistrationsStartDate = mysqli_real_escape_string($connector, $_POST["specialType2RegistrationsStartDate"]);
-    $specialType2RegistrationsEndDate = mysqli_real_escape_string($connector, $_POST["specialType2RegistrationsEndDate"]);
-    $specialType2TicketPriceSingle = mysqli_real_escape_string($connector, $_POST["specialType2TicketPriceSingle"]);
-    $specialType2TicketAmountSingle = mysqli_real_escape_string($connector, $_POST["specialType2TicketAmountSingle"]);
-    $specialType2TicketPriceCouple = mysqli_real_escape_string($connector, $_POST["specialType2TicketPriceCouple"]);
-    $specialType2TicketAmountCouple = mysqli_real_escape_string($connector, $_POST["specialType2TicketAmountCouple"]);
+    $specialType2RegistrationName = (isset($_POST["specialType2RegistrationName"])) ?  mysqli_real_escape_string($connector, $_POST["specialType2RegistrationName"]) : null;
+    $specialType2RegistrationsStartDate = (isset($_POST["specialType2RegistrationsStartDate"])) ? mysqli_real_escape_string($connector, $_POST["specialType2RegistrationsStartDate"]) : null;
+    $specialType2RegistrationsEndDate = (isset($_POST["specialType2RegistrationsEndDate"])) ? mysqli_real_escape_string($connector, $_POST["specialType2RegistrationsEndDate"]) : null;
+    $specialType2TicketPriceSingle = (isset($_POST["specialType2TicketPriceSingle"])) ? mysqli_real_escape_string($connector, $_POST["specialType2TicketPriceSingle"]) : null;
+    $specialType2TicketAmountSingle = (isset($_POST["specialType2TicketAmountSingle"])) ? mysqli_real_escape_string($connector, $_POST["specialType2TicketAmountSingle"]) : null;
+    $specialType2TicketPriceCouple = (isset($_POST["specialType2TicketPriceCouple"])) ? mysqli_real_escape_string($connector, $_POST["specialType2TicketPriceCouple"]) : null;
+    $specialType2TicketAmountCouple = (isset($_POST["specialType2TicketAmountCouple"])) ? mysqli_real_escape_string($connector, $_POST["specialType2TicketAmountCouple"]) : null;
 
     /** fix ID for Wedos DB - start **/ 
     $idData = null;
