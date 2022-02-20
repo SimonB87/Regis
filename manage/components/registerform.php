@@ -37,10 +37,10 @@
   else if(in_array("Emaily nejsou stejné<br>", $error_array)) echo "<p class='registration_error'>Emaily se neshodují</p>"; ?>
 
 
-  <input type="password" name="reg_password" placeholder="Heslo" required>
+  <input type="password" name="reg_password" class="input-password" placeholder="Zadejte heslo..." required>
   <br>
 
-  <input type="password" name="reg_password2" placeholder="Ověřit heslo" required>
+  <input type="password" name="reg_password2" class="input-password" placeholder="Ověřit heslo" required>
   <br>
 
   <?php if(in_array("Hesla neodpovídají<br>", $error_array)) echo "<p class='registration_error'>Vaše hesla se neshodují</p>";
@@ -48,10 +48,12 @@
   else if(in_array("Vaše hesla mohou obsahovat jen písmena bez diakritiky a celá čísla<br>", $error_array)) echo "<p class='registration_error'>Vaše heslo může obsahovat jen znaky bez diakritiky a čísla</p>";
   else if(in_array("Vaše heslo musí být mezi 5 a 30 znaky<br>", $error_array)) echo "<p class='registration_error'>Vaše heslo musí mít od 5 do 30 znaků.</p>"; ?>
 
-
+  <br>
   <input type="submit" name="register_button" value="Registrovat">
+  <br>
   <br>
 
   <?php if(in_array("<span style='color: #14C800;'>Jste připraven/a! Nyní se můžete přihlásit!</span><br>", $error_array)) echo "<span style='color: #14C800;'>Vše je připraveno! Můžete se přihlásit!</span></p>"; ?>
   <a href="#" id="signin" class="w-100 btn btn-lg btn-secondary" onclick="toggleVisibility('#formTwo','#formOne');" >Již máte účet? Vstupte zde!</a>
 </form>
+<br>

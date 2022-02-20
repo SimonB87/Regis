@@ -12,9 +12,15 @@
       ?>" required>
     </div>
     
-    <div class="form-floating mb-3">
+    <div class="form-floating mb-3 password-parent">
       <label for="password">Password</label>
-      <input id="password"  class="form-control" type="password" name="log_password" placeholder="Heslo">
+      <input id="password" class="form-control input-password" type="password" name="log_password" placeholder="Heslo">
+      
+      <span class="password-child-icons">
+        <span class="show-segment--icon password-child-icons-open visibility-visible" onclick="toggleVisibility('.password-child-icons-open', '.password-child-icons-close'); togglePassWord();"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
+        <span class="show-segment--icon password-child-icons-close visibility-hidden" onclick="toggleVisibility('.password-child-icons-close', '.password-child-icons-open'); togglePassWord();"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
+      </span>
+
     </div>
 
     <div class="form-check mb-3">

@@ -8,6 +8,18 @@ function toggleVisibility(hideEl, showEl) {
     willBeShown.classList.add("visibility-visible");
 }
 
+function togglePassWord() {
+  const passWords = document.querySelectorAll(".input-password");
+  passWords. forEach(function(element) { 
+    if (element.type == "password") {
+      element.type = "text";
+    } else {
+      element.type = "password";
+    }
+
+   })
+}
+
 (function () {
   'use strict'
   document.addEventListener("DOMContentLoaded", function(event) { 
@@ -22,6 +34,8 @@ function toggleVisibility(hideEl, showEl) {
     });
     
   });
+
+
 
 
 })()
