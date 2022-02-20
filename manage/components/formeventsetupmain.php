@@ -481,7 +481,7 @@
 
     <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
       <div class="form-check mb-3">
-         <input class="form-check-input" type="checkbox" id="partyRegistrationEnabled" name="partyRegistrationEnabled" <?php if($isEventEdited) { /*if( $eventDataPartyRegistrationEnabled == "Yes") { echo "checked"; }*/ } ?> >
+         <input class="form-check-input" type="checkbox" id="partyRegistrationEnabled" name="partyRegistrationEnabled" <?php if($isEventEdited) { if( $partyRegistrationEnabled == "Yes") { echo "checked"; } } ?> >
           <label class="form-check-label" for="partyRegistrationEnabled">
             Enable Pass Registrations
           </label>
