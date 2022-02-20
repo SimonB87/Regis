@@ -140,7 +140,7 @@
             <!-- TODO enable couple tickets -> dynamical with JS opens couple prices -->
               <div class="col-12 padding-small">
                 <div class="form-check mb-3">
-                    <input class="form-check-input" type="checkbox" id="enableCoupleTicket" name="enableCoupleTicket" required <?php if($isEventEdited) { if($eventDataEnableCoupleTicket == "Yes") { echo "checked"; } } ?>>
+                    <input class="form-check-input" type="checkbox" id="enableCoupleTicket" name="enableCoupleTicket" <?php if($isEventEdited) { if($eventDataEnableCoupleTicket == "Yes") { echo "checked"; } } ?>>
                     <label class="form-check-label" for="enableCoupleTicket">
                       Enable couple ticket
                     </label>
@@ -483,7 +483,7 @@
       <div class="form-check mb-3">
          <input class="form-check-input" type="checkbox" id="partyRegistrationEnabled" name="partyRegistrationEnabled" <?php if($isEventEdited) { if( $partyRegistrationEnabled == "Yes") { echo "checked"; } } ?> >
           <label class="form-check-label" for="partyRegistrationEnabled">
-            Enable Pass Registrations
+            Enable Party Pass Registrations
           </label>
         </div>
     </div>
