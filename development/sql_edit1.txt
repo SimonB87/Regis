@@ -10,7 +10,6 @@ ADD earlyBirdsTicketPriceSingle int(250) ,
 ADD earlyBirdsTicketPriceCouple int(250) , 
 ADD earlyBirdsTicketAmountCouple int(250) ;
 
-
 ALTER TABLE `events` 
 ADD regularRegistrationEnabled varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
 ADD regularRegistrationName varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
@@ -20,6 +19,16 @@ ADD regularTicketPriceSingle int(250) ,
 ADD regularTicketAmountSingle int(250) , 
 ADD regularTicketPriceCouple int(250) , 
 ADD regularTicketAmountCouple int(250) ;
+
+ALTER TABLE `events` 
+ADD partyRegistrationEnabled varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
+ADD partyRegistrationName varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
+ADD partyRegistrationsStartDate varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
+ADD partyRegistrationsEndDate varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
+ADD partyTicketPriceSingle int(250) , 
+ADD partyTicketAmountSingle int(250) , 
+ADD partyTicketPriceCouple int(250) , 
+ADD partyTicketAmountCouple int(250) ;
 
 ALTER TABLE `events` 
 ADD specialType1RegistrationEnabled varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
