@@ -123,6 +123,7 @@ if(isset($_POST["safe_form_data"])){
       $newEventBoolean = mysqli_real_escape_string($connector, $_POST["newEventBoolean"]);
       
       if(strtolower($newEventBoolean) == "on") { //save a new event
+        $query = null;
 
         if (($isTestEnv == true) || ($isTestEnv == 1) || ($isTestEnv == "1") ) { 
 
@@ -139,9 +140,27 @@ if(isset($_POST["safe_form_data"])){
 
         }
 
+        $item = null;
+        if ($query == true ) {
+          $item = "New event \"" . $eventName . "\" was saved.";
 
-        $item = "New event \"" . $eventName . "\" was saved.";
+        } else {
+          $item = "New event \"" . $eventName . "\" failed to be saved.";
+          echo (mysqli_error($connector)) . "<br><br>";
+
+           /* check connection */
+            if (mysqli_connect_errno()) {
+              printf("Connect failed: %s\n", mysqli_connect_error());
+              exit();
+           }
+        
+           if (!mysqli_query($connector, "SET a=1")) {
+              printf("Error message: %s\n", mysqli_error($connector));
+           }
+        }
+        
         echo "<div id='notification_new1' class='notification'>" . $item . " <span class=\"notification--close\" onclick=\"hideNotification('notification_new1');\" > X </span>" . "</div>";
+
       }
     } else {
       //update current event
