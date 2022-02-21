@@ -75,6 +75,9 @@
 .padding-small-bottom {
   padding-bottom: var(--padding-small);
 }
+.padding-small-left {
+  padding-left: var(--padding-small);
+}
 .padding-small-topBottom {
   padding-top: var(--padding-small);
   padding-bottom: var(--padding-small);
@@ -85,6 +88,9 @@
 .padding-regular-topBottom {
   padding-top: var(--padding-regular);
   padding-bottom: var(--padding-regular);
+}
+.padding-regular-left {
+  padding-left: var(--padding-regular);
 }
 .padding-regular-top {
   padding-top: var(--padding-regular);
@@ -186,6 +192,12 @@
   position: absolute;
   top: 0.75rem;
   right: 0.5rem;
+}
+.section-form-title strong {
+  float: left;
+}
+.section-form-title .show-segment {
+  float: right;
 }
 .color-main {
   color: var(--red);
