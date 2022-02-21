@@ -12,10 +12,10 @@
 
   <div class="row full-width">
 
-    <div class="col-12"> 
+    <div class="col-12 section-form-title"> 
       <strong>Event Main Characteristics</strong> 
 
-      <span class="show-segment">
+      <span class="show-segmen padding-regular-left">
         <span class="show-segment--icon section-icon-1"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
         <span class="show-segment--icon section-icon-1"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
       </span>
@@ -165,7 +165,8 @@
 
 <!-- section : Early Birds Registration -->
 
-    <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top"> <strong>Early Birds Registration</strong> 
+    <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top section-form-title"> 
+      <strong>Early Birds Registration</strong> 
       <span class="show-segment">
           <span class="show-segment--icon section-icon-2"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
           <span class="show-segment--icon section-icon-2"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
@@ -357,7 +358,8 @@
 
     <!-- section : Regular Registration Data -->
 
-    <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top"> <strong>Regular Registration Data</strong> 
+    <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top section-form-title"> 
+      <strong>Regular Registration Data</strong> 
       <span class="show-segment">
         <span class="show-segment--icon section-icon-3"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
         <span class="show-segment--icon section-icon-3"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
@@ -472,7 +474,8 @@
     </div>
 
     <!-- TODO Section : Party Pass Registrations -->
-    <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top"> <strong> Party Pass Registrations </strong> 
+    <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top section-form-title"> 
+      <strong> Party Pass Registrations </strong> 
       <span class="show-segment">
         <span class="show-segment--icon section-icon-4"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
         <span class="show-segment--icon section-icon-4"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
@@ -588,7 +591,8 @@
 
      <!-- Section : Special type 1 Registrations -->
 
-    <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top"> <strong> Special type 1 Registrations </strong> 
+    <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top section-form-title"> 
+      <strong> Special type 1 Registrations </strong> 
       <span class="show-segment">
         <span class="show-segment--icon section-icon-5"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
         <span class="show-segment--icon section-icon-5"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
@@ -704,7 +708,8 @@
 
     <!-- Section : Special type 2 Registrations -->
 
-    <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top"> <strong> Special type 2 Registrations </strong> 
+    <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top section-form-title"> 
+      <strong> Special type 2 Registrations </strong> 
       <span class="show-segment">
         <span class="show-segment--icon section-icon-6"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
         <span class="show-segment--icon section-icon-6"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
