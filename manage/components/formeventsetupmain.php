@@ -14,15 +14,18 @@
 
   <div class="row full-width">
 
-    <div class="col-12 section-form-title"> 
+    <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top section-form-title"> 
       <strong>Event Main Characteristics</strong> 
 
-      <span class="show-segmen padding-regular-left">
+      <span class="show-segmen padding-regular-left" style="float:right;">
         <span class="show-segment--icon section-icon-1"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
         <span class="show-segment--icon section-icon-1"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
       </span>
 
     </div>
+    <div class="col-sm-12 col-md-6 col-lg-7 col-xl-8 padding-regular-top "> &nbsp; &nbsp;
+    </div>
+
 
 
     <div class="col-12 section-form-1"> 
