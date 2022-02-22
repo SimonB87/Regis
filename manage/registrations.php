@@ -27,7 +27,7 @@ else {
 
     <title> Event registration | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
 
-  <head>
+  </head>
   <body>
 
     <?php

@@ -19,7 +19,7 @@ include("handlers/login_handler.php");
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <title> Event registration | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
 
-  <head>
+  </head>
   <body style="background: #000;">
 
     <?php

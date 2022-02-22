@@ -33,7 +33,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
 
     <title> Event registration | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
 
-  <head>
+  </head>
   <body style="background: #000;">
 
     <?php
