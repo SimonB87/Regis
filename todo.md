@@ -52,6 +52,9 @@
 | Case - event cancellation : generate cancellation email                                                                                      |   P:muscle:   |                      :o: |
 | Case - event cancellation : in cancelation email user options - button for refund option, button for reschedule option                       |   P:muscle:   |                      :o: |
 | Case - copy a new event from old events table (condition - all events must be closed or passed)                                              |   P:muscle:   |                      :o: |
+| Side Bar Fce - ukázat sekci s info textem o akci s očekávanými tržbami celkem a v jednotlivých kategoriích                                   |   P:muscle:   |                      :o: |
+| Side Bar Fce - ukázat sekci nápovědy pro usera                                                                                               |   P:muscle:   |                      :o: |
+| Side Bar Fce - ukázat link na user manuál                                                                                                    |   P:muscle:   |                      :o: |
 
 ## Moje poznámky
 
