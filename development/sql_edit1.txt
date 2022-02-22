@@ -1,6 +1,15 @@
 //Edit events table. Create regular event columns
 
 ALTER TABLE `events` 
+
+ADD eventStatus varchar(250)  CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
+ADD eventName longtext 	CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
+ADD eventStartDate varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
+ADD eventEndDate varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
+ADD enableCoupleTicket varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
+
+
+ALTER TABLE `events` 
 ADD earlyBirdsRegistrationEnabled varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
 ADD earlyBirdsRegistrationName varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
 ADD earlyBirdsRegistrationsStartDate varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
