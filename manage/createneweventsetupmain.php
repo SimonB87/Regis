@@ -47,7 +47,11 @@ if (!mysqli_set_charset($connector, "utf8")) {
     ?> 
 
     <main>
-      <div class="container my-5 text-center">
+        <?php
+        include("shared/aside.php");
+        ?>
+      <div class="container my-5 text-center position-relative">
+
 
         <?php
         include("shared/setupnavigation.php");

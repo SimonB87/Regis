@@ -1,0 +1,42 @@
+.aside-container {
+  position: fixed;
+  top: 20vh;
+  left: 0;
+  background: var(--bs-gray-800);
+  box-sizing: border-box;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  z-index: 10;
+  transition: all 0.5s linear 0.25s;
+
+  .aside-icon {
+    transition: all 0.5s linear 0.25s;
+    display: flex;
+    box-sizing: border-box;
+    color: var(--lightGray);
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--darkOrange);
+    }
+    &:focus {
+      color: var(--red);
+      transform: translateY(0.4rem);
+    }
+
+    &:hover,
+    &:focus {
+      .aside-caption {
+        display: block;
+        visibility: visible;
+        font-family: var(--bs-body-font-family);
+      }
+    }
+  }
+
+  .rotated {
+    transform: rotate(180deg);
+  }
+}

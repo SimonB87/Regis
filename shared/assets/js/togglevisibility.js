@@ -39,3 +39,15 @@ function togglePassWord() {
 
 
 })()
+
+document.getElementById("hide-aside").addEventListener("click", rotateAsideIcon);
+function rotateAsideIcon() {
+
+  document.getElementById("hide-aside").classList.toggle("rotated");
+
+  const icons = document.querySelectorAll(".toggleble");
+  icons.forEach( (item) => {
+    item.classList.toggle("hidden");
+  })
+
+}

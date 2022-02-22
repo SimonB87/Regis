@@ -48,12 +48,9 @@ if (!mysqli_set_charset($connector, "utf8")) {
 
     <main>
 
-    <aside>
-      <div> <i class='fas fa-hand-holding-usd'></i> </div>
-      <div> <i class='far fa-comment'></i> </div>
-      <div> <i class='fas fa-file-alt'></i> </div>
-    </aside>
-
+    <?php
+        include("shared/aside.php");
+     ?>
       <div class="container my-5 text-center">
 
         <?php

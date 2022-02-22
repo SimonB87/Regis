@@ -154,6 +154,12 @@
 .margin-regular-bottom {
   margin-bottom: var(--padding-regular);
 }
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
 .push-down {
   transform: translateY(1rem);
 }
@@ -236,6 +242,42 @@ footer .copyright {
   footer .nav li a {
     text-align: center;
   }
+}
+.aside-container {
+  position: fixed;
+  top: 20vh;
+  left: 0;
+  background: var(--bs-gray-800);
+  box-sizing: border-box;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  z-index: 10;
+  transition: all 0.5s linear 0.25s;
+}
+.aside-container .aside-icon {
+  transition: all 0.5s linear 0.25s;
+  display: flex;
+  box-sizing: border-box;
+  color: var(--lightGray);
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.aside-container .aside-icon:hover {
+  color: var(--darkOrange);
+}
+.aside-container .aside-icon:focus {
+  color: var(--red);
+  transform: translateY(0.4rem);
+}
+.aside-container .aside-icon:hover .aside-caption,
+.aside-container .aside-icon:focus .aside-caption {
+  display: block;
+  visibility: visible;
+  font-family: var(--bs-body-font-family);
+}
+.aside-container .rotated {
+  transform: rotate(180deg);
 }
 .alert {
   position: relative;
