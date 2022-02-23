@@ -1,4 +1,7 @@
 "use strict";
+document.getElementById("hide-aside").addEventListener("click", hideAside);
+document.getElementById("hide-revenuetable").addEventListener("click", hideRevenueTable);
+
 function toggleVisibility(hideEl, showEl) {
     var willBeHidden = document.querySelector(hideEl);
     var willBeShown = document.querySelector(showEl);
@@ -40,10 +43,15 @@ function togglePassWord() {
 
 })()
 
-document.getElementById("hide-aside").addEventListener("click", rotateAsideIcon);
-function rotateAsideIcon() {
+function hideRevenueTable() {
+  $("#table-event-revenue").slideToggle();
+  $("#table-event-revenue").removeClass("hidden");
+}
 
-  document.getElementById("hide-aside").classList.toggle("rotated");
+function hideAside() {
+
+  document.querySelector(".rotating-icon").classList.toggle("rotated");
+  document.querySelector(".rotating-caption").classList.toggle("rotated");
 
   const icons = document.querySelectorAll(".toggleble");
   icons.forEach( (item) => {

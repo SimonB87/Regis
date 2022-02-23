@@ -62,9 +62,12 @@ if (!mysqli_set_charset($connector, "utf8")) {
             <h1 class="display-5 fw-bold">Edit event main set up</h1>
             <p class="display-7 fw-bold">Set here event main characteristics</p>
           </div>
+
+          <?php
+          include("shared/tableeventdata.php");
+          ?>
+
         </div>
-
-
 
       </div>
 

@@ -78,6 +78,10 @@
 .padding-small-left {
   padding-left: var(--padding-small);
 }
+.padding-small-leftRight {
+  padding-left: var(--padding-small);
+  padding-right: var(--padding-small);
+}
 .padding-small-topBottom {
   padding-top: var(--padding-small);
   padding-bottom: var(--padding-small);
@@ -416,4 +420,31 @@ nav {
 }
 .pagination li {
   padding: 0.1rem;
+}
+.table-event-data {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.table-event-data thead {
+  text-align: center;
+}
+.table-event-data td,
+.table-event-data th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.table-event-data tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.table-event-data tbody tr:hover {
+  background-color: #ddd;
+  cursor: grab;
+}
+.table-event-data th,
+.table-event-data tfoot tr {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #04AA6D;
+  color: white;
 }
