@@ -55,7 +55,7 @@ input#floatingLocation {
   height: 4rem;
 }
 
-.disabled{
+.disabled {
   cursor: not-allowed;
   pointer-events: none;
 }
@@ -69,8 +69,25 @@ input#floatingLocation {
   margin-left: unset;
 }
 
-.height-60px{
+.height-60px {
   height: 60px;
+}
+
+.eventdescriptionform {
+  .form-floating {
+    .full-width();
+    .padding-regular-topBottom();
+
+    label {
+      transform: translate(0.5rem, 1.5rem);
+      background-color: rgba(255, 255, 255, 0.5);
+      height: 1.5rem;
+      border-radius: 0.25rem;
+    }
+    textarea {
+      height: 15rem;
+    }
+  }
 }
 
 @media only screen and (max-width: 559px) {

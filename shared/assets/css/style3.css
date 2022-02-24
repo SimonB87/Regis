@@ -7,6 +7,7 @@
   --green: green;
   --lightGray: #d3d3d3;
   --darkGray: #353535;
+  --white: #fff;
   /* elements */
   --padding-small: 0.5rem;
   --padding-regular: 2rem;
@@ -361,6 +362,20 @@ input#floatingLocation {
 }
 .height-60px {
   height: 60px;
+}
+.eventdescriptionform .form-floating {
+  width: 100%;
+  padding-top: var(--padding-regular);
+  padding-bottom: var(--padding-regular);
+}
+.eventdescriptionform .form-floating label {
+  transform: translate(0.5rem, 1.5rem);
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 1.5rem;
+  border-radius: 0.25rem;
+}
+.eventdescriptionform .form-floating textarea {
+  height: 15rem;
 }
 @media only screen and (max-width: 559px) {
   .row form .col-sm-12 {
