@@ -36,6 +36,17 @@
           Party Pass: 450 CZK / 18 euro <br>
           Jack & Jill starting fee (max. 6 leaders, 6 followers): 250 CZK / 10 euro for Fullpass holders, 500 CZK / 20 euro for others <br>
           <br>
+
+          </div>
+
+        <div class="padding-regular text-center">
+          <a href="#formSection">
+            <button type="button" class="btn btn-primary">
+              REGISTER NOW
+            </button>
+          </a>
+        </div>
+        <div id="event-description-part-two" class="padding-small text-left">
           <strong class="color-main"> ✅ Program: <br> </strong>
 
           <span class="color-secondary"> Friday 3rd May (Dancer's Club Prague, Koněvova 929)</span> <br>
@@ -64,7 +75,7 @@
           </a>
         </div>
 
-        <div id="event-description-part-two" class="padding-small text-left">
+        <div id="event-description-part-three" class="padding-small text-left">
           <strong class="color-main"> ❗️ Limited workshop capacity ❗️ </strong><br>
           <br>
           <span class="color-secondary"> Fullpass: </span> <br>
