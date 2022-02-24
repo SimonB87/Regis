@@ -1,0 +1,8 @@
+<?php
+//find URL of the current page
+$urlink = $_SERVER["REQUEST_URI"];
+$createPage = "createneweventsetupmain.php";
+$createPagePosition = strpos($urlink, $createPage);
+
+$isEventEdited = ($createPagePosition == false) ? true : false;
+?>
