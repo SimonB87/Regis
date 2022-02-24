@@ -84,61 +84,15 @@ if(isset($_POST["safe_form_data"])){
     $specialType2TicketPriceCouple = (isset($_POST["specialType2TicketPriceCouple"])) ? mysqli_real_escape_string($connector, $_POST["specialType2TicketPriceCouple"]) : null;
     $specialType2TicketAmountCouple = (isset($_POST["specialType2TicketAmountCouple"])) ? mysqli_real_escape_string($connector, $_POST["specialType2TicketAmountCouple"]) : null;
 
-    /** fix ID for Wedos DB - start **/ 
-    $idData = null;
-    if (($isTestEnv == false) || ($isTestEnv == 0) || ($isTestEnv == "0") ) {
-      $id = 0;
-
-      $sqlString = "SELECT max(id) FROM events";
-      $results = $connector-> query($sqlString);
-        //Error case
-        if (!$sqlString ) {
-          echo "Failed! <br> Error sql: " . mysql_error();
-        }
-        
-        if (mysqli_query($connector, $sqlString)) {
-          //debug echo json_encode(array("statusCode"=>200));
-        } 
-        else {
-          echo json_encode(array("sqlString - statusCode"=>418));
-        }
-    
-        //function to fatch the data
-        if ($results-> num_rows > 0 ) {
-          while ($row = $results-> fetch_assoc()) {
-  
-            $eventDataId = $row["id"] ;
-            $idData = intval($eventDataId) + 1;
-  
-          }
-          //echo "";
-      }
-      else {
-          //echo "There are 0 results in DB table";
-      }
-    }
-    /** fix ID for Wedos DB - end **/
-
     if(isset($_POST["newEventBoolean"])) {
       $newEventBoolean = mysqli_real_escape_string($connector, $_POST["newEventBoolean"]);
       
       if(strtolower($newEventBoolean) == "on") { //save a new event
         $query = null;
 
-        if (($isTestEnv == true) || ($isTestEnv == 1) || ($isTestEnv == "1") ) { 
-
-          $query = mysqli_query($connector, 
-          "INSERT INTO events (eventStatus, eventName, eventStartDate, eventEndDate, enableCoupleTicket, earlyBirdsRegistrationEnabled, earlyBirdsRegistrationName, earlyBirdsRegistrationsStartDate, earlyBirdsRegistrationsEndDate, ticketsAmountEarlyBirdsRegistrationsSingle , earlyBirdsTicketPriceSingle, earlyBirdsTicketPriceCouple, earlyBirdsTicketAmountCouple, regularRegistrationEnabled, regularRegistrationName, regularRegistrationsStartDate, regularRegistrationsEndDate, regularTicketPriceSingle, regularTicketAmountSingle, regularTicketPriceCouple, regularTicketAmountCouple, partyRegistrationEnabled, partyRegistrationName, partyRegistrationsStartDate, partyRegistrationsEndDate, partyTicketPriceSingle, partyTicketAmountSingle, partyTicketPriceCouple, partyTicketAmountCouple, specialType1RegistrationEnabled, specialType1RegistrationName, specialType1RegistrationsStartDate, specialType1RegistrationsEndDate, specialType1TicketPriceSingle, specialType1TicketAmountSingle, specialType1TicketPriceCouple, specialType1TicketAmountCouple, specialType2RegistrationEnabled, specialType2RegistrationName, specialType2RegistrationsStartDate, specialType2RegistrationsEndDate, specialType2TicketPriceSingle, specialType2TicketAmountSingle, specialType2TicketPriceCouple, specialType2TicketAmountCouple) 
-          VALUES ('$eventStatus', '$eventName', '$eventStartDate', '$eventEndDate', '$enableCoupleTicket', '$earlyBirdsRegistrationEnabled', '$earlyBirdsRegistrationName', '$earlyBirdsRegistrationsStartDate', '$earlyBirdsRegistrationsEndDate', '$ticketsAmountEarlyBirdsRegistrationsSingle', '$earlyBirdsTicketPriceSingle', '$earlyBirdsTicketPriceCouple', '$earlyBirdsTicketAmountCouple', '$regularRegistrationEnabled', '$regularRegistrationName', '$regularRegistrationsStartDate', '$regularRegistrationsEndDate', '$regularTicketPriceSingle', '$regularTicketAmountSingle', '$regularTicketPriceCouple', '$regularTicketAmountCouple', '$partyRegistrationEnabled', '$partyRegistrationName', '$partyRegistrationsStartDate', '$partyRegistrationsEndDate', '$partyTicketPriceSingle', '$partyTicketAmountSingle', '$partyTicketPriceCouple', '$partyTicketAmountCouple', '$specialType1RegistrationEnabled', '$specialType1RegistrationName', '$specialType1RegistrationsStartDate', '$specialType1RegistrationsEndDate', '$specialType1TicketPriceSingle', '$specialType1TicketAmountSingle', '$specialType1TicketPriceCouple', '$specialType1TicketAmountCouple', '$specialType2RegistrationEnabled', '$specialType2RegistrationName', '$specialType2RegistrationsStartDate', '$specialType2RegistrationsEndDate', '$specialType2TicketPriceSingle', '$specialType2TicketAmountSingle', '$specialType2TicketPriceCouple', '$specialType2TicketAmountCouple')");
-
-        } elseif (($isTestEnv == false) || ($isTestEnv == 0) || ($isTestEnv == "0") ) { 
-
-          // fix ID for Wedos DB
-          $query = mysqli_query($connector, 
-          "INSERT INTO events (eventStatus, eventName, eventStartDate, eventEndDate, enableCoupleTicket, earlyBirdsRegistrationEnabled, earlyBirdsRegistrationName, earlyBirdsRegistrationsStartDate, earlyBirdsRegistrationsEndDate, ticketsAmountEarlyBirdsRegistrationsSingle , earlyBirdsTicketPriceSingle, earlyBirdsTicketPriceCouple, earlyBirdsTicketAmountCouple, regularRegistrationEnabled, regularRegistrationName, regularRegistrationsStartDate, regularRegistrationsEndDate, regularTicketPriceSingle, regularTicketAmountSingle, regularTicketPriceCouple, regularTicketAmountCouple, partyRegistrationEnabled, partyRegistrationName, partyRegistrationsStartDate, partyRegistrationsEndDate, partyTicketPriceSingle, partyTicketAmountSingle, partyTicketPriceCouple, partyTicketAmountCouple, specialType1RegistrationEnabled, specialType1RegistrationName, specialType1RegistrationsStartDate, specialType1RegistrationsEndDate, specialType1TicketPriceSingle, specialType1TicketAmountSingle, specialType1TicketPriceCouple, specialType1TicketAmountCouple, specialType2RegistrationEnabled, specialType2RegistrationName, specialType2RegistrationsStartDate, specialType2RegistrationsEndDate, specialType2TicketPriceSingle, specialType2TicketAmountSingle, specialType2TicketPriceCouple, specialType2TicketAmountCouple) 
-          VALUES ('$eventStatus', '$eventName', '$eventStartDate', '$eventEndDate', '$enableCoupleTicket', '$earlyBirdsRegistrationEnabled', '$earlyBirdsRegistrationName', '$earlyBirdsRegistrationsStartDate', '$earlyBirdsRegistrationsEndDate', '$ticketsAmountEarlyBirdsRegistrationsSingle', '$earlyBirdsTicketPriceSingle', '$earlyBirdsTicketPriceCouple', '$earlyBirdsTicketAmountCouple', '$regularRegistrationEnabled', '$regularRegistrationName', '$regularRegistrationsStartDate', '$regularRegistrationsEndDate', '$regularTicketPriceSingle', '$regularTicketAmountSingle', '$regularTicketPriceCouple', '$regularTicketAmountCouple', '$partyRegistrationEnabled', '$partyRegistrationName', '$partyRegistrationsStartDate', '$partyRegistrationsEndDate', '$partyTicketPriceSingle', '$partyTicketAmountSingle', '$partyTicketPriceCouple', '$partyTicketAmountCouple', '$specialType1RegistrationEnabled', '$specialType1RegistrationName', '$specialType1RegistrationsStartDate', '$specialType1RegistrationsEndDate', '$specialType1TicketPriceSingle', '$specialType1TicketAmountSingle', '$specialType1TicketPriceCouple', '$specialType1TicketAmountCouple', '$specialType2RegistrationEnabled', '$specialType2RegistrationName', '$specialType2RegistrationsStartDate', '$specialType2RegistrationsEndDate', '$specialType2TicketPriceSingle', '$specialType2TicketAmountSingle', '$specialType2TicketPriceCouple', '$specialType2TicketAmountCouple')");
-
-        }
+        $query = mysqli_query($connector, 
+        "INSERT INTO events (eventStatus, eventName, eventStartDate, eventEndDate, enableCoupleTicket, earlyBirdsRegistrationEnabled, earlyBirdsRegistrationName, earlyBirdsRegistrationsStartDate, earlyBirdsRegistrationsEndDate, ticketsAmountEarlyBirdsRegistrationsSingle , earlyBirdsTicketPriceSingle, earlyBirdsTicketPriceCouple, earlyBirdsTicketAmountCouple, regularRegistrationEnabled, regularRegistrationName, regularRegistrationsStartDate, regularRegistrationsEndDate, regularTicketPriceSingle, regularTicketAmountSingle, regularTicketPriceCouple, regularTicketAmountCouple, partyRegistrationEnabled, partyRegistrationName, partyRegistrationsStartDate, partyRegistrationsEndDate, partyTicketPriceSingle, partyTicketAmountSingle, partyTicketPriceCouple, partyTicketAmountCouple, specialType1RegistrationEnabled, specialType1RegistrationName, specialType1RegistrationsStartDate, specialType1RegistrationsEndDate, specialType1TicketPriceSingle, specialType1TicketAmountSingle, specialType1TicketPriceCouple, specialType1TicketAmountCouple, specialType2RegistrationEnabled, specialType2RegistrationName, specialType2RegistrationsStartDate, specialType2RegistrationsEndDate, specialType2TicketPriceSingle, specialType2TicketAmountSingle, specialType2TicketPriceCouple, specialType2TicketAmountCouple) 
+        VALUES ('$eventStatus', '$eventName', '$eventStartDate', '$eventEndDate', '$enableCoupleTicket', '$earlyBirdsRegistrationEnabled', '$earlyBirdsRegistrationName', '$earlyBirdsRegistrationsStartDate', '$earlyBirdsRegistrationsEndDate', '$ticketsAmountEarlyBirdsRegistrationsSingle', '$earlyBirdsTicketPriceSingle', '$earlyBirdsTicketPriceCouple', '$earlyBirdsTicketAmountCouple', '$regularRegistrationEnabled', '$regularRegistrationName', '$regularRegistrationsStartDate', '$regularRegistrationsEndDate', '$regularTicketPriceSingle', '$regularTicketAmountSingle', '$regularTicketPriceCouple', '$regularTicketAmountCouple', '$partyRegistrationEnabled', '$partyRegistrationName', '$partyRegistrationsStartDate', '$partyRegistrationsEndDate', '$partyTicketPriceSingle', '$partyTicketAmountSingle', '$partyTicketPriceCouple', '$partyTicketAmountCouple', '$specialType1RegistrationEnabled', '$specialType1RegistrationName', '$specialType1RegistrationsStartDate', '$specialType1RegistrationsEndDate', '$specialType1TicketPriceSingle', '$specialType1TicketAmountSingle', '$specialType1TicketPriceCouple', '$specialType1TicketAmountCouple', '$specialType2RegistrationEnabled', '$specialType2RegistrationName', '$specialType2RegistrationsStartDate', '$specialType2RegistrationsEndDate', '$specialType2TicketPriceSingle', '$specialType2TicketAmountSingle', '$specialType2TicketPriceCouple', '$specialType2TicketAmountCouple')");
 
         $item = null;
         if ($query == true ) {
