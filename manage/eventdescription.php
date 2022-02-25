@@ -50,6 +50,7 @@ require 'handlers/userlogin.php';
         <div class="row">
 
         <?php
+        include("handlers/handler_getformdescriptiondata.php");
         include("components/formeventdescription.php");
         ?>
 

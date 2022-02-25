@@ -59,4 +59,9 @@ ADD specialType2TicketAmountSingle int(250) ,
 ADD specialType2TicketPriceCouple int(250) , 
 ADD specialType2TicketAmountCouple int(250) ;
 
+ALTER TABLE `events` 
+ADD eventDescription1 longtext CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
+ADD eventDescription2 longtext CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
+ADD eventDescription3 longtext CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
+
 //colum "ID" musí být auto_increment
