@@ -92,6 +92,7 @@ require 'handlers/userlogin.php';
     <script src="../shared/assets/js/footablerun.js" defer></script>
     <script src='../shared/libs/emojionearea/emojionearea.min.js' defer></script>
     <script src='../shared/assets/js/emojionearea_set.js' defer></script>
+    <script src='../shared/assets/js/seteventsetupcurrentpage.js' defer></script>
 
   </body>
 </html>
