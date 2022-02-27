@@ -24,7 +24,6 @@ require 'handlers/userlogin.php';
 
     <?php
     include("shared/navigation.php");
-    include("handlers/handler_formeventsetupmain_saveproduction.php");
     ?> 
 
     <main>
@@ -32,7 +31,6 @@ require 'handlers/userlogin.php';
       <div class="container my-5 text-center">
 
         <?php
-        include("handlers/getpathdata.php");
         include("shared/setupnavigation.php");
         ?>
 
@@ -50,6 +48,9 @@ require 'handlers/userlogin.php';
         <div class="row">
 
         <?php
+        include("handlers/handler_getformdata.php");
+        include("handlers/handlers_setdate.php");
+        include("components/previewform.php");
         include("components/eventpreviewform.php");
         ?>
 
