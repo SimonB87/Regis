@@ -1,6 +1,6 @@
 <div class="col-12">
   <form id="eventdescriptionform" class="needs-validation bts-form eventdescriptionform" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" novalidate>
-    <div class="form-floating disabled">
+    <div class="form-floating disabled hidden">
       <input type="number" class="form-control bg-disabled prefill-auto" id="eventID" name="eventID" maxlength="250" value=<?php echo $eventDataId ; ?> >
       <label for="eventID">Event ID (Filled automatically)</label>
     </div>

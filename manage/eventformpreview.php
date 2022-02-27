@@ -12,7 +12,7 @@ require 'handlers/userlogin.php';
     include("shared/head.php");
     ?>
 
-    <title> Create event form preview | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
+    <title> Edit event form preview | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
 
     <link rel="stylesheet" type="text/css" href="../shared/libs/footablebootstrap/css/footable.bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../shared/libs/fontawesome/fontawesome_5.0.0.min.css">
@@ -38,7 +38,7 @@ require 'handlers/userlogin.php';
 
         <div class="row padding-regular">
           <div class="col-12 padding-regular">
-            <h1 class="display-5 fw-bold"> Create event - form preview </h1>
+            <h1 class="display-5 fw-bold"> Edit event - form preview </h1>
             <p class="display-7 fw-bold"> Preview the event form for different time periods </p>
           </div>
 
@@ -50,7 +50,7 @@ require 'handlers/userlogin.php';
         <div class="row">
 
         <?php
-        echo "<h2> TEST Content </h2>";
+        include("components/eventpreviewform.php");
         ?>
 
         </div>
