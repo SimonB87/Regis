@@ -1,5 +1,5 @@
 <div class="col-12"> 
-  <form id="form" class="needs-validation bts-form full-width" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" novalidate>
+  <form id="form_setdate" class="needs-validation bts-form full-width" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" novalidate>
     <div class="row full-width">
 
       <div class="col-6">
