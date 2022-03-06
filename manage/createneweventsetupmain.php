@@ -43,6 +43,11 @@ require 'handlers/userlogin.php';
             <h1 class="display-5 fw-bold">Create new event - main set up</h1>
             <p class="display-7 fw-bold">Set here event new event main characteristics</p>
           </div>
+
+          <?php
+          include("shared/tableeventdata.php");
+          ?>
+
         </div>
 
       </div>
@@ -90,6 +95,7 @@ require 'handlers/userlogin.php';
     <script src="../shared/assets/js/scriptsformevent.js" defer></script>
     <script src="../shared/assets/js/footablerun.js" defer></script>
     <script src="../shared/assets/js/enablesections.js" defer></script>
+    <script src='../shared/assets/js/seteventsetupcurrentpage.js' defer></script>
 
   </body>
 </html>

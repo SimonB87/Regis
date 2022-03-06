@@ -5,10 +5,16 @@
     <span> Event set-up links : </span>
   </div>
 
+<?php 
+  $urlpath = $_SERVER['REQUEST_URI'];
+  $isModeEventCreate = strpos($urlpath, "createnewevent");
+?>
+
   <div class="col-12 text-center">
-    <a href=<?php if($isEventEdited) {echo "eventsetupmain.php"; } else {echo "createneweventsetupmain.php"; } ?> class="weblink padding-small "> Event main set up </a>
-    <a href=<?php if($isEventEdited) {echo "eventdescription.php"; } else {echo "createneweventeventdescription.php"; } ?> class="weblink padding-small"> Event description </a>
-    <a href=<?php if($isEventEdited) {echo "eventform.php"; } else {echo "createneweventeventform.php"; } ?> class="weblink padding-small"> Event register form </a>
+    <a id="nav_eventsetupmain" href=<?php if($isModeEventCreate) {echo "createneweventsetupmain.php"; } else {echo "eventsetupmain.php"; } ?> class="weblink padding-small "> Event main set up </a>
+    <a id="nav_eventdescription" href=<?php if($isModeEventCreate) {echo "createneweventeventdescription.php"; } else {echo "eventdescription.php"; } ?> class="weblink padding-small"> Event description </a>
+    <a id="nav_eventform" href=<?php if($isModeEventCreate) {echo "createneweventeventformpreview.php"; } else {echo "eventformpreview.php"; } ?> class="weblink padding-small"> Event register form </a>
+    <a id="nav_merchandise" href="merchendasesetup.php" class="weblink padding-small"> Merchendase set-up </a>
   </div>
 
 </div>

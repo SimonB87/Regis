@@ -1,6 +1,6 @@
 <div id="table-event-revenue" class="col-12 hidden"> <!-- hidden -->
   <h3>Event revenue estimates</h3>
-  <div class="padding-small"> <button id="recount-revenue-data" type="button" class="btn btn-primary"> Recount </button> </div>
+  <div class="padding-small"> <button id="recount-revenue-data" type="button" class="btn btn-primary" onclick="recountRevenueData();"> Recount </button> </div>
   <table class="table-event-data">
     <thead class="bg-success text-white">
       <tr>

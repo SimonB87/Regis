@@ -12,7 +12,7 @@ require 'handlers/userlogin.php';
     include("shared/head.php");
     ?>
 
-    <title> Edit event registration | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
+    <title> Edit event form preview | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
 
     <link rel="stylesheet" type="text/css" href="../shared/libs/footablebootstrap/css/footable.bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../shared/libs/fontawesome/fontawesome_5.0.0.min.css">
@@ -24,30 +24,21 @@ require 'handlers/userlogin.php';
 
     <?php
     include("shared/navigation.php");
-    include("handlers/handler_formeventsetupmain_saveproduction.php");
     ?> 
 
     <main>
 
-    <?php
-        include("shared/aside.php");
-     ?>
       <div class="container my-5 text-center">
 
         <?php
-        include("handlers/getpathdata.php");
         include("shared/setupnavigation.php");
         ?>
 
         <div class="row padding-regular">
           <div class="col-12 padding-regular">
-            <h1 class="display-5 fw-bold">Edit event main set up</h1>
-            <p class="display-7 fw-bold">Set here event main characteristics</p>
+            <h1 class="display-5 fw-bold"> Edit event - form preview </h1>
+            <p class="display-7 fw-bold"> Preview the event form for different time periods </p>
           </div>
-
-          <?php
-          include("shared/tableeventdata.php");
-          ?>
 
         </div>
 
@@ -57,7 +48,10 @@ require 'handlers/userlogin.php';
         <div class="row">
 
         <?php
-        include("components/formeventsetupmain.php");
+        include("handlers/handler_getformdata.php");
+        include("handlers/handlers_setdate.php");
+        include("components/previewform.php");
+        include("components/eventpreviewform.php");
         ?>
 
         </div>
@@ -95,7 +89,6 @@ require 'handlers/userlogin.php';
     <script src="../shared/assets/js/formsetionsedit.js" defer></script>
     <script src="../shared/assets/js/scriptsformevent.js" defer></script>
     <script src="../shared/assets/js/footablerun.js" defer></script>
-    <script src="../shared/assets/js/enablesections.js" defer></script>
     <script src='../shared/assets/js/seteventsetupcurrentpage.js' defer></script>
 
   </body>

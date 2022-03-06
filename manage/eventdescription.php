@@ -16,6 +16,7 @@ require 'handlers/userlogin.php';
 
     <link rel="stylesheet" type="text/css" href="../shared/libs/footablebootstrap/css/footable.bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../shared/libs/fontawesome/fontawesome_5.0.0.min.css">
+    <link rel="stylesheet" type="text/css" href="../shared/libs/emojionearea/emojionearea.min.css">
 <!--     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/fontawesome.min.css" integrity="sha512-Rcr1oG0XvqZI1yv1HIg9LgZVDEhf2AHjv+9AuD1JXWGLzlkoKDVvE925qySLcEywpMAYA/rkg296MkvqBF07Yw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> <!-- source: https://www.w3schools.com/icons/fontawesome5_intro.asp -->
 
@@ -24,7 +25,7 @@ require 'handlers/userlogin.php';
 
     <?php
     include("shared/navigation.php");
-    include("handlers/handler_formeventsetupmain_saveproduction.php");
+    include("handlers/handler_formeventdescription_savedata.php");
     ?> 
 
     <main>
@@ -89,6 +90,9 @@ require 'handlers/userlogin.php';
     <script src="../shared/assets/js/formsetionsedit.js" defer></script>
     <script src="../shared/assets/js/scriptsformevent.js" defer></script>
     <script src="../shared/assets/js/footablerun.js" defer></script>
+    <script src='../shared/libs/emojionearea/emojionearea.min.js' defer></script>
+    <script src='../shared/assets/js/emojionearea_set.js' defer></script>
+    <script src='../shared/assets/js/seteventsetupcurrentpage.js' defer></script>
 
   </body>
 </html>

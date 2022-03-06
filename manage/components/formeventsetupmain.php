@@ -31,8 +31,8 @@
     <div class="col-12 section-form-1"> 
       <div class="row"> 
 
-      <div class="col-12 padding-topBottom-medium-0x5"> 
-        <div class="row rounded padding-small shadow-light">
+      <div class="col-12 padding-topBottom-medium-0x5">
+        <div class="row rounded padding-small shadow-light padding-top-medium-1x3">
 
           <div class="col-lg-3 col-md-6 col-sm-12 padding-small">
             <div class="form-floating disabled">

@@ -1,7 +1,7 @@
 <aside class="aside-container">
 
   <div id="hide-aside" class="full-width padding-small" > 
-    <i class="far fas fa-backward aside-icon padding-small rotating-icon" aria-hidden="true">
+    <i id="recount-revenue-data" class="far fas fa-backward aside-icon padding-small rotating-icon" aria-hidden="true">
       <span class="aside-caption hidden padding-small-leftRight rotating-caption"> Hide/Show </span>
     </i> 
   </div>
