@@ -95,6 +95,7 @@ require 'handlers/userlogin.php';
     <script src="../shared/assets/js/formsetionsedit.js" defer></script>
     <script src="../shared/assets/js/scriptsformevent.js" defer></script>
     <script src="../shared/assets/js/footablerun.js" defer></script>
+    <script src="../shared/assets/js/enablesections.js" defer></script>
 
   </body>
 </html>
