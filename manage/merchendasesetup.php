@@ -49,6 +49,7 @@ require 'handlers/userlogin.php';
 
         <?php
         include("handlers/handler_getformdata.php");
+        include("components/merchandisecontrols.php");
         include("components/merchandiseitems.php");
         ?>
 
