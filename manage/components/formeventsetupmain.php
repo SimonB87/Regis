@@ -151,6 +151,7 @@
                     </label>
                 </div>
               </div>
+
             <!-- TODO Enable promocodes for discounts -> dynamical with JS opens promo codes for discounts -->
 <!--
             <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
@@ -168,27 +169,153 @@
       </div>
     </div>
 
+<!-- section : Agreements Options -->
+
+    <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top section-form-title"> 
+      <strong> Agreements options </strong> 
+      <span class="show-segment">
+       <span class="show-segment--icon section-icon-2"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
+        <span class="show-segment--icon section-icon-2"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
+      </span>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
+      <div class="form-check mb-3">
+        <input class="form-check-input checkbox-enablesection" type="checkbox" id="earlyBirdsRegistrationEnabled" name="earlyBirdsRegistrationEnabled" <?php if($isEventEdited) { if( $eventDataEarlyBirdsRegistrationEnabled == "Yes") { echo "checked"; } } ?> aria-rowindex="2">
+          <label class="form-check-label" for="earlyBirdsRegistrationEnabled">
+              Enable Agreement options part
+          </label>
+      </div>
+    </div>
+
+    <div class="col-12 section-form-2"> 
+      <div class="row">
+
+        <div class="col-12 padding-topBottom-medium-0x5"> 
+          <div class="row rounded padding-small shadow-light">
+
+            <div class="col-lg-4 col-md-4 col-sm-12 padding-small">
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="enableCoupleTicket" name="enableCoupleTicket" <?php /*if($isEventEdited) { if($eventDataEnableCoupleTicket == "Yes") { echo "checked"; } }*/ ?>>
+                <label class="form-check-label" for="enableCoupleTicket">
+                     Enable Agreement 1
+                </label>
+              </div>
+            </div>
+
+            <div class="col-lg-8 col-md-8 col-sm-12 padding-small">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="eventName" required name="eventName" maxlength="250" <?php /* if($isEventEdited) {echo "value='" . $eventDataEventName . "'"; } */ ?> >
+                <label for="eventName">Agreement 1 text </label>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in valid value.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="col-12 section-form-2"> 
+      <div class="row">
+
+        <div class="col-12 padding-topBottom-medium-0x5"> 
+          <div class="row rounded padding-small shadow-light">
+
+            <div class="col-lg-4 col-md-4 col-sm-12 padding-small">
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="enableCoupleTicket" name="enableCoupleTicket" <?php /*if($isEventEdited) { if($eventDataEnableCoupleTicket == "Yes") { echo "checked"; } }*/ ?>>
+                <label class="form-check-label" for="enableCoupleTicket">
+                     Enable Agreement 2
+                </label>
+              </div>
+            </div>
+
+            <div class="col-lg-8 col-md-8 col-sm-12 padding-small">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="eventName" required name="eventName" maxlength="250" <?php /* if($isEventEdited) {echo "value='" . $eventDataEventName . "'"; } */ ?> >
+                <label for="eventName">Agreement 2 text </label>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in valid value.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <div class="col-12 section-form-2"> 
+      <div class="row">
+
+        <div class="col-12 padding-topBottom-medium-0x5"> 
+          <div class="row rounded padding-small shadow-light">
+
+            <div class="col-lg-4 col-md-4 col-sm-12 padding-small">
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="enableCoupleTicket" name="enableCoupleTicket" <?php /*if($isEventEdited) { if($eventDataEnableCoupleTicket == "Yes") { echo "checked"; } }*/ ?>>
+                <label class="form-check-label" for="enableCoupleTicket">
+                     Enable Agreement 3
+                </label>
+              </div>
+            </div>
+
+            <div class="col-lg-8 col-md-8 col-sm-12 padding-small">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="eventName" required name="eventName" maxlength="250" <?php /* if($isEventEdited) {echo "value='" . $eventDataEventName . "'"; } */ ?> >
+                <label for="eventName">Agreement 3 text </label>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in valid value.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
 <!-- section : Early Birds Registration -->
 
     <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top section-form-title"> 
       <strong>Early Birds Registration</strong> 
       <span class="show-segment">
-          <span class="show-segment--icon section-icon-2"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
-          <span class="show-segment--icon section-icon-2"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
+          <span class="show-segment--icon section-icon-3"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
+          <span class="show-segment--icon section-icon-3"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
         </span>
     </div>
 
     <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
       <div class="form-check mb-3">
-         <input class="form-check-input checkbox-enablesection" type="checkbox" id="earlyBirdsRegistrationEnabled" name="earlyBirdsRegistrationEnabled" <?php if($isEventEdited) { if( $eventDataEarlyBirdsRegistrationEnabled == "Yes") { echo "checked"; } } ?> aria-rowindex="2">
-          <label class="form-check-label" for="earlyBirdsRegistrationEnabled">
+        <input class="form-check-input checkbox-enablesection" type="checkbox" id="earlyBirdsRegistrationEnabled" name="earlyBirdsRegistrationEnabled" <?php if($isEventEdited) { if( $eventDataEarlyBirdsRegistrationEnabled == "Yes") { echo "checked"; } } ?> aria-rowindex="2">
+        <label class="form-check-label" for="earlyBirdsRegistrationEnabled">
              Enable Early Birds Registration
-          </label>
-        </div>
+        </label>
+      </div>
     </div>
 
-    <div class="col-12 section-form-2"> 
+    <div class="col-12 section-form-3"> 
       <div class="row">
+
         <div class="col-12 padding-topBottom-medium-0x5"> 
           <div class="row rounded padding-small shadow-light">
             <div class="col-12 rounded padding-small-topBottom">
@@ -366,8 +493,8 @@
     <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top section-form-title"> 
       <strong>Regular Registration Data</strong> 
       <span class="show-segment">
-        <span class="show-segment--icon section-icon-3"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
-        <span class="show-segment--icon section-icon-3"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
+        <span class="show-segment--icon section-icon-4"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
+        <span class="show-segment--icon section-icon-4"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
       </span>
     </div>
 
@@ -380,7 +507,7 @@
         </div>
     </div>
 
-    <div class="col-12 section-form-3"> 
+    <div class="col-12 section-form-4"> 
       <div class="row">
 
       <div class="col-12 padding-topBottom-medium-0x5"> 
@@ -509,8 +636,8 @@
     <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top section-form-title"> 
       <strong> Party Pass Registrations </strong> 
       <span class="show-segment">
-        <span class="show-segment--icon section-icon-4"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
-        <span class="show-segment--icon section-icon-4"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
+        <span class="show-segment--icon section-icon-5"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
+        <span class="show-segment--icon section-icon-5"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
       </span>
     </div>
 
@@ -523,7 +650,7 @@
         </div>
     </div>
 
-    <div class="col-12 section-form-4"> 
+    <div class="col-12 section-form-5"> 
       <div class="row">
 
       <div class="col-12 padding-topBottom-medium-0x5"> 
@@ -651,8 +778,8 @@
     <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top section-form-title"> 
       <strong> Special type 1 Registrations </strong> 
       <span class="show-segment">
-        <span class="show-segment--icon section-icon-5"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
-        <span class="show-segment--icon section-icon-5"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
+        <span class="show-segment--icon section-icon-6"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
+        <span class="show-segment--icon section-icon-6"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
       </span>
     </div>
 
@@ -665,7 +792,7 @@
         </div>
     </div>
 
-    <div class="col-12 section-form-5"> 
+    <div class="col-12 section-form-6"> 
       <div class="row">
 
       <div class="col-12 padding-topBottom-medium-0x5"> 
@@ -792,8 +919,8 @@
     <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top section-form-title"> 
       <strong> Special type 2 Registrations </strong> 
       <span class="show-segment">
-        <span class="show-segment--icon section-icon-6"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
-        <span class="show-segment--icon section-icon-6"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
+        <span class="show-segment--icon section-icon-7"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
+        <span class="show-segment--icon section-icon-7"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
       </span>
     </div>
 
@@ -806,7 +933,7 @@
         </div>
     </div>
 
-    <div class="col-12 section-form-6"> 
+    <div class="col-12 section-form-7"> 
       <div class="row">
 
       <div class="col-12 padding-topBottom-medium-0x5"> 
