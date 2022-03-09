@@ -119,6 +119,9 @@
 .padding-right-medium-0x5 {
   padding-right: 0.5rem;
 }
+.padding-1x25rem {
+  padding: 1.25rem;
+}
 .padding-medium-1x3 {
   padding: 1.3rem;
 }
@@ -334,6 +337,11 @@ form div.form-floating {
 .div-select:hover > .form-select-customLabel {
   transform: scale(0.6);
   top: -0.1rem;
+}
+.form-floating.preview-form .form-control:focus ~ label,
+.form-floating.preview-form .form-control:not(:placeholder-shown) ~ label,
+.form-floating.preview-form .form-select ~ label {
+  transform: scale(0.85) translateY(0.25rem) translateX(0.25rem);
 }
 select {
   min-height: 58px;
