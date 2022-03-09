@@ -69,7 +69,7 @@
 
 </div>
 
-<div class="col-sm-12 col-md-6 col-xl-3 padding-regular">
+<div class="col-sm-12 col-md-6 col-xl-3 padding-regular-topBottom">
 
   <div class="card full-width shadow-light">
     <div class="card_top_shade"></div>
