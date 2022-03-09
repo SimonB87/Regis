@@ -8,16 +8,6 @@
 
     <div class="row">
 
-        <div class="col-lg-6 col-md-6 col-sm-12 padding-small">
-<!--              <option value="1" selected class="1.0">Early bird - till 1st April</option>
-              <option value="2" class="1.2">Regular ticket - since 2nd April</option>  -->
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="registrationType" value="Early bird - till 1st April" aria-label="readonly Registration type" readonly="" name="registrationType" aria-placeholder="1.0" maxlength="250">
-            <label for="registrationType">Registration type (hidden in browser)</label>
-            <span class="hidden registrationTypePriceBackup">1.0</span>
-          </div>
-        </div>
-
         <div class="col-lg-6 col-md-6 col-sm-12 padding-small hidden">
 <!--              <option value="1" selected class="1.0">Early bird - till 1st April</option>
               <option value="2" class="1.2">Regular ticket - since 2nd April</option>  -->
@@ -38,6 +28,26 @@
           <div class="form-floating mb-3">
             <input type="text" class="form-control" id="registrationdate" value="" aria-label="readonly Registration date" readonly="" name="registrationdate" maxlength="250">
             <label for="registrationdate">Registration date (hidden in browser)</label>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+          <div class="mb-3 full-width full-height div-select">
+            <select id="dancerKind" class="form-select" aria-label="Pass type" onchange="recalculatePrice();" required="" name="dancerKind">
+              <option value="" selected="" aria-valuenow="1.0">Select dancer kind ...</option>
+              <option value="1 - Leader" aria-valuenow="1.0">Leader</option>
+              <option value="2 - Follower" aria-valuenow="1.0">Follower</option>
+              <option value="3 - Couple" aria-valuenow="1.75">Couple</option>
+            </select>
+            <div class="form-select-customLabel">
+              Dancer kind
+            </div>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please select some valid option.
+            </div>
           </div>
         </div>
 
@@ -68,26 +78,6 @@
               <span class="priceBackup-option-4">1600</span>
               <span class="priceBackup-option-5">1100</span>
               <span class="priceBackup-option-6">1800</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-          <div class="mb-3 full-width full-height div-select">
-            <select id="dancerKind" class="form-select" aria-label="Pass type" onchange="recalculatePrice();" required="" name="dancerKind">
-              <option value="" selected="" aria-valuenow="1.0">Select dancer kind ...</option>
-              <option value="1 - Leader" aria-valuenow="1.0">Leader</option>
-              <option value="2 - Follower" aria-valuenow="1.0">Follower</option>
-              <option value="3 - Couple" aria-valuenow="1.75">Couple</option>
-            </select>
-            <div class="form-select-customLabel">
-              Dancer kind
-            </div>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-            <div class="invalid-feedback">
-              Please select some valid option.
             </div>
           </div>
         </div>
