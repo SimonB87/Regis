@@ -59,7 +59,12 @@
 ## Moje poznámky
 
 - vymyslet název :-) : www.registo.cz , www.regis.events ,
-- ! při každém budu při uložené do DB polsat vývojáří email o chybě
+- ! při každém pokusu při uložené do DB poslat vývojáří email o chybě
+- databázové sloupečky pro "Agreements options" sekci
+- scripty pro ukládání a aktualizaci pro "Agreements options"
+
+- ukládání emoticonů do dtabáze v části : Event Description
+
 - user sekce po přihlášení - možnost změnit heslo
 - na login formu zprovoznit notifikace na špatný login - login handler nadále musí být na vrchu aplikace
 - Ukládát plně české znaky pro jména
