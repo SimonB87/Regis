@@ -181,8 +181,8 @@
 
     <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
       <div class="form-check mb-3">
-        <input class="form-check-input checkbox-enablesection" type="checkbox" id="earlyBirdsRegistrationEnabled" name="earlyBirdsRegistrationEnabled" <?php if($isEventEdited) { if( $eventDataEarlyBirdsRegistrationEnabled == "Yes") { echo "checked"; } } ?> aria-rowindex="2">
-          <label class="form-check-label" for="earlyBirdsRegistrationEnabled">
+        <input class="form-check-input checkbox-enablesection" type="checkbox" id="agreementsEnabled" name="agreementsEnabled" <?php if($isEventEdited) { if( $eventDataAgreementsEnabled == "Yes") { echo "checked"; } } ?> aria-rowindex="2">
+          <label class="form-check-label" for="agreementsEnabled">
               Enable Agreement options part
           </label>
       </div>
@@ -196,8 +196,8 @@
 
             <div class="col-lg-4 col-md-4 col-sm-12 padding-small">
               <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" id="enableCoupleTicket" name="enableCoupleTicket" <?php /*if($isEventEdited) { if($eventDataEnableCoupleTicket == "Yes") { echo "checked"; } }*/ ?>>
-                <label class="form-check-label" for="enableCoupleTicket">
+                <input class="form-check-input" type="checkbox" id="agreement1Enabled" name="agreement1Enabled" <?php if($isEventEdited) { if($eventDataAgreement1Enabled == "Yes") { echo "checked"; } } ?>>
+                <label class="form-check-label" for="agreement1Enabled">
                      Enable Agreement 1
                 </label>
               </div>
@@ -205,8 +205,8 @@
 
             <div class="col-lg-8 col-md-8 col-sm-12 padding-small">
               <div class="form-floating">
-                <input type="text" class="form-control" id="eventName" required name="eventName" maxlength="250" <?php /* if($isEventEdited) {echo "value='" . $eventDataEventName . "'"; } */ ?> >
-                <label for="eventName">Agreement 1 text </label>
+                <input type="text" class="form-control" id="agreement1Text" required name="agreement1Text" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataAgreement1Text . "'"; } ?> >
+                <label for="agreement1Text">Agreement 1 text </label>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
@@ -231,8 +231,8 @@
 
             <div class="col-lg-4 col-md-4 col-sm-12 padding-small">
               <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" id="enableCoupleTicket" name="enableCoupleTicket" <?php /*if($isEventEdited) { if($eventDataEnableCoupleTicket == "Yes") { echo "checked"; } }*/ ?>>
-                <label class="form-check-label" for="enableCoupleTicket">
+                <input class="form-check-input" type="checkbox" id="agreement2Enabled" name="agreement2Enabled" <?php if($isEventEdited) { if( $eventDataAgreement2Enabled == "Yes") { echo "checked"; } } ?>>
+                <label class="form-check-label" for="agreement2Enabled">
                      Enable Agreement 2
                 </label>
               </div>
@@ -240,8 +240,8 @@
 
             <div class="col-lg-8 col-md-8 col-sm-12 padding-small">
               <div class="form-floating">
-                <input type="text" class="form-control" id="eventName" required name="eventName" maxlength="250" <?php /* if($isEventEdited) {echo "value='" . $eventDataEventName . "'"; } */ ?> >
-                <label for="eventName">Agreement 2 text </label>
+                <input type="text" class="form-control" id="agreement2Text" required name="agreement2Text" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataAgreement2Text . "'"; } ?> >
+                <label for="agreement2Text">Agreement 2 text </label>
                 <div class="valid-feedback">
                   Looks good!
                 </div>
@@ -267,8 +267,8 @@
 
             <div class="col-lg-4 col-md-4 col-sm-12 padding-small">
               <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" id="enableCoupleTicket" name="enableCoupleTicket" <?php /*if($isEventEdited) { if($eventDataEnableCoupleTicket == "Yes") { echo "checked"; } }*/ ?>>
-                <label class="form-check-label" for="enableCoupleTicket">
+                <input class="form-check-input" type="checkbox" id="agreement3Enabled" name="agreement3Enabled" <?php if($isEventEdited) { if( $eventDataAgreement3Enabled == "Yes") { echo "checked"; } } ?>>
+                <label class="form-check-label" for="agreement3Enabled">
                      Enable Agreement 3
                 </label>
               </div>
@@ -276,8 +276,8 @@
 
             <div class="col-lg-8 col-md-8 col-sm-12 padding-small">
               <div class="form-floating">
-                <input type="text" class="form-control" id="eventName" required name="eventName" maxlength="250" <?php /* if($isEventEdited) {echo "value='" . $eventDataEventName . "'"; } */ ?> >
-                <label for="eventName">Agreement 3 text </label>
+                <input type="text" class="form-control" id="agreement3Text" required name="agreement3Text" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataAgreement3Text. "'"; } ?> >
+                <label for="agreement3Text">Agreement 3 text </label>
                 <div class="valid-feedback">
                   Looks good!
                 </div>

@@ -7,6 +7,14 @@
   $eventDataEventEndDate = null;
   $eventDataEnableCoupleTicket = null;
 
+  $eventDataAgreementsEnabled = null;
+  $eventDataAgreement1Enabled = null;
+  $eventDataAgreement1Text = null;
+  $eventDataAgreement2Enabled = null;
+  $eventDataAgreement2Text = null;
+  $eventDataAgreement3Enabled = null;
+  $eventDataAgreement3Text = null;
+
   $eventDataEarlyBirdsRegistrationEnabled = null;
   $eventDataEarlyBirdsRegistrationName = null;
   $eventDataEarlyBirdsRegistrationsStartDate = null;
@@ -96,6 +104,14 @@
           $eventDataEventStartDate = $row["eventStartDate"] ;
           $eventDataEventEndDate = $row["eventEndDate"] ;
           $eventDataEnableCoupleTicket = $row["enableCoupleTicket"] ;
+
+          $eventDataAgreementsEnabled = $row["agreementsEnabled"] ;
+          $eventDataAgreement1Enabled = $row["agreement1Enabled"] ;
+          $eventDataAgreement1Text = $row["agreement1Text"] ;
+          $eventDataAgreement2Enabled = $row["agreement2Enabled"] ;
+          $eventDataAgreement2Text = $row["agreement2Text"] ;
+          $eventDataAgreement3Enabled = $row["agreement3Enabled"] ;
+          $eventDataAgreement3Text = $row["agreement3Text"] ;
 
           $eventDataEarlyBirdsRegistrationEnabled = $row["earlyBirdsRegistrationEnabled"] ;
           $eventDataEarlyBirdsRegistrationName = $row["earlyBirdsRegistrationName"] ;

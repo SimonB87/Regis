@@ -64,4 +64,13 @@ ADD eventDescription1 longtext CHARACTER SET latin1 COLLATE latin1_swedish_ci ,
 ADD eventDescription2 longtext CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
 ADD eventDescription3 longtext CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
 
+ALTER TABLE `events` 
+ADD agreementsEnabled varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
+ADD agreement1Enabled varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
+ADD agreement1Text varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
+ADD agreement2Enabled varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
+ADD agreement2Text varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
+ADD agreement3Enabled varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
+ADD agreement3Text varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
+
 //colum "ID" musí být auto_increment
