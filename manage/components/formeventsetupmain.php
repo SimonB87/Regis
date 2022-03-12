@@ -306,7 +306,7 @@
 
     <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
       <div class="form-check mb-3">
-        <input class="form-check-input checkbox-enablesection" type="checkbox" id="earlyBirdsRegistrationEnabled" name="earlyBirdsRegistrationEnabled" <?php if($isEventEdited) { if( $eventDataEarlyBirdsRegistrationEnabled == "Yes") { echo "checked"; } } ?> aria-rowindex="2">
+        <input class="form-check-input checkbox-enablesection" type="checkbox" id="earlyBirdsRegistrationEnabled" name="earlyBirdsRegistrationEnabled" <?php if($isEventEdited) { if( $eventDataEarlyBirdsRegistrationEnabled == "Yes") { echo "checked"; } } ?> aria-rowindex="3">
         <label class="form-check-label" for="earlyBirdsRegistrationEnabled">
              Enable Early Birds Registration
         </label>
@@ -500,7 +500,7 @@
 
     <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
       <div class="form-check mb-3">
-         <input class="form-check-input checkbox-enablesection" type="checkbox" id="regularRegistrationEnabled" name="regularRegistrationEnabled" <?php if($isEventEdited) { if( $eventDataRegularRegistrationEnabled == "Yes") { echo "checked"; } } ?> aria-rowindex="3">
+         <input class="form-check-input checkbox-enablesection" type="checkbox" id="regularRegistrationEnabled" name="regularRegistrationEnabled" <?php if($isEventEdited) { if( $eventDataRegularRegistrationEnabled == "Yes") { echo "checked"; } } ?> aria-rowindex="4">
           <label class="form-check-label" for="regularRegistrationEnabled">
              Enable Regular Registration
           </label>
@@ -643,7 +643,7 @@
 
     <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
       <div class="form-check mb-3">
-         <input class="form-check-input checkbox-enablesection" type="checkbox" id="partyRegistrationEnabled" name="partyRegistrationEnabled" <?php if($isEventEdited) { if( $partyRegistrationEnabled == "Yes") { echo "checked"; } } ?> aria-rowindex="4">
+         <input class="form-check-input checkbox-enablesection" type="checkbox" id="partyRegistrationEnabled" name="partyRegistrationEnabled" <?php if($isEventEdited) { if( $partyRegistrationEnabled == "Yes") { echo "checked"; } } ?> aria-rowindex="5">
           <label class="form-check-label" for="partyRegistrationEnabled">
             Enable Party Pass Registrations
           </label>
@@ -785,7 +785,7 @@
 
     <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
       <div class="form-check mb-3">
-         <input class="form-check-input checkbox-enablesection" type="checkbox" id="specialType1RegistrationEnabled" name="specialType1RegistrationEnabled" <?php if($isEventEdited) { if( $eventDataSpecialType1RegistrationEnabled == "Yes") { echo "checked"; } } ?> aria-rowindex="5">
+         <input class="form-check-input checkbox-enablesection" type="checkbox" id="specialType1RegistrationEnabled" name="specialType1RegistrationEnabled" <?php if($isEventEdited) { if( $eventDataSpecialType1RegistrationEnabled == "Yes") { echo "checked"; } } ?> aria-rowindex="6">
           <label class="form-check-label" for="specialType1RegistrationEnabled">
              Enable Special type 1 Registrations
           </label>
@@ -926,7 +926,7 @@
 
     <div class="col-sm-12 col-md-6 col-lg-7 col-xl-9 padding-regular-top">
       <div class="form-check mb-3">
-         <input class="form-check-input checkbox-enablesection" type="checkbox" id="specialType2RegistrationEnabled" name="specialType2RegistrationEnabled" <?php if($isEventEdited) { if( $eventDataSpecialType2RegistrationEnabled == "Yes") { echo "checked"; } } ?> aria-rowindex="6" >
+         <input class="form-check-input checkbox-enablesection" type="checkbox" id="specialType2RegistrationEnabled" name="specialType2RegistrationEnabled" <?php if($isEventEdited) { if( $eventDataSpecialType2RegistrationEnabled == "Yes") { echo "checked"; } } ?> aria-rowindex="7" >
           <label class="form-check-label" for="specialType2RegistrationEnabled">
              Enable Special type 2 Registrations
           </label>

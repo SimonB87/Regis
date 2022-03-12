@@ -3,9 +3,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
   notMainSectionsEnabled.forEach(function(sectionCheckbox, sectionIndex) {
     const isChecked = sectionCheckbox.hasAttribute("checked");
     
-    if ((!(isChecked == true)) && (sectionIndex > 1)) {
+    if ((!(isChecked == true)) && (sectionIndex > 0)) {
 
       const sectionInputs = document.querySelectorAll(".section-form-" + sectionIndex + " input");
+
       sectionInputs.forEach(function(item) {
         item.setAttribute("disabled", "");
       });
