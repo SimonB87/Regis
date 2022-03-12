@@ -15,7 +15,7 @@
   <div class="row full-width">
 
     <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top section-form-title"> 
-      <strong>Event Main Characteristics</strong> 
+      <strong> <span class="formSectionIndex"> 1 </span> Event Main Characteristics</strong> 
 
       <span class="show-segmen padding-regular-left" style="float:right;">
         <span class="show-segment--icon section-icon-1"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
@@ -172,7 +172,7 @@
 <!-- section : Agreements Options -->
 
     <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top section-form-title"> 
-      <strong> Agreements options </strong> 
+      <strong> <span class="formSectionIndex"> 2 </span> Agreements Options </strong> 
       <span class="show-segment">
        <span class="show-segment--icon section-icon-2"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
         <span class="show-segment--icon section-icon-2"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
@@ -297,7 +297,7 @@
 <!-- section : Early Birds Registration -->
 
     <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top section-form-title"> 
-      <strong>Early Birds Registration</strong> 
+      <strong> <span class="formSectionIndex"> 3 </span> Early Birds Registration</strong> 
       <span class="show-segment">
           <span class="show-segment--icon section-icon-3"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
           <span class="show-segment--icon section-icon-3"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
@@ -491,7 +491,7 @@
     <!-- section : Regular Registration Data -->
 
     <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top section-form-title"> 
-      <strong>Regular Registration Data</strong> 
+      <strong> <span class="formSectionIndex"> 4 </span> Regular Registration </strong> 
       <span class="show-segment">
         <span class="show-segment--icon section-icon-4"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
         <span class="show-segment--icon section-icon-4"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
@@ -634,7 +634,7 @@
 
     <!-- TODO Section : Party Pass Registrations -->
     <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top section-form-title"> 
-      <strong> Party Pass Registrations </strong> 
+      <strong> <span class="formSectionIndex"> 5 </span> Party Pass Registrations </strong> 
       <span class="show-segment">
         <span class="show-segment--icon section-icon-5"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
         <span class="show-segment--icon section-icon-5"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
@@ -776,7 +776,7 @@
      <!-- Section : Special type 1 Registrations -->
 
     <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top section-form-title"> 
-      <strong> Special type 1 Registrations </strong> 
+      <strong> <span class="formSectionIndex"> 6 </span> Special type 1 Registrations </strong> 
       <span class="show-segment">
         <span class="show-segment--icon section-icon-6"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
         <span class="show-segment--icon section-icon-6"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 
@@ -917,7 +917,7 @@
     <!-- Section : Special type 2 Registrations -->
 
     <div class="col-sm-12 col-md-6 col-lg-5 col-xl-3 padding-regular-top section-form-title"> 
-      <strong> Special type 2 Registrations </strong> 
+      <strong> <span class="formSectionIndex"> 7 </span> Special type 2 Registrations </strong> 
       <span class="show-segment">
         <span class="show-segment--icon section-icon-7"> <img src="../shared/assets/pics/eyeicon.png" alt="Icon eye" > </span>
         <span class="show-segment--icon section-icon-7"> <img class="" src="../shared/assets/pics/invisibleicon.png" alt="Icon eye closed" > </span> 

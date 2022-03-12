@@ -217,6 +217,10 @@
 .section-form-title .show-segment {
   float: right;
 }
+.formSectionIndex {
+  color: var(--lightGray);
+  padding-right: 0.5rem;
+}
 .color-main {
   color: var(--red);
 }
