@@ -39,7 +39,6 @@ require 'handlers/userlogin.php';
             <h1 class="display-5 fw-bold"> Edit event - form preview </h1>
             <p class="display-7 fw-bold"> Preview the event form for different time periods </p>
           </div>
-
         </div>
 
       </div>
