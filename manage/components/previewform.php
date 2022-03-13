@@ -1,3 +1,95 @@
+<!-- component : preview form -->
+
+
+
+
+
+
+
+
+<?php
+//test
+echo  "TEST <br> *1* " .
+  $eventDataId  . " ; " .
+  $eventDataEventStatus . " ; " .
+  $eventDataEventName . " ; " .
+  $eventDataEventStartDate . " ; " .
+  $eventDataEventEndDate . " ; eventDataEnableCoupleTicket : " .
+  $eventDataEnableCoupleTicket . " ; " .
+  "<br> *2* " .
+  $eventDataAgreementsEnabled . " ; " .
+  $eventDataAgreement1Enabled . " ; " .
+  $eventDataAgreement1Text . " ; " .
+  $eventDataAgreement2Enabled . " ; " .
+  $eventDataAgreement2Text . " ; " .
+  $eventDataAgreement3Enabled . " ; " .
+  $eventDataAgreement3Text . " ; " .
+  "<br> *3* " .
+  $eventDataEarlyBirdsRegistrationEnabled . " ; " .
+  $eventDataEarlyBirdsRegistrationName . " ; " .
+  $eventDataEarlyBirdsRegistrationsStartDate . " ; " .
+  $eventDataEarlyBirdsRegistrationsEndDate . " ; " .
+  $eventDataTicketsAmountEarlyBirdsRegistrationsSingle . " ; " .
+  $eventDataEarlyBirdsTicketPriceSingle . " ; " .
+  $eventDataEarlyBirdsTicketPriceCouple . " ; " .
+  $eventDataEarlyBirdsTicketAmountCouple . " ; " .
+  "<br> *4* " .
+  $eventDataRegularRegistrationEnabled . " ; " . 
+  $eventDataRegularRegistrationName . " ; " .
+  $eventDataRegularRegistrationsStartDate . " ; " . 
+  $eventDataRegularRegistrationsEndDate . " ; " . 
+  $eventDataRegularTicketPriceSingle . " ; " .
+  $eventDataRegularTicketAmountSingle . " ; " .
+  $eventDataRegularTicketPriceCouple . " ; " .
+  $eventDataRegularTicketAmountCouple . " ; " .
+  "<br> *5* " .
+  $partyRegistrationEnabled . " ; " .
+  $partyRegistrationName . " ; " .
+  $partyRegistrationsStartDate . " ; " .
+  $partyRegistrationsEndDate . " ; " .
+  $partyTicketPriceSingle . " ; " .
+  $partyTicketAmountSingle . " ; " .
+  $partyTicketPriceCouple . " ; " .
+  $partyTicketAmountCouple . " ; " .
+  "<br> *6* " .
+  $eventDataSpecialType1RegistrationEnabled . " ; " .
+  $eventDataSpecialType1RegistrationName . " ; " .
+  $eventDataSpecialType1RegistrationsStartDate . " ; " .
+  $eventDataSpecialType1RegistrationsEndDate . " ; " .
+  $eventDataSpecialType1TicketPriceSingle . " ; " . 
+  $eventDataSpecialType1TicketAmountSingle . " ; " .
+  $eventDataSpecialType1TicketPriceCouple . " ; " . 
+  $eventDataSpecialType1TicketAmountCouple . " ; " .
+  "<br> *7* " .
+  $eventDataSpecialType2RegistrationEnabled . " ; " .
+  $eventDataSpecialType2RegistrationName . " ; " .
+  $eventDataSpecialType2RegistrationsStartDate . " ; " .
+  $eventDataSpecialType2RegistrationsEndDate . " ; " .
+  $eventDataSpecialType2TicketPriceSingle . " ; " . 
+  $eventDataSpecialType2TicketAmountSingle . " ; " .
+  $eventDataSpecialType2TicketPriceCouple . " ; " . 
+  $eventDataSpecialType2TicketAmountCouple;
+//test
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="col-12 padding-regular-topBottom my-5">
   <h3 class="text-center"> Preview registration form </h3>
 </div>
@@ -34,10 +126,11 @@
         <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
           <div class="mb-3 full-width full-height div-select">
             <select id="dancerKind" class="form-select" aria-label="Pass type" onchange="recalculatePrice();" required="" name="dancerKind">
-              <option value="" selected="" aria-valuenow="1.0">Select dancer kind ...</option>
+              <option value="" selected="" aria-valuenow="0.0">Select dancer kind ...</option>
               <option value="1 - Leader" aria-valuenow="1.0">Leader</option>
               <option value="2 - Follower" aria-valuenow="1.0">Follower</option>
-              <option value="3 - Couple" aria-valuenow="1.75">Couple</option>
+              <?php if ( (isset($eventDataEnableCoupleTicket) ) && ( strtolower($eventDataEnableCoupleTicket) === "yes" ) ) { echo "<option value='3 - Couple' aria-valuenow='1.75'>Couple</option>"; } ?>
+
             </select>
             <div class="form-select-customLabel">
               Dancer kind
@@ -55,12 +148,12 @@
           <div id="passType--parent" class="mb-3 full-width full-height div-select">
             <select id="passType" class="form-select" aria-label="Pass type" required="" onchange="recalculatePrice();" name="passType">
               <option value="" selected="">Select pass type ... </option>
-              <option value="1 - Fullpass leader/follower - 1500,-Kč" aria-valuenow="1500">Fullpass leader/follower - 1500,-Kč</option>
-              <option value="2 - Fullpass couple - 2600,-Kč" aria-valuenow="2600">Fullpass couple - 2600,-Kč</option>
-              <option value="3 - Partypass leader/follower - 1000,-Kč" aria-valuenow="1000">Partypass leader/follower - 1000,-Kč</option>
-              <option value="4 - Partypass couple - 1600,-Kč" aria-valuenow="1600">Partypass couple - 1600,-Kč</option>
-              <option value="5 - Workshoppass leader/follower - 1100,-Kč" aria-valuenow="1100">Workshoppass leader/follower - 1100,-Kč</option>
-              <option value="6 - Workshoppass couple - 1800,-Kč" aria-valuenow="1800">Workshoppass couple - 1800,-Kč</option>
+              <?php if ( (strtolower($eventDataEarlyBirdsRegistrationEnabled) === "yes" ) ) { echo "<option value='1 - Early birds pass leader/follower - " . $eventDataEarlyBirdsTicketPriceSingle . ",-Kč' aria-valuenow='" . $eventDataEarlyBirdsTicketPriceSingle . "'>Early birds pass leader/follower - " . $eventDataEarlyBirdsTicketPriceSingle . ",-Kč</option>"; } ?>
+              <?php if ( (strtolower($eventDataEarlyBirdsRegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" ) ) { echo "<option value='2 - Early birds couple - " . $eventDataEarlyBirdsTicketPriceCouple . ",-Kč' aria-valuenow='" . $eventDataEarlyBirdsTicketPriceCouple . "'>Early birds couple - " . $eventDataEarlyBirdsTicketPriceCouple . ",-Kč</option>"; } ?>
+              <?php if ( (strtolower($eventDataRegularRegistrationEnabled) === "yes" ) ) { echo "<option value='1 - Fullpass leader/follower - ".$eventDataRegularTicketPriceSingle.",-Kč' aria-valuenow='".$eventDataRegularTicketPriceSingle."'>Fullpass leader/follower - " . $eventDataRegularTicketPriceSingle . ",-Kč</option>"; } ?>
+              <?php if ( (strtolower($eventDataRegularRegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" ) ) { echo "<option value='2 - Fullpass couple - ".$partyTicketPriceCouple.",-Kč' aria-valuenow='".$partyTicketPriceCouple."'>Fullpass couple - " . $partyTicketPriceCouple . ",-Kč</option>"; } ?>
+              <?php if ( (strtolower($partyRegistrationEnabled) === "yes" ) ) { echo "<option value='1 - Partypass leader/follower - ".$partyTicketPriceSingle.",-Kč' aria-valuenow='".$partyTicketPriceSingle."'>Partypass leader/follower - " . $partyTicketPriceSingle . ",-Kč</option>"; } ?>
+              <?php if ( (strtolower($partyRegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" ) ) { echo "<option value='2 - Partypass couple - ".$partyTicketPriceCouple.",-Kč' aria-valuenow='".$partyTicketPriceCouple."'>Partypass couple - " . $partyTicketPriceCouple . ",-Kč</option>"; } ?>
             </select>
             <div class="form-select-customLabel">
               Pass type
@@ -72,6 +165,7 @@
               Please select some valid option.
             </div>
             <div class="hidden passTypePriceBackup">
+              <!-- TODO - set prices from variables -->
               <span class="priceBackup-option-1">1500</span>
               <span class="priceBackup-option-2">2600</span>
               <span class="priceBackup-option-3">1000</span>
@@ -122,6 +216,7 @@
               Please select some valid option.
             </div>
             <div class="hidden merchandisePriceBackup">
+              <!-- TODO - set prices from variables -->
               <span class="competitionPriceBackup-option-1">500</span>
               <span class="competitionPriceBackup-option-2">0</span>
             </div>
