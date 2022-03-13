@@ -1,3 +1,4 @@
+<!-- component : event preview form -->
 <div class="col-12"> 
   <form id="form_setdate" class="needs-validation bts-form full-width" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" novalidate>
     <div class="row full-width">
