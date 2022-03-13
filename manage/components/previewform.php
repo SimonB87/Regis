@@ -1,10 +1,4 @@
-<!-- component : preview form -->
-
-
-
-
-
-
+<!-- component : preview form - see the visualised registration in admin test mode -->
 
 
 <?php
@@ -77,13 +71,12 @@ echo  "TEST <br> *1* " .
 
 <?php 
 $isVisible_dancerKind_couple = ( (isset($eventDataEnableCoupleTicket) ) && ( strtolower($eventDataEnableCoupleTicket) === "yes" ) );
-$isVisible_passType_earlyBirdsTicketSingle = ( (strtolower($eventDataEarlyBirdsRegistrationEnabled) === "yes" ) );
-$isVisible_passType_earlyBirdsTicketCouple =  (strtolower($eventDataEarlyBirdsRegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" );
-$isVisible_passType_regularTicketSingle = (strtolower($eventDataRegularRegistrationEnabled) === "yes" );
-$isVisible_passType_regularTicketCouple = ( (strtolower($eventDataRegularRegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" ) );
-$isVisible_passType_partyPassSingle = ( (strtolower($partyRegistrationEnabled) === "yes" ) );
-$isVisible_passType_partyPassCouple = ( (strtolower($partyRegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" ) );
-
+$isVisible_passType_earlyBirdsTicketSingle = ( (strtolower($eventDataEarlyBirdsRegistrationEnabled) === "yes" ) && ( $preview_earlybirdsSingleSold <= $eventDataTicketsAmountEarlyBirdsRegistrationsSingle ) );
+$isVisible_passType_earlyBirdsTicketCouple =  ( (strtolower($eventDataEarlyBirdsRegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" ) && ( $preview_earlybirdsCoupleSold <= $eventDataEarlyBirdsTicketAmountCouple));
+$isVisible_passType_regularTicketSingle = ( (strtolower($eventDataRegularRegistrationEnabled) === "yes" ) && ($preview_regularSingleSold <= $eventDataRegularTicketAmountSingle) );
+$isVisible_passType_regularTicketCouple = ( (strtolower($eventDataRegularRegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" ) && ($preview_regularCoupleSold <= $eventDataRegularTicketAmountCouple) );
+$isVisible_passType_partyPassSingle = ( (strtolower($partyRegistrationEnabled) === "yes" ) && ($preview_partySingleSold <= $partyTicketAmountSingle) );
+$isVisible_passType_partyPassCouple = ( (strtolower($partyRegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" ) && ($preview_partyCoupleSold <= $partyTicketAmountCouple) );
 
 
 
@@ -177,29 +170,6 @@ $isVisible_passType_partyPassCouple = ( (strtolower($partyRegistrationEnabled) =
               <? if ( $isVisible_passType_regularTicketCouple ) { echo "<span class='priceBackup-option-1'> " . $partyTicketPriceCouple . " </span>"; } ?>
               <? if ( $isVisible_passType_partyPassSingle ) { echo "<span class='priceBackup-option-1'> " . $partyTicketPriceSingle . " </span>"; } ?>
               <? if ( $isVisible_passType_partyPassCouple ) { echo "<span class='priceBackup-option-1'> " . $partyTicketPriceCouple . " </span>"; } ?>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 col-md-12 col-sm-12 padding-small hidden">
-          <div class="mb-3 full-width full-height div-select">
-            <select id="lengthType" class="form-select" aria-label="Pass type" onchange="recalculatePrice();" name="lengthType">
-              <option value="" aria-valuenow="1.0" selected="">Select length ...</option>
-              <option value="1 - Friday till Sunday" aria-valuenow="1.0">Friday till Sunday</option>
-              <option value="2 - Friday" aria-valuenow="0.6">Friday</option>
-              <option value="3 - Saturday" aria-valuenow="0.6">Saturday</option>
-              <option value="4 - Sunday" aria-valuenow="0.6">Sunday</option>
-              <option value="5 - Friday, Saturday" aria-valuenow="0.75">Friday, Saturday</option>
-              <option value="6 - Saturday, Sunday" aria-valuenow="0.7">Saturday, Sunday</option>
-            </select>
-            <div class="form-select-customLabel">
-              Event length
-            </div>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-            <div class="invalid-feedback">
-              Please select some valid option.
             </div>
           </div>
         </div>
