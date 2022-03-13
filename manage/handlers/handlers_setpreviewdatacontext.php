@@ -1,10 +1,25 @@
 <?php 
 $preview_date = (isset($_POST["preview_date"])) ? mysqli_real_escape_string($connector, $_POST["preview_date"]) : null;
 
-$preview_earlybirdssold = (isset($_POST["preview_earlybirdssold"])) ? mysqli_real_escape_string($connector, $_POST["preview_earlybirdssold"]) : null;
-$preview_regularsold = (isset($_POST["preview_regularsold"])) ? mysqli_real_escape_string($connector, $_POST["preview_regularsold"]) : null;
-$preview_partysold = (isset($_POST["preview_partysold"])) ? mysqli_real_escape_string($connector, $_POST["preview_partysold"]) : null;
-$preview_spec1sold = (isset($_POST["preview_spec1sold"])) ? mysqli_real_escape_string($connector, $_POST["preview_spec1sold"]) : null;
-$preview_spec2sold = (isset($_POST["preview_spec2sold"])) ? mysqli_real_escape_string($connector, $_POST["preview_spec2sold"]) : null;
+$preview_earlybirdsSingleSold = (isset($_POST["preview_earlybirdsSingleSold"])) ? mysqli_real_escape_string($connector, $_POST["preview_earlybirdsSingleSold"]) : null;
+
+$preview_earlybirdsCoupleSold = (isset($_POST["preview_earlybirdsCoupleSold"])) ? mysqli_real_escape_string($connector, $_POST["preview_earlybirdsCoupleSold"]) : null;
+
+$preview_regularSingleSold = (isset($_POST["preview_regularSingleSold"])) ? mysqli_real_escape_string($connector, $_POST["preview_regularSingleSold"]) : null;
+
+$preview_regularCoupleSold = (isset($_POST["preview_regularCoupleSold"])) ? mysqli_real_escape_string($connector, $_POST["preview_regularCoupleSold"]) : null;
+
+$preview_partySingleSold = (isset($_POST["preview_partySingleSold"])) ? mysqli_real_escape_string($connector, $_POST["preview_partySingleSold"]) : null;
+
+$preview_partyCoupleSold = (isset($_POST["preview_partyCoupleSold"])) ? mysqli_real_escape_string($connector, $_POST["preview_partyCoupleSold"]) : null;
+
+$preview_spec1SingleSold = (isset($_POST["preview_spec1SingleSold"])) ? mysqli_real_escape_string($connector, $_POST["preview_spec1SingleSold"]) : null;
+
+$preview_spec1CoupleSold = (isset($_POST["preview_spec1CoupleSold"])) ? mysqli_real_escape_string($connector, $_POST["preview_spec1CoupleSold"]) : null;
+
+$preview_spec2SingleSold = (isset($_POST["preview_spec2SingleSold"])) ? mysqli_real_escape_string($connector, $_POST["preview_spec2SingleSold"]) : null;
+
+$preview_spec2CoupleSold = (isset($_POST["preview_spec2CoupleSold"])) ? mysqli_real_escape_string($connector, $_POST["preview_spec2CoupleSold"]) : null;
+
 
 ?>
