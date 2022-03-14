@@ -7,6 +7,10 @@
       <form id="set_merch1" class="needs-validation bts-form full-width" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" novalidate>
         <div class="row full-width">
 
+          <div class="col-12"> 
+            <input type="text" class="form-control hidden" id="merch_id_item1" name="merch_id_item1" maxlength="250" value="1" >
+          </div>
+
           <div class="col-12">
             <div class="form-floating padding-small-topBottom">
               <input type="text" class="form-control" id="merch_name_item1" name="merch_name_item1" maxlength="250" <?php /*if(isset($eventDataPreviewDate)) {echo "value='" . $eventDataPreviewDate . "'"; } */ ?> >
@@ -76,6 +80,10 @@
       <h5 class="card-title"> Merch Item 2 </h5>
       <form id="set_merch1" class="needs-validation bts-form full-width" method="post" action="<?php /*echo $_SERVER['PHP_SELF']; */ ?>" novalidate>
         <div class="row full-width">
+
+          <div class="col-12"> 
+            <input type="text" class="form-control hidden" id="merch_id_item2" name="merch_id_item2" maxlength="250" value="2" >
+          </div>
 
           <div class="col-12">
 
@@ -148,6 +156,10 @@
       <form id="set_merch1" class="needs-validation bts-form full-width" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" novalidate>
         <div class="row full-width">
 
+          <div class="col-12"> 
+            <input type="text" class="form-control hidden" id="merch_id_item3" name="merch_id_item3" maxlength="250" value="3" >
+          </div>
+
           <div class="col-12">
             <div class="form-floating padding-small-topBottom">
               <input type="text" class="form-control" id="merch_name_item1" name="merch_name_item1" maxlength="250" <?php /*if(isset($eventDataPreviewDate)) {echo "value='" . $eventDataPreviewDate . "'"; } */ ?> >
@@ -217,6 +229,10 @@
       <h5 class="card-title"> Merch Item 4 </h5>
       <form id="set_merch1" class="needs-validation bts-form full-width" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" novalidate>
         <div class="row full-width">
+
+          <div class="col-12"> 
+            <input type="text" class="form-control hidden" id="merch_id_item4" name="merch_id_item4" maxlength="250" value="4" >
+          </div>
 
           <div class="col-12">
             <div class="form-floating padding-small-topBottom">
