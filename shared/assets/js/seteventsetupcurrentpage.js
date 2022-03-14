@@ -6,7 +6,7 @@ function setCurrentNavigation() {
   const pathMain = "eventsetupmain.php";
   const pathDescription = "eventdescription.php";
   const pathEventForm = "eventformpreview.php";
-  const pathEventMerch = "merchendasesetup.php";
+  const pathEventMerch = "merchandisesetup.php";
 
   const isPageMain = currentPage.search(pathMain);
   const isPageDescription = currentPage.search(pathDescription);
