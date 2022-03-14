@@ -20,6 +20,4 @@ $preview_spec1CoupleSold = (isset($_POST["preview_spec1CoupleSold"])) ? mysqli_r
 $preview_spec2SingleSold = (isset($_POST["preview_spec2SingleSold"])) ? mysqli_real_escape_string($connector, $_POST["preview_spec2SingleSold"]) : null;
 
 $preview_spec2CoupleSold = (isset($_POST["preview_spec2CoupleSold"])) ? mysqli_real_escape_string($connector, $_POST["preview_spec2CoupleSold"]) : null;
-
-
 ?>
