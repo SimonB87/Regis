@@ -2,11 +2,6 @@
 
 
 
-
-
-
-
-
 <?php
 //test
 echo  "TEST <br> *1* " .
@@ -73,25 +68,18 @@ echo  "TEST <br> *1* " .
 ?>
 
 
-
-
 <?php 
 $isVisible_dancerKind_couple = ( (isset($eventDataEnableCoupleTicket) ) && ( strtolower($eventDataEnableCoupleTicket) === "yes" ) );
-$isVisible_passType_earlyBirdsTicketSingle = ( (strtolower($eventDataEarlyBirdsRegistrationEnabled) === "yes" ) );
-$isVisible_passType_earlyBirdsTicketCouple =  (strtolower($eventDataEarlyBirdsRegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" );
-$isVisible_passType_regularTicketSingle = (strtolower($eventDataRegularRegistrationEnabled) === "yes" );
-$isVisible_passType_regularTicketCouple = ( (strtolower($eventDataRegularRegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" ) );
-$isVisible_passType_partyPassSingle = ( (strtolower($partyRegistrationEnabled) === "yes" ) );
-$isVisible_passType_partyPassCouple = ( (strtolower($partyRegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" ) );
-
-
-
-
-
-
-
-
-
+$isVisible_passType_earlyBirdsTicketSingle = ( (strtolower($eventDataEarlyBirdsRegistrationEnabled) === "yes" ) && ($preview_earlybirdsSingleSold <= $eventDataTicketsAmountEarlyBirdsRegistrationsSingle) );
+$isVisible_passType_earlyBirdsTicketCouple = ((strtolower($eventDataEarlyBirdsRegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" ) && ($preview_earlybirdsCoupleSold <= $eventDataEarlyBirdsTicketAmountCouple) );
+$isVisible_passType_regularTicketSingle = ((strtolower($eventDataRegularRegistrationEnabled) === "yes" ) && ($preview_regularSingleSold <= $eventDataRegularTicketAmountSingle) );
+$isVisible_passType_regularTicketCouple = ( (strtolower($eventDataRegularRegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" ) && ($preview_regularCoupleSold <= $eventDataRegularTicketAmountCouple) );
+$isVisible_passType_partyPassSingle = ( (strtolower($partyRegistrationEnabled) === "yes" )&& ($preview_partySingleSold <= $partyTicketAmountSingle) );
+$isVisible_passType_partyPassCouple = ( (strtolower($partyRegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" ) && ($preview_partyCoupleSold <= $partyTicketAmountCouple) );
+$isVisible_passType_specialType1Single = ( (strtolower($eventDataSpecialType1RegistrationEnabled) === "yes" ) && ($preview_spec1SingleSold <= $eventDataSpecialType1TicketAmountSingle) );
+$isVisible_passType_specialType1Couple = ( (strtolower($eventDataSpecialType1RegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" ) && ($preview_spec1CoupleSold <= $eventDataSpecialType1TicketAmountCouple) );
+$isVisible_passType_specialType2Single = ( (strtolower($eventDataSpecialType2RegistrationEnabled) === "yes" ) && ($preview_spec2SingleSold <= $eventDataSpecialType2TicketAmountSingle) );
+$isVisible_passType_specialType2Couple = ( (strtolower($eventDataSpecialType2RegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" ) && ($preview_spec2CoupleSold <= $eventDataSpecialType2TicketAmountCouple) );
 ?>
 
 
@@ -155,10 +143,10 @@ $isVisible_passType_partyPassCouple = ( (strtolower($partyRegistrationEnabled) =
               <option value="" selected="">Select pass type ... </option>
               <?php if ( $isVisible_passType_earlyBirdsTicketSingle ) { echo "<option value='1 - Early birds pass leader/follower - " . $eventDataEarlyBirdsTicketPriceSingle . ",-Kč' aria-valuenow='" . $eventDataEarlyBirdsTicketPriceSingle . "'>Early birds pass leader/follower - " . $eventDataEarlyBirdsTicketPriceSingle . ",-Kč</option>"; } ?>
               <?php if ( $isVisible_passType_earlyBirdsTicketCouple ) { echo "<option value='2 - Early birds couple - " . $eventDataEarlyBirdsTicketPriceCouple . ",-Kč' aria-valuenow='" . $eventDataEarlyBirdsTicketPriceCouple . "'>Early birds couple - " . $eventDataEarlyBirdsTicketPriceCouple . ",-Kč</option>"; } ?>
-              <?php if ( $isVisible_passType_regularTicketSingle ) { echo "<option value='1 - Fullpass leader/follower - ".$eventDataRegularTicketPriceSingle.",-Kč' aria-valuenow='" . $eventDataRegularTicketPriceSingle . "'>Fullpass leader/follower - " . $eventDataRegularTicketPriceSingle . ",-Kč</option>"; } ?>
-              <?php if ( $isVisible_passType_regularTicketCouple ) { echo "<option value='2 - Fullpass couple - " . $eventDataRegularTicketPriceCouple . ",-Kč' aria-valuenow='" . $eventDataRegularTicketPriceCouple . "'>Fullpass couple - " . $eventDataRegularTicketPriceCouple . ",-Kč</option>"; } ?>
-              <?php if ( $isVisible_passType_partyPassSingle ) { echo "<option value='1 - Partypass leader/follower - " . $partyTicketPriceSingle . ",-Kč' aria-valuenow='" . $partyTicketPriceSingle . "'>Partypass leader/follower - " . $partyTicketPriceSingle . ",-Kč</option>"; } ?>
-              <?php if ( $isVisible_passType_partyPassCouple ) { echo "<option value='2 - Partypass couple - " . $partyTicketPriceCouple . ",-Kč' aria-valuenow='" . $partyTicketPriceCouple . "'>Partypass couple - " . $partyTicketPriceCouple . ",-Kč</option>"; } ?>
+              <?php if ( $isVisible_passType_regularTicketSingle ) { echo "<option value='3 - Fullpass leader/follower - ".$eventDataRegularTicketPriceSingle.",-Kč' aria-valuenow='" . $eventDataRegularTicketPriceSingle . "'>Fullpass leader/follower - " . $eventDataRegularTicketPriceSingle . ",-Kč</option>"; } ?>
+              <?php if ( $isVisible_passType_regularTicketCouple ) { echo "<option value='4 - Fullpass couple - " . $eventDataRegularTicketPriceCouple . ",-Kč' aria-valuenow='" . $eventDataRegularTicketPriceCouple . "'>Fullpass couple - " . $eventDataRegularTicketPriceCouple . ",-Kč</option>"; } ?>
+              <?php if ( $isVisible_passType_partyPassSingle ) { echo "<option value='5 - Partypass leader/follower - " . $partyTicketPriceSingle . ",-Kč' aria-valuenow='" . $partyTicketPriceSingle . "'>Partypass leader/follower - " . $partyTicketPriceSingle . ",-Kč</option>"; } ?>
+              <?php if ( $isVisible_passType_partyPassCouple ) { echo "<option value='6 - Partypass couple - " . $partyTicketPriceCouple . ",-Kč' aria-valuenow='" . $partyTicketPriceCouple . "'>Partypass couple - " . $partyTicketPriceCouple . ",-Kč</option>"; } ?>
             </select>
             <div class="form-select-customLabel">
               Pass type
@@ -172,47 +160,30 @@ $isVisible_passType_partyPassCouple = ( (strtolower($partyRegistrationEnabled) =
             <div class="hidden passTypePriceBackup">
               <!-- TODO - set prices from variables -->
               <? if ( $isVisible_passType_earlyBirdsTicketSingle ) { echo "<span class='priceBackup-option-1'> " . $eventDataEarlyBirdsTicketPriceSingle . " </span>"; } ?>
-              <? if ( $isVisible_passType_earlyBirdsTicketCouple ) { echo "<span class='priceBackup-option-1'> " . $eventDataEarlyBirdsTicketPriceCouple . " </span>"; } ?>
-              <? if ( $isVisible_passType_regularTicketSingle ) { echo "<span class='priceBackup-option-1'> " . $eventDataRegularTicketPriceSingle . " </span>"; } ?>
-              <? if ( $isVisible_passType_regularTicketCouple ) { echo "<span class='priceBackup-option-1'> " . $partyTicketPriceCouple . " </span>"; } ?>
-              <? if ( $isVisible_passType_partyPassSingle ) { echo "<span class='priceBackup-option-1'> " . $partyTicketPriceSingle . " </span>"; } ?>
-              <? if ( $isVisible_passType_partyPassCouple ) { echo "<span class='priceBackup-option-1'> " . $partyTicketPriceCouple . " </span>"; } ?>
+              <? if ( $isVisible_passType_earlyBirdsTicketCouple ) { echo "<span class='priceBackup-option-2'> " . $eventDataEarlyBirdsTicketPriceCouple . " </span>"; } ?>
+              <? if ( $isVisible_passType_regularTicketSingle ) { echo "<span class='priceBackup-option-3'> " . $eventDataRegularTicketPriceSingle . " </span>"; } ?>
+              <? if ( $isVisible_passType_regularTicketCouple ) { echo "<span class='priceBackup-option-4'> " . $partyTicketPriceCouple . " </span>"; } ?>
+              <? if ( $isVisible_passType_partyPassSingle ) { echo "<span class='priceBackup-option-5'> " . $partyTicketPriceSingle . " </span>"; } ?>
+              <? if ( $isVisible_passType_partyPassCouple ) { echo "<span class='priceBackup-option-6'> " . $partyTicketPriceCouple . " </span>"; } ?>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-6 col-md-12 col-sm-12 padding-small hidden">
-          <div class="mb-3 full-width full-height div-select">
-            <select id="lengthType" class="form-select" aria-label="Pass type" onchange="recalculatePrice();" name="lengthType">
-              <option value="" aria-valuenow="1.0" selected="">Select length ...</option>
-              <option value="1 - Friday till Sunday" aria-valuenow="1.0">Friday till Sunday</option>
-              <option value="2 - Friday" aria-valuenow="0.6">Friday</option>
-              <option value="3 - Saturday" aria-valuenow="0.6">Saturday</option>
-              <option value="4 - Sunday" aria-valuenow="0.6">Sunday</option>
-              <option value="5 - Friday, Saturday" aria-valuenow="0.75">Friday, Saturday</option>
-              <option value="6 - Saturday, Sunday" aria-valuenow="0.7">Saturday, Sunday</option>
-            </select>
-            <div class="form-select-customLabel">
-              Event length
-            </div>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-            <div class="invalid-feedback">
-              Please select some valid option.
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
+        <div <?php if    ((strtolower ($eventDataSpecialType1RegistrationEnabled) === "yes") or (strtolower ($eventDataSpecialType2RegistrationEnabled) === "yes") )
+                         { echo "class='col-lg-6 col-md-12 col-sm-12 padding-small '" ; } 
+                   else  { echo "class='col-lg-6 col-md-12 col-sm-12 padding-small hidden '" ; } ?> >
           <div class="mb-3 full-width full-height div-select">
             <select id="competitionParticipation" class="form-select" aria-label="Pass type" required="" onchange="recalculatePrice();" name="competitionParticipation">
-              <option value="" selected="">Select competition option ...</option>
-              <option value="1 - Participate in Jack and Jill - 500,- Kč" aria-valuenow="500">Participate in Jack and Jill - 500,- Kč</option>
-              <option value="0 - No participation in competition - 0,- Kč" aria-valuenow="0">No participation in competition - 0,- Kč</option>
+              <option value="" selected=""> Other tickets options ...</option>
+              <?php 
+              if ($isVisible_passType_specialType1Single) { echo "<option value='1 - " . $eventDataSpecialType1RegistrationName . " - " . $eventDataSpecialType1TicketPriceSingle . ",- Kč' aria-valuenow='" . $eventDataSpecialType1TicketPriceSingle . "'>" . $eventDataSpecialType1RegistrationName . " Single - " .$eventDataSpecialType1TicketPriceSingle . ",- Kč</option>"; }
+              if ($isVisible_passType_specialType1Couple) { echo "<option value='2 - " . $eventDataSpecialType1RegistrationName . " - " . $eventDataSpecialType1TicketPriceCouple . ",- Kč' aria-valuenow='" . $eventDataSpecialType1TicketPriceCouple . "'>" . $eventDataSpecialType1RegistrationName . " Couple - " .$eventDataSpecialType1TicketPriceCouple . ",- Kč</option>"; }
+              if ($isVisible_passType_specialType2Single) { echo "<option value='3 - " . $eventDataSpecialType2RegistrationName . " - " . $eventDataSpecialType2TicketPriceSingle . ",- Kč' aria-valuenow='" . $eventDataSpecialType2TicketPriceSingle . "'>" . $eventDataSpecialType2RegistrationName . " Single - " .$eventDataSpecialType2TicketPriceSingle . ",- Kč</option>"; }
+              if ($isVisible_passType_specialType2Couple) { echo "<option value='4 - " . $eventDataSpecialType2RegistrationName . " - " . $eventDataSpecialType2TicketPriceCouple . ",- Kč' aria-valuenow='" . $eventDataSpecialType2TicketPriceCouple . "'>" . $eventDataSpecialType2RegistrationName . " Couple - " .$eventDataSpecialType2TicketPriceCouple . ",- Kč</option>"; }
+              ?>
             </select>
             <div class="form-select-customLabel">
-              Competition option
+              Other tickets
             </div>
             <div class="valid-feedback">
               Looks good!
@@ -222,8 +193,12 @@ $isVisible_passType_partyPassCouple = ( (strtolower($partyRegistrationEnabled) =
             </div>
             <div class="hidden merchandisePriceBackup">
               <!-- TODO - set prices from variables -->
-              <span class="competitionPriceBackup-option-1">500</span>
-              <span class="competitionPriceBackup-option-2">0</span>
+              <?php 
+              if ($isVisible_passType_specialType1Single) { echo "<span class='competitionPriceBackup-option-1'>" . $eventDataSpecialType1TicketPriceSingle . "</span>"; }
+              if ($isVisible_passType_specialType1Couple) { echo "<span class='competitionPriceBackup-option-2'>" . $eventDataSpecialType1TicketPriceCouple . "</span>"; }
+              if ($isVisible_passType_specialType2Single) { echo "<span class='competitionPriceBackup-option-3'>" . $eventDataSpecialType2TicketPriceSingle . "</span>"; }
+              if ($isVisible_passType_specialType2Couple) { echo "<span class='competitionPriceBackup-option-4'>" . $eventDataSpecialType2TicketPriceCouple . "</span>"; }
+              ?>
             </div>
           </div>
         </div>
@@ -252,8 +227,6 @@ $isVisible_passType_partyPassCouple = ( (strtolower($partyRegistrationEnabled) =
             <div class="hidden merchandisePriceBackup">
               <span class="merchandisePriceBackup-option-1">0</span>
               <span class="merchandisePriceBackup-option-2">500</span>
-              <span class="merchandisePriceBackup-option-3">400</span>
-              <span class="merchandisePriceBackup-option-4">300</span>
             </div>
           </div>
         </div>
