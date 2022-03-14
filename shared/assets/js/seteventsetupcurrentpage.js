@@ -28,4 +28,5 @@ function setCurrentNavigation() {
   if (isPageMerch > 0) {
     document.getElementById("nav_merchandise").classList.add("fw-bold");
   }
+
 }
