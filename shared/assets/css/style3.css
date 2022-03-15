@@ -271,6 +271,12 @@ footer .copyright {
 .card .card-body .form-floating:focus label {
   transform: scale(0.66);
 }
+.card .div-select > .form-select-customLabel {
+  transition: transform 1s linear 0.25s, top 1s linear 0.25s, left top 1s linear 0.25s;
+}
+.card .div-select:hover > .form-select-customLabel {
+  left: -0.5rem;
+}
 .aside-container {
   position: fixed;
   top: 20vh;
