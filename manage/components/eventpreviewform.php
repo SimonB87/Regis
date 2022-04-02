@@ -147,7 +147,7 @@
       </div>
 
       <div class="col-lg-2 col-md-3 col-sm-6 padding-1x25rem">
-        <input class="btn btn-primary full-height full-width" type="submit" name="safe_form_data" value="Set date">
+        <input class="btn btn-primary full-height full-width" type="submit" name="safe_form_data" value="Set preview data">
       </div>
 
     </div>
