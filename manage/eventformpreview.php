@@ -48,9 +48,16 @@ require 'handlers/userlogin.php';
         <div class="row">
 
         <?php
+        //get all the data about last event
         include("handlers/handler_getformdata.php");
+
+        //get the event data admin did fill in the simulated preview data context 
         include("handlers/handlers_setpreviewdatacontext.php");
+
+        //set here the simulated preview data context
         include("components/eventpreviewform.php");
+
+        //the view of the simulated form for just the preview
         include("components/previewform.php");
         ?>
 
@@ -91,6 +98,7 @@ require 'handlers/userlogin.php';
     <script src="../shared/assets/js/scriptsformevent.js" defer></script>
     <script src="../shared/assets/js/footablerun.js" defer></script>
     <script src='../shared/assets/js/seteventsetupcurrentpage.js' defer></script>
+    <script src='../shared/assets/js/editformatdatepicker.js' defer></script>
 
   </body>
 </html>
