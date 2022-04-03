@@ -5,7 +5,7 @@
 
       <div class="col-lg-4 col-md-6 col-sm-12">
         <div class="form-floating preview-form  padding-small">
-          <input type="date" class="form-control" id="preview_date" name="preview_date" maxlength="250" <?php if(isset($preview_date)) {echo "value='" . $preview_date . "'"; } ?> >
+          <input type="date" class="form-control" id="preview_date" name="preview_date" maxlength="250" data-date-format="dd/mm/yy" <?php if(isset($preview_date)) {echo "value='" . $preview_date . "'"; } ?> >
           <label for="preview_date"> Set preview date</label>
            <div class="valid-feedback">
               Looks good!
