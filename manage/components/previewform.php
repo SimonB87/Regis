@@ -302,31 +302,56 @@ $isVisible_passType_specialType2Couple = ( (strtolower($eventDataSpecialType2Reg
           </div>
         </div>
 
-        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="confirmPrivateInformation" required="" name="confirmPrivateInformation">
-          <label class="form-check-label" for="confirmPrivateInformation">I agree with storing the information I am providing you and I agree with your company GDP policy/therms</label> <a href="#">GDP policy/therms</a>
-          <div class="valid-feedback">
-              Looks good!
-            </div>
-            <div class="invalid-feedback">
-              Please fill in the text field.
-            </div>
-        </div>
-        </div>
+        <?php 
+        if ( $eventDataAgreementsEnabled && $eventDataAgreement1Enabled ) {
+          echo "
+          <div class='col-lg-6 col-md-12 col-sm-12 padding-small'>
+          <div class='mb-3 form-check'>
+            <input type='checkbox' class='form-check-input' id='confirmPrivateInformation' required='' name='confirmPrivateInformation'>
+            <label class='form-check-label' for='confirmPrivateInformation'> " . $eventDataAgreement1Text . "</label>
+            <div class='valid-feedback'>
+                Looks good!
+              </div>
+              <div class='invalid-feedback'>
+                Please fill in the text field.
+              </div>
+          </div>
+        </div>";
+        }
 
-        <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="confirmCovid" required="" name="confirmCovid">
-          <label class="form-check-label" for="confirmCovid">I am vaccinated against COVID-19 or I have valid COVID-19 test</label> <a href="#">COVID-19 policy</a>
-          <div class="valid-feedback">
-              Looks good!
-            </div>
-            <div class="invalid-feedback">
-              Please fill in the text field.
-            </div>
-        </div>
-        </div>
+        if ( $eventDataAgreementsEnabled && $eventDataAgreement2Enabled ) {
+          echo "
+          <div class='col-lg-6 col-md-12 col-sm-12 padding-small'>
+          <div class='mb-3 form-check'>
+            <input type='checkbox' class='form-check-input' id='confirmPrivateInformation' required='' name='confirmPrivateInformation'>
+            <label class='form-check-label' for='confirmPrivateInformation'> " . $eventDataAgreement2Text . "</label>
+            <div class='valid-feedback'>
+                Looks good!
+              </div>
+              <div class='invalid-feedback'>
+                Please fill in the text field.
+              </div>
+          </div>
+        </div>";
+        }
+
+        if ( $eventDataAgreementsEnabled && $eventDataAgreement3Enabled ) {
+          echo "
+          <div class='col-lg-6 col-md-12 col-sm-12 padding-small'>
+          <div class='mb-3 form-check'>
+            <input type='checkbox' class='form-check-input' id='confirmPrivateInformation' required='' name='confirmPrivateInformation'>
+            <label class='form-check-label' for='confirmPrivateInformation'> " . $eventDataAgreement3Text . "</label>
+            <div class='valid-feedback'>
+                Looks good!
+              </div>
+              <div class='invalid-feedback'>
+                Please fill in the text field.
+              </div>
+          </div>
+        </div>";
+        }
+
+        ?>
 
 
         <div class="col-lg-12 col-md-12 col-sm-12 padding-small">
