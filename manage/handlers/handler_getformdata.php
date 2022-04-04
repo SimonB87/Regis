@@ -106,11 +106,11 @@
 
         $eventDataAgreementsEnabled = $row["enableCoupleTicket"] ;
         $eventDataAgreement1Enabled = $row["enableCoupleTicket"] ;
-        $eventDataAgreement1Text = $row["enableCoupleTicket"] ;
+        $eventDataAgreement1Text = $row["agreement1Text"] ;
         $eventDataAgreement2Enabled = $row["enableCoupleTicket"] ;
-        $eventDataAgreement2Text = $row["enableCoupleTicket"] ;
+        $eventDataAgreement2Text = $row["agreement2Text"] ;
         $eventDataAgreement3Enabled = $row["enableCoupleTicket"] ;
-        $eventDataAgreement3Text = $row["enableCoupleTicket"] ;
+        $eventDataAgreement3Text = $row["agreement3Text"] ;
 
         $eventDataEarlyBirdsRegistrationEnabled = $row["earlyBirdsRegistrationEnabled"] ;
         $eventDataEarlyBirdsRegistrationName = $row["earlyBirdsRegistrationName"] ;
