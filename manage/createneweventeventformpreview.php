@@ -49,9 +49,9 @@ require 'handlers/userlogin.php';
 
         <?php
         include("handlers/handler_getformdata.php");
-        include("handlers/handlers_setdate.php");
-        include("components/previewform.php");
+        include("handlers/handlers_setpreviewdatacontext.php");
         include("components/eventpreviewform.php");
+        include("components/previewform.php");
         ?>
 
         </div>
