@@ -412,6 +412,10 @@ input#floatingLocation {
 .eventdescriptionform .form-floating textarea {
   height: 15rem;
 }
+.form-change-status form {
+  display: flex;
+  flex-direction: row;
+}
 @media only screen and (max-width: 559px) {
   .row form .col-sm-12 {
     width: 100%;
