@@ -73,3 +73,6 @@
 ## Descriptions
 
 - Description 1 : děla uživatel sám z emailu do 48hodin před začátkem akce pře email, kde má potvrzení o platbě. Klient dostane potvrzení mailem admin. K registraci se přidá system-note o transferu
+
+## Form validation
+- form validation video : https://www.youtube.com/watch?v=rsd4FNGTRBw
