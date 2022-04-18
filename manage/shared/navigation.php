@@ -22,6 +22,8 @@
               <li><a class="dropdown-item" href="createneweventsetupmain.php">Create a new event</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="eventsetupmain.php">Existing event main set up</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="publishevent.php">Make event public</a></li>
             </ul>
           </li>
           <li class="nav-item">

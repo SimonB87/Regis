@@ -22,6 +22,7 @@
     <a id="nav_eventform"
       href=<?php if($isModeEventCreate) {echo "createneweventeventformpreview.php"; } else {echo "eventformpreview.php"; } ?>
       class="weblink padding-small"> Event register form </a>
+    <a id="nav_eventform" href="publishevent.php" class="weblink padding-small"> Publish event </a>
   </div>
 
 </div>
