@@ -76,3 +76,11 @@
 
 ## Form validation
 - form validation video : https://www.youtube.com/watch?v=rsd4FNGTRBw
+
+## hlavní dodělávky
+
+- v úpravě description použít dynamické odkazy na obrázky
+- do preview stránky dodat taky description
+- počítat zvlášť leader / follower lístky v jednotlivých kategoriích
+- když user objednává lístek tak se dynamicky dotízat do databíze zda je tento lístek k dispozici - potíže při prodeje posledního lístku
+- vyřadit couple tiskets enabled - místo toho dát do kategorie - počet 0
