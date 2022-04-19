@@ -40,8 +40,15 @@ require 'handlers/userlogin.php';
 
         <div class="row padding-regular">
           <div class="col-12 padding-regular">
+
             <h1 class="display-5 fw-bold">Make event public</h1>
+
             <p class="display-7 fw-bold">Manage which event should be made public out of all saved events </p>
+            <!-- Event status notifications -->
+            <div id="status-background" class="my-5 padding-regular rounded">
+              <h3 id="status-notification"> </h3>
+            </div>
+
           </div>
 
           <div class="row">
@@ -80,6 +87,7 @@ require 'handlers/userlogin.php';
     <script src='../shared/libs/emojionearea/emojionearea.min.js' defer></script>
     <script src='../shared/assets/js/emojionearea_set.js' defer></script>
     <script src='../shared/assets/js/seteventsetupcurrentpage.js' defer></script>
+    <script src='../shared/assets/js/publisheventscheck.js' defer></script>
 
   </body>
 </html>

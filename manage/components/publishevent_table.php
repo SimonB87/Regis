@@ -71,12 +71,12 @@
           $status3 = ($row["eventStatus"] === "3 - Event cancelled") ? true : false;
 
           $eventStatusOtionsComponent =             "<div class='mb-3 full-width full-height div-select'>
-          <select id='eventStatus' class='form-select' aria-label='Pass type' required name='eventStatus' >
+          <select id='eventStatus" .$row["id"]. "' class='form-select' aria-label='Pass type' required name='eventStatus' >
             <option value='' selected>Select event status option ...</option>
-            <option value='0 - Registrations closed' " . ( $status1  ? 'selected' : '' ) . " >Registrations closed</option>
-            <option value='1 - Registrations open'" . ( $status1  ? 'selected' : '' ) . ">Registrations open</option>
-            <option value='2 - Event passed'" . ( $status2  ? 'selected' : '' ) . ">Event passed</option>
-            <option value='3 - Event cancelled' " . ( $status3  ? 'selected' : '' ) . " >Event cancelled</option>
+            <option value='0 - Registrations closed' " . ( $status0 ? 'selected' : '' ) . " >Registrations closed</option>
+            <option value='1 - Registrations open'" . ( $status1 ? 'selected' : '' ) . ">Registrations open</option>
+            <option value='2 - Event passed'" . ( $status2 ? 'selected' : '' ) . ">Event passed</option>
+            <option value='3 - Event cancelled' " . ( $status3 ? 'selected' : '' ) . " >Event cancelled</option>
           </select>
           <div class='valid-feedback'>
             Looks good!
@@ -88,7 +88,7 @@
 
           $formStart = "<div class='form-change-status'><form id='form' class='needs-validation bts-form' method='post' action=" . $_SERVER['PHP_SELF'] . " novalidate>";
           $idInputValue = "<div class='form-floating hidden'><input type='text' class='form-control' id='eventId' required='' name='eventId' maxlength='250' value=" . $row["id"] . "></div>";
-          $submitButton = "<div class='form-floating'><input class='btn btn-primary' type='submit' name='safe_publish_data' value='Submit'></div>";
+          $submitButton = "<div class='padding-regular-leftRight'><input class='btn btn-primary' type='submit' name='safe_publish_data' value='Edit status'></div>";
           $formEnd = "</form></div>";
           $wholeForm = $formStart . $eventStatusOtionsComponent . $idInputValue . $submitButton . $formEnd;
 

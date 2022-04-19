@@ -97,6 +97,12 @@
 .padding-regular-left {
   padding-left: var(--padding-regular);
 }
+.padding-regular-right {
+  padding-left: var(--padding-regular);
+}
+.padding-regular-leftRight {
+  padding-left: var(--padding-regular);
+}
 .padding-regular-top {
   padding-top: var(--padding-regular);
 }
