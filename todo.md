@@ -85,4 +85,4 @@
 - když user objednává lístek tak se dynamicky dotázat do databíze zda je tento lístek k dispozici - potíže při prodeje posledního lístku
 - vyřadit couple tiskets enabled - místo toho dát do kategorie - počet 0
 - nahrávat obrázky k událostem
-- pro 
+- pro "/manage/publishevent.php" dodat ještě checkbox - "Is event public" - a pak bude jen ta událost veřejná, která bude mít "1 registrations open" a také "Is event public"
