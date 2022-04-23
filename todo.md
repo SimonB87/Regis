@@ -80,7 +80,9 @@
 ## hlavní dodělávky
 
 - v úpravě description použít dynamické odkazy na obrázky
-- do preview stránky dodat taky description
+- opravit bug s enables sections - když je tam sekce 2 disabled a obsahuje uvnitř texty (situace na vývoji)
 - počítat zvlášť leader / follower lístky v jednotlivých kategoriích
-- když user objednává lístek tak se dynamicky dotízat do databíze zda je tento lístek k dispozici - potíže při prodeje posledního lístku
+- když user objednává lístek tak se dynamicky dotázat do databíze zda je tento lístek k dispozici - potíže při prodeje posledního lístku
 - vyřadit couple tiskets enabled - místo toho dát do kategorie - počet 0
+- nahrávat obrázky k událostem
+- pro 
