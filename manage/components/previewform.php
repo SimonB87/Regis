@@ -1,72 +1,5 @@
 <!-- component : preview form - see the visualised registration in admin test mode -->
 
-
-<?php
-//test
-echo  "TEST <br> *1* " .
-  $eventDataId  . " ; " .
-  $eventDataEventStatus . " ; " .
-  $eventDataEventName . " ; " .
-  $eventDataEventStartDate . " ; " .
-  $eventDataEventEndDate . " ; eventDataEnableCoupleTicket : " .
-  $eventDataEnableCoupleTicket . " ; " .
-  "<br> *2* " .
-  $eventDataAgreementsEnabled . " ; " .
-  $eventDataAgreement1Enabled . " ; " .
-  $eventDataAgreement1Text . " ; " .
-  $eventDataAgreement2Enabled . " ; " .
-  $eventDataAgreement2Text . " ; " .
-  $eventDataAgreement3Enabled . " ; " .
-  $eventDataAgreement3Text . " ; " .
-  "<br> *3* " .
-  $eventDataEarlyBirdsRegistrationEnabled . " ; " .
-  $eventDataEarlyBirdsRegistrationName . " ; " .
-  $eventDataEarlyBirdsRegistrationsStartDate . " ; " .
-  $eventDataEarlyBirdsRegistrationsEndDate . " ; " .
-  $eventDataTicketsAmountEarlyBirdsRegistrationsSingle . " ; " .
-  $eventDataEarlyBirdsTicketPriceSingle . " ; " .
-  $eventDataEarlyBirdsTicketPriceCouple . " ; " .
-  $eventDataEarlyBirdsTicketAmountCouple . " ; " .
-  "<br> *4* " .
-  $eventDataRegularRegistrationEnabled . " ; " . 
-  $eventDataRegularRegistrationName . " ; " .
-  $eventDataRegularRegistrationsStartDate . " ; " . 
-  $eventDataRegularRegistrationsEndDate . " ; " . 
-  $eventDataRegularTicketPriceSingle . " ; " .
-  $eventDataRegularTicketAmountSingle . " ; " .
-  $eventDataRegularTicketPriceCouple . " ; " .
-  $eventDataRegularTicketAmountCouple . " ; " .
-  "<br> *5* " .
-  $partyRegistrationEnabled . " ; " .
-  $partyRegistrationName . " ; " .
-  $partyRegistrationsStartDate . " ; " .
-  $partyRegistrationsEndDate . " ; " .
-  $partyTicketPriceSingle . " ; " .
-  $partyTicketAmountSingle . " ; " .
-  $partyTicketPriceCouple . " ; " .
-  $partyTicketAmountCouple . " ; " .
-  "<br> *6* " .
-  $eventDataSpecialType1RegistrationEnabled . " ; " .
-  $eventDataSpecialType1RegistrationName . " ; " .
-  $eventDataSpecialType1RegistrationsStartDate . " ; " .
-  $eventDataSpecialType1RegistrationsEndDate . " ; " .
-  $eventDataSpecialType1TicketPriceSingle . " ; " . 
-  $eventDataSpecialType1TicketAmountSingle . " ; " .
-  $eventDataSpecialType1TicketPriceCouple . " ; " . 
-  $eventDataSpecialType1TicketAmountCouple . " ; " .
-  "<br> *7* " .
-  $eventDataSpecialType2RegistrationEnabled . " ; " .
-  $eventDataSpecialType2RegistrationName . " ; " .
-  $eventDataSpecialType2RegistrationsStartDate . " ; " .
-  $eventDataSpecialType2RegistrationsEndDate . " ; " .
-  $eventDataSpecialType2TicketPriceSingle . " ; " . 
-  $eventDataSpecialType2TicketAmountSingle . " ; " .
-  $eventDataSpecialType2TicketPriceCouple . " ; " . 
-  $eventDataSpecialType2TicketAmountCouple;
-//test
-?>
-
-
 <?php 
 $isVisible_dancerKind_couple = ( (isset($eventDataEnableCoupleTicket) ) && ( strtolower($eventDataEnableCoupleTicket) === "yes" ) );
 $isVisible_passType_earlyBirdsTicketSingle = ( (strtolower($eventDataEarlyBirdsRegistrationEnabled) === "yes" ) && ($preview_earlybirdsSingleSold <= $eventDataTicketsAmountEarlyBirdsRegistrationsSingle) && ( $preview_date >= $eventDataEarlyBirdsRegistrationsStartDate ) && ( $preview_date <= $eventDataEarlyBirdsRegistrationsEndDate ) );
@@ -90,9 +23,64 @@ $isVisible_passType_specialType2Single = ( (strtolower($eventDataSpecialType2Reg
 $isVisible_passType_specialType2Couple = ( (strtolower($eventDataSpecialType2RegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" ) && ($preview_spec2CoupleSold <= $eventDataSpecialType2TicketAmountCouple) && ( $preview_date >= $eventDataSpecialType2RegistrationsStartDate ) && ( $preview_date <= $eventDataSpecialType2RegistrationsEndDate ) );
 ?>
 
-
 <div class="col-12 padding-regular-topBottom my-5">
   <h3 class="text-center"> Preview registration form </h3>
+</div>
+
+<div class="col-12"> 
+  <div class="bg-gray content-body padding-regular-topBottom">
+    <div class="text-center padding-small text-white"> 
+
+      <div>
+        <h1 class="padding-small color-main">
+          <?php echo $eventDataEventName ?>
+        </h1>
+      </div>
+
+      <div class="padding-regular text-center">
+        <a href="#formSection">
+          <button type="button" class="btn btn-primary">
+            REGISTER NOW
+          </button>
+        </a>
+      </div>
+
+      <div>
+        <h2 class="padding-small color-secondary">
+          Description
+        </h2>
+      </div>
+
+      <div>
+        <?php echo $dataEventDescription1 ?>
+      </div>
+
+      <div class="padding-regular text-center">
+        <a href="#formSection">
+          <button type="button" class="btn btn-primary">
+            REGISTER NOW
+          </button>
+        </a>
+      </div>
+
+      <div>
+        <?php echo $dataEventDescription2 ?>
+      </div>
+
+      <div class="padding-regular text-center">
+        <a href="#formSection">
+          <button type="button" class="btn btn-primary">
+            REGISTER NOW
+          </button>
+        </a>
+      </div>
+
+      <div>
+        <?php echo $dataEventDescription3 ?>
+      </div>
+
+    </div>
+  </div>
 </div>
 
 <div class="col-12 padding-regular-topBottom bg-light rounded">

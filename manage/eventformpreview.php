@@ -50,6 +50,7 @@ require 'handlers/userlogin.php';
         <?php
         //get all the data about last event
         include("handlers/handler_getformdata.php");
+        include("handlers/handler_getdescriptiondata.php");
 
         //get the event data admin did fill in the simulated preview data context 
         include("handlers/handlers_setpreviewdatacontext.php");
