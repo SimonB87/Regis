@@ -31,10 +31,6 @@ require 'handlers/userlogin.php';
 
     <main>
 
-    <?php
-      include("shared/aside.php");
-    ?>
-
       <div class="container my-5 text-center">
 
         <?php
