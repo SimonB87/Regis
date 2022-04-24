@@ -73,4 +73,7 @@ ADD agreement2Text varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci ,
 ADD agreement3Enabled varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
 ADD agreement3Text varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
 
+ALTER TABLE `events` 
+ADD eventPosterName varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+
 //colum "ID" musí být auto_increment
