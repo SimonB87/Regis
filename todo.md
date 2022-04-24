@@ -80,7 +80,7 @@
 ## hlavní dodělávky
 
 - BUGFIX - v úpravě description použít dynamické odkazy na obrázky emotikonů
-- BUGFIX - opravit enableD sections - když je tam sekce 2 disabled a obsahuje uvnitř texty (situace na vývoji)
+- BUGFIX - opravit enabled sections - když je tam sekce 2 disabled a obsahuje uvnitř texty (situace na vývoji)
 - BUGFIX - při nahrávání obrázku se má aktualizovat údaj v databázi pro událost
 
 - FEATURE - počítat zvlášť leader / follower lístky v jednotlivých kategoriích
