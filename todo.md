@@ -77,14 +77,18 @@
 ## Form validation
 - form validation video : https://www.youtube.com/watch?v=rsd4FNGTRBw
 
-## hlavní dodělávky
+## hlavní funkcionalita - dodělávky
 
 - BUGFIX - v úpravě description použít dynamické odkazy na obrázky emotikonů
 - BUGFIX - opravit enabled sections - když je tam sekce 2 disabled a obsahuje uvnitř texty (situace na vývoji)
 - BUGFIX - při nahrávání obrázku se má aktualizovat údaj v databázi pro událost
 
 - FEATURE - počítat zvlášť leader / follower lístky v jednotlivých kategoriích
-- FEATURE - když user objednává lístek tak se dynamicky dotázat do databíze zda je tento lístek k dispozici - potíže při prodeje posledního lístku
+- FEATURE - když user objednává lístek tak se dynamicky dotázat do databíze zda je tento lístek k dispozici - potíže při prodeje posledního lístku ; pokud jsou lístky již vyprodané, tak si uživatel dostane na waiting list 
 - FEATURE - pro "/manage/publishevent.php" dodat ještě checkbox - "Is event public" - a pak bude jen ta událost veřejná, která bude mít "1 registrations open" a také "Is event public"
+
+- FEATURE - když jsou lístky, které chci pryč, tak zákazník může vyplnit krátký formulář, kde bude emailem notifikován, pokud se objevily nové lístky pro danou jednu událost ( zákazník zde vyplní své údaje, kontakt a o jaký typ lístku má zájem ) ; Admin pak bude mít k události ještě plnící se waiting list
+- FEATURE - Administrace registrací - Upravit registraci, aby admin mohl změnit údaje o registraci - hlavně tedy info o tom, že platba byla realizována
+- FEATURE - Administrace registrací - umožnit automaticky připomínat, aby si uživatelé koupili lístek
 
 - REFACTOR - vyřadit couple tiskets enabled - místo toho dát do kategorie - počet 0
