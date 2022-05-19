@@ -7,6 +7,9 @@
 - Client validation
 - Server validation
 
+## SET UP
+- folder for file uploards must have a folder at manage/uploads
+
 ## TODO
 
 - rework results - if all data have value and they were saved in DB, then confirm all as positive to user
