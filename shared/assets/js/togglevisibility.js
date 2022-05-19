@@ -46,9 +46,6 @@ function togglePassWord() {
 
   });
 
-
-
-
 })()
 
 function hideRevenueTable() {
