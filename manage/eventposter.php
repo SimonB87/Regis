@@ -56,6 +56,19 @@ require 'handlers/userlogin.php';
         <div class="row">
 
         <?php
+        if (file_exists($eventDataPosterName)) {
+          echo "<div class='col-12 padding-regular'> <h3 class='display-7 fw-bold text-center'>Current poster</h3><div> ";
+        }
+        include("components/currentposter.php");
+        ?>
+
+        </div>
+      </div>
+
+      <div class="container padding-regular-topBottom ">
+        <div class="row">
+
+        <?php
         include("components/formsendposter.php");
         ?>
 
