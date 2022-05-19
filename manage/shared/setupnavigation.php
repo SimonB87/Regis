@@ -29,7 +29,7 @@
 
 
 
-    <a id="nav_eventform" href="publishevent.php" class="weblink padding-small"> Publish event </a>
+    <a id="nav_eventform" href="publishevent.php" class="weblink padding-small"> Publish event (leave event setup) </a>
   </div>
 
 </div>
