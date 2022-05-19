@@ -1,5 +1,6 @@
 <?php 
-$preview_date = (isset($_POST["preview_date"])) ? mysqli_real_escape_string($connector, $_POST["preview_date"]) : null;
+$currentDate = date("Y-m-d");
+$preview_date = (isset($_POST["preview_date"])) ? mysqli_real_escape_string($connector, $_POST["preview_date"]) : $currentDate;
 
 $preview_earlybirdsSingleSold = (isset($_POST["preview_earlybirdsSingleSold"])) ? mysqli_real_escape_string($connector, $_POST["preview_earlybirdsSingleSold"]) : null;
 
