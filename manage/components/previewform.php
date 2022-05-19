@@ -291,7 +291,7 @@ $isVisible_passType_specialType2Couple = ( (strtolower($eventDataSpecialType2Reg
         </div>
 
         <?php 
-        if ( $eventDataAgreementsEnabled && $eventDataAgreement1Enabled ) {
+        if ( $eventDataAgreementsEnabled && ($eventDataAgreement1Enabled == "Yes") ) {
           echo "
           <div class='col-lg-6 col-md-12 col-sm-12 padding-small'>
           <div class='mb-3 form-check'>
@@ -307,7 +307,7 @@ $isVisible_passType_specialType2Couple = ( (strtolower($eventDataSpecialType2Reg
         </div>";
         }
 
-        if ( $eventDataAgreementsEnabled && $eventDataAgreement2Enabled ) {
+        if ( $eventDataAgreementsEnabled && ($eventDataAgreement2Enabled == "Yes" ) ) {
           echo "
           <div class='col-lg-6 col-md-12 col-sm-12 padding-small'>
           <div class='mb-3 form-check'>
@@ -323,7 +323,7 @@ $isVisible_passType_specialType2Couple = ( (strtolower($eventDataSpecialType2Reg
         </div>";
         }
 
-        if ( $eventDataAgreementsEnabled && $eventDataAgreement3Enabled ) {
+        if ( $eventDataAgreementsEnabled && ($eventDataAgreement3Enabled == "Yes" ) ) {
           echo "
           <div class='col-lg-6 col-md-12 col-sm-12 padding-small'>
           <div class='mb-3 form-check'>
