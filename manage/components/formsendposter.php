@@ -2,6 +2,13 @@
   <form class="full-width" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data" novalidate>
     <div class="row full-width">
 
+      <div class="col-12 padding-small visibility-hidden"> 
+        <div class="form-floating"> 
+          <input type="text" class="form-control" id="eventID" name="eventID" required <?php if ($eventDataId) { echo "value='" . $eventDataId . "'"; } ?> > 
+          <label for="eventID">Event ID</label>
+        </div>
+      </div>
+
       <div class="col-12 padding-small">
           <div class="form-floating">
             <input type="file" class="form-control" id="fileToUpload" name="fileToUpload" required>

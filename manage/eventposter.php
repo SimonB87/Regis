@@ -24,6 +24,7 @@ require 'handlers/userlogin.php';
   <body>
 
     <?php
+    include("handlers/handler_getformdata.php");
     include("shared/navigation.php");
     include("handlers/handler_formeventsetupmain_saveproduction.php");
     include("handlers/handler_eventpostersetdb.php");
