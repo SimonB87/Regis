@@ -210,34 +210,6 @@ $isVisible_passType_specialType2Couple = ( (strtolower($eventDataSpecialType2Reg
           </div>
         </div>
 
-        <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
-          <div class="mb-3 full-width full-height div-select">
-            <select id="merchandise" class="form-select" aria-label="Pass type" required="" onchange="recalculatePrice();" name="merchandise">
-              <option value="" selected="">Select merchandise option ...</option>
-              <option value="0 - No merchandise" aria-valuenow="0">No merchandise</option>
-              <option value="1 - Shirt 500,- Kč" aria-valuenow="500">Shirt 500,- Kč</option>
-              <!--
-              <option value="2 - Towel 400,- Kč" aria-valuenow="400">Towel 400,- Kč</option>
-              <option value="3 - Dancing shoes bag 300,- Kč" aria-valuenow="300">Dancing shoes bag 300,- Kč</option>
-              -->
-            </select>
-
-            <div class="form-select-customLabel">
-              Merchandise
-            </div>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-            <div class="invalid-feedback">
-              Please select some valid option.
-            </div>
-            <div class="hidden merchandisePriceBackup">
-              <span class="merchandisePriceBackup-option-1">0</span>
-              <span class="merchandisePriceBackup-option-2">500</span>
-            </div>
-          </div>
-        </div>
-
         <div class="col-lg-12 col-md-12 col-sm-12  padding-small">
           <div class="form-floating mb-3">
             <input type="text" class="form-control" id="formPrice" value="... ,- Kč" aria-label="readonly input example" readonly="" name="formPrice">
