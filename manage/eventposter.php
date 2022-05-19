@@ -27,6 +27,9 @@ require 'handlers/userlogin.php';
     include("shared/navigation.php");
     include("handlers/handler_formeventsetupmain_saveproduction.php");
     include("handlers/handler_eventpostersetdb.php");
+
+    $fileNameString = "";
+    include("handlers/handler_formpostventposterstore.php");
     ?> 
 
     <main>
@@ -34,8 +37,6 @@ require 'handlers/userlogin.php';
       <div class="container my-5 text-center">
 
         <?php
-        $fileNameString = "";
-        include("handlers/handler_formpostventposterstore.php");
         include("shared/setupnavigation.php");
         ?>
 
