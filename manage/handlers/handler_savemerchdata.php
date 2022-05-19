@@ -83,7 +83,7 @@ if($usernamelevel == "9") {
       }
     }
 
-    echo "<div id='notification_new1' class='notification'>" . $item . " <span class=\"notification--close\" onclick=\"hideNotification('notification_new1');\" > X </span>" . "</div>";
+    echo "<div id='notification_new1' class='notification bg-warning'> <span class='notification-content '>" . $item . " <span class=\"notification--close \" onclick=\"hideNotification('notification_new1');\" > X </span>" . "</div>";
 
     // Clear array of POST
     $_POST = array();

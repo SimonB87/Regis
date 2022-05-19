@@ -51,7 +51,7 @@ if(isset($_POST["submit_poster"])) {
     }
   }
 
-  echo "<div id='notification_new1' class='notification'>" . $notification_text . " <span class=\"notification--close\" onclick=\"hideNotification('notification_new1');\" > X </span>" . "</div>";
+  echo "<div id='notification_new1' class='notification bg-warning'> <span class='notification-content '>" . $notification_text . "</span> <span class=\"notification--close \" onclick=\"hideNotification('notification_new1');\" > X </span>" . "</div>";
   $fileNameString = htmlspecialchars( basename( $_FILES["fileToUpload"]["name"]));
 }
 

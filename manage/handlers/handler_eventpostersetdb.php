@@ -58,7 +58,7 @@ if(isset($_POST["safe_form_data"])){
           echo(mysqli_error($connector));
     }
 
-    echo "<div id='notification_new1' class='notification'>" . $item . " <span class=\"notification--close\" onclick=\"hideNotification('notification_new1');\" > X </span>" . "</div>";
+    echo "<div id='notification_new1' class='notification bg-warning'><span class='notification-content '>" . $item . "</span><span class=\"notification--close \" onclick=\"hideNotification('notification_new1');\" > X </span>" . "</div>";
 
     // Clear array of POST
     $_POST = array();

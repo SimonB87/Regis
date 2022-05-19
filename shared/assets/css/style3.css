@@ -336,8 +336,20 @@ footer .copyright {
   cursor: pointer;
   animation: scale-bigger-smaller 5s infinite;
 }
-.notification--close {
+.notification {
+  padding: 0.5rem 1rem;
+  max-width: 40rem;
+  min-height: 1rem;
+  float: right;
+}
+.notification .notification-content {
+  float: left;
+}
+.notification .notification--close {
+  float: right;
   cursor: pointer;
+  font-weight: bold;
+  color: #fff;
 }
 /* form elements - start */
 form > div {
