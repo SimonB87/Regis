@@ -79,10 +79,10 @@ require 'handlers/userlogin.php';
     <script src="../shared/libs/footablebootstrap/js/footable.js" defer></script>
     <script src="../shared/libs/bootstrap/js/bootstrap.js" defer></script>
     <script src="../shared/assets/js/formvalidation.js" defer></script>
-    <script src="../shared/assets/js/togglevisibility.js" defer></script>
+    <!--<script src="../shared/assets/js/togglevisibility.js" defer></script>-->
     <script src="../shared/assets/js/hidenotification.js" defer></script>
     <script src="../shared/assets/js/formsetionsedit.js" defer></script>
-    <script src="../shared/assets/js/scriptsformevent.js" defer></script>
+    <!--<script src="../shared/assets/js/scriptsformevent.js" defer></script>-->
     <script src="../shared/assets/js/footablerun.js" defer></script>
     <script src='../shared/libs/emojionearea/emojionearea.min.js' defer></script>
     <script src='../shared/assets/js/emojionearea_set.js' defer></script>
