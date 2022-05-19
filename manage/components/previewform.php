@@ -100,11 +100,16 @@ $isVisible_passType_specialType2Couple = ( (strtolower($eventDataSpecialType2Reg
 
     <div class="row">
 
-        <div class="col-lg-6 col-md-6 col-sm-12 padding-small hidden">
-<!--              <option value="1" selected class="1.0">Early bird - till 1st April</option>
-              <option value="2" class="1.2">Regular ticket - since 2nd April</option>  -->
+      <div class="col-lg-6 col-md-6 col-sm-12 padding-small hidden">
           <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="eventName" value="2021 - Tester &amp; Testie testing weekend" aria-label="readonly Registration type" readonly="" name="eventName" aria-placeholder="1.0" maxlength="250">
+            <input type="text" class="form-control" id="eventID" aria-label="readonly Registration type" readonly="" name="eventID" aria-placeholder="1.0" maxlength="250" <?php if ($eventDataId) { echo "value='" . $eventDataId . "'"; } ?> >
+            <label for="eventID">Event ID (hidden in browser)</label>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12 padding-small hidden">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="eventName" aria-label="readonly Registration type" readonly="" name="eventName" aria-placeholder="1.0" maxlength="250"  <?php if ($eventDataEventName) { echo "value='" . $eventDataEventName . "'"; } ?> >
             <label for="eventName">Event name (hidden in browser)</label>
           </div>
         </div>
