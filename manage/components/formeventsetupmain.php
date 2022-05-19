@@ -205,7 +205,7 @@
 
             <div class="col-lg-8 col-md-8 col-sm-12 padding-small">
               <div class="form-floating">
-                <input type="text" class="form-control" id="agreement1Text" required name="agreement1Text" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataAgreement1Text . "'"; } ?> >
+                <input type="text" class="form-control" id="agreement1Text" name="agreement1Text" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataAgreement1Text . "'"; } ?> >
                 <label for="agreement1Text">Agreement 1 text </label>
                 <div class="valid-feedback">
                   Looks good!
@@ -240,7 +240,7 @@
 
             <div class="col-lg-8 col-md-8 col-sm-12 padding-small">
               <div class="form-floating">
-                <input type="text" class="form-control" id="agreement2Text" required name="agreement2Text" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataAgreement2Text . "'"; } ?> >
+                <input type="text" class="form-control" id="agreement2Text" name="agreement2Text" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataAgreement2Text . "'"; } ?> >
                 <label for="agreement2Text">Agreement 2 text </label>
                 <div class="valid-feedback">
                   Looks good!
@@ -276,7 +276,7 @@
 
             <div class="col-lg-8 col-md-8 col-sm-12 padding-small">
               <div class="form-floating">
-                <input type="text" class="form-control" id="agreement3Text" required name="agreement3Text" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataAgreement3Text. "'"; } ?> >
+                <input type="text" class="form-control" id="agreement3Text" name="agreement3Text" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataAgreement3Text. "'"; } ?> >
                 <label for="agreement3Text">Agreement 3 text </label>
                 <div class="valid-feedback">
                   Looks good!
