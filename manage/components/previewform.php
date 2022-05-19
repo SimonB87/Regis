@@ -37,6 +37,17 @@ $isVisible_passType_specialType2Couple = ( (strtolower($eventDataSpecialType2Reg
         </h1>
       </div>
 
+      <?php
+      if ($eventDataPosterName) {
+        if (strlen($eventDataPosterName) > 4) {
+          if (file_exists($eventDataPosterName)) {
+            echo "<div> <img src='" . $eventDataPosterName . "' alt='Event poster picture' class='full-width'> </div>";
+          }
+        }
+      }
+      ?>
+
+
       <div class="padding-regular text-center">
         <a href="#formSection">
           <button type="button" class="btn btn-primary">

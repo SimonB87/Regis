@@ -18,6 +18,8 @@
     <a id="nav_eventdescription"
       href=<?php if($isModeEventCreate) {echo "createneweventeventdescription.php"; } else {echo "eventdescription.php"; } ?>
       class="weblink padding-small"> Event description </a>
+
+    <a id="nav_eventposter" href="eventposter.php" class="weblink padding-small"> Event poster </a>
 <!--
     <a id="nav_merchandise" href="merchandisesetup.php" class="weblink padding-small"> Merchendase set-up </a>
 -->
@@ -25,7 +27,7 @@
       href=<?php if($isModeEventCreate) {echo "createneweventeventformpreview.php"; } else {echo "eventformpreview.php"; } ?>
       class="weblink padding-small"> Event register form </a>
 
-    <a id="nav_eventposter" href="eventposter.php" class="weblink padding-small"> Event poster </a>
+
 
     <a id="nav_eventform" href="publishevent.php" class="weblink padding-small"> Publish event </a>
   </div>

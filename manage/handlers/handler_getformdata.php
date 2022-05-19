@@ -60,6 +60,8 @@
   $eventDataSpecialType2TicketPriceCouple = null; 
   $eventDataSpecialType2TicketAmountCouple = null;
 
+  $eventDataPosterName = null;
+
 
   if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
@@ -156,6 +158,8 @@
         $eventDataSpecialType2TicketAmountSingle = $row["specialType2TicketAmountSingle"] ;
         $eventDataSpecialType2TicketPriceCouple = $row["specialType2TicketPriceCouple"] ;
         $eventDataSpecialType2TicketAmountCouple = $row["specialType2TicketAmountCouple"] ;
+
+        $eventDataPosterName = $row["posterFileName"] ;
 
       }
       echo "";
