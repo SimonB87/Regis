@@ -1,6 +1,4 @@
 <?php
-  include("handlers/handler_geteventdata.php");
-
   $hostName = $_SERVER['SERVER_NAME'];
   if ( ($hostName == "localhost") || ($hostName == "127.0.0.1")) {
     echo "<div class='row full-width'><div class='col-12'><button type='button' class='btn btn-warning t-test' style='float:right;' onclick='prefillForm();'>Prefill form with test data</button></div></div>";

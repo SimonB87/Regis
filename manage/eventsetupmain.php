@@ -37,6 +37,7 @@ require 'handlers/userlogin.php';
 
         <?php
         include("handlers/getpathdata.php");
+        include("handlers/handler_geteventdata.php");
         include("shared/setupnavigation.php");
         ?>
 
