@@ -118,7 +118,7 @@
       while ($row = $results-> fetch_assoc()) {
 
           echo "<tr>" . 
-              "<td>" . $row["id"] . "</td><td>" . $row["eventStatus"] . "</td><td>" . $row["eventName"]  . "</td><td>" . $row["eventStartDate"] ."</td><td>" . $row["eventEndDate"] . "</td> <td>" . $row["enableCoupleTicket"] . "</td>" . 
+              "<td>" . $row["id"] . "</td><td>" . $row["eventStatus"] . "</td><td>" . $row["eventName"]  . "</td><td>" . $row["eventStartDate"] ."</td><td>" . $row["eventEndDate"] . "</td> <td>" . $row["maintainSinglesParity"] . "</td>" . 
 
               "<td>" . $row["agreementsEnabled"] . "</td><td>" . $row["agreement1Enabled"] . "</td><td>" . $row["agreement1Text"]  . "</td><td>" . $row["agreement2Enabled"] ."</td><td>" . $row["agreement2Text"] . "</td> <td>" . $row["agreement3Enabled"] . "</td> <td>" . $row["agreement3Enabled"] . "</td>" .
 

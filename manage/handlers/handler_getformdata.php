@@ -5,7 +5,7 @@
   $eventDataEventName = null;
   $eventDataEventStartDate = null;
   $eventDataEventEndDate = null;
-  $eventDataEnableCoupleTicket = null;
+  $eventDataMaintainSinglesParity = null;
 
   $eventDataAgreementsEnabled = null;
   $eventDataAgreement1Enabled = null;
@@ -104,7 +104,7 @@
         $eventDataEventName = $row["eventName"] ;
         $eventDataEventStartDate = $row["eventStartDate"] ;
         $eventDataEventEndDate = $row["eventEndDate"] ;
-        $eventDataEnableCoupleTicket = $row["enableCoupleTicket"] ;
+        $eventDataMaintainSinglesParity = $row["maintainSinglesParity"] ;
 
         $eventDataAgreementsEnabled = $row["agreementsEnabled"] ;
         $eventDataAgreement1Enabled = $row["agreement1Enabled"] ;

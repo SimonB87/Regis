@@ -31,7 +31,7 @@ if(isset($_POST["safe_form_data"])){
     $eventName = (isset($_POST["eventName"])) ? mysqli_real_escape_string($connector, $_POST["eventName"]) : null;
     $eventStartDate = (isset($_POST["eventStartDate"])) ? mysqli_real_escape_string($connector, $_POST["eventStartDate"]) : null;
     $eventEndDate = (isset($_POST["eventEndDate"])) ? mysqli_real_escape_string($connector, $_POST["eventEndDate"]) : null;
-    $enableCoupleTicket = (isset($_POST["enableCoupleTicket"])) ? mysqli_real_escape_string($connector, $_POST["enableCoupleTicket"]) : null;
+    $enableCoupleTicket = (isset($_POST["maintainSinglesParity"])) ? mysqli_real_escape_string($connector, $_POST["maintainSinglesParity"]) : null;
     $enableCoupleTicket = (strtolower( $enableCoupleTicket ) == "on") ? "Yes" : "No";
 
     $agreementsEnabled = (isset($_POST["agreementsEnabled"])) ? mysqli_real_escape_string($connector, $_POST["agreementsEnabled"]) : null;

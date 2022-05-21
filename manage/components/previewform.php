@@ -1,26 +1,26 @@
 <!-- component : preview form - see the visualised registration in admin test mode -->
 
 <?php 
-$isVisible_dancerKind_couple = ( (isset($eventDataEnableCoupleTicket) ) && ( strtolower($eventDataEnableCoupleTicket) === "yes" ) );
+$isVisible_dancerKind_couple = ( (isset($eventDataMaintainSinglesParity) ) && ( strtolower($eventDataMaintainSinglesParity) === "yes" ) );
 $isVisible_passType_earlyBirdsTicketSingle = ( (strtolower($eventDataEarlyBirdsRegistrationEnabled) === "yes" ) && ($preview_earlybirdsSingleSold <= $eventDataTicketsAmountEarlyBirdsRegistrationsSingle) && ( $preview_date >= $eventDataEarlyBirdsRegistrationsStartDate ) && ( $preview_date <= $eventDataEarlyBirdsRegistrationsEndDate ) );
 
-$isVisible_passType_earlyBirdsTicketCouple = ((strtolower($eventDataEarlyBirdsRegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" ) && ($preview_earlybirdsCoupleSold <= $eventDataEarlyBirdsTicketAmountCouple) && ( $preview_date >= $eventDataEarlyBirdsRegistrationsStartDate ) && ( $preview_date <= $eventDataEarlyBirdsRegistrationsEndDate ) );
+$isVisible_passType_earlyBirdsTicketCouple = ((strtolower($eventDataEarlyBirdsRegistrationEnabled) === "yes" ) && (strtolower($eventDataMaintainSinglesParity) === "yes" ) && ($preview_earlybirdsCoupleSold <= $eventDataEarlyBirdsTicketAmountCouple) && ( $preview_date >= $eventDataEarlyBirdsRegistrationsStartDate ) && ( $preview_date <= $eventDataEarlyBirdsRegistrationsEndDate ) );
 
 $isVisible_passType_regularTicketSingle = ((strtolower($eventDataRegularRegistrationEnabled) === "yes" ) && ($preview_regularSingleSold <= $eventDataRegularTicketAmountSingle) && ( $preview_date >= $eventDataRegularRegistrationsStartDate ) && ( $preview_date <= $eventDataRegularRegistrationsEndDate ) );
 
-$isVisible_passType_regularTicketCouple = ( (strtolower($eventDataRegularRegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" ) && ($preview_regularCoupleSold <= $eventDataRegularTicketAmountCouple) && ( $preview_date >= $eventDataRegularRegistrationsStartDate ) && ( $preview_date <= $eventDataRegularRegistrationsEndDate ) );
+$isVisible_passType_regularTicketCouple = ( (strtolower($eventDataRegularRegistrationEnabled) === "yes" ) && (strtolower($eventDataMaintainSinglesParity) === "yes" ) && ($preview_regularCoupleSold <= $eventDataRegularTicketAmountCouple) && ( $preview_date >= $eventDataRegularRegistrationsStartDate ) && ( $preview_date <= $eventDataRegularRegistrationsEndDate ) );
 
 $isVisible_passType_partyPassSingle = ( (strtolower($partyRegistrationEnabled) === "yes" )&& ($preview_partySingleSold <= $partyTicketAmountSingle) && ( $preview_date >= $partyRegistrationsStartDate ) && ( $preview_date <= $partyRegistrationsEndDate ) );
 
-$isVisible_passType_partyPassCouple = ( (strtolower($partyRegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" ) && ($preview_partyCoupleSold <= $partyTicketAmountCouple) && ( $preview_date >= $partyRegistrationsStartDate ) && ( $preview_date <= $partyRegistrationsEndDate ) );
+$isVisible_passType_partyPassCouple = ( (strtolower($partyRegistrationEnabled) === "yes" ) && (strtolower($eventDataMaintainSinglesParity) === "yes" ) && ($preview_partyCoupleSold <= $partyTicketAmountCouple) && ( $preview_date >= $partyRegistrationsStartDate ) && ( $preview_date <= $partyRegistrationsEndDate ) );
 
 $isVisible_passType_specialType1Single = ( (strtolower($eventDataSpecialType1RegistrationEnabled) === "yes" ) && ($preview_spec1SingleSold <= $eventDataSpecialType1TicketAmountSingle) && ( $preview_date >= $eventDataSpecialType1RegistrationsStartDate ) && ( $preview_date <= $eventDataSpecialType1RegistrationsEndDate ) );
 
-$isVisible_passType_specialType1Couple = ( (strtolower($eventDataSpecialType1RegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" ) && ($preview_spec1CoupleSold <= $eventDataSpecialType1TicketAmountCouple) && ( $preview_date >= $eventDataSpecialType1RegistrationsStartDate ) && ( $preview_date <= $eventDataSpecialType1RegistrationsEndDate ) );
+$isVisible_passType_specialType1Couple = ( (strtolower($eventDataSpecialType1RegistrationEnabled) === "yes" ) && (strtolower($eventDataMaintainSinglesParity) === "yes" ) && ($preview_spec1CoupleSold <= $eventDataSpecialType1TicketAmountCouple) && ( $preview_date >= $eventDataSpecialType1RegistrationsStartDate ) && ( $preview_date <= $eventDataSpecialType1RegistrationsEndDate ) );
 
 $isVisible_passType_specialType2Single = ( (strtolower($eventDataSpecialType2RegistrationEnabled) === "yes" ) && ($preview_spec2SingleSold <= $eventDataSpecialType2TicketAmountSingle) && ( $preview_date >= $eventDataSpecialType2RegistrationsStartDate ) && ( $preview_date <= $eventDataSpecialType2RegistrationsEndDate ) );
 
-$isVisible_passType_specialType2Couple = ( (strtolower($eventDataSpecialType2RegistrationEnabled) === "yes" ) && (strtolower($eventDataEnableCoupleTicket) === "yes" ) && ($preview_spec2CoupleSold <= $eventDataSpecialType2TicketAmountCouple) && ( $preview_date >= $eventDataSpecialType2RegistrationsStartDate ) && ( $preview_date <= $eventDataSpecialType2RegistrationsEndDate ) );
+$isVisible_passType_specialType2Couple = ( (strtolower($eventDataSpecialType2RegistrationEnabled) === "yes" ) && (strtolower($eventDataMaintainSinglesParity) === "yes" ) && ($preview_spec2CoupleSold <= $eventDataSpecialType2TicketAmountCouple) && ( $preview_date >= $eventDataSpecialType2RegistrationsStartDate ) && ( $preview_date <= $eventDataSpecialType2RegistrationsEndDate ) );
 ?>
 
 <div class="col-12 padding-regular-topBottom my-5">

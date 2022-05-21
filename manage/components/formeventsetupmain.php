@@ -137,15 +137,15 @@
           </div>
         </div>
 
-        <div class="col-6 padding-topBottom-medium-0x5"> 
+        <div class="col-12 padding-topBottom-medium-0x5"> 
           <div class="row rounded padding-small shadow-light">
 
             <!-- TODO enable couple tickets -> dynamical with JS opens couple prices -->
               <div class="col-12 padding-small">
                 <div class="form-check mb-3">
-                    <input class="form-check-input" type="checkbox" id="enableCoupleTicket" name="enableCoupleTicket" <?php if($isEventEdited) { if($eventDataEnableCoupleTicket == "Yes") { echo "checked"; } } ?>>
-                    <label class="form-check-label" for="enableCoupleTicket">
-                      Enable couple ticket
+                    <input class="form-check-input" type="checkbox" id="maintainSinglesParity" name="maintainSinglesParity" <?php if($isEventEdited) { if($eventDataMaintainSinglesParity == "Yes") { echo "checked"; } } ?>>
+                    <label class="form-check-label" for="maintainSinglesParity">
+                      Enable parity for singles tickets - Each kind of leader/follow can have at maximum 50 % of registrations
                     </label>
                 </div>
               </div>
@@ -154,8 +154,8 @@
 <!--
             <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
               <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" id="enableCoupleTicket" name="enableCoupleTicket" required >
-                <label class="form-check-label" for="enableCoupleTicket">
+                <input class="form-check-input" type="checkbox" id="maintainSinglesParity" name="maintainSinglesParity" required >
+                <label class="form-check-label" for="maintainSinglesParity">
                   Enable promo codes for discounts
                 </label>
               </div>
