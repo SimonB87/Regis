@@ -1,6 +1,7 @@
 <!-- component : preview form - see the visualised registration in admin test mode -->
 
 <?php 
+// ! oprava logiky - $isVisible_dancerKind_couple - tento boolean jsem nahradil za "MaintainSinglesParity"
 $isVisible_dancerKind_couple = ( (isset($eventDataMaintainSinglesParity) ) && ( strtolower($eventDataMaintainSinglesParity) === "yes" ) );
 $isVisible_passType_earlyBirdsTicketSingle = ( (strtolower($eventDataEarlyBirdsRegistrationEnabled) === "yes" ) && ($preview_earlybirdsSingleSold <= $eventDataTicketsAmountEarlyBirdsRegistrationsSingle) && ( $preview_date >= $eventDataEarlyBirdsRegistrationsStartDate ) && ( $preview_date <= $eventDataEarlyBirdsRegistrationsEndDate ) );
 
