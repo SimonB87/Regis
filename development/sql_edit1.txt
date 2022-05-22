@@ -6,7 +6,7 @@ ADD eventStatus varchar(250)  CHARACTER SET latin1 COLLATE latin1_swedish_ci ,
 ADD eventName longtext 	CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
 ADD eventStartDate varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
 ADD eventEndDate varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD enableCoupleTicket varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
+ADD maintainSinglesParity varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
 
 
 ALTER TABLE `events` 
