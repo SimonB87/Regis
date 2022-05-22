@@ -25,14 +25,14 @@ if (!mysqli_set_charset($connector, "utf8")) {
   } else {
           //printf("Current character set: %s\n", mysqli_character_set_name($con));//used only for testing
   }
-  
+
   // fill : $preview_earlybirdsSingleSold;
-  $sql = "SELECT * FROM events WHERE eventStatus='1 - Registrations open' ORDER BY id DESC LIMIT 1";
+  $sql = "SELECT * FROM registrations WHERE ((id='$eventDataId') AND (passType='1 - Early birds') )";
 
   $results = $connector-> query($sql);
   //Error case
   if (!$sql ) {
-    echo "Failed! <br> Error sql: " . mysql_error();
+    echo "Failed! <br> Error sql: " . mysql_error() . " <br>";
   }
   
   if (mysqli_query($connector, $sql)) {
@@ -50,9 +50,9 @@ if (!mysqli_set_charset($connector, "utf8")) {
 
     }
     echo "";
-} else {
-  $preview_earlybirdsSingleSold = 0;
-}
+  } else {
+    $preview_earlybirdsSingleSold = 0;
+  }
   
   // Comment out DB close
   mysqli_close($connector);
