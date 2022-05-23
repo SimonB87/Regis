@@ -1,13 +1,13 @@
 <?php
 
-$preview_earlybirdsSingleSold;
-$preview_earlybirdsCoupleSold;
-$preview_regularSingleSold;
-$preview_regularCoupleSold;
-$preview_partySingleSold;
-$preview_partyCoupleSold;
-$preview_spec1SingleSold;
-$preview_spec1CoupleSold;
+$preview_earlybirdsSingleSold = 0;
+$preview_earlybirdsCoupleSold = 0;
+$preview_regularSingleSold = 0;
+$preview_regularCoupleSold = 0;
+$preview_partySingleSold = 0;
+$preview_partyCoupleSold = 0;
+$preview_spec1SingleSold = 0;
+$preview_spec1CoupleSold = 0;
 
 if (mysqli_connect_errno()) {
   printf("Connect failed: %s\n", mysqli_connect_error());
@@ -27,7 +27,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
   }
 
   // fill : $preview_earlybirdsSingleSold;
-  $sql = "SELECT * FROM registrations WHERE ((id='$eventDataId') AND (passType='1 - Early birds') )";
+  $sql = "SELECT * FROM registrations WHERE ((eventID='$eventDataId') AND (passType='1 - Early birds') AND ((dancerKind='1 - Leader') OR (dancerKind='2 - Follower')))";
 
   $results = $connector-> query($sql);
   //Error case
