@@ -175,6 +175,7 @@ $isVisible_passType_specialType2Couple = ( (strtolower($eventDataSpecialType2Reg
                       <?php if ( $isVisible_passType_regularTicketCouple ) { echo "<option value='4 - Fullpass couple" . "' aria-valuenow='" . $eventDataRegularTicketPriceCouple . "'>Fullpass couple - " . $eventDataRegularTicketPriceCouple . "CZK</option>"; } ?>
                       <?php if ( $isVisible_passType_partyPassSingle ) { echo "<option value='5 - Partypass leader/follower" . "' aria-valuenow='" . $partyTicketPriceSingle . "'>Partypass leader/follower - " . $partyTicketPriceSingle . "CZK</option>"; } ?>
                       <?php if ( $isVisible_passType_partyPassCouple ) { echo "<option value='6 - Partypass couple" . "' aria-valuenow='" . $partyTicketPriceCouple . "'>Partypass couple - " . $partyTicketPriceCouple . "CZK</option>"; } ?>
+                      <option value="0 - None" aria-valuenow="0.0">None</option>
                     </select>
                     <div class="form-select-customLabel">
                       Pass type
@@ -193,6 +194,7 @@ $isVisible_passType_specialType2Couple = ( (strtolower($eventDataSpecialType2Reg
                       <? if ( $isVisible_passType_regularTicketCouple ) { echo "<span class='priceBackup-option-4'> " . $partyTicketPriceCouple . " </span>"; } ?>
                       <? if ( $isVisible_passType_partyPassSingle ) { echo "<span class='priceBackup-option-5'> " . $partyTicketPriceSingle . " </span>"; } ?>
                       <? if ( $isVisible_passType_partyPassCouple ) { echo "<span class='priceBackup-option-6'> " . $partyTicketPriceCouple . " </span>"; } ?>
+                      <option value="0 - None" aria-valuenow="0.0">None</option>
                     </div>
                   </div>
                 </div>
@@ -209,6 +211,7 @@ $isVisible_passType_specialType2Couple = ( (strtolower($eventDataSpecialType2Reg
                       if ($isVisible_passType_specialType2Single) { echo "<option value='3 - " . $eventDataSpecialType2RegistrationName . " - " . $eventDataSpecialType2TicketPriceSingle . ",- Kč' aria-valuenow='" . $eventDataSpecialType2TicketPriceSingle . "'>" . $eventDataSpecialType2RegistrationName . " Single - " .$eventDataSpecialType2TicketPriceSingle . ",- Kč</option>"; }
                       if ($isVisible_passType_specialType2Couple) { echo "<option value='4 - " . $eventDataSpecialType2RegistrationName . " - " . $eventDataSpecialType2TicketPriceCouple . ",- Kč' aria-valuenow='" . $eventDataSpecialType2TicketPriceCouple . "'>" . $eventDataSpecialType2RegistrationName . " Couple - " .$eventDataSpecialType2TicketPriceCouple . ",- Kč</option>"; }
                       ?>
+                      <option value="0 - None" aria-valuenow="0.0">None</option>
                     </select>
                     <div class="form-select-customLabel">
                       Other tickets
@@ -357,6 +360,10 @@ $isVisible_passType_specialType2Couple = ( (strtolower($eventDataSpecialType2Reg
                       Please fill in name.
                     </div>
                   </div>
+                </div>
+
+                <div class="col-lg-12 col-md-12 col-sm-12 padding-small">
+                  <button type="submit" class="btn btn-primary ">Submit registration</button>
                 </div>
 
               </div>
