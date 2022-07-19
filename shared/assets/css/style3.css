@@ -227,6 +227,9 @@
   color: var(--lightGray);
   padding-right: 0.5rem;
 }
+.padding-correction {
+  padding: 0;
+}
 .color-main {
   color: var(--red);
 }
