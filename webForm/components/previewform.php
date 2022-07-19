@@ -203,7 +203,7 @@ $isVisible_passType_specialType2Couple = ( (strtolower($eventDataSpecialType2Reg
                                 { echo "class='col-lg-6 col-md-12 col-sm-12 padding-small '" ; } 
                           else  { echo "class='col-lg-6 col-md-12 col-sm-12 padding-small hidden '" ; } ?> >
                   <div class="mb-3 full-width full-height div-select">
-                    <select id="competitionParticipation" class="form-select" aria-label="Pass type" required="" onchange="recalculatePrice();" name="competitionParticipation">
+                    <select id="otherTicketOptions" class="form-select" aria-label="Pass type" required="" onchange="recalculatePrice();" name="otherTicketOptions">
                       <option value="" selected=""> Other tickets options ...</option>
                       <?php 
                       if ($isVisible_passType_specialType1Single) { echo "<option value='1 - " . $eventDataSpecialType1RegistrationName . " - " . $eventDataSpecialType1TicketPriceSingle . ",- Kč' aria-valuenow='" . $eventDataSpecialType1TicketPriceSingle . "'>" . $eventDataSpecialType1RegistrationName . " Single - " .$eventDataSpecialType1TicketPriceSingle . ",- Kč</option>"; }
