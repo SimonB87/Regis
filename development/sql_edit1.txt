@@ -1,85 +1,91 @@
 //Edit events table. Create regular event columns
 
-ALTER TABLE `registrations` 
-eventID int(250);
+CREATE TABLE `events` (
+  `id` int(250) NOT NULL,
+  `eventStatus` varchar(250) CHARACTER SET latin1 NOT NULL,
+  `eventName` longtext CHARACTER SET latin1 NOT NULL,
+  `eventStartDate` varchar(250) CHARACTER SET latin1 NOT NULL,
+  `eventEndDate` varchar(250) CHARACTER SET latin1 NOT NULL,
+  `maintainSinglesParity` varchar(10) CHARACTER SET latin1 NOT NULL,
+  `earlyBirdsRegistrationEnabled` varchar(10) CHARACTER SET latin1 NOT NULL,
+  `earlyBirdsRegistrationName` varchar(250) CHARACTER SET latin1 NOT NULL,
+  `earlyBirdsRegistrationsStartDate` varchar(250) CHARACTER SET latin1 NOT NULL,
+  `earlyBirdsRegistrationsEndDate` varchar(250) CHARACTER SET latin1 NOT NULL,
+  `ticketsAmountEarlyBirdsRegistrationsSingle` int(100) NOT NULL,
+  `earlyBirdsTicketPriceSingle` int(100) NOT NULL,
+  `earlyBirdsTicketPriceCouple` int(100) NOT NULL,
+  `earlyBirdsTicketAmountCouple` int(100) NOT NULL,
+  `regularRegistrationEnabled` varchar(10) CHARACTER SET latin1 DEFAULT NULL,
+  `regularRegistrationName` varchar(250) CHARACTER SET latin1 DEFAULT NULL,
+  `regularRegistrationsStartDate` varchar(250) CHARACTER SET latin1 DEFAULT NULL,
+  `regularRegistrationsEndDate` varchar(250) CHARACTER SET latin1 DEFAULT NULL,
+  `regularTicketPriceSingle` int(250) DEFAULT NULL,
+  `regularTicketAmountSingle` int(250) DEFAULT NULL,
+  `regularTicketPriceCouple` int(250) DEFAULT NULL,
+  `regularTicketAmountCouple` int(250) DEFAULT NULL,
+  `specialType1RegistrationEnabled` varchar(10) CHARACTER SET latin1 DEFAULT NULL,
+  `specialType1RegistrationName` varchar(250) CHARACTER SET latin1 DEFAULT NULL,
+  `specialType1RegistrationsStartDate` varchar(250) CHARACTER SET latin1 DEFAULT NULL,
+  `specialType1RegistrationsEndDate` varchar(250) CHARACTER SET latin1 DEFAULT NULL,
+  `specialType1TicketPriceSingle` int(250) DEFAULT NULL,
+  `specialType1TicketAmountSingle` int(250) DEFAULT NULL,
+  `specialType1TicketPriceCouple` int(250) DEFAULT NULL,
+  `specialType1TicketAmountCouple` int(250) DEFAULT NULL,
+  `specialType2RegistrationEnabled` varchar(10) CHARACTER SET latin1 DEFAULT NULL,
+  `specialType2RegistrationName` varchar(250) CHARACTER SET latin1 DEFAULT NULL,
+  `specialType2RegistrationsStartDate` varchar(250) CHARACTER SET latin1 DEFAULT NULL,
+  `specialType2RegistrationsEndDate` varchar(250) CHARACTER SET latin1 DEFAULT NULL,
+  `specialType2TicketPriceSingle` int(250) DEFAULT NULL,
+  `specialType2TicketAmountSingle` int(250) DEFAULT NULL,
+  `specialType2TicketPriceCouple` int(250) DEFAULT NULL,
+  `specialType2TicketAmountCouple` int(250) DEFAULT NULL,
+  `partyRegistrationEnabled` varchar(10) CHARACTER SET latin1 DEFAULT NULL,
+  `partyRegistrationName` varchar(250) CHARACTER SET latin1 DEFAULT NULL,
+  `partyRegistrationsStartDate` varchar(250) CHARACTER SET latin1 DEFAULT NULL,
+  `partyRegistrationsEndDate` varchar(250) CHARACTER SET latin1 DEFAULT NULL,
+  `partyTicketPriceSingle` int(250) DEFAULT NULL,
+  `partyTicketAmountSingle` int(250) DEFAULT NULL,
+  `partyTicketPriceCouple` int(250) DEFAULT NULL,
+  `partyTicketAmountCouple` int(250) DEFAULT NULL,
+  `eventDescription1` longtext CHARACTER SET latin1 DEFAULT NULL,
+  `eventDescription2` longtext CHARACTER SET latin1 DEFAULT NULL,
+  `eventDescription3` longtext CHARACTER SET latin1 DEFAULT NULL,
+  `agreementsEnabled` varchar(10) CHARACTER SET latin1 DEFAULT NULL,
+  `agreement1Enabled` varchar(10) CHARACTER SET latin1 DEFAULT NULL,
+  `agreement1Text` varchar(250) CHARACTER SET latin1 DEFAULT NULL,
+  `agreement2Enabled` varchar(10) CHARACTER SET latin1 DEFAULT NULL,
+  `agreement2Text` varchar(250) CHARACTER SET latin1 DEFAULT NULL,
+  `agreement3Enabled` varchar(10) CHARACTER SET latin1 DEFAULT NULL,
+  `agreement3Text` varchar(250) CHARACTER SET latin1 DEFAULT NULL,
+  `posterFileName` varchar(250) CHARACTER SET latin1 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-ALTER TABLE `events` 
 
-ADD eventStatus varchar(250)  CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD eventName longtext 	CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD eventStartDate varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD eventEndDate varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD maintainSinglesParity varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
-
-
-ALTER TABLE `events` 
-ADD earlyBirdsRegistrationEnabled varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD earlyBirdsRegistrationName varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD earlyBirdsRegistrationsStartDate varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD earlyBirdsRegistrationsEndDate varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD ticketsAmountEarlyBirdsRegistrationsSingle int(250) , 
-ADD earlyBirdsTicketPriceSingle int(250) , 
-ADD earlyBirdsTicketPriceCouple int(250) , 
-ADD earlyBirdsTicketAmountCouple int(250) ;
-
-ALTER TABLE `events` 
-ADD regularRegistrationEnabled varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD regularRegistrationName varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD regularRegistrationsStartDate varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD regularRegistrationsEndDate varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD regularTicketPriceSingle int(250) , 
-ADD regularTicketAmountSingle int(250) , 
-ADD regularTicketPriceCouple int(250) , 
-ADD regularTicketAmountCouple int(250) ;
-
-ALTER TABLE `events` 
-ADD partyRegistrationEnabled varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD partyRegistrationName varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD partyRegistrationsStartDate varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD partyRegistrationsEndDate varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD partyTicketPriceSingle int(250) , 
-ADD partyTicketAmountSingle int(250) , 
-ADD partyTicketPriceCouple int(250) , 
-ADD partyTicketAmountCouple int(250) ;
-
-ALTER TABLE `events` 
-ADD specialType1RegistrationEnabled varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD specialType1RegistrationName varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD specialType1RegistrationsStartDate varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD specialType1RegistrationsEndDate varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD specialType1TicketPriceSingle int(250) , 
-ADD specialType1TicketAmountSingle int(250) , 
-ADD specialType1TicketPriceCouple int(250) , 
-ADD specialType1TicketAmountCouple int(250) ;
-
-ALTER TABLE `events` 
-ADD specialType2RegistrationEnabled varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD specialType2RegistrationName varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD specialType2RegistrationsStartDate varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD specialType2RegistrationsEndDate varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD specialType2TicketPriceSingle int(250) , 
-ADD specialType2TicketAmountSingle int(250) , 
-ADD specialType2TicketPriceCouple int(250) , 
-ADD specialType2TicketAmountCouple int(250) ;
-
-ALTER TABLE `events` 
-ADD eventDescription1 longtext CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD eventDescription2 longtext CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD eventDescription3 longtext CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
-
-ALTER TABLE `events` 
-ADD agreementsEnabled varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD agreement1Enabled varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD agreement1Text varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD agreement2Enabled varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD agreement2Text varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD agreement3Enabled varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci , 
-ADD agreement3Text varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
-
-ALTER TABLE `events` 
-ADD eventPosterName varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-
-ALTER TABLE `events` 
-ADD posterFileName varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE TABLE `registrations` (
+  `id` int(255) NOT NULL,
+  `orderID` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
+  `eventID` int(255) NOT NULL,
+  `eventName` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
+  `clientName` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
+  `passType` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
+  `registrationType` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
+  `dancerKind` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
+  `otherTicketOptions` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
+  `competitionParticipation` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
+  `location` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
+  `merchandise` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
+  `formPrice` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
+  `clientEmail` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
+  `clientPhone` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
+  `clientCountry` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
+  `clientComments` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
+  `registrationdate` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
+  `confirmPrivateInformation1` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
+  `confirmPrivateInformation1Description` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
+  `confirmPrivateInformation2` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
+  `confirmPrivateInformation2Description` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
+  `confirmPrivateInformation3` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
+  `confirmPrivateInformation3Description` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 //colum "ID" musí být auto_increment
