@@ -53,13 +53,10 @@ require 'config/config.php';
   $htmlorderSummary = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <h2>Order summary : </h2></div>";
   $htmlValidation = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Valid registration : </strong>" . $correctlyFilledFormValue . "</div>";
   $htmlEventName = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Event name : </strong>" . $eventName . "</div>";
-  $htmlRegistrationType = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Registration type : </strong>" . $registrationType . "</div>";
+
   $htmlPassType = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Pass type : </strong>" . $passType . "</div>";
   $htmlDancerKind = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Dancer kind: </strong>" . $dancerKind . "</div>";
-  $htmlLengthType = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Length type : </strong>" . $lengthType . "</div>";
-  $htmlCompetitionParticipation = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Competition participation : </strong>" . $competitionParticipation . "</div>";
   $htmlLocation = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Location : </strong>" . $location . "</div>";
-  $htmlMerchandise = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Merchandise : </strong>" . $merchandise . "</div>";
   $htmlFormPrice = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Form price: </strong>" . $formPrice . "</div>";
   $htmlClientName = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client name : </strong>" . $clientName . "</div>";
   $htmlClientEmail = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client email : </strong>" . $clientEmail . "</div>";
@@ -67,8 +64,17 @@ require 'config/config.php';
   $htmlClientCountry = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client country : </strong>" . $clientCountry . "</div>";
   $htmlClientComments = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client comments : </strong>" . $clientComments . "</div>";
   $htmlRegistrationdate = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client registration data : </strong>" . $registrationdate . "</div>";
-  $htmlConfirmPrivateInformation = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong> Client confirms GDPR policy : </strong>" . $confirmPrivateInformationResult . "</div>";
-  $htmlConfirmCovidResulte = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client confirms COVID-19 policy : </strong>" .  $confirmCovidResult . "</div>";
+
+    $htmlConfirmPrivateInformationPart1 = (strlen($confirmPrivateInformation1) > 1) ? ("<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong> ". $confirmPrivateInformation1Description .":  </strong>" . $confirmPrivateInformation1 . "</div>") : ("" . strlen($confirmPrivateInformation1) . "");
+
+    $htmlConfirmPrivateInformationPart2 = (strlen($confirmPrivateInformation2) > 1) ? ("<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong> ". $confirmPrivateInformation2Description .":  </strong>" . $confirmPrivateInformation1 . "</div>" ) : ("" . strlen($confirmPrivateInformation2) . "");
+
+    $htmlConfirmPrivateInformationPart3 = (strlen($confirmPrivateInformation3) > 1) ? ("<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong> ". $confirmPrivateInformation3Description .":  </strong>" . $confirmPrivateInformation1 . "</div>") : ("" . strlen($confirmPrivateInformation3) . "");
+
+  $htmlConfirmPrivateInformation = $htmlConfirmPrivateInformationPart1 . $htmlConfirmPrivateInformationPart2 . $htmlConfirmPrivateInformationPart3;
+  //test
+  //echo "htmlConfirmPrivateInformation " . $htmlConfirmPrivateInformation;
+  //test
 
   $exitIcon = "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-check' viewBox='0 0 16 16'>
                 <path d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z'></path>
@@ -86,7 +92,7 @@ require 'config/config.php';
                         "<div>Bank address: <strong class='toCopy'>" . " Fio banka, a.s. Millennium Plaza, V Celnici 10, Prague 1, ZIP Code : 117 21. Czech Republic </strong> </div>".
                         " <div>Account holder name: <strong class='toCopy'>" . " Mauritius The Greatest </strong>" . 
                         " </div> " . 
-                        " <div>Price : <strong class='toCopy'> "  . " " . $formPrice . "</strong></div>" .
+                        " <div>Price : <strong class='toCopy'> " . " " . $formPrice . "</strong></div>" .
                         "<div>Notice for receiver: \"<strong class='toCopy'>" . " Order ID: " . $orderId. ", Client name: ". $clientName ." , Client email: " . $clientEmail . "</strong>\" </div>" .
                         " </p>" . "</div></div></div>"; //TODO - valid price set up by server check, payment´s details set by admin to DB
 
@@ -109,7 +115,7 @@ require 'config/config.php';
   include("manage/emailing/sendmailtotestadmin.php");
   include("manage/emailing/sendmailtoclient.php");
 
-  echo $registrationSummary . $htmlValidation . $htmlEventName . $htmlRegistrationType . $htmlPassType . $htmlDancerKind . $htmlLengthType . $htmlCompetitionParticipation . $htmlLocation . $htmlMerchandise . $htmlFormPrice .  $htmlClientName . $htmlClientEmail . $htmlClientPhone . $htmlClientCountry . $htmlClientComments . $htmlRegistrationdate . $htmlConfirmPrivateInformation . $htmlConfirmCovidResulte;
+  echo $registrationSummary . $htmlValidation . $htmlEventName . $htmlPassType . $htmlDancerKind . $htmlLocation . $htmlFormPrice .  $htmlClientName . $htmlClientEmail . $htmlClientPhone . $htmlClientCountry . $htmlClientComments . $htmlRegistrationdate . $htmlConfirmPrivateInformation;
 
   ?>
 
