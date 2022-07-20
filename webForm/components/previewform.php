@@ -302,8 +302,8 @@ $isVisible_passType_specialType2Couple = ( (strtolower($eventDataSpecialType2Reg
                   echo "
                   <div class='col-lg-6 col-md-12 col-sm-12 padding-small'>
                   <div class='mb-3 form-check'>
-                    <input type='checkbox' class='form-check-input' id='confirmPrivateInformation' required='' name='confirmPrivateInformation'>
-                    <label class='form-check-label' for='confirmPrivateInformation'> " . $eventDataAgreement1Text . "</label>
+                    <input type='checkbox' class='form-check-input' id='confirmPrivateInformation1' required='' name='confirmPrivateInformation1'>
+                    <label class='form-check-label' for='confirmPrivateInformation1'> " . $eventDataAgreement1Text . "</label>
                     <div class='valid-feedback'>
                         Looks good!
                       </div>
@@ -318,8 +318,8 @@ $isVisible_passType_specialType2Couple = ( (strtolower($eventDataSpecialType2Reg
                   echo "
                   <div class='col-lg-6 col-md-12 col-sm-12 padding-small'>
                   <div class='mb-3 form-check'>
-                    <input type='checkbox' class='form-check-input' id='confirmPrivateInformation' required='' name='confirmPrivateInformation'>
-                    <label class='form-check-label' for='confirmPrivateInformation'> " . $eventDataAgreement2Text . "</label>
+                    <input type='checkbox' class='form-check-input' id='confirmPrivateInformation2' required='' name='confirmPrivateInformation2'>
+                    <label class='form-check-label' for='confirmPrivateInformation2'> " . $eventDataAgreement2Text . "</label>
                     <div class='valid-feedback'>
                         Looks good!
                       </div>
@@ -334,8 +334,8 @@ $isVisible_passType_specialType2Couple = ( (strtolower($eventDataSpecialType2Reg
                   echo "
                   <div class='col-lg-6 col-md-12 col-sm-12 padding-small'>
                   <div class='mb-3 form-check'>
-                    <input type='checkbox' class='form-check-input' id='confirmPrivateInformation' required='' name='confirmPrivateInformation'>
-                    <label class='form-check-label' for='confirmPrivateInformation'> " . $eventDataAgreement3Text . "</label>
+                    <input type='checkbox' class='form-check-input' id='confirmPrivateInformation3' required='' name='confirmPrivateInformation3'>
+                    <label class='form-check-label' for='confirmPrivateInformation3'> " . $eventDataAgreement3Text . "</label>
                     <div class='valid-feedback'>
                         Looks good!
                       </div>
