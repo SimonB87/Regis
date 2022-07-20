@@ -132,15 +132,13 @@ $message_summary =  "<!-- PARAGRAPH -->
                           <p>Event location : <strong>" . $storedLocation . "</strong></p>
                           <p>Dancer kind : <strong>" . $storedDancerKind . "</strong></p>
                           <p></p>
-                          <p>Competition participation : <strong>" . $storedCompetitionParticipation . "</strong></p>
-                          <p>Ordered merchendise : <strong>" . $storedMerchandise . "</strong></p>
-                          <p></p>
                           <p>Buyer name : <strong>" . $storedClientName . "</strong></p>
                           <p>Buyer email : <strong>" . $storedClientEmail . "</strong></p>
                           <p>Buyer phone : <strong>" . $storedClientPhone . "</strong></p>
                           <p>Ordered on date : <strong>" . $storedRegistrationdate . "</strong></p>
-                          <p>COVID policy confirmation : <strong>" . $storedConfirmCovid . "</strong></p>
-                          <p>Private information confirmation : <strong>" . $storedConfirmPrivateInformation . "</strong></p>
+                          <p> ". $storedPrivateInformation1Description . " : <strong>" . $storedconfirmPrivateInformation1 . "</strong></p>
+                          <p> ". $storedPrivateInformation2Description . " <strong>" . $storedconfirmPrivateInformation2 . "</strong></p>
+                          <p> ". $storedPrivateInformation3Description . " <strong>" . $storedconfirmPrivateInformation3 . "</strong></p>
                         </td>
                       </tr>";
 
