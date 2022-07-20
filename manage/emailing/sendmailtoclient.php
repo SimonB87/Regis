@@ -189,8 +189,8 @@ $message_summary =  "<!-- PARAGRAPH -->
                           <p>Buyer phone : <strong>" . $storedClientPhone . "</strong></p>
                           <p>Ordered on date : <strong>" . $storedRegistrationdate . "</strong></p>
                           <p> ". $storedPrivateInformation1Description . " : <strong>" . $storedconfirmPrivateInformation1 . "</strong></p>
-                          <p> ". $storedPrivateInformation2Description . " <strong>" . $storedconfirmPrivateInformation2 . "</strong></p>
-                          <p> ". $storedPrivateInformation3Description . " <strong>" . $storedconfirmPrivateInformation3 . "</strong></p>
+                          <p> ". $storedPrivateInformation2Description . " : <strong>" . $storedconfirmPrivateInformation2 . "</strong></p>
+                          <p> ". $storedPrivateInformation3Description . " : <strong>" . $storedconfirmPrivateInformation3 . "</strong></p>
                         </td>
                       </tr>";
 
