@@ -20,10 +20,16 @@ else {
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title> Download Event registration | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
+
+  </head>
+  <body>
 
 <?php
-
-  $list = [];
 
   if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
@@ -59,47 +65,63 @@ else {
       echo json_encode(array("sql - statusCode"=>418));
     }
 
-    $paymentStatus = "TOOO - payment status";
+    $paymentStatus = "TODO - payment status";
 
     //function to fatch the data
 
     if (($usernamelevel == "8") || ($usernamelevel == "9")) {
-    
-      $list = array (
-          array('Order ID', 'Event name', 'Registration date ', 'Client name', 'Pass type', 'Price', 'Client email', 'Registration type', 'Other ticket options ', 'Client phone','Client country','Client comments','Client confrimation 1 description ','Client confrimation 1','Client confrimation 2 description','Client confrimation 2','Client confrimation 3 description','Client confrimation 3','Payment status','ID (in database)')
-      );
 
+      echo "<table>";
+      echo "<thead>
+              <tr>
+                <th> Order ID </th>
+                <th data-breakpoints='xs sm'> Event name </th>
+                <th> Registration date </th>
+                <th> Client name </th>
+                <th data-breakpoints='xs sm md'> Pass type </th>
+                <th> Price </th>
+                <th data-breakpoints='xs sm md'> Client email </th>
+                <th data-breakpoints='xs sm md'> Dancer kind </th> 
+                <th data-breakpoints='xs sm md lg'> Registration type </th> 
+                <th data-breakpoints='xs sm md lg'> Other ticket options </th> 
+                <th data-breakpoints='xs sm md'> Client phone </th> 
+                <th data-breakpoints='xs sm md lg'> Client country </th> 
+                <th data-breakpoints='xs sm md lg'> Client comments </th> 
+                <th data-breakpoints='xs sm md lg'> Client Confrimation 1 Description </th> 
+                <th data-breakpoints='xs sm md lg'> Client Confrimation 1 </th> 
+                <th data-breakpoints='xs sm md lg'> Client Confrimation 2 Description </th> 
+                <th data-breakpoints='xs sm md lg'> Client Confrimation 2 </th> 
+                <th data-breakpoints='xs sm md lg'> Client Confrimation 3 Description </th> 
+                <th data-breakpoints='xs sm md lg'> Client Confrimation 3 </th> 
+                <th data-breakpoints='xs sm'> Payment status </th>
+                <th data-breakpoints='xs sm md lg'> ID (in database) </th>
+              </tr>
+            </thead>
+            <tbody>";
+    
       if ($results-> num_rows > 0 ) {
         while ($row = $results-> fetch_assoc()) {
 
-          if (isset($list)) {
-            echo "I am here...<br>";
-          } else {
-            echo "Nothing here...<br>";
-          }
+          echo "<tr><td>" . $row["orderID"] . "</td><td>" . $row["eventName"] . "</td><td>" . $row["registrationdate"]  . "</td><td>" . $row["clientName"] ."</td><td>" . $row["passType"] . "</td> <td>" . $row["formPrice"] . "</td> <td>" . $row["clientEmail"]  . "</td> <td>" . $row["dancerKind"] . "</td><td>" . 
+          $row["registrationType"] . "</td><td>" . $row["otherTicketOptions"] . "</td><td>" . $row["clientPhone"] . "</td><td>" . $row["clientCountry"] . "</td><td>" . $row["clientComments"] . "</td><td>" . $row["confirmPrivateInformation1Description"] . "</td><td>" .
+          $row["confirmPrivateInformation1"] . "</td><td>" . $row["confirmPrivateInformation2Description"] . "</td><td>" . $row["confirmPrivateInformation2"] . "</td><td>" . $row["confirmPrivateInformation3Description"] . "</td><td>" . $row["confirmPrivateInformation3"] . "</td><td>" . $paymentStatus . "</td><td>" . $row["id"] . "</td>" . "</tr>";
 
-          $newRow = array( $row["orderID"], $row["eventName"], $row["registrationdate"], $row["clientName"], $row["passType"], $row["formPrice"], $row["clientEmail"], $row["dancerKind"], $row["registrationType"], $row["otherTicketOptions"], $row["clientPhone"], $row["clientCountry"], $row["clientComments"], $row["confirmPrivateInformation1Description"], $row["confirmPrivateInformation1"], $row["confirmPrivateInformation2Description"], $row["confirmPrivateInformation2"], $row["confirmPrivateInformation3Description"], $row["confirmPrivateInformation3"], "TODO - paymentStatus" , $row["id"] );
-
-          $list = array_push($list, $newRow );
       }
-      $list = array_push($list, " 0 " );
+
+      echo "</tbody></table>";
+      //echo " 0 " ;
     } else {
-      $list = array_push($list, "There are 0 results in DB table" );
+      echo "There are 0 results in DB table";
     }
 
   }
 
   mysqli_close($connector);
 
-  // Create a CSV file from DB
-
-  $fp = fopen('file.csv', 'w');
-
-  foreach ($list as $fields) {
-      fputcsv($fp, $fields);
-  }
-
-  fclose($fp);
 
 ?>
 
+<script src="../shared/assets/js/downloadcsv.js"></script>
+
+</body>
+</html>

@@ -13,8 +13,8 @@
         <h1 class="text-center padding-small">Saved registrations</h1>
       </div>
       <div class="col-12 text-center">
-          <button type="button" class="btn btn-primary btn-lg">
-            <a href="downloadregistrations.php"> Download registrations </a>
+          <button type="button" class="btn btn-primary btn-lg padding-small">
+            <a id="download-registrations" href="downloadregistrations.php" class="text-center txt-white padding-small" target="_blank"> Download registrations </a>
           </button>
       </div>
       <div class="col-12">
