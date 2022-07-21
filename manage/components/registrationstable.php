@@ -12,6 +12,11 @@
       <div class="col-12">  
         <h1 class="text-center padding-small">Saved registrations</h1>
       </div>
+      <div class="col-12 text-center">
+          <button type="button" class="btn btn-primary btn-lg">
+            <a href="downloadregistrations.php"> Download registrations </a>
+          </button>
+      </div>
       <div class="col-12">
 
       <table id="orders" class="table search_project_table" data-sorting="true" data-paging="true">
@@ -26,14 +31,16 @@
             <th class="footable-sortable" data-breakpoints="xs sm md"> Client email </th>
             <th class="footable-sortable" data-breakpoints="xs sm md"> Dancer kind </th> 
             <th class="footable-sortable" data-breakpoints="xs sm md lg"> Registration type </th> 
+            <th class="footable-sortable" data-breakpoints="xs sm md lg"> Other ticket options </th> 
             <th class="footable-sortable" data-breakpoints="xs sm md"> Client phone </th> 
-            <th class="footable-sortable" data-breakpoints="xs sm md lg"> Length type </th> 
             <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client country </th> 
             <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client comments </th> 
-            <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client GDRP confirm </th> 
-            <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client COVID policy confirm </th> 
-            <th class="footable-sortable" data-breakpoints="xs sm md lg"> Competition participation </th>
-            <th class="footable-sortable" data-breakpoints="xs sm md"> Merchandise </th>
+            <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client Confrimation 1 Description </th> 
+            <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client Confrimation 1 </th> 
+            <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client Confrimation 2 Description </th> 
+            <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client Confrimation 2 </th> 
+            <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client Confrimation 3 Description </th> 
+            <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client Confrimation 3 </th> 
             <th class="footable-sortable" data-breakpoints="xs sm"> Payment status </th>
             <th class="footable-sortable" data-breakpoints="xs sm md lg"> ID (in database) </th>
           </tr>
@@ -89,8 +96,8 @@
               while ($row = $results-> fetch_assoc()) {
 
                   echo "<tr><td>" . $row["orderID"] . "</td><td>" . $row["eventName"] . "</td><td>" . $row["registrationdate"]  . "</td><td>" . $row["clientName"] ."</td><td>" . $row["passType"] . "</td> <td>" . $row["formPrice"] . "</td> <td>" . $row["clientEmail"]  . "</td> <td>" . $row["dancerKind"] . "</td><td>" . 
-                        $row["registrationType"] . "</td><td>" . $row["clientPhone"] . "</td><td>" . $row["lengthType"] . "</td><td>" . $row["clientCountry"] . "</td><td>" . $row["clientComments"] . "</td><td>" . $row["confirmPrivateInformation"] . "</td><td>" .
-                        $row["confirmCovid"] . "</td><td>" . $row["competitionParticipation"] . "</td><td>" . $row["merchandise"] . "</td><td>" . $paymentStatus . "</td><td>" . $row["id"] . "</td>" . "</tr>";
+                        $row["registrationType"] . "</td><td>" . $row["otherTicketOptions"] . "</td><td>" . $row["clientPhone"] . "</td><td>" . $row["clientCountry"] . "</td><td>" . $row["clientComments"] . "</td><td>" . $row["confirmPrivateInformation1Description"] . "</td><td>" .
+                        $row["confirmPrivateInformation1"] . "</td><td>" . $row["confirmPrivateInformation2Description"] . "</td><td>" . $row["confirmPrivateInformation2"] . "</td><td>" . $row["confirmPrivateInformation3Description"] . "</td><td>" . $row["confirmPrivateInformation3"] . "</td><td>" . $paymentStatus . "</td><td>" . $row["id"] . "</td>" . "</tr>";
               }
               echo "";
           }
