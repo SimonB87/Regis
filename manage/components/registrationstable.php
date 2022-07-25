@@ -96,9 +96,9 @@
                   $paymentStatusError = ( $paymentStatusUnpaid == false ) && ( $paymentStatusPaid == false ) &&  ( $paymentStatusReminder == false );
                   $stylePaystatus = ($paymentStatusPaid == true) ? " bg-success text-white " : " bg-warning ";
 
-                  $paymentStatus = "<div class='update-pay--parent' aria-valuenow='".$row["orderID"]."'>
+                  $paymentStatus = "<div class='update-pay--parent' title='id".$row["orderID"]."' aria-value-now='".$row["orderID"]."'>
                     <div>
-                      <form>
+                      <form class='orderId".$row["orderID"]."' title='".$row["orderID"]."'>
                         <select class='form-select" . $stylePaystatus . "' aria-label='Select payment options' id='paymentoption".$row["orderID"]."' name='paymentoption'>
                         <option class='bg-white text-black' value='1 - unpaid ' " . ( ($paymentStatusUnpaid == true) ? "selected" : "" ) . " >Unpaid</option>
                         <option class='bg-white text-black' value='2 - paid' " . ( ($paymentStatusPaid == true) ? "selected" : "" ) . ">Paid</option>
@@ -110,7 +110,7 @@
                       </form>
                     </div>
                     <div class='update-pay--button margin-small-top'> 
-                      <button type='button' class='btn btn-secondary update-button' aria-valuenow='".$row["orderID"]."'>Update</button>
+                      <button type='button' class='" . $row["orderID"] . " btn btn-secondary updatebutton' aria-value-now='".$row["orderID"]."' onclick='postUpdatePayment(\"" . $row["orderID"] . "\");'>Update</button>
                     </div>
                     <div class='update-pay--resultnotice'> </div>
                   </div>";
