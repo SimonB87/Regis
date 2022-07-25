@@ -39,7 +39,8 @@ else {
 
     ?>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="../shared/libs/jquery/jquery3.6.0.min.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>-->
     <script src="../shared/libs/bootstrap/js/bootstrap.js"></script>
     <script src="../shared/assets/js/hidenotification.js"></script>
 
@@ -47,12 +48,9 @@ else {
   <!--
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
     <script src="../shared/libs/footablebootstrap/js/footable.min.js" defer></script>
-    <script defer>
-    jQuery(function($){
-        $('.table').footable();
-      });
-    /* Sollution guide 15.10.2020: http://fooplugins.github.io/FooTable/docs/examples/basic/single-header.html */
-    </script>
+    <script src="../shared/assets/js/setupfootable.js" defer></script>
+
+    <script src="../shared/assets/js/sendpaystatusupdate.js" defer></script>
 
   </body>
 </html>
