@@ -13,7 +13,7 @@
         <h1 class="text-center padding-small">Saved registrations</h1>
       </div>
       <div class="col-12 text-center">
-          <button type="button" class="btn btn-primary btn-lg padding-small">
+          <button type="button" class="btn btn-primary btn-lg margin-small padding-small">
             <a id="download-registrations" href="downloadregistrations.php" class="text-center text-white padding-small margin-small weblink" target="_blank"> Download registrations </a>
           </button>
       </div>
@@ -84,12 +84,15 @@
               echo json_encode(array("sql - statusCode"=>418));
             }
 
-            $paymentStatus = "<form><select class='form-select' aria-label='Default select example'>
-                                <option selected selected>TODO - finish</option>
-                                <option value='1 - unpaid'>Unpaid</option>
-                                <option value='2 - paid'>Paid</option>
-                                <option value='3 - reminder sent'>Reminder sent</option>
-                              </select></form>";
+            $paymentStatus = "<div>
+                                <form><select class='form-select' aria-label='Default select example'>
+                                  <option selected selected>Select ...</option>
+                                  <option value='1 - unpaid'>Unpaid</option>
+                                  <option value='2 - paid'>Paid</option>
+                                  <option value='3 - reminder sent'>Reminder sent</option>
+                                </select>
+                                </form>
+                              </div>";
 
             //function to fatch the data
             if ($results-> num_rows > 0 ) {
