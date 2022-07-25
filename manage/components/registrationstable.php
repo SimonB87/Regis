@@ -14,7 +14,7 @@
       </div>
       <div class="col-12 text-center">
           <button type="button" class="btn btn-primary btn-lg padding-small">
-            <a id="download-registrations" href="downloadregistrations.php" class="text-center txt-white padding-small" target="_blank"> Download registrations </a>
+            <a id="download-registrations" href="downloadregistrations.php" class="text-center text-white padding-small margin-small weblink" target="_blank"> Download registrations </a>
           </button>
       </div>
       <div class="col-12">
