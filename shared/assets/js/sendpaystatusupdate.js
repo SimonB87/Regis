@@ -3,7 +3,10 @@ function postUpdatePayment(infonum) {
   const targetOrderId = document.querySelector("form.orderId" + infonum + " input[name=orderID]").value;
   const targetName = document.querySelector("form.orderId" + infonum + " input[name=clientName]").value;
   const targetPaymentOption = document.querySelector("form.orderId" + infonum + " select[name=paymentoption]").value;
-  //start busy indicator
+
+  var targetEl = $('.update-pay--parent[title=id' + targetOrderId + '] .update-pay--resultnotice');
+  targetEl.text("Updating ...");
+  $(".update-pay--parent[title=id" + targetOrderId + "] .spinner-border").removeClass("hidden");
 
   $.ajax({
     url: "updatepayment.php",
@@ -18,9 +21,6 @@ function postUpdatePayment(infonum) {
       var dataResult = JSON.parse(dataResult);
       //console.log(dataResult.content);
       if (dataResult.statusCode == 200) {
-        /*$("#butsave").removeAttr("disabled");
-        $('#fupForm').find('input:text').val('');
-        $("#success").show();*/
         var targetEl = $('.update-pay--parent[title=id' + targetOrderId + '] .update-pay--resultnotice');
         targetEl.text(dataResult.content);
         console.log('.update-pay--parent[title=id' + targetOrderId + '] select[name=paymentoption]');
@@ -42,5 +42,5 @@ function postUpdatePayment(infonum) {
       console.error(error);
     }
   });
-  //stop busy indicator
+  $(".update-pay--parent[title=id" + targetOrderId + "] .spinner-border").addClass("hidden");
 }

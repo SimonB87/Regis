@@ -110,7 +110,10 @@
                       </form>
                     </div>
                     <div class='update-pay--button margin-small-top'> 
-                      <button type='button' class='" . $row["orderID"] . " btn btn-secondary updatebutton' aria-value-now='".$row["orderID"]."' onclick='postUpdatePayment(\"" . $row["orderID"] . "\");'>Update</button>
+                      <button type='button' class='" . $row["orderID"] . " btn btn-secondary updatebutton' aria-value-now='".$row["orderID"]."' onclick='postUpdatePayment(\"" . $row["orderID"] . "\");'> 
+                      <span>Update </span> 
+                      <div class='spinner-border text-info hidden' role='status'> <span class='visually-hidden'>Loading...</span> </div>
+                      </button>
                     </div>
                     <div class='update-pay--resultnotice'> </div>
                   </div>";
