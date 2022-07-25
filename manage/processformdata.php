@@ -54,8 +54,8 @@ if ((isset($_POST['clientName'])) or (isset($_POST['clientEmail']))) {
   
     if ($correctlyFilledForm){
   
-      $sql = "INSERT INTO `registrations`( `eventID`,`eventName`,`passType`,`dancerKind`,`otherTicketOptions`,`location`,`formPrice`,`clientName`,`clientPhone`,`clientCountry`, `clientEmail` ,`clientComments`,`registrationdate`,`confirmPrivateInformation1Description`,`confirmPrivateInformation1`,`confirmPrivateInformation2Description`,`confirmPrivateInformation2`,`confirmPrivateInformation3Description`,`confirmPrivateInformation3`) 
-      VALUES ('$eventID', '$eventName', '$passType ', '$dancerKind', '$otherTicketOptions', '$location', '$formPrice', '$clientName', '$clientPhone', '$clientCountry', '$clientEmail', '$clientComments', '$registrationdate', '$confirmPrivateInformation1Description', '$confirmPrivateInformation1', '$confirmPrivateInformation2Description', '$confirmPrivateInformation2', '$confirmPrivateInformation3Description', '$confirmPrivateInformation3')";
+      $sql = "INSERT INTO `registrations`( `eventID`,`eventName`,`passType`,`dancerKind`,`otherTicketOptions`,`location`,`formPrice`,`clientName`,`clientPhone`,`clientCountry`, `clientEmail` ,`clientComments`,`registrationdate`,`confirmPrivateInformation1Description`,`confirmPrivateInformation1`,`confirmPrivateInformation2Description`,`confirmPrivateInformation2`,`confirmPrivateInformation3Description`,`confirmPrivateInformation3`,`paystatus`) 
+      VALUES ('$eventID', '$eventName', '$passType ', '$dancerKind', '$otherTicketOptions', '$location', '$formPrice', '$clientName', '$clientPhone', '$clientCountry', '$clientEmail', '$clientComments', '$registrationdate', '$confirmPrivateInformation1Description', '$confirmPrivateInformation1', '$confirmPrivateInformation2Description', '$confirmPrivateInformation2', '$confirmPrivateInformation3Description', '$confirmPrivateInformation3', '1 - unpaid')";
       
       //Error case
       if (!$sql ) {

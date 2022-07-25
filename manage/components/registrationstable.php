@@ -27,7 +27,7 @@
             <th class="footable-sortable"> Registration date </th>
             <th class="footable-sortable"> Client name </th>
             <th class="footable-sortable" data-breakpoints="xs sm md"> Pass type </th>
-            <th class="footable-sortable"> Price </th>
+            <th class="footable-sortable" data-breakpoints="xs sm"> Price </th>
             <th class="footable-sortable" data-breakpoints="xs sm md"> Client email </th>
             <th class="footable-sortable" data-breakpoints="xs sm md"> Dancer kind </th> 
             <th class="footable-sortable" data-breakpoints="xs sm md lg"> Registration type </th> 
@@ -41,7 +41,7 @@
             <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client Confrimation 2 </th> 
             <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client Confrimation 3 Description </th> 
             <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client Confrimation 3 </th> 
-            <th class="footable-sortable" data-breakpoints="xs sm"> Payment status </th>
+            <th class="footable-sortable"> Payment status </th>
             <th class="footable-sortable" data-breakpoints="xs sm md lg"> ID (in database) </th>
           </tr>
         </thead>
@@ -84,19 +84,36 @@
               echo json_encode(array("sql - statusCode"=>418));
             }
 
-            $paymentStatus = "<div>
-                                <form><select class='form-select' aria-label='Default select example'>
-                                  <option selected selected>Select ...</option>
-                                  <option value='1 - unpaid'>Unpaid</option>
-                                  <option value='2 - paid'>Paid</option>
-                                  <option value='3 - reminder sent'>Reminder sent</option>
-                                </select>
-                                </form>
-                              </div>";
+
 
             //function to fatch the data
             if ($results-> num_rows > 0 ) {
               while ($row = $results-> fetch_assoc()) {
+
+                  $paymentStatusUnpaid = ($row["paystatus"] == "1 - unpaid") ? true : false;
+                  $paymentStatusPaid = ($row["paystatus"] == "2 - paid") ? true : false;
+                  $paymentStatusReminder = ($row["paystatus"] == "3 - reminder sent") ? true : false;
+                  $paymentStatusError = ( $paymentStatusUnpaid == false ) && ( $paymentStatusPaid == false ) &&  ( $paymentStatusReminder == false );
+                  $stylePaystatus = ($paymentStatusPaid == true) ? " bg-success text-white " : " bg-warning ";
+
+                  $paymentStatus = "<div class='update-pay--parent' aria-valuenow='".$row["orderID"]."'>
+                    <div>
+                      <form>
+                        <select class='form-select" . $stylePaystatus . "' aria-label='Select payment options' id='paymentoption".$row["orderID"]."' name='paymentoption'>
+                        <option class='bg-white text-black' value='1 - unpaid ' " . ( ($paymentStatusUnpaid == true) ? "selected" : "" ) . " >Unpaid</option>
+                        <option class='bg-white text-black' value='2 - paid' " . ( ($paymentStatusPaid == true) ? "selected" : "" ) . ">Paid</option>
+                        <option class='bg-white text-black' value='3 - reminder sent' " . ( ($paymentStatusReminder == true) ? "selected" : "" ) . ">Reminder sent</option>
+                        <option class='bg-white text-black' value='0 - error' " . ( ($paymentStatusError == true) ? "selected" : "" ) . ">Error</option>
+                        </select>
+                      <input class='visibility-hidden' id='orderID".$row["orderID"]."' name='orderID' value='".$row["orderID"]."'>
+                      <input class='visibility-hidden' id='clientName".$row["orderID"]."' name='clientName' value='".$row["clientName"]."'>
+                      </form>
+                    </div>
+                    <div class='update-pay--button margin-small-top'> 
+                      <button type='button' class='btn btn-secondary update-button' aria-valuenow='".$row["orderID"]."'>Update</button>
+                    </div>
+                    <div class='update-pay--resultnotice'> </div>
+                  </div>";
 
                   echo "<tr><td>" . $row["orderID"] . "</td><td>" . $row["eventName"] . "</td><td>" . $row["registrationdate"]  . "</td><td>" . $row["clientName"] ."</td><td>" . $row["passType"] . "</td> <td>" . $row["formPrice"] . "</td> <td>" . $row["clientEmail"]  . "</td> <td>" . $row["dancerKind"] . "</td><td>" . 
                         $row["registrationType"] . "</td><td>" . $row["otherTicketOptions"] . "</td><td>" . $row["clientPhone"] . "</td><td>" . $row["clientCountry"] . "</td><td>" . $row["clientComments"] . "</td><td>" . $row["confirmPrivateInformation1Description"] . "</td><td>" .
