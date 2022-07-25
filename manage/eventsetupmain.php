@@ -89,7 +89,7 @@ require 'handlers/userlogin.php';
 			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 			  crossorigin="anonymous"></script>
 
-    <script src="../shared/libs/footablebootstrap/js/footable.js" defer></script>
+    <script src="../shared/libs/footablebootstrap/js/footable.min.js" defer></script>
     <script src="../shared/libs/bootstrap/js/bootstrap.js" defer></script>
     <script src="../shared/assets/js/formvalidation.js" defer></script>
     <script src="../shared/assets/js/togglevisibility.js" defer></script>
