@@ -101,7 +101,7 @@
                     <div>
                       <form class='orderId".$row["orderID"]."' title='".$row["orderID"]."'>
                         <select class='form-select" . $stylePaystatus . "' aria-label='Select payment options' id='paymentoption".$row["orderID"]."' name='paymentoption'>
-                        <option class='bg-white text-black' value='1 - unpaid ' " . ( ($paymentStatusUnpaid == true) ? "selected" : "" ) . " >Unpaid</option>
+                        <option class='bg-white text-black' value='1 - unpaid' " . ( ($paymentStatusUnpaid == true) ? "selected" : "" ) . " >Unpaid</option>
                         <option class='bg-white text-black' value='2 - paid' " . ( ($paymentStatusPaid == true) ? "selected" : "" ) . ">Paid</option>
                         <option class='bg-white text-black' value='3 - reminder sent' " . ( ($paymentStatusReminder == true) ? "selected" : "" ) . ">Reminder sent</option>
                         <option class='bg-white text-black' value='0 - error' " . ( ($paymentStatusError == true) ? "selected" : "" ) . ">Error</option>
@@ -119,8 +119,8 @@
                     <div class='update-pay--resultnotice'> </div>
                   </div>";
 
-                  echo "<tr title='" . $row["orderID"] . "'><td>" . $row["orderID"] . "</td><td>" . $row["eventName"] . "</td><td>" . $row["registrationdate"]  . "</td><td>" . $row["clientName"] ."</td><td>" . $row["passType"] . "</td> <td>" . $row["formPrice"] . "</td> <td>" . $row["clientEmail"]  . "</td> <td>" . $row["dancerKind"] . "</td><td>" . 
-                        $row["registrationType"] . "</td><td>" . $row["otherTicketOptions"] . "</td><td>" . $row["clientPhone"] . "</td><td>" . $row["clientCountry"] . "</td><td>" . $row["clientComments"] . "</td><td>" . $row["confirmPrivateInformation1Description"] . "</td><td>" .
+                  echo "<tr class='orderId" . $row["orderID"] . "'><td>" . $row["orderID"] . "</td><td>" . $row["eventName"] . "</td><td>" . $row["registrationdate"]  . "</td><td title='clientName'>" . $row["clientName"] ."</td><td title='passType'>" . $row["passType"] . "</td> <td>" . $row["formPrice"] . "</td> <td title='clientEmail' >" . $row["clientEmail"]  . "</td> <td title='dancerKind'>" . $row["dancerKind"] . "</td><td>" . 
+                        $row["registrationType"] . "</td><td title='otherTicketOptions' >" . $row["otherTicketOptions"] . "</td><td title='clientPhone'>" . $row["clientPhone"] . "</td><td title='clientCountry' >" . $row["clientCountry"] . "</td><td title='clientComments'>" . $row["clientComments"] . "</td><td>" . $row["confirmPrivateInformation1Description"] . "</td><td>" .
                         $row["confirmPrivateInformation1"] . "</td><td>" . $row["confirmPrivateInformation2Description"] . "</td><td>" . $row["confirmPrivateInformation2"] . "</td><td>" . $row["confirmPrivateInformation3Description"] . "</td><td>" . $row["confirmPrivateInformation3"] . "</td><td>" . $paymentStatus . "</td><td>" . $row["id"] . "</td><td><div><span class='glyphicon' onclick='editRegistration(\"". $row["orderID"] ."\");' data-bs-toggle='modal' data-bs-target='#exampleModal'>&#x270f;</span></div><td/>" . "</tr>";
               }
               echo "";
