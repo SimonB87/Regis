@@ -28,6 +28,7 @@ $error_array = [];
     ?> 
 
     <?php
+    include("webform/handlers/handler_calculatevisibility.php");
     include("webform/components/previewform.php");
     ?> 
 
