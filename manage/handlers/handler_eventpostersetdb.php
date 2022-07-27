@@ -24,7 +24,7 @@ if(isset($_POST["safe_form_data"])){
   if($usernamelevel == "9") {
 
     $eventDataId = 0;
-    $sql = "SELECT * FROM events WHERE id=(SELECT max(id) FROM events)";
+    $sql = "SELECT * FROM events WHERE eventStatus = '1 - Registrations open' ORDER BY id DESC LIMIT 1";
   
     $results = $connector-> query($sql);
     //Error case

@@ -73,14 +73,14 @@
     printf("Error message: %s\n", mysqli_error($link));
   }*/
 
-  if (!mysqli_set_charset($connector, "utf8")) {
-    printf("Error loading character set utf8: %s\n", mysqli_error($con));
+  /*if (!mysqli_set_charset($connector, "utf8")) {
+    printf("Error loading character set utf8: %s\n", mysqli_error($connector));
     exit();
     } else {
             //printf("Current character set: %s\n", mysqli_character_set_name($con));//used only for testing
-    }
+    }*/
 
-    $sql = "SELECT * FROM events WHERE id=(SELECT max(id) FROM events)";
+    $sql = "SELECT * FROM events WHERE eventStatus = '1 - Registrations open' LIMIT 1";
 
     $results = $connector-> query($sql);
     //Error case

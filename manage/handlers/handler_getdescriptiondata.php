@@ -23,7 +23,7 @@
               //printf("Current character set: %s\n", mysqli_character_set_name($con));//used only for testing
       }
 
-      $sql = "SELECT * FROM events WHERE id=(SELECT max(id) FROM events)";
+      $sql = "SELECT * FROM events WHERE eventStatus = '1 - Registrations open' ORDER BY id DESC LIMIT 1";
   
       $results = $connector-> query($sql);
       //Error case
