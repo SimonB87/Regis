@@ -37,12 +37,12 @@
               <div id="passType--parent" class=" full-width full-height div-select">
                 <select id="passType" class="form-select" aria-label="Pass type" required="" onchange="recalculatePrice();" name="passType">
                   <option value="" selected="">Select pass type ... </option>
-                  <?php echo "<option value='1 - Early birds pass leader/follower" . "' aria-valuenow='" . $eventDataEarlyBirdsTicketPriceSingle . "'>Early birds pass leader/follower - " . $eventDataEarlyBirdsTicketPriceSingle . "CZK</option>"; ?>
-                  <?php echo "<option value='2 - Early birds couple" . "' aria-valuenow='" . $eventDataEarlyBirdsTicketPriceCouple . "'>Early birds couple - " . $eventDataEarlyBirdsTicketPriceCouple. "CZK</option>"; ?>
-                  <?php echo "<option value='3 - Fullpass leader/follower" . "' aria-valuenow='" . $eventDataRegularTicketPriceSingle . "'>Fullpass leader/follower - " . $eventDataRegularTicketPriceSingle . "CZK</option>"; ?>
-                  <?php echo "<option value='4 - Fullpass couple" . "' aria-valuenow='" . $eventDataRegularTicketPriceCouple . "'>Fullpass couple - " . $eventDataRegularTicketPriceCouple . "CZK</option>";  ?>
-                  <?php echo "<option value='5 - Partypass leader/follower" . "' aria-valuenow='" . $partyTicketPriceSingle . "'>Partypass leader/follower - " . $partyTicketPriceSingle . "CZK</option>";  ?>
-                  <?php echo "<option value='6 - Partypass couple" . "' aria-valuenow='" . $partyTicketPriceCouple . "'>Partypass couple - " . $partyTicketPriceCouple . "CZK</option>"; ?>
+                  <?php echo "<option value='1 - Early birds pass leader/follower' >Early birds pass leader/follower " . "</option>"; ?>
+                  <?php echo "<option value='2 - Early birds couple'>Early birds couple " . "</option>"; ?>
+                  <?php echo "<option value='3 - Fullpass leader/follower'>Fullpass leader/follower " . "</option>"; ?>
+                  <?php echo "<option value='4 - Fullpass couple'>Fullpass couple " . "</option>";  ?>
+                  <?php echo "<option value='5 - Partypass leader/follower'>Partypass leader/follower " . "</option>";  ?>
+                  <?php echo "<option value='6 - Partypass couple'>Partypass couple " . "</option>"; ?>
                   <option value="0 - None" aria-valuenow="0.0">None</option>
                 </select>
                 <div class="form-select-customLabel">
@@ -57,16 +57,15 @@
               </div>
             </div>
 
-
               <div class='col-lg-6 col-md-12 col-sm-12 padding-small '>
                   <div class=" full-width full-height div-select">
                     <select id="otherTicketOptions" class="form-select" aria-label="Pass type" required="" onchange="recalculatePrice();" name="otherTicketOptions">
                       <option value="" selected=""> Other tickets options ...</option>
                       <?php 
-                      echo "<option value='1 - " . $eventDataSpecialType1RegistrationName . " - " . $eventDataSpecialType1TicketPriceSingle . ",- Kč' aria-valuenow='" . $eventDataSpecialType1TicketPriceSingle . "'>" . $eventDataSpecialType1RegistrationName . " Single - " .$eventDataSpecialType1TicketPriceSingle . ",- Kč</option>";
-                      echo "<option value='2 - " . $eventDataSpecialType1RegistrationName . " - " . $eventDataSpecialType1TicketPriceCouple . ",- Kč' aria-valuenow='" . $eventDataSpecialType1TicketPriceCouple . "'>" . $eventDataSpecialType1RegistrationName . " Couple - " .$eventDataSpecialType1TicketPriceCouple . ",- Kč</option>";
-                      echo "<option value='3 - " . $eventDataSpecialType2RegistrationName . " - " . $eventDataSpecialType2TicketPriceSingle . ",- Kč' aria-valuenow='" . $eventDataSpecialType2TicketPriceSingle . "'>" . $eventDataSpecialType2RegistrationName . " Single - " .$eventDataSpecialType2TicketPriceSingle . ",- Kč</option>";
-                      echo "<option value='4 - " . $eventDataSpecialType2RegistrationName . " - " . $eventDataSpecialType2TicketPriceCouple . ",- Kč' aria-valuenow='" . $eventDataSpecialType2TicketPriceCouple . "'>" . $eventDataSpecialType2RegistrationName . " Couple - " .$eventDataSpecialType2TicketPriceCouple . ",- Kč</option>";
+                      echo "<option value='1 - " . $eventDataSpecialType1RegistrationName . "'>" . $eventDataSpecialType1RegistrationName . " - Single " . "</option>";
+                      echo "<option value='2 - " . $eventDataSpecialType1RegistrationName . "'>" . $eventDataSpecialType1RegistrationName . " - Couple " . "</option>";
+                      echo "<option value='3 - " . $eventDataSpecialType2RegistrationName . "'>" . $eventDataSpecialType2RegistrationName . " - Single " . "</option>";
+                      echo "<option value='4 - " . $eventDataSpecialType2RegistrationName . "'>" . $eventDataSpecialType2RegistrationName . " - Couple " . "</option>";
                       ?>
                       <option value="0 - None" aria-valuenow="0.0">None</option>
                     </select>
