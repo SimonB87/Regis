@@ -3,7 +3,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"> Edit order ID : <span id="orderId" class="text-success"></span> </h5>
+        <h5 class="modal-title" id="exampleModalLabel"> Edit order ID : <span id="orderId" class="text-blue"></span> </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -71,7 +71,7 @@
                       <option value="0 - None" aria-valuenow="0.0">None</option>
                     </select>
                     <div class="form-select-customLabel">
-                      Other tickets
+                      Other tickets options
                     </div>
                     <div class="valid-feedback">
                       Looks good!
