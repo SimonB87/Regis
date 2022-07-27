@@ -106,7 +106,7 @@
         $eventDataEventStartDate = $row["eventStartDate"] ;
         $eventDataEventEndDate = $row["eventEndDate"] ;
         $eventDataMaintainSinglesParity = $row["maintainSinglesParity"] ;
-        $eventDataDancerKind = $row["dancerKind "] ;
+        $eventDataDancerKind = $row["dancerKind"] ;
 
         $eventDataAgreementsEnabled = $row["agreementsEnabled"] ;
         $eventDataAgreement1Enabled = $row["agreement1Enabled"] ;
