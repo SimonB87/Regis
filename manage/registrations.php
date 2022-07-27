@@ -37,6 +37,8 @@ else {
 
     include("../shared/footer.php");
 
+    include("components/modal_editregistrations.php");
+
     ?>
 
     <script src="../shared/libs/jquery/jquery3.6.0.min.js"></script>
@@ -51,6 +53,7 @@ else {
     <script src="../shared/assets/js/setupfootable.js" defer></script>
 
     <script src="../shared/assets/js/sendpaystatusupdate.js" defer></script>
+    <script src="../shared/assets/js/editregistrations.js" defer></script>
 
   </body>
 </html>
