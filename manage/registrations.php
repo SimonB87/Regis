@@ -31,6 +31,7 @@ else {
   <body>
 
     <?php
+    include("handlers/handler_getformdata.php");
     include("shared/navigation.php");
 
     include("components/registrationstable.php");
