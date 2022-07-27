@@ -117,9 +117,10 @@ function recountRevenueData() {
 
 }
 
-$(function () {
+/* //TODO - not really useful code ?
+  $(function () {
   $('form.bts-form input[type=date]').datepicker({
     format: "dd/mm/yyyy"
   });
-});
+});*/
 
