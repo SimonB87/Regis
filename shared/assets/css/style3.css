@@ -246,6 +246,9 @@
 .bg-gray {
   background-color: var(--darkGray);
 }
+.text-blue {
+  color: var(--bs-blue);
+}
 footer .copyright {
   font-family: Muli, sans-serif;
   color: #d3d3d3;
