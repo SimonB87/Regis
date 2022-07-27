@@ -13,7 +13,7 @@
             <div class="row">
 
             <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-              <div class="mb-3 full-width full-height div-select">
+              <div class=" full-width full-height div-select">
                 <select id="dancerKind" class="form-select" aria-label="Pass type" onchange="recalculatePrice();" required="" name="dancerKind">
                   <option value="" selected="" >Select dancer kind ...</option>
                   <option value="1 - Leader" >Leader</option>
@@ -34,7 +34,7 @@
             </div>
 
             <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-              <div id="passType--parent" class="mb-3 full-width full-height div-select">
+              <div id="passType--parent" class=" full-width full-height div-select">
                 <select id="passType" class="form-select" aria-label="Pass type" required="" onchange="recalculatePrice();" name="passType">
                   <option value="" selected="">Select pass type ... </option>
                   <?php echo "<option value='1 - Early birds pass leader/follower" . "' aria-valuenow='" . $eventDataEarlyBirdsTicketPriceSingle . "'>Early birds pass leader/follower - " . $eventDataEarlyBirdsTicketPriceSingle . "CZK</option>"; ?>
@@ -59,7 +59,7 @@
 
 
               <div class='col-lg-6 col-md-12 col-sm-12 padding-small '>
-                  <div class="mb-3 full-width full-height div-select">
+                  <div class=" full-width full-height div-select">
                     <select id="otherTicketOptions" class="form-select" aria-label="Pass type" required="" onchange="recalculatePrice();" name="otherTicketOptions">
                       <option value="" selected=""> Other tickets options ...</option>
                       <?php 
@@ -105,7 +105,7 @@
               </div>
 
               <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
-                <div class="form-floating mb-3">
+                <div class="form-floating ">
                   <input type="email" class="form-control" id="clientEmail" placeholder="name@example.com" required="" name="clientEmail" maxlength="250">
                   <label for="clientEmail">Email address</label>
                   <div class="valid-feedback">
