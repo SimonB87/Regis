@@ -40,10 +40,12 @@
     }
 
     $sql = "";
+    $date = date("d.m.Y" );
+    $currentAdminEditedOrder = "";
     if($messageName == "updatepayment") {
-      $sql = "UPDATE `registrations` SET `paystatus`='$paymentoption' WHERE orderID='$targetOrderId'";
+      $sql = "UPDATE `registrations` SET `paystatus`='$paymentoption', `adminEditedOrder`='$currentAdminEditedOrder edited paystatus $date;' WHERE orderID='$targetOrderId'";
     } else if ($messageName == "updateorder") {
-      $sql = "UPDATE `registrations` SET dancerKind = '$dancerkind', passType = '$passType', otherTicketOptions = '$otherTicketOptions', clientName = '$clientName', clientEmail = '$clientEmail', clientPhone = '$clientPhone', clientCountry = '$clientCountry', clientComments = '$clientComments' WHERE orderID='$targetOrderId'";
+      $sql = "UPDATE `registrations` SET dancerKind = '$dancerkind', passType = '$passType', otherTicketOptions = '$otherTicketOptions', clientName = '$clientName', clientEmail = '$clientEmail', clientPhone = '$clientPhone', clientCountry = '$clientCountry', clientComments = '$clientComments', `adminEditedOrder`='$currentAdminEditedOrder edited order data $date;' WHERE orderID='$targetOrderId'";
     }
 
     // Perform a query, check for error
