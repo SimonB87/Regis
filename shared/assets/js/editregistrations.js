@@ -34,6 +34,7 @@ function editRegistration(orderNum) {
   function selectOptions(valueOfSource, targetSelectId) {
     const selectOptions = document.querySelectorAll("#" + targetSelectId + " option");
     selectOptions.forEach((element, index) => {
+      element.removeAttribute("selected");
       if (element.value[0] == valueOfSource[0]) {
         selectOptions[index].setAttribute("selected", "");
       }
