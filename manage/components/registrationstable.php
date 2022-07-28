@@ -56,9 +56,9 @@
             exit();
           }
 
-          /* debug
-          if (!mysqli_query($connector, "SET a=1")) {
-            printf("Error message: %s\n", mysqli_error($link));
+          /* //debug 
+          if (!mysqli_query($connector, `DECLARE @a=1;`)) {
+            printf("Error message: %s\n", mysqli_error($connector));
           }*/
 
 
@@ -79,10 +79,10 @@
             
             
             if (mysqli_query($connector, $sql)) {
-              //debug echo json_encode(array("statusCode"=>200));
+              //echo "sql - statusCode - 200";
             } 
             else {
-              echo json_encode(array("sql - statusCode"=>418));
+              echo "sql - statusCode - 400";
             }
 
 
@@ -119,8 +119,10 @@
                     <div class='update-pay--resultnotice'> </div>
                   </div>";
 
-                  echo "<tr class='orderId" . $row["orderID"] . "'><td>" . $row["orderID"] . "</td><td>" . $row["eventName"] . "</td><td>" . $row["registrationdate"]  . "</td><td title='clientName'>" . $row["clientName"] ."</td><td title='passType'>" . $row["passType"] . "</td> <td>" . $row["formPrice"] . "</td> <td title='clientEmail' >" . $row["clientEmail"]  . "</td> <td title='dancerKind'>" . $row["dancerKind"] . "</td><td>" . 
-                        $row["registrationType"] . "</td><td title='otherTicketOptions' >" . $row["otherTicketOptions"] . "</td><td title='clientPhone'>" . $row["clientPhone"] . "</td><td title='clientCountry' >" . $row["clientCountry"] . "</td><td title='clientComments'>" . $row["clientComments"] . "</td><td>" . $row["confirmPrivateInformation1Description"] . "</td><td>" .
+                  echo "<tr class='orderId" . $row["orderID"] . "'><td>" . $row["orderID"] . "</td><td>" . $row["eventName"] . "</td><td>" . 
+                        $row["registrationdate"]  . "</td><td title='clientName'>" . $row["clientName"] ."</td><td title='passType'>" . $row["passType"] . "</td> <td title='price'>" . $row["formPrice"] . "</td> <td title='clientEmail' >" . $row["clientEmail"]  . "</td> <td title='dancerKind'>" . $row["dancerKind"] . "</td><td>" . 
+                        $row["registrationType"] . "</td><td title='otherTicketOptions' >" . $row["otherTicketOptions"] . "</td><td title='clientPhone'>" . $row["clientPhone"] . "</td><td title='clientCountry' >" . $row["clientCountry"] . "</td><td title='clientComments'>" . 
+                        $row["clientComments"] . "</td><td>" . $row["confirmPrivateInformation1Description"] . "</td><td>" .
                         $row["confirmPrivateInformation1"] . "</td><td>" . $row["confirmPrivateInformation2Description"] . "</td><td>" . $row["confirmPrivateInformation2"] . "</td><td>" . $row["confirmPrivateInformation3Description"] . "</td><td>" . $row["confirmPrivateInformation3"] . "</td><td>" . $paymentStatus . "</td><td>" . $row["id"] . "</td><td><div><span class='glyphicon' onclick='editRegistration(\"". $row["orderID"] ."\");' data-bs-toggle='modal' data-bs-target='#exampleModal'>&#x270f;</span></div><td/>" . "</tr>";
               }
               echo "";
