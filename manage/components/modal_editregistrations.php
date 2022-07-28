@@ -57,9 +57,9 @@
               </div>
             </div>
 
-              <div class='col-lg-6 col-md-12 col-sm-12 padding-small '>
-                  <div class=" full-width full-height div-select">
-                    <select id="otherTicketOptions" class="form-select" aria-label="Pass type" required="" name="otherTicketOptions">
+            <div class='col-lg-6 col-md-12 col-sm-12 padding-small '>
+              <div class=" full-width full-height div-select">
+                <select id="otherTicketOptions" class="form-select" aria-label="Pass type" required="" name="otherTicketOptions">
                       <option value="" > Other tickets options ...</option>
                       <?php 
                       echo "<option value='1 - " . $eventDataSpecialType1RegistrationName . "'>" . $eventDataSpecialType1RegistrationName . " - Single " . "</option>";
@@ -68,19 +68,32 @@
                       echo "<option value='4 - " . $eventDataSpecialType2RegistrationName . "'>" . $eventDataSpecialType2RegistrationName . " - Couple " . "</option>";
                       ?>
                       <option value="0 - None" aria-valuenow="0.0">None</option>
-                    </select>
-                    <div class="form-select-customLabel">
+                </select>
+                <div class="form-select-customLabel">
                       Other tickets options
-                    </div>
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
-                    <div class="invalid-feedback">
-                      Please select some valid option.
-                    </div>
-                  </div>
-
                 </div>
+                <div class="valid-feedback">
+                      Looks good!
+                </div>
+                <div class="invalid-feedback">
+                      Please select some valid option.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="price" disabled name="price" maxlength="250">
+                  <label for="price">Price on registration</label>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please fill in name.
+                  </div>
+                </div>
+            </div>
+
         </section>
 
         <section>
@@ -160,10 +173,22 @@
 
         </section>
       </div>
+
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+
+        <div class="modal-footer-buttons">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary save-button" onclick="updateOrderData();">
+            <span class='save-button-text margin-small-right'>Save changes </span>
+            <span class='spinner-border text-info hidden' role='status'> </span>
+          </button>
+        </div>
+        <div id="post-status" class="modal-footer-notices">
+        </div>
+
+
       </div>
+
     </div>
   </div>
 </div>0
