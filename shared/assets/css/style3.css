@@ -160,6 +160,13 @@
   margin-top: var(--padding-small);
   margin-bottom: var(--padding-small);
 }
+.margin-small-right {
+  margin-right: var(--padding-small);
+}
+.margin-small-sides {
+  margin-left: var(--padding-small);
+  margin-right: var(--padding-small);
+}
 .margin-verysmall {
   margin: var(--padding-very-small);
 }
@@ -530,4 +537,15 @@ nav {
     max-width: 60vw;
     width: 60vw;
   }
+}
+.modal.show .modal-footer button {
+  display: flex;
+  align-items: center;
+  margin-left: var(--padding-small);
+  margin-right: var(--padding-small);
+}
+.modal.show .modal-footer .modal-footer-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
 }
