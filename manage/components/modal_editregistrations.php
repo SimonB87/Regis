@@ -14,7 +14,7 @@
 
             <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
               <div class=" full-width full-height div-select">
-                <select id="dancerKind" class="form-select" aria-label="Pass type" onchange="recalculatePrice();" required="" name="dancerKind">
+                <select id="dancerKind" class="form-select" aria-label="Pass type" required="" name="dancerKind">
                   <option value="" >Select dancer kind ...</option>
                   <option value="1 - Leader" >Leader</option>
                   <option value="2 - Follower" >Follower</option>
@@ -35,7 +35,7 @@
 
             <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
               <div id="passType--parent" class=" full-width full-height div-select">
-                <select id="passType" class="form-select" aria-label="Pass type" required="" onchange="recalculatePrice();" name="passType">
+                <select id="passType" class="form-select" aria-label="Pass type" required="" name="passType">
                   <option value="" >Select pass type ... </option>
                   <?php echo "<option value='1 - Early birds pass leader/follower' >Early birds pass leader/follower " . "</option>"; ?>
                   <?php echo "<option value='2 - Early birds couple'>Early birds couple " . "</option>"; ?>
@@ -59,7 +59,7 @@
 
               <div class='col-lg-6 col-md-12 col-sm-12 padding-small '>
                   <div class=" full-width full-height div-select">
-                    <select id="otherTicketOptions" class="form-select" aria-label="Pass type" required="" onchange="recalculatePrice();" name="otherTicketOptions">
+                    <select id="otherTicketOptions" class="form-select" aria-label="Pass type" required="" name="otherTicketOptions">
                       <option value="" > Other tickets options ...</option>
                       <?php 
                       echo "<option value='1 - " . $eventDataSpecialType1RegistrationName . "'>" . $eventDataSpecialType1RegistrationName . " - Single " . "</option>";
