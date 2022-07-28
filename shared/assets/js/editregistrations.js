@@ -5,6 +5,7 @@ function editRegistration(orderNum) {
   const orderRowSelector = "#orders tr.orderId" + orderNum;
 
   const orderDancerKindVal = document.querySelector(orderRowSelector + " td[title=dancerKind]").innerText;
+  const orderPriceVal = document.querySelector(orderRowSelector + " td[title=price]").innerText;
   const orderPassTypeVal = document.querySelector(orderRowSelector + " td[title=passType]").innerText;
   const orderOtherTicketOptionsVal = document.querySelector(orderRowSelector + " td[title=otherTicketOptions]").innerText;
   const orderClientNameVal = document.querySelector(orderRowSelector + " td[title=clientName]").innerText;
@@ -29,7 +30,9 @@ function editRegistration(orderNum) {
   document.getElementById("clientEmail").value = orderClientEmailVal;
   document.getElementById("clientPhone").value = orderClientPhoneVal;
   document.getElementById("clientCountry").value = orderClientCountryVal;
+  document.getElementById("clientComments").value = orderClientCommentsVal;
   document.getElementById("clientComments").innerText = orderClientCommentsVal;
+  document.getElementById("price").value = orderPriceVal;
 
   function selectOptions(valueOfSource, targetSelectId) {
     const selectOptions = document.querySelectorAll("#" + targetSelectId + " option");

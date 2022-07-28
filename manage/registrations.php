@@ -53,7 +53,7 @@ else {
     <script src="../shared/libs/footablebootstrap/js/footable.min.js" defer></script>
     <script src="../shared/assets/js/setupfootable.js" defer></script>
 
-    <script src="../shared/assets/js/sendpaystatusupdate.js" defer></script>
+    <script src="../shared/assets/js/sendorderupdate.js" defer></script>
     <script src="../shared/assets/js/editregistrations.js" defer></script>
 
   </body>
