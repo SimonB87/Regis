@@ -42,6 +42,8 @@
             <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client Confrimation 3 Description </th> 
             <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client Confrimation 3 </th> 
             <th class="footable-sortable"> Payment status </th>
+            <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client changes </th> 
+            <th class="footable-sortable" data-breakpoints="xs sm md lg"> Admin changes </th> 
             <th class="footable-sortable" data-breakpoints="xs sm md lg"> ID (in database) </th>
             <th class="footable-sortable"> Edit </th>
           </tr>
@@ -123,7 +125,7 @@
                         $row["registrationdate"]  . "</td><td title='clientName'>" . $row["clientName"] ."</td><td title='passType'>" . $row["passType"] . "</td> <td title='price'>" . $row["formPrice"] . "</td> <td title='clientEmail' >" . $row["clientEmail"]  . "</td> <td title='dancerKind'>" . $row["dancerKind"] . "</td><td>" . 
                         $row["registrationType"] . "</td><td title='otherTicketOptions' >" . $row["otherTicketOptions"] . "</td><td title='clientPhone'>" . $row["clientPhone"] . "</td><td title='clientCountry' >" . $row["clientCountry"] . "</td><td title='clientComments'>" . 
                         $row["clientComments"] . "</td><td>" . $row["confirmPrivateInformation1Description"] . "</td><td>" .
-                        $row["confirmPrivateInformation1"] . "</td><td>" . $row["confirmPrivateInformation2Description"] . "</td><td>" . $row["confirmPrivateInformation2"] . "</td><td>" . $row["confirmPrivateInformation3Description"] . "</td><td>" . $row["confirmPrivateInformation3"] . "</td><td>" . $paymentStatus . "</td><td>" . $row["id"] . "</td><td><div><span class='glyphicon' onclick='editRegistration(\"". $row["orderID"] ."\");' data-bs-toggle='modal' data-bs-target='#exampleModal'>&#x270f;</span></div><td/>" . "</tr>";
+                        $row["confirmPrivateInformation1"] . "</td><td>" . $row["confirmPrivateInformation2Description"] . "</td><td>" . $row["confirmPrivateInformation2"] . "</td><td>" . $row["confirmPrivateInformation3Description"] . "</td><td>" . $row["confirmPrivateInformation3"] . "</td><td>" . $paymentStatus . "</td><td>". $row["clientTransferedOrder"] . "</td><td>" . $row["adminEditedOrder"] . "</td><td>" . $row["id"] . "</td><td><div><span class='glyphicon' onclick='editRegistration(\"". $row["orderID"] ."\");' data-bs-toggle='modal' data-bs-target='#exampleModal'>&#x270f;</span></div><td/>" . "</tr>";
               }
               echo "";
           }
