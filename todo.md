@@ -77,6 +77,7 @@
 
 ## hlavní funkcionalita - dodělávky
 
+- ! FEATURE - v registracích dát možnost aby se zobrazovaly všechny - jenom vybrané akce (pro to použít url parameter ?eventId=01 )
 - BUGFIX - v úpravě description použít dynamické odkazy na obrázky emotikonů
 - !!! BUGFIX - ! opravit enabled sections - když je tam sekce 2 disabled a obsahuje uvnitř texty (situace rozpor create a edit ! )
 
