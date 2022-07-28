@@ -5,7 +5,6 @@ function postUpdatePayment(infonum) {
   const targetPaymentOption = document.querySelector("form.orderId" + infonum + " select[name=paymentoption]").value;
   var targetEl = $('.update-pay--parent[title=id' + targetOrderId + '] .update-pay--resultnotice');
 
-  var targetEl = $('.update-pay--parent[title=id' + targetOrderId + '] .update-pay--resultnotice');
   targetEl.text("Updating ...");
   document.querySelector("tr.orderId" + infonum + " .updatebutton .spinner-border").classList.remove("hidden");
   //$(".update-pay--parent[title=id" + targetOrderId + "] .spinner-border").removeClass("hidden");
