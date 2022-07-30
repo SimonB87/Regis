@@ -1,16 +1,3 @@
-
-<div class="bg-white padding-regular-topBottom">
-  <div class="container">
-    <div class="row">
-    
-      <?php
-      include("testenvnotification.php");
-      ?>
-
-      <div class="col-12">  
-        <h1 class="text-center padding-small">Saved registrations</h1>
-      </div>
-
       <div class="col-12 text-center">
           <button type="button" class="btn btn-primary btn-lg margin-small padding-small">
             <a id="download-registrations" href="downloadregistrations.php" class="text-center text-white padding-small margin-small weblink" target="_blank"> Download registrations </a>
@@ -142,6 +129,3 @@
 
 
       </div>
-    </div>
-  </div>
-</div>

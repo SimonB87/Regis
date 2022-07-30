@@ -34,7 +34,26 @@ else {
     include("handlers/handler_getformdata.php");
     include("shared/navigation.php");
 
-    include("components/registrationstable.php");
+    ?>
+
+    <div class="bg-white padding-regular-topBottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">  
+            <h1 class="text-center padding-small">Saved registrations</h1>
+          </div>
+
+        <?php
+        include("components/testenvnotification.php");
+        include("components/selectoneevent.php");
+        include("components/registrationstable.php");
+        ?>
+
+        </div>
+      </div>
+    </div>
+
+    <?php
 
     include("../shared/footer.php");
 
