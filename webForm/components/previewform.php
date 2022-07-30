@@ -73,13 +73,16 @@
 
   <div class="col-12 padding-regular-topBottom bg-white">
     <h2 class="padding-small text-center"> Registration </h2>
-
       <?php
       //include("registrationcards.php");
       ?>
-
     </div>
   </div>
+
+  <?php
+  include("././manage/components/testenvnotification.php");
+  ?>
+
 </div>
 
 <!-- Section evet form -->

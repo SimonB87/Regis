@@ -2,21 +2,21 @@
 <div class="bg-white padding-regular-topBottom">
   <div class="container">
     <div class="row">
-    <div class="col-12"> <div class='padding-small'> <div class='alert alert-secondary col-lg-12 col-md-12 col-sm-12 padding-small' role='alert'><h4 class=''> THIS IS WEB TEST ENVIRONMENT ! </h4> <p> Registrations only for test purpose ! </p><span class='alert-hide'>
-      <span class="alert-hide">
-      <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-check' viewBox='0 0 16 16'>
-          <path d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z'></path>
-        </svg>
-      </span>
-    </div></div></div>
+    
+      <?php
+      include("testenvnotification.php");
+      ?>
+
       <div class="col-12">  
         <h1 class="text-center padding-small">Saved registrations</h1>
       </div>
+
       <div class="col-12 text-center">
           <button type="button" class="btn btn-primary btn-lg margin-small padding-small">
             <a id="download-registrations" href="downloadregistrations.php" class="text-center text-white padding-small margin-small weblink" target="_blank"> Download registrations </a>
           </button>
       </div>
+
       <div class="col-12">
 
       <table id="orders" class="table search_project_table" data-sorting="true" data-paging="true">
