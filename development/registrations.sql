@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktura tabulky `registrations`
+-- Struktura tabulky `registrations2`
 --
 
-CREATE TABLE `registrations` (
+CREATE TABLE `registrations2` (
   `id` int(255) NOT NULL,
   `orderID` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
   `eventID` int(255) NOT NULL,
@@ -58,10 +58,10 @@ CREATE TABLE `registrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Vypisuji data pro tabulku `registrations`
+-- Vypisuji data pro tabulku `registrations2`
 --
 
-INSERT INTO `registrations` (`id`, `orderID`, `eventID`, `eventName`, `clientName`, `passType`, `registrationType`, `dancerKind`, `otherTicketOptions`, `competitionParticipation`, `location`, `merchandise`, `formPrice`, `clientEmail`, `clientPhone`, `clientCountry`, `clientComments`, `registrationdate`, `confirmPrivateInformation1`, `confirmPrivateInformation2`, `confirmPrivateInformation3`, `confirmPrivateInformation1Description`, `confirmPrivateInformation2Description`, `confirmPrivateInformation3Description`, `paystatus`, `clientTransferedOrder`, `adminEditedOrder`) VALUES
+INSERT INTO `registrations2` (`id`, `orderID`, `eventID`, `eventName`, `clientName`, `passType`, `registrationType`, `dancerKind`, `otherTicketOptions`, `competitionParticipation`, `location`, `merchandise`, `formPrice`, `clientEmail`, `clientPhone`, `clientCountry`, `clientComments`, `registrationdate`, `confirmPrivateInformation1`, `confirmPrivateInformation2`, `confirmPrivateInformation3`, `confirmPrivateInformation1Description`, `confirmPrivateInformation2Description`, `confirmPrivateInformation3Description`, `paystatus`, `clientTransferedOrder`, `adminEditedOrder`) VALUES
 (105, '20220105', 0, 'Demo Generation One Vol. 1', 'Simon Test 1', '1 - Early birds pass leader/follower ', '', '1 - Leader', '', '0 - None', 'Prague', '', '... ,- Kč', 'simon@test.eu', '+420777000333', 'CZ', 'Test Alfa 1', 'Datum: 19. 07. 2022 - 21:45:11', 'Yes, agreed with GDPR therms', 'Denied COVID-19 therms.', '', '', '', '', '', '', ''),
 (125, '20220125', 2, 'Demo Generation One Vol. 1', 'Simon Test 9', '2 - Early birds couple ', '', '1 - Leader', '0 - None', '', 'Prague', '', '1600,- CZK', 'simon@test.eu', '+420777000333', 'CZ', 'Alfa 1', 'Datum: 20. 07. 2022 - 12:42:55', 'Yes', 'Yes', '', 'I agree with storing the information I am providing you and I agree with your company GDP policy/therms GDP policy/therms', 'I am vaccinated against COVID-19 or I have valid COVID-19 test COVID-19 policy', '', '', '', ''),
 (128, '20220128', 2, 'Demo Generation One Vol. 1', 'Simon Test 2', '5 - Partypass leader/follower ', '', '1 - Leader', '0 - None', '', 'Prague', '', '500,- CZK', 'simon@test.eu', '+420777000333', 'CZ', 'Alfa 1', 'Datum: 20. 07. 2022 - 12:57:0', 'Yes', 'Yes', '', 'I agree with storing the information I am providing you and I agree with your company GDP policy/therms GDP policy/therms', 'I am vaccinated against COVID-19 or I have valid COVID-19 test COVID-19 policy', '', '3 - reminder sent', '', ''),
@@ -90,9 +90,9 @@ INSERT INTO `registrations` (`id`, `orderID`, `eventID`, `eventName`, `clientNam
 --
 
 --
--- Klíče pro tabulku `registrations`
+-- Klíče pro tabulku `registrations2`
 --
-ALTER TABLE `registrations`
+ALTER TABLE `registrations2`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -100,9 +100,9 @@ ALTER TABLE `registrations`
 --
 
 --
--- AUTO_INCREMENT pro tabulku `registrations`
+-- AUTO_INCREMENT pro tabulku `registrations2`
 --
-ALTER TABLE `registrations`
+ALTER TABLE `registrations2`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=149;
 COMMIT;
 
