@@ -53,12 +53,16 @@ else {
       </div>
     </div>
 
-    <?php
-
-    include("../shared/footer.php");
-
+    <?php 
     include("components/modal_editregistrations.php");
+    ?>
 
+    </div>
+    </div>
+    </div>
+
+    <?php
+    include("../shared/footer.php");
     ?>
 
     <script src="../shared/libs/jquery/jquery3.6.0.min.js"></script>
