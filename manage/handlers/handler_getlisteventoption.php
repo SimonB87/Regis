@@ -36,7 +36,8 @@
     if ($results-> num_rows > 0 ) {
       while ($row = $results-> fetch_assoc()) {
 
-        echo "<option value='" . $row["id"] . " - " . $row["eventName"] . "' >#" . $row["id"] . " - " . $row["eventStartDate"] . "- ".$row["eventName"]."</option>"; 
+        $selectedOption = (isset($selectedEvent) && ($selectedEvent == $row["id"] )) ? " selected " : "";
+        echo "<option " . $selectedOption . " value='#" . $row["id"] . "; " . $row["eventName"] . "' >#" . $row["id"] . " - " . $row["eventStartDate"] . "- ".$row["eventName"]."</option>"; 
       }
       echo "";
   }

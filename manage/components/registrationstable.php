@@ -1,6 +1,7 @@
       <div class="col-12 text-center">
-          <button type="button" class="btn btn-primary btn-lg margin-small padding-small">
-            <a id="download-registrations" href="downloadregistrations.php" class="text-center text-white padding-small margin-small weblink" target="_blank"> Download registrations </a>
+          <button type="button" class="btn btn-primary btn-lg margin-small padding-small ">
+            <?php $downloadLink = isset($selectedEvent) ? ("downloadregistrations.php?id=" . $selectedEvent) : "downloadregistrations.php"; ?>
+            <a id="download-registrations"  href=<?php echo $downloadLink ?> class="weblink text-center text-white padding-small margin-small" target="_blank"> Download registrations </a>
           </button>
       </div>
 
@@ -58,7 +59,14 @@
                     //printf("Current character set: %s\n", mysqli_character_set_name($con));//used only for testing
             }
 
-            $sql = "SELECT * FROM registrations ORDER BY id DESC";
+            $sql = "";
+            
+            if ((isset($selectedEvent)) && (strlen($selectedEvent)) > 0) {
+              $sql = "SELECT * FROM registrations WHERE eventID='$selectedEvent' ORDER BY id DESC";
+            } else {
+              $sql = "SELECT * FROM registrations ORDER BY id DESC";
+            }
+
 
             $results = $connector-> query($sql);
             //Error case

@@ -32,6 +32,7 @@ else {
 
     <?php
     include("handlers/handler_getformdata.php");
+    include("handlers/handler_getidfromurl.php");
     include("shared/navigation.php");
 
     ?>
@@ -78,6 +79,7 @@ else {
 
     <script src="../shared/assets/js/sendorderupdate.js" defer></script>
     <script src="../shared/assets/js/editregistrations.js" defer></script>
+    <script src="../shared/assets/js/selectoneevent.js" defer></script>
 
   </body>
 </html>

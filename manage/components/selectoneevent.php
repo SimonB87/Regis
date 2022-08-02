@@ -8,7 +8,7 @@
                 <option value="" > All events selected, choose one event ...</option>
 
                 <?php 
-                include("./handlers/handler_getlidtedeventsasoption.php");
+                include("./handlers/handler_getlisteventoption.php");
                 ?>
 
           </select>
@@ -25,10 +25,13 @@
       </div>
 
       <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-        <button type="button" class="btn btn-primary save-button full-height" onclick=";">
-            <span class='save-button-text margin-small-right'>Select event </span>
-            <span class='spinner-border text-info hidden' role='status'> </span>
-        </button>
+      <?php $downloadLink = isset($selectedEvent) ? ("downloadregistrations.php?id=" . $selectedEvent) : "downloadregistrations.php"; ?>
+        <a id="selectoneeventlink" href=<?php echo $downloadLink ?> class="weblink">
+          <button type="button" class="btn btn-primary save-button full-height">
+              <span class='save-button-text margin-small-right'>Select event </span>
+              <span class='spinner-border text-info hidden' role='status'> </span>
+          </button>
+        </a>
       </div>
 
     </div>

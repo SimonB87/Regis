@@ -1,6 +1,7 @@
 <?php
 session_start();
 require '../config/config.php';
+include("handlers/handler_getidfromurl.php");
 
 $username;
 $usernamelevel;
@@ -27,7 +28,7 @@ else {
     <title> Download Event registration | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
 
   </head>
-  <body style="background: #303030;">
+  <body>
 
 <?php
 
@@ -49,7 +50,13 @@ else {
             //printf("Current character set: %s\n", mysqli_character_set_name($con));//used only for testing
     }
 
-    $sql = "SELECT * FROM registrations ORDER BY id DESC";
+    $sql = "";
+            
+    if ((isset($selectedEvent)) && (strlen($selectedEvent)) > 0) {
+      $sql = "SELECT * FROM registrations WHERE eventID='$selectedEvent' ORDER BY id DESC";
+    } else {
+      $sql = "SELECT * FROM registrations ORDER BY id DESC";
+    }
 
     $results = $connector-> query($sql);
     //Error case
@@ -104,7 +111,7 @@ else {
 
           echo "<tr><td>" . $row["orderID"] . "</td><td>" . $row["eventName"] . "</td><td>" . $row["registrationdate"]  . "</td><td>" . $row["clientName"] ."</td><td>" . $row["passType"] . "</td> <td>" . $row["formPrice"] . "</td> <td>" . $row["clientEmail"]  . "</td> <td>" . $row["dancerKind"] . "</td><td>" . 
           $row["registrationType"] . "</td><td>" . $row["otherTicketOptions"] . "</td><td>" . $row["clientPhone"] . "</td><td>" . $row["clientCountry"] . "</td><td>" . $row["clientComments"] . "</td><td>" . $row["confirmPrivateInformation1Description"] . "</td><td>" .
-          $row["confirmPrivateInformation1"] . "</td><td>" . $row["confirmPrivateInformation2Description"] . "</td><td>" . $row["confirmPrivateInformation2"] . "</td><td>" . $row["confirmPrivateInformation3Description"] . "</td><td>" . $row["confirmPrivateInformation3"] . "</td><td>" . $paymentStatus . "</td><td>" . $row["id"] . "</td>" . "</tr>";
+          $row["confirmPrivateInformation1"] . "</td><td>" . $row["confirmPrivateInformation2Description"] . "</td><td>" . $row["confirmPrivateInformation2"] . "</td><td>" . $row["confirmPrivateInformation3Description"] . "</td><td>" . $row["confirmPrivateInformation3"] . "</td><td>" . $row["paystatus"] . "</td><td>" . $row["id"] . "</td>" . "</tr>";
 
       }
 
