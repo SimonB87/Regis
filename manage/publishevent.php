@@ -30,9 +30,9 @@ require 'handlers/userlogin.php';
     include("handlers/handler_publishevent_update.php");
     ?> 
 
-    <main>
+    <main class="bg-white">
 
-      <div class="container my-5 text-center">
+      <div class="container text-center">
 
         <?php
         include("handlers/getpathdata.php");
@@ -88,6 +88,7 @@ require 'handlers/userlogin.php';
     <script src='../shared/assets/js/emojionearea_set.js' defer></script>
     <script src='../shared/assets/js/seteventsetupcurrentpage.js' defer></script>
     <script src='../shared/assets/js/publisheventscheck.js' defer></script>
+    <!-- <script src='../shared/assets/js/setupfootable.js' defer></script> -->
 
   </body>
 </html>
