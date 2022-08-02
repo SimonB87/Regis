@@ -1,4 +1,4 @@
-<div class="col-12 text-center">
+<div class="col-12">
   <form  id="selectevent" class="needs-validation" method="post" action="" novalidate="">
     <div class="row full-width">
 
