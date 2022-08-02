@@ -39,7 +39,7 @@ else {
     <div class="bg-white padding-regular-topBottom">
       <div class="container">
         <div class="row">
-          <div class="col-12">  
+          <div class="col-12">
             <h1 class="text-center padding-small">Saved registrations</h1>
           </div>
 
