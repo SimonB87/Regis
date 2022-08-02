@@ -10,11 +10,15 @@ listEvents.addEventListener('change', (event) => {
   const currentSite = window.location.href;
   const currentSiteStringStart = currentSite.indexOf("?id=");
   const currentSiteString = currentSite.slice(0,(currentSiteStringStart+4));
+  let setHrefLink = currentSiteString + id;
 
-  const setHrefLink = currentSiteString + id;
-
-  selectEventLink.href = setHrefLink;
+  if (currentSiteStringStart == -1) {
+    selectEventLink.href = window.location.href + "?id=" + id;
+  } else {
+    selectEventLink.href = setHrefLink;
+  }
 
   downloadRegistrationsLink.href = "downloadregistrations.php" + "?id=" + id;
+  
   
 });
