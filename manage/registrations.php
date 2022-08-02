@@ -28,7 +28,7 @@ else {
     <title> Registrations management | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
 
   </head>
-  <body>
+  <body style="background: #303030;">
 
     <?php
     include("handlers/handler_getformdata.php");

@@ -20,7 +20,7 @@ include("handlers/login_handler.php");
     <title> Event registration | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
 
   </head>
-  <body style="background: #000;">
+  <body style="background: #303030;">
 
     <?php
 

@@ -17,7 +17,7 @@ require 'config/config.php';
     <title> Registration confirmation | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
 
   </head>
-  <body>
+  <body style="background: #303030;">
 
   <?php
   include("shared/navigation.php");

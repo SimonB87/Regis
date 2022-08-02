@@ -27,7 +27,7 @@ else {
     <title> Download Event registration | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
 
   </head>
-  <body>
+  <body style="background: #303030;">
 
 <?php
 

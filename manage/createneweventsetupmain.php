@@ -21,7 +21,7 @@ require 'handlers/userlogin.php';
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> <!-- source: https://www.w3schools.com/icons/fontawesome5_intro.asp -->
 
   </head>
-  <body>
+  <body style="background: #303030;">
 
     <?php
     include("shared/navigation.php");
