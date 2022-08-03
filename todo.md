@@ -35,8 +35,8 @@
 | Admin can choose from events table, which event is the current one. In this way all other events will become closed                          |   P:three:    |       :heavy_check_mark: |
 | Only allowed form elements appear in browser                                                                                                 |   P:three:    |       :heavy_check_mark: |
 | Google analytics                                                                                                                             |   P:three:    |                      :o: |
-| Payment confirmation - by status switch on every reservation - ? user receives just email? jpeg tickets? pdf ticket?                         |   P:three:    |                      :o: |
-| Admin can edit in setiings the contact email, link to main website, contact phone number                                                     |   P:three:    |                      :o: |
+| Payment confirmation - by status switch on every reservation - ? user receives just email?                                                   |   P:three:    | :hourglass_flowing_sand: |
+| Admin can edit in settings the contact email, link to main website, contact phone number                                                     |   P:three:    |                      :o: |
 | Case - registration transfer : Description 1 ...                                                                                             |   P:three:    |                      :o: |
 | Admin can get list of email adresses by type (current event registration - all/paid/waiting for payment/delayed)                             |   P:three:    |                      :o: |
 | Admin can put a admin-note to a registration - like transfered registration from last cancelled original event                               |   P:three:    |                      :o: |
@@ -77,14 +77,12 @@
 
 ## hlavní funkcionalita - dodělávky
 
-- ! FEATURE - v registracích dát možnost aby se zobrazovaly všechny - jenom vybrané akce (pro to použít url parameter ?eventId=01 )
 - BUGFIX - v úpravě description použít dynamické odkazy na obrázky emotikonů
 - !!! BUGFIX - ! opravit enabled sections - když je tam sekce 2 disabled a obsahuje uvnitř texty (situace rozpor create a edit ! )
-
-- !!! upravit FEATURE - počítat zvlášť leader / follower lístky v jednotlivých kategoriích - což znamená i zamezit tomu, aby na akci bylo víc chlapů/ženských
+- !!! Kontrlovat - FEATURE - počítat zvlášť leader / follower lístky v jednotlivých kategoriích - což znamená i zamezit tomu, aby na akci bylo víc chlapů/ženských
 - !!! FEATURE - když user objednává lístek tak se dynamicky dotázat do databíze zda je tento lístek k dispozici - potíže při prodeje posledního lístku ; pokud jsou lístky již vyprodané, tak si uživatel dostane na waiting list 
-- ! FEATURE - Administrace registrací - Upravit registraci, aby admin mohl změnit údaje o registraci - hlavně tedy info o tom, že platba byla realizována
-- FEATURE - Administrace registrací - umožnit automaticky připomínat, aby si uživatelé koupili lístek
+- Zakázkový bod - 10. - Pokud dojde ke změně uložené registrace , uloží se změna do databáze a odešle se notifikace pořadateli a notifikace účastníkovi.
+- Zakázkový bod - 11. - Pořadatel může zaslat automaticky upomínku pro zaplacení tím, že stiskne tlačítko „urgovat platbu“ v tabulce s registracemi. Následně se otevře nové okno, kde může upravit text odpovědi.
 
 ### Nice to have
 
