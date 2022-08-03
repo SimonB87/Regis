@@ -28,7 +28,7 @@ require 'handlers/userlogin.php';
     include("handlers/handler_formeventsetupmain_saveproduction.php");
     ?> 
 
-    <main>
+    <main class="bg-white">
 
     <?php
         include("shared/aside.php");
