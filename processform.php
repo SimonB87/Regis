@@ -80,8 +80,15 @@ require 'config/config.php';
                 <path d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z'></path>
               </svg>";
 
-  $paymentInstructions = "<div class='container'><div class='row'>".
-                        "<div class='padding-small'> <div class='alert alert-secondary col-lg-12 col-md-12 col-sm-12 padding-small' role='alert'><h4 class=''> THIS IS WEB TEST ENVIRONMENT ! </h4> <p> Registrations only for test purpose ! </p><span class='alert-hide'>".$exitIcon."</span></div></div>" . 
+  $testEnvironment = "<div class='padding-small'> 
+                        <div class='alert alert-secondary col-lg-12 col-md-12 col-sm-12 padding-small' role='alert'>
+                          <h4 class=''> THIS IS WEB TEST ENVIRONMENT ! </h4> 
+                          <p> Registrations only for test purpose ! </p>
+                          <span class='alert-hide'>".$exitIcon."</span>
+                        </div>
+                      </div>";
+
+  $paymentInstructions = "<div class='container'><div class='row'>". $testEnvironment . 
                         "<div class='col-lg-12 col-md-12 col-sm-12 padding-regular-topBottom'> <h2 class='text-center' style='color: green;'>You have registered for the event!</h2> <h3 class='text-center padding-small'>" ." Payment instructions : </h3> " . 
                         "<h4 class='padding-small'>". $htmlLocalIcon ." For Czech participants: </h4>" . 
                         "<p> Please send the price: <strong class='toCopy'>" . " " . $formPrice . "</strong> <br> with Variable symbol (VS/Variabilní symbol)<strong class='text-green toCopy' style=''> " 
