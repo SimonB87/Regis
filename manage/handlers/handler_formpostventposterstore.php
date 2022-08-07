@@ -88,7 +88,7 @@ if(isset($_POST["submit_poster"])) {
 
         $item = null;
         if ($query == true ) {
-          $item = "Poster to event - ID: \"" . $eventID . "\" was saved.";
+          $item = "Poster to event - ID: \"" . $eventID . "\" was saved. Refresh this page to see it.";
 
         } else {
           $item = "Poster to event - ID: \"" . $eventID . "\" failed to be saved.";

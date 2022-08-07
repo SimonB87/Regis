@@ -24,10 +24,11 @@ require 'handlers/userlogin.php';
   <body style="background: #303030;">
 
     <?php
-    include("handlers/handler_getformdata.php");
+
     include("shared/navigation.php");
     include("handlers/handler_formeventsetupmain_saveproduction.php");
     include("handlers/handler_eventpostersetdb.php");
+    include("handlers/handler_getformdata.php");
 
     $fileNameString = "";
     include("handlers/handler_formpostventposterstore.php");
@@ -86,7 +87,6 @@ require 'handlers/userlogin.php';
     <script src="../shared/assets/js/formvalidation.js" defer></script>
     <script src="../shared/assets/js/togglevisibility.js" defer></script>
     <script src="../shared/assets/js/hidenotification.js" defer></script>
-    <script src="../shared/assets/js/formsetionsedit.js" defer></script>
     <script src="../shared/assets/js/scriptsformevent.js" defer></script>
     <script src='../shared/assets/js/seteventsetupcurrentpage.js' defer></script>
     <script src='../shared/assets/js/scipt.js' defer></script>

@@ -46,7 +46,7 @@ if ((isset($_POST['clientName'])) or (isset($_POST['clientEmail']))) {
   
   
   if (!mysqli_set_charset($connector, "utf8")) {
-    printf("Error loading character set utf8: %s\n", mysqli_error($con));
+    printf("Error loading character set utf8: %s\n", mysqli_error($connector));
     exit();
     } else {
             //printf("Current character set: %s\n", mysqli_character_set_name($con));//used only for testing
@@ -55,7 +55,7 @@ if ((isset($_POST['clientName'])) or (isset($_POST['clientEmail']))) {
     if ($correctlyFilledForm){
   
       $sql = "INSERT INTO `registrations`( `eventID`,`eventName`,`passType`,`dancerKind`,`otherTicketOptions`,`location`,`formPrice`,`clientName`,`clientPhone`,`clientCountry`, `clientEmail` ,`clientComments`,`registrationdate`,`confirmPrivateInformation1Description`,`confirmPrivateInformation1`,`confirmPrivateInformation2Description`,`confirmPrivateInformation2`,`confirmPrivateInformation3Description`,`confirmPrivateInformation3`,`paystatus`,`clientTransferedOrder`,`adminEditedOrder`)
-      VALUES ('$eventID', '$eventName', '$passType ', '$dancerKind', '$otherTicketOptions', '$location', '$formPrice', '$clientName', '$clientPhone', '$clientCountry', '$clientEmail', '$clientComments', '$registrationdate', '$confirmPrivateInformation1Description', '$confirmPrivateInformation1', '$confirmPrivateInformation2Description', '$confirmPrivateInformation2', '$confirmPrivateInformation3Description', '$confirmPrivateInformation3', '1 - unpaid', 'Original Order - $registrationdate;', 'Original Order - $registrationdate;')";
+      VALUES (\"$eventID\", \"$eventName\", \"$passType \", \"$dancerKind\", \"$otherTicketOptions\", \"$location\", \"$formPrice\", \"$clientName\", \"$clientPhone\", \"$clientCountry\", \"$clientEmail\", \"$clientComments\", \"$registrationdate\", \"$confirmPrivateInformation1Description\", \"$confirmPrivateInformation1\", \"$confirmPrivateInformation2Description\", \"$confirmPrivateInformation2\", \"$confirmPrivateInformation3Description\", \"$confirmPrivateInformation3\", \"1 - unpaid\", \"Original Order - $registrationdate;\", \"Original Order - $registrationdate;\")";
       
       //Error case
       if (!$sql ) {
@@ -67,7 +67,7 @@ if ((isset($_POST['clientName'])) or (isset($_POST['clientEmail']))) {
         //debug echo json_encode(array("statusCode"=>200));
       } 
       else {
-        echo json_encode(array("sql - statusCode"=>418));
+        echo("Error description: " . $connector -> error);
       }
       
       $orderId = "string";

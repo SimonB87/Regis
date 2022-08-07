@@ -69,7 +69,7 @@ else {
       //debug echo json_encode(array("statusCode"=>200));
     } 
     else {
-      echo json_encode(array("sql - statusCode"=>418));
+      echo json_encode(array("Error description: " . $connector -> error));
     }
 
     $paymentStatus = "TODO - payment status";

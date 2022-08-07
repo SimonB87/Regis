@@ -71,13 +71,6 @@
     </div>
   </div>
 
-  <div class="col-12 padding-regular-topBottom bg-white">
-    <h2 class="padding-small text-center"> Registration </h2>
-      <?php
-      //include("registrationcards.php");
-      ?>
-    </div>
-  </div>
 
   <?php
   include("././manage/components/testenvnotification.php");
@@ -86,7 +79,16 @@
 </div>
 
 <!-- Section evet form -->
-<div class="row">
+<div class="row bg-light">
+
+<div class="col-12 padding-regular-topBottom">
+    <h2 class="padding-small text-center"> Registration </h2>
+      <?php
+      //include("registrationcards.php");
+      ?>
+    </div>
+  </div>
+
   <div class="col-12 padding-regular-topBottom bg-light">
     <div class="container">
       <div class="row">
