@@ -19,7 +19,16 @@ $error_array = [];
 
     <?php
     include("shared/navigation.php");
-    ?> 
+    ?>
+
+    <div class="container">
+      <div class="row">
+        <?php
+        include("manage/components/testenvnotification.php");
+        ?>
+      </div>
+    </div>
+  </div>
 
     <?php
     include("webform/handlers/handler_getformdata.php");
