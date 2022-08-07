@@ -1,3 +1,9 @@
+<?php
+session_start();
+require("config/config.php");
+$error_array = [];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,16 +22,16 @@
     ?> 
 
     <?php
-    include("webform/herosection.php");
+    include("webform/handlers/handler_getformdata.php");
+    include("webform/handlers/handler_getdescriptiondata.php");
+    include("webform/handlers/handler_getsoldtickets.php");
     ?> 
 
     <?php
-    include("webform/description.php");
+    include("webform/handlers/handler_calculatevisibility.php");
+    include("webform/components/previewform.php");
     ?> 
 
-    <?php
-    include("webform/registrationform.php");
-    ?> 
 
     <?php
     include("shared/contactsection.php");
