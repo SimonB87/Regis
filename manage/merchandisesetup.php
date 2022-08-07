@@ -90,6 +90,7 @@ require 'handlers/userlogin.php';
     <script src="../shared/assets/js/scriptsformevent.js" defer></script>
     <script src="../shared/assets/js/footablerun.js" defer></script>
     <script src='../shared/assets/js/seteventsetupcurrentpage.js' defer></script>
+    <script src='../shared/assets/js/scipt.js' defer></script>
 
   </body>
 </html>

@@ -89,6 +89,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
     <script src="../shared/assets/js/formvalidation.js"></script>
     <script src="../shared/assets/js/togglevisibility.js"></script>
     <script src="../shared/assets/js/hidenotification.js"></script>
+    <script src='../shared/assets/js/scipt.js' defer></script>
 
   </body>
 </html>

@@ -80,6 +80,7 @@ else {
     <script src="../shared/assets/js/sendorderupdate.js" defer></script>
     <script src="../shared/assets/js/editregistrations.js" defer></script>
     <script src="../shared/assets/js/selectoneevent.js" defer></script>
+    <script src='../shared/assets/js/scipt.js' defer></script>
 
   </body>
 </html>

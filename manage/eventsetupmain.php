@@ -33,7 +33,7 @@ require 'handlers/userlogin.php';
     <?php
         include("shared/aside.php");
      ?>
-      <div class="container my-5 text-center">
+      <div class="container text-center">
 
         <?php
         include("handlers/getpathdata.php");
@@ -66,7 +66,7 @@ require 'handlers/userlogin.php';
       </div>
     </main>
 
-    <div class="container text-center">
+    <div class="container text-center bg-white">
       <div class="row">
         <div class="col-12 my-2">
           <h2 class="display-5 fw-bold">Past events data</h2>
@@ -99,6 +99,7 @@ require 'handlers/userlogin.php';
     <script src="../shared/assets/js/footablerun.js" defer></script>
     <script src="../shared/assets/js/enablesections.js" defer></script>
     <script src='../shared/assets/js/seteventsetupcurrentpage.js' defer></script>
+    <script src='../shared/assets/js/scipt.js' defer></script>
 
   </body>
 </html>
