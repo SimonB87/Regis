@@ -32,9 +32,10 @@ function recalculatePrice() {
       const valueNotKnownA = String(otherTicketOptionsOutput) == "NaN";
 
       if (valueNotKnownA) {
-        const selectorA = ".competitionPriceBackup-option-" + String(competitionParticipation.selectedIndex);
-        const competitionBackUpValue = document.querySelector(selectorA).innerText;
-        otherTicketOptionsOutput = competitionBackUpValue;
+        // TODO - is this block obsolete?
+        //const selectorA = ".competitionPriceBackup-option-" + String(competitionParticipation.selectedIndex);
+       // const competitionBackUpValue = document.querySelector(selectorA).innerText;
+        // otherTicketOptionsOutput = competitionBackUpValue;
       }
 
       return otherTicketOptionsOutput;
