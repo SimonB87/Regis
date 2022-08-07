@@ -1,17 +1,35 @@
 <?php
 
 $earlybirdsSingleSold = 0;
+$earlybirdsSingleSold_leader = 0;
+$earlybirdsSingleSold_follower = 0; 
+
 $earlybirdsCoupleSold = 0;
+
+
 $regularSingleSold = 0;
+$regularSingleSold_leader = 0;
+$regularSingleSold_follower = 0;
+
 $regularCoupleSold = 0;
+
 $partySingleSold = 0;
+$partySingleSold_leader = 0; 
+$partySingleSold_follower = 0;
+
 $partyCoupleSold = 0;
 
-$spec1SingleSold = 0;
-$spec1CoupleSold = 0;
+$spec1SingleSold = 0; //TODO
+$spec1SingleSold_leader = 0; //TODO
+$spec1SingleSold_follower = 0; //TODO
 
-$spec2SingleSold = 0;
-$spec2CoupleSold = 0;
+$spec1CoupleSold = 0; //TODO
+
+$spec2SingleSold = 0; //TODO
+$spec2SingleSold_leader = 0; //TODO
+$spec2SingleSold_follower = 0; //TODO
+
+$spec2CoupleSold = 0; //TODO
 
 if (mysqli_connect_errno()) {
   printf("Connect failed: %s\n", mysqli_connect_error());
@@ -58,6 +76,66 @@ if (!mysqli_set_charset($connector, "utf8")) {
     echo "";
   } else {
     $earlybirdsSingleSold = 0;
+  }
+
+  /*
+  // fill : $earlybirdsSingleSold_leader;
+  */
+  $sql = "SELECT * FROM registrations WHERE ((eventID=$eventDataId) AND (passType='1 - Early birds leader/follower') AND ((dancerKind='1 - Leader') ))";
+
+  $results = $connector-> query($sql);
+  //Error case
+  if (!$sql ) {
+    echo "Failed! <br> Error sql: " . mysql_error() . " <br>";
+  }
+  
+  if (mysqli_query($connector, $sql)) {
+    //debug echo json_encode(array("statusCode"=>200));
+  } 
+  else {
+    echo json_encode(array("sql - statusCode"=>418));
+  }
+
+  //function to fatch the data
+  if ($results-> num_rows > 0 ) {
+    while ($row = $results-> fetch_assoc()) {
+
+      $earlybirdsSingleSold_leader = $results-> num_rows;
+
+    }
+    echo "";
+  } else {
+    $earlybirdsSingleSold_leader = 0;
+  }
+
+  /*
+  // fill : $earlybirdsSingleSold_follower;
+  */
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='1 - Early birds leader/follower') AND ( dancerKind='2 - Follower') )";
+
+  $results = $connector-> query($sql);
+  //Error case
+  if (!$sql ) {
+    echo "Failed! <br> Error sql: " . mysql_error() . " <br>";
+  }
+  
+  if (mysqli_query($connector, $sql)) {
+    //debug echo json_encode(array("statusCode"=>200));
+  } 
+  else {
+    echo json_encode(array("sql - statusCode"=>418));
+  }
+
+  //function to fatch the data
+  if ($results-> num_rows > 0 ) {
+    while ($row = $results-> fetch_assoc()) {
+
+      $earlybirdsSingleSold_follower = $results-> num_rows;
+
+    }
+    echo "";
+  } else {
+    $earlybirdsSingleSold_follower = 0;
   }
   
   /*
@@ -121,6 +199,68 @@ if (!mysqli_set_charset($connector, "utf8")) {
   }
 
   /*
+  // fill : $regularSingleSold_leader;
+  */
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='3 - Fullpass leader/follower') AND (dancerKind='1 - Leader') )";
+
+  $results = $connector-> query($sql);
+  //Error case
+  if (!$sql ) {
+    echo "Failed! <br> Error sql: " . mysql_error() . " <br>";
+  }
+  
+  if (mysqli_query($connector, $sql)) {
+    //debug echo json_encode(array("statusCode"=>200));
+  } 
+  else {
+    echo json_encode(array("sql - statusCode"=>418));
+  }
+
+  //function to fatch the data
+  if ($results-> num_rows > 0 ) {
+    while ($row = $results-> fetch_assoc()) {
+
+      $regularSingleSold_leader = $results-> num_rows;
+
+    }
+    echo "";
+  } else {
+    $regularSingleSold_leader = 0;
+  }
+
+  /*
+  // fill : $regularSingleSold_follower;
+  */
+
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='3 - Fullpass leader/follower') AND (dancerKind='2 - Follower') )";
+
+  $results = $connector-> query($sql);
+  //Error case
+  if (!$sql ) {
+    echo "Failed! <br> Error sql: " . mysql_error() . " <br>";
+  }
+  
+  if (mysqli_query($connector, $sql)) {
+    //debug echo json_encode(array("statusCode"=>200));
+  } 
+  else {
+    echo json_encode(array("sql - statusCode"=>418));
+  }
+
+  //function to fatch the data
+  if ($results-> num_rows > 0 ) {
+    while ($row = $results-> fetch_assoc()) {
+
+      $regularSingleSold_follower = $results-> num_rows;
+
+    }
+    echo "";
+  } else {
+    $regularSingleSold_follower = 0;
+  }
+
+
+  /*
   // fill : $regularCoupleSold;
   */
   $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='4 - Fullpass couple') AND (dancerKind='3 - Couple') )";
@@ -180,6 +320,69 @@ if (!mysqli_set_charset($connector, "utf8")) {
     $partySingleSold = 0;
   }
 
+
+  /*
+  // fill : $partySingleSold_leader;
+  */
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='5 - Partypass leader/follower') AND ( (dancerKind='1 - Leader') ))";
+
+  $results = $connector-> query($sql);
+  //Error case
+  if (!$sql ) {
+    echo "Failed! <br> Error sql: " . mysql_error() . " <br>";
+  }
+  
+  if (mysqli_query($connector, $sql)) {
+    //debug echo json_encode(array("statusCode"=>200));
+  } 
+  else {
+    echo json_encode(array("sql - statusCode"=>418));
+  }
+
+  //function to fatch the data
+  if ($results-> num_rows > 0 ) {
+    while ($row = $results-> fetch_assoc()) {
+
+      $partySingleSold_leader = $results-> num_rows;
+
+    }
+    echo "";
+  } else {
+    $partySingleSold_leader = 0;
+  }
+
+
+  /*
+  // fill : $partySingleSold_follower;
+  */
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='5 - Partypass leader/follower') AND ( (dancerKind='2 - Follower') ))";
+
+  $results = $connector-> query($sql);
+  //Error case
+  if (!$sql ) {
+    echo "Failed! <br> Error sql: " . mysql_error() . " <br>";
+  }
+  
+  if (mysqli_query($connector, $sql)) {
+    //debug echo json_encode(array("statusCode"=>200));
+  } 
+  else {
+    echo json_encode(array("sql - statusCode"=>418));
+  }
+
+  //function to fatch the data
+  if ($results-> num_rows > 0 ) {
+    while ($row = $results-> fetch_assoc()) {
+
+      $partySingleSold_follower = $results-> num_rows;
+
+    }
+    echo "";
+  } else {
+    $partySingleSold_follower = 0;
+  }
+
+
   /*
   // fill : $partyCoupleSold;
   */
@@ -212,5 +415,44 @@ if (!mysqli_set_charset($connector, "utf8")) {
 
   // Comment out DB close
   mysqli_close($connector);
+
+
+  /*
+  // TODO fill : $spec1SingleSold;
+  */
+
+  /*
+  // TODO fill : $spec1SingleSold_leader;
+  */
+
+  /*
+  // TODO fill : $spec1SingleSold_follower;
+  */
+
+
+  /*
+  // TODO fill : $spec1CoupleSold;
+  */
+
+
+
+
+
+  /*
+  // TODO fill : $spec2SingleSold;
+  */
+
+  /*
+  // TODO fill : $spec2SingleSold_leader;
+  */
+
+  /*
+  // TODO fill : $pec2SingleSold_follower;
+  */
+
+
+  /*
+  // TODO fill : $spec1CoupleSold;
+  */
 
 ?>
