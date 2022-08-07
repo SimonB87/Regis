@@ -71,11 +71,6 @@
     </div>
   </div>
 
-
-  <?php
-  include("././manage/components/testenvnotification.php");
-  ?>
-
 </div>
 
 <!-- Section evet form -->
