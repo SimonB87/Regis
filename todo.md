@@ -77,6 +77,8 @@
 
 ## hlavní funkcionalita - dodělávky
 
+- Finish setting up event object for gender parity : handler_calculatevisibility.php , handler_getsoldtickets.php
+
 - BUGFIX - v úpravě description použít dynamické odkazy na obrázky emotikonů
 - !!! BUGFIX - ! opravit enabled sections - když je tam sekce 2 disabled a obsahuje uvnitř texty (situace rozpor create a edit ! )
 - !!! Kontrolovat - FEATURE - počítat zvlášť leader / follower lístky v jednotlivých kategoriích - což znamená i zamezit tomu, aby na akci bylo víc chlapů/ženských
