@@ -74,20 +74,44 @@ $isVisible_passType_partyPassCouple = ( (strtolower($partyRegistrationEnabled) =
 
 $isVisible_passType_specialType1Single = ( (strtolower($eventDataSpecialType1RegistrationEnabled) === "yes" ) && ($spec1SingleSold <= $eventDataSpecialType1TicketAmountSingle) && ( $preview_date >= $eventDataSpecialType1RegistrationsStartDate ) && ( $preview_date <= $eventDataSpecialType1RegistrationsEndDate ) );
 
-// TODO - specialType1Single_leader
+if ( isset($eventDataMaintainSinglesParity) && ( strtolower($eventDataMaintainSinglesParity) === "yes" ) && (strtolower($eventDataSpecialType1RegistrationEnabled) === "yes" ) ) {
+  $ticketLimit = $eventDataSpecialType1TicketAmountSingle * 0.5;
+  echo "<script> eventStateSetUp.specialType1Singles = {}; </script>";
+  if ( $ticketLimit <= $spec1SingleSold_leader) {
+    echo "<script> eventStateSetUp.specialType1Singles.leader = false; </script>";
+  } elseif ($ticketLimit > $spec1SingleSold_leader) {
+    echo "<script> eventStateSetUp.specialType1Singles.leader = true; </script>";
+  }
 
+  if ( $ticketLimit <= $spec1SingleSold_follower ) {
+    echo "<script> eventStateSetUp.specialType1Singles.follower = false; </script>";
+  } elseif ($ticketLimit > $spec1SingleSold_follower) {
+    echo "<script> eventStateSetUp.specialType1Singles.follower = true; </script>";
+  }
 
-// TODO - specialType1Single_follower
+}
 
 
 $isVisible_passType_specialType1Couple = ( (strtolower($eventDataSpecialType1RegistrationEnabled) === "yes" ) && ($spec1CoupleSold <= $eventDataSpecialType1TicketAmountCouple) && ( $preview_date >= $eventDataSpecialType1RegistrationsStartDate ) && ( $preview_date <= $eventDataSpecialType1RegistrationsEndDate ) );
 
 $isVisible_passType_specialType2Single = ( (strtolower($eventDataSpecialType2RegistrationEnabled) === "yes" ) && ($spec2SingleSold <= $eventDataSpecialType2TicketAmountSingle) && ( $preview_date >= $eventDataSpecialType2RegistrationsStartDate ) && ( $preview_date <= $eventDataSpecialType2RegistrationsEndDate ) );
 
-// TODO - specialType2Single_leader
+if ( isset($eventDataMaintainSinglesParity) && ( strtolower($eventDataMaintainSinglesParity) === "yes" ) && (strtolower($eventDataSpecialType2RegistrationEnabled) === "yes" ) ) {
+  $ticketLimit = $eventDataSpecialType2TicketAmountSingle * 0.5;
+  echo "<script> eventStateSetUp.specialType2Singles = {}; </script>";
+  if ( $ticketLimit <= $spec2SingleSold_leader) {
+    echo "<script> eventStateSetUp.specialType2Singles.leader = false; </script>";
+  } elseif ($ticketLimit > $spec2SingleSold_leader) {
+    echo "<script> eventStateSetUp.specialType2Singles.leader = true; </script>";
+  }
 
+  if ( $ticketLimit <= $spec2SingleSold_follower ) {
+    echo "<script> eventStateSetUp.specialType2Singles.follower = false; </script>";
+  } elseif ($ticketLimit > $spec2SingleSold_follower ) {
+    echo "<script> eventStateSetUp.specialType2Singles.follower = true; </script>";
+  }
 
-// TODO - specialType2Single_follower
+}
 
 
 $isVisible_passType_specialType2Couple = ( (strtolower($eventDataSpecialType2RegistrationEnabled) === "yes" ) && ($spec2CoupleSold <= $eventDataSpecialType2TicketAmountCouple) && ( $preview_date >= $eventDataSpecialType2RegistrationsStartDate ) && ( $preview_date <= $eventDataSpecialType2RegistrationsEndDate ) );
