@@ -413,21 +413,99 @@ if (!mysqli_set_charset($connector, "utf8")) {
     $partyCoupleSold = 0;
   }
 
-  // Comment out DB close
-  mysqli_close($connector);
-
 
   /*
   // TODO fill : $spec1SingleSold;
   */
 
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='1 - special type1 single') AND ((dancerKind='1 - Leader') OR (dancerKind='2 - Follower')) )";
+
+  $results = $connector-> query($sql);
+  //Error case
+  if (!$sql ) {
+    echo "Failed! <br> Error sql: " . mysql_error() . " <br>";
+  }
+  
+  if (mysqli_query($connector, $sql)) {
+    //debug echo json_encode(array("statusCode"=>200));
+  } 
+  else {
+    echo json_encode(array("sql - statusCode"=>418));
+  }
+
+  //function to fatch the data
+  if ($results-> num_rows > 0 ) {
+    while ($row = $results-> fetch_assoc()) {
+
+      $spec1SingleSold = $results-> num_rows;
+
+    }
+    echo "";
+  } else {
+    $spec1SingleSold = 0;
+  }
+
   /*
   // TODO fill : $spec1SingleSold_leader;
   */
 
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='1 - special type1 single') AND (dancerKind='1 - Leader') )";
+
+  $results = $connector-> query($sql);
+  //Error case
+  if (!$sql ) {
+    echo "Failed! <br> Error sql: " . mysql_error() . " <br>";
+  }
+  
+  if (mysqli_query($connector, $sql)) {
+    //debug echo json_encode(array("statusCode"=>200));
+  } 
+  else {
+    echo json_encode(array("sql - statusCode"=>418));
+  }
+
+  //function to fatch the data
+  if ($results-> num_rows > 0 ) {
+    while ($row = $results-> fetch_assoc()) {
+
+      $spec1SingleSold_leader = $results-> num_rows;
+
+    }
+    echo "";
+  } else {
+    $spec1SingleSold_leader = 0;
+  }
+
   /*
   // TODO fill : $spec1SingleSold_follower;
   */
+
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='1 - special type1 single') AND (dancerKind='2 - Follower') )";
+
+  $results = $connector-> query($sql);
+  //Error case
+  if (!$sql ) {
+    echo "Failed! <br> Error sql: " . mysql_error() . " <br>";
+  }
+  
+  if (mysqli_query($connector, $sql)) {
+    //debug echo json_encode(array("statusCode"=>200));
+  } 
+  else {
+    echo json_encode(array("sql - statusCode"=>418));
+  }
+
+  //function to fatch the data
+  if ($results-> num_rows > 0 ) {
+    while ($row = $results-> fetch_assoc()) {
+
+      $spec1SingleSold_follower = $results-> num_rows;
+
+    }
+    echo "";
+  } else {
+    $spec1SingleSold_follower = 0;
+  }
 
 
   /*
@@ -435,24 +513,164 @@ if (!mysqli_set_charset($connector, "utf8")) {
   */
 
 
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='1 - special type1 couple') AND (dancerKind='3 - Couple') )";
 
+  $results = $connector-> query($sql);
+  //Error case
+  if (!$sql ) {
+    echo "Failed! <br> Error sql: " . mysql_error() . " <br>";
+  }
+  
+  if (mysqli_query($connector, $sql)) {
+    //debug echo json_encode(array("statusCode"=>200));
+  } 
+  else {
+    echo json_encode(array("sql - statusCode"=>418));
+  }
+
+  //function to fatch the data
+  if ($results-> num_rows > 0 ) {
+    while ($row = $results-> fetch_assoc()) {
+
+      $spec1CoupleSold = $results-> num_rows;
+
+    }
+    echo "";
+  } else {
+    $spec1CoupleSold = 0;
+  }
 
 
   /*
   // TODO fill : $spec2SingleSold;
   */
 
+
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='3 - special type2 single') AND ((dancerKind='1 - Leader') OR (dancerKind='2 - Follower')) )";
+
+  $results = $connector-> query($sql);
+  //Error case
+  if (!$sql ) {
+    echo "Failed! <br> Error sql: " . mysql_error() . " <br>";
+  }
+  
+  if (mysqli_query($connector, $sql)) {
+    //debug echo json_encode(array("statusCode"=>200));
+  } 
+  else {
+    echo json_encode(array("sql - statusCode"=>418));
+  }
+
+  //function to fatch the data
+  if ($results-> num_rows > 0 ) {
+    while ($row = $results-> fetch_assoc()) {
+
+      $spec2SingleSold = $results-> num_rows;
+
+    }
+    echo "";
+  } else {
+    $spec2SingleSold = 0;
+  }
+
   /*
   // TODO fill : $spec2SingleSold_leader;
   */
+
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='3 - special type2 single') AND ( dancerKind='1 - Leader') )";
+
+  $results = $connector-> query($sql);
+  //Error case
+  if (!$sql ) {
+    echo "Failed! <br> Error sql: " . mysql_error() . " <br>";
+  }
+  
+  if (mysqli_query($connector, $sql)) {
+    //debug echo json_encode(array("statusCode"=>200));
+  } 
+  else {
+    echo json_encode(array("sql - statusCode"=>418));
+  }
+
+  //function to fatch the data
+  if ($results-> num_rows > 0 ) {
+    while ($row = $results-> fetch_assoc()) {
+
+      $spec2SingleSold_leader = $results-> num_rows;
+
+    }
+    echo "";
+  } else {
+    $spec2SingleSold_leader = 0;
+  }
 
   /*
   // TODO fill : $pec2SingleSold_follower;
   */
 
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='3 - special type2 single') AND ( dancerKind='1 - Leader') )";
+
+  $results = $connector-> query($sql);
+  //Error case
+  if (!$sql ) {
+    echo "Failed! <br> Error sql: " . mysql_error() . " <br>";
+  }
+  
+  if (mysqli_query($connector, $sql)) {
+    //debug echo json_encode(array("statusCode"=>200));
+  } 
+  else {
+    echo json_encode(array("sql - statusCode"=>418));
+  }
+
+  //function to fatch the data
+  if ($results-> num_rows > 0 ) {
+    while ($row = $results-> fetch_assoc()) {
+
+      $pec2SingleSold_follower = $results-> num_rows;
+
+    }
+    echo "";
+  } else {
+    $pec2SingleSold_follower = 0;
+  }
+
 
   /*
-  // TODO fill : $spec1CoupleSold;
+  // TODO fill : $spec2CoupleSold;
   */
+
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='4 - special type2 couple') AND (dancerKind='3 - Couple') )";
+
+  $results = $connector-> query($sql);
+  //Error case
+  if (!$sql ) {
+    echo "Failed! <br> Error sql: " . mysql_error() . " <br>";
+  }
+  
+  if (mysqli_query($connector, $sql)) {
+    //debug echo json_encode(array("statusCode"=>200));
+  } 
+  else {
+    echo json_encode(array("sql - statusCode"=>418));
+  }
+
+  //function to fatch the data
+  if ($results-> num_rows > 0 ) {
+    while ($row = $results-> fetch_assoc()) {
+
+      $spec1CoupleSold = $results-> num_rows;
+
+    }
+    echo "";
+  } else {
+    $spec1CoupleSold = 0;
+  }
+
+
+
+
+  // Close DB Connection
+  mysqli_close($connector);
 
 ?>
