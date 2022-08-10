@@ -4,6 +4,7 @@ function enableRegistrationOptions(source, type) {
 
   let allowLeader = null;
   let allowFollower = null;
+  let allowCouple = null;
 
   if (type == "dancerKind") {
 
@@ -11,6 +12,7 @@ function enableRegistrationOptions(source, type) {
 
 
     if (sourceValue == "1 - Early birds pass leader/follower") {
+      allowCouple = false;
 
       if ( eventState.earlyBirdsSingles.leader == false ) {
         allowLeader = false;
@@ -21,6 +23,7 @@ function enableRegistrationOptions(source, type) {
       }
 
     } else if (sourceValue == "3 - Fullpass leader/follower") {
+      allowCouple = false;
 
       if ( eventState.regularSingles.leader == false ) {
         allowLeader = false;
@@ -31,6 +34,7 @@ function enableRegistrationOptions(source, type) {
       }
 
     } else if (sourceValue == "5 - Partypass leader/follower") {
+      allowCouple = false;
 
       if ( eventState.partySingles.leader == false ) {
         allowLeader = false;
@@ -47,6 +51,7 @@ function enableRegistrationOptions(source, type) {
     getValue ="otherTicketOptions";
 
     if (sourceValue == "1 - special type1 single") {
+      allowCouple = false;
 
       if ( eventState.specialType1Singles.leader == false ) {
         allowLeader = false;
@@ -57,6 +62,7 @@ function enableRegistrationOptions(source, type) {
       }
 
     } else if (sourceValue == "3 - special type2 single") {
+      allowCouple = false;
 
       if ( eventState.specialType2Singles.leader == false ) {
         allowLeader = false;
@@ -83,6 +89,9 @@ function enableRegistrationOptions(source, type) {
     }
     if ( allowFollower == false ) {
       document.querySelector("#" + type + " option:nth-child(3)").classList.add("hidden");
+    }
+    if ( allowCouple == false ) { 
+      document.querySelector("#" + type + " option:nth-child(4)").classList.add("hidden");
     }
   }
 
