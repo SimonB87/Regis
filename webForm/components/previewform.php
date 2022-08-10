@@ -107,7 +107,7 @@
                   </div>
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-sm-12 padding-small">
+                <div class="col-lg-6 col-md-6 col-sm-12 padding-small hidden">
                   <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="location" value="Prague" aria-label="readonly input example" readonly="" name="location" maxlength="250">
                     <label for="location">Location (hidden in browser)</label>
@@ -122,29 +122,8 @@
                 </div>
 
                 <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-                  <div class="mb-3 full-width full-height div-select">
-                    <select id="dancerKind" class="form-select" aria-label="Pass type" onchange="recalculatePrice();" required="" name="dancerKind">
-                      <option value="" selected="" aria-valuenow="0.0">Select dancer kind ...</option>
-                      <option value="1 - Leader" aria-valuenow="1.0">Leader</option>
-                      <option value="2 - Follower" aria-valuenow="1.0">Follower</option>
-                      <?php if ( $isVisible_dancerKind_couple ) { echo "<option value='3 - Couple' aria-valuenow='1.75'>Couple</option>"; } ?>
-
-                    </select>
-                    <div class="form-select-customLabel">
-                      Dancer kind
-                    </div>
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
-                    <div class="invalid-feedback">
-                      Please select some valid option.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
                   <div id="passType--parent" class="mb-3 full-width full-height div-select">
-                    <select id="passType" class="form-select" aria-label="Pass type" required="" onchange="recalculatePrice();" name="passType">
+                    <select id="passType" class="form-select" aria-label="Pass type" required="" onchange="recalculatePrice(); enableRegistrationOptions('passType','dancerKind');" name="passType">
                       <option value="" selected="">Select pass type ... </option>
                       <?php if ( $isVisible_passType_earlyBirdsTicketSingle ) { echo "<option value='1 - Early birds pass leader/follower" . "' aria-valuenow='" . $eventDataEarlyBirdsTicketPriceSingle . "'>Early birds pass leader/follower - " . $eventDataEarlyBirdsTicketPriceSingle . "CZK</option>"; } ?>
                       <?php if ( $isVisible_passType_earlyBirdsTicketCouple ) { echo "<option value='2 - Early birds couple" . "' aria-valuenow='" . $eventDataEarlyBirdsTicketPriceCouple . "'>Early birds couple - " . $eventDataEarlyBirdsTicketPriceCouple. "CZK</option>"; } ?>
@@ -176,12 +155,33 @@
                   </div>
                 </div>
 
+                <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+                  <div class="mb-3 full-width full-height div-select">
+                    <select id="dancerKind" class="form-select" aria-label="Pass type" onchange="recalculatePrice();" required="" name="dancerKind" disabled>
+                      <option value="" selected="" aria-valuenow="0.0">Select dancer kind ...</option>
+                      <option value="1 - Leader" aria-valuenow="1.0">Leader</option>
+                      <option value="2 - Follower" aria-valuenow="1.0">Follower</option>
+                      <?php if ( $isVisible_dancerKind_couple ) { echo "<option value='3 - Couple' aria-valuenow='1.75'>Couple</option>"; } ?>
+
+                    </select>
+                    <div class="form-select-customLabel">
+                      Dancer kind
+                    </div>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please select some valid option.
+                    </div>
+                  </div>
+                </div>
+
                 <div <?php if    ((strtolower ($eventDataSpecialType1RegistrationEnabled) === "yes") or (strtolower ($eventDataSpecialType2RegistrationEnabled) === "yes") )
                                 { echo "class='col-lg-6 col-md-12 col-sm-12 padding-small '" ; } 
                           else  { echo "class='col-lg-6 col-md-12 col-sm-12 padding-small hidden '" ; } ?> >
                   <div class="mb-3 full-width full-height div-select">
-                    <select id="otherTicketOptions" class="form-select" aria-label="Pass type" required="" onchange="recalculatePrice();" name="otherTicketOptions">
-                      <option value="" selected=""> Other tickets options ...</option>
+                    <select id="otherTicketOptions" class="form-select" aria-label="Pass type" required="" onchange="recalculatePrice(); enableRegistrationOptions('otherTicketOptions','otherDancerKind');" name="otherTicketOptions">
+                      <option value="" selected=""> Select other tickets options ...</option>
                       <?php 
                       if ($isVisible_passType_specialType1Single) { echo "<option value='1 - special type1 single' aria-valuenow='" . $eventDataSpecialType1TicketPriceSingle . "'>" . $eventDataSpecialType1RegistrationName . " Single - " .$eventDataSpecialType1TicketPriceSingle . ",- Kč</option>"; }
                       if ($isVisible_passType_specialType1Couple) { echo "<option value='2 - special type1 couple' aria-valuenow='" . $eventDataSpecialType1TicketPriceCouple . "'>" . $eventDataSpecialType1RegistrationName . " Couple - " .$eventDataSpecialType1TicketPriceCouple . ",- Kč</option>"; }
@@ -210,6 +210,28 @@
                     </div>
                   </div>
                 </div>
+
+                <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+                  <div class="mb-3 full-width full-height div-select">
+                    <select id="otherDancerKind" class="form-select" aria-label="Pass type" onchange="recalculatePrice();" required="" name="otherDancerKind" disabled>
+                      <option value="" selected="" aria-valuenow="0.0">Select other ticket dancer kind ...</option>
+                      <option value="1 - Leader" aria-valuenow="1.0">Leader</option>
+                      <option value="2 - Follower" aria-valuenow="1.0">Follower</option>
+                      <?php if ( $isVisible_dancerKind_couple ) { echo "<option value='3 - Couple' aria-valuenow='1.75'>Couple</option>"; } ?>
+
+                    </select>
+                    <div class="form-select-customLabel">
+                      Other dancer kind
+                    </div>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please select some valid option.
+                    </div>
+                  </div>
+                </div>
+
 
                 <div class="col-lg-12 col-md-12 col-sm-12  padding-small">
                   <div class="form-floating mb-3">
