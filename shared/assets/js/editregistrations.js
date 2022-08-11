@@ -8,6 +8,7 @@ function editRegistration(orderNum) {
   const orderPriceVal = document.querySelector(orderRowSelector + " td[title=price]").innerText;
   const orderPassTypeVal = document.querySelector(orderRowSelector + " td[title=passType]").innerText;
   const orderOtherTicketOptionsVal = document.querySelector(orderRowSelector + " td[title=otherTicketOptions]").innerText;
+  const orderOtherDancerKindVal = document.querySelector(orderRowSelector + " td[title=otherTicketOptions]").innerText;
   const orderClientNameVal = document.querySelector(orderRowSelector + " td[title=clientName]").innerText;
   const orderClientEmailVal = document.querySelector(orderRowSelector + " td[title=clientEmail]").innerText;
   const orderClientPhoneVal = document.querySelector(orderRowSelector + " td[title=clientPhone]").innerText;
@@ -16,6 +17,10 @@ function editRegistration(orderNum) {
 
   if (orderDancerKindVal.length > 1) {
     selectOptions(orderDancerKindVal, "dancerKind");
+  }
+
+  if (orderOtherDancerKindVal.length > 1) {
+    selectOptions(orderOtherDancerKindVal, "otherDancerKind");
   }
 
   if (orderPassTypeVal.length > 1) {

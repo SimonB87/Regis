@@ -57,6 +57,27 @@
               </div>
             </div>
 
+            <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+              <div class=" full-width full-height div-select">
+                <select id="otherDancerKind" class="form-select" aria-label="Pass type" required="" name="otherDancerKind">
+                  <option value="" >Select other dancer kind ...</option>
+                  <option value="1 - Leader" >Leader</option>
+                  <option value="2 - Follower" >Follower</option>
+                  <option value='3 - Couple' >Couple</option>
+
+                </select>
+                <div class="form-select-customLabel">
+                  Other dancer kind
+                </div>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please select some valid option.
+                </div>
+              </div>
+            </div>
+
             <div class='col-lg-6 col-md-12 col-sm-12 padding-small '>
               <div class=" full-width full-height div-select">
                 <select id="otherTicketOptions" class="form-select" aria-label="Pass type" required="" name="otherTicketOptions">

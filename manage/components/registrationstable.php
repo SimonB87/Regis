@@ -20,6 +20,7 @@
             <th class="footable-sortable" data-breakpoints="xs sm md"> Dancer kind </th> 
             <th class="footable-sortable" data-breakpoints="xs sm md lg"> Registration type </th> 
             <th class="footable-sortable" data-breakpoints="xs sm md lg"> Other ticket options </th> 
+            <th class="footable-sortable" data-breakpoints="xs sm md lg"> Other dancer kind </th> 
             <th class="footable-sortable" data-breakpoints="xs sm md"> Client phone </th> 
             <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client country </th> 
             <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client comments </th> 
@@ -116,11 +117,16 @@
                     <div class='update-pay--resultnotice'> </div>
                   </div>";
 
+                  $otherTicketOptionName = ( in_array($row["otherTicketOptions"], ['1 - special type1 single','2 - special type1 couple'], true ) ) ? 
+                                          ( " aria-label=\"" . $eventDataSpecialType1RegistrationName . "\"" )
+                                          : ( in_array($row["otherTicketOptions"], ['3 - special type2 single','4 - special type2 couple'], true ) ) ? ( " aria-label=\"" . $eventDataSpecialType2RegistrationName . "\"" ) : "aria-label=\"\"";
+
                   echo "<tr class='orderId" . $row["orderID"] . "'><td>" . $row["orderID"] . "</td><td>" . $row["eventName"] . "</td><td>" . 
-                        $row["registrationdate"]  . "</td><td title='clientName'>" . $row["clientName"] ."</td><td title='passType'>" . $row["passType"] . "</td> <td title='price'>" . $row["formPrice"] . "</td> <td title='clientEmail' >" . $row["clientEmail"]  . "</td> <td title='dancerKind'>" . $row["dancerKind"] . "</td><td>" . 
-                        $row["registrationType"] . "</td><td title='otherTicketOptions' >" . $row["otherTicketOptions"] . "</td><td title='clientPhone'>" . $row["clientPhone"] . "</td><td title='clientCountry' >" . $row["clientCountry"] . "</td><td title='clientComments'>" . 
-                        $row["clientComments"] . "</td><td>" . $row["confirmPrivateInformation1Description"] . "</td><td>" .
-                        $row["confirmPrivateInformation1"] . "</td><td>" . $row["confirmPrivateInformation2Description"] . "</td><td>" . $row["confirmPrivateInformation2"] . "</td><td>" . $row["confirmPrivateInformation3Description"] . "</td><td>" . $row["confirmPrivateInformation3"] . "</td><td>" . $paymentStatus . "</td><td>". $row["clientTransferedOrder"] . "</td><td>" . $row["adminEditedOrder"] . "</td><td>" . $row["id"] . "</td><td><div><span class='glyphicon' onclick='editRegistration(\"". $row["orderID"] ."\");' data-bs-toggle='modal' data-bs-target='#exampleModal'>&#x270f;</span></div><td/>" . "</tr>";
+                        $row["registrationdate"]  . "</td><td title='clientName'>" . $row["clientName"] ."</td><td title='passType'>" . $row["passType"] . "</td> <td title='price'>" . $row["formPrice"] . "</td> <td title='clientEmail' >" . $row["clientEmail"]  . "</td> <td title='dancerKind'>" . 
+                        $row["dancerKind"] . "</td><td>" . $row["registrationType"] . "</td><td title='otherTicketOptions' " . $otherTicketOptionName . ">" . $row["otherTicketOptions"] . "</td><td title='otherDancerKind' >" . $row["otherDancerKind"] . "</td><td title='clientPhone'>" . 
+                        $row["clientPhone"] . "</td><td title='clientCountry' >" . $row["clientCountry"] . "</td><td title='clientComments'>" . $row["clientComments"] . "</td><td>" . $row["confirmPrivateInformation1Description"] . "</td><td>" . $row["confirmPrivateInformation1"] . "</td><td>" . 
+                        $row["confirmPrivateInformation2Description"] . "</td><td>" . $row["confirmPrivateInformation2"] . "</td><td>" . $row["confirmPrivateInformation3Description"] . "</td><td>" . $row["confirmPrivateInformation3"] . "</td><td>" . $paymentStatus . "</td><td>". 
+                        $row["clientTransferedOrder"] . "</td><td>" . $row["adminEditedOrder"] . "</td><td>" . $row["id"] . "</td><td><div><span class='glyphicon' onclick='editRegistration(\"". $row["orderID"] ."\");' data-bs-toggle='modal' data-bs-target='#exampleModal'>&#x270f;</span></div><td/>" . "</tr>";
               }
               echo "";
           }
