@@ -77,7 +77,12 @@
 
 ## hlavní funkcionalita - dodělávky
 
-- Finish setting up event object for gender parity : handler_calculatevisibility.php , handler_getsoldtickets.php
+* put other dancer kind
+	* to the window of process registration
+	* to the registration confirmation mail for admin
+	* to the registration confirmation mail for client
+	* to the process of AJAX editing the field of "other dancer kind"
+	* zviditelnit other dancer kind v tabulce přes element "aria-label"
 
 - BUGFIX - v úpravě description použít dynamické odkazy na obrázky emotikonů
 - !!! BUGFIX - ! opravit enabled sections - když je tam sekce 2 disabled a obsahuje uvnitř texty (situace rozpor create a edit ! )
