@@ -18,6 +18,7 @@ if ((isset($_POST['clientName'])) or (isset($_POST['clientEmail']))) {
   $clientCountry = mysqli_real_escape_string($connector, $_POST['clientCountry']);
   $clientComments = mysqli_real_escape_string($connector, $_POST['clientComments']);
   $registrationdate = mysqli_real_escape_string($connector, $_POST['registrationdate']);
+  $otherDancerKind = mysqli_real_escape_string($connector, $_POST['otherDancerKind']);
 
   $confirmPrivateInformation1 = isset($_POST['confirmPrivateInformation1']) ? mysqli_real_escape_string($connector, $_POST['confirmPrivateInformation1']) : null;
   $confirmPrivateInformation2 = isset($_POST['confirmPrivateInformation2']) ? mysqli_real_escape_string($connector, $_POST['confirmPrivateInformation2']) : null;
@@ -54,8 +55,8 @@ if ((isset($_POST['clientName'])) or (isset($_POST['clientEmail']))) {
   
     if ($correctlyFilledForm){
   
-      $sql = "INSERT INTO `registrations`( `eventID`,`eventName`,`passType`,`dancerKind`,`otherTicketOptions`,`location`,`formPrice`,`clientName`,`clientPhone`,`clientCountry`, `clientEmail` ,`clientComments`,`registrationdate`,`confirmPrivateInformation1Description`,`confirmPrivateInformation1`,`confirmPrivateInformation2Description`,`confirmPrivateInformation2`,`confirmPrivateInformation3Description`,`confirmPrivateInformation3`,`paystatus`,`clientTransferedOrder`,`adminEditedOrder`)
-      VALUES (\"$eventID\", \"$eventName\", \"$passType \", \"$dancerKind\", \"$otherTicketOptions\", \"$location\", \"$formPrice\", \"$clientName\", \"$clientPhone\", \"$clientCountry\", \"$clientEmail\", \"$clientComments\", \"$registrationdate\", \"$confirmPrivateInformation1Description\", \"$confirmPrivateInformation1\", \"$confirmPrivateInformation2Description\", \"$confirmPrivateInformation2\", \"$confirmPrivateInformation3Description\", \"$confirmPrivateInformation3\", \"1 - unpaid\", \"Original Order - $registrationdate;\", \"Original Order - $registrationdate;\")";
+      $sql = "INSERT INTO `registrations`( `eventID`,`eventName`,`passType`,`dancerKind`,`otherTicketOptions`,`otherDancerKind`,`location`,`formPrice`,`clientName`,`clientPhone`,`clientCountry`, `clientEmail` ,`clientComments`,`registrationdate`,`confirmPrivateInformation1Description`,`confirmPrivateInformation1`,`confirmPrivateInformation2Description`,`confirmPrivateInformation2`,`confirmPrivateInformation3Description`,`confirmPrivateInformation3`,`paystatus`,`clientTransferedOrder`,`adminEditedOrder`)
+      VALUES (\"$eventID\", \"$eventName\", \"$passType \", \"$dancerKind\", \"$otherTicketOptions\", \"$otherDancerKind\", \"$location\", \"$formPrice\", \"$clientName\", \"$clientPhone\", \"$clientCountry\", \"$clientEmail\", \"$clientComments\", \"$registrationdate\", \"$confirmPrivateInformation1Description\", \"$confirmPrivateInformation1\", \"$confirmPrivateInformation2Description\", \"$confirmPrivateInformation2\", \"$confirmPrivateInformation3Description\", \"$confirmPrivateInformation3\", \"1 - unpaid\", \"Original Order - $registrationdate;\", \"Original Order - $registrationdate;\")";
       
       //Error case
       if (!$sql ) {
