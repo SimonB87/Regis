@@ -95,29 +95,29 @@
 
               <div class="col-lg-6 col-md-6 col-sm-12 padding-small hidden">
                   <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="eventID" aria-label="readonly Registration type" readonly="" name="eventID" aria-placeholder="1.0" maxlength="250" <?php if ($eventDataId) { echo "value='" . $eventDataId . "'"; } ?> >
-                    <label for="eventID">Event ID (hidden in browser)</label>
+                    <input type="text" class="form-control" id="eventID" aria-label="readonly Event ID" readonly="" name="eventID" aria-placeholder="1.0" maxlength="250" <?php if ($eventDataId) { echo "value='" . $eventDataId . "'"; } ?> >
+                    <label for="eventID">Event ID </label>
                   </div>
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-12 padding-small hidden">
                   <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="eventName" aria-label="readonly Registration type" readonly="" name="eventName" aria-placeholder="1.0" maxlength="250"  <?php if ($eventDataEventName) { echo "value='" . $eventDataEventName . "'"; } ?> >
-                    <label for="eventName">Event name (hidden in browser)</label>
+                    <input type="text" class="form-control" id="eventName" aria-label="readonly Event name" readonly="" name="eventName" aria-placeholder="1.0" maxlength="250"  <?php if ($eventDataEventName) { echo "value='" . $eventDataEventName . "'"; } ?> >
+                    <label for="eventName">Event name </label>
                   </div>
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-12 padding-small hidden">
                   <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="location" value="Prague" aria-label="readonly input example" readonly="" name="location" maxlength="250">
-                    <label for="location">Location (hidden in browser)</label>
+                    <label for="location">Location </label>
                   </div>
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-12 padding-small hidden">
                   <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="registrationdate" value="" aria-label="readonly Registration date" readonly="" name="registrationdate" maxlength="250">
-                    <label for="registrationdate">Registration date (hidden in browser)</label>
+                    <label for="registrationdate">Registration date </label>
                   </div>
                 </div>
 

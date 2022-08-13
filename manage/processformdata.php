@@ -3,13 +3,11 @@ include("handlers/handler_getconfirmprivateinfodescription.php");
 
 if ((isset($_POST['clientName'])) or (isset($_POST['clientEmail']))) {
 
-  $eventID = mysqli_real_escape_string($connector, $_POST['eventID']); //* ** */
+  $eventID = mysqli_real_escape_string($connector, $_POST['eventID']); 
   $eventName = mysqli_real_escape_string($connector, $_POST['eventName']);
   $passType = mysqli_real_escape_string($connector, $_POST['passType']);
-  //$registrationType = mysqli_real_escape_string($connector, $_POST['registrationType']);
   $dancerKind = mysqli_real_escape_string($connector, $_POST['dancerKind']);
-  $otherTicketOptions = mysqli_real_escape_string($connector, $_POST['otherTicketOptions']); /* ** */
-  //$competitionParticipation = mysqli_real_escape_string($connector, $_POST['competitionParticipation']);
+  $otherTicketOptions = mysqli_real_escape_string($connector, $_POST['otherTicketOptions']);
   $location = mysqli_real_escape_string($connector, $_POST['location']);
   $formPrice = mysqli_real_escape_string($connector, $_POST['formPrice']);
   $clientName = mysqli_real_escape_string($connector, $_POST['clientName']);

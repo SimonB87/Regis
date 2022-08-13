@@ -17,7 +17,7 @@
             <th class="footable-sortable" data-breakpoints="xs sm"> Price </th>
             <th class="footable-sortable" data-breakpoints="xs sm md"> Pass type </th>
             <th class="footable-sortable" data-breakpoints="xs sm md"> Dancer kind </th> 
-            <th class="footable-sortable" data-breakpoints="xs sm md lg"> Registration type </th> 
+
             <th class="footable-sortable" data-breakpoints="xs sm md "> Other ticket option </th> 
             <th class="footable-sortable" data-breakpoints="xs sm md "> Other ticket option dancer kind </th> 
             <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client email </th>
@@ -130,7 +130,6 @@
                         "<td title='price'>" . $row["formPrice"] . "</td>" .
                         "<td title='passType'>" . $row["passType"] . "</td>" .
                         "<td title='dancerKind'>" . $row["dancerKind"] . "</td>" .
-                        "<td>" . $row["registrationType"] . "</td>" .
                         "<td title='otherTicketOptions' " . $otherTicketOptionName . ">" . $row["otherTicketOptions"] . "</td>" .
                         "<td title='otherDancerKind' >" . $row["otherDancerKind"] . "</td>" .
                         "<td title='clientEmail' >" . $row["clientEmail"] . "</td>" .
