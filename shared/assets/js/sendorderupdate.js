@@ -68,6 +68,7 @@ function updateOrderData() {
   const orderId = document.getElementById("orderId").innerText;
   const passType = document.getElementById("passType").value;
   const otherTicketOptions = document.getElementById("otherTicketOptions").value;
+  const otherDancerKind = document.getElementById("otherDancerKind").value;
   const clientName = document.getElementById("clientName").value;
   const clientEmail = document.getElementById("clientEmail").value;
   const clientPhone = document.getElementById("clientPhone").value;
@@ -85,6 +86,7 @@ function updateOrderData() {
       dancerkind: dancerKindVal,
       passType: passType,
       otherTicketOptions: otherTicketOptions,
+      otherDancerKind: otherDancerKind,
       clientName: clientName,
       clientEmail: clientEmail,
       clientPhone: clientPhone,

@@ -25,6 +25,7 @@
     $dancerkind = (isset($_POST["dancerkind"])) ? mysqli_real_escape_string($connector, $_POST["dancerkind"]) : null;
     $passType = (isset($_POST["passType"])) ? mysqli_real_escape_string($connector, $_POST["passType"]) : null;
     $otherTicketOptions = (isset($_POST["otherTicketOptions"])) ? mysqli_real_escape_string($connector, $_POST["otherTicketOptions"]) : null;
+    $otherDancerKind = (isset($_POST["otherDancerKind"])) ? mysqli_real_escape_string($connector, $_POST["otherDancerKind"]) : null;
     $clientName = (isset($_POST["clientName"])) ? mysqli_real_escape_string($connector, $_POST["clientName"]) : null;
     $clientEmail = (isset($_POST["clientEmail"])) ? mysqli_real_escape_string($connector, $_POST["clientEmail"]) : null;
     $clientPhone = (isset($_POST["clientPhone"])) ? mysqli_real_escape_string($connector, $_POST["clientPhone"]) : null;
@@ -45,7 +46,7 @@
     if($messageName == "updatepayment") {
       $sql = "UPDATE `registrations` SET `paystatus`='$paymentoption', `adminEditedOrder`='$currentAdminEditedOrder edited paystatus $date;' WHERE orderID='$targetOrderId'";
     } else if ($messageName == "updateorder") {
-      $sql = "UPDATE `registrations` SET dancerKind = '$dancerkind', passType = '$passType', otherTicketOptions = '$otherTicketOptions', clientName = '$clientName', clientEmail = '$clientEmail', clientPhone = '$clientPhone', clientCountry = '$clientCountry', clientComments = '$clientComments', `adminEditedOrder`='$currentAdminEditedOrder edited order data $date;' WHERE orderID='$targetOrderId'";
+      $sql = "UPDATE `registrations` SET dancerKind = '$dancerkind', passType = '$passType', otherTicketOptions = '$otherTicketOptions', otherDancerKind = '$otherDancerKind', clientName = '$clientName', clientEmail = '$clientEmail', clientPhone = '$clientPhone', clientCountry = '$clientCountry', clientComments = '$clientComments', `adminEditedOrder`='$currentAdminEditedOrder edited order data $date;' WHERE orderID='$targetOrderId'";
     }
 
     // Perform a query, check for error
