@@ -77,6 +77,8 @@
 
 ## hlavní funkcionalita - dodělávky
 
+? co to je za údaj "Registration type" - eventuelně vyhodit
+
 * put other dancer kind
 	* to the window of process registration
 	* to the registration confirmation mail for admin
