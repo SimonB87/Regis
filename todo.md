@@ -77,15 +77,12 @@
 
 ## hlavní funkcionalita - dodělávky
 
-? CHECK - co to je za údaj "Registration type" - eventuelně vyhodit
-! CHECK - když je vyplnta parita leader/follower tak prostě dojdou lístky až se polední vyprodá a je jednokolik lidí tam bude
+* special option ticket name
+	* to the process form window - add special option ticket name
+	* to the registration confirmation mail for admin - add special option ticket name
+	* to the registration confirmation mail for client- add special option ticket name
 
-* put other dancer kind
-	* to the window of process registration
-	* to the registration confirmation mail for admin
-	* to the registration confirmation mail for client
-	* to the process of AJAX editing the field of "other dancer kind"
-	* zviditelnit other dancer kind v tabulce přes element "aria-label"
+	* zviditelnit other option ticket name v tabulce přes element "aria-label"
 
 - BUGFIX - v úpravě description použít dynamické odkazy na obrázky emotikonů
 - !!! BUGFIX - ! opravit enabled sections - když je tam sekce 2 disabled a obsahuje uvnitř texty (situace rozpor create a edit ! )
