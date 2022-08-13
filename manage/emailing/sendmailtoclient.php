@@ -150,7 +150,7 @@ if ($correctlyFilledForm) {
                         <p>Bank address: <strong>Fio banka, a.s. Millennium Plaza, V Celnici 10, Prague 1, ZIP Code : 117 21. Czech Republic</strong></p>
                         <p>Account holder name: <strong>Mauritius The Greatest</strong></p>
                         <p>Price : <strong>" . $storedFormPrice . "</strong></p>
-                        <p>Notice for receiver: <strong>\"Order ID:" . $storedOrderID . ", Client name: " . $storedEventName . " , Client email: " . $storedClientEmail. "\"</strong></p>
+                        <p>Notice for receiver: <strong>\"Order ID:" . $storedOrderID . ", Client name: " . $storedClientName . " , Client email: " . $storedClientEmail. "\"</strong></p>
                       </td>
                     </tr>
                     <tr>
@@ -179,10 +179,16 @@ $message_summary =  "<!-- PARAGRAPH -->
                           font-family: sans-serif;' class='paragraph'>
                           <p>Order ID: <strong>" . $storedOrderID . "</strong></p>
                           <p>Event name : <strong>" . $storedEventName . "</strong></p>
-                          <p>Pass type : <strong>" . $storedPassType . "</strong></p>
+
                           <p>Price : <strong>" . $storedFormPrice . "</strong></p>
-                          <p>Event location : <strong>" . $storedLocation . "</strong></p>
+
+                          <p>Pass type : <strong>" . $storedPassType . "</strong></p>
                           <p>Dancer kind : <strong>" . $storedDancerKind . "</strong></p>
+
+                          <p>Other ticket option : <strong>" . $storedOtherTicketOptions . "</strong></p>
+                          <p>Other ticket option dancer kind  : <strong>" . $storedOtherDancerKind . "</strong></p>
+
+                          <p>Event location : <strong>" . $storedLocation . "</strong></p>
                           <p></p>
                           <p>Buyer name : <strong>" . $storedClientName . "</strong></p>
                           <p>Buyer email : <strong>" . $storedClientEmail . "</strong></p>
