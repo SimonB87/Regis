@@ -3,12 +3,13 @@ function editRegistration(orderNum) {
   targetOrderIdHeading.innerText = orderNum;
 
   const orderRowSelector = "#orders tr.orderId" + orderNum;
+  const orderRowSelectorDetail = ".footable-details tr.orderId" + orderNum;
 
   const orderDancerKindVal = document.querySelector(orderRowSelector + " td[title=dancerKind]").innerText;
   const orderPriceVal = document.querySelector(orderRowSelector + " td[title=price]").innerText;
   const orderPassTypeVal = document.querySelector(orderRowSelector + " td[title=passType]").innerText;
   const orderOtherTicketOptionsVal = document.querySelector(orderRowSelector + " td[title=otherTicketOptions]").innerText;
-  const orderOtherDancerKindVal = document.querySelector(orderRowSelector + " td[title=otherTicketOptions]").innerText;
+  const orderOtherDancerKindVal = document.querySelector(orderRowSelector + " td[title=otherDancerKind]").innerText;
   const orderClientNameVal = document.querySelector(orderRowSelector + " td[title=clientName]").innerText;
   const orderClientEmailVal = document.querySelector(orderRowSelector + " td[title=clientEmail]").innerText;
   const orderClientPhoneVal = document.querySelector(orderRowSelector + " td[title=clientPhone]").innerText;
@@ -50,3 +51,30 @@ function editRegistration(orderNum) {
   }
 
 }
+
+document.getElementById("orders").addEventListener("click", function () {
+  setTimeout(enableEditBtns, 600);
+
+  function enableEditBtns() {
+    let detail = "";
+    const editButtons = document.querySelectorAll(".editReg");
+
+    try {
+      detail = document.querySelector(".footable-detail-row"); //detail je otevřen, nemáme data v řádku
+    } catch {
+      detail = false; //detail je zavřen, nemáme data v řádku
+    }
+
+    // 2022.08.13 TODO - dořešit case při zavření : detail = null;
+    editButtons.forEach((element) => {
+      if (detail !== false) {
+        element.classList.add("disabledBtn");
+        console.log("add");
+      } else {
+        element.classList.remove("disabledBtn");
+        console.log("remove");
+      }
+    });
+  }
+
+});
