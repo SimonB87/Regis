@@ -64,8 +64,11 @@ document.getElementById("orders").addEventListener("click", function () {
     } catch {
       detail = false; //detail je zavřen, nemáme data v řádku
     }
+    // case when no ".footable-detail-row" is found
+    if (detail == null) {
+      detail = false;
+    }
 
-    // 2022.08.13 TODO - dořešit case při zavření : detail = null;
     editButtons.forEach((element) => {
       if (detail !== false) {
         element.classList.add("disabledBtn");
