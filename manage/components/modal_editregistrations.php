@@ -12,108 +12,108 @@
 
             <div class="row">
 
-            <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-              <div class=" full-width full-height div-select">
-                <select id="dancerKind" class="form-select" aria-label="Pass type" required="" name="dancerKind">
-                  <option value="" >Select dancer kind ...</option>
-                  <option value="1 - Leader" >Leader</option>
-                  <option value="2 - Follower" >Follower</option>
-                  <option value='3 - Couple' >Couple</option>
-
-                </select>
-                <div class="form-select-customLabel">
-                  Dancer kind
-                </div>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div class="invalid-feedback">
-                  Please select some valid option.
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-              <div id="passType--parent" class=" full-width full-height div-select">
-                <select id="passType" class="form-select" aria-label="Pass type" required="" name="passType">
-                  <option value="" >Select pass type ... </option>
-                  <?php echo "<option value='1 - Early birds pass leader/follower' >Early birds pass leader/follower " . "</option>"; ?>
-                  <?php echo "<option value='2 - Early birds couple'>Early birds couple " . "</option>"; ?>
-                  <?php echo "<option value='3 - Fullpass leader/follower'>Fullpass leader/follower " . "</option>"; ?>
-                  <?php echo "<option value='4 - Fullpass couple'>Fullpass couple " . "</option>";  ?>
-                  <?php echo "<option value='5 - Partypass leader/follower'>Partypass leader/follower " . "</option>";  ?>
-                  <?php echo "<option value='6 - Partypass couple'>Partypass couple " . "</option>"; ?>
-                  <option value="0 - None" aria-valuenow="0.0">None</option>
-                </select>
-                <div class="form-select-customLabel">
-                  Pass type
-                </div>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div class="invalid-feedback">
-                  Please select some valid option.
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-              <div class=" full-width full-height div-select">
-                <select id="otherDancerKind" class="form-select" aria-label="Pass type" required="" name="otherDancerKind">
-                  <option value="" >Select other dancer kind ...</option>
-                  <option value="1 - Leader" >Leader</option>
-                  <option value="2 - Follower" >Follower</option>
-                  <option value='3 - Couple' >Couple</option>
-
-                </select>
-                <div class="form-select-customLabel">
-                  Other dancer kind
-                </div>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div class="invalid-feedback">
-                  Please select some valid option.
-                </div>
-              </div>
-            </div>
-
-            <div class='col-lg-6 col-md-12 col-sm-12 padding-small '>
-              <div class=" full-width full-height div-select">
-                <select id="otherTicketOptions" class="form-select" aria-label="Pass type" required="" name="otherTicketOptions">
-                      <option value="" > Other tickets options ...</option>
-                      <?php 
-                      echo "<option value='1 - " . $eventDataSpecialType1RegistrationName . "'>" . $eventDataSpecialType1RegistrationName . " - Single " . "</option>";
-                      echo "<option value='2 - " . $eventDataSpecialType1RegistrationName . "'>" . $eventDataSpecialType1RegistrationName . " - Couple " . "</option>";
-                      echo "<option value='3 - " . $eventDataSpecialType2RegistrationName . "'>" . $eventDataSpecialType2RegistrationName . " - Single " . "</option>";
-                      echo "<option value='4 - " . $eventDataSpecialType2RegistrationName . "'>" . $eventDataSpecialType2RegistrationName . " - Couple " . "</option>";
-                      ?>
-                      <option value="0 - None" aria-valuenow="0.0">None</option>
-                </select>
-                <div class="form-select-customLabel">
-                      Other tickets options
-                </div>
-                <div class="valid-feedback">
-                      Looks good!
-                </div>
-                <div class="invalid-feedback">
-                      Please select some valid option.
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
-                <div class="form-floating">
-                  <input type="text" class="form-control" id="price" disabled name="price" maxlength="250">
-                  <label for="price">Price on registration</label>
+              <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+                <div id="passType--parent" class=" full-width full-height div-select">
+                  <select id="passType" class="form-select" aria-label="Pass type" required="" name="passType">
+                    <option value="" >Select pass type ... </option>
+                    <?php echo "<option value='1 - Early birds pass leader/follower' >Early birds pass leader/follower " . "</option>"; ?>
+                    <?php echo "<option value='2 - Early birds couple'>Early birds couple " . "</option>"; ?>
+                    <?php echo "<option value='3 - Fullpass leader/follower'>Fullpass leader/follower " . "</option>"; ?>
+                    <?php echo "<option value='4 - Fullpass couple'>Fullpass couple " . "</option>";  ?>
+                    <?php echo "<option value='5 - Partypass leader/follower'>Partypass leader/follower " . "</option>";  ?>
+                    <?php echo "<option value='6 - Partypass couple'>Partypass couple " . "</option>"; ?>
+                    <option value="0 - None" aria-valuenow="0.0">None</option>
+                  </select>
+                  <div class="form-select-customLabel">
+                    Pass type
+                  </div>
                   <div class="valid-feedback">
                     Looks good!
                   </div>
                   <div class="invalid-feedback">
-                    Please fill in name.
+                    Please select some valid option.
                   </div>
                 </div>
-            </div>
+              </div>
+
+              <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+                <div class=" full-width full-height div-select">
+                  <select id="dancerKind" class="form-select" aria-label="Pass type" required="" name="dancerKind">
+                    <option value="" >Select dancer kind ...</option>
+                    <option value="1 - Leader" >Leader</option>
+                    <option value="2 - Follower" >Follower</option>
+                    <option value='3 - Couple' >Couple</option>
+
+                  </select>
+                  <div class="form-select-customLabel">
+                    Dancer kind
+                  </div>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please select some valid option.
+                  </div>
+                </div>
+              </div>
+
+              <div class='col-lg-6 col-md-12 col-sm-12 padding-small '>
+                <div class=" full-width full-height div-select">
+                  <select id="otherTicketOptions" class="form-select" aria-label="Pass type" required="" name="otherTicketOptions">
+                        <option value="" > Other tickets options ...</option>
+                        <?php 
+                        echo "<option value='1 - " . $eventDataSpecialType1RegistrationName . "'>" . $eventDataSpecialType1RegistrationName . " - Single " . "</option>";
+                        echo "<option value='2 - " . $eventDataSpecialType1RegistrationName . "'>" . $eventDataSpecialType1RegistrationName . " - Couple " . "</option>";
+                        echo "<option value='3 - " . $eventDataSpecialType2RegistrationName . "'>" . $eventDataSpecialType2RegistrationName . " - Single " . "</option>";
+                        echo "<option value='4 - " . $eventDataSpecialType2RegistrationName . "'>" . $eventDataSpecialType2RegistrationName . " - Couple " . "</option>";
+                        ?>
+                        <option value="0 - None" aria-valuenow="0.0">None</option>
+                  </select>
+                  <div class="form-select-customLabel">
+                        Other tickets options
+                  </div>
+                  <div class="valid-feedback">
+                        Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                        Please select some valid option.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+                <div class=" full-width full-height div-select">
+                  <select id="otherDancerKind" class="form-select" aria-label="Pass type" required="" name="otherDancerKind">
+                    <option value="" >Select other dancer kind ...</option>
+                    <option value="1 - Leader" >Leader</option>
+                    <option value="2 - Follower" >Follower</option>
+                    <option value='3 - Couple' >Couple</option>
+
+                  </select>
+                  <div class="form-select-customLabel">
+                    Other dancer kind
+                  </div>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please select some valid option.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-12 col-md-12 col-sm-12  padding-small">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="price" disabled name="price" maxlength="250">
+                    <label for="price">Price on registration</label>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please fill in name.
+                    </div>
+                  </div>
+              </div>
 
         </section>
 
