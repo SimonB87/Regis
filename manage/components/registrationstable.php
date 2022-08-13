@@ -14,14 +14,15 @@
             <th class="footable-sortable" data-breakpoints="xs sm"> Event name </th>
             <th class="footable-sortable"> Registration date </th>
             <th class="footable-sortable"> Client name </th>
-            <th class="footable-sortable" data-breakpoints="xs sm md"> Pass type </th>
             <th class="footable-sortable" data-breakpoints="xs sm"> Price </th>
-            <th class="footable-sortable" data-breakpoints="xs sm md"> Client email </th>
+            <th class="footable-sortable" data-breakpoints="xs sm md"> Pass type </th>
             <th class="footable-sortable" data-breakpoints="xs sm md"> Dancer kind </th> 
             <th class="footable-sortable" data-breakpoints="xs sm md lg"> Registration type </th> 
-            <th class="footable-sortable" data-breakpoints="xs sm md lg"> Other ticket options </th> 
-            <th class="footable-sortable" data-breakpoints="xs sm md lg"> Other dancer kind </th> 
-            <th class="footable-sortable" data-breakpoints="xs sm md"> Client phone </th> 
+            <th class="footable-sortable" data-breakpoints="xs sm md "> Other ticket option </th> 
+            <th class="footable-sortable" data-breakpoints="xs sm md "> Other ticket option dancer kind </th> 
+            <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client email </th>
+
+            <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client phone </th> 
             <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client country </th> 
             <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client comments </th> 
             <th class="footable-sortable" data-breakpoints="xs sm md lg"> Client Confrimation 1 Description </th> 
@@ -121,12 +122,33 @@
                                           ( " aria-label=\"" . $eventDataSpecialType1RegistrationName . "\"" )
                                           : ( in_array($row["otherTicketOptions"], ['3 - special type2 single','4 - special type2 couple'], true ) ) ? ( " aria-label=\"" . $eventDataSpecialType2RegistrationName . "\"" ) : "aria-label=\"\"";
 
-                  echo "<tr class='orderId" . $row["orderID"] . "'><td>" . $row["orderID"] . "</td><td>" . $row["eventName"] . "</td><td>" . 
-                        $row["registrationdate"]  . "</td><td title='clientName'>" . $row["clientName"] ."</td><td title='passType'>" . $row["passType"] . "</td> <td title='price'>" . $row["formPrice"] . "</td> <td title='clientEmail' >" . $row["clientEmail"]  . "</td> <td title='dancerKind'>" . 
-                        $row["dancerKind"] . "</td><td>" . $row["registrationType"] . "</td><td title='otherTicketOptions' " . $otherTicketOptionName . ">" . $row["otherTicketOptions"] . "</td><td title='otherDancerKind' >" . $row["otherDancerKind"] . "</td><td title='clientPhone'>" . 
-                        $row["clientPhone"] . "</td><td title='clientCountry' >" . $row["clientCountry"] . "</td><td title='clientComments'>" . $row["clientComments"] . "</td><td>" . $row["confirmPrivateInformation1Description"] . "</td><td>" . $row["confirmPrivateInformation1"] . "</td><td>" . 
-                        $row["confirmPrivateInformation2Description"] . "</td><td>" . $row["confirmPrivateInformation2"] . "</td><td>" . $row["confirmPrivateInformation3Description"] . "</td><td>" . $row["confirmPrivateInformation3"] . "</td><td>" . $paymentStatus . "</td><td>". 
-                        $row["clientTransferedOrder"] . "</td><td>" . $row["adminEditedOrder"] . "</td><td>" . $row["id"] . "</td><td><div><span class='glyphicon' onclick='editRegistration(\"". $row["orderID"] ."\");' data-bs-toggle='modal' data-bs-target='#exampleModal'>&#x270f;</span></div><td/>" . "</tr>";
+                  echo "<tr class='orderId" . $row["orderID"] . "'>" . 
+                        "<td>" . $row["orderID"] . "</td>" .
+                        "<td>" . $row["eventName"] . "</td>" .
+                        "<td>" . $row["registrationdate"] . "</td>" .
+                        "<td title='clientName'>" . $row["clientName"] . "</td>" .
+                        "<td title='price'>" . $row["formPrice"] . "</td>" .
+                        "<td title='passType'>" . $row["passType"] . "</td>" .
+                        "<td title='dancerKind'>" . $row["dancerKind"] . "</td>" .
+                        "<td>" . $row["registrationType"] . "</td>" .
+                        "<td title='otherTicketOptions' " . $otherTicketOptionName . ">" . $row["otherTicketOptions"] . "</td>" .
+                        "<td title='otherDancerKind' >" . $row["otherDancerKind"] . "</td>" .
+                        "<td title='clientEmail' >" . $row["clientEmail"] . "</td>" .
+                        "<td title='clientPhone'>" . $row["clientPhone"] . "</td>" .
+                        "<td title='clientCountry' >" . $row["clientCountry"] . "</td>" .
+                        "<td title='clientComments'>" . $row["clientComments"] . "</td>" .
+                        "<td>" . $row["confirmPrivateInformation1Description"] . "</td>".
+                        "<td>" . $row["confirmPrivateInformation1"] . "</td>".
+                        "<td>" . $row["confirmPrivateInformation2Description"] . "</td>".
+                        "<td>" . $row["confirmPrivateInformation2"] . "</td>".
+                        "<td>" . $row["confirmPrivateInformation3Description"] . "</td>".
+                        "<td>" . $row["confirmPrivateInformation3"] . "</td>".
+                        "<td>" . $paymentStatus . "</td>".
+                        "<td>" . $row["clientTransferedOrder"] . "</td>".
+                        "<td>" . $row["adminEditedOrder"] . "</td>".
+                        "<td>" . $row["id"] . "</td>".
+                        "<td><div><span class='glyphicon editReg' onclick='editRegistration(\"". $row["orderID"] ."\");' data-bs-toggle='modal' data-bs-target='#exampleModal'>&#x270f;</span></div><td/>" . 
+                        "</tr>";
               }
               echo "";
           }
