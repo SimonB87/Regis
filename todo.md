@@ -84,6 +84,8 @@
 
 	* zviditelnit other option ticket name v tabulce přes element "aria-label"
 
+* process form data - disalow reposting registration form on refresh of the page : https://stackoverflow.com/questions/2666882/how-to-avoid-resending-data-on-refresh-in-php
+
 - BUGFIX - v úpravě description použít dynamické odkazy na obrázky emotikonů
 - !!! BUGFIX - ! opravit enabled sections - když je tam sekce 2 disabled a obsahuje uvnitř texty (situace rozpor create a edit ! )
 - !!! Kontrolovat - FEATURE - počítat zvlášť leader / follower lístky v jednotlivých kategoriích - což znamená i zamezit tomu, aby na akci bylo víc chlapů/ženských
