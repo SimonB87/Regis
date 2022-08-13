@@ -77,7 +77,9 @@
 
 ## hlavní funkcionalita - dodělávky
 
-? co to je za údaj "Registration type" - eventuelně vyhodit
+? CHECK - co to je za údaj "Registration type" - eventuelně vyhodit
+! CHECK - když je vyplnta parita leader/follower tak prostě dojdou lístky až se polední vyprodá a je jednokolik lidí tam bude
+! FINISH - 2022.08.13 TODO v javascriptu s enable edit registration
 
 * put other dancer kind
 	* to the window of process registration
