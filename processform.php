@@ -56,6 +56,10 @@ require 'config/config.php';
 
   $htmlPassType = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Pass type : </strong>" . $passType . "</div>";
   $htmlDancerKind = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Dancer kind: </strong>" . $dancerKind . "</div>";
+
+  $htmlOtherTicketOptions = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong> Other ticket option: </strong>" . $otherTicketOptions . "</div>";
+  $htmlOtherDancerKind = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong> Other dancer kind: </strong>" . $otherDancerKind . "</div>";
+
   $htmlLocation = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Location : </strong>" . $location . "</div>";
   $htmlFormPrice = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Form price: </strong>" . $formPrice . "</div>";
   $htmlClientName = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client name : </strong>" . $clientName . "</div>";
@@ -122,7 +126,7 @@ require 'config/config.php';
   include("manage/emailing/sendmailtotestadmin.php");
   include("manage/emailing/sendmailtoclient.php");
 
-  echo $registrationSummary . $htmlValidation . $htmlEventName . $htmlPassType . $htmlDancerKind . $htmlLocation . $htmlFormPrice .  $htmlClientName . $htmlClientEmail . $htmlClientPhone . $htmlClientCountry . $htmlClientComments . $htmlRegistrationdate . $htmlConfirmPrivateInformation;
+  echo $registrationSummary . $htmlValidation . $htmlEventName . $htmlPassType . $htmlDancerKind . $htmlOtherTicketOptions . $htmlOtherDancerKind . $htmlLocation . $htmlFormPrice .  $htmlClientName . $htmlClientEmail . $htmlClientPhone . $htmlClientCountry . $htmlClientComments . $htmlRegistrationdate . $htmlConfirmPrivateInformation;
 
   ?>
 
