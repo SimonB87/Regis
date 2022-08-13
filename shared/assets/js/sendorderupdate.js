@@ -24,7 +24,7 @@ function postUpdatePayment(infonum) {
         ordername: targetName,
         paymentoption: targetPaymentOption
       },
-      error: function (xhr, status, error) {
+      error: function (xhr, status, error) { // Error case
         console.error(xhr);
         console.error(status);
         console.error(error);
@@ -75,8 +75,6 @@ function updateOrderData() {
   const clientCountry = document.getElementById("clientCountry").value;
   const clientComments = document.getElementById("clientComments").value;
 
-  console.log("updateorder - clientComments : " + clientComments);
-
   $.ajax({
     url: "updateorder.php",
     type: "POST",
@@ -103,11 +101,11 @@ function updateOrderData() {
     cache: false,
     success: function (dataResult) {
       var dataResult = JSON.parse(dataResult);
-      //console.log(dataResult.content);
+
       if (dataResult.statusCode == 200) {
         targetEl.innerText = "Sucess - updated order data.";
         targetEl.classList.add("text-success");
-        //updateDataOfOrdersData(orderId); //TODO - finish
+        // TODO - updateDataOfOrdersData(orderId);  
       }
       else if (dataResult.statusCode == 418) {
         targetEl.innerText = ("Error occured - code 418");
@@ -129,7 +127,7 @@ function updateOrderData() {
         messagename: "getregistrationsdata",
         orderid: orderIdNumber
       },
-      error: function (xhr, status, error) {
+      error: function (xhr, status, error) { // Error case
         console.error(xhr);
         console.error(status);
         console.error(error);
@@ -139,11 +137,9 @@ function updateOrderData() {
       cache: false,
       success: function (updateDataResult) {
         var myUpdateDataResult = JSON.parse(updateDataResult);
-        //console.log(dataResult.content);
         if (myUpdateDataResult.statusCode == 200) {
           targetEl.innerText = targetEl.innerText + " Data refreshed.";
           targetEl.classList.add("text-success");
-          console.log(myUpdateDataResult.content);
         }
         else if (myUpdateDataResult.statusCode == 418) {
           targetEl.innerText = ("Error occured - code 418");

@@ -72,10 +72,8 @@ document.getElementById("orders").addEventListener("click", function () {
     editButtons.forEach((element) => {
       if (detail !== false) {
         element.classList.add("disabledBtn");
-        console.log("add");
       } else {
         element.classList.remove("disabledBtn");
-        console.log("remove");
       }
     });
   }

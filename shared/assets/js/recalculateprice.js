@@ -27,7 +27,7 @@ function recalculatePrice() {
     }
 
   } else {
-    //console.log("Missing an option.");
+
   }
 
 }
