@@ -85,12 +85,13 @@ else {
                 <th data-breakpoints='xs sm'> Event name </th>
                 <th> Registration date </th>
                 <th> Client name </th>
-                <th data-breakpoints='xs sm md'> Pass type </th>
                 <th> Price </th>
-                <th data-breakpoints='xs sm md'> Client email </th>
+                <th data-breakpoints='xs sm md'> Pass type </th>
                 <th data-breakpoints='xs sm md'> Dancer kind </th> 
-                <th data-breakpoints='xs sm md lg'> Registration type </th> 
                 <th data-breakpoints='xs sm md lg'> Other ticket options </th> 
+                <th data-breakpoints='xs sm md lg'> Other ticket option dancer kind </th> 
+                <th data-breakpoints='xs sm md'> Client email </th>
+                <th data-breakpoints='xs sm md lg'> Registration type </th> 
                 <th data-breakpoints='xs sm md'> Client phone </th> 
                 <th data-breakpoints='xs sm md lg'> Client country </th> 
                 <th data-breakpoints='xs sm md lg'> Client comments </th> 
@@ -109,11 +110,11 @@ else {
       if ($results-> num_rows > 0 ) {
         while ($row = $results-> fetch_assoc()) {
 
-          echo "<tr><td>" . $row["orderID"] . "</td><td>" . $row["eventName"] . "</td><td>" . $row["registrationdate"]  . "</td><td>" . $row["clientName"] ."</td><td>" . $row["passType"] . "</td> <td>" . $row["formPrice"] . "</td> <td>" . $row["clientEmail"]  . "</td> <td>" . $row["dancerKind"] . "</td><td>" . 
-          $row["registrationType"] . "</td><td>" . $row["otherTicketOptions"] . "</td><td>" . $row["clientPhone"] . "</td><td>" . $row["clientCountry"] . "</td><td>" . $row["clientComments"] . "</td><td>" . $row["confirmPrivateInformation1Description"] . "</td><td>" .
+          echo "<tr><td>" . $row["orderID"] . "</td><td>" . $row["eventName"] . "</td><td>" . $row["registrationdate"]  . "</td><td>" . $row["clientName"] ."</td><td>" . $row["formPrice"] . "</td> <td>" . $row["passType"] . "</td> <td>" . $row["dancerKind"] . "</td> <td>" . $row["otherTicketOptions"] . "</td><td>" .  $row["otherDancerKind"] . "</td><td>" .
+          $row["clientEmail"] . "</td><td>" . $row["registrationType"] . "</td><td>" . $row["clientPhone"] . "</td><td>" . $row["clientCountry"] . "</td><td>" . $row["clientComments"] . "</td><td>" . $row["confirmPrivateInformation1Description"] . "</td><td>" .
           $row["confirmPrivateInformation1"] . "</td><td>" . $row["confirmPrivateInformation2Description"] . "</td><td>" . $row["confirmPrivateInformation2"] . "</td><td>" . $row["confirmPrivateInformation3Description"] . "</td><td>" . $row["confirmPrivateInformation3"] . "</td><td>" . $row["paystatus"] . "</td><td>" . $row["id"] . "</td>" . "</tr>";
 
-      }
+      } // $row["clientEmail"]
 
       echo "</tbody></table>";
       //echo " 0 " ;
