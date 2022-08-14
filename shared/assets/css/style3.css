@@ -365,6 +365,7 @@ footer .copyright {
   max-width: 40rem;
   min-height: 2.5rem;
   float: right;
+  z-index: 1021;
 }
 .notification .notification-content {
   float: left;
