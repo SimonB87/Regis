@@ -1,3 +1,8 @@
+//document loaded
+document.addEventListener("DOMContentLoaded", function (event) {
+  hideEmptyTickets();
+});
+
 function enableRegistrationOptions(source, type) { 
   let getValue = "";
   let sourceValue = document.getElementById(source).value;
@@ -98,3 +103,33 @@ function enableRegistrationOptions(source, type) {
 
 }
 
+function hideEmptyTickets() {
+
+  const passTypeOptionsElements = document.querySelectorAll("#passType options");
+  const otherTicketOptionsElements = document.querySelectorAll("#passType options");
+
+  passTypeOptionsElements.forEach((element, index) => {
+    element.classList.remove("hidden");
+
+    if ( 
+      ( (eventState.earlyBirdsSingles.follower == false) && (eventState.earlyBirdsSingles.leader == false) ) ||
+      ( (eventState.partySingles.follower == false) && (eventState.partySingles.leader == false) ) ||
+      ( (eventState.partySingles.follower == false) && (eventState.partySingles.leader == false) )
+      ) {
+        element.classList.add("hidden");
+      }
+
+  });
+
+  otherTicketOptionsElements.forEach((element, index) => {
+    element.classList.remove("hidden");
+
+    if (  
+      ( (eventState.specialType1Singles.follower == false) && (eventState.specialType1Singles.leader == false) ) ||
+      ( (eventState.specialType2Singles.follower == false) && (eventState.specialType2Singles.leader == false) )
+       ) {
+        element.classList.add("hidden");
+       }
+  });
+
+}
