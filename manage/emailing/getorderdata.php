@@ -36,24 +36,24 @@ $errorIcon = "<span><svg xmlns='http://www.w3.org/2000/svg' width='16' height='1
       echo json_encode(array("checkOrderIdSql - statusCode"=>418));
     }
     
-    $storedId = "string";
-    $storedClientComments = "string";
-    $storedClientCountry = "string";
-    $storedClientEmail = "string";
-    $storedClientName = "string";
-    $storedClientPhone = "string";
-    $storedconfirmPrivateInformation1 = "string";
-    $storedconfirmPrivateInformation2 = "string";
-    $storedconfirmPrivateInformation3 = "string";
-    $storedOtherTicketOptions = "string";
-    $storedDancerKind = "string";
-    $storedOtherDancerKind = "string";
-    $storedEventName = "string";
-    $storedFormPrice = "string";
-    $storedLocation = "string";
-    $storedOrderID = "string";
-    $storedPassType = "string";
-    $storedRegistrationdate = "string";
+    $storedId = "";
+    $storedClientComments = "";
+    $storedClientCountry = "";
+    $storedClientEmail = "";
+    $storedClientName = "";
+    $storedClientPhone = "";
+    $storedconfirmPrivateInformation1 = "";
+    $storedconfirmPrivateInformation2 = "";
+    $storedconfirmPrivateInformation3 = "";
+    $storedOtherTicketOptions = "";
+    $storedDancerKind = "";
+    $storedOtherDancerKind = "";
+    $storedEventName = "";
+    $storedFormPrice = "";
+    $storedLocation = "";
+    $storedOrderID = "";
+    $storedPassType = "";
+    $storedRegistrationdate = "";
     
     if ($results-> num_rows > 0 ) {
       while ($row = $results-> fetch_assoc()) {
