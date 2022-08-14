@@ -51,8 +51,8 @@ if ((isset($_POST['clientName'])) or (isset($_POST['clientEmail']))) {
             //printf("Current character set: %s\n", mysqli_character_set_name($con));//used only for testing
     }
   
-    if ($correctlyFilledForm){
-  
+    if ($correctlyFilledForm) {
+        
       $sql = "INSERT INTO `registrations`( `eventID`,`eventName`,`passType`,`dancerKind`,`otherTicketOptions`,`otherDancerKind`,`location`,`formPrice`,`clientName`,`clientPhone`,`clientCountry`, `clientEmail` ,`clientComments`,`registrationdate`,`confirmPrivateInformation1Description`,`confirmPrivateInformation1`,`confirmPrivateInformation2Description`,`confirmPrivateInformation2`,`confirmPrivateInformation3Description`,`confirmPrivateInformation3`,`paystatus`,`clientTransferedOrder`,`adminEditedOrder`)
       VALUES (\"$eventID\", \"$eventName\", \"$passType \", \"$dancerKind\", \"$otherTicketOptions\", \"$otherDancerKind\", \"$location\", \"$formPrice\", \"$clientName\", \"$clientPhone\", \"$clientCountry\", \"$clientEmail\", \"$clientComments\", \"$registrationdate\", \"$confirmPrivateInformation1Description\", \"$confirmPrivateInformation1\", \"$confirmPrivateInformation2Description\", \"$confirmPrivateInformation2\", \"$confirmPrivateInformation3Description\", \"$confirmPrivateInformation3\", \"1 - unpaid\", \"Original Order - $registrationdate;\", \"Original Order - $registrationdate;\")";
       
@@ -111,7 +111,7 @@ if ((isset($_POST['clientName'])) or (isset($_POST['clientEmail']))) {
       else {
         echo json_encode(array("orderSetSql - statusCode"=>418));
       }
-  
+
     } else {
       //echo "<h2>no data</h2>";
     }
