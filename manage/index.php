@@ -1,9 +1,10 @@
 <?php
 session_start();
 require '../config/config.php';
+require 'handlers/userlogin.php';
 
 /*if the user is loggen in, make the username variable equal to username. If user is not logged in, send him back to register page.*/
-if (isset($_SESSION['username'])) {
+if ( (isset($_SESSION['username'])) && ( ($usernamelevel == "9") ) || (($usernamelevel == "8"))) {
   $userLoggedIn = $_SESSION['username'];
   $user_details_query = mysqli_query($connector, "SELECT * FROM users WHERE username='$userLoggedIn'");
   $user = mysqli_fetch_array($user_details_query);
