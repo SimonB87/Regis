@@ -74,16 +74,11 @@ require 'config/config.php';
   $htmlClientComments = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client comments : </strong>" . $clientComments . "</div>";
   $htmlRegistrationdate = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client registration data : </strong>" . $registrationdate . "</div>";
 
-    $htmlConfirmPrivateInformationPart1 = (strlen($confirmPrivateInformation1) > 1) ? ("<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong> ". $confirmPrivateInformation1Description .":  </strong>" . $confirmPrivateInformation1 . "</div>") : ("" . strlen($confirmPrivateInformation1) . "");
-
-    $htmlConfirmPrivateInformationPart2 = (strlen($confirmPrivateInformation2) > 1) ? ("<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong> ". $confirmPrivateInformation2Description .":  </strong>" . $confirmPrivateInformation1 . "</div>" ) : ("" . strlen($confirmPrivateInformation2) . "");
-
-    $htmlConfirmPrivateInformationPart3 = (strlen($confirmPrivateInformation3) > 1) ? ("<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong> ". $confirmPrivateInformation3Description .":  </strong>" . $confirmPrivateInformation1 . "</div>") : ("" . strlen($confirmPrivateInformation3) . "");
+    $htmlConfirmPrivateInformationPart1 = (strlen($confirmPrivateInformation1) > 1) ? ("<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong> ". $confirmPrivateInformation1Description .":  </strong>" . $confirmPrivateInformation1 . "</div>") : ("");
+    $htmlConfirmPrivateInformationPart2 = (strlen($confirmPrivateInformation2) > 1) ? ("<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong> ". $confirmPrivateInformation2Description .":  </strong>" . $confirmPrivateInformation1 . "</div>" ) : ("");
+    $htmlConfirmPrivateInformationPart3 = (strlen($confirmPrivateInformation3) > 1) ? ("<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong> ". $confirmPrivateInformation3Description .":  </strong>" . $confirmPrivateInformation1 . "</div>") : ("");
 
   $htmlConfirmPrivateInformation = $htmlConfirmPrivateInformationPart1 . $htmlConfirmPrivateInformationPart2 . $htmlConfirmPrivateInformationPart3;
-  //test
-  //echo "htmlConfirmPrivateInformation " . $htmlConfirmPrivateInformation;
-  //test
 
   $exitIcon = "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-check' viewBox='0 0 16 16'>
                 <path d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z'></path>
@@ -109,7 +104,7 @@ require 'config/config.php';
                         " <div>Account holder name: <strong class='toCopy'>" . " Mauritius The Greatest </strong>" . 
                         " </div> " . 
                         " <div>Price : <strong class='toCopy'> " . " " . $formPrice . "</strong></div>" .
-                        "<div>Notice for receiver: \"<strong class='toCopy'>" . " Order ID: " . $orderId. ", Client name: ". $clientName ." , Client email: " . $clientEmail . "</strong>\" </div>" .
+                        "<div>Notice for receiver: \"<strong class='toCopy'>" . " Order ID: " . $orderId. ", client: ". $clientName ." , contact: " . $clientEmail . "</strong>\" </div>" .
                         " </p>" . "</div></div></div>"; //TODO - valid price set up by server check, payment´s details set by admin to DB
 
   $exitIcon = "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-check' viewBox='0 0 16 16'>
@@ -122,16 +117,18 @@ require 'config/config.php';
 
   $userNotification = ($correctlyFilledForm) ? $paymentInstructions : $registrationError;
 
-  $registrationSummary = "<div class='container padding-regular-topBottom'> <div class='row'> <div class='col-12'> <h1 class='text-center padding-regular-topBottom'>Registration summary :</h1> </div> <div class='col-12 test-link'> <a href='manage/registrations.php#orders'> <button class='btn btn-warning'> TEST : Table of saved registrations </button></a> </div>";
+  $registrationSummary = "<div class='col-12'> <h1 class='text-center padding-regular-topBottom'>Registration summary :</h1> </div> <div class='col-12 test-link'> <a href='manage/registrations.php#orders'> <button class='btn btn-warning'> TEST : Table of saved registrations </button></a> </div>";
 
   echo $userNotification;
+
+  //echo "<br>101<br>"; //test
 
   include("manage/emailing/getorderdata.php");
   include("manage/emailing/sendmailtoadmin.php");
   include("manage/emailing/sendmailtotestadmin.php");
   include("manage/emailing/sendmailtoclient.php");
 
-  echo $registrationSummary . $htmlValidation . $htmlEventName . $htmlPassType . $htmlDancerKind . $htmlOtherTicketOptions . $htmlOtherDancerKind . $htmlLocation . $htmlFormPrice .  $htmlClientName . $htmlClientEmail . $htmlClientPhone . $htmlClientCountry . $htmlClientComments . $htmlRegistrationdate . $htmlConfirmPrivateInformation;
+  echo "<div class='container padding-regular-topBottom test1'> <div class='row test2'>" . $registrationSummary . $htmlValidation . $htmlEventName . $htmlPassType . $htmlDancerKind . $htmlOtherTicketOptions . $htmlOtherDancerKind . $htmlLocation . $htmlFormPrice .  $htmlClientName . $htmlClientEmail . $htmlClientPhone . $htmlClientCountry . $htmlClientComments . $htmlRegistrationdate . $htmlConfirmPrivateInformation . "</div></div>";
 
   ?>
 
