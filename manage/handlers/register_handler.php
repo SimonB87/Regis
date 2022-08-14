@@ -22,32 +22,32 @@ if(isset($_POST['register_button'])){
 	//Registration form values
 
 	//First name
-	$fname = strip_tags($_POST['reg_fname']); //Remove html tags
+	$fname = strip_tags(mysqli_real_escape_string($connector, $_POST["reg_fname"])); //Remove html tags
 	$fname = str_replace(' ', '', $fname); //remove spaces
 	$fname = ucfirst(strtolower($fname)); //Uppercase first letter
 	$_SESSION['reg_fname'] = $fname; //Stores first name into session variable
 
 	//Last name
-	$lname = strip_tags($_POST['reg_lname']); //Remove html tags
+	$lname = strip_tags(mysqli_real_escape_string($connector, $_POST["reg_lname"])); //Remove html tags
 	$lname = str_replace(' ', '', $lname); //remove spaces
 	$lname = ucfirst(strtolower($lname)); //Uppercase first letter
 	$_SESSION['reg_lname'] = $lname; //Stores last name into session variable
 
 	//email
-	$em = strip_tags($_POST['reg_email']); //Remove html tags
+	$em = strip_tags(mysqli_real_escape_string($connector, $_POST["reg_email"])); //Remove html tags
 	$em = str_replace(' ', '', $em); //remove spaces
 	$em = ucfirst(strtolower($em)); //Uppercase first letter
 	$_SESSION['reg_email'] = $em; //Stores email into session variable
 
 	//email 2
-	$em2 = strip_tags($_POST['reg_email2']); //Remove html tags
+	$em2 = strip_tags(mysqli_real_escape_string($connector, $_POST["reg_email2"])); //Remove html tags
 	$em2 = str_replace(' ', '', $em2); //remove spaces
 	$em2 = ucfirst(strtolower($em2)); //Uppercase first letter
 	$_SESSION['reg_email2'] = $em2; //Stores email2 into session variable
 
 	//Password
-	$password = strip_tags($_POST['reg_password']); //Remove html tags
-	$password2 = strip_tags($_POST['reg_password2']); //Remove html tags
+	$password = strip_tags(mysqli_real_escape_string($connector, $_POST["reg_password"])); //Remove html tags
+	$password2 = strip_tags(mysqli_real_escape_string($connector, $_POST["reg_password2"])); //Remove html tags
 
 	$date = date("Y-m-d"); //Current date
 
@@ -116,17 +116,17 @@ if(isset($_POST['register_button'])){
 			$username = $username . "_" . $i;
 			$check_username_query = mysqli_query($connector, "SELECT username FROM users WHERE username='$username'");
 		}
-
+/*
 		//Profile picture assignment
 		$rand = rand(1, 2); //Random number between 1 and 2
 
 		if($rand == 1)
 			$profile_pic = "assets/images/profile_pics/defaults/head_deep_blue.png";
 		else if($rand == 2)
-			$profile_pic = "assets/images/profile_pics/defaults/head_emerald.png";
+			$profile_pic = "assets/images/profile_pics/defaults/head_emerald.png";*/
 
 
-		$query = mysqli_query($connector, "INSERT INTO users (first_name, last_name, username, email, password, signup_date, profile_pic, num_posts, num_likes, user_closed, friend_array) VALUES ('$fname', '$lname', '$username', '$em', '$password', '$date', '$profile_pic', '0', '0', 'no', ',Å imon_buryan,demo_uÅ¾ivatel,')");
+		$query = mysqli_query($connector, "INSERT INTO users (first_name, last_name, username, email, password, signup_date, num_posts, num_likes, user_closed, user_level) VALUES ('$fname', '$lname', '$username', '$em', '$password', '$date', '0', '0', 'no', '7')");
 
 		array_push($error_array, "<span style='color: #14C800;'>You're all set! Go ahead and login!</span><br>");
 

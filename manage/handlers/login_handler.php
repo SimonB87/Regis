@@ -34,9 +34,9 @@ if(isset($_POST['login_button'])) {
 
 }
 
-//foreach( $error_array as $key=>$item ) {
-//	echo `<div id='notification_$key' class='notification'>` . $item . `<span onclick="hideNotification('notification_$key')" > X </span></div>`;
-//}
+foreach( $error_array as $key=>$item ) {
+	echo "<div id='notification_$key' class='notification bg-warning alert-hide'><span class='notification-content '>" . $item . "</span><span class=\"notification--close \" onclick=\"hideNotification('notification_$key');\" > X </span>" . "</div>";
+}
 
 
 ?>

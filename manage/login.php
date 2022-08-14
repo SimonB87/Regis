@@ -1,7 +1,6 @@
 <?php
 session_start();
 require("../config/config.php");
-$error_array = [];
 include("handlers/login_handler.php");
 ?>
 
