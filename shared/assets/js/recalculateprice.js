@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 function recalculatePrice() {
   const passType = document.getElementById("passType");
   const otherTicketOptions = document.getElementById("otherTicketOptions");

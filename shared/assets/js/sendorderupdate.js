@@ -1,3 +1,4 @@
+"use strict";
 function postUpdatePayment(infonum) {
 
   const targetOrderId = document.querySelector("form.orderId" + infonum + " input[name=orderID]").value;

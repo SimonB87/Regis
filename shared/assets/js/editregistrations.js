@@ -1,3 +1,4 @@
+"use strict";
 function editRegistration(orderNum) {
   const targetOrderIdHeading = document.getElementById("orderId");
   targetOrderIdHeading.innerText = orderNum;

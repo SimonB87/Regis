@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 function hideNotification(itemId) {
   const notificationEl = document.querySelector("#" + itemId);
   notificationEl.remove();

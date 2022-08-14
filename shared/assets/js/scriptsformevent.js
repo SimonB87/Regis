@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 const revenueTable = document.getElementById("recount-revenue-data");
 
 if (!(revenueTable == null)) {

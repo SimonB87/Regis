@@ -1,3 +1,4 @@
+"use strict";
 const listEvents = document.getElementById("listetedevents");
 
 listEvents.addEventListener('change', (event) => {

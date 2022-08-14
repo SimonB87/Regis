@@ -1,4 +1,4 @@
-
+"use strict";
 var html = document.querySelector("table").outerHTML;
 htmlToCSV(html, "registrations.csv");
 

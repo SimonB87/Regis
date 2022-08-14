@@ -1,3 +1,4 @@
+"use strict";
 document.addEventListener("DOMContentLoaded", function (event) {
   const notMainSectionsEnabled = document.querySelectorAll(".checkbox-enablesection");
   notMainSectionsEnabled.forEach(function (sectionCheckbox, sectionIndex) {

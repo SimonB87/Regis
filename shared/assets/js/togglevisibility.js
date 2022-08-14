@@ -32,7 +32,7 @@ function togglePassWord() {
 }
 
 (function () {
-  'use strict'
+  "use strict";
   document.addEventListener("DOMContentLoaded", function (event) {
 
     const elementsArray = document.querySelectorAll(".registration_error_close");
