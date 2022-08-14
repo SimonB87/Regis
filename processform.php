@@ -21,11 +21,16 @@ require 'config/config.php';
 
   <?php
   include("shared/navigation.php");
-  ?>
-
-  <?php
-
   include("manage/processformdata.php");
+
+  $isEventEdited = true;
+  $selectByEventId = $eventID;
+
+  include("manage/handlers/handler_geteventdata.php");
+
+  include("manage/handlers/handler_outputotherticketoptionsname.php");
+
+  mysqli_close($connector);
 
   ?>
 
@@ -57,7 +62,7 @@ require 'config/config.php';
   $htmlPassType = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Pass type : </strong>" . $passType . "</div>";
   $htmlDancerKind = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Dancer kind: </strong>" . $dancerKind . "</div>";
 
-  $htmlOtherTicketOptions = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong> Other ticket option: </strong>" . $otherTicketOptions . "</div>";
+  $htmlOtherTicketOptions = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong> Other ticket option: </strong>" . $otherTicketOptionsText1 . $otherTicketOptionsText2 . "</div>";
   $htmlOtherDancerKind = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong> Other dancer kind: </strong>" . $otherDancerKind . "</div>";
 
   $htmlLocation = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Location : </strong>" . $location . "</div>";

@@ -83,6 +83,12 @@
       //select one open event, where registrations are open
       $sql = "SELECT * FROM events WHERE eventStatus='1 - Registrations open' ORDER BY id DESC LIMIT 1";
 
+      if (isset($selectByEventId)) {
+        if ($selectByEventId == true) {
+          $sql = "SELECT * FROM events WHERE id='$selectByEventId' ORDER BY id DESC LIMIT 1";
+        }
+      }
+
       $results = $connector-> query($sql);
       //Error case
       if (!$sql ) {

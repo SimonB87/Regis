@@ -185,7 +185,7 @@ $message_summary =  "<!-- PARAGRAPH -->
                           <p>Pass type : <strong>" . $storedPassType . "</strong></p>
                           <p>Dancer kind : <strong>" . $storedDancerKind . "</strong></p>
 
-                          <p>Other ticket option : <strong>" . $storedOtherTicketOptions . "</strong></p>
+                          <p>Other ticket option : <strong>" . $otherTicketOptionsText1 . $otherTicketOptionsText2 . "</strong></p>
                           <p>Other ticket option dancer kind  : <strong>" . $storedOtherDancerKind . "</strong></p>
 
                           <p>Event location : <strong>" . $storedLocation . "</strong></p>

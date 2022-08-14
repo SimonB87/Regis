@@ -117,7 +117,7 @@ if ((isset($_POST['clientName'])) or (isset($_POST['clientEmail']))) {
     }
   
   
-  mysqli_close($connector);
+
 
 } else {
 

@@ -127,8 +127,9 @@ $message_summary =  "<!-- PARAGRAPH -->
                           font-family: sans-serif;' class='paragraph'>
                           <p>Order ID: <strong>" . $storedOrderID . "</strong></p>
                           <p>Event name : <strong>" . $storedEventName . "</strong></p>
-                          <p>Pass type : <strong>" . $storedPassType . "</strong></p>
                           <p>Price : <strong>" . $storedFormPrice . "</strong></p>
+                          <p>Pass type : <strong>" . $storedPassType . "</strong></p>
+                          <p>Other ticket option : <strong>" . $otherTicketOptionsText1 . $otherTicketOptionsText2 . "</strong></p>
                           <p>Event location : <strong>" . $storedLocation . "</strong></p>
                           <p>Dancer kind : <strong>" . $storedDancerKind . "</strong></p>
                           <p></p>
