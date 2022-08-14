@@ -77,22 +77,18 @@
 
 ## hlavní funkcionalita - dodělávky
 
-* special option ticket name
-	* to the process form window - add special option ticket name
-	* to the registration confirmation mail for admin - add special option ticket name
-	* to the registration confirmation mail for client- add special option ticket name
 
-	* zviditelnit other option ticket name v tabulce přes element "aria-label"
+* zviditelnit other option ticket name v tabulce přes element "aria-label"
 
-* process form data - disalow reposting registration form on refresh of the page : https://stackoverflow.com/questions/2666882/how-to-avoid-resending-data-on-refresh-in-php
+* process form data - disallow reposting registration form on refresh of the page : https://stackoverflow.com/questions/2666882/how-to-avoid-resending-data-on-refresh-in-php
 
 - BUGFIX - v úpravě description použít dynamické odkazy na obrázky emotikonů
 - !!! BUGFIX - ! opravit enabled sections - když je tam sekce 2 disabled a obsahuje uvnitř texty (situace rozpor create a edit ! )
-- !!! Kontrolovat - FEATURE - počítat zvlášť leader / follower lístky v jednotlivých kategoriích - což znamená i zamezit tomu, aby na akci bylo víc chlapů/ženských
 - !!! FEATURE - když user objednává lístek tak se dynamicky dotázat do databíze zda je tento lístek k dispozici - potíže při prodeje posledního lístku ; pokud jsou lístky již vyprodané, tak si uživatel dostane na waiting list 
 - ! Feature - při úpravě řádku registrace poslat dotaz na řádek a rehreshnout data řádku v tabulce
-- Zakázkový bod - 10. - Pokud dojde ke změně uložené registrace , uloží se změna do databáze a odešle se notifikace pořadateli a notifikace účastníkovi.
-- Zakázkový bod - 11. - Pořadatel může zaslat automaticky upomínku pro zaplacení tím, že stiskne tlačítko „urgovat platbu“ v tabulce s registracemi. Následně se otevře nové okno, kde může upravit text odpovědi.
+- FEATURE - plnit infromace na úvodní obrazovce skutečnými daty z registrací 
+- FEATURE - Zakázkový bod - 10. - Pokud dojde ke změně uložené registrace , uloží se změna do databáze a odešle se notifikace pořadateli a notifikace účastníkovi.
+- FEATURE - Zakázkový bod - 11. - Pořadatel může zaslat automaticky upomínku pro zaplacení tím, že stiskne tlačítko „urgovat platbu“ v tabulce s registracemi. Následně se otevře nové okno, kde může upravit text odpovědi.
 
 ### Nice to have
 
