@@ -16,10 +16,10 @@
 | Only logged in users see all registration in a table                                                                                         |    P:two:     |       :heavy_check_mark: |
 | There is a employee log in of users functionality                                                                                            |    P:two:     |                      :o: |
 | Admin gets after registration a confirmation email                                                                                           |    P:two:     |       :heavy_check_mark: |
-| Admin can log in and see admin section, others can not                                                                                       |    P:two:     |                      :o: |
+| Admin can log in and see admin section, others can not                                                                                       |    P:two:     |       :heavy_check_mark: |
 | There are 2 accounts for admin and 2 accounts for readers                                                                                    |    P:two:     |                      :o: |
 | There is restoration of forgotten password by using admin email                                                                              |    P:two:     |                      :o: |
-| Admin can edit details of a registration                                                                                                     |    P:two:     |                      :o: |
+| Admin can edit details of a registration                                                                                                     |    P:two:     |       :heavy_check_mark: |
 | Create/Edit event form has JS dynamic info section before submit, what is the total amount of people there are tickets and the Total revenue |    P:two:     |       :heavy_check_mark: |
 |                                                                                                                                              |               |                          |
 | X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X                                                  | X xxx X xxx X |                  X xxx X |
@@ -37,9 +37,9 @@
 | Google analytics                                                                                                                             |   P:three:    |                      :o: |
 | Payment confirmation - by status switch on every reservation - ? user receives just email?                                                   |   P:three:    | :hourglass_flowing_sand: |
 | Admin can edit in settings the contact email, link to main website, contact phone number                                                     |   P:three:    |                      :o: |
-| Case - registration transfer : Description 1 ...                                                                                             |   P:three:    |                      :o: |
-| Admin can get list of email adresses by type (current event registration - all/paid/waiting for payment/delayed)                             |   P:three:    |                      :o: |
-| Admin can put a admin-note to a registration - like transfered registration from last cancelled original event                               |   P:three:    |                      :o: |
+| Case - registration transfer of already paid ticket                                                                                          |   P:three:    |                      :o: |
+| Admin can get list of data export of registrations by event ID in CSV file                                                                   |   P:three:    |       :heavy_check_mark: |
+| Admin can put a admin-note to a registration - like transfered registration from last cancelled original event                               |   P:three:    |                      ??? |
 |                                                                                                                                              |               |                          |
 | X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X xxx X                                                  | X xxx X xxx X |                  X xxx X |
 |                                                                                                                                              |               |                          |
@@ -50,7 +50,7 @@
 | Case - event cancellation : generate cancellation email                                                                                      |   P:muscle:   |                      :o: |
 | Case - event cancellation : in cancelation email user options - button for refund option, button for reschedule option                       |   P:muscle:   |                      :o: |
 | Case - copy a new event from old events table (condition - all events must be closed or passed)                                              |   P:muscle:   |                      :o: |
-| Side Bar Fce - ukázat sekci s info textem o akci s očekávanými tržbami celkem a v jednotlivých kategoriích                                   |   P:muscle:   |                      :o: |
+| Side Bar Fce - ukázat sekci s info textem o akci s očekávanými tržbami celkem a v jednotlivých kategoriích                                   |   P:muscle:   |       :heavy_check_mark: |
 | Side Bar Fce - ukázat sekci nápovědy pro usera                                                                                               |   P:muscle:   |                      :o: |
 | Side Bar Fce - ukázat link na user manuál                                                                                                    |   P:muscle:   |                      :o: |
 
@@ -62,29 +62,24 @@
 - user sekce po přihlášení - možnost změnit heslo
 - Ukládát plně české znaky pro jména
 
-## Descriptions
 
-- Description 1 : děla uživatel sám z emailu do 48hodin před začátkem akce pře email, kde má potvrzení o platbě. Klient dostane potvrzení mailem admin. K registraci se přidá system-note o transferu
+## Hlavní funkcionalita - dodělávky
 
-## Form validation
-- form validation video : https://www.youtube.com/watch?v=rsd4FNGTRBw
-
-## hlavní funkcionalita - dodělávky
-
-
-* zviditelnit other option ticket name v tabulce přes element "aria-label"
+- 0) zviditelnit other option ticket name v tabulce přes element "aria-label" - eventuelně při otevírání modálního okna čerpat data jen a pouze se `<span>` kde jsou vlastní data uložené v databázi 
+- 1) FEATURE - když user objednává lístek tak se dynamicky dotázat do databíze zda je tento lístek k dispozici - potíže při prodeje posledního lístku ; pokud jsou lístky již vyprodané, tak si uživatel dostane na waiting list 
+- 2) FEATURE - po přihlášení se na admin stránce ukazují data o registracích - zde plnit info skutečnými daty z databáze o registracích 
+- 3) FEATURE - Zakázkový bod - 11. - Pořadatel může zaslat automaticky upomínku pro zaplacení tím, že stiskne tlačítko „urgovat platbu“ v tabulce s registracemi. Následně se otevře nové okno, kde může upravit text odpovědi.
+- 4) FEATURE - Zakázkový bod - 10. - Pokud dojde ke změně uložené registrace , uloží se změna do databáze a odešle se notifikace pořadateli a notifikace účastníkovi.
+- 5) Google analytics
 
 - BUGFIX - v úpravě description použít dynamické odkazy na obrázky emotikonů
-- !!! BUGFIX - ! opravit enabled sections - když je tam sekce 2 disabled a obsahuje uvnitř texty (situace rozpor create a edit ! )
-- !!! FEATURE - když user objednává lístek tak se dynamicky dotázat do databíze zda je tento lístek k dispozici - potíže při prodeje posledního lístku ; pokud jsou lístky již vyprodané, tak si uživatel dostane na waiting list 
+- !! BUGFIX - ! opravit enabled sections - když je tam sekce 2 disabled a obsahuje uvnitř texty (situace rozpor create a edit ! )
 - ! Feature - při úpravě řádku registrace poslat dotaz na řádek a rehreshnout data řádku v tabulce
 
-- FEATURE - plnit infromace na úvodní obrazovce skutečnými daty z registrací 
-- FEATURE - Zakázkový bod - 10. - Pokud dojde ke změně uložené registrace , uloží se změna do databáze a odešle se notifikace pořadateli a notifikace účastníkovi.
-- FEATURE - Zakázkový bod - 11. - Pořadatel může zaslat automaticky upomínku pro zaplacení tím, že stiskne tlačítko „urgovat platbu“ v tabulce s registracemi. Následně se otevře nové okno, kde může upravit text odpovědi.
 
 ### Nice to have
 
 - FEATURE - když jsou lístky, které chci pryč, tak zákazník může vyplnit krátký formulář, kde bude emailem notifikován, pokud se objevily nové lístky pro danou jednu událost ( zákazník zde vyplní své údaje, kontakt a o jaký typ lístku má zájem ) ; Admin pak bude mít k události ještě plnící se waiting list
 - REFACTOR - vyřadit couple tiskets enabled - místo toho dát do kategorie - počet 0
 - process form data - disallow reposting registration form on refresh of the page : https://stackoverflow.com/questions/2666882/how-to-avoid-resending-data-on-refresh-in-php
+- form validation video : https://www.youtube.com/watch?v=rsd4FNGTRBw
