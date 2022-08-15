@@ -52,7 +52,7 @@
       $sql = "UPDATE `registrations` SET `paystatus`='$paymentoption', `adminEditedOrder`='$currentAdminEditedOrder edited paystatus $date;' WHERE orderID='$targetOrderId'";
 
       if ($paymentoption == "3 - reminder sent" ) {
-        $postMail = paymentreminder($targetOrderId);
+        $postMail = paymentreminder($targetOrderId, $connector);
       }
     } else if ($messageName == "updateorder") {
       $sql = "UPDATE `registrations` SET dancerKind = '$dancerkind', passType = '$passType', otherTicketOptions = '$otherTicketOptions', otherDancerKind = '$otherDancerKind', clientName = '$clientName', clientEmail = '$clientEmail', clientPhone = '$clientPhone', clientCountry = '$clientCountry', clientComments = '$clientComments', `adminEditedOrder`='$currentAdminEditedOrder edited order data $date;' WHERE orderID='$targetOrderId'";

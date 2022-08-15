@@ -1,6 +1,6 @@
 <?php
 
-function paymentreminder( $originalOrderId ) {
+function paymentreminder( $originalOrderId, $connector ) {
 
   include("./handlers/handler_getselectedorderdata.php");
 
