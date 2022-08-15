@@ -118,9 +118,16 @@
                     <div class='update-pay--resultnotice'> </div>
                   </div>";
 
-                  $otherTicketOptionName = ( in_array($row["otherTicketOptions"], ['1 - special type1 single','2 - special type1 couple'], true ) ) ? 
-                                          ( " aria-label=\"" . $eventDataSpecialType1RegistrationName . "\"" )
-                                          : ( in_array($row["otherTicketOptions"], ['3 - special type2 single','4 - special type2 couple'], true ) ) ? ( " aria-label=\"" . $eventDataSpecialType2RegistrationName . "\"" ) : "aria-label=\"\"";
+                  $otherTicketOptionName = "";
+                  $rowOtherTicketOptions = $row["otherTicketOptions"];
+
+                  $spec1 = array("1 - special type1 single","2 - special type1 couple");
+                  $spec2 =array("3 - special type2 single","4 - special type2 couple");
+                  if (in_array($rowOtherTicketOptions, $spec1)) {
+                    $otherTicketOptionName = $eventDataSpecialType1RegistrationName;
+                  } elseif (in_array($rowOtherTicketOptions, $spec2)) {
+                    $otherTicketOptionName = $eventDataSpecialType2RegistrationName;
+                  }
 
                   echo "<tr class='orderId" . $row["orderID"] . "'>" . 
                         "<td>" . $row["orderID"] . "</td>" .
@@ -130,7 +137,7 @@
                         "<td title='price'>" . $row["formPrice"] . "</td>" .
                         "<td title='passType'>" . $row["passType"] . "</td>" .
                         "<td title='dancerKind'>" . $row["dancerKind"] . "</td>" .
-                        "<td title='otherTicketOptions' " . $otherTicketOptionName . ">" . $row["otherTicketOptions"] . "</td>" .
+                        "<td title='otherTicketOptions' " . $otherTicketOptionName . "> <span class='name'> " . $otherTicketOptionName . " </span> <br> <span class='code text-info'> " . $row["otherTicketOptions"] . " </span> </td>" .
                         "<td title='otherDancerKind' >" . $row["otherDancerKind"] . "</td>" .
                         "<td title='clientEmail' >" . $row["clientEmail"] . "</td>" .
                         "<td title='clientPhone'>" . $row["clientPhone"] . "</td>" .
