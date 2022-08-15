@@ -3,6 +3,8 @@
   session_start();
   require '../config/config.php';
 
+  include("emailing/paymentreminder.php");
+
   $username = $_SESSION['username'];
   $usernamelevel = $_SESSION['user_level'];
 
@@ -43,8 +45,15 @@
     $sql = "";
     $date = date("d.m.Y" );
     $currentAdminEditedOrder = "";
+
+    $postMail = "";
+
     if($messageName == "updatepayment") {
       $sql = "UPDATE `registrations` SET `paystatus`='$paymentoption', `adminEditedOrder`='$currentAdminEditedOrder edited paystatus $date;' WHERE orderID='$targetOrderId'";
+
+      if ($paymentoption == "3 - reminder sent" ) {
+        $postMail = paymentreminder($targetOrderId);
+      }
     } else if ($messageName == "updateorder") {
       $sql = "UPDATE `registrations` SET dancerKind = '$dancerkind', passType = '$passType', otherTicketOptions = '$otherTicketOptions', otherDancerKind = '$otherDancerKind', clientName = '$clientName', clientEmail = '$clientEmail', clientPhone = '$clientPhone', clientCountry = '$clientCountry', clientComments = '$clientComments', `adminEditedOrder`='$currentAdminEditedOrder edited order data $date;' WHERE orderID='$targetOrderId'";
     }
@@ -57,10 +66,10 @@
     }
 
     if (mysqli_query($connector, $sql)) {
-      echo json_encode(array("statusCode"=>200, "content"=> $content ));
+      echo json_encode(array("statusCode"=>200, "content"=> $content, "postMail" => $postMail ));
     } 
     else {
-      echo json_encode(array("statusCode"=>418, "content"=> $content ));
+      echo json_encode(array("statusCode"=>418, "content"=> $content, "postMail" => $postMail ));
     }
 
   }
