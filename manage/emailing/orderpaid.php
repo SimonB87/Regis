@@ -121,9 +121,8 @@
                         padding-top: 15px; 
                         color: #35384e;
                         font-family: sans-serif;' class='paragraph'>
-                          <p>Please send the price: <strong>" . $storedRegFormPrice . "</strong></p>
-                          <p>with Variable symbol (VS/Variabilní symbol) <strong>" . $originalOrderId . "</strong></p>
-                          <p>to account <strong>111222333/2010 </strong>(Fio banka) </p>
+                          <p>Now you have an option to transfer the ticket to another option, if you decide to.</p>
+                          <p>Click this link to <a style='padding-top: 10px;padding-right: 10px;padding-bottom: 10px;padding-left: 10px;background: rgb(71, 157, 193);text-decoration: none;'><button style='background: rgb(71, 157, 193); border: 0 solid #000;color: #fff;'>Transfer your ticket</button></a></p>
                       </td>
                     </tr>
                     <tr>
