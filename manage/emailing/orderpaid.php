@@ -6,7 +6,7 @@
 
   $to				= 	$storedRegClientEmail;
 
-  $subject	=		"Payment reminder - Your order-ID: \"" . $storedRegOrderId . "\" na akci \"" . $storedRegEventName . "\" | Platform REGIS";
+  $subject	=		"Your payment was received - order-ID: \"" . $storedRegOrderId . "\" na akci \"" . $storedRegEventName . "\" | Platform REGIS";
 
 
   $message_header	=	"<!-- BODY -->
@@ -76,7 +76,7 @@
                         padding-bottom: 0;
                         color: #ffffff;
                         font-family: sans-serif;' class='supheader'>
-                          We remind you to pay for tickets for event " . $storedRegEventName . " you signed up for. Event is organized by Mauritius & Elvira Bachata Prague team.
+                          Your payment was received for event " . $storedRegEventName . " you signed up for. Event is organized by Mauritius & Elvira Bachata Prague team.
                       </td>
                     </tr>
 
@@ -87,7 +87,7 @@
                         padding-top: 5px;
                         color: #ffffff;
                         font-family: sans-serif;' class='header'>
-                         Thank you for registering for then event, below you will find the payment instructions. After paying the event organizer will send you your ticket.
+                         Since you paid, you will receive your ticket soon. 
                       </td>
                     </tr>
                     <tr>
@@ -124,34 +124,6 @@
                           <p>Please send the price: <strong>" . $storedRegFormPrice . "</strong></p>
                           <p>with Variable symbol (VS/Variabilní symbol) <strong>" . $originalOrderId . "</strong></p>
                           <p>to account <strong>111222333/2010 </strong>(Fio banka) </p>
-                      </td>
-                    </tr>
-                    <tr>
-                    <!-- separation line -->
-                      <td align='center' valign='top' style='border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 6.25%; padding-right: 6.25%; width: 87.5%;
-                        padding-top: 30px;' class='line'><hr
-                        color='#565F73' align='center' width='100%' size='1' noshade style='margin: 0; padding: 0;' />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align='center' valign='top' style='border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 6.25%; padding-right: 6.25%; width: 87.5%; font-size: 17px; font-weight: 400; line-height: 160%;
-                        padding-top: 15px; 
-                        color: #35384e;
-                        font-family: sans-serif;' class='paragraph'>
-                          <h4>For international payments</h4>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align='center' valign='top' style='border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 6.25%; padding-right: 6.25%; width: 87.5%; font-size: 17px; font-weight: 400; line-height: 160%;
-                        padding-top: 15px; 
-                        color: #35384e;
-                        font-family: sans-serif;' class='paragraph'>
-                        <p>IBAN: <strong>00420111222333002010</strong></p>
-                        <p>BIC: <strong>CZDOMINANTALFA</strong></p>
-                        <p>Bank address: <strong>Fio banka, a.s. Millennium Plaza, V Celnici 10, Prague 1, ZIP Code : 117 21. Czech Republic</strong></p>
-                        <p>Account holder name: <strong>Mauritius The Greatest</strong></p>
-                        <p>Price : <strong>" . $storedRegFormPrice . "</strong></p>
-                        <p>Notice for receiver: <strong>\"Order ID:" . $originalOrderId . ", client: " . $storedRegClientName . " , contact: " . $storedRegClientEmail. "\"</strong></p>
                       </td>
                     </tr>
                     <tr>
@@ -236,15 +208,15 @@ $message_footer = "	<!-- LINE -->
 
   $message = $message_header . $message_start . $message_payments . $message_summary . $message_footer;
                 
-  $replyto	=		"From: mauritius.elvira@gmail.com "  . " \n\r" . "Reply-To:" . $storedRegClientEmail . " \n\r";
+  $replyto	=		"From: mauritius.elvira@gmail.com "  . " \n\r" . "Reply-To:" . $storedRegClientEmail . " \n\r"; //TODO - edit from mail
   
   $headers = "Content-Type: text/html; charset=UTF-8";
 
 
   if (mail($to, $subject, $message, $headers))  {
-    $postMail = "The mail to remind payment was sent.";
+    $postMail = "The mail to confirming payment was sent.";
   } else {
-    $postMail = "The mail to remind payment failed to be sent.";
+    $postMail = "The mail to confirming payment failed to be sent.";
   }
 
 ?>

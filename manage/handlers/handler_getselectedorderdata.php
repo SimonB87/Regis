@@ -16,9 +16,9 @@ if (mysqli_connect_errno()) {
 }
 
 //debug
-if (!mysqli_query($connector, "SET a=1")) {
-  printf("Error message: %s\n", mysqli_error($connector));
-}
+//if (!mysqli_query($connector, "SET a=1")) {
+//  printf("Error message: %s\n", mysqli_error($connector));
+//}
 
 /*if (!mysqli_set_charset($connector, "utf8")) {
   printf("Error loading character set utf8: %s\n", mysqli_error($connector));
@@ -27,7 +27,7 @@ if (!mysqli_query($connector, "SET a=1")) {
           //printf("Current character set: %s\n", mysqli_character_set_name($con));//used only for testing
   }*/
 
-  $sql = "SELECT * FROM registrations WHERE id='$originalOrderId' LIMIT 1";
+  $sql = "SELECT * FROM registrations WHERE orderID='$originalOrderId' LIMIT 1";
 
   $results = $connector-> query($sql);
   //Error case
