@@ -31,8 +31,8 @@ if (!mysqli_set_charset($connector, "utf8")) {
     <?php
     include("shared/head.php");
     ?>
-
     <title> Event registration | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
+    <link href="../shared/libs/charts.js/css/chart.min.css" rel="stylesheet" >
 
   </head>
   <body style="background: #303030;">
@@ -67,6 +67,13 @@ if (!mysqli_set_charset($connector, "utf8")) {
             </div>
           </div>
 
+          <div class="row">
+            <div class="col-lg-6 col-md-12 graf2 polozka dataset center-margin padding-regular">
+						  <h4 class="text-center ">Registrations data</h4>
+					 	  <canvas id="myPieChart"></canvas>
+					  </div>
+          </div>
+
           <div class="row"> 
             <div class="col-6 center-margin text-center my-5">
                 <a href="registrations.php">
@@ -87,10 +94,12 @@ if (!mysqli_set_charset($connector, "utf8")) {
 ?>
 
     <script src="../shared/libs/bootstrap/js/bootstrap.js"></script>
+    <script src="../shared/libs/charts.js/js/chart.bundle.min.js"></script>
     <script src="../shared/assets/js/formvalidation.js"></script>
     <script src="../shared/assets/js/togglevisibility.js"></script>
     <script src="../shared/assets/js/hidenotification.js"></script>
     <script src='../shared/assets/js/scipt.js' defer></script>
+    <script src="../shared/assets/js/chartjsinit.js"></script>
 
   </body>
 </html>
