@@ -93,7 +93,8 @@
                   $paymentStatusUnpaid = ($row["paystatus"] == "1 - unpaid") ? true : false;
                   $paymentStatusPaid = ($row["paystatus"] == "2 - paid") ? true : false;
                   $paymentStatusReminder = ($row["paystatus"] == "3 - reminder sent") ? true : false;
-                  $paymentStatusError = ( $paymentStatusUnpaid == false ) && ( $paymentStatusPaid == false ) &&  ( $paymentStatusReminder == false );
+                  $paymentStatusCancelled = ($row["paystatus"] == "4 - cancelled registration") ? true : false;
+                  $paymentStatusError = ( $paymentStatusUnpaid == false ) && ( $paymentStatusPaid == false ) && ( $paymentStatusReminder == false ) && ( $paymentStatusCancelled == false );
                   $stylePaystatus = ($paymentStatusPaid == true) ? " bg-success text-white " : " bg-warning ";
 
                   $paymentStatus = "<div class='update-pay--parent' title='id".$row["orderID"]."' aria-value-now='".$row["orderID"]."'>
@@ -103,6 +104,7 @@
                         <option class='bg-white text-black' value='1 - unpaid' " . ( ($paymentStatusUnpaid == true) ? "selected" : "" ) . " >Unpaid</option>
                         <option class='bg-white text-black' value='2 - paid' " . ( ($paymentStatusPaid == true) ? "selected" : "" ) . ">Paid</option>
                         <option class='bg-white text-black' value='3 - reminder sent' " . ( ($paymentStatusReminder == true) ? "selected" : "" ) . ">Reminder sent</option>
+                        <option class='bg-white text-black' value='4 - cancelled registration' " . ( ($paymentStatusCancelled == true) ? "selected" : "" ) . ">Cancelled registration</option>
                         <option class='bg-white text-black' value='0 - error' " . ( ($paymentStatusError == true) ? "selected" : "" ) . ">Error</option>
                         </select>
                       <input class='visibility-hidden' id='orderID".$row["orderID"]."' name='orderID' value='".$row["orderID"]."'>
