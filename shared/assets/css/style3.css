@@ -12,6 +12,16 @@
   --padding-small: 0.5rem;
   --padding-regular: 2rem;
   --padding-very-small: 0.2rem;
+  --info-main: #45aaf2;
+  --info-darker: #2d98da;
+  --paid-main: #26de81;
+  --paid-darker: #20bf6b;
+  --unpaid-main: #fd9644;
+  --unpaid-darker: #fa8231;
+  --reminder-main: #a55eea;
+  --reminder-darker: #8854d0;
+  --cancelled-main: #fc5c65;
+  --cancelled-darker: #eb3b5a;
 }
 @keyframes scale-bigger-smaller {
   0% {
@@ -86,6 +96,21 @@
 .padding-small-topBottom {
   padding-top: var(--padding-small);
   padding-bottom: var(--padding-small);
+}
+.padding-smaller {
+  padding: calc(var(--padding-small) * 0.5);
+}
+.padding-smaller-top {
+  padding-top: calc(var(--padding-small) * 0.5);
+}
+.padding-smaller-bottom {
+  padding-bottom: calc(var(--padding-small) * 0.5);
+}
+.padding-smaller-left {
+  padding-left: calc(var(--padding-small) * 0.5);
+}
+.padding-smaller-right {
+  padding-right: calc(var(--padding-small) * 0.5);
 }
 .padding-regular {
   padding: var(--padding-regular);
@@ -592,4 +617,28 @@ nav {
   display: flex;
   width: 100%;
   justify-content: flex-end;
+}
+.tiles {
+  padding: var(--padding-small);
+  border-radius: 0.25rem;
+}
+.tiles-info {
+  background: var(--info-main);
+  border: 3px solid var(--info-darker);
+}
+.tiles-paid {
+  background: var(--paid-main);
+  border: 3px solid var(--paid-darker);
+}
+.tiles-unpaid {
+  background: var(--unpaid-main);
+  border: 3px solid var(--unpaid-darker);
+}
+.tiles-reminder {
+  background: var(--reminder-main);
+  border: 3px solid var(--reminder-darker);
+}
+.tiles-cancelled {
+  background: var(--cancelled-main);
+  border: 3px solid var(--cancelled-darker);
 }
