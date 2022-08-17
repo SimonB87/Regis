@@ -11,8 +11,10 @@ if (!mysqli_set_charset($connector, "utf8")) {
 	//printf("Current character set: %s\n", mysqli_character_set_name($connector));//used only for testing
 }
 
+$authorizedUser = ( ($usernamelevel == "9") || ($usernamelevel == "8") );
+
 /*if the user is loggen in, make the username variable equal to username. If user is not logged in, send him back to register page.*/
-if ( (isset($_SESSION['username'])) && ( ($usernamelevel == "9") ) || (($usernamelevel == "8"))) {
+if ( (isset($_SESSION['username'])) && ( $authorizedUser == true )) {
   $userLoggedIn = $_SESSION['username'];
   $user_details_query = mysqli_query($connector, "SELECT * FROM users WHERE username='$userLoggedIn'");
   $user = mysqli_fetch_array($user_details_query);
@@ -41,6 +43,7 @@ else {
 
     <?php
     include("shared/navigation.php");
+
     ?> 
 
     <div class="padding-small" style="background: #fff;">
@@ -55,36 +58,35 @@ else {
 
         <div class="container px-4 py-5 my-5">
 
-          <div class="row">
-            <div class="col-12">
-              <h2 class="text-center display-7 fw-bold">Current event summary</h2>
-            </div>
-            <div class="col-6 center-margin">
-            <!-- TODO - statistics about current event registrations - show data from DB-->
-              <p><strong> Event name : </strong> Tester & Testie Easter Prague Bachata Weekend</p>
-              <p><span class="fw-bold bg-secondary text-white padding-small rounded">20</span> Number of registrations <p>
-              <p><span class="fw-bold bg-success text-white padding-small rounded">15</span> Paid registrations </p>
-              <p><span class="fw-bold bg-info text-white padding-small rounded">3</span> Registrations waiting for payment </p>
-              <p><span class="fw-bold bg-danger text-white padding-small rounded">2</span> Delayed registration payments </p>
-            </div>
-          </div>
+        <?php
+        
+        if ( $authorizedUser == true ) {
 
-          <div class="row">
-            <div class="col-lg-6 col-md-12 graf2 polozka dataset center-margin padding-regular">
-						  <h4 class="text-center ">Registrations data</h4>
-					 	  <canvas id="myPieChart"></canvas>
-					  </div>
-          </div>
+          $isEventEdited = true;
+          include("handlers/handler_geteventdata.php");
 
-          <div class="row"> 
-            <div class="col-6 center-margin text-center my-5">
-                <a href="registrations.php">
-                  <button type="button" class="btn btn-primary">
-                    MANAGE REGISTRATIONS
-                  </button>
-                </a>
-            </div>
-          </div>
+          if (isset($eventDataEventName)) {
+            if ( strlen($eventDataEventName) > 2 ) {
+              
+              include("handlers/handler_registrationdataforanalytics.php");
+              include("components/registrationanalytics.php");
+    
+              mysqli_close($connector);
+
+            } else {
+              echo "<div class='row'> <div class='col-12 padding-regular bg-info text-white'> <h3> Looks like there is no open event. </h3> <h5> Create a new event. </h5> </div></div>";
+            }
+          } else {
+            echo "<div class='row'> <div class='col-12 padding-regular bg-info text-white'> <h3> Looks like there is no open event. </h3> <h5> Create a new event. </h5> </div></div>";
+          }
+
+
+
+        } else {
+          echo "<div class='row'> <div class='col-12 padding-regular bg-warning'> <h3 class='text-white'> User not authorized</h3> </div></div>";
+        }
+
+        ?>
 
         </div>
 
@@ -102,6 +104,7 @@ else {
     <script src="../shared/assets/js/hidenotification.js"></script>
     <script src='../shared/assets/js/scipt.js' defer></script>
     <script src="../shared/assets/js/chartjsinit.js"></script>
+    <script src="../shared/assets/js/populateregistrationsdata.js" defer></script>
 
   </body>
 </html>

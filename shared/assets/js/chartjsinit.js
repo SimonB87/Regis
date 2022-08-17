@@ -1,6 +1,6 @@
 let myData = {
   datasets: [{
-    data: [10, 20, 30, 5],
+    data: [regData.paidRegistrations, regData.unpaidRegistrations, regData.remindedPayment, regData.cancelledRegistrations],
     backgroundColor: ['#198754', '#ff7846', '#ff5719', '#ff7d9b'],
     borderColor: ['#16794b', '#ff7846', '#ff5719', '#f67391']
   }],

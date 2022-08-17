@@ -95,7 +95,7 @@
                   $paymentStatusReminder = ($row["paystatus"] == "3 - reminder sent") ? true : false;
                   $paymentStatusCancelled = ($row["paystatus"] == "4 - cancelled registration") ? true : false;
                   $paymentStatusError = ( $paymentStatusUnpaid == false ) && ( $paymentStatusPaid == false ) && ( $paymentStatusReminder == false ) && ( $paymentStatusCancelled == false );
-                  $stylePaystatus = ($paymentStatusPaid == true) ? " bg-success text-white " : " bg-warning ";
+                  $stylePaystatus = ($paymentStatusPaid == true) ? " bg-success text-white " : ( ($paymentStatusCancelled == true) ? " text-white bg-danger " : " bg-warning " );
 
                   $paymentStatus = "<div class='update-pay--parent' title='id".$row["orderID"]."' aria-value-now='".$row["orderID"]."'>
                     <div>
