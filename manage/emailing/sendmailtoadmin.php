@@ -2,7 +2,7 @@
 
   $to				= 	"buryans@gmail.com";
 
-  $subject	=		"Test environment - Your event has a new order with ID: \"" . $storedOrderID . "\" for your event \"" . $storedEventName . "\" | Platforma REGIS";
+  $subject	=		"Your event has a new order with ID: \"" . $storedOrderID . "\" for your event \"" . $storedEventName . "\" | Platform REGIS";
 
   $message_header	=	"<!-- BODY -->
                     <!-- Set message background color (twice) and text color (twice) -->

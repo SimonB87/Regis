@@ -40,27 +40,37 @@
       $content = $content . " Connected to database. ";
     }
 
-    $sql = "";
+    $sql_update = "";
     $date = date("d.m.Y" );
-    $currentAdminEditedOrder = "";
+    $currentAdminEditedOrder = (isset($_SESSION['username'])) ? $_SESSION['username'] : "";
+    $adminNote = $currentAdminEditedOrder . " edited paystatus " . $date;
+
+    $postMail = "";
+
     if($messageName == "updatepayment") {
-      $sql = "UPDATE `registrations` SET `paystatus`='$paymentoption', `adminEditedOrder`='$currentAdminEditedOrder edited paystatus $date;' WHERE orderID='$targetOrderId'";
+      $sql_update = "UPDATE `registrations` SET `paystatus`='$paymentoption', `adminEditedOrder`='$adminNote' WHERE orderID='$targetOrderId'";
+
+      if ( $paymentoption == "2 - paid" ) {
+        include("emailing/orderpaid.php");
+      } else if ($paymentoption == "3 - reminder sent" ) {
+        include("emailing/paymentreminder.php");
+      } 
     } else if ($messageName == "updateorder") {
-      $sql = "UPDATE `registrations` SET dancerKind = '$dancerkind', passType = '$passType', otherTicketOptions = '$otherTicketOptions', otherDancerKind = '$otherDancerKind', clientName = '$clientName', clientEmail = '$clientEmail', clientPhone = '$clientPhone', clientCountry = '$clientCountry', clientComments = '$clientComments', `adminEditedOrder`='$currentAdminEditedOrder edited order data $date;' WHERE orderID='$targetOrderId'";
+      $sql_update = "UPDATE `registrations` SET dancerKind = '$dancerkind', passType = '$passType', otherTicketOptions = '$otherTicketOptions', otherDancerKind = '$otherDancerKind', clientName = '$clientName', clientEmail = '$clientEmail', clientPhone = '$clientPhone', clientCountry = '$clientCountry', clientComments = '$clientComments', `adminEditedOrder`='$currentAdminEditedOrder edited order data $date;' WHERE orderID='$targetOrderId'";
     }
 
     // Perform a query, check for error
-    if (!$connector -> query($sql)) {
+    if (!$connector -> query($sql_update)) {
       $content = $content . ( "Error description: " . $connector -> error) .";";
     } else {
       $content = $content . " Information updated. ";
     }
 
-    if (mysqli_query($connector, $sql)) {
-      echo json_encode(array("statusCode"=>200, "content"=> $content ));
+    if (mysqli_query($connector, $sql_update)) {
+      echo json_encode(array("statusCode"=>200, "content"=> $content, "postMail" => $postMail, "debug" => "..." ));
     } 
     else {
-      echo json_encode(array("statusCode"=>418, "content"=> $content ));
+      echo json_encode(array("statusCode"=>418, "content"=> $content, "postMail" => $postMail, "debug" => "..." ));
     }
 
   }

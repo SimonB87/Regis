@@ -35,7 +35,7 @@ function postUpdatePayment(infonum) {
       success: function (dataResult) {
         var dataResult = JSON.parse(dataResult);
         if (dataResult.statusCode == 200) {
-          targetEl.text(dataResult.content);
+          targetEl.text(dataResult.content + " " + dataResult.postMail);
           var targetSelector = $('.update-pay--parent[title=id' + targetOrderId + '] select[name=paymentoption]');
           targetSelector.removeClass("bg-info");
           targetSelector.removeClass("bg-success");

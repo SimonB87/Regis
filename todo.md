@@ -65,12 +65,10 @@
 
 ## Hlavní funkcionalita - dodělávky
 
-- 0) zviditelnit other option ticket name v tabulce přes element "aria-label" - eventuelně při otevírání modálního okna čerpat data jen a pouze se `<span>` kde jsou vlastní data uložené v databázi 
 - 1) FEATURE - když user objednává lístek tak se dynamicky dotázat do databíze zda je tento lístek k dispozici - potíže při prodeje posledního lístku ; pokud jsou lístky již vyprodané, tak si uživatel dostane na waiting list 
 - 2) FEATURE - po přihlášení se na admin stránce ukazují data o registracích - zde plnit info skutečnými daty z databáze o registracích 
-- 3) FEATURE - Zakázkový bod - 11. - Pořadatel může zaslat automaticky upomínku pro zaplacení tím, že stiskne tlačítko „urgovat platbu“ v tabulce s registracemi. Následně se otevře nové okno, kde může upravit text odpovědi.
-- 4) FEATURE - Zakázkový bod - 10. - Pokud dojde ke změně uložené registrace , uloží se změna do databáze a odešle se notifikace pořadateli a notifikace účastníkovi.
-- 5) Google analytics
+- 3) FEATURE - Zakázkový bod - 10. - Pokud dojde ke změně uložené registrace , uloží se změna do databáze a odešle se notifikace pořadateli a notifikace účastníkovi.
+- 4) Google analytics
 
 - BUGFIX - v úpravě description použít dynamické odkazy na obrázky emotikonů
 - !! BUGFIX - ! opravit enabled sections - když je tam sekce 2 disabled a obsahuje uvnitř texty (situace rozpor create a edit ! )

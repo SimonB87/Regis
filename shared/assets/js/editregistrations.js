@@ -9,7 +9,7 @@ function editRegistration(orderNum) {
   const orderDancerKindVal = document.querySelector(orderRowSelector + " td[title=dancerKind]").innerText;
   const orderPriceVal = document.querySelector(orderRowSelector + " td[title=price]").innerText;
   const orderPassTypeVal = document.querySelector(orderRowSelector + " td[title=passType]").innerText;
-  const orderOtherTicketOptionsVal = document.querySelector(orderRowSelector + " td[title=otherTicketOptions]").innerText;
+  const orderOtherTicketOptionsVal = document.querySelector(orderRowSelector + " td[title=otherTicketOptions] .code").innerText;
   const orderOtherDancerKindVal = document.querySelector(orderRowSelector + " td[title=otherDancerKind]").innerText;
   const orderClientNameVal = document.querySelector(orderRowSelector + " td[title=clientName]").innerText;
   const orderClientEmailVal = document.querySelector(orderRowSelector + " td[title=clientEmail]").innerText;
