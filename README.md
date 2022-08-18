@@ -15,6 +15,7 @@
 	* kontrolovat jestli poskytovatel umožňuje založit mySQL databáze 
 	* nahát na doménu kód s mojí web aplikací
   - folder for file uploards must have a folder at manage/uploads
+  * povolit HTTPS na serveru
 
 
 
