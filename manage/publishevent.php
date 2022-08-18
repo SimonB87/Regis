@@ -51,20 +51,20 @@ require 'handlers/userlogin.php';
 
           </div>
 
-          <div class="row">
-            <?php
-            include("components/publishevent_table.php");
-            ?>
-          </div>
+
 
         </div>
       </div>
 
-      <div class="container text-center">
-
-    </div>
-
     </main>
+
+    <div class="row bg-white padding-small">
+      <div class="custom-container">
+        <?php
+        include("components/publishevent_table.php");
+        ?>
+      </div>
+    </div>
 
 <?php
     include("../shared/contactsection.php");
