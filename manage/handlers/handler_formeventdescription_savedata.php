@@ -1,8 +1,8 @@
 <?php
 
 // change character set to utf8
-if (!mysqli_set_charset($connector, "utf8mb4")) {
-	printf("Error loading character set utf8mb4: %s\n", mysqli_error($connector));
+if (!mysqli_set_charset($connector, "utf8")) {
+	printf("Error loading character set utf8: %s\n", mysqli_error($connector));
 	exit();
 } else {
 	//printf("Current character set: %s\n", mysqli_character_set_name($connector));//used only for testing
