@@ -1,6 +1,6 @@
 <div class="row padding-regular-top">
 
-  <div class="border padding-regular bg-light rounded-3 bg-light border">
+  <div class="row border padding-regular bg-light rounded-3 bg-light border">
 
     <div class="col-12 text-center">
       <span> Event set-up links : </span>
@@ -12,7 +12,7 @@
     $isModeEventCreate = strpos($urlpath, "createnewevent"); // createneweventsetupmain // createneweventeventdescription //createneweventeventformpreview // createneweventposter.php
     ?>
 
-    <div class="col-12 text-center">
+    <div class="col-12 text-center setupnav">
 
       <a id="nav_eventsetupmain"
         href=<?php if($isModeEventCreate) {echo "createneweventsetupmain.php"; } else {echo "eventsetupmain.php"; } ?>
@@ -30,9 +30,8 @@
         href=<?php if($isModeEventCreate) {echo "createneweventeventformpreview.php"; } else {echo "eventformpreview.php"; } ?>
         class="weblink padding-small"> Event register form </a>
 
+        <a id="nav_eventform" href="publishevent.php" class="weblink padding-small"> Publish event (leave event setup) </a>
 
-
-      <a id="nav_eventform" href="publishevent.php" class="weblink padding-small"> Publish event (leave event setup) </a>
     </div>
 
   </div>

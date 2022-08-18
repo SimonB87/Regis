@@ -541,6 +541,12 @@ nav {
     padding-right: 0.5rem;
   }
 }
+@media only screen and (max-width: 1000px) {
+  .setupnav {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .pagination li {
   padding: 0.1rem;
 }
@@ -641,4 +647,24 @@ nav {
 .tiles-cancelled {
   background: var(--cancelled-main);
   border: 3px solid var(--cancelled-darker);
+}
+@media only screen and (min-width: 600px) {
+  .custom-container {
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  .custom-container {
+    max-width: 80vw;
+  }
+}
+@media only screen and (min-width: 1001px) and (max-width: 1600px) {
+  .custom-container {
+    max-width: 70vw;
+  }
+}
+@media only screen and (min-width: 1601px) {
+  .custom-container {
+    max-width: 60vw;
+  }
 }
