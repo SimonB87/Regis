@@ -24,7 +24,18 @@ if(isset($_POST["safe_form_data"])){
   if($usernamelevel == "9") {
 
     $eventDataId = 0;
-    $sql = "SELECT * FROM events WHERE eventStatus = '1 - Registrations open' ORDER BY id DESC LIMIT 1";
+
+    $urlpath = $_SERVER['REQUEST_URI'];
+    $isModeEventCreate = strpos($urlpath, "createnewevent"); // createneweventsetupmain // createneweventeventdescription //createneweventeventformpreview // createneweventposter.php
+
+    $sql = "";
+    if ( $isModeEventCreate == true ) {
+      $sql = "SELECT * FROM events ORDER BY id DESC LIMIT 1";
+    } else {
+      $sql = "SELECT * FROM events WHERE eventStatus = '1 - Registrations open' ORDER BY id DESC LIMIT 1";
+    }
+
+
   
     $results = $connector-> query($sql);
     //Error case
