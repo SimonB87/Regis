@@ -75,6 +75,15 @@
 - !! BUGFIX - createneweventeventformpreview.php - unkwnown variables : dataEventDescription1, dataEventDescription2, dataEventDescription3
 - !! BUGFIX - registration form - summarized price is not populalating in input in Mozilla Firefox
 
+* Administrace
+  - menit prava vsech registrovanych useru
+  - menit polizky menu hlavni stranky
+  - menit platebni udaje
+  - menit texty v emailech
+  - menit odkazy v paticce vcetne social media, emailu a telenonu
+  - mit moznost promazat vybrane poster obrazky z nahranych
+
+
 ### Nice to have
 
 - FEATURE - když jsou lístky, které chci pryč, tak zákazník může vyplnit krátký formulář, kde bude emailem notifikován, pokud se objevily nové lístky pro danou jednu událost ( zákazník zde vyplní své údaje, kontakt a o jaký typ lístku má zájem ) ; Admin pak bude mít k události ještě plnící se waiting list
