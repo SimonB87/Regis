@@ -62,10 +62,10 @@
                   <select id="otherTicketOptions" class="form-select" aria-label="Pass type" required="" name="otherTicketOptions">
                         <option value="" > Other tickets options ...</option>
                         <?php 
-                        echo "<option value='1 - " . $eventDataSpecialType1RegistrationName . "'>" . $eventDataSpecialType1RegistrationName . " - Single " . "</option>";
-                        echo "<option value='2 - " . $eventDataSpecialType1RegistrationName . "'>" . $eventDataSpecialType1RegistrationName . " - Couple " . "</option>";
-                        echo "<option value='3 - " . $eventDataSpecialType2RegistrationName . "'>" . $eventDataSpecialType2RegistrationName . " - Single " . "</option>";
-                        echo "<option value='4 - " . $eventDataSpecialType2RegistrationName . "'>" . $eventDataSpecialType2RegistrationName . " - Couple " . "</option>";
+                        echo "<option value='1 - special type1 single'>" . $eventDataSpecialType1RegistrationName . " - Single " . "</option>";
+                        echo "<option value='2 - special type1 couple'>" . $eventDataSpecialType1RegistrationName . " - Couple " . "</option>";
+                        echo "<option value='3 - special type2 single'>" . $eventDataSpecialType2RegistrationName . " - Single " . "</option>";
+                        echo "<option value='4 - special type2 couple'>" . $eventDataSpecialType2RegistrationName . " - Couple " . "</option>";
                         ?>
                         <option value="0 - None" aria-valuenow="0.0">None</option>
                   </select>
