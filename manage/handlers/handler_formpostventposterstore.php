@@ -84,6 +84,13 @@ if(isset($_POST["submit_poster"])) {
       
         $query = null;
 
+        $sql = "";
+        if ( $isModeEventCreate == true ) {
+          $sql = "UPDATE events SET posterFileName = '$target_file' ORDER BY id DESC LIMIT 1"; // newest event ID
+        } else {
+          $sql = "UPDATE events SET posterFileName = '$target_file' WHERE id=$eventIDVal";
+        }
+
         $query = mysqli_query($connector, "UPDATE events SET posterFileName = '$target_file' WHERE id=$eventIDVal");
 
         $item = null;

@@ -25,9 +25,6 @@ if(isset($_POST["safe_form_data"])){
 
     $eventDataId = 0;
 
-    $urlpath = $_SERVER['REQUEST_URI'];
-    $isModeEventCreate = strpos($urlpath, "createnewevent"); // createneweventsetupmain // createneweventeventdescription //createneweventeventformpreview // createneweventposter.php
-
     $sql = "";
     if ( $isModeEventCreate == true ) {
       $sql = "SELECT * FROM events ORDER BY id DESC LIMIT 1";
@@ -36,7 +33,6 @@ if(isset($_POST["safe_form_data"])){
     }
 
 
-  
     $results = $connector-> query($sql);
     //Error case
     if (!$sql ) {
