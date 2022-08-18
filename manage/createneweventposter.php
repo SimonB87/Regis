@@ -10,9 +10,14 @@ require 'handlers/userlogin.php';
 
     <?php
     include("shared/head.php");
-    ?>
+    include("handlers/handler_iscreatenewevent.php");
 
-    <title> Edit event registration | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
+    if ( $isModeEventCreate == true ) { 
+      echo "<title> Create new event | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>";
+    } else {
+      echo "<title> Edit event poster | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>";
+    }
+    ?>
 
     <link rel="stylesheet" type="text/css" href="../shared/libs/footablebootstrap/css/footable.bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../shared/libs/fontawesome/fontawesome_5.0.0.min.css">
@@ -36,7 +41,7 @@ require 'handlers/userlogin.php';
 
     <main>
 
-      <div class="container my-5 text-center">
+      <div class="container my-lg-5 text-center">
 
         <?php
         include("shared/setupnavigation.php");
@@ -44,8 +49,8 @@ require 'handlers/userlogin.php';
 
         <div class="row padding-regular">
           <div class="col-12 padding-regular">
-            <h1 class="display-5 fw-bold">Event poster</h1>
-            <p class="display-7 fw-bold">Edit the picture for current event </p>
+            <h1 class="display-5 fw-bold"> <?php echo ( ( $isModeEventCreate == true ) ? "Add poster to new event" : " Edit current event poster" ); ?> </h1>
+            <p class="display-7 fw-bold"> Poster shows on top of event regitration page. </p>
           </div>
 
 
