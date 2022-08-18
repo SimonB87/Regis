@@ -62,7 +62,7 @@ $paymentInstructions = "<div class='container'><div class='row'>". $testEnvironm
         "<h4 class='padding-small'>". $htmlLocalIcon ." For Czech participants: </h4>" . 
         "<p> Please send the price: <strong class='toCopy'>" . " " . $formPrice . "</strong> <br> with Variable symbol (VS/Variabilní symbol)<strong class='text-green toCopy' style=''> " 
         . " " .  $orderId . "</strong>" . 
-        " <br>to account <strong class='toCopy'>" . " " . $nationalBankAccount ." </p>" . 
+        " <br>to account <strong class='toCopy'>" . " " . $nationalBankAccount ."</strong> </p>" . 
         "<p> <h4 class='padding-small'>" . $htmlGlobeIcon. " For international bank transaction : </h4> <div>IBAN: <strong class='toCopy'>" . " " . $accountIBAN . " </strong> </div> " . 
         "<div>BIC/SWIFT: <strong class='toCopy'> " . $accountBIC . " </strong> </div>" . 
         "<div>Bank address: <strong class='toCopy'>" . $accountBankAddress . " </strong> </div>".
