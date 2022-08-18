@@ -64,7 +64,7 @@
             $sql = "";
             
             if ((isset($selectedEvent)) && (strlen($selectedEvent)) > 0) {
-              $sql = "SELECT * FROM registrations WHERE eventID='$selectedEvent' ORDER BY id DESC";
+              $sql = "SELECT * FROM registrations WHERE eventID='$selectedEvent' ORDER BY id DESC LIMIT 5";
             } else {
               $sql = "SELECT * FROM registrations ORDER BY id DESC";
             }

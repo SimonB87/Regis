@@ -52,6 +52,7 @@ else {
         <div class="row">
           <div class="col-12">
             <h1 class="text-center padding-small">Saved registrations</h1>
+            <h3 id="reg-notice" class="text-center padding-small"></h3>
           </div>
 
         <?php
@@ -90,6 +91,7 @@ else {
     <script src="../shared/assets/js/sendorderupdate.js" defer></script>
     <script src="../shared/assets/js/editregistrations.js" defer></script>
     <script src="../shared/assets/js/selectoneevent.js" defer></script>
+    <script src="../shared/assets/js/getregistrationselectionnumber.js" defer></script>
     <script src='../shared/assets/js/scipt.js' defer></script>
 
   </body>
