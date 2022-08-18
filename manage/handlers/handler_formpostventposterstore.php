@@ -31,7 +31,7 @@ if(isset($_POST["submit_poster"])) {
   }
 
   // Check file size
-  if ($_FILES["fileToUpload"]["size"] > 500000) {
+  if ($_FILES["fileToUpload"]["size"] > 50000000) {
     $notification_text = $notification_text . "Eh, sorry, your file is too large.";
     $uploadOk = 0;
   }
