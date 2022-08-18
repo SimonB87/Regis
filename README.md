@@ -8,7 +8,14 @@
 - Server validation
 
 ## SET UP
-- folder for file uploards must have a folder at manage/uploads
+- tNutné pro rozběhnutí aplikace : 
+	* doménu
+	* webhosting 
+	* kontrolovat jestli poskytovatel umožňuje PHP aspoň ve verzi 5 a vyšší
+	* kontrolovat jestli poskytovatel umožňuje založit mySQL databáze 
+	* nahát na doménu kód s mojí web aplikací
+  - folder for file uploards must have a folder at manage/uploads
+
 
 ## TODO
 
