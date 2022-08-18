@@ -72,6 +72,7 @@
 - BUGFIX - v úpravě description použít dynamické odkazy na obrázky emotikonů
 - !! BUGFIX - ! opravit enabled sections - když je tam sekce 2 disabled a obsahuje uvnitř texty (situace rozpor create a edit ! )
 - ! Feature - při úpravě řádku registrace poslat dotaz na řádek a rehreshnout data řádku v tabulce
+- !! BUGFIX - createneweventeventformpreview.php - unkwnown variables : dataEventDescription1, dataEventDescription2, dataEventDescription3
 
 
 ### Nice to have
