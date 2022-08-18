@@ -73,7 +73,7 @@
 - !! BUGFIX - ! opravit enabled sections - když je tam sekce 2 disabled a obsahuje uvnitř texty (situace rozpor create a edit ! )
 - ! Feature - při úpravě řádku registrace poslat dotaz na řádek a rehreshnout data řádku v tabulce
 - !! BUGFIX - createneweventeventformpreview.php - unkwnown variables : dataEventDescription1, dataEventDescription2, dataEventDescription3
-
+- !! BUGFIX - registration form - summarized price is not populalating in input in Mozilla Firefox
 
 ### Nice to have
 
