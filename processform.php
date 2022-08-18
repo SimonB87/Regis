@@ -20,6 +20,7 @@ require 'config/config.php';
   <body style="background: #303030;">
 
   <?php
+  include("shared/appinfosetup/appadminbankinfo.php");
   include("shared/navigation.php");
   include("manage/processformdata.php");
 
