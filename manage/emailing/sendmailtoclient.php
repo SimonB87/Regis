@@ -7,6 +7,8 @@ if ($correctlyFilledForm) {
 
   $subject	=		" Your order-ID: \"" . $storedOrderID . "\" na akci \"" . $storedEventName . "\" | Platform REGIS";
 
+  include("././shared/appinfosetup/appadminbankinfo.php");
+  $paymentInstructions_holderAddress = (isset($accountHolderAddress)) ? (" <p>Account holder name: <strong>" . $accountHolderAddress . " </strong></p>" ) : "";
 
   $message_header	=	"<!-- BODY -->
                     <!-- Set message background color (twice) and text color (twice) -->
@@ -122,7 +124,7 @@ if ($correctlyFilledForm) {
                         font-family: sans-serif;' class='paragraph'>
                           <p>Please send the price: <strong>" . $storedFormPrice . "</strong></p>
                           <p>with Variable symbol (VS/Variabilní symbol) <strong>" . $storedOrderID . "</strong></p>
-                          <p>to account <strong>111222333/2010 </strong>(Fio banka) </p>
+                          <p>to account <strong> " . $nationalBankAccount . " </strong> </p>
                       </td>
                     </tr>
                     <tr>
@@ -145,11 +147,12 @@ if ($correctlyFilledForm) {
                         padding-top: 15px; 
                         color: #35384e;
                         font-family: sans-serif;' class='paragraph'>
-                        <p>IBAN: <strong>00420111222333002010</strong></p>
-                        <p>BIC: <strong>CZDOMINANTALFA</strong></p>
-                        <p>Bank address: <strong>Fio banka, a.s. Millennium Plaza, V Celnici 10, Prague 1, ZIP Code : 117 21. Czech Republic</strong></p>
-                        <p>Account holder name: <strong>Mauritius The Greatest</strong></p>
-                        <p>Price : <strong>" . $storedFormPrice . "</strong></p>
+                        <p>IBAN: <strong>" . $accountIBAN . "</strong></p>
+                        <p>BIC/SWIFT: <strong>".$accountBIC."</strong></p>
+                        <p>Bank address: <strong>". $accountBankAddress ."</strong></p>
+                        <p>Account holder name: <strong>".$accountHolderName."</strong></p>" .
+                        $paymentInstructions_holderAddress .
+                        "<p>Price : <strong>" . $storedFormPrice . "</strong></p>
                         <p>Notice for receiver: <strong>\"Order ID:" . $storedOrderID . ", client: " . $storedClientName . " , contact: " . $storedClientEmail. "\"</strong></p>
                       </td>
                     </tr>

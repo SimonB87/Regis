@@ -33,6 +33,8 @@ require 'config/config.php';
 
   include("webform/components/pagecontent_processregistration.php");
 
+  include("shared/appinfosetup/appadminbankinfo.php");
+
   include("manage/emailing/getorderdata.php");
   include("manage/emailing/sendmailtoadmin.php");
   include("manage/emailing/sendmailtotestadmin.php");

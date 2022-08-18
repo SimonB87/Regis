@@ -3,6 +3,8 @@
   $originalOrderId = $targetOrderId;
 
   include("./handlers/handler_getselectedorderdata.php");
+  include("././shared/appinfosetup/appadminbankinfo.php");
+  $paymentInstructions_holderAddress = (isset($accountHolderAddress)) ? (" <p>Account holder name: <strong>" . $accountHolderAddress . " </strong></p>" ) : "";
 
   $to				= 	$storedRegClientEmail;
 
@@ -123,7 +125,7 @@
                         font-family: sans-serif;' class='paragraph'>
                           <p>Please send the price: <strong>" . $storedRegFormPrice . "</strong></p>
                           <p>with Variable symbol (VS/Variabilní symbol) <strong>" . $originalOrderId . "</strong></p>
-                          <p>to account <strong>111222333/2010 </strong>(Fio banka) </p>
+                          <p>to account <strong> " . $nationalBankAccount . " </strong> </p>
                       </td>
                     </tr>
                     <tr>
@@ -146,11 +148,12 @@
                         padding-top: 15px; 
                         color: #35384e;
                         font-family: sans-serif;' class='paragraph'>
-                        <p>IBAN: <strong>00420111222333002010</strong></p>
-                        <p>BIC: <strong>CZDOMINANTALFA</strong></p>
-                        <p>Bank address: <strong>Fio banka, a.s. Millennium Plaza, V Celnici 10, Prague 1, ZIP Code : 117 21. Czech Republic</strong></p>
-                        <p>Account holder name: <strong>Mauritius The Greatest</strong></p>
-                        <p>Price : <strong>" . $storedRegFormPrice . "</strong></p>
+                        <p>IBAN: <strong>" . $accountIBAN . "</strong></p>
+                        <p>BIC/SWIFT: <strong>".$accountBIC."</strong></p>
+                        <p>Bank address: <strong>". $accountBankAddress ."</strong></p>
+                        <p>Account holder name: <strong>".$accountHolderName."</strong></p>" .
+                        $paymentInstructions_holderAddress .
+                        "<p>Price : <strong>" . $storedRegFormPrice . "</strong></p>
                         <p>Notice for receiver: <strong>\"Order ID:" . $originalOrderId . ", client: " . $storedRegClientName . " , contact: " . $storedRegClientEmail. "\"</strong></p>
                       </td>
                     </tr>
