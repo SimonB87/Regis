@@ -62,6 +62,17 @@
 - user sekce po přihlášení - možnost změnit heslo
 - Ukládát plně české znaky pro jména
 
+## Požadavky od Mariana 1
+- z registrace udalosti vyhodit pryž telefon a zemi původu zákazníka
+- opravit tlačítka na "register now" na registraci klientů
+- možnost měnit texty emailů
+- změnit nadpis "past event data" na "all events data"
+- dodat adminsitrativní sekci pro nastavení 
+  * hlavního menu - a všech jeho odkazů
+  * tabulka s users of app a všemi účty - pro až 4 lidi
+  * dodat možnost ahrát "Therms of service", a "GDPR"
+  * upravovat odkazy na sociální sítě, weby, email a telefon
+
 
 ## Hlavní funkcionalita - dodělávky
 
@@ -75,8 +86,20 @@
 - !! BUGFIX - createneweventeventformpreview.php - unkwnown variables : dataEventDescription1, dataEventDescription2, dataEventDescription3
 - !! BUGFIX - registration form - summarized price is not populalating in input in Mozilla Firefox
 
+- !! BUGFIX - použít include bankovních infromací
+
+- všechny testovací notifikace umožnit jen a pouze pokud je aplikace v testovacím folderu
+
+- remove functionality for showing copy icons, remove copy functionality
+- add google analytics
+
+- poslat ukázku Mariánovi ;
+- domluvit nasazení na jejich server a zprovozněnní MySQL databáze ;
+- First phase $$$ :-)
+
 ### Nice to have
 
+- FEATURE - dodat 
 - FEATURE - když jsou lístky, které chci pryč, tak zákazník může vyplnit krátký formulář, kde bude emailem notifikován, pokud se objevily nové lístky pro danou jednu událost ( zákazník zde vyplní své údaje, kontakt a o jaký typ lístku má zájem ) ; Admin pak bude mít k události ještě plnící se waiting list
 - REFACTOR - vyřadit couple tiskets enabled - místo toho dát do kategorie - počet 0
 - process form data - disallow reposting registration form on refresh of the page : https://stackoverflow.com/questions/2666882/how-to-avoid-resending-data-on-refresh-in-php
