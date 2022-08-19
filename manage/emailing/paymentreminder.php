@@ -3,7 +3,15 @@
   $originalOrderId = $targetOrderId;
 
   include("./handlers/handler_getselectedorderdata.php");
-  include("././shared/appinfosetup/appadminbankinfo.php");
+  //include("././shared/appinfosetup/appadminbankinfo.php"); // TODO bug fix this link
+
+  $nationalBankAccount = "2002019652/2010 (Fio Banka, a.s.)";  // onyl temporarly
+  $accountIBAN = "CZ65 2010 0000 0020 0201 9652"; // onyl temporarly
+  $accountBIC = "FIOBCZPPXXX"; // onyl temporarly
+  $accountHolderName = "Elvira Masanlo"; // onyl temporarly
+  $accountHolderAddress = "My Main Street 909/123, 12 007 - My City, My Country"; // onyl temporarly
+  $accountBankAddress = "Fio banka, a.s. Millennium Plaza, V Celnici 10, Prague 1, ZIP Code : 117 21. Czech Republic"; // onyl temporarly
+
   $paymentInstructions_holderAddress = (isset($accountHolderAddress)) ? (" <p>Account holder name: <strong>" . $accountHolderAddress . " </strong></p>" ) : "";
 
   $to				= 	$storedRegClientEmail;
