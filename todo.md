@@ -62,10 +62,11 @@
 - user sekce po přihlášení - možnost změnit heslo
 - Ukládát plně české znaky pro jména
 
+
 ## Požadavky od Mariana 1
 - z registrace udalosti vyhodit pryž telefon a zemi původu zákazníka
-- opravit tlačítka na "register now" na registraci klientů
-- možnost měnit texty emailů
+- opravit tlačítka na "register now" na stránce registračního formulaře
+- možnost měnit texty emailů, které odesílá aplikace v administraci
 - změnit nadpis "past event data" na "all events data"
 - dodat adminsitrativní sekci pro nastavení 
   * hlavního menu - a všech jeho odkazů
@@ -73,13 +74,16 @@
   * dodat možnost ahrát "Therms of service", a "GDPR"
   * upravovat odkazy na sociální sítě, weby, email a telefon
 
+
 ## Administrace
   - menit prava vsech registrovanych useru
-  - menit polizky menu hlavni stranky
+  - menit polozky menu hlavni stranky
   - menit platebni udaje
   - menit texty v emailech
   - menit odkazy v paticce vcetne social media, emailu a telenonu
   - mit moznost promazat vybrane poster obrazky z nahranych
+  - dodat možnost vložit dokumenty/texty pro "Therms of service" a "GDPR"
+
 
 ## Hlavní funkcionalita - dodělávky
 
@@ -93,10 +97,8 @@
 - !! BUGFIX - createneweventeventformpreview.php - unkwnown variables : dataEventDescription1, dataEventDescription2, dataEventDescription3
 - !! BUGFIX - registration form - summarized price is not populalating in input in Mozilla Firefox
 
-- všechny testovací notifikace umožnit jen a pouze pokud je aplikace v testovacím folderu
-
+- Testovací mód - založit "test" folder a nahrát sem aplikaci, aplikace pak bude při startu zkoumat, jestli je v url cestě folder "test". pak se budou ukazovat všechny featury a notifikace pro testovací prostředí 
 - remove functionality for showing copy icons, remove copy functionality
-- add google analytics
 
 
 ### Nice to have
