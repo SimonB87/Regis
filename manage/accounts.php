@@ -1,5 +1,0 @@
-<?php
-
-//manage user accounts
-
-?>

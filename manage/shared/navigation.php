@@ -29,27 +29,20 @@
           <li class="nav-item">
             <a class="nav-link" href="registrations.php">Registrations</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.mauritiuselvira.com/contact">Contact</a>
-          </li>
 
 <?php
         if (isset($_SESSION['username'])) {
           if ($_SESSION['user_level'] === "9") {
-            echo "<li class='nav-item'><a href='accounts.php' class='nav-link'>
-              Accounts
-            </a></li>";
+            echo "<li class='nav-item'><a href='administration.php' class='nav-link'>
+                  Administration
+                </a></li>";
           }
-        } else {
-        }
 
-        if (isset($_SESSION['username'])) {
           echo "<li class='nav-item'><a href='handlers\logout.php' class='nav-link'>
                   Logout
                 </a></li>";
-        } else {
-          
         }
+
 ?>
 
         </ul>
