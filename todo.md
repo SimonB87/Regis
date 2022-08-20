@@ -64,9 +64,10 @@
 
 
 ## Požadavky od Mariana 1
-- z registrace udalosti vyhodit pryž telefon a zemi původu zákazníka
-- opravit tlačítka na "register now" na stránce registračního formulaře
+[ok] z registrace udalosti vyhodit pryž telefon a zemi původu zákazníka
+[ok] opravit tlačítka na "register now" na stránce registračního formulaře
 - možnost měnit texty emailů, které odesílá aplikace v administraci
+[ok]  dodat do emailů text - zaplaťe do 7 dnů od Vaší registrace
 - změnit nadpis "past event data" na "all events data"
 - dodat adminsitrativní sekci pro nastavení 
   * hlavního menu - a všech jeho odkazů
