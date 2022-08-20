@@ -318,6 +318,10 @@ footer .copyright {
     text-align: center;
   }
 }
+.nav.nav-pills {
+  display: flex;
+  justify-content: space-evenly;
+}
 .card .card_top_shade {
   height: 5rem;
   width: 100%;

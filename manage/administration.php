@@ -57,25 +57,25 @@ else {
 
         <ul class="nav nav-pills">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">App users</a>
+            <a id="pill-appuser" class="nav-link pill-linkitem active" aria-current="page" href="#">App users</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> Registration page menu </a>
+            <a id="pill-navregistration" class="nav-link pill-linkitem" href="#"> Registration page menu </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> Links in page footer </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#"> Payment infromation </a>
+            <a id="pill-footerlinks" class="nav-link pill-linkitem" href="#"> Links in page footer </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#"> Edit texts in emaile </a>
+            <a id="pill-paymentinfo" class="nav-link pill-linkitem" href="#"> Payment infromation </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link disabled"> File uploads </a>
+            <a id="pill-mailtexts" class="nav-link pill-linkitem" href="#"> Edit texts in emails </a>
+          </li>
+
+          <li class="nav-item">
+            <a id="pill-fileuploads" class="nav-link pill-linkitem" href="#"> File uploads </a>
           </li>
         </ul>
       
@@ -84,63 +84,18 @@ else {
   </div>
 
   <div class="container bg-white">
-    <div class="row padding-regular-top">
-      <div class="col-12"> 
-        <h3 class="display-7 fw-bold"> App users </h3> 
-        <div class="text-gray">  Edit user rights for each of 4 app users </div> 
-      </div>
-    </div>
-  </div>
 
-  <div class="container bg-white">
-    <div class="row padding-regular-top">
-      <div class="col-12"> 
-        <h3 class="display-7 fw-bold"> Registration page menu </h3> 
-        <div> Edit navigation items in the navigation menu of the public page with registration form </div> 
-      </div>
-    
-    </div>
-  </div>
+  <?php
 
+  include("components/administration_appuser.php");
+  include("components/administration_navregistration.php");
+  include("components/administration_footerlinks.php");
+  include("components/administration_paymentinfo.php");
+  include("components/administration_mailtexts.php");
+  include("components/administration_fileuploads.php");
 
-  <div class="container bg-white">
-    <div class="row padding-regular-top">
-      <div class="col-12"> 
-        <h3 class="display-7 fw-bold"> Links in page footer </h3> 
-        <div> Edit link in the footer of the public page with registration form </div> 
-      </div>
-    
-    </div>
-  </div>
+  ?>
 
-  <div class="container bg-white">
-    <div class="row padding-regular-top">
-      <div class="col-12"> ¨
-        <h3 class="display-7 fw-bold"> Payment infromation </h3> 
-        <div> Edit information regarding bak transfer for ticket purchase </div> 
-      </div>
-    
-    </div>
-  </div>
-
-  <div class="container bg-white">
-    <div class="row padding-regular-top">
-      <div class="col-12"> 
-        <h3 class="display-7 fw-bold"> Edit texts in emaile </h3> 
-        <div> Edit information regarding bak transfer for ticket purchase </div> 
-      </div>
-    
-    </div>
-  </div>
-
-  <div class="container bg-white">
-    <div class="row padding-regular-top padding-regular-bottom">
-      <div class="col-12"> 
-        <h3 class="display-7 fw-bold"> File uploads </h3> 
-        <div> Check and delete all file in the upload folder </div> 
-      </div>
-    
-    </div>
   </div>
 
 <?php
@@ -149,13 +104,11 @@ else {
 ?>
 
     <script src="../shared/libs/bootstrap/js/bootstrap.js"></script>
-    <script src="../shared/libs/charts.js/js/chart.bundle.min.js"></script>
     <script src="../shared/assets/js/formvalidation.js"></script>
     <script src="../shared/assets/js/togglevisibility.js"></script>
     <script src="../shared/assets/js/hidenotification.js"></script>
-    <script src='../shared/assets/js/scipt.js' defer></script>
-    <script src="../shared/assets/js/chartjsinit.js"></script>
-    <script src="../shared/assets/js/populateregistrationsdata.js" defer></script>
+    <script src="../shared/assets/js/scipt.js" defer></script>
+    <script src="../shared/assets/js/navpills.js" defer></script>
 
   </body>
 </html>
