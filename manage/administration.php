@@ -53,16 +53,51 @@ else {
 
   <div class="container bg-white">
     <div class="row padding-regular-top">
-      <div class="col-12"> <h3 class="display-7 fw-bold"> App users </h3> </div>
-      <div class="col-12"> Edit user rights for each of 4 app users </div>
+      <div class="col-12 rounded bg-light border border-primary padding-regular"> 
+
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">App users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> Registration page menu </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> Links in page footer </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#"> Payment infromation </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#"> Edit texts in emaile </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link disabled"> File uploads </a>
+          </li>
+        </ul>
       
+      </div>
     </div>
   </div>
 
   <div class="container bg-white">
     <div class="row padding-regular-top">
-      <div class="col-12"> <h3 class="display-7 fw-bold"> Registration page menu </h3> </div>
-      <div class="col-12"> Edit navigation items in the navigation menu of the public page with registration form </div>
+      <div class="col-12"> 
+        <h3 class="display-7 fw-bold"> App users </h3> 
+        <div class="text-gray">  Edit user rights for each of 4 app users </div> 
+      </div>
+    </div>
+  </div>
+
+  <div class="container bg-white">
+    <div class="row padding-regular-top">
+      <div class="col-12"> 
+        <h3 class="display-7 fw-bold"> Registration page menu </h3> 
+        <div> Edit navigation items in the navigation menu of the public page with registration form </div> 
+      </div>
     
     </div>
   </div>
@@ -70,32 +105,40 @@ else {
 
   <div class="container bg-white">
     <div class="row padding-regular-top">
-      <div class="col-12"> <h3 class="display-7 fw-bold"> Links in page footer </h3> </div>
-      <div class="col-12"> Edit link in the footer of the public page with registration form </div>
+      <div class="col-12"> 
+        <h3 class="display-7 fw-bold"> Links in page footer </h3> 
+        <div> Edit link in the footer of the public page with registration form </div> 
+      </div>
     
     </div>
   </div>
 
   <div class="container bg-white">
     <div class="row padding-regular-top">
-      <div class="col-12"> <h3 class="display-7 fw-bold"> Payment infromation </h3> </div>
-      <div class="col-12"> Edit information regarding bak transfer for ticket purchase </div>
+      <div class="col-12"> ¨
+        <h3 class="display-7 fw-bold"> Payment infromation </h3> 
+        <div> Edit information regarding bak transfer for ticket purchase </div> 
+      </div>
     
     </div>
   </div>
 
   <div class="container bg-white">
     <div class="row padding-regular-top">
-      <div class="col-12"> <h3 class="display-7 fw-bold"> Edit texts in emaile </h3> </div>
-      <div class="col-12"> Edit information regarding bak transfer for ticket purchase </div>
+      <div class="col-12"> 
+        <h3 class="display-7 fw-bold"> Edit texts in emaile </h3> 
+        <div> Edit information regarding bak transfer for ticket purchase </div> 
+      </div>
     
     </div>
   </div>
 
   <div class="container bg-white">
     <div class="row padding-regular-top padding-regular-bottom">
-      <div class="col-12"> <h3 class="display-7 fw-bold"> File uploads </h3> </div>
-      <div class="col-12"> Check and delete all file in the upload folder </div>
+      <div class="col-12"> 
+        <h3 class="display-7 fw-bold"> File uploads </h3> 
+        <div> Check and delete all file in the upload folder </div> 
+      </div>
     
     </div>
   </div>
