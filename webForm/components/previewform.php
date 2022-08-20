@@ -24,7 +24,7 @@
 
         <div class="container"> 
           <div class="padding-regular text-center">
-            <a href="#formSection">
+            <a href="#form">
               <button type="button" class="btn btn-primary">
                 REGISTER NOW
               </button>
@@ -42,7 +42,7 @@
           </div>
 
           <div class="padding-regular text-center">
-            <a href="#formSection">
+            <a href="#form">
               <button type="button" class="btn btn-primary">
                 REGISTER NOW
               </button>
@@ -54,7 +54,7 @@
           </div>
 
           <div class="padding-regular text-center">
-            <a href="#formSection">
+            <a href="#form">
               <button type="button" class="btn btn-primary">
                 REGISTER NOW
               </button>
@@ -270,9 +270,9 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
+                <div class="col-lg-6 col-md-12 col-sm-12 padding-small hidden">
                   <div class="form-floating">
-                    <input type="phone" class="form-control" id="clientPhone" required="" name="clientPhone" minlength="6" value="+420" maxlength="250">
+                    <input type="phone" class="form-control" id="clientPhone" name="clientPhone" minlength="6" value="+420" maxlength="250">
                     <label for="clientPhone">Phone (with your national predial)</label>
                     <div class="valid-feedback">
                       Looks good!
@@ -283,9 +283,9 @@
                   </div>
                 </div>
 
-                <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
+                <div class="col-lg-6 col-md-12 col-sm-12 padding-small hidden">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="clientCountry" required="" name="clientCountry" maxlength="250">
+                    <input type="text" class="form-control" id="clientCountry" name="clientCountry" maxlength="250">
                     <label for="clientCountry">Your country</label>
                     <div class="valid-feedback">
                       Looks good!
