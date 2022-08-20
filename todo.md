@@ -107,4 +107,5 @@
 - REFACTOR - vyřadit couple tiskets enabled - místo toho dát do kategorie - počet 0
 - process form data - disallow reposting registration form on refresh of the page : https://stackoverflow.com/questions/2666882/how-to-avoid-resending-data-on-refresh-in-php
 - form validation video : https://www.youtube.com/watch?v=rsd4FNGTRBw
+- přepsat všechny různé notifikace na bootstrap alerty - https://getbootstrap.com/docs/5.2/components/alerts/
 - povolit odeslání registraci jen a pouze pokud uživatel odsouhlasí terms of service - jinak je tlačítko disabled - a na stránce je link na therms of service
