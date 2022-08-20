@@ -66,15 +66,11 @@
 ## Požadavky od Mariana 1
 [ok] z registrace udalosti vyhodit pryž telefon a zemi původu zákazníka
 [ok] opravit tlačítka na "register now" na stránce registračního formulaře
-- možnost měnit texty emailů, které odesílá aplikace v administraci
-[ok]  dodat do emailů text - zaplaťe do 7 dnů od Vaší registrace
-- změnit nadpis "past event data" na "all events data"
-- dodat adminsitrativní sekci pro nastavení 
-  * hlavního menu - a všech jeho odkazů
-  * tabulka s users of app a všemi účty - pro až 4 lidi
-  * dodat možnost ahrát "Therms of service", a "GDPR"
-  * upravovat odkazy na sociální sítě, weby, email a telefon
-
+[ok] dodat do emailů text - zaplaťe do 7 dnů od Vaší registrace
+[ok] změnit nadpis "past event data" na "all events data"
+- rozchodi aplikaci na serveru
+- založit databaze provoz a test
+- administrace
 
 ## Administrace
   - menit prava vsech registrovanych useru
