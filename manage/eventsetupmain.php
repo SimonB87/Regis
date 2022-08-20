@@ -69,7 +69,7 @@ require 'handlers/userlogin.php';
     <div class="container text-center bg-white">
       <div class="row">
         <div class="col-12 my-2">
-          <h2 class="display-5 fw-bold">Past events data</h2>
+          <h2 class="display-5 fw-bold">All events data</h2>
         </div>
 
         <?php
