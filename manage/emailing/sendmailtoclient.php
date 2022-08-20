@@ -5,7 +5,7 @@ if ($correctlyFilledForm) {
   $to				= 	$clientEmail;
 
 
-  $subject	=		" Your order-ID: \"" . $storedOrderID . "\" na akci \"" . $storedEventName . "\" | Platform REGIS";
+  $subject	=		" Your order-ID: \"" . $storedOrderID . "\" for event \"" . $storedEventName . "\" | Platform REGIS";
 
   //include("././shared/appinfosetup/appadminbankinfo.php"); // TODO bug fix this link
 
@@ -85,7 +85,7 @@ if ($correctlyFilledForm) {
                         padding-bottom: 0;
                         color: #ffffff;
                         font-family: sans-serif;' class='supheader'>
-                          You have successfuly registered for the event " . $storedEventName . " organized by Mauritius & Elvira Bachata Prague team
+                          You have successfuly registered for the event " . $storedEventName . " organized by Mauritius & Elvira Bachata Prague team.
                       </td>
                     </tr>
 
@@ -115,6 +115,7 @@ if ($correctlyFilledForm) {
                         color: #35384e;
                         font-family: sans-serif;' class='paragraph'>
                           <h3>Payment instructions</h3>
+                          <h4>Please pay within the 7 days. Your registration might get canceled, if you fail to do so.</h4>
                       </td>
                     </tr>
                     <tr>

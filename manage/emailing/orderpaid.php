@@ -6,7 +6,7 @@
 
   $to				= 	$storedRegClientEmail;
 
-  $subject	=		"Your payment was received - order-ID: \"" . $storedRegOrderId . "\" na akci \"" . $storedRegEventName . "\" | Platform REGIS";
+  $subject	=		"Your payment was received - order-ID: \"" . $storedRegOrderId . "\" for event \"" . $storedRegEventName . "\" | Platform REGIS";
 
 
   $message_header	=	"<!-- BODY -->

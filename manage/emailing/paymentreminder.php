@@ -16,7 +16,7 @@
 
   $to				= 	$storedRegClientEmail;
 
-  $subject	=		"Payment reminder - Your order-ID: \"" . $storedRegOrderId . "\" na akci \"" . $storedRegEventName . "\" | Platform REGIS";
+  $subject	=		"Payment reminder - Your order-ID: \"" . $storedRegOrderId . "\" for event \"" . $storedRegEventName . "\" | Platform REGIS";
 
 
   $message_header	=	"<!-- BODY -->
@@ -86,7 +86,7 @@
                         padding-bottom: 0;
                         color: #ffffff;
                         font-family: sans-serif;' class='supheader'>
-                          We remind you to pay for tickets for event " . $storedRegEventName . " you signed up for. Event is organized by Mauritius & Elvira Bachata Prague team.
+                          We remind you to pay for tickets for event " . $storedRegEventName . " you signed up for. Pay as soon a spossible, or your registration will get canceled. Event is organized by Mauritius & Elvira Bachata Prague team.
                       </td>
                     </tr>
 
