@@ -66,7 +66,7 @@ else {
           </li>
 
           <li class="nav-item">
-            <a id="pill-paymentinfo" class="nav-link pill-linkitem" href="#administration"> Payment infromation </a>
+            <a id="pill-paymentinfo" class="nav-link pill-linkitem" href="#administration"> Payment information </a>
           </li>
 
           <li class="nav-item">
