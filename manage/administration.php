@@ -39,7 +39,6 @@ else {
 
     <?php
     include("shared/navigation.php");
-
     ?> 
 
     <div class="padding-small bg-white">
@@ -94,6 +93,8 @@ else {
   include("components/administration_mailtexts.php");
   include("components/administration_fileuploads.php");
 
+  mysqli_close($connector);
+
   ?>
 
   </div>
@@ -109,6 +110,7 @@ else {
     <script src="../shared/assets/js/hidenotification.js"></script>
     <script src="../shared/assets/js/scipt.js" defer></script>
     <script src="../shared/assets/js/navpills.js" defer></script>
+    <script src="../shared/assets/js/administration.js" defer></script>
 
   </body>
 </html>
