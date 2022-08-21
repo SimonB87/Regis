@@ -13,7 +13,7 @@
           <strong> Item 1 </strong>
         </div>
 
-        <div class="col-lg-3 col-md-5 col-sm-12 padding-small">
+        <div class="col-lg-3 col-md-5 col-sm-11 padding-small">
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="navitem1_allowed" required="" name="navitem1_allowed">
             <label class="form-check-label" for="navitem1_allowed"> Navigation Item is allowed </label>
@@ -62,7 +62,7 @@
           <strong> Item 2 </strong>
         </div>
 
-        <div class="col-lg-3 col-md-5 col-sm-12 padding-small">
+        <div class="col-lg-3 col-md-5 col-sm-11 padding-small">
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="navitem2_allowed" required="" name="navitem2_allowed">
             <label class="form-check-label" for="navitem2_allowed"> Navigation Item is allowed </label>
@@ -111,7 +111,7 @@
           <strong> Item 3 </strong>
         </div>
 
-        <div class="col-lg-3 col-md-5 col-sm-12 padding-small">
+        <div class="col-lg-3 col-md-5 col-sm-11 padding-small">
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="navitem3_allowed" required="" name="navitem3_allowed">
             <label class="form-check-label" for="navitem3_allowed"> Navigation Item is allowed </label>
@@ -160,7 +160,7 @@
           <strong> Item 4 </strong>
         </div>
 
-        <div class="col-lg-3 col-md-5 col-sm-12 padding-small">
+        <div class="col-lg-3 col-md-5 col-sm-11 padding-small">
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="navitem4_allowed" required="" name="navitem4_allowed">
             <label class="form-check-label" for="navitem4_allowed"> Navigation Item is allowed </label>
@@ -209,7 +209,7 @@
           <strong> Item 5 </strong>
         </div>
 
-        <div class="col-lg-3 col-md-5 col-sm-12 padding-small">
+        <div class="col-lg-3 col-md-5 col-sm-11 padding-small">
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="navitem5_allowed" required="" name="navitem5_allowed">
             <label class="form-check-label" for="navitem5_allowed"> Navigation Item is allowed </label>
