@@ -251,6 +251,19 @@
           </div>
         </div>
 
+        <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="footeritem5_name" required="" name="footeritem5_icon" maxlength="250">
+            <label for="footeritem5_name"> Display icon (<a href="#">Font Awesome</a>)</label>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please fill in name.
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -301,6 +314,19 @@
           </div>
         </div>
 
+        <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="footeritem6_name" required="" name="footeritem6_icon" maxlength="250">
+            <label for="footeritem6_name"> Display icon (<a href="#">Font Awesome</a>)</label>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please fill in name.
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -342,6 +368,19 @@
           <div class="form-floating">
             <input type="text" class="form-control" id="footeritem7_link" required="" name="footeritem7_link" maxlength="250">
             <label for="footeritem7_link"> Item web link </label>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please fill in name.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="footeritem7_name" required="" name="footeritem7_icon" maxlength="250">
+            <label for="footeritem7_name"> Display icon (<a href="#">Font Awesome</a>)</label>
             <div class="valid-feedback">
               Looks good!
             </div>
