@@ -42,7 +42,7 @@ else {
     ?> 
 
     <div class="padding-small bg-white">
-      <main>
+      <main id="administration">
 
         <h1 class="display-5 fw-bold text-center">Administration</h1>
         <h2 class="display-7 fw-bold text-center">here you can set up the app</h2>
@@ -56,25 +56,25 @@ else {
 
         <ul class="nav nav-pills">
           <li class="nav-item">
-            <a id="pill-appuser" class="nav-link pill-linkitem active" aria-current="page" href="#">App users</a>
+            <a id="pill-appuser" class="nav-link pill-linkitem active" aria-current="page" href="#administration">App users</a>
           </li>
           <li class="nav-item">
-            <a id="pill-navregistration" class="nav-link pill-linkitem" href="#"> Registration page menu </a>
+            <a id="pill-navregistration" class="nav-link pill-linkitem" href="#administration"> Registration page menu </a>
           </li>
           <li class="nav-item">
-            <a id="pill-footerlinks" class="nav-link pill-linkitem" href="#"> Links in page footer </a>
-          </li>
-
-          <li class="nav-item">
-            <a id="pill-paymentinfo" class="nav-link pill-linkitem" href="#"> Payment infromation </a>
+            <a id="pill-footerlinks" class="nav-link pill-linkitem" href="#administration"> Links in page footer </a>
           </li>
 
           <li class="nav-item">
-            <a id="pill-mailtexts" class="nav-link pill-linkitem" href="#"> Edit texts in emails </a>
+            <a id="pill-paymentinfo" class="nav-link pill-linkitem" href="#administration"> Payment infromation </a>
           </li>
 
           <li class="nav-item">
-            <a id="pill-fileuploads" class="nav-link pill-linkitem" href="#"> File uploads </a>
+            <a id="pill-mailtexts" class="nav-link pill-linkitem" href="#administration"> Edit texts in emails </a>
+          </li>
+
+          <li class="nav-item">
+            <a id="pill-fileuploads" class="nav-link pill-linkitem" href="#administration"> File uploads </a>
           </li>
         </ul>
       
