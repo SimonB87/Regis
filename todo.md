@@ -80,6 +80,7 @@
   - menit odkazy v paticce vcetne social media, emailu a telenonu
   - mit moznost promazat vybrane poster obrazky z nahranych
   - dodat možnost vložit dokumenty/texty pro "Therms of service" a "GDPR"
+  - změnit email admina
 
 
 ## Hlavní funkcionalita - dodělávky
