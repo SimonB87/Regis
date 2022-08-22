@@ -2,7 +2,13 @@
 
   $to				= 	"buryans@gmail.com";
 
-  $subject	=		"Your event has a new order with ID: \"" . $storedOrderID . "\" for your event \"" . $storedEventName . "\" | Platform REGIS";
+  $testEnvironment = isset($isTestDevelopment) ? 
+                      ( ($isTestDevelopment == true) ?
+                        " * Test Environment * "
+                        : "" )
+                      : "";
+
+  $subject	=		$testEnvironment . "Your event has a new order with ID: \"" . $storedOrderID . "\" for your event \"" . $storedEventName . "\" | Platform REGIS";
 
   $message_header	=	"<!-- BODY -->
                     <!-- Set message background color (twice) and text color (twice) -->
@@ -71,7 +77,7 @@
                         padding-bottom: 0;
                         color: #ffffff;
                         font-family: sans-serif;' class='supheader'>
-                          You have a new customer for the event " . $storedEventName . "
+                         <div>" . $testEnvironment  . "</div> <div> You have a new customer for the event " . $storedEventName . "</div>
                       </td>
                     </tr>
 

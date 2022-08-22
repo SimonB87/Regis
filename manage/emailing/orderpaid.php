@@ -6,7 +6,14 @@
 
   $to				= 	$storedRegClientEmail;
 
-  $subject	=		"Your payment was received - order-ID: \"" . $storedRegOrderId . "\" for event \"" . $storedRegEventName . "\" | Platform REGIS";
+  $testEnvironment = isset($isTestDevelopment) ? 
+  ( ($isTestDevelopment == true) ?
+    " * Test Environment * "
+    : "" )
+  : "";
+
+
+  $subject	=		$testEnvironment . "Your payment was received - order-ID: \"" . $storedRegOrderId . "\" for event \"" . $storedRegEventName . "\" | Platform REGIS";
 
 
   $message_header	=	"<!-- BODY -->
@@ -76,7 +83,7 @@
                         padding-bottom: 0;
                         color: #ffffff;
                         font-family: sans-serif;' class='supheader'>
-                          Your payment was received for event " . $storedRegEventName . " you signed up for. Event is organized by Mauritius & Elvira Bachata Prague team.
+                          <div>" . $testEnvironment . "</div> <div>Your payment was received for event " . $storedRegEventName . " you signed up for. Event is organized by Mauritius & Elvira Bachata Prague team. </div>
                       </td>
                     </tr>
 

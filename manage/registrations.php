@@ -39,6 +39,7 @@ else {
   <body style="background: #303030;">
 
     <?php
+    include("handlers/handler_testenvironment.php");
     include("handlers/getpathdata.php");
     include("handlers/handler_geteventdata.php");
     include("handlers/handler_getformdata.php");

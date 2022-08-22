@@ -4,8 +4,14 @@ if ($correctlyFilledForm) {
 
   $to				= 	$clientEmail;
 
+  $testEnvironment = isset($isTestDevelopment) ? 
+  ( ($isTestDevelopment == true) ?
+    " * Test Environment * "
+    : "" )
+  : "";
 
-  $subject	=		" Your order-ID: \"" . $storedOrderID . "\" for event \"" . $storedEventName . "\" | Platform REGIS";
+
+  $subject	=		$testEnvironment . " Your order-ID: \"" . $storedOrderID . "\" for event \"" . $storedEventName . "\" | Platform REGIS";
 
   //include("././shared/appinfosetup/appadminbankinfo.php"); // TODO bug fix this link
 
@@ -85,7 +91,7 @@ if ($correctlyFilledForm) {
                         padding-bottom: 0;
                         color: #ffffff;
                         font-family: sans-serif;' class='supheader'>
-                          You have successfuly registered for the event " . $storedEventName . " organized by Mauritius & Elvira Bachata Prague team.
+                          <div>" . $testEnvironment . "</div>  <div>You have successfuly registered for the event " . $storedEventName . " organized by Mauritius & Elvira Bachata Prague team.</div>
                       </td>
                     </tr>
 
