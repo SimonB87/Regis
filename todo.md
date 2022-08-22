@@ -73,6 +73,7 @@
 - administrace
 
 ## Administrace
+  - na veřejné části webu nastavit "maintenance mode"
   - menit prava vsech registrovanych useru
   - menit polozky menu hlavni stranky
   - menit platebni udaje
