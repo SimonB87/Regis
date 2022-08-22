@@ -9,6 +9,7 @@ $error_array = [];
   <head>
 
     <?php
+    include("manage/handlers/handler_testenvironment.php");
     include("shared/head.php");
     ?>
 
@@ -23,22 +24,29 @@ $error_array = [];
 
     <div class="container">
       <div class="row">
+
         <?php
-        include("manage/components/testenvnotification.php");
+        if (isset($isTestDevelopment)) {
+          if($isTestDevelopment == true){
+            include("manage/components/testenvnotification.php");
+          }
+        }
         ?>
+
       </div>
     </div>
   </div>
 
     <?php
-    include("webform/handlers/handler_getformdata.php");
-    include("webform/handlers/handler_getdescriptiondata.php");
-    include("webform/handlers/handler_getsoldtickets.php");
+    include("webForm/handlers/handler_getformdata.php");
+    include("webForm/handlers/handler_getdescriptiondata.php");
+    include("webForm/handlers/handler_getsoldtickets.php");
     ?> 
 
     <?php
-    include("webform/handlers/handler_calculatevisibility.php");
-    include("webform/components/previewform.php");
+    include("webForm/handlers/handler_calculatevisibility.php");
+
+    include("webForm/components/previewform.php");
     ?> 
 
 
