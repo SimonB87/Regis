@@ -251,6 +251,19 @@
           </div>
         </div>
 
+        <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="footeritem5_icon" required="" name="footeritem5_icon" maxlength="250">
+            <label for="footeritem5_icon"> F.A. Icon class name </label>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please fill in name.
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -292,6 +305,19 @@
           <div class="form-floating">
             <input type="text" class="form-control" id="footeritem6_link" required="" name="footeritem6_link" maxlength="250">
             <label for="footeritem6_link"> Item web link </label>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please fill in name.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="footeritem6_icon" required="" name="footeritem6_icon" maxlength="250">
+            <label for="footeritem6_icon"> F.A. Icon class name </label>
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -351,6 +377,19 @@
           </div>
         </div>
 
+        <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="footeritem7_icon" required="" name="footeritem7_icon" maxlength="250">
+            <label for="footeritem7_icon"> F.A. Icon class name </label>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please fill in name.
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -392,6 +431,19 @@
           <div class="form-floating">
             <input type="text" class="form-control" id="footeritem8_link" required="" name="footeritem8_link" maxlength="250">
             <label for="footeritem8_link"> Item web link </label>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please fill in name.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="footeritem8_icon" required="" name="footeritem8_icon" maxlength="250">
+            <label for="footeritem8_icon"> F.A. Icon class name </label>
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -444,6 +496,19 @@
           <div class="form-floating">
             <input type="text" class="form-control" id="footeritem9_link" required="" name="footeritem9_link" maxlength="250">
             <label for="footeritem9_link"> Item web link </label>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please fill in name.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="footeritem9_icon" required="" name="footeritem9_icon" maxlength="250">
+            <label for="footeritem9_icon"> F.A. Icon class name </label>
             <div class="valid-feedback">
               Looks good!
             </div>
