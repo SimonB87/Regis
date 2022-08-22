@@ -24,7 +24,7 @@ else {
   exit();
 }
 
-
+include("handlers/handler_testenvironment.php");
 
 ?>
 
@@ -57,6 +57,19 @@ else {
         </div>
 
         <div class="container px-4 py-5 my-5">
+
+          <div class="row">
+
+          <?php
+          if (isset($isTestDevelopment)) {
+            if($isTestDevelopment == true){
+              include("components/testenvnotification.php");
+            }
+          }
+          ?>
+
+          </div>
+
 
         <?php
         
