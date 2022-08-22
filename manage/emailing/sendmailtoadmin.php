@@ -1,6 +1,6 @@
 <?php
 
-  $to				= 	"buryans@gmail.com";
+  $to				= 	"info@mauritiuselvira.eu";
 
   $testEnvironment = isset($isTestDevelopment) ? 
                       ( ($isTestDevelopment == true) ?
