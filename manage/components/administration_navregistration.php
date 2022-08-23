@@ -252,7 +252,11 @@
     </div>
 
     <div class="col-12">
-      <button class="btn btn-primary btn-lg"> Update </button>
+        <div class="bg-light rounded border margin-small-topBottom">
+          <div class="padding-small">
+            <button class="btn btn-primary btn-lg"> Update </button>
+          </div>
+        </div>
     </div>
 
   </div>
