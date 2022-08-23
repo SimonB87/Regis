@@ -22,7 +22,11 @@ if ($correctlyFilledForm) {
   $accountHolderAddress = "My Main Street 909/123, 12 007 - My City, My Country"; // onyl temporarly
   $accountBankAddress = "Fio banka, a.s. Millennium Plaza, V Celnici 10, Prague 1, ZIP Code : 117 21. Czech Republic"; // onyl temporarly
   
-  $paymentInstructions_holderAddress = (isset($accountHolderAddress)) ? (" <p>Account holder name: <strong>" . $accountHolderAddress . " </strong></p>" ) : "";
+  $paymentInstructions_holderAddress = (isset($accountHolderAddress)) ?  
+    (strlen($accountHolderAddress) > 2 ? 
+      (" <p>Account holder name: <strong>" . $accountHolderAddress . " </strong></p>" ) 
+      : "" )
+    : "";
 
   $message_header	=	"<!-- BODY -->
                     <!-- Set message background color (twice) and text color (twice) -->
