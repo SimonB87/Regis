@@ -33,9 +33,15 @@
           <li class="nav-item">
             <a class="nav-link" href="https://www.mauritiuselvira.com/contact">Contact</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="manage/login.php">Login</a>
-          </li>
+
+          <?php
+          if ( isset($_SESSION['username']) == true) {
+            echo "<li class='nav-item'>
+                    <a class='nav-link' href='manage/login.php'>Login</a>
+                  </li>";
+          }
+          ?>
+
         </ul>
         
       </div>

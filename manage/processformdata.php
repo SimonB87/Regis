@@ -1,7 +1,7 @@
 <?php 
 include("handlers/handler_getconfirmprivateinfodescription.php");
 
-if ((isset($_POST['clientName'])) or (isset($_POST['clientEmail']))) {
+if (isset($_POST['clientEmail'])) {
 
   $eventID = mysqli_real_escape_string($connector, $_POST['eventID']); 
   $eventName = mysqli_real_escape_string($connector, $_POST['eventName']);
@@ -121,7 +121,7 @@ if ((isset($_POST['clientName'])) or (isset($_POST['clientEmail']))) {
 
 } else {
 
-  header("Location: index.php");
+  //header("Location: index.php");
 }
 
 

@@ -9,7 +9,7 @@ $registrationsPagePosition = strpos($urlink, $registrationsPage);
 
 $isEventEdited = ($createPagePosition == false) 
                   ? true 
-                  : ($registrationsPagePosition == true) 
-                    ? true :
-                      false;
+                  : (($registrationsPagePosition == true) ? 
+                    true 
+                    : false);
 ?>

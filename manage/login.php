@@ -2,6 +2,8 @@
 session_start();
 require("../config/config.php");
 include("handlers/login_handler.php");
+include("handlers/handler_testenvironment.php");
+
 ?>
 
 
@@ -41,9 +43,18 @@ include("handlers/login_handler.php");
 
     include("shared/navigation.php");
     ?> 
-    <div style="background: #fff;">
+    <div class="bg-white">
       <div class="container">
         <div class="row" >
+
+        <?php
+        if (isset($isTestDevelopment)) {
+          if($isTestDevelopment == true){
+            include("components/testenvnotification.php");
+          }
+        }
+        ?>
+
           <div id="formOne" class="visibility visibility-visible padding-regular">
 
             <?php

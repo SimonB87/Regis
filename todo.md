@@ -73,6 +73,7 @@
 - administrace
 
 ## Administrace
+  - na veřejné části webu nastavit "maintenance mode"
   - menit prava vsech registrovanych useru
   - menit polozky menu hlavni stranky
   - menit platebni udaje
@@ -80,6 +81,7 @@
   - menit odkazy v paticce vcetne social media, emailu a telenonu
   - mit moznost promazat vybrane poster obrazky z nahranych
   - dodat možnost vložit dokumenty/texty pro "Therms of service" a "GDPR"
+  - změnit email admina
 
 
 ## Hlavní funkcionalita - dodělávky

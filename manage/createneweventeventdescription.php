@@ -10,15 +10,19 @@ require 'handlers/userlogin.php';
 
     <?php
     include("shared/head.php");
-    ?>
 
-    <title> Create event description | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
+    if ( $isModeEventCreate == true ) { 
+      echo "<title> Create event description | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>";
+    } else {
+      echo "<title> Edit event description | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>";
+    }
+    ?>
 
     <link rel="stylesheet" type="text/css" href="../shared/libs/footablebootstrap/css/footable.bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../shared/libs/fontawesome/fontawesome_5.0.0.min.css">
+    <link rel="stylesheet" type="text/css" href="../shared/libs/emojionearea/emojionearea.min.css">
     <link rel="stylesheet" type="text/css" href="../shared/assets/css/footbaleedits.css">
 <!--     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/fontawesome.min.css" integrity="sha512-Rcr1oG0XvqZI1yv1HIg9LgZVDEhf2AHjv+9AuD1JXWGLzlkoKDVvE925qySLcEywpMAYA/rkg296MkvqBF07Yw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-    <link rel="stylesheet" type="text/css" href="../shared/libs/emojionearea/emojionearea.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> <!-- source: https://www.w3schools.com/icons/fontawesome5_intro.asp -->
 
   </head>
@@ -39,8 +43,17 @@ require 'handlers/userlogin.php';
         ?>
 
         <div class="row padding-regular">
-          <div class="col-12 padding-regular">
-            <h1 class="display-5 fw-bold">Create event description</h1>
+          <div class="col-12 padding-regular text-center">
+            <h1 class='display-5 fw-bold'>
+
+<?php 
+    if ( $isModeEventCreate == true ) { 
+      echo " Create event description ";
+    } else {
+      echo " Edit event description ";
+    }
+?>
+              </h1>
             <p class="display-7 fw-bold">Set here event description for the event page </p>
           </div>
 

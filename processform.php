@@ -20,6 +20,7 @@ require 'config/config.php';
   <body style="background: #303030;">
 
   <?php
+  include("manage/handlers/handler_testenvironment.php");
   include("shared/appinfosetup/appadminbankinfo.php");
   include("shared/navigation.php");
   include("manage/processformdata.php");
@@ -32,7 +33,7 @@ require 'config/config.php';
 
   mysqli_close($connector);
 
-  include("webform/components/pagecontent_processregistration.php");
+  include("webForm/components/pagecontent_processregistration.php");
 
   include("shared/appinfosetup/appadminbankinfo.php");
 

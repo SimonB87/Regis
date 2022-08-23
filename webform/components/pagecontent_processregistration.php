@@ -47,13 +47,11 @@ $exitIcon = "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill
 <path d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z'></path>
 </svg>";
 
-$testEnvironment = "<div class='padding-small'> 
-        <div class='alert alert-secondary col-lg-12 col-md-12 col-sm-12 padding-small' role='alert'>
-          <h4 class=''> THIS IS WEB TEST ENVIRONMENT ! </h4> 
-          <p> Registrations only for test purpose ! </p>
-          <span class='alert-hide'>".$exitIcon."</span>
-        </div>
-      </div>";
+$testEnvironment = isset($isTestDevelopment) ? 
+                    ( ($isTestDevelopment == true) ? 
+                      "<div class='padding-small'> <div class='alert alert-secondary col-lg-12 col-md-12 col-sm-12 padding-small' role='alert'> <h4 class=''> THIS IS WEB TEST ENVIRONMENT ! </h4> <p> Registrations only for test purpose ! </p> <span class='alert-hide'>" . $exitIcon . "</span> </div> </div>"
+                      : "" )
+                    : "";
 
 $paymentInstructions_holderAddress = (isset($accountHolderAddress)) ? (" <div>Account holder address: <strong class='toCopy'>" . $accountHolderAddress . " </strong>" ) : "";
 
@@ -83,7 +81,10 @@ $registrationError = "<div class='container'><div class='row'><div class='paddin
 
 $userNotification = ($correctlyFilledForm) ? $paymentInstructions : $registrationError;
 
-$registrationSummary = "<div class='col-12'> <h1 class='text-center padding-regular-topBottom'>Registration summary :</h1> </div> <div class='col-12 test-link'> <a href='manage/registrations.php#orders'> <button class='btn btn-warning'> TEST : Table of saved registrations </button></a> </div>";
+
+$testLinkToRegistrations = isset($isTestDevelopment) ? ( ($isTestDevelopment == true) ? "<a href='manage/registrations.php#orders'> <button class='btn btn-warning'> TEST : Table of saved registrations </button> </a>" : "" ) : "";
+
+$registrationSummary = "<div class='col-12'> <h1 class='text-center padding-regular-topBottom'>Registration summary :</h1> </div> <div class='col-12 test-link'>" . $testLinkToRegistrations . "</div>";
 
 echo $userNotification;
 
