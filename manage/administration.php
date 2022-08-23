@@ -66,7 +66,7 @@ else {
           </li>
 
           <li class="nav-item">
-            <a id="pill-paymentinfo" class="nav-link pill-linkitem" href="#administration"> Payment information </a>
+            <a id="pill-paymentinfo" class="nav-link pill-linkitem" href="#administration"> Edit main app texts </a>
           </li>
 
           <li class="nav-item">
@@ -89,7 +89,7 @@ else {
   include("components/administration_appuser.php");
   include("components/administration_navregistration.php");
   include("components/administration_footerlinks.php");
-  include("components/administration_paymentinfo.php");
+  include("components/administration_editmainapptexts.php");
   include("components/administration_mailtexts.php");
   include("components/administration_fileuploads.php");
 
@@ -110,6 +110,7 @@ else {
     <script src="../shared/assets/js/hidenotification.js"></script>
     <script src="../shared/assets/js/scipt.js" defer></script>
     <script src="../shared/assets/js/navpills.js" defer></script>
+    <script src="../shared/assets/js/tooltip.js" defer></script>
     <script src="../shared/assets/js/administration.js" defer></script>
 
   </body>
