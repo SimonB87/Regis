@@ -6,6 +6,7 @@
       <div class="text-gray"> Edit navigation items in the navigation menu of the public page with registration form </div> 
     </div>
 
+    <!-- Item 1 -->
     <div class="col-12 padding-small-topBottom"> 
       <div class="row border bg-light rounded">
 
@@ -55,6 +56,7 @@
       </div>
     </div>
 
+    <!-- Item 2 -->
     <div class="col-12 padding-small-topBottom"> 
       <div class="row border bg-light rounded">
 
@@ -104,6 +106,7 @@
       </div>
     </div>
 
+    <!-- Item 3 -->
     <div class="col-12 padding-small-topBottom"> 
       <div class="row border bg-light rounded">
 
@@ -153,6 +156,7 @@
       </div>
     </div>
 
+    <!-- Item 4 -->
     <div class="col-12 padding-small-topBottom"> 
       <div class="row border bg-light rounded">
 
@@ -202,6 +206,7 @@
       </div>
     </div>
 
+    <!-- Item 5 -->
     <div class="col-12 padding-small-topBottom"> 
       <div class="row border bg-light rounded">
 
