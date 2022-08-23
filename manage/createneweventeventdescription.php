@@ -10,6 +10,7 @@ require 'handlers/userlogin.php';
 
     <?php
     include("shared/head.php");
+    include("handlers/handler_iscreatenewevent.php");
 
     if ( $isModeEventCreate == true ) { 
       echo "<title> Create event description | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>";
