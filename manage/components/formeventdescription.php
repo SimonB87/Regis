@@ -4,37 +4,43 @@
     <div class="row">
 
       <div class="col-lg-3 col-md-6 col-sm-12">
-        <h4>Bold text</h4>
+        <h4><strong>Bold text</strong></h4>
         <!-- <p> <strong>Some bold text here</strong> </p> -->
 
         <div>
-          < <span class="code-space"> </span> strong <span class="code-space"> </span> > Some bold text here <<span class="code-space"> </span> /<span class="code-space"> </span> strong <span class="code-space"> </span> >
+          <code>
+            <<span class="code-space"> </span>strong<span class="code-space"></span>>Some bold text here<<span class="code-space"></span>/<span class="code-space"></span>strong<span class="code-space"></span>>
+          </code>
         </div>
 
       </div>
 
       <div class="col-lg-3 col-md-6 col-sm-12">
-        <h4>Italic text</h4>
-        <p> 
+        <h4> <i>Italic text</i> </h4>
           <div>
-          < <span class="code-space"> </span> i <span class="code-space"> </span> > Some italic text here < <span class="code-space"></span>/ <span class="code-space"> </span> i <span class="code-space"> </span> > 
+            <code>
+              <<span class="code-space"></span>i<span class="code-space"></span>>Some italic text here<<span class="code-space"></span>/<span class="code-space"></span>i<span class="code-space"></span>> 
+            </code>
           </div>
-        </p>
       </div>
 
       <div class="col-lg-3 col-md-6 col-sm-12">
         <h4>End of line</h4>
-        <p> Text on line one. < <span class="code-space"> </span> br <span class="code-space"> </span> > Text on line 2. </p>
+        <div>
+          <code>
+          Text on line one.<<span class="code-space"></span>br<span class="code-space"></span>> <br> Text on line 2.
+          </code>
+        </div>
       </div>
 
       <div class="col-lg-3 col-md-6 col-sm-12">
         <h4>Paragraph</h4>
-        <p>
           <div>
-          < <span class="code-space"> </span> p <span class="code-space"> </span> > Text in par. 1 < <span class="code-space"> </span> / <span class="code-space"> </span> p <span class="code-space"> </span> > <br>
-          < <span class="code-space"> </span> p <span class="code-space"> </span> > Text in par. 2 < <span class="code-space"> </span> / <span class="code-space"> </span> p <span class="code-space"> </span> >
+            <code>
+              <<span class="code-space"></span>p<span class="code-space"></span>>Text in par. 1<<span class="code-space"></span>/<span class="code-space"></span>p<span class="code-space"></span>><br>
+              <<span class="code-space"></span>p<span class="code-space"></span>>Text in par. 2<<span class="code-space"></span>/<span class="code-space"></span>p<span class="code-space"></span>>
+            </code>
           </div>
-        </p>
       </div>
 
     </div>
