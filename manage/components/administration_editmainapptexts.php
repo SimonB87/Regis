@@ -82,7 +82,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
                   <div class="form-floating">
                     <input type="text" class="form-control" id="nationalBankAccount" required="" name="nationalBankAccount" maxlength="250">
-                    <label for="nationalBankAccount"> National bank account </label>
+                    <label for="nationalBankAccount"> National bank account number </label>
                     <div class="valid-feedback">
                       Looks good!
                     </div>
@@ -95,7 +95,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
                   <div class="form-floating">
                     <input type="text" class="form-control" id="accountIBAN" required="" name="accountIBAN" maxlength="250">
-                    <label for="accountIBAN"> IBAN bank account </label>
+                    <label for="accountIBAN"> IBAN bank account number </label>
                     <div class="valid-feedback">
                       Looks good!
                     </div>
@@ -108,7 +108,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
                   <div class="form-floating">
                     <input type="text" class="form-control" id="accountBIC" required="" name="accountBIC" maxlength="250">
-                    <label for="accountBIC"> Account BIC </label>
+                    <label for="accountBIC"> Account BIC code </label>
                     <div class="valid-feedback">
                       Looks good!
                     </div>
