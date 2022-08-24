@@ -24,7 +24,7 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
                   <div class="mb-3 form-check" data-bs-toggle="tooltip" data-bs-placement="right" title="The form is closed for registration, there is a notice on public page ''Under construction mode'' ">
-                    <input type="checkbox" class="form-check-input" id="appUnderDevelopment" name="appUnderDevelopment" >
+                    <input type="checkbox" class="form-check-input" id="appUnderDevelopment" name="appUnderDevelopment" <?php if(isset($settings_appUnderDevelopment)) { if ($settings_appUnderDevelopment == "on") { echo "checked='checked'"; } } ?>>
                     <label class="form-check-label" for="appUnderDevelopment"> Public app is in "Under construction mode" * </label>
                     <div class="valid-feedback">
                       Looks good!
@@ -37,7 +37,7 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="organizerName" required="" name="organizerName" maxlength="250">
+                    <input type="text" class="form-control" id="organizerName" required="" name="organizerName" maxlength="250" value="<?php if(isset($settings_organizerName)) { echo $settings_organizerName; } ?>" >
                     <label for="organizerName"> Organizer name </label>
                     <div class="valid-feedback">
                       Looks good!
@@ -50,7 +50,7 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="adminEmail" required="" name="adminEmail" maxlength="250">
+                    <input type="text" class="form-control" id="adminEmail" required="" name="adminEmail" maxlength="250" value="<?php if(isset($settings_adminEmail)) { echo $settings_adminEmail; } ?>" >
                     <label for="adminEmail"> Administrator main email </label>
                     <div class="valid-feedback">
                       Looks good!
@@ -81,7 +81,7 @@
                 <!-- Accordion - main texts - Content 2 : Payment setup -->
                 <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="nationalBankAccount" required="" name="nationalBankAccount" maxlength="250">
+                    <input type="text" class="form-control" id="nationalBankAccount" required="" name="nationalBankAccount" maxlength="250" value="<?php if(isset($settings_nationalBankAccount)) { echo $settings_nationalBankAccount; } ?>" >
                     <label for="nationalBankAccount"> National bank account number </label>
                     <div class="valid-feedback">
                       Looks good!
@@ -94,7 +94,7 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="accountIBAN" required="" name="accountIBAN" maxlength="250">
+                    <input type="text" class="form-control" id="accountIBAN" required="" name="accountIBAN" maxlength="250" value="<?php if(isset($settings_accountIBAN)) { echo $settings_accountIBAN; } ?>">
                     <label for="accountIBAN"> IBAN bank account number </label>
                     <div class="valid-feedback">
                       Looks good!
@@ -107,7 +107,7 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="accountBIC" required="" name="accountBIC" maxlength="250">
+                    <input type="text" class="form-control" id="accountBIC" required="" name="accountBIC" maxlength="250" value="<?php if(isset($settings_accountBIC)) { echo $settings_accountBIC; } ?>" >
                     <label for="accountBIC"> Account BIC code </label>
                     <div class="valid-feedback">
                       Looks good!
@@ -120,7 +120,7 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="accountHolderName" required="" name="accountHolderName" maxlength="250">
+                    <input type="text" class="form-control" id="accountHolderName" required="" name="accountHolderName" maxlength="250" value="<?php if(isset($settings_accountHolderName)) { echo $settings_accountHolderName; } ?>" >
                     <label for="accountHolderName"> Account holder name </label>
                     <div class="valid-feedback">
                       Looks good!
@@ -133,7 +133,8 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="accountHolderAddress" required="" name="accountHolderAddress" maxlength="250" data-bs-toggle="tooltip" data-bs-placement="right" title="If not used, leave empty">
+                    <input type="text" class="form-control" id="accountHolderAddress" required="" name="accountHolderAddress" maxlength="250" data-bs-toggle="tooltip" data-bs-placement="right" title="If not used, leave empty" 
+                    value="<?php if(isset($settings_ccountHolderAddress)) { echo $settings_accountHolderAddress; } ?>">
                     <label for="accountHolderAddress"> Account holder address * </label>
                     <div class="valid-feedback">
                       Looks good!
@@ -146,8 +147,9 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="accountHolderAddress" required="" name="accountHolderAddress" maxlength="250" data-bs-toggle="tooltip" data-bs-placement="right" title="The physical address of the bank institution">
-                    <label for="accountHolderAddress"> Bank address * </label>
+                    <input type="text" class="form-control" id="bankAddress" required="" name="bankAddress" maxlength="250" data-bs-toggle="tooltip" data-bs-placement="right" title="The physical address of the bank institution"
+                     value="<?php if(isset($settings_bankAddress)) { echo $settings_bankAddress; } ?>">
+                    <label for="bankAddress"> Bank address * </label>
                     <div class="valid-feedback">
                       Looks good!
                     </div>
