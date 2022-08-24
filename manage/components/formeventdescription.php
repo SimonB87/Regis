@@ -5,7 +5,6 @@
 
       <div class="col-lg-3 col-md-6 col-sm-12">
         <h4><strong>Bold text</strong></h4>
-        <!-- <p> <strong>Some bold text here</strong> </p> -->
 
         <div>
           <code>

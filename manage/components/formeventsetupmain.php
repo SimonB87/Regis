@@ -562,7 +562,6 @@
       <div class="col-12 padding-topBottom-medium-0x5"> 
         <div class="row rounded padding-small shadow-light">
 
-          <!-- TODO ticket prices -->
           <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
             <div class="form-floating">
                 <input type="number" class="form-control" id="regularTicketPriceSingle" name="regularTicketPriceSingle" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataRegularTicketPriceSingle . "'"; } ?> >
@@ -706,7 +705,6 @@
       <div class="col-12 padding-topBottom-medium-0x5"> 
         <div class="row rounded padding-small shadow-light">
 
-          <!-- TODO ticket prices -->
           <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
             <div class="form-floating">
                 <input type="number" class="form-control" id="partyTicketPriceSingle" name="partyTicketPriceSingle" maxlength="250" <?php if($isEventEdited) {echo "value='" . $partyTicketPriceSingle . "'"; } ?> >
@@ -847,7 +845,7 @@
 
       <div class="col-12 padding-topBottom-medium-0x5"> 
         <div class="row rounded padding-small shadow-light">
-          <!-- TODO ticket prices -->
+
           <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
             <div class="form-floating">
                 <input type="number" class="form-control" id="specialType1TicketPriceSingle" name="specialType1TicketPriceSingle" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataSpecialType1TicketPriceSingle . "'"; } ?> >
@@ -989,7 +987,6 @@
       <div class="col-12 padding-topBottom-medium-0x5"> 
         <div class="row rounded padding-small shadow-light">
 
-          <!-- TODO ticket prices -->
           <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
             <div class="form-floating">
                 <input type="number" class="form-control" id="specialType2TicketPriceSingle" name="specialType2TicketPriceSingle" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataSpecialType2TicketPriceSingle . "'"; } ?> >

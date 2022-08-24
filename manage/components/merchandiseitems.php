@@ -59,11 +59,7 @@
           <div class="col-12 margin-small-topBottom">
             <input class="btn btn-primary full-height full-width" type="submit" name="safe_form_data1" value="Update Merch Item 1">
           </div>
-          <!--
-          <div class="col-12 margin-small-topBottom">
-            <button class="btn button full-width padding-small-topBottom full-width btn btn-danger">Delete Item</button>
-          </div>
-          -->
+
         </div>
       </form>
 
@@ -134,11 +130,7 @@
           <div class="col-12 margin-small-topBottom">
             <input class="btn btn-primary full-height full-width padding-small-topBottom" type="submit" name="safe_form_data2" value="Update Merch Item 2">
           </div>
-          <!--
-          <div class="col-12 margin-small-topBottom">
-            <button class="btn button full-width padding-small-topBottom full-width btn btn-danger">Delete Item</button>
-          </div>
-          -->
+
         </div>
       </form>
 
@@ -208,11 +200,7 @@
           <div class="col-12 margin-small-topBottom">
             <input class="btn btn-primary full-height full-width" type="submit" name="safe_form_data3" value="Update Merch Item 3">
           </div>
-          <!--
-          <div class="col-12 margin-small-topBottom">
-            <button class="btn button full-width padding-small-topBottom full-width btn btn-danger">Delete Item</button>
-          </div>
-          -->
+
         </div>
       </form>
 
@@ -282,11 +270,7 @@
           <div class="col-12 margin-small-topBottom">
             <input class="btn btn-primary full-height full-width" type="submit" name="safe_form_data4" value="Update Merch Item 4">
           </div>
-          <!--
-          <div class="col-12 margin-small-topBottom">
-            <button class="btn button full-width padding-small-topBottom full-width btn btn-danger">Delete Item</button>
-          </div>
-          -->
+
         </div>
       </form>
 

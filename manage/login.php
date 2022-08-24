@@ -14,9 +14,6 @@ include("handlers/handler_testenvironment.php");
     <?php
     include("shared/head.php");
     ?>
-    <!--
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
--->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <title> Event registration | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
 

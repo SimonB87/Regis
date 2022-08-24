@@ -12,12 +12,6 @@
     </i> 
   </div>
 
-<!--   <div class="full-width toggleble padding-small"> 
-    <i class="far fa-comment aside-icon padding-small " aria-hidden="true">
-      <span class="aside-caption hidden padding-small-leftRight"> Display Help </span>
-    </i> 
-  </div> -->
-
   <div class="full-width toggleble padding-small"> 
     <i class="fas fa-file-alt aside-icon padding-small " aria-hidden="true">
       <span class="aside-caption hidden padding-small-leftRight"> PDF User Manual </span>
