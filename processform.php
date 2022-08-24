@@ -21,7 +21,6 @@ require 'config/config.php';
 
   <?php
   include("manage/handlers/handler_testenvironment.php");
-  include("shared/appinfosetup/appadminbankinfo.php");
   include("shared/navigation.php");
   include("manage/processformdata.php");
 
@@ -30,12 +29,11 @@ require 'config/config.php';
 
   include("manage/handlers/handler_geteventdata.php");
   include("manage/handlers/handler_outputotherticketoptionsname.php");
+  include("manage/handlers/handler_getappsettings.php");
 
   mysqli_close($connector);
 
   include("webform/components/pagecontent_processregistration.php");
-
-  include("shared/appinfosetup/appadminbankinfo.php");
 
   include("manage/emailing/getorderdata.php");
   include("manage/emailing/sendmailtoadmin.php");
