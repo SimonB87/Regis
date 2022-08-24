@@ -1,7 +1,7 @@
 <div class="row">
 
   <div class="col-12">
-    <h2 class="text-center display-7 fw-bold">Currently open event summary</h2>
+    <h2 class="text-center display-7 fw-bold padding-regular-bottom">Currently open event summary</h2>
   </div>
 
   <div class="col-lg-6 col-md-12">

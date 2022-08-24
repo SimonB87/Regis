@@ -93,6 +93,7 @@ else {
     include("../shared/footer.php");
 ?>
 
+    <script src="../shared/libs/jquery/jquery3.6.0.min.js"></script>
     <script src="../shared/libs/bootstrap/js/bootstrap.js"></script>
     <script src="../shared/assets/js/formvalidation.js"></script>
     <script src="../shared/assets/js/togglevisibility.js"></script>

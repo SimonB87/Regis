@@ -65,13 +65,13 @@
     if ($results-> num_rows > 0 ) {
       while ($row = $results-> fetch_assoc()) {
 
-        echo "<tr>" . 
-                "<td>" . $row["id"] . "</td>" .
-                "<td>" . $row["email"] . "</td>" .
-                "<td>" . $row["first_name"] . "</td>" .
-                "<td>" . $row["last_name"] . "</td>" .
-                "<td> <input type='number' min='0' min='9' id='user-level-" . $row["id"] . "' class='form-control' value='" . $row["user_level"] . "'>" . "</td>" .
-                "<td><button class='btn btn-primary' onclick='adminUpdateUserRights(\"" .  $row["id"] . "\")'> Update rights </button> </td>" .
+        echo "<tr id=\"user_" . $row["id"] . "\">" . 
+                "<td > <span id='user_" . $row["id"] . "_id' >" . $row["id"] . " </span> </td>" .
+                "<td > <span id='user_" . $row["id"] . "_emailaddress' title='user_email'>" . $row["email"] . " </span> </td>" .
+                "<td > <span id='user_" . $row["id"] . "_first_name' >" . $row["first_name"] . " </span> </td>" .
+                "<td > <span id='user_" . $row["id"] . "_last_name' >" . $row["last_name"] . " </span> </td>" .
+                "<td > <input type='number' class='user_right' min='0' max='19' id=\"user_" . $row["id"] . "_user_right\" class='form-control' value='" . $row["user_level"] . "'>" . " </span> </td>" .
+                "<td class='flex-column'><button class='btn btn-primary' onclick='adminUpdateUserRights(\"" .  $row["id"] . "\")'> Update rights </button> <span id='user_" . $row["id"] . "_status' class='hidden'> </span> </td>" .
               "</tr>";
 
       }
