@@ -19,100 +19,100 @@
 
             <div class="row">
 
-          <div class="col-12 padding-small-topBottom"> 
-            <div class="row border bg-light rounded">
+              <div class="col-12 padding-small-topBottom"> 
+                <div class="row border bg-light rounded">
 
-            <div class="col-lg-1 col-md-1 col-sm-1 padding-small text-center">
-              <strong> Item 1 </strong>
-            </div>
+                <div class="col-lg-1 col-md-1 col-sm-1 padding-small text-center">
+                  <strong> Item 1 </strong>
+                </div>
 
-            <div class="col-lg-3 col-md-5 col-sm-11 padding-small">
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="footeritem1_allowed" required="" name="footeritem1_allowed">
-                <label class="form-check-label" for="footeritem1_allowed"> Navigation Item is allowed </label>
-                <div class="valid-feedback">
-                  Looks good!
+                <div class="col-lg-3 col-md-5 col-sm-11 padding-small">
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="footeritem1_allowed" required="" name="footeritem1_allowed">
+                    <label class="form-check-label" for="footeritem1_allowed"> Navigation Item is allowed </label>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please fill in the text field.
+                    </div>
+                  </div>
                 </div>
-                <div class="invalid-feedback">
-                  Please fill in the text field.
+
+                <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="footeritem1_name" required="" name="footeritem1_name" maxlength="250">
+                    <label for="footeritem1_name"> Display name</label>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please fill in name.
+                    </div>
+                  </div>
                 </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="footeritem1_link" required="" name="footeritem1_link" maxlength="250">
+                    <label for="footeritem1_link"> Item web link </label>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please fill in name.
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
-              <div class="form-floating">
-                <input type="text" class="form-control" id="footeritem1_name" required="" name="footeritem1_name" maxlength="250">
-                <label for="footeritem1_name"> Display name</label>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div class="invalid-feedback">
-                  Please fill in name.
-                </div>
-              </div>
-            </div>
+            <div class="col-12 padding-small-topBottom"> 
+              <div class="row border bg-light rounded">
 
-            <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
-              <div class="form-floating">
-                <input type="text" class="form-control" id="footeritem1_link" required="" name="footeritem1_link" maxlength="250">
-                <label for="footeritem1_link"> Item web link </label>
-                <div class="valid-feedback">
-                  Looks good!
+                <div class="col-lg-1 col-md-1 col-sm-1 padding-small text-center">
+                  <strong> Item 2 </strong>
                 </div>
-                <div class="invalid-feedback">
-                  Please fill in name.
-                </div>
-              </div>
-            </div>
 
-          </div>
-        </div>
+                <div class="col-lg-3 col-md-5 col-sm-11 padding-small">
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="footeritem2_allowed" required="" name="footeritem2_allowed">
+                    <label class="form-check-label" for="footeritem2_allowed"> Navigation Item is allowed </label>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please fill in the text field.
+                    </div>
+                  </div>
+                </div>
 
-        <div class="col-12 padding-small-topBottom"> 
-          <div class="row border bg-light rounded">
+                <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="footeritem2_name" required="" name="footeritem2_name" maxlength="250">
+                    <label for="footeritem2_name"> Display name</label>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please fill in name.
+                    </div>
+                  </div>
+                </div>
 
-            <div class="col-lg-1 col-md-1 col-sm-1 padding-small text-center">
-              <strong> Item 2 </strong>
-            </div>
-
-            <div class="col-lg-3 col-md-5 col-sm-11 padding-small">
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="footeritem2_allowed" required="" name="footeritem2_allowed">
-                <label class="form-check-label" for="footeritem2_allowed"> Navigation Item is allowed </label>
-                <div class="valid-feedback">
-                  Looks good!
+                <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="footeritem2_link" required="" name="footeritem2_link" maxlength="250">
+                    <label for="footeritem2_link"> Item web link </label>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please fill in name.
+                    </div>
+                  </div>
                 </div>
-                <div class="invalid-feedback">
-                  Please fill in the text field.
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
-              <div class="form-floating">
-                <input type="text" class="form-control" id="footeritem2_name" required="" name="footeritem2_name" maxlength="250">
-                <label for="footeritem2_name"> Display name</label>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div class="invalid-feedback">
-                  Please fill in name.
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
-              <div class="form-floating">
-                <input type="text" class="form-control" id="footeritem2_link" required="" name="footeritem2_link" maxlength="250">
-                <label for="footeritem2_link"> Item web link </label>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div class="invalid-feedback">
-                  Please fill in name.
-                </div>
-              </div>
-            </div>
 
           </div>
         </div>
