@@ -40,6 +40,7 @@ else {
     <?php
     include("shared/navigation.php");
     include("handlers/handler_testenvironment.php");
+    include("handlers/handler_getappsettings.php");
     ?> 
 
     <div class="padding-small bg-white">
