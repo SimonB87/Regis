@@ -58,30 +58,28 @@
 
 - vymyslet název :-) : www.registo.cz , www.regis.events ,
 - ! při každém pokusu při uložené do DB poslat vývojáří email o chybě
-- ukládání emoticonů do dtabáze v části : Event Description
-- user sekce po přihlášení - možnost změnit heslo
-- Ukládát plně české znaky pro jména
 
 
 ## Požadavky od Mariana 1
-[ok] z registrace udalosti vyhodit pryž telefon a zemi původu zákazníka
-[ok] opravit tlačítka na "register now" na stránce registračního formulaře
-[ok] dodat do emailů text - zaplaťe do 7 dnů od Vaší registrace
-[ok] změnit nadpis "past event data" na "all events data"
-- rozchodi aplikaci na serveru
-- založit databaze provoz a test
-- administrace
+ [ok] z registrace udalosti vyhodit pryž telefon a zemi původu zákazníka
+ [ok] opravit tlačítka na "register now" na stránce registračního formulaře
+ [ok] dodat do emailů text - zaplaťe do 7 dnů od Vaší registrace
+ [ok] změnit nadpis "past event data" na "all events data"
+ [ok] rozchodi aplikaci na serveru
+ [ok] založit databaze provoz a test
+ - administrace
+
 
 ## Administrace
-  - na veřejné části webu nastavit "maintenance mode"
-  - menit prava vsech registrovanych useru
-  - menit polozky menu hlavni stranky
-  - menit platebni udaje
-  - menit texty v emailech
-  - menit odkazy v paticce vcetne social media, emailu a telenonu
-  - mit moznost promazat vybrane poster obrazky z nahranych
-  - dodat možnost vložit dokumenty/texty pro "Therms of service" a "GDPR"
-  - změnit email admina
+ [ok] na veřejné části webu nastavit "maintenance mode"
+ [ok] menit prava vsech registrovanych useru
+ [  ] menit polozky menu hlavni stranky
+ [  ] menit platebni udaje
+ [  ] menit texty v emailech
+ [  ] menit odkazy v paticce vcetne social media, emailu a telenonu
+ [  ] mit moznost promazat vybrane poster obrazky z nahranych
+ [  ] dodat možnost vložit dokumenty/texty pro "Therms of service" a "GDPR"
+ [  ] změnit email admina
 
 
 ## Hlavní funkcionalita - dodělávky
@@ -98,6 +96,7 @@
 
 - Testovací mód - založit "test" folder a nahrát sem aplikaci, aplikace pak bude při startu zkoumat, jestli je v url cestě folder "test". pak se budou ukazovat všechny featury a notifikace pro testovací prostředí 
 - remove functionality for showing copy icons, remove copy functionality
+- user sekce po přihlášení - možnost změnit heslo
 
 
 ### Nice to have
