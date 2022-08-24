@@ -11,6 +11,7 @@ $error_array = [];
     <?php
     include("manage/handlers/handler_testenvironment.php");
     include("shared/head.php");
+    include("manage/handlers/handler_getappsettings.php");
     ?>
 
     <title> Event registration | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
@@ -46,7 +47,12 @@ $error_array = [];
     <?php
     include("webForm/handlers/handler_calculatevisibility.php");
 
-    include("webForm/components/previewform.php");
+    if ($settings_appUnderDevelopment == "on") {
+      include("webForm/components/appunderdevelopment.php");
+    } else {
+      include("webForm/components/previewform.php");
+    }
+
     ?> 
 
 
@@ -61,7 +67,17 @@ $error_array = [];
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
     <script src="shared/assets/js/formvalidation.js"></script>
     <script src="shared/assets/js/recalculateprice.js"></script>
-    <script src="shared/assets/js/setdate.js"></script>
+
+    <script src='shared/assets/js/setdate.js'></script>
+
+<?
+    if ($settings_appUnderDevelopment == "on") {
+
+    } else {
+      echo "<script src='shared/assets/js/setdate.js'></script>";
+    }
+?>
+
     <script src="shared/assets/js/hidenotification.js"></script>
     <script src="shared/assets/js/enableregistrationoptions.js"></script>
 
