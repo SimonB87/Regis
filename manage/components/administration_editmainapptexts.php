@@ -17,7 +17,7 @@
             </button>
           </h2>
 
-          <div id="mainTexts_collapseOne" class="accordion-collapse collapse bg-light show" aria-labelledby="mainTexts_headingOne" data-bs-parent="#mainTexts_headingOne">
+          <div id="mainTexts_collapseOne" class="accordion-collapse collapse bg-light show" aria-labelledby="mainTexts_headingOne" data-bs-parent="#accordionEditMainTexts">
             <div class="accordion-body">
 	            <div class="row ">
 	              <!-- Accordion - main texts - Content 1 : App main setup -->
