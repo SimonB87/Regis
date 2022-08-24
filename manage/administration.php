@@ -39,13 +39,32 @@ else {
 
     <?php
     include("shared/navigation.php");
+    include("handlers/handler_testenvironment.php");
     ?> 
 
     <div class="padding-small bg-white">
       <main id="administration">
+        <div class="row">
 
-        <h1 class="display-5 fw-bold text-center">Administration</h1>
-        <h2 class="display-7 fw-bold text-center">here you can set up the app</h2>
+          <?php
+            if (isset($isTestDevelopment)) {
+              if($isTestDevelopment == true){
+                include("components/testenvnotification.php");
+              }
+            }
+          ?>
+
+          <div class="col-12">
+            <h1 class="display-5 fw-bold text-center">Administration</h1>
+          </div>
+          <div class="col-12">
+            <h2 class="display-7 fw-bold text-center">here you can set up the app</h2>
+          </div>
+
+        </div>
+
+
+
 
       </main>
   </div>

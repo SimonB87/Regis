@@ -39,9 +39,19 @@ require 'handlers/userlogin.php';
         include("handlers/getpathdata.php");
         include("handlers/handler_geteventdata.php");
         include("shared/setupnavigation.php");
+        include("handlers/handler_testenvironment.php");
         ?>
 
         <div class="row padding-regular">
+
+          <?php
+            if (isset($isTestDevelopment)) {
+              if($isTestDevelopment == true){
+                include("components/testenvnotification.php");
+              }
+            }
+          ?>
+
           <div class="col-12 padding-regular">
             <h1 class="display-5 fw-bold">Edit event main set up</h1>
             <p class="display-7 fw-bold">Set here event main characteristics</p>

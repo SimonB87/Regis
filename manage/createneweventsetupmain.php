@@ -26,6 +26,7 @@ require 'handlers/userlogin.php';
     <?php
     include("shared/navigation.php");
     include("handlers/handler_formeventsetupmain_saveproduction.php");
+    include("handlers/handler_testenvironment.php");
     ?> 
 
     <main class="bg-white">
@@ -41,6 +42,15 @@ require 'handlers/userlogin.php';
         ?>
 
         <div class="row padding-regular">
+
+          <?php
+            if (isset($isTestDevelopment)) {
+              if($isTestDevelopment == true){
+                include("components/testenvnotification.php");
+              }
+            }
+          ?>
+
           <div class="col-12 padding-regular">
             <h1 class="display-5 fw-bold">Create new event - main set up</h1>
             <p class="display-7 fw-bold">Set here event new event main characteristics</p>

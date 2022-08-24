@@ -28,6 +28,7 @@ require 'handlers/userlogin.php';
     include("shared/navigation.php");
     include("handlers/handler_formeventdescription_savedata.php");
     include("handlers/handler_publishevent_update.php");
+    include("handlers/handler_testenvironment.php");
     ?> 
 
     <main class="bg-white">
@@ -39,6 +40,15 @@ require 'handlers/userlogin.php';
         ?>
 
         <div class="row padding-regular">
+
+          <?php
+            if (isset($isTestDevelopment)) {
+              if($isTestDevelopment == true){
+                include("components/testenvnotification.php");
+              }
+            }
+          ?>
+
           <div class="col-12 padding-regular">
 
             <h1 class="display-5 fw-bold">Make event public</h1>
