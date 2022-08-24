@@ -33,7 +33,7 @@ require 'config/config.php';
 
   mysqli_close($connector);
 
-  include("webForm/components/pagecontent_processregistration.php");
+  include("webform/components/pagecontent_processregistration.php");
 
   include("shared/appinfosetup/appadminbankinfo.php");
 

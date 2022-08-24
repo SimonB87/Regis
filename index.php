@@ -39,18 +39,18 @@ $error_array = [];
   </div>
 
     <?php
-    include("webForm/handlers/handler_getformdata.php");
-    include("webForm/handlers/handler_getdescriptiondata.php");
-    include("webForm/handlers/handler_getsoldtickets.php");
+    include("webform/handlers/handler_getformdata.php");
+    include("webform/handlers/handler_getdescriptiondata.php");
+    include("webform/handlers/handler_getsoldtickets.php");
     ?> 
 
     <?php
-    include("webForm/handlers/handler_calculatevisibility.php");
+    include("webform/handlers/handler_calculatevisibility.php");
 
     if ($settings_appUnderDevelopment === "on") {
-      include("webForm/components/appunderdevelopment.php");
+      include("webform/components/appunderdevelopment.php");
     } else {
-      include("webForm/components/previewform.php");
+      include("webform/components/previewform.php");
     }
 
     ?> 
