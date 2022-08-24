@@ -1,9 +1,9 @@
-<div id="pill-navregistration-section" class="row padding-regular-top padding-regular-bottom tab-section hidden">
+<div id="pill-navregistration-section" class="row padding-regular-topBottom tab-section hidden">
   <div class="row">
 
     <div class="col-12"> 
       <h3 class="display-7 fw-bold"> Registration page menu </h3> 
-      <div class="text-gray"> Edit navigation items in the navigation menu of the public page with registration form </div> 
+      <div class="text-gray padding-regular-bottom"> Edit navigation items in the navigation menu of the public page with registration form </div> 
     </div>
 
     <!-- Item 1 -->

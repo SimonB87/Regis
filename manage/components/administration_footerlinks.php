@@ -2,7 +2,7 @@
   <div class="row margin-small-topBottom">
       <div class="col-12 margin-small-topBottom"> 
         <h3 class="display-7 fw-bold"> Links in page footer </h3> 
-        <div class="text-gray"> Edit link in the footer of the public page with registration form </div> 
+        <div class="text-gray padding-regular-bottom"> Edit link in the footer of the public page with registration form </div> 
       </div>
 
 
