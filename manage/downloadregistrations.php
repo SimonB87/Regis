@@ -32,6 +32,14 @@ else {
 
 <?php
 
+  include("handlers/handler_testenvironment.php");
+
+  if (isset($isTestDevelopment)) {
+    if($isTestDevelopment == true){
+      include("components/testenvnotification.php");
+    }
+  }
+
   if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
