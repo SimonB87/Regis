@@ -80,8 +80,6 @@ else {
       echo json_encode(array("Error description: " . $connector -> error));
     }
 
-    $paymentStatus = "TODO - payment status";
-
     //function to fatch the data
 
     if (($usernamelevel == "8") || ($usernamelevel == "9")) {
