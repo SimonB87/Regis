@@ -67,11 +67,12 @@
  [ok] změnit nadpis "past event data" na "all events data"
  [ok] rozchodi aplikaci na serveru
  [ok] založit databaze provoz a test
+ - emaily si berou payment infromation z databáze
  - administrace
 
 
 ## Administrace
- [ok] na veřejné části webu nastavit "maintenance mode"
+ [ok] na veřejné části webu nastavit "development mode"
  [ok] menit prava vsech registrovanych useru
  [  ] menit polozky menu hlavni stranky
  [  ] menit platebni udaje
@@ -88,10 +89,13 @@
 - 2) FEATURE - Zakázkový bod - 10. - Pokud dojde ke změně uložené registrace , uloží se změna do databáze a odešle se notifikace pořadateli a notifikace účastníkovi.
 - 3) Google analytics
 
+- !!! Bugfix - registrační formulář - přidat možnost - "none " - do other dancer kind; a pak i přidat do formuláře modálního okna pro úpravu registrace (jak na zobrazení detailu tak i pro úpravu)
+
 - ! BUGFIX - opravit nastavení ceny v registračním formuláři
 - BUGFIX - v úpravě description použít dynamické odkazy na obrázky emotikonů
 - !! BUGFIX - ! opravit enabled sections - když je tam sekce 2 disabled a obsahuje uvnitř texty (situace rozpor create a edit ! )
 - ! Feature - při úpravě řádku registrace poslat dotaz na řádek a rehreshnout data řádku v tabulce
+- ! Feature - registration form - pokud se vybere couple lístek tak umožnit se zaregistrovat jenom ajko couple - vyřadit možnosti leader a follower
 - !! BUGFIX - createneweventeventformpreview.php - unkwnown variables : dataEventDescription1, dataEventDescription2, dataEventDescription3
 - !! BUGFIX - registration form - summarized price is not populalating in input in Mozilla Firefox
 
