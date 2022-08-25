@@ -448,6 +448,20 @@ form div.form-floating {
 select {
   min-height: 58px;
 }
+.custom-label-parent {
+  position: relative;
+}
+.custom-label-parent .form-select-customLabel {
+  position: absolute;
+  top: 0;
+  left: 13px;
+  font-weight: 500;
+  opacity: 0.65;
+  font-size: 0.85rem;
+}
+.blueLabel {
+  color: var(--bs-blue);
+}
 .div-select {
   position: relative;
 }
