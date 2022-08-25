@@ -11,7 +11,7 @@
           Registration form under development 
         </h2>
         <p class="padding-small">
-          <i>There are no registrations open. Wait for event to open.</i>
+          <i>Wait for App to be re-opened.</i>
         </p>
       </div>
     </div>
