@@ -23,14 +23,20 @@
 	              <!-- Accordion - main texts - Content 1 : App main setup -->
 
                 <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
-                  <div class="mb-3 form-check" data-bs-toggle="tooltip" data-bs-placement="right" title="The form is closed for registration, there is a notice on public page ''Under construction mode'' ">
-                    <input type="checkbox" class="form-check-input" id="appUnderDevelopment" name="appUnderDevelopment" <?php if(isset($settings_appUnderDevelopment)) { if ($settings_appUnderDevelopment == "on") { echo "checked='checked'"; } } ?>>
-                    <label class="form-check-label" for="appUnderDevelopment"> Public app is in "Under construction mode" * </label>
+                  <div class="mb-3 full-width full-height custom-label-parent" data-bs-toggle="tooltip" data-bs-placement="right" title="The form is closed for registration, there is a notice on public page ''Under construction mode'' " >
+                    <select id="appUnderDevelopment" class="form-select" aria-label="Pass type" required="" name="appUnderDevelopment">
+                      <option value="" aria-valuenow="0.0" <?php if(isset($settings_appUnderDevelopment)) { if ( ($settings_appUnderDevelopment != "1 - on") || ($settings_appUnderDevelopment != "2 - off") ){ echo " selected='' "; } } ?> >Switch dev mode ...</option>
+                      <option value="1 - on" aria-valuenow="1.0" <?php if(isset($settings_appUnderDevelopment)) { if ($settings_appUnderDevelopment == "1 - on") { echo " selected='' "; } } ?> > On </option>
+                      <option value="2 - off" aria-valuenow="1.0" <?php if(isset($settings_appUnderDevelopment)) { if ($settings_appUnderDevelopment == "2 - off") { echo " selected='' "; } } ?> > Off </option>
+                    </select>
+                    <div class="form-select-customLabel blueLabel">
+                      Public app is in "Under construction mode" *
+                    </div>
                     <div class="valid-feedback">
                       Looks good!
                     </div>
                     <div class="invalid-feedback">
-                      Please fill in the text field.
+                      Please select some valid option.
                     </div>
                   </div>
                 </div>
@@ -172,7 +178,7 @@
     <div class="col-12">
       <div class="bg-light rounded border margin-small-topBottom">
         <div class="padding-small">
-          <button class="btn btn-primary btn-lg"> Update </button>
+          <button class="btn btn-primary btn-lg" onclick="editMainAppTexts();"> Update </button> &nbsp; <span id="status-mainapptexts"> </span>
         </div>
       </div>
     </div>
