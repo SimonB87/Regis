@@ -47,7 +47,7 @@ $error_array = [];
     <?php
     include("webform/handlers/handler_calculatevisibility.php");
 
-    if ($settings_appUnderDevelopment === "on") {
+    if ($settings_appUnderDevelopment === "1 - on") {
       include("webform/components/appunderdevelopment.php");
     } else {
       include("webform/components/previewform.php");
@@ -67,7 +67,7 @@ $error_array = [];
     <script src="shared/assets/js/recalculateprice.js"></script>
 
 <?
-    if ($settings_appUnderDevelopment === "on") {
+    if ($settings_appUnderDevelopment === "1 - on") {
 
     } else {
       echo "<script src='shared/assets/js/setdate.js'></script>";
