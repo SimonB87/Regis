@@ -670,7 +670,4 @@ if (!mysqli_set_charset($connector, "utf8")) {
 
 
 
-  // Close DB Connection
-  mysqli_close($connector);
-
 ?>
