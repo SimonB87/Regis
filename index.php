@@ -42,6 +42,9 @@ $error_array = [];
     include("webform/handlers/handler_getformdata.php");
     include("webform/handlers/handler_getdescriptiondata.php");
     include("webform/handlers/handler_getsoldtickets.php");
+
+    // Close DB Connection
+    mysqli_close($connector);
     ?> 
 
     <?php
