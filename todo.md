@@ -96,9 +96,9 @@
 - !! BUGFIX - createneweventeventformpreview.php - unkwnown variables : dataEventDescription1, dataEventDescription2, dataEventDescription3
 - !! BUGFIX - registration form - summarized price is not populalating in input in Mozilla Firefox
 
-- Testovací mód - založit "test" folder a nahrát sem aplikaci, aplikace pak bude při startu zkoumat, jestli je v url cestě folder "test". pak se budou ukazovat všechny featury a notifikace pro testovací prostředí 
 - remove functionality for showing copy icons, remove copy functionality
 - user sekce po přihlášení - možnost změnit heslo
+- k agreement options dodat možnost přidat 
 
 
 ### Nice to have
