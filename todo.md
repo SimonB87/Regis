@@ -94,6 +94,7 @@
 
 - Check - když není žádná akce, tak na obrazovce je info, že všechny akce již proběhly
 
+- !! BUGFIX - eventformpreview.php - formulář neodpovídá veřejnému formuláři - srovnat inputy a k "other dancer kind" přidat select-option "0 - None"
 - BUGFIX - v úpravě description použít dynamické odkazy na obrázky emotikonů
 - !! BUGFIX - ! opravit enabled sections - když je tam sekce 2 disabled a obsahuje uvnitř texty (situace rozpor create a edit ! )
 - ! Feature - při úpravě řádku registrace poslat dotaz na řádek a rehreshnout data řádku v tabulce
