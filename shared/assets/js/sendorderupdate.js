@@ -35,7 +35,7 @@ function postUpdatePayment(infonum) {
       success: function (dataResult) {
         var dataResult = JSON.parse(dataResult);
         if (dataResult.statusCode == 200) {
-          targetEl.text(dataResult.content + " " + dataResult.postMail);
+          targetEl.text(dataResult.content + " " + dataResult.postMail );
           var targetSelector = $('.update-pay--parent[title=id' + targetOrderId + '] select[name=paymentoption]');
           targetSelector.removeClass("bg-info");
           targetSelector.removeClass("bg-success");
@@ -55,6 +55,8 @@ function postUpdatePayment(infonum) {
   }
 
   document.querySelector("tr.orderId" + infonum + " .updatebutton .spinner-border").classList.add("hidden");
+
+
 }
 
 function updateOrderData() {
@@ -104,7 +106,7 @@ function updateOrderData() {
       var dataResult = JSON.parse(dataResult);
 
       if (dataResult.statusCode == 200) {
-        targetEl.innerText = "Sucess - updated order data.";
+        targetEl.innerText = "Sucess - updated order data. Please refresh the browser window for data update.";
         targetEl.classList.add("text-success");
         // TODO - updateDataOfOrdersData(orderId);  
       }
