@@ -55,24 +55,24 @@ $testEnvironment = isset($isTestDevelopment) ?
 
 $paymentInstructions_holderAddress = (isset($settings_accountHolderAddress)) ? 
   ( strlen($settings_accountHolderAddress > 4) ? 
-    (" <div>Account holder address: <strong class='toCopy'>" . $accountHolderAddress . " </strong>") 
+    (" <div>Account holder address: <strong class=''>" . $accountHolderAddress . " </strong>") 
     : ("") ) 
   : ("");
 
 $paymentInstructions = "<div class='container'><div class='row'>". $testEnvironment . 
         "<div class='col-lg-12 col-md-12 col-sm-12 padding-regular-topBottom'> <h2 class='text-center' style='color: green;'>You have registered for the event!</h2> <h3 class='text-center padding-small'>" ." Payment instructions : </h3> " . 
         "<h4 class='padding-small'>". $htmlLocalIcon ." For Czech participants: </h4>" . 
-        "<p> Please send the price: <strong class='toCopy'>" . " " . $formPrice . "</strong> <br> with Variable symbol (VS/Variabilní symbol)<strong class='text-green toCopy' style=''> " 
+        "<p> Please send the price: <strong class=''>" . " " . $formPrice . "</strong> <br> with Variable symbol (VS/Variabilní symbol)<strong class='text-green toCopy' style=''> " 
         . " " .  $orderId . "</strong>" . 
-        " <br>to account <strong class='toCopy'>" . " " . $settings_nationalBankAccount ."</strong> </p>" . 
+        " <br>to account <strong class=''>" . " " . $settings_nationalBankAccount ."</strong> </p>" . 
         "<p> <h4 class='padding-small'>" . $htmlGlobeIcon. " For international bank transaction : </h4> <div>IBAN: <strong class='toCopy'>" . " " . $settings_accountIBAN . " </strong> </div> " . 
-        "<div>BIC/SWIFT: <strong class='toCopy'> " . $settings_accountBIC . " </strong> </div>" . 
-        "<div>Bank address: <strong class='toCopy'>" . $settings_bankAddress . " </strong> </div>".
-        " <div>Account holder name: <strong class='toCopy'>" . $settings_accountHolderName  . " </strong>" . 
+        "<div>BIC/SWIFT: <strong class=''> " . $settings_accountBIC . " </strong> </div>" . 
+        "<div>Bank address: <strong class=''>" . $settings_bankAddress . " </strong> </div>".
+        " <div>Account holder name: <strong class=''>" . $settings_accountHolderName  . " </strong>" . 
         $paymentInstructions_holderAddress .
         " </div> " . 
-        " <div>Price : <strong class='toCopy'> " . " " . $formPrice . "</strong></div>" .
-        "<div>Notice for receiver: \"<strong class='toCopy'>" . " Order ID: " . $orderId. ", client: ". $clientName ." , contact: " . $clientEmail . "</strong>\" </div>" .
+        " <div>Price : <strong class=''> " . " " . $formPrice . "</strong></div>" .
+        "<div>Notice for receiver: \"<strong class=''>" . " Order ID: " . $orderId. ", client: ". $clientName ." , contact: " . $clientEmail . "</strong>\" </div>" .
         " </p>" . "</div></div></div>"; //TODO - valid price set up by server check, payment´s details set by admin to DB
 
 $exitIcon = "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-check' viewBox='0 0 16 16'>
