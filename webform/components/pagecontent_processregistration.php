@@ -32,10 +32,10 @@ $htmlLocation = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong
 $htmlFormPrice = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Form price: </strong>" . $formPrice . "</div>";
 $htmlClientName = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client name : </strong>" . $clientName . "</div>";
 $htmlClientEmail = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client email : </strong>" . $clientEmail . "</div>";
-$htmlClientPhone = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client phone : </strong>" . $clientPhone . "</div>";
-$htmlClientCountry = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client country : </strong>" . $clientCountry . "</div>";
-$htmlClientComments = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client comments : </strong>" . $clientComments . "</div>";
-$htmlRegistrationdate = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client registration data : </strong>" . $registrationdate . "</div>";
+$htmlClientPhone = (strlen($clientPhone) > 5) ? ("<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client phone : </strong>" . $clientPhone . "</div>") : ("");
+$htmlClientCountry = (strlen($clientCountry) > 3) ? ("<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client country : </strong>" . $clientCountry . "</div>") : ("");
+$htmlClientComments = (strlen($clientComments) > 3) ? ("<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client comments : </strong>" . $clientComments . "</div>") : ("");
+$htmlRegistrationdate = "<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong>Client registration date : </strong> " . $registrationdate . "<span style='color:lightgray;'>(Y-M-D h:m:s)</span> </div>";
 
 $htmlConfirmPrivateInformationPart1 = (strlen($confirmPrivateInformation1) > 1) ? ("<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong> ". $confirmPrivateInformation1Description .":  </strong>" . $confirmPrivateInformation1 . "</div>") : ("");
 $htmlConfirmPrivateInformationPart2 = (strlen($confirmPrivateInformation2) > 1) ? ("<div class='col-lg-6 col-md-6 col-sm-12 padding-small'> <strong> ". $confirmPrivateInformation2Description .":  </strong>" . $confirmPrivateInformation1 . "</div>" ) : ("");

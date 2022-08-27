@@ -184,6 +184,7 @@ if ($correctlyFilledForm) {
                     </tr>
                     <tr>";
 
+                    $buyerPhoneHtml = ( strlen($storedClientPhone) > 2 ) ? ("<p>Buyer phone : <strong>" . $storedClientPhone . "</strong></p>") : "";
                     $confirmationHtml1 = ( (isset($storedPrivateInformation1Description)) && (strlen($storedPrivateInformation1Description) > 2) ) ? ( "<p>" . $storedPrivateInformation1Description . " : <strong>" . $storedconfirmPrivateInformation1 . "</strong></p>" ) : "";
                     $confirmationHtml2 = ( (isset($storedPrivateInformation2Description)) && (strlen($storedPrivateInformation2Description) > 2) ) ? ( "<p>" . $storedPrivateInformation2Description . " : <strong>" . $storedconfirmPrivateInformation2 . "</strong></p>" ) : "";
                     $confirmationHtml3 = ( (isset($storedPrivateInformation3Description)) && (strlen($storedPrivateInformation3Description) > 2) ) ? ( "<p>" . $storedPrivateInformation3Description . " : <strong>" . $storedconfirmPrivateInformation3 . "</strong></p>" ) : "";
@@ -217,9 +218,9 @@ $message_summary =  "<!-- PARAGRAPH -->
                           <p>Event location : <strong>" . $storedLocation . "</strong></p>
                           <p></p>
                           <p>Buyer name : <strong>" . $storedClientName . "</strong></p>
-                          <p>Buyer email : <strong>" . $storedClientEmail . "</strong></p>
-                          <p>Buyer phone : <strong>" . $storedClientPhone . "</strong></p>
-                          <p>Ordered on date : <strong>" . $storedRegistrationdate . "</strong></p>" .
+                          <p>Buyer email : <strong>" . $storedClientEmail . "</strong></p>"
+                          . $buyerPhoneHtml .
+                          "<p>Ordered on date : <strong>" . $storedRegistrationdate . "</strong> <span>(Y-M-D h:m:s)</span> </p>" .
                           $confirmationHtml1 .
                           $confirmationHtml2 .
                           $confirmationHtml3 .
