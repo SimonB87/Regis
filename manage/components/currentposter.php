@@ -1,7 +1,7 @@
 <?php
 
 $urlpath = $_SERVER['REQUEST_URI'];
-$isModeEventCreate = strpos($urlpath, "createnewevent"); // createneweventsetupmain // createneweventeventdescription //createneweventeventformpreview // createneweventposter.php
+$isModeEventCreate = strpos($urlpath, "createnewevent");
 
 $sql = "";
 if ( $isModeEventCreate == true ) {
