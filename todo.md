@@ -84,19 +84,34 @@
 
 ## Hlavní funkcionalita - dodělávky
 
-- eventsetupmain.php ; eventdescription.php ; eventposter.php ; eventformpreview.php 
-  * use key "?id=" from page url in order to get the precise event ID
-  * add a select component of all events in order to manage event registrations
-
 - 1) FEATURE - když user objednává lístek tak se dynamicky dotázat do databíze zda je tento lístek k dispozici - potíže při prodeje posledního lístku ; pokud jsou lístky již vyprodané, tak si uživatel dostane na waiting list 
+
+  I) dostat z post requestu data
+
+  II) kontrola jestli je pro vent registrace vůbec otevřena
+  * ano : pokračovat na krkok 2
+  * ne : obrazovka "Registrace není možná. Zkuste se registrovat znovu později"
+
+  III) zkontrolovat jestli pro a) ticket-option a b) eventulně other-ticket-options
+  - jsou lístky v prodeji s ohledme na datum
+  - existují ještě neprosané lístky
+  * ano : pokračovat na krkok 3
+  * ne : obrazovka "Registrace není možná. Zkuste se registrovat znovu později"
+
+  IV) úspěšná registrace
+  - ukázat info o registraci 
+  - zaslat zákazníkovi a adminovi emaily
+
 - 2) FEATURE - Zakázkový bod - 10. - Pokud dojde ke změně uložené registrace , uloží se změna do databáze a odešle se notifikace pořadateli a notifikace účastníkovi.
+
 - 3) Google analytics
 
 - Check - když není žádná akce, tak na obrazovce je info, že všechny akce již proběhly
 
+- ! Pokud admin mění payment option, tak se ho dotázat v modálním okně, že souhlasí - to chce založit nové modální okno a pořešit dotaz.
 - !! BUGFIX - eventformpreview.php - formulář neodpovídá veřejnému formuláři - srovnat inputy a k "other dancer kind" přidat select-option "0 - None"
 - BUGFIX - v úpravě description použít dynamické odkazy na obrázky emotikonů
-- !! BUGFIX - ! opravit enabled sections - když je tam sekce 2 disabled a obsahuje uvnitř texty (situace rozpor create a edit ! )
+- !! BUGFIX - ! opravit enabled sections - eventuelně vyhodit pryč ten JS / když je tam sekce 2 disabled a obsahuje uvnitř texty (situace rozpor create a edit ! )
 - ! Feature - při úpravě řádku registrace poslat dotaz na řádek a rehreshnout data řádku v tabulce
 - !! BUGFIX - registration form - summarized price is not populalating in input in Mozilla Firefox
 
