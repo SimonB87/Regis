@@ -39,6 +39,11 @@ require 'handlers/userlogin.php';
           <div class="col-12 padding-regular">
             <h1 class="display-5 fw-bold"> Edit event - form preview </h1>
             <p class="display-7 fw-bold"> Preview the event form for different time periods </p>
+
+            <?php
+            include("components/selecteventtoedit.php");
+            ?>
+
           </div>
         </div>
 

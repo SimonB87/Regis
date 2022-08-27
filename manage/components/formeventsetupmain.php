@@ -1,10 +1,12 @@
 <?php
+
   $hostName = $_SERVER['SERVER_NAME'];
-  if ( ($hostName == "localhost") || ($hostName == "127.0.0.1")) {
+  if ( ($hostName == "localhost") || ($hostName == "127.0.0.1") || ($isTestDevelopment == true)) {
     echo "<div class='row full-width'><div class='col-12'><button type='button' class='btn btn-warning t-test' style='float:right;' onclick='prefillForm();'>Prefill form with test data</button></div></div>";
   } else {
     echo "<!-- JS prefillForm(); --->";
   }
+
 ?>
 <!-- section : Event Main Characteristics -->
 

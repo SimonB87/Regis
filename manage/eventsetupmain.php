@@ -23,6 +23,7 @@ require 'handlers/userlogin.php';
   <body style="background: #303030;">
 
     <?php
+    include("handlers/handler_testenvironment.php");
     include("handlers/handler_getopeneventid.php");
     include("shared/navigation.php");
     include("handlers/handler_formeventsetupmain_saveproduction.php");
@@ -39,7 +40,6 @@ require 'handlers/userlogin.php';
         include("handlers/getpathdata.php");
         include("handlers/handler_geteventdata.php");
         include("shared/setupnavigation.php");
-        include("handlers/handler_testenvironment.php");
         ?>
 
         <div class="row padding-regular">
@@ -55,6 +55,11 @@ require 'handlers/userlogin.php';
           <div class="col-12 padding-regular">
             <h1 class="display-5 fw-bold">Edit event main set up</h1>
             <p class="display-7 fw-bold">Set here event main characteristics</p>
+
+            <?php
+            include("components/selecteventtoedit.php");
+            ?>
+
           </div>
 
           <?php

@@ -50,6 +50,9 @@ require 'handlers/userlogin.php';
           <div class="col-12 padding-regular">
             <h1 class="display-5 fw-bold"> <?php echo ( ( $isModeEventCreate == true ) ? "Add poster to new event" : " Edit current event poster" ); ?> </h1>
             <p class="display-7 fw-bold"> Poster shows on top of event regitration page. </p>
+            <?php
+            include("components/selecteventtoedit.php");
+            ?>
           </div>
 
 

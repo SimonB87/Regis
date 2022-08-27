@@ -56,6 +56,11 @@ require 'handlers/userlogin.php';
 ?>
               </h1>
             <p class="display-7 fw-bold">Set here event description for the event page </p>
+
+            <?php
+            include("components/selecteventtoedit.php");
+            ?>
+
           </div>
 
         </div>
