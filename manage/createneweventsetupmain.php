@@ -22,6 +22,7 @@ require 'handlers/userlogin.php';
   <body style="background: #303030;">
 
     <?php
+    include("handlers/handler_getopeneventid.php");
     include("shared/navigation.php");
     include("handlers/handler_formeventsetupmain_saveproduction.php");
     include("handlers/handler_testenvironment.php");
@@ -106,6 +107,7 @@ require 'handlers/userlogin.php';
     <script src="../shared/assets/js/footablerun.js" defer></script>
     <script src="../shared/assets/js/enablesections.js" defer></script>
     <script src='../shared/assets/js/seteventsetupcurrentpage.js' defer></script>
+    <script src='../shared/assets/js/eventsetupnavedithref.js' defer></script>
     <script src='../shared/assets/js/scipt.js' defer></script>
 
   </body>

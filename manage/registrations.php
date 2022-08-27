@@ -44,6 +44,8 @@ else {
     include("handlers/handler_geteventdata.php");
     include("handlers/handler_getformdata.php");
     include("handlers/handler_getidfromurl.php");
+
+    include("handlers/handler_getopeneventid.php");
     include("shared/navigation.php");
 
     ?>

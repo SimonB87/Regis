@@ -29,6 +29,7 @@ require 'handlers/userlogin.php';
   <body style="background: #303030;">
 
     <?php
+    include("handlers/handler_getopeneventid.php");
     include("shared/navigation.php");
     include("handlers/handler_formeventdescription_savedata.php");
     ?> 
@@ -107,6 +108,7 @@ require 'handlers/userlogin.php';
     <script src='../shared/libs/emojionearea/emojionearea.min.js' defer></script>
     <script src='../shared/assets/js/emojionearea_set.js' defer></script>
     <script src='../shared/assets/js/seteventsetupcurrentpage.js' defer></script>
+    <script src='../shared/assets/js/eventsetupnavedithref.js' defer></script>
     <script src='../shared/assets/js/scipt.js' defer></script>
 
   </body>
