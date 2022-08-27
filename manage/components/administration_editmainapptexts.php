@@ -30,7 +30,7 @@
                       <option value="2 - off" aria-valuenow="1.0" <?php if(isset($settings_appUnderDevelopment)) { if ($settings_appUnderDevelopment == "2 - off") { echo " selected='' "; } } ?> > Off </option>
                     </select>
                     <div class="form-select-customLabel blueLabel">
-                      Public app is in "Under construction mode" *
+                      App in mode "Under construction " *
                     </div>
                     <div class="valid-feedback">
                       Looks good!

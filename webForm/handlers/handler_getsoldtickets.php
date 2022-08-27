@@ -51,7 +51,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
   /*
   // fill : $earlybirdsSingleSold;
   */
-  $sql = "SELECT * FROM registrations WHERE ((eventID=$eventDataId) AND (passType='1 - Early birds leader/follower') AND ((dancerKind='1 - Leader') OR (dancerKind='2 - Follower')))";
+  $sql = "SELECT * FROM registrations WHERE ((eventID=$eventDataId) AND (passType='1 - Early birds leader/follower') AND ((dancerKind='1 - Leader') OR (dancerKind='2 - Follower')) AND (paystatus <> '4 - cancelled registration') )";
 
   $results = $connector-> query($sql);
   //Error case
@@ -81,7 +81,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
   /*
   // fill : $earlybirdsSingleSold_leader;
   */
-  $sql = "SELECT * FROM registrations WHERE ((eventID=$eventDataId) AND (passType='1 - Early birds leader/follower') AND ((dancerKind='1 - Leader') ))";
+  $sql = "SELECT * FROM registrations WHERE ((eventID=$eventDataId) AND (passType='1 - Early birds leader/follower') AND ((dancerKind='1 - Leader') ) AND (paystatus <> '4 - cancelled registration') )";
 
   $results = $connector-> query($sql);
   //Error case
@@ -111,7 +111,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
   /*
   // fill : $earlybirdsSingleSold_follower;
   */
-  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='1 - Early birds leader/follower') AND ( dancerKind='2 - Follower') )";
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='1 - Early birds leader/follower') AND ( dancerKind='2 - Follower') AND (paystatus <> '4 - cancelled registration') )";
 
   $results = $connector-> query($sql);
   //Error case
@@ -141,7 +141,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
   /*
   // fill : $earlybirdsCoupleSold;
   */
-  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='2 - Early birds couple') AND (dancerKind='3 - Couple') )";
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='2 - Early birds couple') AND (dancerKind='3 - Couple') AND (paystatus <> '4 - cancelled registration') )";
 
   $results = $connector-> query($sql);
   //Error case
@@ -171,7 +171,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
   /*
   // fill : $regularSingleSold;
   */
-  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='3 - Fullpass leader/follower') AND ((dancerKind='1 - Leader') OR (dancerKind='2 - Follower')))";
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='3 - Fullpass leader/follower') AND ((dancerKind='1 - Leader') OR (dancerKind='2 - Follower')) AND (paystatus <> '4 - cancelled registration') )";
 
   $results = $connector-> query($sql);
   //Error case
@@ -201,7 +201,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
   /*
   // fill : $regularSingleSold_leader;
   */
-  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='3 - Fullpass leader/follower') AND (dancerKind='1 - Leader') )";
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='3 - Fullpass leader/follower') AND (dancerKind='1 - Leader') AND (paystatus <> '4 - cancelled registration') )";
 
   $results = $connector-> query($sql);
   //Error case
@@ -232,7 +232,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
   // fill : $regularSingleSold_follower;
   */
 
-  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='3 - Fullpass leader/follower') AND (dancerKind='2 - Follower') )";
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='3 - Fullpass leader/follower') AND (dancerKind='2 - Follower') AND (paystatus <> '4 - cancelled registration') )";
 
   $results = $connector-> query($sql);
   //Error case
@@ -263,7 +263,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
   /*
   // fill : $regularCoupleSold;
   */
-  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='4 - Fullpass couple') AND (dancerKind='3 - Couple') )";
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='4 - Fullpass couple') AND (dancerKind='3 - Couple') AND (paystatus <> '4 - cancelled registration') )";
 
   $results = $connector-> query($sql);
   //Error case
@@ -293,7 +293,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
   /*
   // fill : $partySingleSold;
   */
-  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='5 - Partypass leader/follower') AND ((dancerKind='1 - Leader') OR (dancerKind='2 - Follower')))";
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='5 - Partypass leader/follower') AND ((dancerKind='1 - Leader') OR (dancerKind='2 - Follower')) AND (paystatus <> '4 - cancelled registration') )";
 
   $results = $connector-> query($sql);
   //Error case
@@ -324,7 +324,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
   /*
   // fill : $partySingleSold_leader;
   */
-  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='5 - Partypass leader/follower') AND ( (dancerKind='1 - Leader') ))";
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='5 - Partypass leader/follower') AND ( (dancerKind='1 - Leader') ) AND (paystatus <> '4 - cancelled registration') )";
 
   $results = $connector-> query($sql);
   //Error case
@@ -355,7 +355,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
   /*
   // fill : $partySingleSold_follower;
   */
-  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='5 - Partypass leader/follower') AND ( (dancerKind='2 - Follower') ))";
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='5 - Partypass leader/follower') AND ( (dancerKind='2 - Follower') ) AND (paystatus <> '4 - cancelled registration') )";
 
   $results = $connector-> query($sql);
   //Error case
@@ -386,7 +386,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
   /*
   // fill : $partyCoupleSold;
   */
-  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='6 - Partypass couple') AND (dancerKind='3 - Couple') )";
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (passType='6 - Partypass couple') AND (dancerKind='3 - Couple') AND (paystatus <> '4 - cancelled registration') )";
 
   $results = $connector-> query($sql);
   //Error case
@@ -418,7 +418,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
   // TODO fill : $spec1SingleSold;
   */
 
-  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='1 - special type1 single') AND ((dancerKind='1 - Leader') OR (dancerKind='2 - Follower')) )";
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='1 - special type1 single') AND ((dancerKind='1 - Leader') OR (dancerKind='2 - Follower')) AND (paystatus <> '4 - cancelled registration') )";
 
   $results = $connector-> query($sql);
   //Error case
@@ -449,7 +449,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
   // TODO fill : $spec1SingleSold_leader;
   */
 
-  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='1 - special type1 single') AND (dancerKind='1 - Leader') )";
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='1 - special type1 single') AND (dancerKind='1 - Leader') AND (paystatus <> '4 - cancelled registration') )";
 
   $results = $connector-> query($sql);
   //Error case
@@ -480,7 +480,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
   // TODO fill : $spec1SingleSold_follower;
   */
 
-  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='1 - special type1 single') AND (dancerKind='2 - Follower') )";
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='1 - special type1 single') AND (dancerKind='2 - Follower') AND (paystatus <> '4 - cancelled registration') )";
 
   $results = $connector-> query($sql);
   //Error case
@@ -513,7 +513,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
   */
 
 
-  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='1 - special type1 couple') AND (dancerKind='3 - Couple') )";
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='1 - special type1 couple') AND (dancerKind='3 - Couple') AND (paystatus <> '4 - cancelled registration') )";
 
   $results = $connector-> query($sql);
   //Error case
@@ -546,7 +546,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
   */
 
 
-  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='3 - special type2 single') AND ((dancerKind='1 - Leader') OR (dancerKind='2 - Follower')) )";
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='3 - special type2 single') AND ((dancerKind='1 - Leader') OR (dancerKind='2 - Follower')) AND (paystatus <> '4 - cancelled registration') )";
 
   $results = $connector-> query($sql);
   //Error case
@@ -577,7 +577,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
   // TODO fill : $spec2SingleSold_leader;
   */
 
-  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='3 - special type2 single') AND ( dancerKind='1 - Leader') )";
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='3 - special type2 single') AND ( dancerKind='1 - Leader') AND (paystatus <> '4 - cancelled registration') )";
 
   $results = $connector-> query($sql);
   //Error case
@@ -608,7 +608,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
   // TODO fill : $pec2SingleSold_follower;
   */
 
-  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='3 - special type2 single') AND ( dancerKind='1 - Leader') )";
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='3 - special type2 single') AND ( dancerKind='1 - Leader') AND (paystatus <> '4 - cancelled registration') )";
 
   $results = $connector-> query($sql);
   //Error case
@@ -640,7 +640,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
   // TODO fill : $spec2CoupleSold;
   */
 
-  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='4 - special type2 couple') AND (dancerKind='3 - Couple') )";
+  $sql = "SELECT * FROM registrations WHERE ( (eventID=$eventDataId) AND (otherTicketOptions='4 - special type2 couple') AND (dancerKind='3 - Couple') AND (paystatus <> '4 - cancelled registration') )";
 
   $results = $connector-> query($sql);
   //Error case
@@ -669,8 +669,5 @@ if (!mysqli_set_charset($connector, "utf8")) {
 
 
 
-
-  // Close DB Connection
-  mysqli_close($connector);
 
 ?>

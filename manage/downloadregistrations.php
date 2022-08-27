@@ -32,6 +32,14 @@ else {
 
 <?php
 
+  include("handlers/handler_testenvironment.php");
+
+  if (isset($isTestDevelopment)) {
+    if($isTestDevelopment == true){
+      include("components/testenvnotification.php");
+    }
+  }
+
   if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
@@ -71,8 +79,6 @@ else {
     else {
       echo json_encode(array("Error description: " . $connector -> error));
     }
-
-    $paymentStatus = "TODO - payment status";
 
     //function to fatch the data
 

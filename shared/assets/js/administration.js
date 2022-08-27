@@ -6,9 +6,9 @@ function adminUpdateUserRights(id) {
   const selector_userEmail = "user_" + id + "_emailaddress";
   const selector_status = "user_" + id + "_status";
 
-  const userRight = document.getElementById( selector_userRight ).value;
-  const userEmail = document.getElementById( selector_userEmail).innerText;
-  const status = document.getElementById( selector_status );
+  const userRight = document.getElementById(selector_userRight).value;
+  const userEmail = document.getElementById(selector_userEmail).innerText;
+  const status = document.getElementById(selector_status);
   const countOfAdmins = countAdmins("#app-users", ".user_right");
 
   status.innerText = "Updating ...";
@@ -50,20 +50,22 @@ function adminUpdateUserRights(id) {
       }
     });
 
+    delayedMessageReset(status, "5000");
+
   }
 
   function countAdmins(tableId, userRightClass) {
     const users = document.querySelectorAll(`${tableId} ${userRightClass}`);
     let right9 = 0;
 
-    users.forEach((element, index) => { 
-        let rightValue = element.value; 
-        if (rightValue == 9) { 
-          right9++; 
-        } 
+    users.forEach((element, index) => {
+      let rightValue = element.value;
+      if (rightValue == 9) {
+        right9++;
+      }
     });
 
-    if ( (right9 >= 1) && (right9 <= 2) ){
+    if ((right9 >= 1) && (right9 <= 2)) {
       return true;
     } else {
       return false;
@@ -135,5 +137,15 @@ function editMainAppTexts() {
       }
 
     });
+
+    delayedMessageReset(status, "5000");
   }
+}
+
+function delayedMessageReset(element, timeDelay) {
+
+  setTimeout(() => {
+    element.innerText = "";
+  }, timeDelay)
+
 }
