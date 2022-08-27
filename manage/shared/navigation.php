@@ -19,9 +19,9 @@
               Event set-up
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="createneweventsetupmain.php">Create a new event</a></li>
+              <li><a class="dropdown-item" href="establishnewevent.php">Create a new event</a></li> <!-- createneweventsetupmain.php -->
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="eventsetupmain.php">Existing event main set up</a></li>
+              <li><a class="dropdown-item" href="<?php echo "eventsetupmain.php?id=" . $oneOpenEventId ; ?>">Existing event main set up</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="publishevent.php">Make event public</a></li>
             </ul>

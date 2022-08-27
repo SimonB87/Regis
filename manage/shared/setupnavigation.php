@@ -6,31 +6,19 @@
       <span> Event set-up links : </span>
     </div>
 
-    <?php 
-    $urlpath = $_SERVER['REQUEST_URI'];
+    <div id="setupnav" class="col-12 text-center setupnav">
 
-    $isModeEventCreate = strpos($urlpath, "createnewevent"); // createneweventsetupmain // createneweventeventdescription //createneweventeventformpreview // createneweventposter.php
-    ?>
+      <a id="nav_eventsetupmain" href="eventsetupmain.php" class="weblink padding-small "> Event main set up </a>
 
-    <div class="col-12 text-center setupnav">
+      <a id="nav_eventdescription" href="eventdescription.php" class="weblink padding-small"> Event description </a>
 
-      <a id="nav_eventsetupmain"
-        href=<?php if($isModeEventCreate) {echo "createneweventsetupmain.php"; } else {echo "eventsetupmain.php"; } ?>
-        class="weblink padding-small "> Event main set up </a>
-
-      <a id="nav_eventdescription"
-        href=<?php if($isModeEventCreate) {echo "createneweventeventdescription.php"; } else {echo "eventdescription.php"; } ?>
-        class="weblink padding-small"> Event description </a>
-
-      <a id="nav_eventposter" href=<?php if($isModeEventCreate) {echo "createneweventposter.php"; } else {echo "eventposter.php"; } ?> class="weblink padding-small"> Event poster </a>
+      <a id="nav_eventposter" href="eventposter.php" class="weblink padding-small"> Event poster </a>
   <!--
       <a id="nav_merchandise" href="merchandisesetup.php" class="weblink padding-small"> Merchendase set-up </a>
   -->
-      <a id="nav_eventform"
-        href=<?php if($isModeEventCreate) {echo "createneweventeventformpreview.php"; } else {echo "eventformpreview.php"; } ?>
-        class="weblink padding-small"> Event register form </a>
+      <a id="nav_eventform" href="eventformpreview.php" class="weblink padding-small"> Event register form </a>
 
-        <a id="nav_eventform" href="publishevent.php" class="weblink padding-small"> Publish event (leave event setup) </a>
+      <a id="nav_eventform" href="publishevent.php" class="weblink padding-small"> Publish event (leave event setup) </a>
 
     </div>
 
