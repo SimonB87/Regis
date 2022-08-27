@@ -1,5 +1,4 @@
 <?php 
-include("handlers/handler_getconfirmprivateinfodescription.php");
 
 if (isset($_POST['clientEmail'])) {
 
@@ -116,8 +115,6 @@ if (isset($_POST['clientEmail'])) {
       //echo "<h2>no data</h2>";
     }
   
-  
-
 
 } else {
 

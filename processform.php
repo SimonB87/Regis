@@ -22,7 +22,8 @@ require 'config/config.php';
   <?php
   include("manage/handlers/handler_testenvironment.php");
   include("shared/navigation.php");
-  include("manage/processformdata.php");
+  include("manage/handlers/handler_getconfirmprivateinfodescription.php");
+  include("webform/handlers/handler_processformdata.php");
 
   $isEventEdited = true;
   $selectByEventId = $eventID;
