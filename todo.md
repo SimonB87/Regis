@@ -114,6 +114,7 @@
 - !! BUGFIX - ! opravit enabled sections - eventuelně vyhodit pryč ten JS / když je tam sekce 2 disabled a obsahuje uvnitř texty (situace rozpor create a edit ! )
 - ! Feature - při úpravě řádku registrace poslat dotaz na řádek a rehreshnout data řádku v tabulce
 - !! BUGFIX - registration form - summarized price is not populalating in input in Mozilla Firefox
+- !! V Modálním okně na úpravu registrace chybí jméno pro nevybraný druh "Other Ticket Option"
 
 - remove functionality for showing copy icons, remove copy functionality
 - user sekce po přihlášení - možnost změnit heslo
