@@ -79,6 +79,7 @@ $error_array = [];
 
     <script src="shared/assets/js/hidenotification.js"></script>
     <script src="shared/assets/js/enableregistrationoptions.js"></script>
+    <script src='shared/assets/js/prepareregistration.js' defer></script>
 
   </body>
 </html>
