@@ -72,7 +72,7 @@ require 'handlers/userlogin.php';
       </div>
 
       <div class="container padding-regular-topBottom ">
-        <div class="row">
+        <div class="row full-width">
 
         <?php
         include("components/formeventsetupmain.php");

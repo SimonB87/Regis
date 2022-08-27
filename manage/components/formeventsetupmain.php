@@ -9,8 +9,9 @@
 
 ?>
 <!-- section : Event Main Characteristics -->
+<div class="row full-width">
 
-<form id="form" class="needs-validation bts-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" novalidate>
+<form id="form" class="needs-validation bts-form full-width" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" novalidate>
 
   <div class="row full-width">
 
@@ -1061,3 +1062,4 @@
   </div>
 
 </form>
+</div>
