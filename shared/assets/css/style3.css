@@ -221,6 +221,9 @@
 .text-left {
   text-align: left;
 }
+.float-left {
+  float: left;
+}
 .center-margin {
   margin: 0 auto;
 }
@@ -325,6 +328,10 @@ footer .copyright {
   footer .nav li a {
     text-align: center;
   }
+}
+.nav-disabled {
+  color: var(--gray);
+  pointer-events: none;
 }
 .nav.nav-pills {
   display: flex;
