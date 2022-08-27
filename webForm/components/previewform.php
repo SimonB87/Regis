@@ -131,7 +131,6 @@
                       <?php if ( $isVisible_passType_regularTicketCouple ) { echo "<option value='4 - Fullpass couple" . "' aria-valuenow='" . $eventDataRegularTicketPriceCouple . "'>Fullpass couple - " . $eventDataRegularTicketPriceCouple . "CZK</option>"; } ?>
                       <?php if ( $isVisible_passType_partyPassSingle ) { echo "<option value='5 - Partypass leader/follower" . "' aria-valuenow='" . $partyTicketPriceSingle . "'>Partypass leader/follower - " . $partyTicketPriceSingle . "CZK</option>"; } ?>
                       <?php if ( $isVisible_passType_partyPassCouple ) { echo "<option value='6 - Partypass couple" . "' aria-valuenow='" . $partyTicketPriceCouple . "'>Partypass couple - " . $partyTicketPriceCouple . "CZK</option>"; } ?>
-                      <option value="0 - None" aria-valuenow="0.0">None</option>
                     </select>
                     <div class="form-select-customLabel">
                       Pass type
@@ -161,7 +160,7 @@
                       <option value="" selected="" aria-valuenow="0.0">Select dancer kind ...</option>
                       <option value="1 - Leader" aria-valuenow="1.0">Leader</option>
                       <option value="2 - Follower" aria-valuenow="1.0">Follower</option>
-                      <?php if ( $isVisible_dancerKind_couple ) { echo "<option value='3 - Couple' aria-valuenow='1.75'>Couple</option>"; } ?>
+                      <option value="3 - Couple" aria-valuenow="1.75">Couple</option>
 
                     </select>
                     <div class="form-select-customLabel">
@@ -182,7 +181,7 @@
                   <div class="mb-3 full-width full-height div-select">
                     <select id="otherTicketOptions" class="form-select" aria-label="Pass type" required="" onchange="recalculatePrice(); enableRegistrationOptions('otherTicketOptions','otherDancerKind');" name="otherTicketOptions">
                       <option value="" selected=""> Select other tickets options ...</option>
-                      <option value="0 - None" aria-valuenow="1.0">None</option>
+                      <option value="0 - None" aria-valuenow="0">None</option>
                       <?php 
                       if ($isVisible_passType_specialType1Single) { echo "<option value='1 - special type1 single' aria-valuenow='" . $eventDataSpecialType1TicketPriceSingle . "'>" . $eventDataSpecialType1RegistrationName . " Single - " .$eventDataSpecialType1TicketPriceSingle . ",- Kč</option>"; }
                       if ($isVisible_passType_specialType1Couple) { echo "<option value='2 - special type1 couple' aria-valuenow='" . $eventDataSpecialType1TicketPriceCouple . "'>" . $eventDataSpecialType1RegistrationName . " Couple - " .$eventDataSpecialType1TicketPriceCouple . ",- Kč</option>"; }
@@ -218,7 +217,7 @@
                       <option value="0 - None" aria-valuenow="1.0">None</option>
                       <option value="1 - Leader" aria-valuenow="1.0">Leader</option>
                       <option value="2 - Follower" aria-valuenow="1.0">Follower</option>
-                      <?php if ( $isVisible_dancerKind_couple ) { echo "<option value='3 - Couple' aria-valuenow='1.75'>Couple</option>"; } ?>
+                      <option value="3 - Couple" aria-valuenow="1.75">Couple</option>
 
                     </select>
                     <div class="form-select-customLabel">
