@@ -84,6 +84,10 @@
 
 ## Hlavní funkcionalita - dodělávky
 
+- eventsetupmain.php ; eventdescription.php ; eventposter.php ; eventformpreview.php 
+  * use key "?id=" from page url in order to get the precise event ID
+  * add a select component of all events in order to manage event registrations
+
 - 1) FEATURE - když user objednává lístek tak se dynamicky dotázat do databíze zda je tento lístek k dispozici - potíže při prodeje posledního lístku ; pokud jsou lístky již vyprodané, tak si uživatel dostane na waiting list 
 - 2) FEATURE - Zakázkový bod - 10. - Pokud dojde ke změně uložené registrace , uloží se změna do databáze a odešle se notifikace pořadateli a notifikace účastníkovi.
 - 3) Google analytics
