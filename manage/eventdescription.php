@@ -39,6 +39,7 @@ require 'handlers/userlogin.php';
       <div class="container my-5 text-center">
 
         <?php
+        $selectedEventId = ( isset( $_GET['id']) ) ? ($_GET['id']) : null;
         include("handlers/getpathdata.php");
         include("shared/setupnavigation.php");
         ?>
@@ -47,13 +48,13 @@ require 'handlers/userlogin.php';
           <div class="col-12 padding-regular text-center">
             <h1 class='display-5 fw-bold'>
 
-<?php 
-    if ( $isModeEventCreate == true ) { 
-      echo " Create event description ";
-    } else {
-      echo " Edit event description ";
-    }
-?>
+          <?php 
+              if ( $isModeEventCreate == true ) { 
+                echo " Create event description ";
+              } else {
+                echo " Edit event description ";
+              }
+          ?>
               </h1>
             <p class="display-7 fw-bold">Set here event description for the event page </p>
 

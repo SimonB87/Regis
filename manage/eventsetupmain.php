@@ -38,7 +38,8 @@ require 'handlers/userlogin.php';
 
         <?php
         include("handlers/getpathdata.php");
-        include("handlers/handler_geteventdata.php");
+        $selectedEventId = ( isset( $_GET['id']) ) ? ($_GET['id']) : null;
+        include("handlers/handler_getselectedeventbyiddata.php");
         include("shared/setupnavigation.php");
         ?>
 

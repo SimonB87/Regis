@@ -61,7 +61,8 @@
   $eventDataSpecialType2TicketPriceCouple = null; 
   $eventDataSpecialType2TicketAmountCouple = null;
 
-  if ($isEventEdited) {
+  $eventDataPosterName = null;
+
 
     if (mysqli_connect_errno()) {
       printf("Connect failed: %s\n", mysqli_connect_error());
@@ -81,16 +82,13 @@
       }
 
       //select one open event, where registrations are open
-      $sql = "SELECT * FROM events WHERE eventStatus='1 - Registrations open' ORDER BY id DESC LIMIT 1";
-
-      if ((isset($selectByEventId)) || (isset( $selectedEventId))) {
-        if ($selectByEventId == true) {
-          $sql = "SELECT * FROM events WHERE id='$selectByEventId' ORDER BY id DESC LIMIT 1";
-        }
-        if (isset($selectedEventId)) {
-          $sql = "SELECT * FROM events WHERE id='$selectedEventId' ORDER BY id DESC LIMIT 1";
-        }
+      $sql = "";
+      if (isset($selectedEventId)) {
+        $sql = "SELECT * FROM events WHERE id='$selectedEventId' ORDER BY id DESC LIMIT 1";
+      } elseif ($selectedEventId == null) {
+        $sql = "SELECT * FROM events WHERE eventStatus='1 - Registrations open' ORDER BY id DESC LIMIT 1";
       }
+
 
       $results = $connector-> query($sql);
       //Error case
@@ -171,6 +169,8 @@
           $eventDataSpecialType2TicketPriceCouple = $row["specialType2TicketPriceCouple"] ;
           $eventDataSpecialType2TicketAmountCouple = $row["specialType2TicketAmountCouple"] ;
 
+          $eventDataPosterName = $row["posterFileName"] ;
+
         }
         echo "";
     }
@@ -181,6 +181,6 @@
     // Comment out DB close
     // mysqli_close($connector);
 
-  }
+
 
 ?>

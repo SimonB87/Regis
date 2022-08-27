@@ -24,7 +24,12 @@
               //printf("Current character set: %s\n", mysqli_character_set_name($con));//used only for testing
       }
 
-      $sql = "SELECT * FROM events WHERE id=(SELECT max(id) FROM events)";
+      $sql = "";
+      if (isset($selectedEventId)) {
+        $sql = "SELECT * FROM events WHERE id='$selectedEventId'";
+      } else {
+        $sql = "SELECT * FROM events WHERE id=(SELECT max(id) FROM events)";
+      }
   
       $results = $connector-> query($sql);
       //Error case

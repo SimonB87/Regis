@@ -32,7 +32,9 @@ require 'handlers/userlogin.php';
     include("shared/navigation.php");
     include("handlers/handler_formeventsetupmain_saveproduction.php");
     include("handlers/handler_eventpostersetdb.php");
-    include("handlers/handler_getformdata.php");
+
+    $selectedEventId = ( isset( $_GET['id']) ) ? ($_GET['id']) : null;
+    include("handlers/handler_getselectedeventbyiddata.php"); //handler_getselectedeventbyiddata.php // handler_getformdata.php
 
     $fileNameString = "";
     include("handlers/handler_formpostventposterstore.php");
