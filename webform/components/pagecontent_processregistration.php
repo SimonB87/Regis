@@ -62,10 +62,10 @@ $paymentInstructions_holderAddress = (isset($settings_accountHolderAddress)) ?
 $paymentInstructions = "<div class='container'><div class='row'>". $testEnvironment . 
         "<div class='col-lg-12 col-md-12 col-sm-12 padding-regular-topBottom'> <h2 class='text-center' style='color: green;'>You have registered for the event!</h2> <h3 class='text-center padding-small'>" ." Payment instructions : </h3> " . 
         "<h4 class='padding-small'>". $htmlLocalIcon ." For Czech participants: </h4>" . 
-        "<p> Please send the price: <strong class=''>" . " " . $formPrice . "</strong> <br> with Variable symbol (VS/Variabilní symbol)<strong class='text-green toCopy' style=''> " 
+        "<p> Please send the price: <strong class=''>" . " " . $formPrice . "</strong> <br> with Variable symbol (VS/Variabilní symbol)<strong class='text-green ' style=''> " 
         . " " .  $orderId . "</strong>" . 
         " <br>to account <strong class=''>" . " " . $settings_nationalBankAccount ."</strong> </p>" . 
-        "<p> <h4 class='padding-small'>" . $htmlGlobeIcon. " For international bank transaction : </h4> <div>IBAN: <strong class='toCopy'>" . " " . $settings_accountIBAN . " </strong> </div> " . 
+        "<p> <h4 class='padding-small'>" . $htmlGlobeIcon. " For international bank transaction : </h4> <div>IBAN: <strong class=''>" . " " . $settings_accountIBAN . " </strong> </div> " . 
         "<div>BIC/SWIFT: <strong class=''> " . $settings_accountBIC . " </strong> </div>" . 
         "<div>Bank address: <strong class=''>" . $settings_bankAddress . " </strong> </div>".
         " <div>Account holder name: <strong class=''>" . $settings_accountHolderName  . " </strong>" . 
