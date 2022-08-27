@@ -85,6 +85,7 @@
                 <div class=" full-width full-height div-select">
                   <select id="otherDancerKind" class="form-select" aria-label="Pass type" required="" name="otherDancerKind">
                     <option value="" >Select other dancer kind ...</option>
+                    <option value="0 - None" >None</option>
                     <option value="1 - Leader" >Leader</option>
                     <option value="2 - Follower" >Follower</option>
                     <option value='3 - Couple' >Couple</option>
