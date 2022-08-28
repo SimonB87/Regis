@@ -23,7 +23,7 @@ require 'handlers/userlogin.php';
   <body style="background: #303030;">
 
     <?php
-    include("handlers/handler_getopeneventid.php");
+    //include("handlers/handler_getopeneventid.php");
     include("shared/navigation.php");
     include("handlers/handler_formeventdescription_savedata.php");
     include("handlers/handler_publishevent_update.php");

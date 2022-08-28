@@ -38,7 +38,7 @@ else {
   <body style="background: #303030;">
 
     <?php
-    include("handlers/handler_getopeneventid.php");
+    //include("handlers/handler_getopeneventid.php");
     include("shared/navigation.php");
     include("handlers/handler_testenvironment.php");
     include("handlers/handler_getappsettings.php");

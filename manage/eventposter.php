@@ -11,13 +11,9 @@ require 'handlers/userlogin.php';
     <?php
     include("shared/head.php");
     include("handlers/handler_iscreatenewevent.php");
-
-    if ( $isModeEventCreate == true ) { 
-      echo "<title> Create new event | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>";
-    } else {
-      echo "<title> Edit event poster | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>";
-    }
     ?>
+
+    <title> Edit event poster | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
 
     <link rel="stylesheet" type="text/css" href="../shared/libs/footablebootstrap/css/footable.bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../shared/libs/fontawesome/fontawesome_5.0.0.min.css">
@@ -28,7 +24,7 @@ require 'handlers/userlogin.php';
   <body style="background: #303030;">
 
     <?php
-    include("handlers/handler_getopeneventid.php");
+    //include("handlers/handler_getopeneventid.php");
     include("shared/navigation.php");
     include("handlers/handler_formeventsetupmain_saveproduction.php");
     include("handlers/handler_eventpostersetdb.php");
