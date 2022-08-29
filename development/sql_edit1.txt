@@ -89,3 +89,14 @@ CREATE TABLE `registrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 //colum "ID" musí být auto_increment
+
+
+CREATE TABLE footerLinks (
+    id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    isAllowed varchar(250) CHARACTER SET latin2 COLLATE latin2_czech_cs,
+    displayName varchar(250) CHARACTER SET latin2 COLLATE latin2_czech_cs,
+    weblink varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs,
+    iconFontAwesome varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs
+);
+
+INSERT INTO `footerlinks`(`isAllowed`, `displayName`, `weblink`) VALUES ("on","phone","#")
