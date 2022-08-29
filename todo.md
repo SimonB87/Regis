@@ -123,6 +123,7 @@
 
 ### Nice to have
 
+- FEATURE - how many tickets are left for sale in each ticket category
 - FEATURE - když jsou lístky, které chci pryč, tak zákazník může vyplnit krátký formulář, kde bude emailem notifikován, pokud se objevily nové lístky pro danou jednu událost ( zákazník zde vyplní své údaje, kontakt a o jaký typ lístku má zájem ) ; Admin pak bude mít k události ještě plnící se waiting list
 - REFACTOR - vyřadit couple tiskets enabled - místo toho dát do kategorie - počet 0
 - process form data - disallow reposting registration form on refresh of the page : https://stackoverflow.com/questions/2666882/how-to-avoid-resending-data-on-refresh-in-php
