@@ -18,7 +18,7 @@
           <div class="accordion-body">
 
             <div class="row">
-
+              <!-- Item 1 -->
               <div class="col-12 padding-small-topBottom"> 
                 <div class="row border bg-light rounded">
 
@@ -28,7 +28,7 @@
 
                 <div class="col-lg-3 col-md-5 col-sm-11 padding-small">
                   <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="footeritem1_allowed" required="" name="footeritem1_allowed">
+                    <input type="checkbox" class="form-check-input" id="footeritem1_allowed" required="" name="footeritem1_allowed" <?php if ( ( $items[1]->isAllowed ) == "on") { echo "checked='checked'"; } ?> >
                     <label class="form-check-label" for="footeritem1_allowed"> Navigation Item is allowed </label>
                     <div class="valid-feedback">
                       Looks good!
@@ -41,7 +41,7 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="footeritem1_name" required="" name="footeritem1_name" maxlength="250">
+                    <input type="text" class="form-control" id="footeritem1_name" required="" name="footeritem1_name" maxlength="250" value=<?php echo $items[1]->displayName; ?> >
                     <label for="footeritem1_name"> Display name</label>
                     <div class="valid-feedback">
                       Looks good!
@@ -54,7 +54,7 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="footeritem1_link" required="" name="footeritem1_link" maxlength="250">
+                    <input type="text" class="form-control" id="footeritem1_link" required="" name="footeritem1_link" maxlength="250" value=<?php echo $items[1]->weblink; ?> >
                     <label for="footeritem1_link"> Item web link </label>
                     <div class="valid-feedback">
                       Looks good!
@@ -67,18 +67,67 @@
 
               </div>
             </div>
+              <!-- Item 2 -->
+              <div class="col-12 padding-small-topBottom"> 
+                <div class="row border bg-light rounded">
 
+                  <div class="col-lg-1 col-md-1 col-sm-1 padding-small text-center">
+                    <strong> Item 2 </strong>
+                  </div>
+
+                  <div class="col-lg-3 col-md-5 col-sm-11 padding-small">
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="footeritem2_allowed" required="" name="footeritem2_allowed">
+                      <label class="form-check-label" for="footeritem2_allowed"> Navigation Item is allowed </label>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                      <div class="invalid-feedback">
+                        Please fill in the text field.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="footeritem2_name" required="" name="footeritem2_name" maxlength="250">
+                      <label for="footeritem2_name"> Display name</label>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                      <div class="invalid-feedback">
+                        Please fill in name.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="footeritem2_link" required="" name="footeritem2_link" maxlength="250">
+                      <label for="footeritem2_link"> Item web link </label>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                      <div class="invalid-feedback">
+                        Please fill in name.
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+            </div>
+              <!-- Item 3 -->
             <div class="col-12 padding-small-topBottom"> 
               <div class="row border bg-light rounded">
 
                 <div class="col-lg-1 col-md-1 col-sm-1 padding-small text-center">
-                  <strong> Item 2 </strong>
+                  <strong> Item 3 </strong>
                 </div>
 
                 <div class="col-lg-3 col-md-5 col-sm-11 padding-small">
                   <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="footeritem2_allowed" required="" name="footeritem2_allowed">
-                    <label class="form-check-label" for="footeritem2_allowed"> Navigation Item is allowed </label>
+                    <input type="checkbox" class="form-check-input" id="footeritem3_allowed" required="" name="footeritem3_allowed">
+                    <label class="form-check-label" for="footeritem3_allowed"> Navigation Item is allowed </label>
                     <div class="valid-feedback">
                       Looks good!
                     </div>
@@ -90,8 +139,8 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="footeritem2_name" required="" name="footeritem2_name" maxlength="250">
-                    <label for="footeritem2_name"> Display name</label>
+                    <input type="text" class="form-control" id="footeritem3_name" required="" name="footeritem3_name" maxlength="250">
+                    <label for="footeritem3_name"> Display name</label>
                     <div class="valid-feedback">
                       Looks good!
                     </div>
@@ -103,8 +152,8 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="footeritem2_link" required="" name="footeritem2_link" maxlength="250">
-                    <label for="footeritem2_link"> Item web link </label>
+                    <input type="text" class="form-control" id="footeritem3_link" required="" name="footeritem3_link" maxlength="250">
+                    <label for="footeritem3_link"> Item web link </label>
                     <div class="valid-feedback">
                       Looks good!
                     </div>
@@ -114,106 +163,57 @@
                   </div>
                 </div>
 
-          </div>
-        </div>
-
-        <div class="col-12 padding-small-topBottom"> 
-          <div class="row border bg-light rounded">
-
-            <div class="col-lg-1 col-md-1 col-sm-1 padding-small text-center">
-              <strong> Item 3 </strong>
-            </div>
-
-            <div class="col-lg-3 col-md-5 col-sm-11 padding-small">
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="footeritem3_allowed" required="" name="footeritem3_allowed">
-                <label class="form-check-label" for="footeritem3_allowed"> Navigation Item is allowed </label>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div class="invalid-feedback">
-                  Please fill in the text field.
-                </div>
               </div>
             </div>
+              <!-- Item 4 -->
+            <div class="col-12 padding-small-topBottom"> 
+              <div class="row border bg-light rounded">
 
-            <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
-              <div class="form-floating">
-                <input type="text" class="form-control" id="footeritem3_name" required="" name="footeritem3_name" maxlength="250">
-                <label for="footeritem3_name"> Display name</label>
-                <div class="valid-feedback">
-                  Looks good!
+                <div class="col-lg-1 col-md-1 col-sm-1 padding-small text-center">
+                  <strong> Item 4 </strong>
                 </div>
-                <div class="invalid-feedback">
-                  Please fill in name.
+
+                <div class="col-lg-3 col-md-5 col-sm-11 padding-small">
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="footeritem4_allowed" required="" name="footeritem4_allowed">
+                    <label class="form-check-label" for="footeritem4_allowed"> Navigation Item is allowed </label>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please fill in the text field.
+                    </div>
+                  </div>
                 </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="footeritem4_name" required="" name="footeritem4_name" maxlength="250">
+                    <label for="footeritem4_name"> Display name</label>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please fill in name.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="footeritem4_link" required="" name="footeritem4_link" maxlength="250">
+                    <label for="footeritem4_link"> Item web link </label>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please fill in name.
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
-              <div class="form-floating">
-                <input type="text" class="form-control" id="footeritem3_link" required="" name="footeritem3_link" maxlength="250">
-                <label for="footeritem3_link"> Item web link </label>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div class="invalid-feedback">
-                  Please fill in name.
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="col-12 padding-small-topBottom"> 
-          <div class="row border bg-light rounded">
-
-            <div class="col-lg-1 col-md-1 col-sm-1 padding-small text-center">
-              <strong> Item 4 </strong>
-            </div>
-
-            <div class="col-lg-3 col-md-5 col-sm-11 padding-small">
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="footeritem4_allowed" required="" name="footeritem4_allowed">
-                <label class="form-check-label" for="footeritem4_allowed"> Navigation Item is allowed </label>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div class="invalid-feedback">
-                  Please fill in the text field.
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
-              <div class="form-floating">
-                <input type="text" class="form-control" id="footeritem4_name" required="" name="footeritem4_name" maxlength="250">
-                <label for="footeritem4_name"> Display name</label>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div class="invalid-feedback">
-                  Please fill in name.
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
-              <div class="form-floating">
-                <input type="text" class="form-control" id="footeritem4_link" required="" name="footeritem4_link" maxlength="250">
-                <label for="footeritem4_link"> Item web link </label>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-                <div class="invalid-feedback">
-                  Please fill in name.
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
 
       </div>
 
@@ -232,7 +232,7 @@
           <div class="accordion-body">
 
             <div class="row">
-
+        <!-- Item 5 -->
         <div class="col-12 padding-small-topBottom"> 
           <div class="row border bg-light rounded">
 
@@ -295,7 +295,7 @@
           </div>
         </div>
 
-
+        <!-- Item 6 -->
         <div class="col-12 padding-small-topBottom"> 
           <div class="row border bg-light rounded">
 
@@ -358,7 +358,7 @@
           </div>
         </div>
 
-
+        <!-- Item 7 -->
         <div class="col-12 padding-small-topBottom"> 
           <div class="row border bg-light rounded">
 
@@ -421,7 +421,7 @@
           </div>
         </div>
 
-
+        <!-- Item 8 -->
         <div class="col-12 padding-small-topBottom"> 
           <div class="row border bg-light rounded">
 
@@ -484,7 +484,7 @@
           </div>
         </div>
 
-
+        <!-- Item 9 -->
         <div class="col-12 padding-small-topBottom"> 
           <div class="row border bg-light rounded">
 
