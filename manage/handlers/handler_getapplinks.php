@@ -44,7 +44,7 @@
           public $iconFontAwesome;
       }
       
-      $items = array();
+      $itemsFooterLinks = array();
 
 
     //function to fatch the data
@@ -59,7 +59,7 @@
         $newItem->weblink = $row["weblink"];
         $newItem->iconFontAwesome = $row["iconFontAwesome"];
 
-        array_push($items,$newItem);
+        array_push($itemsFooterLinks,$newItem);
 
       }
       echo "";

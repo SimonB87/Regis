@@ -28,7 +28,7 @@
 
                 <div class="col-lg-3 col-md-5 col-sm-11 padding-small">
                   <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="footeritem1_allowed" required="" name="footeritem1_allowed" <?php if ( ( $items[1]->isAllowed ) == "on") { echo "checked='checked'"; } ?> >
+                    <input type="checkbox" class="form-check-input" id="footeritem1_allowed" required="" name="footeritem1_allowed" <?php if ( ( $itemsFooterLinks[1]->isAllowed ) == "on") { echo "checked='checked'"; } ?> >
                     <label class="form-check-label" for="footeritem1_allowed"> Navigation Item is allowed </label>
                     <div class="valid-feedback">
                       Looks good!
@@ -41,7 +41,7 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="footeritem1_name" required="" name="footeritem1_name" maxlength="250" value=<?php echo $items[1]->displayName; ?> >
+                    <input type="text" class="form-control" id="footeritem1_name" required="" name="footeritem1_name" maxlength="250" value=<?php echo $itemsFooterLinks[1]->displayName; ?> >
                     <label for="footeritem1_name"> Display name</label>
                     <div class="valid-feedback">
                       Looks good!
@@ -54,7 +54,7 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="footeritem1_link" required="" name="footeritem1_link" maxlength="250" value=<?php echo $items[1]->weblink; ?> >
+                    <input type="text" class="form-control" id="footeritem1_link" required="" name="footeritem1_link" maxlength="250" value=<?php echo $itemsFooterLinks[1]->weblink; ?> >
                     <label for="footeritem1_link"> Item web link </label>
                     <div class="valid-feedback">
                       Looks good!
