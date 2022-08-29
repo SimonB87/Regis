@@ -99,4 +99,4 @@ CREATE TABLE footerLinks (
     iconFontAwesome varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs
 );
 
-INSERT INTO `footerlinks`(`isAllowed`, `displayName`, `weblink`) VALUES ("on","phone","#")
+INSERT INTO `footerlinks`(`isAllowed`, `displayName`, `weblink`) VALUES ("on","phone","#");
