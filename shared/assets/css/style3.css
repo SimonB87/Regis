@@ -307,6 +307,26 @@ span.disabledBtn {
 .text-blue {
   color: var(--bs-blue);
 }
+.inline-display > .form-floating,
+.inline-display > .save-btn-parent {
+  float: left;
+}
+ > .form-floating {
+  width: 80%;
+}
+ > .save-btn-parent {
+  width: 20%;
+}
+.inline-display > .form-floating,
+.inline-display .save-btn-parent {
+  float: left;
+}
+.inline-display > .form-floating {
+  width: 80%;
+}
+.inline-display > .save-btn-parent {
+  width: 20%;
+}
 footer .copyright {
   font-family: Muli, sans-serif;
   color: #d3d3d3;

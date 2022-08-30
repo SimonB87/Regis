@@ -17,7 +17,7 @@ require 'handlers/userlogin.php';
     <link rel="stylesheet" type="text/css" href="../shared/libs/footablebootstrap/css/footable.bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../shared/libs/fontawesome/fontawesome_5.0.0.min.css">
     <link rel="stylesheet" type="text/css" href="../shared/assets/css/footbaleedits.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> 
+    <script src="https://kit.fontawesome.com/ae3a13eb1c.js" crossorigin="anonymous"></script>
 
   </head>
   <body style="background: #303030;">

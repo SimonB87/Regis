@@ -33,12 +33,13 @@ else {
     ?>
     <title> Administration | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
     <link href="../shared/libs/charts.js/css/chart.min.css" rel="stylesheet" >
+    <script src="https://kit.fontawesome.com/ae3a13eb1c.js" crossorigin="anonymous"></script>
 
   </head>
   <body style="background: #303030;">
 
     <?php
-    //include("handlers/handler_getopeneventid.php");
+    include("handlers/handler_getopeneventid.php");
     include("shared/navigation.php");
     include("handlers/handler_testenvironment.php");
     include("handlers/handler_getappsettings.php");

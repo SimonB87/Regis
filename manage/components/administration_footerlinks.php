@@ -52,7 +52,7 @@
                   </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+                <div class="col-lg-4 col-md-6 col-sm-12 padding-small inline-display">
                   <div class="form-floating">
                     <input type="text" class="form-control" id="footeritem1_link" required="" name="footeritem1_link" maxlength="250" value=<?php echo $itemsFooterLinks[0]->weblink; ?> >
                     <label for="footeritem1_link"> Item web link </label>
@@ -62,6 +62,10 @@
                     <div class="invalid-feedback">
                       Please fill in name.
                     </div>
+                  </div>
+                  <div class="padding-small save-btn-parent">
+                    <button class="btn btn-primary btn-lg" onclick="updateFooterLinks('1');"> <i class="fa-solid fa-floppy-disk"></i> </button>
+                    <div id="statusLinks1" class="status hidden"> </div>
                   </div>
                 </div>
 
@@ -101,7 +105,7 @@
                     </div>
                   </div>
 
-                  <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+                  <div class="col-lg-4 col-md-6 col-sm-12 padding-small inline-display">
                     <div class="form-floating">
                       <input type="text" class="form-control" id="footeritem2_link" required="" name="footeritem2_link" maxlength="250" value=<?php echo $itemsFooterLinks[1]->weblink; ?>  >
                       <label for="footeritem2_link"> Item web link </label>
@@ -111,6 +115,10 @@
                       <div class="invalid-feedback">
                         Please fill in name.
                       </div>
+                    </div>
+                    <div class="padding-small save-btn-parent">
+                      <button class="btn btn-primary btn-lg" onclick="updateFooterLinks('2');"> <i class="fa-solid fa-floppy-disk"></i> </button>
+                      <div id="statusLinks2" class="status hidden"> </div>
                     </div>
                   </div>
 
@@ -150,8 +158,8 @@
                   </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
-                  <div class="form-floating">
+                <div class="col-lg-4 col-md-6 col-sm-12 padding-small inline-display">
+                  <div class="form-floating ">
                     <input type="text" class="form-control" id="footeritem3_link" required="" name="footeritem3_link" maxlength="250" value=<?php echo $itemsFooterLinks[2]->weblink; ?> >
                     <label for="footeritem3_link"> Item web link </label>
                     <div class="valid-feedback">
@@ -160,6 +168,10 @@
                     <div class="invalid-feedback">
                       Please fill in name.
                     </div>
+                  </div>
+                  <div class="padding-small save-btn-parent">
+                    <button class="btn btn-primary btn-lg" onclick="updateFooterLinks('3');"> <i class="fa-solid fa-floppy-disk"></i> </button>
+                    <div id="statusLinks3" class="status hidden"> </div>
                   </div>
                 </div>
 
@@ -199,8 +211,8 @@
                   </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
-                  <div class="form-floating">
+                <div class="col-lg-4 col-md-6 col-sm-12 padding-small inline-display">
+                  <div class="form-floating ">
                     <input type="text" class="form-control" id="footeritem4_link" required="" name="footeritem4_link" maxlength="250" value=<?php echo $itemsFooterLinks[3]->weblink; ?> >
                     <label for="footeritem4_link"> Item web link </label>
                     <div class="valid-feedback">
@@ -209,6 +221,10 @@
                     <div class="invalid-feedback">
                       Please fill in name.
                     </div>
+                  </div>
+                  <div class="padding-small save-btn-parent">
+                    <button class="btn btn-primary btn-lg" onclick="updateFooterLinks('4');"> <i class="fa-solid fa-floppy-disk"></i> </button>
+                    <div id="statusLinks4" class="status hidden"> </div>
                   </div>
                 </div>
 
@@ -279,8 +295,8 @@
               </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-12 padding-small">
-              <div class="form-floating">
+            <div class="col-lg-3 col-md-6 col-sm-12 padding-small inline-display">
+              <div class="form-floating ">
                 <input type="text" class="form-control" id="footeritem5_icon" required="" name="footeritem5_icon" maxlength="250" value=<?php echo $itemsFooterLinks[4]->iconFontAwesome; ?>  >
                 <label for="footeritem5_icon"> F.A. Icon class name </label>
                 <div class="valid-feedback">
@@ -289,6 +305,10 @@
                 <div class="invalid-feedback">
                   Please fill in name.
                 </div>
+              </div>
+              <div class="padding-small save-btn-parent">
+                <button class="btn btn-primary btn-lg" onclick="updateFooterLinks('5');"> <i class="fa-solid fa-floppy-disk"></i> </button>
+                <div id="statusLinks5" class="status hidden"> </div>
               </div>
             </div>
 
@@ -342,8 +362,8 @@
               </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-12 padding-small">
-              <div class="form-floating">
+            <div class="col-lg-3 col-md-6 col-sm-12 padding-small inline-display">
+              <div class="form-floating ">
                 <input type="text" class="form-control" id="footeritem6_icon" required="" name="footeritem6_icon" maxlength="250" value=<?php echo $itemsFooterLinks[5]->iconFontAwesome; ?> >
                 <label for="footeritem6_icon"> F.A. Icon class name </label>
                 <div class="valid-feedback">
@@ -352,6 +372,10 @@
                 <div class="invalid-feedback">
                   Please fill in name.
                 </div>
+              </div>
+              <div class="padding-small save-btn-parent">
+                <button class="btn btn-primary btn-lg" onclick="updateFooterLinks('6');"> <i class="fa-solid fa-floppy-disk"></i> </button>
+                <div id="statusLinks6" class="status hidden"> </div>
               </div>
             </div>
 
@@ -405,8 +429,8 @@
               </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-12 padding-small">
-              <div class="form-floating">
+            <div class="col-lg-3 col-md-6 col-sm-12 padding-small inline-display">
+              <div class="form-floating ">
                 <input type="text" class="form-control" id="footeritem7_icon" required="" name="footeritem7_icon" maxlength="250" value=<?php echo $itemsFooterLinks[6]->iconFontAwesome; ?> >
                 <label for="footeritem7_icon"> F.A. Icon class name </label>
                 <div class="valid-feedback">
@@ -415,6 +439,10 @@
                 <div class="invalid-feedback">
                   Please fill in name.
                 </div>
+              </div>
+              <div class="padding-small save-btn-parent">
+                <button class="btn btn-primary btn-lg" onclick="updateFooterLinks('7');"> <i class="fa-solid fa-floppy-disk"></i> </button>
+                <div id="statusLinks7" class="status hidden"> </div>
               </div>
             </div>
 
@@ -468,8 +496,8 @@
               </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-12 padding-small">
-              <div class="form-floating">
+            <div class="col-lg-3 col-md-6 col-sm-12 padding-small inline-display">
+              <div class="form-floating ">
                 <input type="text" class="form-control" id="footeritem8_icon" required="" name="footeritem8_icon" maxlength="250" value=<?php echo $itemsFooterLinks[7]->iconFontAwesome; ?>  >
                 <label for="footeritem8_icon"> F.A. Icon class name </label>
                 <div class="valid-feedback">
@@ -478,6 +506,10 @@
                 <div class="invalid-feedback">
                   Please fill in name.
                 </div>
+              </div>
+              <div class="padding-small save-btn-parent">
+                <button class="btn btn-primary btn-lg" onclick="updateFooterLinks('8');"> <i class="fa-solid fa-floppy-disk"></i> </button>
+                <div id="statusLinks8" class="status hidden"> </div>
               </div>
             </div>
 
@@ -531,8 +563,8 @@
               </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-12 padding-small">
-              <div class="form-floating">
+            <div class="col-lg-3 col-md-6 col-sm-12 padding-small inline-display">
+              <div class="form-floating ">
                 <input type="text" class="form-control" id="footeritem9_icon" required="" name="footeritem9_icon" maxlength="250" value=<?php echo $itemsFooterLinks[8]->iconFontAwesome; ?>  >
                 <label for="footeritem9_icon"> F.A. Icon class name </label>
                 <div class="valid-feedback">
@@ -541,6 +573,10 @@
                 <div class="invalid-feedback">
                   Please fill in name.
                 </div>
+              </div>
+              <div class="padding-small save-btn-parent">
+                <button class="btn btn-primary btn-lg" onclick="updateFooterLinks('9');"> <i class="fa-solid fa-floppy-disk"></i> </button>
+                <div id="statusLinks9" class="status hidden"> </div>
               </div>
             </div>
 
@@ -554,14 +590,6 @@
       </div>
 
 
-    </div>
-
-    <div class="padding-small">
-      <div class="bg-light rounded border margin-small-topBottom">
-        <div class="padding-small">
-          <button class="btn btn-primary btn-lg"> Update </button>
-        </div>
-      </div>
     </div>
 
   </div>

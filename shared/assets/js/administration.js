@@ -149,3 +149,63 @@ function delayedMessageReset(element, timeDelay) {
   }, timeDelay)
 
 }
+
+function updateFooterLinks(id) {
+  const status = document.getElementById("statusLinks" + id);
+  // AJAX function for updattig user rights
+  const itemAllowed = document.getElementById("footeritem"+id+"_allowed");
+  const itemName = document.getElementById("footeritem"+id+"_name");
+  const itemLink = document.getElementById("footeritem"+id+"_link");
+  const itemIcon = ( id >= 5) ? document.getElementById("footeritem"+id+"_icon") : null;
+    const itemIconValidity = ( id >= 5) ? itemIcon.checkValidity() : true;
+    const itemIconValue = ( id >= 5) ? itemIcon.value : null;
+
+  const formValid = ( itemAllowed.checkValidity() && itemName.checkValidity() && itemLink.checkValidity() && itemIconValidity); 
+  // TODO - check validity and switch on invalid messages if false, and switch off in case of valid
+
+  status.innerText = "Updating ...";
+
+  status.classList.remove("hidden");
+
+  if (formValid == false) {
+
+    status.innerText = "Fill in all the requied fields.";
+
+  } else {
+
+    $.ajax({
+      url: "handlers/administration_editfooterlinks.php",
+      type: "POST",
+      data: {
+        messagename: "administration_editfooterlinks",
+        itemId: id,
+        itemAllowed: itemAllowed.value,
+        itemName: itemName.value,
+        itemLink: itemLink.value,
+        itemIcon: itemIconValue
+      },
+      error: function (xhr, status, error) { // Error case
+        console.error(xhr);
+        console.error(status);
+        console.error(error);
+        status.innerText = (status + " - " + error);
+      },
+      cache: false,
+      success: function (dataResult) {
+        var dataResult = JSON.parse(dataResult);
+        if (dataResult.statusCode == 200) {
+          status.innerText = (dataResult.content + " " + dataResult.postMail);
+        }
+        else if (dataResult.statusCode == 418) {
+          status.innerText = ("Error occured - code 418");
+        }
+        else if (dataResult.statusCode == 404) {
+          status.innerText = ("Error occured - code 404");
+        }
+      }
+
+    });
+
+    delayedMessageReset(status, "5000");
+  }
+}
