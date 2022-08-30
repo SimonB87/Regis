@@ -63,6 +63,8 @@
 
   $eventDataPosterName = null;
 
+  $eventIsOpen = null;
+
 
   if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
@@ -100,6 +102,7 @@
     if ($results-> num_rows > 0 ) {
       while ($row = $results-> fetch_assoc()) {
 
+        $eventIsOpen = true;
         $eventDataId = $row["id"] ;
         $eventDataEventStatus = $row["eventStatus"] ;
         $eventDataEventName = $row["eventName"] ;
@@ -166,7 +169,8 @@
       echo "";
   }
   else {
-      echo "There are 0 results in DB table";
+    $eventIsOpen = false;  
+    //echo "There are 0 results in DB table";
   }
     
     // Comment out DB close

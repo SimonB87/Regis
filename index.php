@@ -50,8 +50,8 @@ $error_array = [];
     <?php
     include("webform/handlers/handler_calculatevisibility.php");
 
-    if ($settings_appUnderDevelopment === "1 - on") {
-      include("webform/components/appunderdevelopment.php");
+    if (($eventIsOpen = false) || ($settings_appUnderDevelopment === "1 - on")) {
+      include("webform/components/noregistrationsopen.php");
     } else {
       include("webform/components/previewform.php");
     }
