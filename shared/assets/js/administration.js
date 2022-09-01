@@ -126,7 +126,7 @@ function editMainAppTexts() {
       success: function (dataResult) {
         var dataResult = JSON.parse(dataResult);
         if (dataResult.statusCode == 200) {
-          status.innerText = (dataResult.content + " " + dataResult.postMail);
+          status.innerText = (dataResult.content);
         }
         else if (dataResult.statusCode == 418) {
           status.innerText = ("Error occured - code 418");
@@ -156,6 +156,7 @@ function updateFooterLinks(id) {
   const itemAllowed = document.getElementById("footeritem"+id+"_allowed");
   const itemName = document.getElementById("footeritem"+id+"_name");
   const itemLink = document.getElementById("footeritem"+id+"_link");
+  const itemContent = ( id < 5) ? document.getElementById("footeritem"+id+"_content") : null;
   const itemIcon = ( id >= 5) ? document.getElementById("footeritem"+id+"_icon") : null;
     const itemIconValidity = ( id >= 5) ? itemIcon.checkValidity() : true;
     const itemIconValue = ( id >= 5) ? itemIcon.value : null;
@@ -182,6 +183,7 @@ function updateFooterLinks(id) {
         itemAllowed: itemAllowed.value,
         itemName: itemName.value,
         itemLink: itemLink.value,
+        itemContent: itemContent,
         itemIcon: itemIconValue
       },
       error: function (xhr, status, error) { // Error case

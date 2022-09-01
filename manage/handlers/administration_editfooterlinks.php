@@ -16,21 +16,13 @@ if($usernamelevel == "9") {
     //printf("Current character set: %s\n", mysqli_character_set_name($connector));//used only for testing
   }
 
-  /* DATA
-  messagename: administration_editfooterlinks
-  itemId: 6
-  itemAllowed: on
-  itemName: phone
-  itemLink: #
-  itemIcon: fb-cosi
-  */
-
   $messageName = (isset($_POST["messagename"])) ? mysqli_real_escape_string($connector, $_POST["messagename"]) : null;
   $itemId = (isset($_POST["itemId"])) ? mysqli_real_escape_string($connector, $_POST["itemId"]) : null;
   $itemAllowed = (isset($_POST["itemAllowed"])) ? mysqli_real_escape_string($connector, $_POST["itemAllowed"]) : null;
   $itemName = (isset($_POST["itemName"])) ? mysqli_real_escape_string($connector, $_POST["itemName"]) : null;
   $itemLink = (isset($_POST["itemLink"])) ? mysqli_real_escape_string($connector, $_POST["itemLink"]) : null;
   $itemIcon = (isset($_POST["itemIcon"])) ? mysqli_real_escape_string($connector, $_POST["itemIcon"]) : null;
+  $itemContent = (isset($_POST["itemContent"])) ? mysqli_real_escape_string($connector, $_POST["itemContent"]) : null;
 
   $content = "";
   if ($connector -> connect_errno) {
@@ -40,18 +32,19 @@ if($usernamelevel == "9") {
     $content = $content . " Connected to database. ";
   }
 
+  $sql_string = "";
   if ($messageName == "administration_editfooterlinks") {
-    $sql_update = "UPDATE `footerlinks` SET `isAllowed`='$itemAllowed', `displayName`='$itemName', `weblink`='$itemLink', `iconFontAwesome`='$itemIcon' WHERE `id`='$itemId'";
+    $sql_string = "UPDATE `footerlinks` SET `isAllowed`='$itemAllowed', `displayName`='$itemName', `weblink`='$itemLink', `iconFontAwesome`='$itemIcon', `textOdkazu`='$itemContent' WHERE `id`='$itemId'";
   }
 
   // Perform a query, check for error
-  if (!$connector -> query($sql_update)) {
+  if (!$connector -> query($sql_string)) {
     $content = $content . ( "Error description: " . $connector -> error) .";";
   } else {
     $content = $content . " Information updated. ";
   }
 
-  if (mysqli_query($connector, $sql_update)) {
+  if (mysqli_query($connector, $sql_string)) {
     echo json_encode(array("statusCode"=>200, "content"=> $content, "debug" => ".." ));
   } 
   else {
