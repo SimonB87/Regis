@@ -39,7 +39,7 @@
                   </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+                <div class="col-lg-3 col-md-6 col-sm-12 padding-small">
                   <div class="form-floating">
                     <input type="text" class="form-control" id="footeritem1_name" required="" name="footeritem1_name" maxlength="250" value=<?php echo $itemsFooterLinks[0]->displayName; ?> >
                     <label for="footeritem1_name"> Display name</label>
@@ -52,9 +52,22 @@
                   </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 padding-small inline-display">
+                <div class="col-lg-2 col-md-6 col-sm-12 padding-small">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="footeritem1_link" required="" name="footeritem1_link" maxlength="250" value=<?php echo $itemsFooterLinks[0]->weblink; ?> >
+                    <input type="text" class="form-control" id="footeritem1_content" required="" name="footeritem1_content" maxlength="250" value=<?php echo $itemsFooterLinks[0]->textOdkazu; ?> >
+                    <label for="footeritem1_content"> Text odkazu </label>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Please fill in name.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12 padding-small inline-display">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="footeritem1_link" required="" name="footeritem1_link" maxlength="250" data-bs-toggle="tooltip" data-bs-placement="top" title="Phone link in format ''tel:6031112298'' " value=<?php echo $itemsFooterLinks[0]->weblink; ?> >
                     <label for="footeritem1_link"> Item web link </label>
                     <div class="valid-feedback">
                       Looks good!
@@ -92,7 +105,7 @@
                     </div>
                   </div>
 
-                  <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+                  <div class="col-lg-3 col-md-6 col-sm-12 padding-small">
                     <div class="form-floating">
                       <input type="text" class="form-control" id="footeritem2_name" required="" name="footeritem2_name" maxlength="250" value=<?php echo $itemsFooterLinks[1]->displayName; ?>  >
                       <label for="footeritem2_name"> Display name</label>
@@ -105,9 +118,22 @@
                     </div>
                   </div>
 
-                  <div class="col-lg-4 col-md-6 col-sm-12 padding-small inline-display">
+                  <div class="col-lg-2 col-md-6 col-sm-12 padding-small">
                     <div class="form-floating">
-                      <input type="text" class="form-control" id="footeritem2_link" required="" name="footeritem2_link" maxlength="250" value=<?php echo $itemsFooterLinks[1]->weblink; ?>  >
+                      <input type="text" class="form-control" id="footeritem2_content" required="" name="footeritem2_content" maxlength="250" value=<?php echo $itemsFooterLinks[1]->textOdkazu; ?> >
+                      <label for="footeritem2_content"> Text odkazu </label>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                      <div class="invalid-feedback">
+                        Please fill in name.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6 col-sm-12 padding-small inline-display">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="footeritem2_link" required="" name="footeritem2_link" maxlength="250" data-bs-toggle="tooltip" data-bs-placement="top" title="Email link in format ''mailto:someone@example.com'' " value=<?php echo $itemsFooterLinks[1]->weblink; ?>  >
                       <label for="footeritem2_link"> Item web link </label>
                       <div class="valid-feedback">
                         Looks good!
@@ -145,7 +171,7 @@
                   </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+                <div class="col-lg-3 col-md-6 col-sm-12 padding-small">
                   <div class="form-floating">
                     <input type="text" class="form-control" id="footeritem3_name" required="" name="footeritem3_name" maxlength="250" value=<?php echo $itemsFooterLinks[2]->displayName; ?>  >
                     <label for="footeritem3_name"> Display name</label>
@@ -158,7 +184,20 @@
                   </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 padding-small inline-display">
+                <div class="col-lg-2 col-md-6 col-sm-12 padding-small">
+                  <div class="form-floating">
+                      <input type="text" class="form-control" id="footeritem3_content" required="" name="footeritem3_content" maxlength="250" value=<?php echo $itemsFooterLinks[2]->textOdkazu; ?> >
+                      <label for="footeritem3_content"> Text odkazu </label>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                      <div class="invalid-feedback">
+                        Please fill in name.
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12 padding-small inline-display">
                   <div class="form-floating ">
                     <input type="text" class="form-control" id="footeritem3_link" required="" name="footeritem3_link" maxlength="250" value=<?php echo $itemsFooterLinks[2]->weblink; ?> >
                     <label for="footeritem3_link"> Item web link </label>
@@ -198,7 +237,7 @@
                   </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+                <div class="col-lg-3 col-md-6 col-sm-12 padding-small">
                   <div class="form-floating">
                     <input type="text" class="form-control" id="footeritem4_name" required="" name="footeritem4_name" maxlength="250" value=<?php echo $itemsFooterLinks[3]->displayName; ?>  >
                     <label for="footeritem4_name"> Display name</label>
@@ -211,7 +250,20 @@
                   </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 padding-small inline-display">
+                <div class="col-lg-2 col-md-6 col-sm-12 padding-small">
+                  <div class="form-floating">
+                      <input type="text" class="form-control" id="footeritem4_content" required="" name="footeritem4_content" maxlength="250" value=<?php echo $itemsFooterLinks[3]->textOdkazu; ?> >
+                      <label for="footeritem4_content"> Text odkazu </label>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                      <div class="invalid-feedback">
+                        Please fill in name.
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12 padding-small inline-display">
                   <div class="form-floating ">
                     <input type="text" class="form-control" id="footeritem4_link" required="" name="footeritem4_link" maxlength="250" value=<?php echo $itemsFooterLinks[3]->weblink; ?> >
                     <label for="footeritem4_link"> Item web link </label>

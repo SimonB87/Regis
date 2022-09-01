@@ -10,16 +10,16 @@
     <p><strong> Event start date : </strong> <?php echo $eventDataEventStartDate; ?> </p>
     <p><strong> Event end date : </strong> <?php echo $eventDataEventEndDate; ?> </p>
 
-    <p class="padding-regular"><span class="fw-bold tiles tiles-info text-white padding-smaller rounded" id="reg-all"> </span> Number of all registrations <p>
+    <p class="padding-regular"><span class="fw-bold tiles tiles-info text-white padding-smaller rounded pills-width" id="reg-all"> </span> Number of all registrations <p>
 
 
-    <p class="padding-smaller"><span class="fw-bold tiles tiles-paid text-white padding-smaller rounded" id="reg-paid"> </span> Paid registrations </p>
+    <p class="padding-smaller"><span class="fw-bold tiles tiles-paid text-white padding-smaller rounded pills-width" id="reg-paid"> </span> Paid registrations </p>
 
-    <p class="padding-smaller"><span class="fw-bold tiles tiles-unpaid text-white padding-smaller rounded" id="reg-unpaid"> </span> Unpaid registrations </p>
+    <p class="padding-smaller"><span class="fw-bold tiles tiles-unpaid text-white padding-smaller rounded pills-width" id="reg-unpaid"> </span> Unpaid registrations </p>
 
-    <p class="padding-smaller"><span class="fw-bold tiles tiles-reminder text-white padding-smaller rounded" id="reg-reminded"> </span> Payment reminders sent </p>
+    <p class="padding-smaller"><span class="fw-bold tiles tiles-reminder text-white padding-smaller rounded pills-width" id="reg-reminded"> </span> Payment reminders sent </p>
 
-    <p class="padding-smaller"><span class="fw-bold tiles tiles-cancelled text-white padding-smaller rounded" id="reg-cancelled"> </span> Cancelled registrations </p>
+    <p class="padding-smaller"><span class="fw-bold tiles tiles-cancelled text-white padding-smaller rounded pills-width" id="reg-cancelled"> </span> Cancelled registrations </p>
 
   </div>
 

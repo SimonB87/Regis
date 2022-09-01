@@ -705,6 +705,9 @@ nav {
   background: var(--cancelled-main);
   border: 3px solid var(--cancelled-darker);
 }
+.pills-width {
+  min-width: 100px;
+}
 @media only screen and (min-width: 600px) {
   .custom-container {
     margin: 0 auto;
