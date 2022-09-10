@@ -83,7 +83,6 @@ require 'handlers/userlogin.php';
     </main>
 
 <?php
-    include("../shared/contactsection.php");
     include("../shared/footer.php");
 ?>
 

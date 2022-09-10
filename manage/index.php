@@ -107,7 +107,6 @@ include("handlers/handler_testenvironment.php");
       </main>
 </div>
 <?php
-    include("../shared/contactsection.php");
     include("../shared/footer.php");
 ?>
 

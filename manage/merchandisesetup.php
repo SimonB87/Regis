@@ -72,7 +72,6 @@ require 'handlers/userlogin.php';
     </div>
 
 <?php
-    include("../shared/contactsection.php");
     include("../shared/footer.php");
 ?>
 
