@@ -275,3 +275,7 @@ function updateEmailTexts() {
   }
 
 }
+
+function updateNavMenu(id) {
+  console.log(id);
+}

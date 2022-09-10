@@ -14,7 +14,7 @@
           <strong> Item 1 </strong>
         </div>
 
-        <div class="col-lg-3 col-md-5 col-sm-11 padding-small">
+        <div class="col-lg-2 col-md-4 col-sm-11 padding-small">
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="navitem1_allowed" required="" name="navitem1_allowed">
             <label class="form-check-label" for="navitem1_allowed"> Navigation Item is allowed </label>
@@ -38,9 +38,10 @@
               Please fill in name.
             </div>
           </div>
+
         </div>
 
-        <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+        <div class="col-lg-5 col-md-6 col-sm-12 padding-small inline-display">
           <div class="form-floating">
             <input type="text" class="form-control" id="navitem1_link" required="" name="navitem1_link" maxlength="250">
             <label for="navitem1_link"> Item web link </label>
@@ -51,6 +52,12 @@
               Please fill in name.
             </div>
           </div>
+
+          <div class="padding-small save-btn-parent">
+            <button class="btn btn-primary btn-lg" onclick="updateNavMenu('1');"> <i class="fa-solid fa-floppy-disk"></i> </button>
+            <div id="statusLinks1" class="status hidden"> </div>
+          </div>
+
         </div>
 
       </div>
@@ -64,7 +71,7 @@
           <strong> Item 2 </strong>
         </div>
 
-        <div class="col-lg-3 col-md-5 col-sm-11 padding-small">
+        <div class="col-lg-2 col-md-4 col-sm-11 padding-small">
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="navitem2_allowed" required="" name="navitem2_allowed">
             <label class="form-check-label" for="navitem2_allowed"> Navigation Item is allowed </label>
@@ -90,7 +97,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+        <div class="col-lg-5 col-md-6 col-sm-12 padding-small inline-display">
           <div class="form-floating">
             <input type="text" class="form-control" id="navitem2_link" required="" name="navitem2_link" maxlength="250">
             <label for="navitem2_link"> Item web link </label>
@@ -101,6 +108,12 @@
               Please fill in name.
             </div>
           </div>
+
+          <div class="padding-small save-btn-parent">
+            <button class="btn btn-primary btn-lg" onclick="updateNavMenu('2');"> <i class="fa-solid fa-floppy-disk"></i> </button>
+            <div id="statusLinks1" class="status hidden"> </div>
+          </div>
+
         </div>
 
       </div>
@@ -114,7 +127,7 @@
           <strong> Item 3 </strong>
         </div>
 
-        <div class="col-lg-3 col-md-5 col-sm-11 padding-small">
+        <div class="col-lg-2 col-md-4 col-sm-11 padding-small">
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="navitem3_allowed" required="" name="navitem3_allowed">
             <label class="form-check-label" for="navitem3_allowed"> Navigation Item is allowed </label>
@@ -140,7 +153,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+        <div class="col-lg-5 col-md-6 col-sm-12 padding-small inline-display">
           <div class="form-floating">
             <input type="text" class="form-control" id="navitem3_link" required="" name="navitem3_link" maxlength="250">
             <label for="navitem3_link"> Item web link </label>
@@ -151,6 +164,12 @@
               Please fill in name.
             </div>
           </div>
+
+          <div class="padding-small save-btn-parent">
+            <button class="btn btn-primary btn-lg" onclick="updateNavMenu('3');"> <i class="fa-solid fa-floppy-disk"></i> </button>
+            <div id="statusLinks1" class="status hidden"> </div>
+          </div>
+
         </div>
 
       </div>
@@ -164,7 +183,7 @@
           <strong> Item 4 </strong>
         </div>
 
-        <div class="col-lg-3 col-md-5 col-sm-11 padding-small">
+        <div class="col-lg-2 col-md-4 col-sm-11 padding-small">
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="navitem4_allowed" required="" name="navitem4_allowed">
             <label class="form-check-label" for="navitem4_allowed"> Navigation Item is allowed </label>
@@ -190,7 +209,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+        <div class="col-lg-5 col-md-6 col-sm-12 padding-small inline-display">
           <div class="form-floating">
             <input type="text" class="form-control" id="navitem4_link" required="" name="navitem4_link" maxlength="250">
             <label for="navitem4_link"> Item web link </label>
@@ -201,6 +220,12 @@
               Please fill in name.
             </div>
           </div>
+
+          <div class="padding-small save-btn-parent">
+            <button class="btn btn-primary btn-lg" onclick="updateNavMenu('4');"> <i class="fa-solid fa-floppy-disk"></i> </button>
+            <div id="statusLinks1" class="status hidden"> </div>
+          </div>
+
         </div>
 
       </div>
@@ -214,7 +239,7 @@
           <strong> Item 5 </strong>
         </div>
 
-        <div class="col-lg-3 col-md-5 col-sm-11 padding-small">
+        <div class="col-lg-2 col-md-4 col-sm-11 padding-small">
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="navitem5_allowed" required="" name="navitem5_allowed">
             <label class="form-check-label" for="navitem5_allowed"> Navigation Item is allowed </label>
@@ -240,7 +265,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
+        <div class="col-lg-5 col-md-6 col-sm-12 padding-small inline-display">
           <div class="form-floating">
             <input type="text" class="form-control" id="navitem5_link" required="" name="navitem5_link" maxlength="250">
             <label for="navitem5_link"> Item web link </label>
@@ -251,6 +276,12 @@
               Please fill in name.
             </div>
           </div>
+
+          <div class="padding-small save-btn-parent">
+            <button class="btn btn-primary btn-lg" onclick="updateNavMenu('5');"> <i class="fa-solid fa-floppy-disk"></i> </button>
+            <div id="statusLinks1" class="status hidden"> </div>
+          </div>
+
         </div>
 
       </div>
