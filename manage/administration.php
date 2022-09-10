@@ -44,6 +44,7 @@ else {
     include("handlers/handler_testenvironment.php");
     include("handlers/handler_getappsettings.php");
     include("handlers/handler_getapplinks.php");
+    include("handlers/handler_getemailtexts.php");
     ?> 
 
     <div class="padding-small bg-white">

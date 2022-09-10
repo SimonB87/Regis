@@ -1,15 +1,20 @@
 <div id="pill-mailtexts-section" class="row padding-regular-topBottom tab-section hidden">
 
-  <div class="row">
+  <div class="row padding-regular-bottom">
+
 
     <div class="col-12"> 
       <h3 class="display-7 fw-bold"> Edit texts in emaile </h3> 
       <div class="text-gray padding-regular-bottom"> Edit information regarding bak transfer for ticket purchase </div> 
     </div>
 
+    <?php
+      include("htmlformatingnote.php");
+    ?>
+
   </div>
 
-  <div class="accordion" id="accordionEmail">
+  <div class="accordion textareas-email" id="accordionEmail">
     <!-- accordion item 1 -->
     <div class="accordion-item">
       <h2 class="accordion-header" id="emailText_headingOne">
@@ -22,8 +27,19 @@
 
           <div class="row">
             <!-- accordion item content -->
-            <div class="col-lg-8 col-md-6 col-sm-12">
-              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            <div class="col-12">
+
+              <div class="form-floating">
+                <label for="emailTextRegistrationNotice">Text in email</label>
+                <textarea class="form-control" id="emailTextRegistrationNotice" name="emailTextRegistrationNotice" rows="4"><?php if(isset($dataEmailTextRegistrationNotice)) {echo $dataEmailTextRegistrationNotice; } ?></textarea>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in name.
+                </div>
+              </div>
+
             </div>
 
             <div class="col-lg-4 col-md-6 col-sm-12">
@@ -48,8 +64,19 @@
 
           <div class="row">
             <!-- accordion item content -->
-            <div class="col-lg-8 col-md-6 col-sm-12">
-              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            <div class="col-12">
+
+              <div class="form-floating">
+                <label for="emailTextOrderPaid">Text in email</label>
+                <textarea class="form-control" id="emailTextOrderPaid" name="emailTextOrderPaid" rows="4"> <?php if(isset($dataEmailTextOrderPaid)) {echo $dataEmailTextOrderPaid; } ?> </textarea>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in name.
+                </div>
+              </div>
+
             </div>
 
             <div class="col-lg-4 col-md-6 col-sm-12">
@@ -73,8 +100,19 @@
 
           <div class="row">
             <!-- accordion item content -->
-            <div class="col-lg-8 col-md-6 col-sm-12">
-              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            <div class="col-12">
+
+              <div class="form-floating">
+                <label for="emailTextPaymentReminder">Text in email</label>
+                <textarea class="form-control" id="emailTextPaymentReminder" name="emailTextPaymentReminder" rows="4"> <?php if(isset($dataEmailTextPaymentReminder)) {echo $dataEmailTextPaymentReminder; } ?> </textarea>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in name.
+                </div>
+              </div>
+
             </div>
 
             <div class="col-lg-4 col-md-6 col-sm-12">
@@ -99,8 +137,23 @@
 
           <div class="row">
             <!-- accordion item content -->
-            <div class="col-lg-8 col-md-6 col-sm-12">
-              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            <div class="col-12">
+
+              <div class="form-floating">
+                <label for="emailTextRegistrationCancelled">Text in email</label>
+                <textarea class="form-control" id="emailTextRegistrationCancelled" name="emailTextRegistrationCancelled" rows="4"> <?php if(isset($dataEmailTextRegistrationCancelled)) {echo $dataEmailTextRegistrationCancelled; } ?> </textarea>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in name.
+                </div>
+              </div>
+
+              </div>
+
+
+
             </div>
 
             <div class="col-lg-4 col-md-6 col-sm-12">
@@ -118,7 +171,7 @@
   <div class="col-12">
     <div class="bg-light rounded border margin-small-topBottom">
       <div class="padding-small">
-        <button class="btn btn-primary btn-lg"> Update </button>
+        <button class="btn btn-primary btn-lg" onclick="updateEmailTexts();"> Update </button> &nbsp; <span id="status-emailtexts"> </span>
       </div>
     </div>
   </div>

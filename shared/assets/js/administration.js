@@ -151,18 +151,23 @@ function delayedMessageReset(element, timeDelay) {
 }
 
 function updateFooterLinks(id) {
+
   const status = document.getElementById("statusLinks" + id);
   // AJAX function for updattig user rights
   const itemAllowed = document.getElementById("footeritem"+id+"_allowed");
   const itemName = document.getElementById("footeritem"+id+"_name");
   const itemLink = document.getElementById("footeritem"+id+"_link");
-  const itemContent = ( id < 5) ? document.getElementById("footeritem"+id+"_content") : null;
+  const itemContentVal = ( id < 5) ? document.getElementById("footeritem"+id+"_content").value : null;
   const itemIcon = ( id >= 5) ? document.getElementById("footeritem"+id+"_icon") : null;
     const itemIconValidity = ( id >= 5) ? itemIcon.checkValidity() : true;
     const itemIconValue = ( id >= 5) ? itemIcon.value : null;
 
   const formValid = ( itemAllowed.checkValidity() && itemName.checkValidity() && itemLink.checkValidity() && itemIconValidity); 
   // TODO - check validity and switch on invalid messages if false, and switch off in case of valid
+
+  const itemAllowedVal = itemAllowed.value;
+  const itemNameVal = itemName.value;
+  const itemLinkVal = itemLink.value;
 
   status.innerText = "Updating ...";
 
@@ -175,15 +180,15 @@ function updateFooterLinks(id) {
   } else {
 
     $.ajax({
-      url: "handlers/administration_editfooterlinks.php",
+      url: "handlers/administration_editfootercontent.php",
       type: "POST",
       data: {
-        messagename: "administration_editfooterlinks",
+        messagename: "administration_editfootercontent",
         itemId: id,
-        itemAllowed: itemAllowed.value,
-        itemName: itemName.value,
-        itemLink: itemLink.value,
-        itemContent: itemContent,
+        itemAllowed: itemAllowedVal,
+        itemName: itemNameVal,
+        itemLink: itemLinkVal,
+        itemContent: itemContentVal,
         itemIcon: itemIconValue
       },
       error: function (xhr, status, error) { // Error case
@@ -210,4 +215,63 @@ function updateFooterLinks(id) {
 
     delayedMessageReset(status, "5000");
   }
+  
+}
+
+function updateEmailTexts() {
+
+  const status = document.getElementById("status-emailtexts");
+  // AJAX function for updattig user rights
+  const emailTextRegistrationNoticeIn = document.getElementById("emailTextRegistrationNotice").value;
+  const emailTextOrderPaid = document.getElementById("emailTextOrderPaid").value;
+  const emailTextPaymentReminder = document.getElementById("emailTextPaymentReminder").value;
+  const emailTextRegistrationCancelled = document.getElementById("emailTextRegistrationCancelled").value;
+
+  const formValid = true; // TODO - check validity and switch on invalid messages if false, and switch off in case of valid
+
+  status.innerText = "Updating ...";
+
+  status.classList.remove("hidden");
+
+  if (formValid == false) {
+
+    status.innerText = "Fill in all the requied fields.";
+
+  } else {
+
+    $.ajax({
+      url: "handlers/administration_editemailtexts.php",
+      type: "POST",
+      data: {
+        messagename: "administration_editemailtexts",
+        emailTextRegistrationNotice: emailTextRegistrationNoticeIn,
+        emailTextOrderPaid: emailTextOrderPaid,
+        emailTextPaymentReminder: emailTextPaymentReminder,
+        emailTextRegistrationCancelled: emailTextRegistrationCancelled
+      },
+      error: function (xhr, status, error) { // Error case
+        console.error(xhr);
+        console.error(status);
+        console.error(error);
+        status.innerText = (status + " - " + error);
+      },
+      cache: false,
+      success: function (dataResult) {
+        var dataResult = JSON.parse(dataResult);
+        if (dataResult.statusCode == 200) {
+          status.innerText = (dataResult.content);
+        }
+        else if (dataResult.statusCode == 418) {
+          status.innerText = ("Error occured - code 418");
+        }
+        else if (dataResult.statusCode == 404) {
+          status.innerText = ("Error occured - code 404");
+        }
+      }
+
+    });
+
+    delayedMessageReset(status, "5000");
+  }
+
 }

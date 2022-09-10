@@ -69,6 +69,7 @@ require 'handlers/userlogin.php';
 
         <?php
         include("handlers/handler_getformdescriptiondata.php");
+        include("components/htmlformatingnote.php");
         include("components/formeventdescription.php");
         ?>
 
