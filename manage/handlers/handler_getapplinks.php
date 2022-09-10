@@ -19,7 +19,7 @@
         //printf("Current character set: %s\n", mysqli_character_set_name($con));//used only for testing
       }
 
-      $sql = "SELECT * FROM footerlinks";
+      $sql = "SELECT * FROM bottomcontent";
       
       $results = $connector-> query($sql);
       //Error case

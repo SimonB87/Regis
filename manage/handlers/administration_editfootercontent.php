@@ -33,8 +33,8 @@ if($usernamelevel == "9") {
   }
 
   $sql_string = "";
-  if ($messageName == "administration_editfooterlinks") {
-    $sql_string = "UPDATE `footerlinks` SET `isAllowed`='$itemAllowed', `displayName`='$itemName', `weblink`='$itemLink', `iconFontAwesome`='$itemIcon', `textOdkazu`='$itemContent' WHERE `id`='$itemId'";
+  if ($messageName == "administration_editfootercontent") {
+    $sql_string = "UPDATE `bottomcontent` SET `isAllowed`='$itemAllowed', `displayName`='$itemName', `weblink`='$itemLink', `iconFontAwesome`='$itemIcon', `textOdkazu`='$itemContent' WHERE `id`='$itemId'";
   }
 
   // Perform a query, check for error
@@ -54,6 +54,5 @@ if($usernamelevel == "9") {
   mysqli_close($connector);
 
 }
-
 
 ?>
