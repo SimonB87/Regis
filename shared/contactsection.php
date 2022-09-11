@@ -47,7 +47,7 @@
 
         </div>
 
-        <div class="col-lg-2 col-md-3 col-sm-12 padding-small text-center-sm align-left-md">
+        <div class="col-lg-2 col-md-3 col-sm-12 padding-small text-center-sm fs-5 align-left-md">
           Follow us on ...
         </div>
 
@@ -56,35 +56,35 @@
         <?php
             if(isset( $itemsFooterLinks[4]->isAllowed )) { if ($itemsFooterLinks[4]->isAllowed == "on") { 
               echo "<span class='social-item padding-small ' >
-                      <a href='" . $itemsFooterLinks[4]->weblink . "' class='nav-link text-white fa-brands " . $itemsFooterLinks[4]->iconFontAwesome . " '> " . $itemsFooterLinks[4]->textOdkazu . " </a>
+                      <a href='" . $itemsFooterLinks[4]->weblink . "' class='fs-3 padding-small nav-link text-white fa-brands " . $itemsFooterLinks[4]->iconFontAwesome . " '> " . $itemsFooterLinks[4]->textOdkazu . " </a>
                     </span> <span class='padding-small'></span>";
               } 
             }
 
             if(isset( $itemsFooterLinks[5]->isAllowed )) { if ($itemsFooterLinks[5]->isAllowed == "on") { 
               echo "<span class='social-item padding-small ' >
-                      <a href='" . $itemsFooterLinks[5]->weblink . "' class='nav-link text-white fa-brands " . $itemsFooterLinks[5]->iconFontAwesome . " '> " . $itemsFooterLinks[5]->textOdkazu . " </a>
+                      <a href='" . $itemsFooterLinks[5]->weblink . "' class='fs-3 padding-small nav-link text-white fa-brands " . $itemsFooterLinks[5]->iconFontAwesome . " '> " . $itemsFooterLinks[5]->textOdkazu . " </a>
                     </span> <span class='padding-small'></span>";
               } 
             }
 
             if(isset( $itemsFooterLinks[6]->isAllowed )) { if ($itemsFooterLinks[6]->isAllowed == "on") { 
               echo "<span class='social-item padding-small ' >
-                      <a href='" . $itemsFooterLinks[6]->weblink . "' class='nav-link text-white fa-brands " . $itemsFooterLinks[6]->iconFontAwesome . " '> " . $itemsFooterLinks[6]->textOdkazu . " </a>
+                      <a href='" . $itemsFooterLinks[6]->weblink . "' class='fs-3 padding-small nav-link text-white fa-brands " . $itemsFooterLinks[6]->iconFontAwesome . " '> " . $itemsFooterLinks[6]->textOdkazu . " </a>
                     </span> <span class='padding-small'></span>";
               } 
             }
 
             if(isset( $itemsFooterLinks[7]->isAllowed )) { if ($itemsFooterLinks[7]->isAllowed == "on") { 
               echo "<span class='social-item padding-small ' >
-                      <a href='" . $itemsFooterLinks[7]->weblink . "' class='nav-link text-white fa-brands " . $itemsFooterLinks[7]->iconFontAwesome . " '> " . $itemsFooterLinks[7]->textOdkazu . " </a>
+                      <a href='" . $itemsFooterLinks[7]->weblink . "' class='fs-3 padding-small nav-link text-white fa-brands " . $itemsFooterLinks[7]->iconFontAwesome . " '> " . $itemsFooterLinks[7]->textOdkazu . " </a>
                     </span> <span class='padding-small'></span>";
               } 
             }
 
             if(isset( $itemsFooterLinks[8]->isAllowed )) { if ($itemsFooterLinks[8]->isAllowed == "on") { 
               echo "<span class='social-item padding-small ' >
-                      <a href='" . $itemsFooterLinks[8]->weblink . "' class='nav-link text-white fa-brands " . $itemsFooterLinks[8]->iconFontAwesome . " '> " . $itemsFooterLinks[8]->textOdkazu . " </a>
+                      <a href='" . $itemsFooterLinks[8]->weblink . "' class='fs-3  padding-small nav-link text-white fa-brands " . $itemsFooterLinks[8]->iconFontAwesome . " '> " . $itemsFooterLinks[8]->textOdkazu . " </a>
                     </span> <span class='padding-small'></span>";
               } 
             }
