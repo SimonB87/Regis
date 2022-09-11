@@ -100,3 +100,112 @@ CREATE TABLE footerLinks (
 );
 
 INSERT INTO `footerlinks`(`isAllowed`, `displayName`, `weblink`) VALUES ("on","phone","#");
+
+
+
+
+/* *** 1 *** */
+
+
+
+ALTER TABLE `settings` ADD `emailTextRegistrationNotice` MEDIUMTEXT CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL AFTER `appUnderDevelopment`, ADD `emailTextOrderPaid` MEDIUMTEXT CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL AFTER `emailTextRegistrationNotice`, ADD `emailTextPaymentReminder` MEDIUMTEXT CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL AFTER `emailTextOrderPaid`, ADD `emailTextRegistrationCancelled` MEDIUMTEXT CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL AFTER `emailTextPaymentReminder`; 
+
+INSERT INTO `settings` (`id`, `organizerName`, `adminEmail`, `nationalBankAccount`, `accountIBAN`, `accountBIC`, `accountHolderName`, `accountHolderAddress`, `bankAddress`, `appUnderDevelopment`, `emailTextRegistrationNotice`, `emailTextOrderPaid`, `emailTextPaymentReminder`, `emailTextRegistrationCancelled`) VALUES
+(1, 'Mauritius & Elvira Bachata Prague', 'info@mauritiuselvira.eu', '2002019652/2010 (Fio Banka, a.s.)', 'CZ65 2010 0000 0020 0201 9652', 'FIOBCZPPXXX', 'Elvira Masanlo', '', 'Fio banka, a.s. Millennium Plaza, V Celnici 10, Prague 1, ZIP Code : 117 21, Czech Republic', '2 - off', 'Thank you for registering for then event, below you will find the payment instructions. After paying the event organizer will send you your ticket.', ' Since you paid, you will receive your ticket soon by email within next day. ', ' Thank you for registering for then event. <strong>We remind you to send us payment</strong> for the event <strong>within 7 days</strong>. Below you will find the payment instructions. After paying the event organizer will send you your ticket. ', ' Your registration was cancelled by event organizer. For further information contact us. ');
+
+
+
+/* *** 2 *** */
+
+
+
+CREATE TABLE `bottomcontent` (
+  `id` int(11) NOT NULL,
+  `isAllowed` varchar(250) CHARACTER SET latin2 COLLATE latin2_czech_cs DEFAULT NULL,
+  `displayName` varchar(250) CHARACTER SET latin2 COLLATE latin2_czech_cs DEFAULT NULL,
+  `weblink` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs DEFAULT NULL,
+  `itemContent` varchar(250) CHARACTER SET latin2 COLLATE latin2_czech_cs NOT NULL,
+  `iconFontAwesome` varchar(255) CHARACTER SET latin2 COLLATE latin2_czech_cs DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `bottomcontent`
+--
+
+INSERT INTO `bottomcontent` (`id`, `isAllowed`, `displayName`, `weblink`, `itemContent`, `iconFontAwesome`) VALUES
+(1, 'on', 'phone', 'tel:6031112298', '6031112298', NULL),
+(2, 'on', 'mail', 'mailto:info@mauritiuselvira.eu', 'info@mauritiuselvira.eu', NULL),
+(3, 'on', 'GPS', '#', '50.455,44.233', NULL),
+(4, 'on', 'telegram', 'www.telegram.com/4206031112298', '+4206031112298', NULL),
+(5, 'on', 'Instagram', 'https://www.instagram.com/bachata_mauritius_elvira', '', 'fa-instagram'),
+(6, 'on', 'Facebook', 'https://www.facebook.com/bachata.mauritius.elvira', '', 'fa-facebook-f'),
+(7, 'on', 'Youtube', 'https://www.youtube.com/channel/UCjQxCT6jbk5_2WzJ0hAtatg', '', 'fa-youtube'),
+(8, 'on', 'TikTok', 'https://www.tiktok.com/', '', 'fa-tiktok'),
+(9, 'off', '', '', '', NULL);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `bottomcontent`
+--
+ALTER TABLE `bottomcontent`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `bottomcontent`
+--
+ALTER TABLE `bottomcontent`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+COMMIT;
+
+
+
+
+/* *** 3 *** */
+
+
+
+
+CREATE TABLE `navitems` (
+  `id` int(200) NOT NULL,
+  `itemAllowed` varchar(250) NOT NULL,
+  `displayName` varchar(250) NOT NULL,
+  `itemWebLink` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `navitems`
+--
+
+INSERT INTO `navitems` (`id`, `itemAllowed`, `displayName`, `itemWebLink`) VALUES
+(1, 'on', 'Lessons', 'https://www.mauritiuselvira.com/bachata'),
+(2, 'on', 'Pricing', 'https://www.mauritiuselvira.com/prices'),
+(3, 'on', 'About us', 'https://www.mauritiuselvira.com/about-us'),
+(4, 'on', 'Contact', 'https://www.mauritiuselvira.com/contact'),
+(5, 'off', '', '');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `navitems`
+--
+ALTER TABLE `navitems`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `navitems`
+--
+ALTER TABLE `navitems`
+  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
