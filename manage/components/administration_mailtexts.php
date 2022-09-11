@@ -156,9 +156,6 @@
 
             </div>
 
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <img />
-            </div>
 
           </div>
 
@@ -166,14 +163,15 @@
       </div>
     </div>
 
-  </div>
-
-  <div class="col-12">
-    <div class="bg-light rounded border margin-small-topBottom">
-      <div class="padding-small">
-        <button class="btn btn-primary btn-lg" onclick="updateEmailTexts();"> Update </button> &nbsp; <span id="status-emailtexts"> </span>
+    <div class="col-12">
+      <div class="bg-light rounded border margin-small-topBottom">
+        <div class="padding-small">
+          <button class="btn btn-primary btn-lg" onclick="updateEmailTexts();"> Update </button> &nbsp; <span id="status-emailtexts"> </span>
+        </div>
       </div>
     </div>
+
   </div>
+
 
 </div>
