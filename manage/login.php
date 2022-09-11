@@ -38,6 +38,7 @@ include("handlers/handler_testenvironment.php");
         echo "The file does not exist";
     }
 
+
     include("shared/navigation.php");
     ?> 
     <div class="bg-white">
@@ -76,7 +77,6 @@ include("handlers/handler_testenvironment.php");
 
 
     <?php
-    include("../shared/contactsection.php");
     include("../shared/footer.php");
     ?>
 
