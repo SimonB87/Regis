@@ -42,7 +42,9 @@ else {
     include("handlers/handler_getopeneventid.php");
     include("shared/navigation.php");
     include("handlers/handler_testenvironment.php");
+
     include("handlers/handler_getappsettings.php");
+    include("handlers/handler_getnavitems.php");
     include("handlers/handler_getapplinks.php");
     include("handlers/handler_getemailtexts.php");
     ?> 

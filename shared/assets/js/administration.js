@@ -201,7 +201,7 @@ function updateFooterLinks(id) {
       success: function (dataResult) {
         var dataResult = JSON.parse(dataResult);
         if (dataResult.statusCode == 200) {
-          status.innerText = (dataResult.content + " " + dataResult.postMail);
+          status.innerText = (dataResult.content);
         }
         else if (dataResult.statusCode == 418) {
           status.innerText = ("Error occured - code 418");
@@ -277,5 +277,58 @@ function updateEmailTexts() {
 }
 
 function updateNavMenu(id) {
-  console.log(id);
+
+  const status = document.getElementById("statusNavLinks" + id);
+  // AJAX function for updattig user rights
+  const navItemAllowed = document.getElementById("navitem" + id + "_allowed").value;
+  const navItemName = document.getElementById("navitem" + id + "_name").value;
+  const navItemLink = document.getElementById("navitem" + id + "_link").value;
+
+  const formValid = true; // TODO - check validity and switch on invalid messages if false, and switch off in case of valid
+
+  status.innerText = "Updating ...";
+
+  status.classList.remove("hidden");
+
+  if (formValid == false) {
+
+    status.innerText = "Fill in all the requied fields.";
+
+  } else {
+
+    $.ajax({
+      url: "handlers/administration_editnavitem.php",
+      type: "POST",
+      data: {
+        messagename: "administration_editnavitem",
+        navItemId: id,
+        navItemAllowed: navItemAllowed,
+        navItemName: navItemName,
+        navItemLink: navItemLink
+      },
+      error: function (xhr, status, error) { // Error case
+        console.error(xhr);
+        console.error(status);
+        console.error(error);
+        status.innerText = (status + " - " + error);
+      },
+      cache: false,
+      success: function (dataResult) {
+        var dataResult = JSON.parse(dataResult);
+        if (dataResult.statusCode == 200) {
+          status.innerText = (dataResult.content);
+        }
+        else if (dataResult.statusCode == 418) {
+          status.innerText = ("Error occured - code 418");
+        }
+        else if (dataResult.statusCode == 404) {
+          status.innerText = ("Error occured - code 404");
+        }
+      }
+
+    });
+
+    delayedMessageReset(status, "5000");
+  }
+
 }
