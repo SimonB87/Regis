@@ -62,7 +62,7 @@ if ($results-> num_rows > 0 ) {
   echo "";
 }
 else {
-    echo "There are 0 results in DB table";
+    echo "There are 0 results in DB table for navigation items";
 }
 
 

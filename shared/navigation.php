@@ -11,35 +11,49 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Lessons
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="https://www.mauritiuselvira.com/bachata">Bachata</a></li>
-              <li><a class="dropdown-item" href="https://www.mauritiuselvira.com/salsa">Salsa</a></li>
-              <li><a class="dropdown-item" href="https://www.mauritiuselvira.com/wedding-dance">Wedding dance</a></li>
-              <li><a class="dropdown-item" href="https://www.mauritiuselvira.com/individual-lessons">Individual lesson</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="https://www.mauritiuselvira.com/gift-voucher">Gift voucher</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.mauritiuselvira.com/prices">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.mauritiuselvira.com/about-us">About us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.mauritiuselvira.com/contact">Contact</a>
-          </li>
 
           <?php
-          if ( isset($_SESSION['username']) == true) {
+            if(isset( $itemsNavLinks[0]->itemAllowed )) { if ($itemsNavLinks[0]->itemAllowed == "on") { 
+              echo "<li class='nav-item'>
+                      <a class='nav-link' target='_blank' href='" . $itemsNavLinks[0]->itemWebLink . "'> " . $itemsNavLinks[0]->displayName . " </a>
+                    </li>";
+              } 
+            }
+
+            if(isset( $itemsNavLinks[1]->itemAllowed )) { if ($itemsNavLinks[1]->itemAllowed == "on") { 
+              echo "<li class='nav-item'>
+                      <a class='nav-link' target='_blank' href='" . $itemsNavLinks[1]->itemWebLink . "'> " . $itemsNavLinks[1]->displayName . " </a>
+                    </li>";
+              }
+            }
+
+            if(isset( $itemsNavLinks[2]->itemAllowed )) { if ($itemsNavLinks[2]->itemAllowed == "on") { 
+              echo "<li class='nav-item'>
+                      <a class='nav-link' target='_blank' href='" . $itemsNavLinks[2]->itemWebLink . "'> " . $itemsNavLinks[2]->displayName . " </a>
+                    </li>";
+              }
+            }
+
+            if(isset( $itemsNavLinks[3]->itemAllowed )) { if ($itemsNavLinks[3]->itemAllowed == "on") { 
+              echo "<li class='nav-item'>
+                      <a class='nav-link' target='_blank' href='" . $itemsNavLinks[3]->itemWebLink . "'> " . $itemsNavLinks[3]->displayName . " </a>
+                    </li>";
+              }
+            }
+
+            if(isset( $itemsNavLinks[4]->itemAllowed )) { if ($itemsNavLinks[4]->itemAllowed == "on") { 
+              echo "<li class='nav-item'>
+                      <a class='nav-link' target='_blank' href='" . $itemsNavLinks[4]->itemWebLink . "'> " . $itemsNavLinks[4]->displayName . " </a>
+                    </li>";
+              }
+            }
+
+            if ( isset($_SESSION['username']) == true) {
             echo "<li class='nav-item'>
                     <a class='nav-link' href='manage/login.php'>Login</a>
                   </li>";
-          }
+            }
+
           ?>
 
         </ul>

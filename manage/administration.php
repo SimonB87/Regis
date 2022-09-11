@@ -47,7 +47,7 @@ else {
     include("handlers/handler_getnavitems.php");
     include("handlers/handler_getapplinks.php");
     include("handlers/handler_getemailtexts.php");
-    ?> 
+    ?>
 
     <div class="padding-small bg-white">
       <main id="administration">

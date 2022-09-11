@@ -20,6 +20,8 @@ require 'config/config.php';
   <body style="background: #303030;">
 
   <?php
+  include("manage/handlers/handler_getnavitems.php");
+  include("manage/handlers/handler_getapplinks.php"); 
   include("manage/handlers/handler_testenvironment.php");
   include("shared/navigation.php");
   include("manage/handlers/handler_getconfirmprivateinfodescription.php");
