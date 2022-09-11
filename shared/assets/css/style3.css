@@ -355,6 +355,19 @@ footer .copyright {
     text-align: center;
   }
 }
+@media only screen and (min-width: 768px) {
+  .align-left-md {
+    text-align: left;
+  }
+  .align-right-md {
+    text-align: right;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .text-center-sm {
+    text-align: center;
+  }
+}
 .nav-disabled {
   color: var(--gray);
   pointer-events: none;

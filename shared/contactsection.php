@@ -47,11 +47,11 @@
 
         </div>
 
-        <div class="col-lg-2 col-md-3 col-sm-12 padding-small text-center">
+        <div class="col-lg-2 col-md-3 col-sm-12 padding-small text-center-sm align-left-md">
           Follow us on ...
         </div>
 
-        <div class="col-lg-10 col-md-9 col-sm-12 padding-small text-center">
+        <div class="col-lg-10 col-md-9 col-sm-12 padding-small text-center-sm align-right-md">
         
         <?php
             if(isset( $itemsFooterLinks[4]->isAllowed )) { if ($itemsFooterLinks[4]->isAllowed == "on") { 
