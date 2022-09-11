@@ -15,6 +15,7 @@ $error_array = [];
     ?>
 
     <title> Event registration | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
+    <script src="https://kit.fontawesome.com/ae3a13eb1c.js" crossorigin="anonymous"></script>
 
   </head>
   <body style="background: #303030;">
@@ -22,6 +23,7 @@ $error_array = [];
     <?php
     include("manage/handlers/handler_getnavitems.php");
     include("manage/handlers/handler_getapplinks.php");
+    include("manage/handlers/handler_getappsettings.php");
 
     include("shared/navigation.php");
     ?>
