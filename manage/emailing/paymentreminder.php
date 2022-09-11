@@ -1,6 +1,6 @@
 <?php
 
-require '././config/config.php';
+  require '../../config/config.php';
 
   $originalOrderId = $targetOrderId;
 
@@ -11,13 +11,12 @@ require '././config/config.php';
 
   $emailTextPaymentReminder = (isset($settings_emailTextPaymentReminder)) ? $settings_emailTextPaymentReminder : "";
 
-
-  $nationalBankAccount = "2002019652/2010 (Fio Banka, a.s.)";  // onyl temporarly - TODO - include real data from DB
-  $accountIBAN = "CZ65 2010 0000 0020 0201 9652"; // onyl temporarly
-  $accountBIC = "FIOBCZPPXXX"; // onyl temporarly
-  $accountHolderName = "Elvira Masanlo"; // onyl temporarly
-  $accountHolderAddress = "My Main Street 909/123, 12 007 - My City, My Country"; // onyl temporarly
-  $accountBankAddress = "Fio banka, a.s. Millennium Plaza, V Celnici 10, Prague 1, ZIP Code : 117 21. Czech Republic"; // onyl temporarly
+  $nationalBankAccount = $settings_nationalBankAccount; 
+  $accountIBAN = $settings_accountIBAN; 
+  $accountBIC = $settings_accountBIC; 
+  $accountHolderName = $settings_accountHolderName; 
+  $accountHolderAddress = (isset($settings_accountHolderAddress)) ? ( ($settings_accountHolderAddress != "") ? $settings_accountHolderAddress : "" ) : "";
+  $accountBankAddress = $settings_bankAddress; 
 
   $paymentInstructions_holderAddress = (isset($accountHolderAddress)) ? (" <p>Account holder name: <strong>" . $accountHolderAddress . " </strong></p>" ) : "";
 
@@ -99,7 +98,7 @@ require '././config/config.php';
                         padding-bottom: 0;
                         color: #ffffff;
                         font-family: sans-serif;' class='supheader'>
-                          <div>" . $testEnvironment  . "</div><div> We remind you to pay for tickets for event " . $storedRegEventName . ". <br>" . $emailTextPaymentReminder . " .</div>
+                          <div>" . $testEnvironment  . "</div><div> We remind you to pay for tickets for event " . $storedRegEventName . ". <br>" . $settings_emailTextPaymentReminder . " .</div>
                       </td>
                     </tr>
 
