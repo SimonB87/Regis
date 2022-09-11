@@ -15,9 +15,16 @@
         </div>
 
         <div class="col-lg-2 col-md-4 col-sm-11 padding-small">
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="navitem1_allowed" required="" name="navitem1_allowed" <?php if ( ( $itemsNavLinks[0]->itemAllowed ) == "on") { echo "checked='checked'"; } ?> >
-            <label class="form-check-label" for="navitem1_allowed"> Navigation Item is allowed </label>
+
+          <div class="mb-3 form-check custom-label-parent padding-small-left">
+            <select id="navitem1_allowed" class="form-select" aria-label="Pass type" required="" name="navitem1_allowed">
+              <option value="" >Choose ...</option>
+              <option value="on" <?php if(isset($itemsNavLinks[0]->itemAllowed)) { if (($itemsNavLinks[0]->itemAllowed) == "on") { echo " selected='' "; } } ?> > On </option>
+              <option value="off" <?php if(isset($itemsNavLinks[0]->itemAllowed)) { if (($itemsNavLinks[0]->itemAllowed) == "off") { echo " selected='' "; } } ?> > Off </option>
+            </select>
+            <div class="form-select-customLabel blueLabel padding-small-left ">
+              Item is allowed
+            </div>
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -25,6 +32,7 @@
               Please fill in the text field.
             </div>
           </div>
+
         </div>
 
         <div class="col-lg-4 col-md-6 col-sm-12 padding-small">
@@ -72,9 +80,15 @@
         </div>
 
         <div class="col-lg-2 col-md-4 col-sm-11 padding-small">
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="navitem2_allowed" required="" name="navitem2_allowed" <?php if ( ( $itemsNavLinks[1]->itemAllowed ) == "on") { echo "checked='checked'"; } ?> >
-            <label class="form-check-label" for="navitem2_allowed"> Navigation Item is allowed </label>
+          <div class="mb-3 form-check custom-label-parent padding-small-left">
+            <select id="navitem2_allowed" class="form-select" aria-label="Pass type" required="" name="navitem2_allowed">
+              <option value="" >Choose ...</option>
+              <option value="on" <?php if(isset($itemsNavLinks[1]->itemAllowed)) { if (($itemsNavLinks[1]->itemAllowed) == "on") { echo " selected='' "; } } ?> > On </option>
+              <option value="off" <?php if(isset($itemsNavLinks[1]->itemAllowed)) { if (($itemsNavLinks[1]->itemAllowed) == "off") { echo " selected='' "; } } ?> > Off </option>
+            </select>
+            <div class="form-select-customLabel blueLabel padding-small-left ">
+              Item is allowed
+            </div>
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -128,9 +142,15 @@
         </div>
 
         <div class="col-lg-2 col-md-4 col-sm-11 padding-small">
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="navitem3_allowed" required="" name="navitem3_allowed" <?php if ( ( $itemsNavLinks[2]->itemAllowed ) == "on") { echo "checked='checked'"; } ?> >
-            <label class="form-check-label" for="navitem3_allowed"> Navigation Item is allowed </label>
+          <div class="mb-3 form-check custom-label-parent padding-small-left">
+            <select id="navitem3_allowed" class="form-select" aria-label="Pass type" required="" name="navitem3_allowed">
+              <option value="" >Choose ...</option>
+              <option value="on" <?php if(isset($itemsNavLinks[2]->itemAllowed)) { if (($itemsNavLinks[2]->itemAllowed) == "on") { echo " selected='' "; } } ?> > On </option>
+              <option value="off" <?php if(isset($itemsNavLinks[2]->itemAllowed)) { if (($itemsNavLinks[2]->itemAllowed) == "off") { echo " selected='' "; } } ?> > Off </option>
+            </select>
+            <div class="form-select-customLabel blueLabel padding-small-left ">
+              Item is allowed
+            </div>
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -184,9 +204,15 @@
         </div>
 
         <div class="col-lg-2 col-md-4 col-sm-11 padding-small">
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="navitem4_allowed" required="" name="navitem4_allowed" <?php if ( ( $itemsNavLinks[3]->itemAllowed ) == "on") { echo "checked='checked'"; } ?> >
-            <label class="form-check-label" for="navitem4_allowed"> Navigation Item is allowed </label>
+          <div class="mb-3 form-check custom-label-parent padding-small-left">
+            <select id="navitem4_allowed" class="form-select" aria-label="Pass type" required="" name="navitem4_allowed">
+              <option value="" >Choose ...</option>
+              <option value="on" <?php if(isset($itemsNavLinks[3]->itemAllowed)) { if (($itemsNavLinks[3]->itemAllowed) == "on") { echo " selected='' "; } } ?> > On </option>
+              <option value="off" <?php if(isset($itemsNavLinks[3]->itemAllowed)) { if (($itemsNavLinks[3]->itemAllowed) == "off") { echo " selected='' "; } } ?> > Off </option>
+            </select>
+            <div class="form-select-customLabel blueLabel padding-small-left ">
+              Item is allowed
+            </div>
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -240,9 +266,15 @@
         </div>
 
         <div class="col-lg-2 col-md-4 col-sm-11 padding-small">
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="navitem5_allowed" required="" name="navitem5_allowed" <?php if ( ( $itemsNavLinks[4]->itemAllowed ) == "on") { echo "checked='checked'"; } ?> >
-            <label class="form-check-label" for="navitem5_allowed"> Navigation Item is allowed </label>
+          <div class="mb-3 form-check custom-label-parent padding-small-left">
+            <select id="navitem5_allowed" class="form-select" aria-label="Pass type" required="" name="navitem5_allowed">
+              <option value="" >Choose ...</option>
+              <option value="on" <?php if(isset($itemsNavLinks[4]->itemAllowed)) { if (($itemsNavLinks[4]->itemAllowed) == "on") { echo " selected='' "; } } ?> > On </option>
+              <option value="off" <?php if(isset($itemsNavLinks[4]->itemAllowed)) { if (($itemsNavLinks[4]->itemAllowed) == "off") { echo " selected='' "; } } ?> > Off </option>
+            </select>
+            <div class="form-select-customLabel blueLabel padding-small-left ">
+              Item is allowed
+            </div>
             <div class="valid-feedback">
               Looks good!
             </div>
