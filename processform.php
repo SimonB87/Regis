@@ -15,6 +15,7 @@ require 'config/config.php';
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
     <title> Registration confirmation | 🕺💃🏻 Mauritius & Elvira Bachata Prague </title>
+    <script src="https://kit.fontawesome.com/ae3a13eb1c.js" crossorigin="anonymous"></script>
 
   </head>
   <body style="background: #303030;">
@@ -23,6 +24,8 @@ require 'config/config.php';
   include("manage/handlers/handler_getnavitems.php");
   include("manage/handlers/handler_getapplinks.php"); 
   include("manage/handlers/handler_testenvironment.php");
+  include("manage/handlers/handler_getappsettings.php");
+  
   include("shared/navigation.php");
   include("manage/handlers/handler_getconfirmprivateinfodescription.php");
   include("webform/handlers/handler_processformdata.php");
