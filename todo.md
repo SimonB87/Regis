@@ -77,8 +77,6 @@
  [__] menit platebni udaje - a ty zobrazovat v processform page a v mailech
  [__] menit texty v emailech - a ty zobrazovat v mailech
  [ok] menit odkazy v paticce vcetne social media, emailu a telenonu
- [  ] mit moznost promazat vybrane poster obrazky z nahranych
- [  ] dodat možnost vložit dokumenty/texty pro "Therms of service" a "GDPR"
  [ok] změnit email admina
 
 
@@ -86,25 +84,32 @@
 
 - 1) FEATURE - když user objednává lístek tak se dynamicky dotázat do databíze zda je tento lístek k dispozici - potíže při prodeje posledního lístku ; pokud jsou lístky již vyprodané, tak si uživatel dostane na waiting list 
 
-  I) dostat z post requestu data
+      I) dostat z post requestu data
 
-  II) kontrola jestli je pro vent registrace vůbec otevřena
-  * ano : pokračovat na krkok 2
-  * ne : obrazovka "Registrace není možná. Zkuste se registrovat znovu později"
+      II) kontrola jestli je pro vent registrace vůbec otevřena
+      * ano : pokračovat na krkok 2
+      * ne : obrazovka "Registrace není možná. Zkuste se registrovat znovu později"
 
-  III) zkontrolovat jestli pro a) ticket-option a b) eventulně other-ticket-options
-  - jsou lístky v prodeji s ohledme na datum
-  - existují ještě neprosané lístky
-  * ano : pokračovat na krkok 3
-  * ne : obrazovka "Registrace není možná. Zkuste se registrovat znovu později"
+      III) zkontrolovat jestli pro a) ticket-option a b) eventulně other-ticket-options
+      - jsou lístky v prodeji s ohledme na datum
+      - existují ještě neprosané lístky
+      * ano : pokračovat na krkok 3
+      * ne : obrazovka "Registrace není možná. Zkuste se registrovat znovu později"
 
-  IV) úspěšná registrace
-  - ukázat info o registraci 
-  - zaslat zákazníkovi a adminovi emaily
+      IV) úspěšná registrace
+      - ukázat info o registraci 
+      - zaslat zákazníkovi a adminovi emaily
 
-- 2) FEATURE - Zakázkový bod - 10. - Pokud dojde ke změně uložené registrace , uloží se změna do databáze a odešle se notifikace pořadateli a notifikace účastníkovi.
+- 2) Mit moznost promazat vybrane poster obrazky z nahranych
 
-- 3) Google analytics
+- 3) Dodat možnost vložit dokumenty/texty pro "Therms of service" a "GDPR"
+
+- 4) send email on cancellation to customer
+
+- 5) FEATURE - Zakázkový bod - 10. - Pokud dojde ke změně uložené registrace , uloží se změna do databáze a odešle se notifikace pořadateli a notifikace účastníkovi.
+
+- 6) Google analytics
+
 
 - Check - když není žádná akce, tak na obrazovce je info, že všechny akce již proběhly
 
