@@ -58,7 +58,7 @@
         $newItem->isAllowed = $row["isAllowed"];
         $newItem->displayName = $row["displayName"];
         $newItem->weblink = $row["weblink"];
-        $newItem->textOdkazu = $row["textOdkazu"];
+        $newItem->textOdkazu = $row["itemContent"];
         $newItem->iconFontAwesome = $row["iconFontAwesome"];
 
         array_push($itemsFooterLinks,$newItem);
