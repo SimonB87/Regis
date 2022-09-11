@@ -2,40 +2,95 @@
     <div class="container text-center padding-small">
       <div class="row">
         <div class="col-12 padding-small">
-          <h2>Event organizer</h2>
-          <div><p>Mauritius & Elvira Bachata Prague<p></div>
+
+        <?php
+        if (isset($settings_organizerName)) {
+          echo "<h2>Event organizer</h2> <div><p>" . $settings_organizerName . "<p></div>";
+        }
+        ?>
+
 
           <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 padding-small">
-              <p><a href="https://www.mauritiuselvira.com/" target="_blank" class="text-white">Mauritius & Elvira Web </a><p>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 padding-small">
-            <p><a href="https://www.facebook.com/bachata.mauritius.elvira" target="_blank" class="text-white">Mauritius & Elvira Facebook </a><p>
-            </div>
+
+            <?php 
+            if(isset( $itemsFooterLinks[0]->isAllowed )) { if ($itemsFooterLinks[0]->isAllowed == "on") { 
+              echo "<div class='nav-item col-lg-6 col-md-6 col-sm-12 padding-small ' >
+                      <p> <a class='nav-link text-white' href='" . $itemsFooterLinks[0]->weblink . "' class='text-white'> " . $itemsFooterLinks[0]->displayName . " " . $itemsFooterLinks[0]->textOdkazu . " </a> </p>
+                    </div>";
+              } 
+            }
+
+            if(isset( $itemsFooterLinks[1]->isAllowed )) { if ($itemsFooterLinks[1]->isAllowed == "on") { 
+              echo "<div class='nav-item col-lg-6 col-md-6 col-sm-12 padding-small ' >
+                      <p> <a class='nav-link text-white' href='" . $itemsFooterLinks[1]->weblink . "' class='text-white'> " . $itemsFooterLinks[1]->displayName . " " . $itemsFooterLinks[1]->textOdkazu . " </a> </p>
+                    </div>";
+              } 
+            }
+
+            if(isset( $itemsFooterLinks[2]->isAllowed )) { if ($itemsFooterLinks[2]->isAllowed == "on") { 
+              echo "<div class='nav-item col-lg-6 col-md-6 col-sm-12 padding-small ' >
+                      <p> <a class='nav-link text-white' href='" . $itemsFooterLinks[2]->weblink . "' class='text-white'> " . $itemsFooterLinks[2]->displayName . " " . $itemsFooterLinks[2]->textOdkazu . " </a> </p>
+                    </div>";
+              } 
+            }
+
+            if(isset( $itemsFooterLinks[3]->isAllowed )) { if ($itemsFooterLinks[3]->isAllowed == "on") { 
+              echo "<div class='nav-item col-lg-6 col-md-6 col-sm-12 padding-small ' >
+                      <p> <a class='nav-link text-white' href='" . $itemsFooterLinks[3]->weblink . "' class='text-white'> " . $itemsFooterLinks[3]->displayName . " " . $itemsFooterLinks[3]->textOdkazu . " </a> </p>
+                    </div>";
+              } 
+            }
+
+            ?>
+
           </div>
 
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 padding-small">
 
-          <div class="row">
-            <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-              <strong>Email : </strong>
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
-              <p> mauritius.elvira[at]gmail.com  <p>
-            </div>
-          </div>
-
+        <div class="col-lg-2 col-md-3 col-sm-12 padding-small text-center">
+          Follow us on ...
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 padding-small">
-        <div class="row">
-            <div class="col-xl-6 col-lg-8 col-md-8 col-sm-12 padding-small">
-              <strong>Phone, WhatsApp, Telegram  : </strong>
-            </div>
-            <div class="col-xl-6 col-lg-4 col-md-4 col-sm-12 padding-small">
-              <p> + 420 777 216 875 <p>
-            </div>
-          </div>
+
+        <div class="col-lg-10 col-md-9 col-sm-12 padding-small text-center">
+        
+        <?php
+            if(isset( $itemsFooterLinks[4]->isAllowed )) { if ($itemsFooterLinks[4]->isAllowed == "on") { 
+              echo "<span class='social-item padding-small ' >
+                      <a href='" . $itemsFooterLinks[4]->weblink . "' class='nav-link text-white fa-brands " . $itemsFooterLinks[4]->iconFontAwesome . " '> " . $itemsFooterLinks[4]->textOdkazu . " </a>
+                    </span> <span class='padding-small'></span>";
+              } 
+            }
+
+            if(isset( $itemsFooterLinks[5]->isAllowed )) { if ($itemsFooterLinks[5]->isAllowed == "on") { 
+              echo "<span class='social-item padding-small ' >
+                      <a href='" . $itemsFooterLinks[5]->weblink . "' class='nav-link text-white fa-brands " . $itemsFooterLinks[5]->iconFontAwesome . " '> " . $itemsFooterLinks[5]->textOdkazu . " </a>
+                    </span> <span class='padding-small'></span>";
+              } 
+            }
+
+            if(isset( $itemsFooterLinks[6]->isAllowed )) { if ($itemsFooterLinks[6]->isAllowed == "on") { 
+              echo "<span class='social-item padding-small ' >
+                      <a href='" . $itemsFooterLinks[6]->weblink . "' class='nav-link text-white fa-brands " . $itemsFooterLinks[6]->iconFontAwesome . " '> " . $itemsFooterLinks[6]->textOdkazu . " </a>
+                    </span> <span class='padding-small'></span>";
+              } 
+            }
+
+            if(isset( $itemsFooterLinks[7]->isAllowed )) { if ($itemsFooterLinks[7]->isAllowed == "on") { 
+              echo "<span class='social-item padding-small ' >
+                      <a href='" . $itemsFooterLinks[7]->weblink . "' class='nav-link text-white fa-brands " . $itemsFooterLinks[7]->iconFontAwesome . " '> " . $itemsFooterLinks[7]->textOdkazu . " </a>
+                    </span> <span class='padding-small'></span>";
+              } 
+            }
+
+            if(isset( $itemsFooterLinks[8]->isAllowed )) { if ($itemsFooterLinks[8]->isAllowed == "on") { 
+              echo "<span class='social-item padding-small ' >
+                      <a href='" . $itemsFooterLinks[8]->weblink . "' class='nav-link text-white fa-brands " . $itemsFooterLinks[8]->iconFontAwesome . " '> " . $itemsFooterLinks[8]->textOdkazu . " </a>
+                    </span> <span class='padding-small'></span>";
+              } 
+            }
+
+        ?>
+
         </div>
 
       </div>
