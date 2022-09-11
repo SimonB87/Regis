@@ -1,6 +1,8 @@
 <?php
 
-  $to				= 	"info@mauritiuselvira.eu";
+  include("manage/handlers/handler_getappsettings.php");
+
+  $to				=   (isset($settings_adminEmail)) ? $settings_adminEmail : "info@mauritiuselvira.eu";
 
   $testEnvironment = isset($isTestDevelopment) ? 
                       ( ($isTestDevelopment == true) ?
