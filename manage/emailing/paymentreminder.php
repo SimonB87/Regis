@@ -1,11 +1,18 @@
 <?php
 
+require '././config/config.php';
+
   $originalOrderId = $targetOrderId;
 
   include("./handlers/handler_getselectedorderdata.php");
+  include("./manage/handlers/handler_getappsettings.php");
+
   //include("././shared/appinfosetup/appadminbankinfo.php"); // TODO bug fix this link
 
-  $nationalBankAccount = "2002019652/2010 (Fio Banka, a.s.)";  // onyl temporarly
+  $emailTextPaymentReminder = (isset($settings_emailTextPaymentReminder)) ? $settings_emailTextPaymentReminder : "";
+
+
+  $nationalBankAccount = "2002019652/2010 (Fio Banka, a.s.)";  // onyl temporarly - TODO - include real data from DB
   $accountIBAN = "CZ65 2010 0000 0020 0201 9652"; // onyl temporarly
   $accountBIC = "FIOBCZPPXXX"; // onyl temporarly
   $accountHolderName = "Elvira Masanlo"; // onyl temporarly
@@ -92,7 +99,7 @@
                         padding-bottom: 0;
                         color: #ffffff;
                         font-family: sans-serif;' class='supheader'>
-                          <div>" . $testEnvironment  . "</div><div> We remind you to pay for tickets for event " . $storedRegEventName . " you signed up for. Pay as soon a spossible, or your registration will get canceled. Event is organized by Mauritius & Elvira Bachata Prague team.</div>
+                          <div>" . $testEnvironment  . "</div><div> We remind you to pay for tickets for event " . $storedRegEventName . ". <br>" . $emailTextPaymentReminder . " .</div>
                       </td>
                     </tr>
 

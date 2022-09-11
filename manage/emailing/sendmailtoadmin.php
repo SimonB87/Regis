@@ -1,6 +1,8 @@
 <?php
 
-  include("manage/handlers/handler_getappsettings.php");
+  require '././config/config.php';
+
+  include("./manage/handlers/handler_getappsettings.php");
 
   $to				=   (isset($settings_adminEmail)) ? $settings_adminEmail : "info@mauritiuselvira.eu";
 

@@ -1,8 +1,12 @@
 <?php
 
+require '././config/config.php';
+
   $originalOrderId = $targetOrderId;
 
   include("./handlers/handler_getselectedorderdata.php");
+  include("./manage/handlers/handler_getappsettings.php");
+  $emailTextOrderPaid = (isset($settings_emailTextOrderPaid)) ? $settings_emailTextOrderPaid : "";
 
   $to				= 	$storedRegClientEmail;
 
@@ -83,7 +87,7 @@
                         padding-bottom: 0;
                         color: #ffffff;
                         font-family: sans-serif;' class='supheader'>
-                          <div>" . $testEnvironment . "</div> <div>Your payment was received for event " . $storedRegEventName . " you signed up for. Event is organized by Mauritius & Elvira Bachata Prague team. </div>
+                          <div>" . $testEnvironment . "</div> <div>Your payment was received for event " . $storedRegEventName . " you signed up for. <br>" . $emailTextOrderPaid . " </div>
                       </td>
                     </tr>
 

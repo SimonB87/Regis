@@ -10,6 +10,11 @@ $settings_accountHolderAddress  = "";
 $settings_bankAddress = "";
 $settings_appUnderDevelopment = "";
 
+$settings_emailTextRegistrationNotice = "";
+$settings_emailTextOrderPaid = "";
+$settings_emailTextPaymentReminder = "";
+$settings_emailTextRegistrationCancelled = "";
+
 
       if (mysqli_connect_errno()) {
         printf("Connect failed: %s\n", mysqli_connect_error());
@@ -59,6 +64,11 @@ $settings_appUnderDevelopment = "";
         $settings_accountHolderAddress = $row["accountHolderAddress"];
         $settings_bankAddress = $row["bankAddress"];
         $settings_appUnderDevelopment = $row["appUnderDevelopment"];
+        
+        $settings_emailTextRegistrationNotice = $row["emailTextRegistrationNotice"];
+        $settings_emailTextOrderPaid = $row["emailTextOrderPaid"];
+        $settings_emailTextPaymentReminder = $row["emailTextPaymentReminder"];
+        $settings_emailTextRegistrationCancelled = $row["emailTextRegistrationCancelled"];
 
 
       }

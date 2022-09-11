@@ -1,6 +1,12 @@
 <?php
 
+require '././config/config.php';
+
 if ($correctlyFilledForm) {
+
+  include("./manage/handlers/handler_getappsettings.php");
+
+  $emailTextRegistrationNotice = (isset($settings_emailTextRegistrationNotice)) ? $settings_emailTextRegistrationNotice : "";
 
   $to				= 	$clientEmail;
 
@@ -13,14 +19,12 @@ if ($correctlyFilledForm) {
 
   $subject	=		$testEnvironment . " Your order-ID: \"" . $storedOrderID . "\" for event \"" . $storedEventName . "\" | Platform REGIS";
 
-  //include("././shared/appinfosetup/appadminbankinfo.php"); // TODO bug fix this link
-
-  $nationalBankAccount = "2002019652/2010 (Fio Banka, a.s.)";  // onyl temporarly
-  $accountIBAN = "CZ65 2010 0000 0020 0201 9652"; // onyl temporarly
-  $accountBIC = "FIOBCZPPXXX"; // onyl temporarly
-  $accountHolderName = "Elvira Masanlo"; // onyl temporarly
-  $accountHolderAddress = "My Main Street 909/123, 12 007 - My City, My Country"; // onyl temporarly
-  $accountBankAddress = "Fio banka, a.s. Millennium Plaza, V Celnici 10, Prague 1, ZIP Code : 117 21. Czech Republic"; // onyl temporarly
+  $nationalBankAccount = $settings_nationalBankAccount; 
+  $accountIBAN = $settings_accountIBAN; 
+  $accountBIC = $settings_accountBIC; 
+  $accountHolderName = $settings_accountHolderName; 
+  $accountHolderAddress = (isset($settings_accountHolderAddress)) ? ( ($settings_accountHolderAddress != "") ? $settings_accountHolderAddress : "" ) : "";
+  $accountBankAddress = $settings_bankAddress; 
   
   $paymentInstructions_holderAddress = (isset($accountHolderAddress)) ?  
     (strlen($accountHolderAddress) > 2 ? 
@@ -95,7 +99,7 @@ if ($correctlyFilledForm) {
                         padding-bottom: 0;
                         color: #ffffff;
                         font-family: sans-serif;' class='supheader'>
-                          <div>" . $testEnvironment . "</div>  <div>You have successfuly registered for the event " . $storedEventName . " organized by Mauritius & Elvira Bachata Prague team.</div>
+                          <div>" . $testEnvironment . "</div>  <div>You have successfuly registered for the event " . $storedEventName . " organized by " . $settings_organizerName . ".</div>
                       </td>
                     </tr>
 
@@ -105,9 +109,9 @@ if ($correctlyFilledForm) {
                       <td align='center' valign='top' style='border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;  padding-left: 6.25%; padding-right: 6.25%; width: 87.5%; font-size: 24px; font-weight: bold; line-height: 130%;
                         padding-top: 5px;
                         color: #ffffff;
-                        font-family: sans-serif;' class='header'>
-                         Thank you for registering for then event, below you will find the payment instructions. After paying the event organizer will send you your ticket.
-                      </td>
+                        font-family: sans-serif;' class='header'> <br> "
+                         . $emailTextRegistrationNotice .
+                      "<br> </td>
                     </tr>
                     <tr>
                     <!-- separation line -->
