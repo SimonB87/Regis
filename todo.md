@@ -73,10 +73,10 @@
 ### Administrace
  [ok] na veřejné části webu nastavit "maintenance mode"
  [ok] menit prava vsech registrovanych useru
- [  ] menit polozky menu hlavni stranky
+ [ok] menit polozky menu hlavni stranky
  [__] menit platebni udaje - a ty zobrazovat v processform page a v mailech
- [  ] menit texty v emailech
- [  ] menit odkazy v paticce vcetne social media, emailu a telenonu
+ [__] menit texty v emailech - a ty zobrazovat v mailech
+ [ok] menit odkazy v paticce vcetne social media, emailu a telenonu
  [  ] mit moznost promazat vybrane poster obrazky z nahranych
  [  ] dodat možnost vložit dokumenty/texty pro "Therms of service" a "GDPR"
  [ok] změnit email admina
