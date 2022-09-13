@@ -12,7 +12,7 @@
             <a id="pill-paymentinfo" class="nav-link pill-linkitem" href="#administration"> Edit main app texts </a>
           </li>
 
-          <li class="border border-secondary rounded nav-item"
+          <li class="border border-secondary rounded nav-item padding-small"
             data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit public page links">
 
             <ul class="padding-small-leftRight nav nav-pills">
