@@ -12,12 +12,21 @@
             <a id="pill-paymentinfo" class="nav-link pill-linkitem" href="#administration"> Edit main app texts </a>
           </li>
 
-          <li class="nav-item">
-            <a id="pill-navregistration" class="nav-link pill-linkitem" href="#administration"> Registration page menu </a>
-          </li>
+          <li class="border border-secondary rounded nav-item"
+            data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit public page links">
 
-          <li class="nav-item">
-            <a id="pill-footerlinks" class="nav-link pill-linkitem" href="#administration"> Links in page footer </a>
+            <ul class="padding-small-leftRight nav nav-pills">
+
+              <li class="nav-item">
+                <a id="pill-navregistration" class="nav-link pill-linkitem" href="#administration"> Registration page menu </a>
+              </li>
+
+              <li class="nav-item">
+                <a id="pill-footerlinks" class="nav-link pill-linkitem" href="#administration"> Links in page footer </a>
+              </li>
+
+            </ul>
+
           </li>
 
           <li class="nav-item">
