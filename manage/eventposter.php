@@ -24,7 +24,7 @@ require 'handlers/userlogin.php';
   <body style="background: #303030;">
 
     <?php
-    //include("handlers/handler_getopeneventid.php");
+    include("handlers/handler_getopeneventid.php");
     include("shared/navigation.php");
     include("handlers/handler_formeventsetupmain_saveproduction.php");
     include("handlers/handler_eventpostersetdb.php");

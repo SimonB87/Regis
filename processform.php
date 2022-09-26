@@ -28,6 +28,7 @@ require 'config/config.php';
   
   include("shared/navigation.php");
   include("manage/handlers/handler_getconfirmprivateinfodescription.php");
+  include("webform/handlers/handler_getsoldtickets.php");
   include("webform/handlers/handler_processformdata.php");
 
   $isEventEdited = true;

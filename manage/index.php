@@ -42,7 +42,7 @@ include("handlers/handler_testenvironment.php");
   <body style="background: #303030;">
 
     <?php
-    include("handlers/handler_getopeneventid.php"); // leave this here, it belogs here
+    include("handlers/handler_getopeneventid.php"); 
     include("shared/navigation.php");
 
     ?> 
