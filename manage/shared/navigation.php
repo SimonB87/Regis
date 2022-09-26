@@ -21,7 +21,7 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="establishnewevent.php">Create a new event</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="<?php echo "eventsetupmain.php?id=" . $oneOpenEventId ; ?>">Existing event main set up</a></li>
+              <li><a class="dropdown-item" href="<?php $linkEvent = isset($oneOpenEventId) ? $oneOpenEventId : ""; echo "eventsetupmain.php?id=" . $linkEvent ; ?>">Existing event main set up</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="publishevent.php">Make event public</a></li>
             </ul>
