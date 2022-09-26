@@ -3,6 +3,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
   hideEmptyTickets();
 });
 
+document.getElementById("passType").addEventListener("change", function (event) {
+  enableRegistrationOptions('passType','dancerKind');
+});
+
+document.getElementById("otherTicketOptions").addEventListener("change", function (event) {
+  enableRegistrationOptions('otherTicketOptions','otherDancerKind');
+});
+
+document.getElementById("dancerKind").setAttribute("disabled", "");
+document.getElementById("otherDancerKind").setAttribute("disabled", "");
+
 function enableRegistrationOptions(source, type) { 
   let getValue = "";
   let sourceValue = document.getElementById(source).value;
@@ -12,7 +23,7 @@ function enableRegistrationOptions(source, type) {
   let allowCouple = null;
 
   if (type == "dancerKind") {
-
+    
     getValue ="passType";
 
 
@@ -35,6 +46,7 @@ function enableRegistrationOptions(source, type) {
       }
 
       if ( eventState.regularSingles.follower == false ) {
+
         allowFollower = false;
       }
 
@@ -49,6 +61,9 @@ function enableRegistrationOptions(source, type) {
         allowFollower = false;
       }
 
+    } else {
+      allowFollower = false;
+      allowLeader = false;
     }
 
   } else if (type == "otherDancerKind") {
@@ -77,6 +92,9 @@ function enableRegistrationOptions(source, type) {
         allowFollower = false;
       }
 
+    } else {
+      allowFollower = false;
+      allowLeader = false;
     }
 
   }
@@ -88,16 +106,27 @@ function enableRegistrationOptions(source, type) {
     allOptions.forEach((element) => {
       element.classList.remove("hidden");
     });
-
+    
     if ( allowLeader == false ) {
-      document.querySelector("#" + type + " option:nth-child(2)").classList.add("hidden");
+      disableKindOptions(type, "1 - Leader");
     }
     if ( allowFollower == false ) {
-      document.querySelector("#" + type + " option:nth-child(3)").classList.add("hidden");
+      disableKindOptions(type, "2 - Follower");
     }
     if ( allowCouple == false ) { 
-      document.querySelector("#" + type + " option:nth-child(4)").classList.add("hidden");
+      disableKindOptions(type, "3 - Couple");
     }
+    
+  }
+
+  document.getElementById(type).removeAttribute("disabled");
+
+  function disableKindOptions(typeString, kindString) {
+    document.querySelectorAll("#" + typeString + " option").forEach((element) => {
+      if (element.value == kindString ) {
+      element.classList.add("hidden");
+      }
+    });
   }
 
 
@@ -106,7 +135,7 @@ function enableRegistrationOptions(source, type) {
 function hideEmptyTickets() {
 
   const passTypeOptionsElements = document.querySelectorAll("#passType options");
-  const otherTicketOptionsElements = document.querySelectorAll("#passType options");
+  const otherTicketOptionsElements = document.querySelectorAll("#otherTicketOptions options");
 
   passTypeOptionsElements.forEach((element, index) => {
     element.classList.remove("hidden");

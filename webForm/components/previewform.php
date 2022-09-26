@@ -123,8 +123,9 @@
 
                 <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
                   <div id="passType--parent" class="mb-3 full-width full-height div-select">
-                    <select id="passType" class="form-select" aria-label="Pass type" required="" onchange="recalculatePrice(); enableRegistrationOptions('passType','dancerKind');" name="passType">
+                    <select id="passType" class="form-select" aria-label="Pass type" required="" onchange="recalculatePrice();" name="passType">
                       <option value="" selected="">Select pass type ... </option>
+                      <option value="0 - None" >None</option>
                       <?php if ( $isVisible_passType_earlyBirdsTicketSingle ) { echo "<option value='1 - Early birds pass leader/follower" . "' aria-valuenow='" . $eventDataEarlyBirdsTicketPriceSingle . "'>Early birds pass leader/follower - " . $eventDataEarlyBirdsTicketPriceSingle . "CZK</option>"; } ?>
                       <?php if ( $isVisible_passType_earlyBirdsTicketCouple ) { echo "<option value='2 - Early birds couple" . "' aria-valuenow='" . $eventDataEarlyBirdsTicketPriceCouple . "'>Early birds couple - " . $eventDataEarlyBirdsTicketPriceCouple. "CZK</option>"; } ?>
                       <?php if ( $isVisible_passType_regularTicketSingle ) { echo "<option value='3 - Fullpass leader/follower" . "' aria-valuenow='" . $eventDataRegularTicketPriceSingle . "'>Fullpass leader/follower - " . $eventDataRegularTicketPriceSingle . "CZK</option>"; } ?>
@@ -156,11 +157,12 @@
 
                 <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
                   <div class="mb-3 full-width full-height div-select">
-                    <select id="dancerKind" class="form-select" aria-label="Pass type" onchange="recalculatePrice();" required="" name="dancerKind" disabled>
-                      <option value="" selected="" aria-valuenow="0.0">Select dancer kind ...</option>
-                      <option value="1 - Leader" aria-valuenow="1.0">Leader</option>
-                      <option value="2 - Follower" aria-valuenow="1.0">Follower</option>
-                      <option value="3 - Couple" aria-valuenow="1.75">Couple</option>
+                    <select id="dancerKind" class="form-select" aria-label="Pass type" onchange="recalculatePrice();" required="" name="dancerKind">
+                      <option value="" selected="" >Select dancer kind ...</option>
+                      <option value="0 - None" >None</option>
+                      <option value="1 - Leader" >Leader</option>
+                      <option value="2 - Follower" >Follower</option>
+                      <option value="3 - Couple" >Couple</option>
 
                     </select>
                     <div class="form-select-customLabel">
@@ -179,7 +181,7 @@
                                 { echo "class='col-lg-6 col-md-12 col-sm-12 padding-small '" ; } 
                           else  { echo "class='col-lg-6 col-md-12 col-sm-12 padding-small hidden '" ; } ?> >
                   <div class="mb-3 full-width full-height div-select">
-                    <select id="otherTicketOptions" class="form-select" aria-label="Pass type" required="" onchange="recalculatePrice(); enableRegistrationOptions('otherTicketOptions','otherDancerKind');" name="otherTicketOptions">
+                    <select id="otherTicketOptions" class="form-select" aria-label="Pass type" required="" onchange="recalculatePrice();" name="otherTicketOptions">
                       <option value="" selected=""> Select other tickets options ...</option>
                       <option value="0 - None" aria-valuenow="0">None</option>
                       <?php 
@@ -212,12 +214,12 @@
 
                 <div class="col-lg-6 col-md-12 col-sm-12 padding-small">
                   <div class="mb-3 full-width full-height div-select">
-                    <select id="otherDancerKind" class="form-select" aria-label="Pass type" onchange="recalculatePrice();" required="" name="otherDancerKind" disabled>
-                      <option value="" selected="" aria-valuenow="0.0">Select other ticket dancer kind ...</option>
-                      <option value="0 - None" aria-valuenow="1.0">None</option>
-                      <option value="1 - Leader" aria-valuenow="1.0">Leader</option>
-                      <option value="2 - Follower" aria-valuenow="1.0">Follower</option>
-                      <option value="3 - Couple" aria-valuenow="1.75">Couple</option>
+                    <select id="otherDancerKind" class="form-select" aria-label="Pass type" onchange="recalculatePrice();" required="" name="otherDancerKind">
+                      <option value="" selected="" >Select other ticket dancer kind ...</option>
+                      <option value="0 - None" >None</option>
+                      <option value="1 - Leader" >Leader</option>
+                      <option value="2 - Follower" >Follower</option>
+                      <option value="3 - Couple" >Couple</option>
 
                     </select>
                     <div class="form-select-customLabel">
