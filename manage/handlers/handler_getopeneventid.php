@@ -7,7 +7,7 @@ if (mysqli_connect_errno()) {
   exit();
 }
 
-$sql = "SELECT * FROM events WHERE eventStatus = '1 - Registrations open' LIMIT 1";
+$sql = "SELECT * FROM events WHERE eventStatus = '1 - Registrations open' ORDER BY id DESC LIMIT 1";
 
 $results = $connector-> query($sql);
 //Error case
