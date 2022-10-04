@@ -1,5 +1,7 @@
 <?php
 
+require '././config/config.php';
+
 $earlybirdsSingleSold = 0;
 $earlybirdsSingleSold_leader = 0;
 $earlybirdsSingleSold_follower = 0; 
@@ -73,7 +75,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
       $earlybirdsSingleSold = $results-> num_rows;
 
     }
-    echo "";
+    //echo "";
   } else {
     $earlybirdsSingleSold = 0;
   }
@@ -103,7 +105,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
       $earlybirdsSingleSold_leader = $results-> num_rows;
 
     }
-    echo "";
+    //echo "";
   } else {
     $earlybirdsSingleSold_leader = 0;
   }
@@ -133,7 +135,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
       $earlybirdsSingleSold_follower = $results-> num_rows;
 
     }
-    echo "";
+    //echo "";
   } else {
     $earlybirdsSingleSold_follower = 0;
   }
@@ -163,7 +165,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
       $earlybirdsCoupleSold = $results-> num_rows;
 
     }
-    echo "";
+    //echo "";
   } else {
     $earlybirdsCoupleSold = 0;
   }
@@ -193,7 +195,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
       $regularSingleSold = $results-> num_rows;
 
     }
-    echo "";
+    //echo "";
   } else {
     $regularSingleSold = 0;
   }
@@ -223,7 +225,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
       $regularSingleSold_leader = $results-> num_rows;
 
     }
-    echo "";
+    //echo "";
   } else {
     $regularSingleSold_leader = 0;
   }
@@ -254,7 +256,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
       $regularSingleSold_follower = $results-> num_rows;
 
     }
-    echo "";
+    //echo "";
   } else {
     $regularSingleSold_follower = 0;
   }
@@ -285,7 +287,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
       $regularCoupleSold = $results-> num_rows;
 
     }
-    echo "";
+    //echo "";
   } else {
     $regularCoupleSold = 0;
   }
@@ -315,7 +317,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
       $partySingleSold = $results-> num_rows;
 
     }
-    echo "";
+    //echo "";
   } else {
     $partySingleSold = 0;
   }
@@ -346,7 +348,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
       $partySingleSold_leader = $results-> num_rows;
 
     }
-    echo "";
+    //echo "";
   } else {
     $partySingleSold_leader = 0;
   }
@@ -377,7 +379,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
       $partySingleSold_follower = $results-> num_rows;
 
     }
-    echo "";
+    //echo "";
   } else {
     $partySingleSold_follower = 0;
   }
@@ -408,7 +410,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
       $partyCoupleSold = $results-> num_rows;
 
     }
-    echo "";
+    //echo "";
   } else {
     $partyCoupleSold = 0;
   }
@@ -440,7 +442,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
       $spec1SingleSold = $results-> num_rows;
 
     }
-    echo "";
+    //echo "";
   } else {
     $spec1SingleSold = 0;
   }
@@ -471,10 +473,13 @@ if (!mysqli_set_charset($connector, "utf8")) {
       $spec1SingleSold_leader = $results-> num_rows;
 
     }
-    echo "";
+    //echo "";
   } else {
     $spec1SingleSold_leader = 0;
   }
+
+      //test
+      echo " spec1SingleSold_leader : " . $spec1SingleSold_leader . "<br>";//test
 
   /*
   // TODO fill : $spec1SingleSold_follower;
@@ -502,11 +507,12 @@ if (!mysqli_set_charset($connector, "utf8")) {
       $spec1SingleSold_follower = $results-> num_rows;
 
     }
-    echo "";
+    //echo "";
   } else {
     $spec1SingleSold_follower = 0;
   }
-
+      //test
+      echo " spec1SingleSold_follower : " . $spec1SingleSold_follower . "<br>";//test
 
   /*
   // TODO fill : $spec1CoupleSold;
@@ -535,7 +541,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
       $spec1CoupleSold = $results-> num_rows;
 
     }
-    echo "";
+    //echo "";
   } else {
     $spec1CoupleSold = 0;
   }
@@ -568,7 +574,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
       $spec2SingleSold = $results-> num_rows;
 
     }
-    echo "";
+    //echo "";
   } else {
     $spec2SingleSold = 0;
   }
@@ -599,7 +605,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
       $spec2SingleSold_leader = $results-> num_rows;
 
     }
-    echo "";
+    //echo "";
   } else {
     $spec2SingleSold_leader = 0;
   }
@@ -630,7 +636,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
       $pec2SingleSold_follower = $results-> num_rows;
 
     }
-    echo "";
+    //echo "";
   } else {
     $pec2SingleSold_follower = 0;
   }
@@ -662,7 +668,7 @@ if (!mysqli_set_charset($connector, "utf8")) {
       $spec1CoupleSold = $results-> num_rows;
 
     }
-    echo "";
+    //echo "";
   } else {
     $spec1CoupleSold = 0;
   }
