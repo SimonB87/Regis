@@ -114,7 +114,6 @@
 - Check - když není žádná akce, tak na obrazovce je info, že všechny akce již proběhly
 
 - ! Pokud admin mění payment option, tak se ho dotázat v modálním okně, že souhlasí - to chce založit nové modální okno a pořešit dotaz.
-- !! BUGFIX - eventformpreview.php - formulář neodpovídá veřejnému formuláři - srovnat inputy a k "other dancer kind" přidat select-option "0 - None"
 - BUGFIX - v úpravě description použít dynamické odkazy na obrázky emotikonů
 - !! BUGFIX - ! opravit enabled sections - eventuelně vyhodit pryč ten JS / když je tam sekce 2 disabled a obsahuje uvnitř texty (situace rozpor create a edit ! )
 - ! Feature - při úpravě řádku registrace poslat dotaz na řádek a rehreshnout data řádku v tabulce
