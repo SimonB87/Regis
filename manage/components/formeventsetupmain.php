@@ -111,6 +111,38 @@
         <div class="col-12 padding-topBottom-medium-0x5"> 
           <div class="row rounded padding-small shadow-light">
 
+            <div class="col-6 padding-small">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="eventPlace" required name="eventName" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataPlace . "'"; } ?> >
+                <label for="eventName">Event place</label>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in valid value.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 padding-small">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="eventLanguage" required name="eventName" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataLanguage . "'"; } ?> >
+                <label for="eventName">Event language</label>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in valid value.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-12 padding-topBottom-medium-0x5"> 
+          <div class="row rounded padding-small shadow-light">
+
             <div class="col-lg-6 col-md-12 col-sm-12  padding-small">
               <div class="form-floating">
                 <input type="date" class="form-control" id="eventStartDate" required name="eventStartDate" maxlength="250" <?php if($isEventEdited) {echo "value='" . $eventDataEventStartDate . "'"; } ?> >

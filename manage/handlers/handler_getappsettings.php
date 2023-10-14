@@ -65,10 +65,10 @@ $settings_emailTextRegistrationCancelled = "";
         $settings_bankAddress = $row["bankAddress"];
         $settings_appUnderDevelopment = $row["appUnderDevelopment"];
         
-        $settings_emailTextRegistrationNotice = $row["emailTextRegistrationNotice"];
-        $settings_emailTextOrderPaid = $row["emailTextOrderPaid"];
-        $settings_emailTextPaymentReminder = $row["emailTextPaymentReminder"];
-        $settings_emailTextRegistrationCancelled = $row["emailTextRegistrationCancelled"];
+        $settings_emailTextRegistrationNotice = $row["emailTextRegistrationNotice"]; //test - check if exists
+        $settings_emailTextOrderPaid = $row["emailTextOrderPaid"]; //test - check if exists
+        $settings_emailTextPaymentReminder = $row["emailTextPaymentReminder"]; //test - check if exists
+        $settings_emailTextRegistrationCancelled = $row["emailTextRegistrationCancelled"]; //test - check if exists
 
 
       }

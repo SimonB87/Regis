@@ -1,4 +1,4 @@
-<!-- component : preview form - see the visualised registration in admin test mode -->
+<!-- component : preview form - see the visualised one event registration in admin test mode -->
 
 <!-- Section descriptions -->
 <div class="row">

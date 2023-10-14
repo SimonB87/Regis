@@ -48,8 +48,6 @@ $error_array = [];
     include("webform/handlers/handler_getdescriptiondata.php");
     include("webform/handlers/handler_getsoldtickets.php");
 
-    // Close DB Connection
-    mysqli_close($connector);
     ?> 
 
     <?php
@@ -58,7 +56,7 @@ $error_array = [];
     if (($eventIsOpen = false) || ($settings_appUnderDevelopment === "1 - on")) {
       include("webform/components/noregistrationsopen.php");
     } else {
-      include("webform/components/previewform.php");
+      include("webform/components/listEvents.php");
     }
 
     ?> 
@@ -67,6 +65,9 @@ $error_array = [];
     <?php
     include("shared/contactsection.php");
     include("shared/footer.php");
+
+    // Close DB Connection
+    mysqli_close($connector);
     ?>
 
     <script src="shared/libs/bootstrap/js/bootstrap.js"></script>

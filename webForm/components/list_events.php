@@ -1,69 +1,26 @@
-<?php
+<?php 
+include("manage/handlers/handler_editdate.php");
+?>
 
-  $eventDataId = null;
-  $eventDataEventStatus = null;
-  $eventDataEventName = null;
-  $eventDataPlace = null;
-  $eventDataLanguage = null;
-  $eventDataEventStartDate = null;
-  $eventDataEventEndDate = null;
-  $eventDataMaintainSinglesParity = null;
+<div class="container">
+  <div class="row">
+    <!-- Header -->
+    <div class="col-12 padding-correction padding"> 
+      <div class="content-body padding-regular-topBottom">
+        <div class="text-center padding-small text-white"> 
+          <h1> Kurzy Wim Hof Method </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-  $eventDataAgreementsEnabled = null;
-  $eventDataAgreement1Enabled = null;
-  $eventDataAgreement1Text = null;
-  $eventDataAgreement2Enabled = null;
-  $eventDataAgreement2Text = null;
-  $eventDataAgreement3Enabled = null;
-  $eventDataAgreement3Text = null;
+<div class="bg-white">
+  <div class="container bg-white">
+    <div class="row padding-small-topBottom">
 
-  $eventDataEarlyBirdsRegistrationEnabled = null;
-  $eventDataEarlyBirdsRegistrationName = null;
-  $eventDataEarlyBirdsRegistrationsStartDate = null;
-  $eventDataEarlyBirdsRegistrationsEndDate = null;
-  $eventDataTicketsAmountEarlyBirdsRegistrationsSingle = null;
-  $eventDataEarlyBirdsTicketPriceSingle = null;
-  $eventDataEarlyBirdsTicketPriceCouple = null;
-  $eventDataEarlyBirdsTicketAmountCouple = null;
-
-  $eventDataRegularRegistrationEnabled = null; 
-  $eventDataRegularRegistrationName = null;
-  $eventDataRegularRegistrationsStartDate = null; 
-  $eventDataRegularRegistrationsEndDate = null; 
-  $eventDataRegularTicketPriceSingle = null;
-  $eventDataRegularTicketAmountSingle = null;
-  $eventDataRegularTicketPriceCouple = null;
-  $eventDataRegularTicketAmountCouple = null;
-
-  $partyRegistrationEnabled = null;
-  $partyRegistrationName = null;
-  $partyRegistrationsStartDate = null;
-  $partyRegistrationsEndDate = null;
-  $partyTicketPriceSingle = null;
-  $partyTicketAmountSingle = null;
-  $partyTicketPriceCouple = null;
-  $partyTicketAmountCouple = null;
-
-  $eventDataSpecialType1RegistrationEnabled = null;
-  $eventDataSpecialType1RegistrationName = null;
-  $eventDataSpecialType1RegistrationsStartDate = null;
-  $eventDataSpecialType1RegistrationsEndDate = null;
-  $eventDataSpecialType1TicketPriceSingle = null; 
-  $eventDataSpecialType1TicketAmountSingle = null;
-  $eventDataSpecialType1TicketPriceCouple = null; 
-  $eventDataSpecialType1TicketAmountCouple = null;
-
-  $eventDataSpecialType2RegistrationEnabled = null;
-  $eventDataSpecialType2RegistrationName = null;
-  $eventDataSpecialType2RegistrationsStartDate = null;
-  $eventDataSpecialType2RegistrationsEndDate = null;
-  $eventDataSpecialType2TicketPriceSingle = null; 
-  $eventDataSpecialType2TicketAmountSingle = null;
-  $eventDataSpecialType2TicketPriceCouple = null; 
-  $eventDataSpecialType2TicketAmountCouple = null;
-
-  $eventDataPosterName = null;
-
+  <!-- List events -->
+  <?php 
 
   if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
@@ -75,40 +32,51 @@
     printf("Error message: %s\n", mysqli_error($link));
   }*/
 
-  /*if (!mysqli_set_charset($connector, "utf8")) {
-    printf("Error loading character set utf8: %s\n", mysqli_error($connector));
+  if (!mysqli_set_charset($connector, "utf8")) {
+    printf("Error loading character set utf8: %s\n", mysqli_error($con));
     exit();
-    } else {
+  } else {
             //printf("Current character set: %s\n", mysqli_character_set_name($con));//used only for testing
-    }*/
+  }
 
-    $sql = "SELECT * FROM events WHERE eventStatus = '1 - Registrations open'  ORDER BY id DESC LIMIT 1";
+   //select one open event, where registrations are open
+  $sql = "SELECT * FROM events WHERE eventStatus='1 - Registrations open' ORDER BY id DESC";
 
-    $results = $connector-> query($sql);
-    //Error case
-    if (!$sql ) {
+  if ((isset($selectByEventId)) || (isset( $selectedEventId))) {
+      if ($selectByEventId == true) {
+        $sql = "SELECT * FROM events WHERE id='$selectByEventId' ORDER BY id DESC LIMIT 1";
+      }
+      if (isset($selectedEventId)) {
+        $sql = "SELECT * FROM events WHERE id='$selectedEventId' ORDER BY id DESC LIMIT 1";
+      }
+  }
+
+  $results = $connector-> query($sql);
+  //Error case
+  if (!$sql ) {
       echo "Failed! <br> Error sql: " . mysql_error();
-    }
+  }
     
-    if (mysqli_query($connector, $sql)) {
+  if (mysqli_query($connector, $sql)) {
       //debug echo json_encode(array("statusCode"=>200));
-    } 
-    else {
+  } 
+  else {
       echo json_encode(array("sql - statusCode"=>418));
-    }
+  }
 
-    //function to fatch the data
-    if ($results-> num_rows > 0 ) {
+  //function to fatch the data
+  if ($results-> num_rows > 0 ) {
+
       while ($row = $results-> fetch_assoc()) {
 
         $eventDataId = $row["id"] ;
         $eventDataEventStatus = $row["eventStatus"] ;
         $eventDataEventName = $row["eventName"] ;
-        $eventDataPlace = $row["eventLocation"] ;
-        $eventDataLanguage = $row["eventLanguage"] ;
         $eventDataEventStartDate = $row["eventStartDate"] ;
         $eventDataEventEndDate = $row["eventEndDate"] ;
         $eventDataMaintainSinglesParity = $row["maintainSinglesParity"] ;
+        $eventLocation = $row["eventLocation"] ; //
+        $eventLanguage = $row["eventLanguage"] ; //
 
         $eventDataAgreementsEnabled = $row["agreementsEnabled"] ;
         $eventDataAgreement1Enabled = $row["agreement1Enabled"] ;
@@ -163,7 +131,20 @@
         $eventDataSpecialType2TicketPriceCouple = $row["specialType2TicketPriceCouple"] ;
         $eventDataSpecialType2TicketAmountCouple = $row["specialType2TicketAmountCouple"] ;
 
-        $eventDataPosterName = $row["posterFileName"] ;
+        $posterFileName = $row["posterFileName"] ;
+
+        $description_place = ( strtolower($eventLanguage) == "cz" ) ? "Místo: " : (( strtolower($eventLanguage) == "en" ) ? "Place: " : ""); 
+        $description_startDate = ( strtolower($eventLanguage) == "cz" ) ? "Od: " : (( strtolower($eventLanguage) == "en" ) ? "From: " : "");
+        $description_endDate = ( strtolower($eventLanguage) == "cz" ) ? " do: " : (( strtolower($eventLanguage) == "en" ) ? " to: " : ""); ;
+
+        echo "<div class='col-sm-12 col-md-6 col-lg-6'>";
+        echo "<div class='event-picture'> <img src='manage/" . $posterFileName . "' alt='Event picture'> </div>";
+        echo "<div class='padding-regular'>";
+        //echo $eventDataId . "<br>" ; //test - show event data
+        echo $eventDataEventName . "<br>" ; 
+        echo $description_place . "<strong>" . $eventLocation . "</strong><br>" ;
+        echo $description_startDate . "<strong>" . editDate($eventDataEventStartDate) . "</strong>" . $description_endDate . "<strong>" . editDate($eventDataEventEndDate) . "</strong><br>" ; 
+        echo "</div>" . "</div>";
 
       }
       echo "";
@@ -171,9 +152,12 @@
   else {
       echo "There are 0 results in DB table";
   }
-    
-    // Comment out DB close
-    // mysqli_close($connector);
+  
+  // Comment out DB close
+  // mysqli_close($connector);
 
+  ?>
 
-?>
+    </div>
+  </div>
+</div>

@@ -106,6 +106,7 @@
         $eventDataId = $row["id"] ;
         $eventDataEventStatus = $row["eventStatus"] ;
         $eventDataEventName = $row["eventName"] ;
+        
         $eventDataEventStartDate = $row["eventStartDate"] ;
         $eventDataEventEndDate = $row["eventEndDate"] ;
         $eventDataMaintainSinglesParity = $row["maintainSinglesParity"] ;

@@ -3,6 +3,8 @@
   $eventDataId = null;
   $eventDataEventStatus = null;
   $eventDataEventName = null;
+  $eventDataPlace = null;
+  $eventDataLanguage = null;
   $eventDataEventStartDate = null;
   $eventDataEventEndDate = null;
   $eventDataMaintainSinglesParity = null;
@@ -113,6 +115,8 @@
           $eventDataId = $row["id"] ;
           $eventDataEventStatus = $row["eventStatus"] ;
           $eventDataEventName = $row["eventName"] ;
+          $eventDataPlace = $row["eventLocation"] ;
+          $eventDataLanguage = $row["eventLanguage"] ;
           $eventDataEventStartDate = $row["eventStartDate"] ;
           $eventDataEventEndDate = $row["eventEndDate"] ;
           $eventDataMaintainSinglesParity = $row["maintainSinglesParity"] ;

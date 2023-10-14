@@ -478,9 +478,6 @@ if (!mysqli_set_charset($connector, "utf8")) {
     $spec1SingleSold_leader = 0;
   }
 
-      //test
-      echo " spec1SingleSold_leader : " . $spec1SingleSold_leader . "<br>";//test
-
   /*
   // TODO fill : $spec1SingleSold_follower;
   */
@@ -511,8 +508,6 @@ if (!mysqli_set_charset($connector, "utf8")) {
   } else {
     $spec1SingleSold_follower = 0;
   }
-      //test
-      echo " spec1SingleSold_follower : " . $spec1SingleSold_follower . "<br>";//test
 
   /*
   // TODO fill : $spec1CoupleSold;
