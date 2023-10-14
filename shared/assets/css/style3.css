@@ -333,6 +333,10 @@ span.disabledBtn {
 .inline-display > .save-btn-parent {
   width: 20%;
 }
+.event-picture img {
+  max-height: 20vw;
+  max-width: 100%;
+}
 footer .copyright {
   font-family: Muli, sans-serif;
   color: #d3d3d3;
